@@ -1,0 +1,161 @@
+{
+  "panel": "gpu_headroom",
+  "device": "cuda",
+  "gpu_name": "NVIDIA GeForce RTX 5070",
+  "instances": [
+    {
+      "job": "pack_250000",
+      "device": "cuda",
+      "groups": 250000,
+      "trits": 8000000,
+      "seconds": 0.033572499989531934,
+      "trits_per_sec": 238290267.4061937,
+      "ok": true
+    },
+    {
+      "job": "pack_1000000",
+      "device": "cuda",
+      "groups": 1000000,
+      "trits": 32000000,
+      "seconds": 0.009401599992997944,
+      "trits_per_sec": 3403675972.582617,
+      "ok": true
+    },
+    {
+      "job": "pack_4000000",
+      "device": "cuda",
+      "groups": 4000000,
+      "trits": 128000000,
+      "seconds": 0.037880799965932965,
+      "trits_per_sec": 3379020509.469526,
+      "ok": true
+    },
+    {
+      "job": "hilbert_n8",
+      "device": "cuda",
+      "n": 8,
+      "dim": 256,
+      "seconds": 0.4054460000479594,
+      "ghz_ok": true,
+      "qft_uniform": true,
+      "clifford_norm": 0.9999999999999999,
+      "ok": true,
+      "peak_mem_mb": 0.0322265625
+    },
+    {
+      "job": "hilbert_n10",
+      "device": "cuda",
+      "n": 10,
+      "dim": 1024,
+      "seconds": 0.09074290003627539,
+      "ghz_ok": true,
+      "qft_uniform": true,
+      "clifford_norm": 1.0000000000000004,
+      "ok": true,
+      "peak_mem_mb": 0.13232421875
+    },
+    {
+      "job": "hilbert_n12",
+      "device": "cuda",
+      "n": 12,
+      "dim": 4096,
+      "seconds": 0.1153889000415802,
+      "ghz_ok": true,
+      "qft_uniform": true,
+      "clifford_norm": 1.0,
+      "ok": true,
+      "peak_mem_mb": 0.52783203125
+    },
+    {
+      "job": "hilbert_n14",
+      "device": "cuda",
+      "n": 14,
+      "dim": 16384,
+      "seconds": 0.14071479998528957,
+      "ghz_ok": true,
+      "qft_uniform": true,
+      "clifford_norm": 1.0000000000000004,
+      "ok": true,
+      "peak_mem_mb": 2.10986328125
+    },
+    {
+      "job": "hilbert_n16",
+      "device": "cuda",
+      "n": 16,
+      "dim": 65536,
+      "seconds": 0.17153050005435944,
+      "ghz_ok": true,
+      "qft_uniform": true,
+      "clifford_norm": 1.0,
+      "ok": true,
+      "peak_mem_mb": 8.43798828125
+    },
+    {
+      "job": "batch_ghz_stack_n8_B256",
+      "device": "cuda",
+      "n": 8,
+      "batch": 256,
+      "dim": 256,
+      "seconds": 1.0585287000285462,
+      "amps_per_sec": 61912.35060346747,
+      "circuits_per_sec": 241.8451195447948,
+      "peak_mem_mb": 6.0205078125,
+      "ok": true
+    },
+    {
+      "job": "batch_ghz_stack_n10_B128",
+      "device": "cuda",
+      "n": 10,
+      "batch": 128,
+      "dim": 1024,
+      "seconds": 0.6682156999595463,
+      "amps_per_sec": 196152.23049673194,
+      "circuits_per_sec": 191.55491259446478,
+      "peak_mem_mb": 8.580078125,
+      "ok": true
+    },
+    {
+      "job": "batch_ghz_stack_n12_B64",
+      "device": "cuda",
+      "n": 12,
+      "batch": 64,
+      "dim": 4096,
+      "seconds": 0.40123119996860623,
+      "amps_per_sec": 653348.9918543501,
+      "circuits_per_sec": 159.50903121444094,
+      "peak_mem_mb": 13.8203125,
+      "ok": true
+    },
+    {
+      "job": "batch_ghz_stack_n14_B16",
+      "device": "cuda",
+      "n": 14,
+      "batch": 16,
+      "dim": 16384,
+      "seconds": 0.12212960002943873,
+      "amps_per_sec": 2146441.157072581,
+      "circuits_per_sec": 131.00837140335577,
+      "peak_mem_mb": 14.78125,
+      "ok": true
+    },
+    {
+      "job": "grover_batch_8k_x1024",
+      "batch": 1024,
+      "n_items": 8192,
+      "correct": 1024,
+      "accuracy": 1.0,
+      "seconds": 0.0034906999208033085,
+      "instances_per_sec": 293350.91048569675,
+      "device": "cuda",
+      "ok": true
+    }
+  ],
+  "overall_ok": true,
+  "highlights": {
+    "max_hilbert_n": 16,
+    "max_peak_mem_mb": 8.43798828125,
+    "max_pack_trits_per_sec": 3403675972.582617,
+    "grover_ips": 293350.91048569675
+  },
+  "note": "Loads GPU with pack + Hilbert n<=16 + batches; watch nvidia-smi for util%"
+}
