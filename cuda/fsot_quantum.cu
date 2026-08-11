@@ -196,26 +196,39 @@ extern "C" __declspec(dllexport) int fsot_gpu_collapse(
 }
 
 #ifdef FSOT_QUANTUM_MAIN
+static void check_cuda(cudaError_t err, const char* what) {
+    if (err != cudaSuccess) {
+        fprintf(stderr, "CUDA error at %s: %s\n", what, cudaGetErrorString(err));
+    }
+}
+
 int main() {
+    int dev = 0;
+    cudaDeviceProp prop{};
+    check_cuda(cudaGetDeviceProperties(&prop, dev), "cudaGetDeviceProperties");
+    printf("GPU: %s  CC %d.%d\n", prop.name, prop.major, prop.minor);
+
     const size_t groups = 1024;
     uint8_t* h_in = new uint8_t[groups * 32];
     for (size_t i = 0; i < groups * 32; ++i) h_in[i] = (uint8_t)(i % 3);
 
     uint8_t *d_in = nullptr, *d_out = nullptr;
     uint64_t *d_packed = nullptr;
-    cudaMalloc(&d_in, groups * 32);
-    cudaMalloc(&d_packed, groups * sizeof(uint64_t));
-    cudaMalloc(&d_out, groups * 32);
-    cudaMemcpy(d_in, h_in, groups * 32, cudaMemcpyHostToDevice);
+    check_cuda(cudaMalloc(&d_in, groups * 32), "malloc d_in");
+    check_cuda(cudaMalloc(&d_packed, groups * sizeof(uint64_t)), "malloc d_packed");
+    check_cuda(cudaMalloc(&d_out, groups * 32), "malloc d_out");
+    check_cuda(cudaMemcpy(d_in, h_in, groups * 32, cudaMemcpyHostToDevice), "H2D codes");
 
     int threads = 256;
     int blocks = grid(groups, threads);
     fsot_pack_kernel<<<blocks, threads>>>(d_in, d_packed, groups);
+    check_cuda(cudaGetLastError(), "pack launch");
     fsot_unpack_kernel<<<blocks, threads>>>(d_packed, d_out, groups);
-    cudaDeviceSynchronize();
+    check_cuda(cudaGetLastError(), "unpack launch");
+    check_cuda(cudaDeviceSynchronize(), "pack sync");
 
     uint8_t* h_out = new uint8_t[groups * 32];
-    cudaMemcpy(h_out, d_out, groups * 32, cudaMemcpyDeviceToHost);
+    check_cuda(cudaMemcpy(h_out, d_out, groups * 32, cudaMemcpyDeviceToHost), "D2H codes");
 
     size_t mismatches = 0;
     for (size_t i = 0; i < groups * 32; ++i) {
@@ -225,24 +238,31 @@ int main() {
            mismatches, groups * 32);
     printf("Collapse threshold: %.16f\n", FSOT_COLLAPSE_THRESHOLD);
 
-    // collapse smoke
+    // collapse smoke — poles clearly outside Θ
     const size_t n = 8;
-    float field[8] = {1.0f, -1.0f, 0.0f, 0.5f, -0.5f, 0.92f, -0.92f, 0.1f};
-    int8_t spins[8];
-    float* d_f; int8_t* d_s;
-    cudaMalloc(&d_f, n * sizeof(float));
-    cudaMalloc(&d_s, n * sizeof(int8_t));
-    cudaMemcpy(d_f, field, n * sizeof(float), cudaMemcpyHostToDevice);
+    float field[8] = {1.0f, -1.0f, 0.0f, 0.5f, -0.5f, 0.95f, -0.95f, 0.1f};
+    int8_t spins[8] = {99, 99, 99, 99, 99, 99, 99, 99};
+    float* d_f = nullptr; int8_t* d_s = nullptr;
+    check_cuda(cudaMalloc(&d_f, n * sizeof(float)), "malloc field");
+    check_cuda(cudaMalloc(&d_s, n * sizeof(int8_t)), "malloc spins");
+    check_cuda(cudaMemcpy(d_f, field, n * sizeof(float), cudaMemcpyHostToDevice), "H2D field");
     fsot_collapse_kernel<<<1, 32>>>(d_f, d_s, n, (float)FSOT_COLLAPSE_THRESHOLD);
-    cudaDeviceSynchronize();
-    cudaMemcpy(spins, d_s, n * sizeof(int8_t), cudaMemcpyDeviceToHost);
+    check_cuda(cudaGetLastError(), "collapse launch");
+    check_cuda(cudaDeviceSynchronize(), "collapse sync");
+    check_cuda(cudaMemcpy(spins, d_s, n * sizeof(int8_t), cudaMemcpyDeviceToHost), "D2H spins");
     printf("Collapse sample spins:");
     for (size_t i = 0; i < n; ++i) printf(" %d", (int)spins[i]);
     printf("\n");
+    // expect: +1 -1 0 0 0 +1 -1 0
+    int collapse_ok =
+        spins[0] == 1 && spins[1] == -1 && spins[2] == 0 &&
+        spins[5] == 1 && spins[6] == -1;
 
     cudaFree(d_in); cudaFree(d_packed); cudaFree(d_out);
     cudaFree(d_f); cudaFree(d_s);
     delete[] h_in; delete[] h_out;
-    return mismatches == 0 ? 0 : 1;
+    int ok = (mismatches == 0) && collapse_ok;
+    printf("SMOKE: %s\n", ok ? "PASS" : "FAIL");
+    return ok ? 0 : 1;
 }
 #endif
