@@ -46,6 +46,9 @@ python -c "from fsot_quantum.optimization import run_optimization_panel; print(r
 python -c "from fsot_quantum.textbook_map import run_textbook_map; print(run_textbook_map()['overall_ok'])"
 python -c "from fsot_quantum.scale_scoreboard import run_scale_scoreboard; print(run_scale_scoreboard()['overall_ok'])"
 
+# Next stress: large MaxCut · QAOA-FSOT · textbook sim job compare
+python -m fsot_quantum.stress_next
+
 # Multiprover formal stamp (Lean 4 · Coq · Isabelle · Python runtime)
 python scripts\run_multiprover_verification.py
 

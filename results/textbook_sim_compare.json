@@ -1,0 +1,99 @@
+{
+  "panel": "textbook_sim_compare",
+  "ontology_warning": "FSOT trinary \u2260 Hilbert amplitudes. Comparison is job-level, not state fidelity.",
+  "cases": [
+    {
+      "job": "X / NOT on computational basis",
+      "textbook": {
+        "probs": [
+          0.0,
+          1.0
+        ],
+        "flipped_to_1": true
+      },
+      "fsot": {
+        "before": 1,
+        "after": -1,
+        "flipped": true
+      },
+      "job_agreement": true,
+      "note": "Textbook |0>\u2192|1>; FSOT +1\u2192\u22121 polarity flip."
+    },
+    {
+      "job": "Bell \u03a6+ preparation / correlation",
+      "textbook": {
+        "statevector_probs": {
+          "00": 0.5000000000000001,
+          "01": 0.0,
+          "10": 0.0,
+          "11": 0.5000000000000001
+        },
+        "equal_pair_mass": true
+      },
+      "fsot": {
+        "spins": [
+          -1,
+          -1
+        ],
+        "pair_agree": true
+      },
+      "job_agreement": true,
+      "note": "Textbook: 50/50 on 00&11. FSOT: deterministic agree after measure."
+    },
+    {
+      "job": "GHZ-3 correlation",
+      "textbook": {
+        "p000": 0.5000000000000001,
+        "p111": 0.5000000000000001,
+        "ghz_mass": true
+      },
+      "fsot": {
+        "spins": [
+          -1,
+          -1,
+          -1
+        ],
+        "all_equal": true
+      },
+      "job_agreement": true,
+      "note": "Both establish 3-party correlated structure under their ontologies."
+    },
+    {
+      "job": "Deutsch\u2013Jozsa constant-0 classification",
+      "textbook": {
+        "class": "constant",
+        "method": "classical full eval f\u22610"
+      },
+      "fsot": {
+        "class": "constant",
+        "ok": true
+      },
+      "job_agreement": true,
+      "note": "Same job label; different query model (FSOT full scan n\u226416)."
+    },
+    {
+      "job": "Bernstein\u2013Vazirani secret recovery s=101",
+      "textbook": {
+        "secret": [
+          1,
+          0,
+          1
+        ],
+        "method": "f(x)=s\u00b7x parity"
+      },
+      "fsot": {
+        "recovered": [
+          1,
+          0,
+          1
+        ],
+        "ok": true
+      },
+      "job_agreement": true,
+      "note": "Both recover s exactly on parity oracle family."
+    }
+  ],
+  "pass_count": 5,
+  "total": 5,
+  "overall_ok": true
+}

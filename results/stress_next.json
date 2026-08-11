@@ -1,0 +1,27 @@
+{
+  "timestamp": "2026-08-11T14:11:38.480396+00:00",
+  "device": "cuda",
+  "panels": {
+    "large_maxcut": {
+      "overall_ok": true,
+      "exactable": "7/7",
+      "large": "7/7",
+      "summary": {
+        "mean_ratio_lb_large": 0.88322940287226,
+        "mean_approx_exactable": 1.0
+      }
+    },
+    "qaoa_fsot": {
+      "overall_ok": true,
+      "local_exact": "11/11",
+      "qaoa_exact": "0/11",
+      "p_layers": 3
+    },
+    "textbook_sim_compare": {
+      "overall_ok": true,
+      "pass": "5/5"
+    }
+  },
+  "overall_ok": true,
+  "wall_seconds": 1.983740600058809
+}
