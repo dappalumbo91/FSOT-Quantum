@@ -1,16 +1,16 @@
 # FSOT-Quantum multiprover verification stamp
 
-**stamp:** `FSOT_QUANTUM_MULTIPROVER_OPEN`
-**overall_ok:** `False`
+**stamp:** `FSOT_QUANTUM_MULTIPROVER_OK`
+**overall_ok:** `True`
 **pin:** `D1D38A` (expect D1D38A)
-**wall_s:** `24.28`
+**wall_s:** `18.38`
 
 ## Provers
 
 | Prover | Status | OK |
 |--------|--------|----|
 | python_runtime | pass | True |
-| lean4 | fail | False |
+| lean4 | pass | True |
 | coq | pass | True |
 | isabelle | pass | True |
 
