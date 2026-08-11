@@ -1,0 +1,37 @@
+{
+  "description": "Preregistered quantum pathway domain folds (pin D1D38A). No free parameters.",
+  "pin": "D1D38A",
+  "spins": {
+    "down": -1,
+    "superposed": 0,
+    "up": 1,
+    "pack_codes": { "0": "down", "1": "superposed", "2": "up" },
+    "bits_per_state": 2,
+    "states_per_u64": 32,
+    "preferred_word_trits": 27
+  },
+  "collapse_threshold": {
+    "formula": "C_eff * P_var",
+    "value": 0.9174663774653723
+  },
+  "domains": {
+    "Quantum_Mechanics": {
+      "D_eff": 6,
+      "hits": 0,
+      "delta_psi": 1.0,
+      "delta_theta": 1.0,
+      "observed": true,
+      "C_formula": "gamma / phi",
+      "role": "spin_law_measurement"
+    },
+    "Quantum_Computing": {
+      "D_eff": 11,
+      "hits": 0,
+      "delta_psi": 0.5,
+      "delta_theta": 1.0,
+      "observed": false,
+      "C_formula": "sqrt(2) / e",
+      "role": "compute_substrate"
+    }
+  }
+}

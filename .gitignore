@@ -1,0 +1,31 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+.pytest_cache/
+
+# CUDA / build
+cuda/*.exe
+cuda/*.dll
+cuda/*.exp
+cuda/*.lib
+cuda/*.obj
+cuda/*.pdb
+build/
+*.o
+
+# IDE / OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Local refs (cloned for development; not published)
+_ref/
+
+# Secrets
+.env
+*.pem
+.git-credentials

@@ -1,0 +1,59 @@
+{
+  "overall_ok": true,
+  "pin_expected": "D1D38A",
+  "collapse_threshold": 0.9174663774653723,
+  "S_Quantum_Mechanics": 0.9555063001027194,
+  "S_Quantum_Computing": -0.14767310363368633,
+  "results": [
+    {
+      "name": "authority_pin",
+      "ok": true,
+      "expected": "D1D38A",
+      "got": "D1D38A"
+    },
+    {
+      "name": "vendor_scalar_parity",
+      "ok": true,
+      "checks": {
+        "Quantum_Mechanics": {
+          "ours": 0.9555063001027194,
+          "vendor": 0.9555063001027196,
+          "ok": true
+        },
+        "Quantum_Computing": {
+          "ours": -0.14767310363368633,
+          "vendor": -0.14767310363368644,
+          "ok": true
+        },
+        "collapse_threshold": {
+          "ours": 0.9174663774653723,
+          "vendor": 0.9174663774653723,
+          "ok": true
+        }
+      }
+    },
+    {
+      "name": "trinary_pack_roundtrip",
+      "ok": true
+    },
+    {
+      "name": "gate_identities",
+      "ok": true,
+      "n_cases": 9
+    },
+    {
+      "name": "bell_analog_run",
+      "ok": true,
+      "spins": [
+        -1,
+        -1
+      ]
+    },
+    {
+      "name": "zero_free_params_doctrine",
+      "ok": true,
+      "note": "All constants from SEEDS / domain table; no fit vector",
+      "scan_hits": []
+    }
+  ]
+}

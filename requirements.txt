@@ -1,0 +1,3 @@
+# Host path needs only stdlib + optional scientific stack later.
+# Pin engine uses mpmath when running vendor/fsot_compute.py fully.
+mpmath>=1.3.0

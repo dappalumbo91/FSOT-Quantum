@@ -1,0 +1,47 @@
+{
+  "pin": "D1D38A",
+  "checks": [
+    {
+      "name": "pin_D1D38A",
+      "ok": true,
+      "got": "D1D38A"
+    },
+    {
+      "name": "scalar_Quantum_Mechanics",
+      "ok": true,
+      "ours": 0.9555063001027194,
+      "vendor": 0.9555063001027196
+    },
+    {
+      "name": "scalar_Quantum_Computing",
+      "ok": true,
+      "ours": -0.14767310363368633,
+      "vendor": -0.14767310363368644
+    },
+    {
+      "name": "collapse_threshold",
+      "ok": true,
+      "ours": 0.9174663774653723,
+      "vendor": 0.9174663774653723
+    },
+    {
+      "name": "k",
+      "ok": true,
+      "ours": 0.4202216641606967,
+      "vendor": 0.4202216641606967
+    },
+    {
+      "name": "c_eff",
+      "ok": true
+    },
+    {
+      "name": "p_var",
+      "ok": true
+    },
+    {
+      "name": "pack",
+      "ok": true
+    }
+  ],
+  "overall_ok": true
+}
