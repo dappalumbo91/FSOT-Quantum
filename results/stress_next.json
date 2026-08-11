@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-08-11T14:11:38.480396+00:00",
+  "timestamp": "2026-08-11T14:16:36.321834+00:00",
   "device": "cuda",
   "panels": {
     "large_maxcut": {
@@ -14,7 +14,7 @@
     "qaoa_fsot": {
       "overall_ok": true,
       "local_exact": "11/11",
-      "qaoa_exact": "0/11",
+      "qaoa_exact": "11/11",
       "p_layers": 3
     },
     "textbook_sim_compare": {
@@ -23,5 +23,5 @@
     }
   },
   "overall_ok": true,
-  "wall_seconds": 1.983740600058809
+  "wall_seconds": 1.9566212999634445
 }
