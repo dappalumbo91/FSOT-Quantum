@@ -29,6 +29,10 @@ Thumbs.db
 # Local refs (cloned for development; not published)
 _ref/
 
+# Zig
+zig/.zig-cache/
+zig/zig-out/
+
 # Secrets
 .env
 *.pem

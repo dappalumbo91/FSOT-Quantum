@@ -40,12 +40,31 @@ python scripts\run_demo.py
 
 # Capability suite — QC jobs on GPU without quantum hardware
 python -m fsot_quantum.capability_suite
+
+# Next-track panels
+python -c "from fsot_quantum.optimization import run_optimization_panel; print(run_optimization_panel()['overall_ok'])"
+python -c "from fsot_quantum.textbook_map import run_textbook_map; print(run_textbook_map()['overall_ok'])"
+python -c "from fsot_quantum.scale_scoreboard import run_scale_scoreboard; print(run_scale_scoreboard()['overall_ok'])"
+
+# Full skeptic kit (pin + smoke + capability + residual + textbook + scale)
+python -m fsot_quantum.skeptic_kit
+# or:  .\scripts\run_skeptic_kit.ps1
+
+# Zig twin (if zig on PATH)
+cd zig; zig build run; cd ..
 ```
 
-**Goal:** answers for quantum-computing *jobs* (oracle class, search, secret recover, coupling, optimization) via FSOT trinary + GPU parallel — not cryogenic QPU infrastructure.
+**Goal:** answers for quantum-computing *jobs* via FSOT trinary + GPU parallel — not cryogenic QPU infrastructure.
 
-Device path is **exactly** FSOT-GPU: torch CUDA buffers when available; pure Python always works.  
-See `docs/CAPABILITY_AND_PATH_FORWARD.md` and `results/CAPABILITY_REPORT.md`.
+| Panel | Ledger |
+|-------|--------|
+| Capability | `results/CAPABILITY_REPORT.md` |
+| Ising/MaxCut residual | `results/optimization_panel.json` |
+| Textbook map | `docs/TEXTBOOK_CIRCUIT_MAP.md` |
+| Scale scoreboard | `results/SCALE_SCOREBOARD.md` |
+| Skeptic kit | `results/SKEPTIC_KIT.md` |
+
+Device path is **exactly** FSOT-GPU: torch CUDA buffers when available.
 
 ---
 

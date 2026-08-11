@@ -1,0 +1,53 @@
+{
+  "timestamp": "2026-08-11T13:49:43.518658+00:00",
+  "kit": "FSOT-Quantum skeptic kit",
+  "pin_expected": "D1D38A",
+  "overall_ok": true,
+  "wall_seconds": 1.888896599994041,
+  "gates": [
+    {
+      "name": "pin_D1D38A",
+      "ok": true,
+      "got": "D1D38A"
+    },
+    {
+      "name": "fsot_lib_smoke_owned",
+      "ok": true
+    },
+    {
+      "name": "fsot_quantum_verify",
+      "ok": true
+    },
+    {
+      "name": "capability_suite",
+      "ok": true,
+      "algorithms": 16
+    },
+    {
+      "name": "optimization_panel",
+      "ok": true,
+      "pass": "13/13"
+    },
+    {
+      "name": "textbook_map",
+      "ok": true,
+      "pass": "13/13"
+    },
+    {
+      "name": "scale_scoreboard",
+      "ok": true,
+      "highlights": {
+        "device": "cuda",
+        "max_trits_packed": 16777216,
+        "fastest_pack_trits_per_s": 6700164956.198086,
+        "best_grover_instances_per_s": 1989122.1366437378,
+        "largest_grover_N": 16384
+      }
+    },
+    {
+      "name": "zero_free_params",
+      "ok": true,
+      "note": "seeds only; no least-squares fit path in fsot_quantum"
+    }
+  ]
+}

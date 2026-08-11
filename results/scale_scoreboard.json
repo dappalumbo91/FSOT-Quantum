@@ -1,0 +1,208 @@
+{
+  "timestamp": "2026-08-11T13:49:43.286307+00:00",
+  "device": "cuda",
+  "panel": "scale_throughput",
+  "rows": [
+    {
+      "kind": "pack",
+      "groups": 1024,
+      "trits": 32768,
+      "seconds": 0.0003233000170439482,
+      "roundtrip_ok": true,
+      "device": "cuda",
+      "ok": true
+    },
+    {
+      "kind": "pack",
+      "groups": 8192,
+      "trits": 262144,
+      "seconds": 0.00019260006956756115,
+      "roundtrip_ok": true,
+      "device": "cuda",
+      "ok": true
+    },
+    {
+      "kind": "pack",
+      "groups": 32768,
+      "trits": 1048576,
+      "seconds": 0.00015650002751499414,
+      "roundtrip_ok": true,
+      "device": "cuda",
+      "ok": true
+    },
+    {
+      "kind": "pack",
+      "groups": 131072,
+      "trits": 4194304,
+      "seconds": 0.0013826999347656965,
+      "roundtrip_ok": true,
+      "device": "cuda",
+      "ok": true
+    },
+    {
+      "kind": "pack",
+      "groups": 524288,
+      "trits": 16777216,
+      "seconds": 0.005120599991641939,
+      "roundtrip_ok": true,
+      "device": "cuda",
+      "ok": true
+    },
+    {
+      "kind": "grover",
+      "batch": 256,
+      "n_items": 64,
+      "correct": 256,
+      "accuracy": 1.0,
+      "seconds": 0.00031349994242191315,
+      "instances_per_sec": 816587.0718262243,
+      "device": "cuda",
+      "ok": true
+    },
+    {
+      "kind": "grover",
+      "batch": 512,
+      "n_items": 256,
+      "correct": 512,
+      "accuracy": 1.0,
+      "seconds": 0.00030129996594041586,
+      "instances_per_sec": 1699303.2123384026,
+      "device": "cuda",
+      "ok": true
+    },
+    {
+      "kind": "grover",
+      "batch": 512,
+      "n_items": 1024,
+      "correct": 512,
+      "accuracy": 1.0,
+      "seconds": 0.0002573999809101224,
+      "instances_per_sec": 1989122.1366437378,
+      "device": "cuda",
+      "ok": true
+    },
+    {
+      "kind": "grover",
+      "batch": 256,
+      "n_items": 4096,
+      "correct": 256,
+      "accuracy": 1.0,
+      "seconds": 0.00031949998810887337,
+      "instances_per_sec": 801251.986002469,
+      "device": "cuda",
+      "ok": true
+    },
+    {
+      "kind": "grover",
+      "batch": 128,
+      "n_items": 16384,
+      "correct": 128,
+      "accuracy": 1.0,
+      "seconds": 0.00032160000409930944,
+      "instances_per_sec": 398009.9451754791,
+      "device": "cuda",
+      "ok": true
+    },
+    {
+      "kind": "bv",
+      "batch": 256,
+      "n": 8,
+      "correct": 256,
+      "accuracy": 1.0,
+      "seconds": 0.00016789999790489674,
+      "device": "cuda",
+      "ok": true,
+      "note": "parity oracle f(x)=s\u00b7x \u2014 exact recover on basis probes"
+    },
+    {
+      "kind": "bv",
+      "batch": 128,
+      "n": 12,
+      "correct": 128,
+      "accuracy": 1.0,
+      "seconds": 0.00016439997125416994,
+      "device": "cuda",
+      "ok": true,
+      "note": "parity oracle f(x)=s\u00b7x \u2014 exact recover on basis probes"
+    },
+    {
+      "kind": "bv",
+      "batch": 64,
+      "n": 16,
+      "correct": 64,
+      "accuracy": 1.0,
+      "seconds": 0.0002071999479085207,
+      "device": "cuda",
+      "ok": true,
+      "note": "parity oracle f(x)=s\u00b7x \u2014 exact recover on basis probes"
+    },
+    {
+      "kind": "consensus",
+      "batch": 32,
+      "seq": 32,
+      "dim": 32,
+      "out_shape": [
+        32,
+        32,
+        32
+      ],
+      "seconds": 0.0844379001064226,
+      "finite": true,
+      "device": "cuda",
+      "ok": true
+    },
+    {
+      "kind": "consensus",
+      "batch": 16,
+      "seq": 64,
+      "dim": 64,
+      "out_shape": [
+        16,
+        64,
+        64
+      ],
+      "seconds": 0.0656656000064686,
+      "finite": true,
+      "device": "cuda",
+      "ok": true
+    },
+    {
+      "kind": "consensus",
+      "batch": 8,
+      "seq": 128,
+      "dim": 64,
+      "out_shape": [
+        8,
+        128,
+        64
+      ],
+      "seconds": 0.03196259995456785,
+      "finite": true,
+      "device": "cuda",
+      "ok": true
+    },
+    {
+      "kind": "consensus",
+      "batch": 4,
+      "seq": 256,
+      "dim": 32,
+      "out_shape": [
+        4,
+        256,
+        32
+      ],
+      "seconds": 0.01033710001502186,
+      "finite": true,
+      "device": "cuda",
+      "ok": true
+    }
+  ],
+  "overall_ok": true,
+  "highlights": {
+    "device": "cuda",
+    "max_trits_packed": 16777216,
+    "fastest_pack_trits_per_s": 6700164956.198086,
+    "best_grover_instances_per_s": 1989122.1366437378,
+    "largest_grover_N": 16384
+  }
+}

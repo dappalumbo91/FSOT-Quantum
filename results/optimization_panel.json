@@ -1,0 +1,291 @@
+{
+  "panel": "ising_maxcut_residual",
+  "green_eps_pct_band": 0.5,
+  "instances": [
+    {
+      "name": "ising_cycle6_ferro",
+      "kind": "ising",
+      "n": 6,
+      "n_edges": 6,
+      "E_exact": -6,
+      "E_fsot": -6,
+      "residual_pct": 0.0,
+      "green": true,
+      "exact_match": true,
+      "ok": true,
+      "spins_fsot": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "name": "ising_cycle8_ferro",
+      "kind": "ising",
+      "n": 8,
+      "n_edges": 8,
+      "E_exact": -8,
+      "E_fsot": -8,
+      "residual_pct": 0.0,
+      "green": true,
+      "exact_match": true,
+      "ok": true,
+      "spins_fsot": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "name": "ising_cycle7_antiferro",
+      "kind": "ising",
+      "n": 7,
+      "n_edges": 7,
+      "E_exact": -5,
+      "E_fsot": -5,
+      "residual_pct": 0.0,
+      "green": true,
+      "exact_match": true,
+      "ok": true,
+      "spins_fsot": [
+        -1,
+        -1,
+        1,
+        -1,
+        1,
+        -1,
+        1
+      ]
+    },
+    {
+      "name": "ising_path10_ferro",
+      "kind": "ising",
+      "n": 10,
+      "n_edges": 9,
+      "E_exact": -9,
+      "E_fsot": -9,
+      "residual_pct": 0.0,
+      "green": true,
+      "exact_match": true,
+      "ok": true,
+      "spins_fsot": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "name": "ising_K5_ferro",
+      "kind": "ising",
+      "n": 5,
+      "n_edges": 10,
+      "E_exact": -10,
+      "E_fsot": -10,
+      "residual_pct": 0.0,
+      "green": true,
+      "exact_match": true,
+      "ok": true,
+      "spins_fsot": [
+        1,
+        1,
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "name": "ising_K4_mixed",
+      "kind": "ising",
+      "n": 4,
+      "n_edges": 5,
+      "E_exact": -3,
+      "E_fsot": -3,
+      "residual_pct": 0.0,
+      "green": true,
+      "exact_match": true,
+      "ok": true,
+      "spins_fsot": [
+        -1,
+        1,
+        1,
+        -1
+      ]
+    },
+    {
+      "name": "ising_ladder6",
+      "kind": "ising",
+      "n": 6,
+      "n_edges": 7,
+      "E_exact": -7,
+      "E_fsot": -7,
+      "residual_pct": 0.0,
+      "green": true,
+      "exact_match": true,
+      "ok": true,
+      "spins_fsot": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "name": "maxcut_cycle6",
+      "kind": "maxcut",
+      "n": 6,
+      "n_edges": 6,
+      "cut_exact": 6,
+      "cut_fsot": 6,
+      "gap": 0,
+      "residual_pct": 0.0,
+      "green": true,
+      "exact_match": true,
+      "ok": true,
+      "spins_fsot": [
+        1,
+        -1,
+        1,
+        -1,
+        1,
+        -1
+      ]
+    },
+    {
+      "name": "maxcut_cycle8",
+      "kind": "maxcut",
+      "n": 8,
+      "n_edges": 8,
+      "cut_exact": 8,
+      "cut_fsot": 8,
+      "gap": 0,
+      "residual_pct": 0.0,
+      "green": true,
+      "exact_match": true,
+      "ok": true,
+      "spins_fsot": [
+        1,
+        -1,
+        1,
+        -1,
+        1,
+        -1,
+        1,
+        -1
+      ]
+    },
+    {
+      "name": "maxcut_K5",
+      "kind": "maxcut",
+      "n": 5,
+      "n_edges": 10,
+      "cut_exact": 6,
+      "cut_fsot": 6,
+      "gap": 0,
+      "residual_pct": 0.0,
+      "green": true,
+      "exact_match": true,
+      "ok": true,
+      "spins_fsot": [
+        1,
+        -1,
+        1,
+        -1,
+        1
+      ]
+    },
+    {
+      "name": "maxcut_path12",
+      "kind": "maxcut",
+      "n": 12,
+      "n_edges": 11,
+      "cut_exact": 11,
+      "cut_fsot": 11,
+      "gap": 0,
+      "residual_pct": 0.0,
+      "green": true,
+      "exact_match": true,
+      "ok": true,
+      "spins_fsot": [
+        1,
+        -1,
+        1,
+        -1,
+        1,
+        -1,
+        1,
+        -1,
+        1,
+        -1,
+        1,
+        -1
+      ]
+    },
+    {
+      "name": "maxcut_utility",
+      "kind": "maxcut",
+      "n": 6,
+      "n_edges": 8,
+      "cut_exact": 6,
+      "cut_fsot": 6,
+      "gap": 0,
+      "residual_pct": 0.0,
+      "green": true,
+      "exact_match": true,
+      "ok": true,
+      "spins_fsot": [
+        1,
+        -1,
+        1,
+        1,
+        -1,
+        -1
+      ]
+    },
+    {
+      "name": "ising_grid3x3",
+      "kind": "ising",
+      "n": 9,
+      "n_edges": 14,
+      "E_exact": -10,
+      "E_fsot": -10,
+      "residual_pct": 0.0,
+      "green": true,
+      "exact_match": true,
+      "ok": true,
+      "spins_fsot": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ]
+    }
+  ],
+  "pass_count": 13,
+  "total": 13,
+  "accuracy": 1.0,
+  "green_count": 13,
+  "overall_ok": true,
+  "note": "Exact match required on discrete ground/cut for n<=16 public bank"
+}

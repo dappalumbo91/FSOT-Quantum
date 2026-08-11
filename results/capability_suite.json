@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-08-11T13:43:48.545431+00:00",
+  "timestamp": "2026-08-11T13:49:43.197891+00:00",
   "goal": "FSOT quantum capability on GPU/CPU \u2014 answers without quantum hardware infrastructure; parallel interface = GPU",
   "implementation": "fsot_lib (FSOT-GPU) + fsot_quantum domain fold",
   "pin": "D1D38A",
@@ -353,7 +353,7 @@
     "pack_stress": {
       "groups": 32768,
       "trits": 1048576,
-      "seconds": 0.006632499978877604,
+      "seconds": 0.0009546000510454178,
       "roundtrip_ok": true,
       "device": "cuda",
       "ok": true
@@ -363,8 +363,8 @@
       "n_items": 512,
       "correct": 256,
       "accuracy": 1.0,
-      "seconds": 0.002884899964556098,
-      "instances_per_sec": 88737.91228299694,
+      "seconds": 0.002637899946421385,
+      "instances_per_sec": 97046.89533327203,
       "device": "cuda",
       "ok": true
     },
@@ -373,7 +373,7 @@
       "n": 8,
       "correct": 128,
       "accuracy": 1.0,
-      "seconds": 0.00023699994198977947,
+      "seconds": 0.00022879999596625566,
       "device": "cuda",
       "ok": true,
       "note": "parity oracle f(x)=s\u00b7x \u2014 exact recover on basis probes"
@@ -387,7 +387,7 @@
         48,
         48
       ],
-      "seconds": 0.05563129996880889,
+      "seconds": 0.056000799988396466,
       "finite": true,
       "device": "cuda",
       "ok": true
@@ -399,7 +399,7 @@
     "algorithms_accuracy": 1.0,
     "gpu_parallel_all_ok": true,
     "overall_ok": true,
-    "wall_seconds": 1.646176700014621,
+    "wall_seconds": 0.07226139993872494,
     "device": "cuda"
   },
   "path_forward": {

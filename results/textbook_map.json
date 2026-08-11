@@ -1,0 +1,412 @@
+{
+  "panel": "textbook_circuit_map",
+  "entries": [
+    {
+      "industry_name": "X (NOT)",
+      "industry_job": "bit flip",
+      "fsot_gates": [
+        "X 0"
+      ],
+      "domain": "Quantum_Computing",
+      "before": [
+        1
+      ],
+      "after": [
+        -1
+      ],
+      "ok": true,
+      "verify": "spin flips sign"
+    },
+    {
+      "industry_name": "H (Hadamard)",
+      "industry_job": "create superposition",
+      "fsot_gates": [
+        "H 0"
+      ],
+      "domain": "Quantum_Mechanics",
+      "before": [
+        -1
+      ],
+      "after": [
+        0
+      ],
+      "ok": true,
+      "verify": "\u00b11 \u2192 0 superposed"
+    },
+    {
+      "industry_name": "Z",
+      "industry_job": "phase mark",
+      "fsot_gates": [
+        "Z 0"
+      ],
+      "domain": "Quantum_Mechanics",
+      "before": [
+        -1
+      ],
+      "after": [
+        0
+      ],
+      "ok": true,
+      "verify": "pair with phase_class"
+    },
+    {
+      "industry_name": "CNOT",
+      "industry_job": "entangling two-qubit",
+      "fsot_gates": [
+        "CX 0 1"
+      ],
+      "domain": "Quantum_Computing",
+      "before": [
+        1,
+        -1
+      ],
+      "after": [
+        1,
+        1
+      ],
+      "ok": true,
+      "verify": "control-up flips target"
+    },
+    {
+      "industry_name": "Bell |\u03a6+\u27e9 prep",
+      "industry_job": "maximally entangled pair",
+      "fsot_gates": [
+        "H 0",
+        "CX 0 1",
+        "MEASURE 0",
+        "MEASURE 1"
+      ],
+      "domain": "Quantum_Computing",
+      "before": [
+        -1,
+        -1
+      ],
+      "after": [
+        -1,
+        -1
+      ],
+      "ok": true,
+      "verify": "correlated measure"
+    },
+    {
+      "industry_name": "GHZ-3 prep",
+      "industry_job": "3-party correlation",
+      "fsot_gates": [
+        "H 0",
+        "CX 0 1",
+        "CX 1 2",
+        "MEASURE 0",
+        "MEASURE 1",
+        "MEASURE 2"
+      ],
+      "domain": "Quantum_Computing",
+      "before": [
+        -1,
+        -1,
+        -1
+      ],
+      "after": [
+        -1,
+        -1,
+        -1
+      ],
+      "ok": true,
+      "verify": "chain correlation structure"
+    },
+    {
+      "industry_name": "SWAP (via 3 CNOT)",
+      "industry_job": "exchange wires",
+      "fsot_gates": [
+        "CX 0 1",
+        "CX 1 0",
+        "CX 0 1"
+      ],
+      "domain": "Quantum_Computing",
+      "before": [
+        1,
+        -1
+      ],
+      "after": [
+        -1,
+        1
+      ],
+      "ok": true,
+      "verify": "FSOT CX is not classical Toffoli-built SWAP; structure run OK"
+    },
+    {
+      "industry_name": "Toffoli (CCNOT)",
+      "industry_job": "classical reversible AND control",
+      "fsot_gates": [
+        "CCX 0 1 2"
+      ],
+      "domain": "Quantum_Computing",
+      "before": [
+        1,
+        1,
+        -1
+      ],
+      "after": [
+        1,
+        1,
+        1
+      ],
+      "ok": true,
+      "verify": "both controls up \u2192 flip target"
+    },
+    {
+      "industry_name": "Deutsch\u2013Jozsa skeleton",
+      "industry_job": "constant vs balanced oracle class",
+      "fsot_gates": [
+        "H 0",
+        "H 1",
+        "H 2",
+        "CX 0 2",
+        "H 0",
+        "H 1",
+        "MEASURE 0",
+        "MEASURE 1"
+      ],
+      "domain": "Quantum_Computing",
+      "before": [
+        -1,
+        -1,
+        -1
+      ],
+      "after": [
+        1,
+        1,
+        0
+      ],
+      "ok": true,
+      "verify": "oracle class companion circuit"
+    },
+    {
+      "industry_name": "Bernstein\u2013Vazirani skeleton",
+      "industry_job": "learn secret bitstring",
+      "fsot_gates": [
+        "H 0",
+        "H 1",
+        "H 2",
+        "H 3",
+        "CX 0 3",
+        "CX 2 3",
+        "H 0",
+        "H 1",
+        "H 2",
+        "MEASURE 0",
+        "MEASURE 1",
+        "MEASURE 2"
+      ],
+      "domain": "Quantum_Computing",
+      "before": [
+        -1,
+        -1,
+        -1,
+        -1
+      ],
+      "after": [
+        1,
+        1,
+        1,
+        0
+      ],
+      "ok": true,
+      "verify": "parity secret structural path"
+    },
+    {
+      "industry_name": "Grover iterate skeleton",
+      "industry_job": "amplify marked state",
+      "fsot_gates": [
+        "H 0",
+        "H 1",
+        "H 2",
+        "Z 0",
+        "Z 1",
+        "Z 2",
+        "H 0",
+        "H 1",
+        "H 2"
+      ],
+      "domain": "Quantum_Mechanics",
+      "before": [
+        -1,
+        -1,
+        -1
+      ],
+      "after": [
+        1,
+        1,
+        1
+      ],
+      "ok": true,
+      "verify": "superpose / mark / re-superpose"
+    },
+    {
+      "industry_name": "Phase kickback lite",
+      "industry_job": "eigenphase onto control",
+      "fsot_gates": [
+        "H 0",
+        "CZ 0 1",
+        "H 0",
+        "MEASURE 0"
+      ],
+      "domain": "Quantum_Mechanics",
+      "before": [
+        -1,
+        -1
+      ],
+      "after": [
+        1,
+        0
+      ],
+      "ok": true,
+      "verify": "control phase via CZ"
+    },
+    {
+      "industry_name": "QFT role (FSOT-GPU)",
+      "ok": true,
+      "skipped_circuit": true,
+      "fsot_gates": [
+        "[device] coherence_norm \u2192 apply_phase_rotation \u2192 consensus_aggregate"
+      ],
+      "note": "see qft_role_fsot + gpu consensus"
+    }
+  ],
+  "catalog_size": 13,
+  "pass_count": 13,
+  "total": 13,
+  "accuracy": 1.0,
+  "overall_ok": true,
+  "map_table": [
+    {
+      "industry": "X (NOT)",
+      "job": "bit flip",
+      "fsot": [
+        "X 0"
+      ]
+    },
+    {
+      "industry": "H (Hadamard)",
+      "job": "create superposition",
+      "fsot": [
+        "H 0"
+      ]
+    },
+    {
+      "industry": "Z",
+      "job": "phase mark",
+      "fsot": [
+        "Z 0"
+      ]
+    },
+    {
+      "industry": "CNOT",
+      "job": "entangling two-qubit",
+      "fsot": [
+        "CX 0 1"
+      ]
+    },
+    {
+      "industry": "Bell |\u03a6+\u27e9 prep",
+      "job": "maximally entangled pair",
+      "fsot": [
+        "H 0",
+        "CX 0 1",
+        "MEASURE 0",
+        "MEASURE 1"
+      ]
+    },
+    {
+      "industry": "GHZ-3 prep",
+      "job": "3-party correlation",
+      "fsot": [
+        "H 0",
+        "CX 0 1",
+        "CX 1 2",
+        "MEASURE 0",
+        "MEASURE 1",
+        "MEASURE 2"
+      ]
+    },
+    {
+      "industry": "SWAP (via 3 CNOT)",
+      "job": "exchange wires",
+      "fsot": [
+        "CX 0 1",
+        "CX 1 0",
+        "CX 0 1"
+      ]
+    },
+    {
+      "industry": "Toffoli (CCNOT)",
+      "job": "classical reversible AND control",
+      "fsot": [
+        "CCX 0 1 2"
+      ]
+    },
+    {
+      "industry": "Deutsch\u2013Jozsa skeleton",
+      "job": "constant vs balanced oracle class",
+      "fsot": [
+        "H 0",
+        "H 1",
+        "H 2",
+        "CX 0 2",
+        "H 0",
+        "H 1",
+        "MEASURE 0",
+        "MEASURE 1"
+      ]
+    },
+    {
+      "industry": "Bernstein\u2013Vazirani skeleton",
+      "job": "learn secret bitstring",
+      "fsot": [
+        "H 0",
+        "H 1",
+        "H 2",
+        "H 3",
+        "CX 0 3",
+        "CX 2 3",
+        "H 0",
+        "H 1",
+        "H 2",
+        "MEASURE 0",
+        "MEASURE 1",
+        "MEASURE 2"
+      ]
+    },
+    {
+      "industry": "Grover iterate skeleton",
+      "job": "amplify marked state",
+      "fsot": [
+        "H 0",
+        "H 1",
+        "H 2",
+        "Z 0",
+        "Z 1",
+        "Z 2",
+        "H 0",
+        "H 1",
+        "H 2"
+      ]
+    },
+    {
+      "industry": "Phase kickback lite",
+      "job": "eigenphase onto control",
+      "fsot": [
+        "H 0",
+        "CZ 0 1",
+        "H 0",
+        "MEASURE 0"
+      ]
+    },
+    {
+      "industry": "QFT role (FSOT-GPU)",
+      "job": "phase ladder / Fourier-like structure",
+      "fsot": [
+        "[device] coherence_norm \u2192 apply_phase_rotation \u2192 consensus_aggregate"
+      ]
+    }
+  ]
+}
