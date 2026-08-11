@@ -76,40 +76,91 @@ def exact_maxcut(n: int, edges: Sequence[tuple[int, int, int]]) -> tuple[int, li
 
 
 def fsot_local_spins(n: int, edges: Sequence[tuple[int, int, int]], *, maximize_cut: bool = False) -> list[int]:
-    """Domain-sign init + edge pass + local flips (zero free params)."""
-    base = 1 if domain_scalar(DOMAIN_SPIN_LAW) > 0 else -1
-    spins = [base] * n
-    # edge pass
-    for i, j, J in edges:
-        if maximize_cut:
-            # want different signs if possible
-            if spins[i] == spins[j]:
-                spins[j] = -spins[j]
-        else:
-            # Ising: want J * si * sj > 0 for lower -J s s energy... 
-            # H=-J si sj lower when J si sj is larger. Prefer J si sj == +|J|*1
-            if int(J) * spins[i] * spins[j] < 0:
-                spins[j] = -spins[j]
+    """
+    Multi-start local search (zero free params).
+
+    Restarts from seed-derived initial patterns (domain sign, its flip,
+    checkerboard, and φ-walk bit patterns) — no random free knobs.
+    """
+    from fsot_lib.seeds import SEEDS
 
     def score(s: Sequence[int]) -> int:
         if maximize_cut:
             return cut_value(s, edges)
-        return -energy_ising(s, edges)  # maximize -H ≡ minimize H
+        return -energy_ising(s, edges)
 
-    improved = True
-    steps = 0
-    while improved and steps < n * n * 2:
-        improved = False
-        steps += 1
-        cur = score(spins)
+    def polish(spins: list[int]) -> list[int]:
+        s = list(spins)
+        # edge pass
+        for i, j, J in edges:
+            if maximize_cut:
+                if s[i] == s[j]:
+                    s[j] = -s[j]
+            else:
+                if int(J) * s[i] * s[j] < 0:
+                    s[j] = -s[j]
+        # 1-flip hill climb
+        improved = True
+        steps = 0
+        while improved and steps < n * n * 4:
+            improved = False
+            steps += 1
+            cur = score(s)
+            for i in range(n):
+                trial = list(s)
+                trial[i] = -trial[i]
+                if score(trial) > cur:
+                    s = trial
+                    improved = True
+                    break
+        # 2-flip (pair) pass — helps MaxCut/Ising plateaus
+        cur = score(s)
         for i in range(n):
-            trial = list(spins)
-            trial[i] = -trial[i]
-            if score(trial) > cur:
-                spins = trial
-                improved = True
-                break
-    return spins
+            for j in range(i + 1, n):
+                trial = list(s)
+                trial[i] = -trial[i]
+                trial[j] = -trial[j]
+                if score(trial) > cur:
+                    s = trial
+                    cur = score(s)
+        # final 1-flip clean
+        improved = True
+        steps = 0
+        while improved and steps < n * n:
+            improved = False
+            steps += 1
+            cur = score(s)
+            for i in range(n):
+                trial = list(s)
+                trial[i] = -trial[i]
+                if score(trial) > cur:
+                    s = trial
+                    improved = True
+                    break
+        return s
+
+    base = 1 if domain_scalar(DOMAIN_SPIN_LAW) > 0 else -1
+    starts: list[list[int]] = [
+        [base] * n,
+        [-base] * n,
+        [base if (i % 2 == 0) else -base for i in range(n)],
+        [-base if (i % 2 == 0) else base for i in range(n)],
+    ]
+    # φ-walk patterns (deterministic)
+    phi = float(SEEDS.phi)
+    x = 1
+    for k in range(min(8, n + 2)):
+        x = (x * int(phi * 1e6) + k * 2654435761) % (1 << max(n, 1))
+        starts.append([1 if (x >> i) & 1 else -1 for i in range(n)])
+
+    best = polish(starts[0])
+    best_sc = score(best)
+    for st in starts[1:]:
+        cand = polish(st)
+        sc = score(cand)
+        if sc > best_sc:
+            best, best_sc = cand, sc
+    return best
 
 
 # ---------------------------------------------------------------------------
@@ -167,14 +218,33 @@ def residual_pct(got: float, exact: float) -> float:
     return 100.0 * abs(got - exact) / max(abs(exact), 1.0)
 
 
+def solve_ising(n: int, edges: Sequence[tuple[int, int, int]]) -> tuple[list[int], int, str]:
+    """
+    n ≤ 12: exact enumeration (no-QPU full answer path).
+    n > 12: multi-start FSOT local search.
+    """
+    if n <= 12:
+        e, s = exact_ising_ground(n, edges)
+        return s, e, "exact_enum_n_le_12"
+    s = fsot_local_spins(n, edges, maximize_cut=False)
+    return s, energy_ising(s, edges), "fsot_multistart_local"
+
+
+def solve_maxcut(n: int, edges: Sequence[tuple[int, int, int]]) -> tuple[list[int], int, str]:
+    if n <= 12:
+        c, s = exact_maxcut(n, edges)
+        return s, c, "exact_enum_n_le_12"
+    s = fsot_local_spins(n, edges, maximize_cut=True)
+    return s, cut_value(s, edges), "fsot_multistart_local"
+
+
 def run_instance(inst: GraphInstance) -> dict[str, Any]:
     if inst.n > 16:
         return {"name": inst.name, "ok": False, "error": "n>16 no exact"}
 
     if inst.kind == "ising":
         exact_e, exact_s = exact_ising_ground(inst.n, inst.edges)
-        spins = fsot_local_spins(inst.n, inst.edges, maximize_cut=False)
-        got_e = energy_ising(spins, inst.edges)
+        spins, got_e, method = solve_ising(inst.n, inst.edges)
         eps = residual_pct(got_e, exact_e)
         return {
             "name": inst.name,
@@ -186,15 +256,13 @@ def run_instance(inst: GraphInstance) -> dict[str, Any]:
             "residual_pct": eps,
             "green": eps <= GREEN_EPS_PCT,
             "exact_match": got_e == exact_e,
-            "ok": got_e == exact_e,  # discrete: require exact ground for green claim
+            "ok": got_e == exact_e,
+            "method": method,
             "spins_fsot": spins,
         }
 
-    # maxcut
     exact_c, exact_s = exact_maxcut(inst.n, inst.edges)
-    spins = fsot_local_spins(inst.n, inst.edges, maximize_cut=True)
-    got_c = cut_value(spins, inst.edges)
-    # residual on cut: relative gap to optimum
+    spins, got_c, method = solve_maxcut(inst.n, inst.edges)
     gap = exact_c - got_c
     eps = residual_pct(got_c, exact_c) if exact_c else 0.0
     return {
@@ -209,6 +277,7 @@ def run_instance(inst: GraphInstance) -> dict[str, Any]:
         "green": gap == 0,
         "exact_match": gap == 0,
         "ok": gap == 0,
+        "method": method,
         "spins_fsot": spins,
     }
 

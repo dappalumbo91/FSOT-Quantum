@@ -1,0 +1,3391 @@
+{
+  "timestamp": "2026-08-11T13:55:51.380318+00:00",
+  "device": "cuda",
+  "pin": "D1D38A",
+  "collapse_threshold": 0.9174663774653723,
+  "S_QM": 0.9555063001027194,
+  "S_QC": -0.14767310363368633,
+  "overall": {
+    "pass": 224,
+    "total": 224,
+    "accuracy": 1.0
+  },
+  "categories": {
+    "bernstein_vazirani": {
+      "pass": 50,
+      "total": 50,
+      "accuracy": 1.0
+    },
+    "deutsch_jozsa": {
+      "pass": 42,
+      "total": 42,
+      "accuracy": 1.0
+    },
+    "deutsch_jozsa_adversarial": {
+      "pass": 2,
+      "total": 2,
+      "accuracy": 1.0
+    },
+    "entanglement": {
+      "pass": 2,
+      "total": 2,
+      "accuracy": 1.0
+    },
+    "gates": {
+      "pass": 6,
+      "total": 6,
+      "accuracy": 1.0
+    },
+    "grover_batch_gpu": {
+      "pass": 3,
+      "total": 3,
+      "accuracy": 1.0
+    },
+    "grover_search": {
+      "pass": 72,
+      "total": 72,
+      "accuracy": 1.0
+    },
+    "measurement": {
+      "pass": 6,
+      "total": 6,
+      "accuracy": 1.0
+    },
+    "optimization_bank": {
+      "pass": 13,
+      "total": 13,
+      "accuracy": 1.0
+    },
+    "optimization_random": {
+      "pass": 25,
+      "total": 25,
+      "accuracy": 1.0
+    },
+    "phase_class": {
+      "pass": 3,
+      "total": 3,
+      "accuracy": 1.0
+    }
+  },
+  "failures": [],
+  "refine_priority": [],
+  "wall_seconds": 1.6063432999653742,
+  "questions": [
+    {
+      "id": "DJ_const0_n2",
+      "category": "deutsch_jozsa",
+      "question": "Is f constant or balanced? (n=2, const0)",
+      "expected": "constant",
+      "got": "constant",
+      "ok": true,
+      "notes": "probe-set FSOT class"
+    },
+    {
+      "id": "DJ_const1_n2",
+      "category": "deutsch_jozsa",
+      "question": "Is f constant or balanced? (n=2, const1)",
+      "expected": "constant",
+      "got": "constant",
+      "ok": true,
+      "notes": "probe-set FSOT class"
+    },
+    {
+      "id": "DJ_const0_n4",
+      "category": "deutsch_jozsa",
+      "question": "Is f constant or balanced? (n=4, const0)",
+      "expected": "constant",
+      "got": "constant",
+      "ok": true,
+      "notes": "probe-set FSOT class"
+    },
+    {
+      "id": "DJ_const1_n4",
+      "category": "deutsch_jozsa",
+      "question": "Is f constant or balanced? (n=4, const1)",
+      "expected": "constant",
+      "got": "constant",
+      "ok": true,
+      "notes": "probe-set FSOT class"
+    },
+    {
+      "id": "DJ_const0_n6",
+      "category": "deutsch_jozsa",
+      "question": "Is f constant or balanced? (n=6, const0)",
+      "expected": "constant",
+      "got": "constant",
+      "ok": true,
+      "notes": "probe-set FSOT class"
+    },
+    {
+      "id": "DJ_const1_n6",
+      "category": "deutsch_jozsa",
+      "question": "Is f constant or balanced? (n=6, const1)",
+      "expected": "constant",
+      "got": "constant",
+      "ok": true,
+      "notes": "probe-set FSOT class"
+    },
+    {
+      "id": "DJ_const0_n8",
+      "category": "deutsch_jozsa",
+      "question": "Is f constant or balanced? (n=8, const0)",
+      "expected": "constant",
+      "got": "constant",
+      "ok": true,
+      "notes": "probe-set FSOT class"
+    },
+    {
+      "id": "DJ_const1_n8",
+      "category": "deutsch_jozsa",
+      "question": "Is f constant or balanced? (n=8, const1)",
+      "expected": "constant",
+      "got": "constant",
+      "ok": true,
+      "notes": "probe-set FSOT class"
+    },
+    {
+      "id": "DJ_const0_n10",
+      "category": "deutsch_jozsa",
+      "question": "Is f constant or balanced? (n=10, const0)",
+      "expected": "constant",
+      "got": "constant",
+      "ok": true,
+      "notes": "probe-set FSOT class"
+    },
+    {
+      "id": "DJ_const1_n10",
+      "category": "deutsch_jozsa",
+      "question": "Is f constant or balanced? (n=10, const1)",
+      "expected": "constant",
+      "got": "constant",
+      "ok": true,
+      "notes": "probe-set FSOT class"
+    },
+    {
+      "id": "DJ_parity_n3_m1",
+      "category": "deutsch_jozsa",
+      "question": "Classify parity oracle mask=0x1 (n=3)",
+      "expected": "balanced",
+      "got": "balanced",
+      "ok": true,
+      "notes": "parity balanced"
+    },
+    {
+      "id": "DJ_parity_n3_m7",
+      "category": "deutsch_jozsa",
+      "question": "Classify parity oracle mask=0x7 (n=3)",
+      "expected": "balanced",
+      "got": "balanced",
+      "ok": true,
+      "notes": "parity balanced"
+    },
+    {
+      "id": "DJ_parity_n3_m7",
+      "category": "deutsch_jozsa",
+      "question": "Classify parity oracle mask=0x7 (n=3)",
+      "expected": "balanced",
+      "got": "balanced",
+      "ok": true,
+      "notes": "parity balanced"
+    },
+    {
+      "id": "DJ_parity_n3_m4",
+      "category": "deutsch_jozsa",
+      "question": "Classify parity oracle mask=0x4 (n=3)",
+      "expected": "balanced",
+      "got": "balanced",
+      "ok": true,
+      "notes": "parity balanced"
+    },
+    {
+      "id": "DJ_parity_n3_m5",
+      "category": "deutsch_jozsa",
+      "question": "Classify parity oracle mask=0x5 (n=3)",
+      "expected": "balanced",
+      "got": "balanced",
+      "ok": true,
+      "notes": "parity balanced"
+    },
+    {
+      "id": "DJ_parity_n3_m1",
+      "category": "deutsch_jozsa",
+      "question": "Classify parity oracle mask=0x1 (n=3)",
+      "expected": "balanced",
+      "got": "balanced",
+      "ok": true,
+      "notes": "parity balanced"
+    },
+    {
+      "id": "DJ_parity_n3_m3",
+      "category": "deutsch_jozsa",
+      "question": "Classify parity oracle mask=0x3 (n=3)",
+      "expected": "balanced",
+      "got": "balanced",
+      "ok": true,
+      "notes": "parity balanced"
+    },
+    {
+      "id": "DJ_parity_n3_m1",
+      "category": "deutsch_jozsa",
+      "question": "Classify parity oracle mask=0x1 (n=3)",
+      "expected": "balanced",
+      "got": "balanced",
+      "ok": true,
+      "notes": "parity balanced"
+    },
+    {
+      "id": "DJ_parity_n5_m14",
+      "category": "deutsch_jozsa",
+      "question": "Classify parity oracle mask=0xe (n=5)",
+      "expected": "balanced",
+      "got": "balanced",
+      "ok": true,
+      "notes": "parity balanced"
+    },
+    {
+      "id": "DJ_parity_n5_m21",
+      "category": "deutsch_jozsa",
+      "question": "Classify parity oracle mask=0x15 (n=5)",
+      "expected": "balanced",
+      "got": "balanced",
+      "ok": true,
+      "notes": "parity balanced"
+    },
+    {
+      "id": "DJ_parity_n5_m26",
+      "category": "deutsch_jozsa",
+      "question": "Classify parity oracle mask=0x1a (n=5)",
+      "expected": "balanced",
+      "got": "balanced",
+      "ok": true,
+      "notes": "parity balanced"
+    },
+    {
+      "id": "DJ_parity_n5_m10",
+      "category": "deutsch_jozsa",
+      "question": "Classify parity oracle mask=0xa (n=5)",
+      "expected": "balanced",
+      "got": "balanced",
+      "ok": true,
+      "notes": "parity balanced"
+    },
+    {
+      "id": "DJ_parity_n5_m27",
+      "category": "deutsch_jozsa",
+      "question": "Classify parity oracle mask=0x1b (n=5)",
+      "expected": "balanced",
+      "got": "balanced",
+      "ok": true,
+      "notes": "parity balanced"
+    },
+    {
+      "id": "DJ_parity_n5_m24",
+      "category": "deutsch_jozsa",
+      "question": "Classify parity oracle mask=0x18 (n=5)",
+      "expected": "balanced",
+      "got": "balanced",
+      "ok": true,
+      "notes": "parity balanced"
+    },
+    {
+      "id": "DJ_parity_n5_m24",
+      "category": "deutsch_jozsa",
+      "question": "Classify parity oracle mask=0x18 (n=5)",
+      "expected": "balanced",
+      "got": "balanced",
+      "ok": true,
+      "notes": "parity balanced"
+    },
+    {
+      "id": "DJ_parity_n5_m5",
+      "category": "deutsch_jozsa",
+      "question": "Classify parity oracle mask=0x5 (n=5)",
+      "expected": "balanced",
+      "got": "balanced",
+      "ok": true,
+      "notes": "parity balanced"
+    },
+    {
+      "id": "DJ_parity_n8_m193",
+      "category": "deutsch_jozsa",
+      "question": "Classify parity oracle mask=0xc1 (n=8)",
+      "expected": "balanced",
+      "got": "balanced",
+      "ok": true,
+      "notes": "parity balanced"
+    },
+    {
+      "id": "DJ_parity_n8_m82",
+      "category": "deutsch_jozsa",
+      "question": "Classify parity oracle mask=0x52 (n=8)",
+      "expected": "balanced",
+      "got": "balanced",
+      "ok": true,
+      "notes": "parity balanced"
+    },
+    {
+      "id": "DJ_parity_n8_m44",
+      "category": "deutsch_jozsa",
+      "question": "Classify parity oracle mask=0x2c (n=8)",
+      "expected": "balanced",
+      "got": "balanced",
+      "ok": true,
+      "notes": "parity balanced"
+    },
+    {
+      "id": "DJ_parity_n8_m97",
+      "category": "deutsch_jozsa",
+      "question": "Classify parity oracle mask=0x61 (n=8)",
+      "expected": "balanced",
+      "got": "balanced",
+      "ok": true,
+      "notes": "parity balanced"
+    },
+    {
+      "id": "DJ_parity_n8_m150",
+      "category": "deutsch_jozsa",
+      "question": "Classify parity oracle mask=0x96 (n=8)",
+      "expected": "balanced",
+      "got": "balanced",
+      "ok": true,
+      "notes": "parity balanced"
+    },
+    {
+      "id": "DJ_parity_n8_m215",
+      "category": "deutsch_jozsa",
+      "question": "Classify parity oracle mask=0xd7 (n=8)",
+      "expected": "balanced",
+      "got": "balanced",
+      "ok": true,
+      "notes": "parity balanced"
+    },
+    {
+      "id": "DJ_parity_n8_m204",
+      "category": "deutsch_jozsa",
+      "question": "Classify parity oracle mask=0xcc (n=8)",
+      "expected": "balanced",
+      "got": "balanced",
+      "ok": true,
+      "notes": "parity balanced"
+    },
+    {
+      "id": "DJ_parity_n8_m32",
+      "category": "deutsch_jozsa",
+      "question": "Classify parity oracle mask=0x20 (n=8)",
+      "expected": "balanced",
+      "got": "balanced",
+      "ok": true,
+      "notes": "parity balanced"
+    },
+    {
+      "id": "DJ_parity_n12_m2522",
+      "category": "deutsch_jozsa",
+      "question": "Classify parity oracle mask=0x9da (n=12)",
+      "expected": "balanced",
+      "got": "balanced",
+      "ok": true,
+      "notes": "parity balanced"
+    },
+    {
+      "id": "DJ_parity_n12_m2003",
+      "category": "deutsch_jozsa",
+      "question": "Classify parity oracle mask=0x7d3 (n=12)",
+      "expected": "balanced",
+      "got": "balanced",
+      "ok": true,
+      "notes": "parity balanced"
+    },
+    {
+      "id": "DJ_parity_n12_m2766",
+      "category": "deutsch_jozsa",
+      "question": "Classify parity oracle mask=0xace (n=12)",
+      "expected": "balanced",
+      "got": "balanced",
+      "ok": true,
+      "notes": "parity balanced"
+    },
+    {
+      "id": "DJ_parity_n12_m1188",
+      "category": "deutsch_jozsa",
+      "question": "Classify parity oracle mask=0x4a4 (n=12)",
+      "expected": "balanced",
+      "got": "balanced",
+      "ok": true,
+      "notes": "parity balanced"
+    },
+    {
+      "id": "DJ_parity_n12_m479",
+      "category": "deutsch_jozsa",
+      "question": "Classify parity oracle mask=0x1df (n=12)",
+      "expected": "balanced",
+      "got": "balanced",
+      "ok": true,
+      "notes": "parity balanced"
+    },
+    {
+      "id": "DJ_parity_n12_m612",
+      "category": "deutsch_jozsa",
+      "question": "Classify parity oracle mask=0x264 (n=12)",
+      "expected": "balanced",
+      "got": "balanced",
+      "ok": true,
+      "notes": "parity balanced"
+    },
+    {
+      "id": "DJ_parity_n12_m3797",
+      "category": "deutsch_jozsa",
+      "question": "Classify parity oracle mask=0xed5 (n=12)",
+      "expected": "balanced",
+      "got": "balanced",
+      "ok": true,
+      "notes": "parity balanced"
+    },
+    {
+      "id": "DJ_parity_n12_m1121",
+      "category": "deutsch_jozsa",
+      "question": "Classify parity oracle mask=0x461 (n=12)",
+      "expected": "balanced",
+      "got": "balanced",
+      "ok": true,
+      "notes": "parity balanced"
+    },
+    {
+      "id": "DJ_almost_const_n4_flip0",
+      "category": "deutsch_jozsa_adversarial",
+      "question": "Classify almost-constant (one flip at 0, n=4)",
+      "expected": "balanced",
+      "got": "balanced",
+      "ok": true,
+      "notes": "ADVERSARIAL: probe set may miss single flip \u2014 expected weak point"
+    },
+    {
+      "id": "DJ_almost_const_n6_flip54",
+      "category": "deutsch_jozsa_adversarial",
+      "question": "Classify almost-constant (one flip at 54, n=6)",
+      "expected": "balanced",
+      "got": "balanced",
+      "ok": true,
+      "notes": "ADVERSARIAL: probe set may miss single flip \u2014 expected weak point"
+    },
+    {
+      "id": "BV_n4_t0",
+      "category": "bernstein_vazirani",
+      "question": "Recover secret s (n=4): [0, 0, 0, 1]",
+      "expected": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "got": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "ok": true,
+      "notes": ""
+    },
+    {
+      "id": "BV_n4_t1",
+      "category": "bernstein_vazirani",
+      "question": "Recover secret s (n=4): [0, 0, 1, 1]",
+      "expected": [
+        0,
+        0,
+        1,
+        1
+      ],
+      "got": [
+        0,
+        0,
+        1,
+        1
+      ],
+      "ok": true,
+      "notes": ""
+    },
+    {
+      "id": "BV_n4_t2",
+      "category": "bernstein_vazirani",
+      "question": "Recover secret s (n=4): [0, 1, 1, 0]",
+      "expected": [
+        0,
+        1,
+        1,
+        0
+      ],
+      "got": [
+        0,
+        1,
+        1,
+        0
+      ],
+      "ok": true,
+      "notes": ""
+    },
+    {
+      "id": "BV_n4_t3",
+      "category": "bernstein_vazirani",
+      "question": "Recover secret s (n=4): [0, 1, 1, 0]",
+      "expected": [
+        0,
+        1,
+        1,
+        0
+      ],
+      "got": [
+        0,
+        1,
+        1,
+        0
+      ],
+      "ok": true,
+      "notes": ""
+    },
+    {
+      "id": "BV_n4_t4",
+      "category": "bernstein_vazirani",
+      "question": "Recover secret s (n=4): [0, 1, 1, 0]",
+      "expected": [
+        0,
+        1,
+        1,
+        0
+      ],
+      "got": [
+        0,
+        1,
+        1,
+        0
+      ],
+      "ok": true,
+      "notes": ""
+    },
+    {
+      "id": "BV_n4_t5",
+      "category": "bernstein_vazirani",
+      "question": "Recover secret s (n=4): [0, 1, 1, 0]",
+      "expected": [
+        0,
+        1,
+        1,
+        0
+      ],
+      "got": [
+        0,
+        1,
+        1,
+        0
+      ],
+      "ok": true,
+      "notes": ""
+    },
+    {
+      "id": "BV_n4_t6",
+      "category": "bernstein_vazirani",
+      "question": "Recover secret s (n=4): [1, 0, 0, 1]",
+      "expected": [
+        1,
+        0,
+        0,
+        1
+      ],
+      "got": [
+        1,
+        0,
+        0,
+        1
+      ],
+      "ok": true,
+      "notes": ""
+    },
+    {
+      "id": "BV_n4_t7",
+      "category": "bernstein_vazirani",
+      "question": "Recover secret s (n=4): [0, 0, 0, 1]",
+      "expected": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "got": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "ok": true,
+      "notes": ""
+    },
+    {
+      "id": "BV_n4_t8",
+      "category": "bernstein_vazirani",
+      "question": "Recover secret s (n=4): [0, 0, 0, 1]",
+      "expected": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "got": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "ok": true,
+      "notes": ""
+    },
+    {
+      "id": "BV_n4_t9",
+      "category": "bernstein_vazirani",
+      "question": "Recover secret s (n=4): [1, 1, 1, 0]",
+      "expected": [
+        1,
+        1,
+        1,
+        0
+      ],
+      "got": [
+        1,
+        1,
+        1,
+        0
+      ],
+      "ok": true,
+      "notes": ""
+    },
+    {
+      "id": "BV_n8_t0",
+      "category": "bernstein_vazirani",
+      "question": "Recover secret s (n=8): [0, 0, 0, 1, 0, 1, 0, 1]",
+      "expected": [
+        0,
+        0,
+        0,
+        1,
+        0,
+        1,
+        0,
+        1
+      ],
+      "got": [
+        0,
+        0,
+        0,
+        1,
+        0,
+        1,
+        0,
+        1
+      ],
+      "ok": true,
+      "notes": ""
+    },
+    {
+      "id": "BV_n8_t1",
+      "category": "bernstein_vazirani",
+      "question": "Recover secret s (n=8): [1, 1, 1, 1, 1, 1, 1, 1]",
+      "expected": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "got": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "ok": true,
+      "notes": ""
+    },
+    {
+      "id": "BV_n8_t2",
+      "category": "bernstein_vazirani",
+      "question": "Recover secret s (n=8): [1, 1, 0, 1, 0, 0, 1, 1]",
+      "expected": [
+        1,
+        1,
+        0,
+        1,
+        0,
+        0,
+        1,
+        1
+      ],
+      "got": [
+        1,
+        1,
+        0,
+        1,
+        0,
+        0,
+        1,
+        1
+      ],
+      "ok": true,
+      "notes": ""
+    },
+    {
+      "id": "BV_n8_t3",
+      "category": "bernstein_vazirani",
+      "question": "Recover secret s (n=8): [0, 1, 0, 1, 0, 0, 0, 1]",
+      "expected": [
+        0,
+        1,
+        0,
+        1,
+        0,
+        0,
+        0,
+        1
+      ],
+      "got": [
+        0,
+        1,
+        0,
+        1,
+        0,
+        0,
+        0,
+        1
+      ],
+      "ok": true,
+      "notes": ""
+    },
+    {
+      "id": "BV_n8_t4",
+      "category": "bernstein_vazirani",
+      "question": "Recover secret s (n=8): [0, 1, 0, 1, 0, 0, 1, 0]",
+      "expected": [
+        0,
+        1,
+        0,
+        1,
+        0,
+        0,
+        1,
+        0
+      ],
+      "got": [
+        0,
+        1,
+        0,
+        1,
+        0,
+        0,
+        1,
+        0
+      ],
+      "ok": true,
+      "notes": ""
+    },
+    {
+      "id": "BV_n8_t5",
+      "category": "bernstein_vazirani",
+      "question": "Recover secret s (n=8): [0, 0, 0, 1, 0, 0, 0, 1]",
+      "expected": [
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        1
+      ],
+      "got": [
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        1
+      ],
+      "ok": true,
+      "notes": ""
+    },
+    {
+      "id": "BV_n8_t6",
+      "category": "bernstein_vazirani",
+      "question": "Recover secret s (n=8): [1, 0, 0, 0, 0, 1, 0, 1]",
+      "expected": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        1
+      ],
+      "got": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        1
+      ],
+      "ok": true,
+      "notes": ""
+    },
+    {
+      "id": "BV_n8_t7",
+      "category": "bernstein_vazirani",
+      "question": "Recover secret s (n=8): [1, 1, 1, 1, 0, 0, 1, 0]",
+      "expected": [
+        1,
+        1,
+        1,
+        1,
+        0,
+        0,
+        1,
+        0
+      ],
+      "got": [
+        1,
+        1,
+        1,
+        1,
+        0,
+        0,
+        1,
+        0
+      ],
+      "ok": true,
+      "notes": ""
+    },
+    {
+      "id": "BV_n8_t8",
+      "category": "bernstein_vazirani",
+      "question": "Recover secret s (n=8): [1, 0, 1, 1, 0, 1, 1, 1]",
+      "expected": [
+        1,
+        0,
+        1,
+        1,
+        0,
+        1,
+        1,
+        1
+      ],
+      "got": [
+        1,
+        0,
+        1,
+        1,
+        0,
+        1,
+        1,
+        1
+      ],
+      "ok": true,
+      "notes": ""
+    },
+    {
+      "id": "BV_n8_t9",
+      "category": "bernstein_vazirani",
+      "question": "Recover secret s (n=8): [0, 0, 1, 0, 0, 1, 1, 0]",
+      "expected": [
+        0,
+        0,
+        1,
+        0,
+        0,
+        1,
+        1,
+        0
+      ],
+      "got": [
+        0,
+        0,
+        1,
+        0,
+        0,
+        1,
+        1,
+        0
+      ],
+      "ok": true,
+      "notes": ""
+    },
+    {
+      "id": "BV_n12_t0",
+      "category": "bernstein_vazirani",
+      "question": "Recover secret s (n=12): [0, 0, 1, 1, 0, 1, 0, 1, 0, 0, 1, 1]",
+      "expected": [
+        0,
+        0,
+        1,
+        1,
+        0,
+        1,
+        0,
+        1,
+        0,
+        0,
+        1,
+        1
+      ],
+      "got": [
+        0,
+        0,
+        1,
+        1,
+        0,
+        1,
+        0,
+        1,
+        0,
+        0,
+        1,
+        1
+      ],
+      "ok": true,
+      "notes": ""
+    },
+    {
+      "id": "BV_n12_t1",
+      "category": "bernstein_vazirani",
+      "question": "Recover secret s (n=12): [0, 1, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0]",
+      "expected": [
+        0,
+        1,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0
+      ],
+      "got": [
+        0,
+        1,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0
+      ],
+      "ok": true,
+      "notes": ""
+    },
+    {
+      "id": "BV_n12_t2",
+      "category": "bernstein_vazirani",
+      "question": "Recover secret s (n=12): [0, 1, 0, 0, 0, 1, 0, 0, 1, 1, 1, 0]",
+      "expected": [
+        0,
+        1,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        1,
+        1,
+        1,
+        0
+      ],
+      "got": [
+        0,
+        1,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        1,
+        1,
+        1,
+        0
+      ],
+      "ok": true,
+      "notes": ""
+    },
+    {
+      "id": "BV_n12_t3",
+      "category": "bernstein_vazirani",
+      "question": "Recover secret s (n=12): [0, 0, 1, 1, 0, 0, 0, 1, 0, 1, 1, 0]",
+      "expected": [
+        0,
+        0,
+        1,
+        1,
+        0,
+        0,
+        0,
+        1,
+        0,
+        1,
+        1,
+        0
+      ],
+      "got": [
+        0,
+        0,
+        1,
+        1,
+        0,
+        0,
+        0,
+        1,
+        0,
+        1,
+        1,
+        0
+      ],
+      "ok": true,
+      "notes": ""
+    },
+    {
+      "id": "BV_n12_t4",
+      "category": "bernstein_vazirani",
+      "question": "Recover secret s (n=12): [0, 0, 1, 0, 0, 0, 0, 1, 1, 1, 1, 1]",
+      "expected": [
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "got": [
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "ok": true,
+      "notes": ""
+    },
+    {
+      "id": "BV_n12_t5",
+      "category": "bernstein_vazirani",
+      "question": "Recover secret s (n=12): [0, 0, 0, 1, 1, 1, 0, 1, 1, 1, 0, 0]",
+      "expected": [
+        0,
+        0,
+        0,
+        1,
+        1,
+        1,
+        0,
+        1,
+        1,
+        1,
+        0,
+        0
+      ],
+      "got": [
+        0,
+        0,
+        0,
+        1,
+        1,
+        1,
+        0,
+        1,
+        1,
+        1,
+        0,
+        0
+      ],
+      "ok": true,
+      "notes": ""
+    },
+    {
+      "id": "BV_n12_t6",
+      "category": "bernstein_vazirani",
+      "question": "Recover secret s (n=12): [1, 1, 0, 1, 0, 1, 1, 1, 1, 1, 0, 1]",
+      "expected": [
+        1,
+        1,
+        0,
+        1,
+        0,
+        1,
+        1,
+        1,
+        1,
+        1,
+        0,
+        1
+      ],
+      "got": [
+        1,
+        1,
+        0,
+        1,
+        0,
+        1,
+        1,
+        1,
+        1,
+        1,
+        0,
+        1
+      ],
+      "ok": true,
+      "notes": ""
+    },
+    {
+      "id": "BV_n12_t7",
+      "category": "bernstein_vazirani",
+      "question": "Recover secret s (n=12): [1, 1, 0, 0, 0, 1, 1, 0, 1, 0, 1, 0]",
+      "expected": [
+        1,
+        1,
+        0,
+        0,
+        0,
+        1,
+        1,
+        0,
+        1,
+        0,
+        1,
+        0
+      ],
+      "got": [
+        1,
+        1,
+        0,
+        0,
+        0,
+        1,
+        1,
+        0,
+        1,
+        0,
+        1,
+        0
+      ],
+      "ok": true,
+      "notes": ""
+    },
+    {
+      "id": "BV_n12_t8",
+      "category": "bernstein_vazirani",
+      "question": "Recover secret s (n=12): [0, 1, 0, 1, 0, 1, 1, 1, 0, 0, 1, 0]",
+      "expected": [
+        0,
+        1,
+        0,
+        1,
+        0,
+        1,
+        1,
+        1,
+        0,
+        0,
+        1,
+        0
+      ],
+      "got": [
+        0,
+        1,
+        0,
+        1,
+        0,
+        1,
+        1,
+        1,
+        0,
+        0,
+        1,
+        0
+      ],
+      "ok": true,
+      "notes": ""
+    },
+    {
+      "id": "BV_n12_t9",
+      "category": "bernstein_vazirani",
+      "question": "Recover secret s (n=12): [1, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0]",
+      "expected": [
+        1,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "got": [
+        1,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "ok": true,
+      "notes": ""
+    },
+    {
+      "id": "BV_n16_t0",
+      "category": "bernstein_vazirani",
+      "question": "Recover secret s (n=16): [1, 1, 1, 0, 1, 0, 0, 0, 1, 1, 0, 0, 1, 0, 0, 1]",
+      "expected": [
+        1,
+        1,
+        1,
+        0,
+        1,
+        0,
+        0,
+        0,
+        1,
+        1,
+        0,
+        0,
+        1,
+        0,
+        0,
+        1
+      ],
+      "got": [
+        1,
+        1,
+        1,
+        0,
+        1,
+        0,
+        0,
+        0,
+        1,
+        1,
+        0,
+        0,
+        1,
+        0,
+        0,
+        1
+      ],
+      "ok": true,
+      "notes": ""
+    },
+    {
+      "id": "BV_n16_t1",
+      "category": "bernstein_vazirani",
+      "question": "Recover secret s (n=16): [1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 1, 1]",
+      "expected": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        1,
+        0,
+        0,
+        1,
+        1
+      ],
+      "got": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        1,
+        0,
+        0,
+        1,
+        1
+      ],
+      "ok": true,
+      "notes": ""
+    },
+    {
+      "id": "BV_n16_t2",
+      "category": "bernstein_vazirani",
+      "question": "Recover secret s (n=16): [0, 0, 1, 0, 1, 0, 1, 1, 0, 0, 1, 1, 0, 1, 0, 1]",
+      "expected": [
+        0,
+        0,
+        1,
+        0,
+        1,
+        0,
+        1,
+        1,
+        0,
+        0,
+        1,
+        1,
+        0,
+        1,
+        0,
+        1
+      ],
+      "got": [
+        0,
+        0,
+        1,
+        0,
+        1,
+        0,
+        1,
+        1,
+        0,
+        0,
+        1,
+        1,
+        0,
+        1,
+        0,
+        1
+      ],
+      "ok": true,
+      "notes": ""
+    },
+    {
+      "id": "BV_n16_t3",
+      "category": "bernstein_vazirani",
+      "question": "Recover secret s (n=16): [0, 1, 1, 0, 0, 1, 0, 1, 0, 0, 1, 1, 0, 0, 0, 0]",
+      "expected": [
+        0,
+        1,
+        1,
+        0,
+        0,
+        1,
+        0,
+        1,
+        0,
+        0,
+        1,
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      "got": [
+        0,
+        1,
+        1,
+        0,
+        0,
+        1,
+        0,
+        1,
+        0,
+        0,
+        1,
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      "ok": true,
+      "notes": ""
+    },
+    {
+      "id": "BV_n16_t4",
+      "category": "bernstein_vazirani",
+      "question": "Recover secret s (n=16): [0, 1, 0, 1, 0, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 1]",
+      "expected": [
+        0,
+        1,
+        0,
+        1,
+        0,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "got": [
+        0,
+        1,
+        0,
+        1,
+        0,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "ok": true,
+      "notes": ""
+    },
+    {
+      "id": "BV_n16_t5",
+      "category": "bernstein_vazirani",
+      "question": "Recover secret s (n=16): [1, 1, 0, 0, 1, 1, 0, 0, 1, 1, 1, 0, 0, 0, 0, 1]",
+      "expected": [
+        1,
+        1,
+        0,
+        0,
+        1,
+        1,
+        0,
+        0,
+        1,
+        1,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "got": [
+        1,
+        1,
+        0,
+        0,
+        1,
+        1,
+        0,
+        0,
+        1,
+        1,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "ok": true,
+      "notes": ""
+    },
+    {
+      "id": "BV_n16_t6",
+      "category": "bernstein_vazirani",
+      "question": "Recover secret s (n=16): [0, 1, 1, 1, 1, 1, 1, 0, 1, 0, 1, 1, 1, 0, 1, 1]",
+      "expected": [
+        0,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        0,
+        1,
+        0,
+        1,
+        1,
+        1,
+        0,
+        1,
+        1
+      ],
+      "got": [
+        0,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        0,
+        1,
+        0,
+        1,
+        1,
+        1,
+        0,
+        1,
+        1
+      ],
+      "ok": true,
+      "notes": ""
+    },
+    {
+      "id": "BV_n16_t7",
+      "category": "bernstein_vazirani",
+      "question": "Recover secret s (n=16): [0, 1, 0, 0, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 0, 1]",
+      "expected": [
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        1,
+        1,
+        0,
+        0,
+        1
+      ],
+      "got": [
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        1,
+        1,
+        0,
+        0,
+        1
+      ],
+      "ok": true,
+      "notes": ""
+    },
+    {
+      "id": "BV_n16_t8",
+      "category": "bernstein_vazirani",
+      "question": "Recover secret s (n=16): [0, 0, 1, 1, 0, 0, 0, 1, 0, 1, 1, 0, 0, 1, 1, 1]",
+      "expected": [
+        0,
+        0,
+        1,
+        1,
+        0,
+        0,
+        0,
+        1,
+        0,
+        1,
+        1,
+        0,
+        0,
+        1,
+        1,
+        1
+      ],
+      "got": [
+        0,
+        0,
+        1,
+        1,
+        0,
+        0,
+        0,
+        1,
+        0,
+        1,
+        1,
+        0,
+        0,
+        1,
+        1,
+        1
+      ],
+      "ok": true,
+      "notes": ""
+    },
+    {
+      "id": "BV_n16_t9",
+      "category": "bernstein_vazirani",
+      "question": "Recover secret s (n=16): [0, 0, 0, 0, 1, 0, 1, 0, 1, 0, 1, 0, 0, 0, 0, 0]",
+      "expected": [
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        1,
+        0,
+        1,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "got": [
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        1,
+        0,
+        1,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "ok": true,
+      "notes": ""
+    },
+    {
+      "id": "BV_n20_t0",
+      "category": "bernstein_vazirani",
+      "question": "Recover secret s (n=20): [1, 0, 1, 1, 0, 1, 0, 0, 1, 1, 1, 0, 0, 1, 1, 0, 1, 1, 0, 1]",
+      "expected": [
+        1,
+        0,
+        1,
+        1,
+        0,
+        1,
+        0,
+        0,
+        1,
+        1,
+        1,
+        0,
+        0,
+        1,
+        1,
+        0,
+        1,
+        1,
+        0,
+        1
+      ],
+      "got": [
+        1,
+        0,
+        1,
+        1,
+        0,
+        1,
+        0,
+        0,
+        1,
+        1,
+        1,
+        0,
+        0,
+        1,
+        1,
+        0,
+        1,
+        1,
+        0,
+        1
+      ],
+      "ok": true,
+      "notes": ""
+    },
+    {
+      "id": "BV_n20_t1",
+      "category": "bernstein_vazirani",
+      "question": "Recover secret s (n=20): [0, 0, 1, 1, 1, 1, 0, 1, 0, 1, 1, 0, 1, 1, 1, 0, 1, 1, 1, 0]",
+      "expected": [
+        0,
+        0,
+        1,
+        1,
+        1,
+        1,
+        0,
+        1,
+        0,
+        1,
+        1,
+        0,
+        1,
+        1,
+        1,
+        0,
+        1,
+        1,
+        1,
+        0
+      ],
+      "got": [
+        0,
+        0,
+        1,
+        1,
+        1,
+        1,
+        0,
+        1,
+        0,
+        1,
+        1,
+        0,
+        1,
+        1,
+        1,
+        0,
+        1,
+        1,
+        1,
+        0
+      ],
+      "ok": true,
+      "notes": ""
+    },
+    {
+      "id": "BV_n20_t2",
+      "category": "bernstein_vazirani",
+      "question": "Recover secret s (n=20): [1, 0, 1, 0, 0, 1, 0, 1, 1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 1, 0]",
+      "expected": [
+        1,
+        0,
+        1,
+        0,
+        0,
+        1,
+        0,
+        1,
+        1,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        1,
+        1,
+        1,
+        0
+      ],
+      "got": [
+        1,
+        0,
+        1,
+        0,
+        0,
+        1,
+        0,
+        1,
+        1,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        1,
+        1,
+        1,
+        0
+      ],
+      "ok": true,
+      "notes": ""
+    },
+    {
+      "id": "BV_n20_t3",
+      "category": "bernstein_vazirani",
+      "question": "Recover secret s (n=20): [1, 0, 1, 1, 1, 0, 0, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0, 1, 1]",
+      "expected": [
+        1,
+        0,
+        1,
+        1,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        1,
+        0,
+        1,
+        0,
+        1,
+        1
+      ],
+      "got": [
+        1,
+        0,
+        1,
+        1,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        1,
+        0,
+        1,
+        0,
+        1,
+        1
+      ],
+      "ok": true,
+      "notes": ""
+    },
+    {
+      "id": "BV_n20_t4",
+      "category": "bernstein_vazirani",
+      "question": "Recover secret s (n=20): [0, 0, 1, 1, 1, 1, 1, 0, 1, 0, 0, 1, 0, 0, 1, 1, 0, 1, 0, 0]",
+      "expected": [
+        0,
+        0,
+        1,
+        1,
+        1,
+        1,
+        1,
+        0,
+        1,
+        0,
+        0,
+        1,
+        0,
+        0,
+        1,
+        1,
+        0,
+        1,
+        0,
+        0
+      ],
+      "got": [
+        0,
+        0,
+        1,
+        1,
+        1,
+        1,
+        1,
+        0,
+        1,
+        0,
+        0,
+        1,
+        0,
+        0,
+        1,
+        1,
+        0,
+        1,
+        0,
+        0
+      ],
+      "ok": true,
+      "notes": ""
+    },
+    {
+      "id": "BV_n20_t5",
+      "category": "bernstein_vazirani",
+      "question": "Recover secret s (n=20): [1, 1, 1, 0, 1, 1, 1, 0, 1, 0, 0, 1, 0, 1, 1, 0, 1, 0, 1, 0]",
+      "expected": [
+        1,
+        1,
+        1,
+        0,
+        1,
+        1,
+        1,
+        0,
+        1,
+        0,
+        0,
+        1,
+        0,
+        1,
+        1,
+        0,
+        1,
+        0,
+        1,
+        0
+      ],
+      "got": [
+        1,
+        1,
+        1,
+        0,
+        1,
+        1,
+        1,
+        0,
+        1,
+        0,
+        0,
+        1,
+        0,
+        1,
+        1,
+        0,
+        1,
+        0,
+        1,
+        0
+      ],
+      "ok": true,
+      "notes": ""
+    },
+    {
+      "id": "BV_n20_t6",
+      "category": "bernstein_vazirani",
+      "question": "Recover secret s (n=20): [1, 0, 0, 1, 1, 0, 0, 0, 0, 0, 1, 1, 1, 0, 0, 1, 1, 0, 1, 0]",
+      "expected": [
+        1,
+        0,
+        0,
+        1,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        1,
+        1,
+        0,
+        0,
+        1,
+        1,
+        0,
+        1,
+        0
+      ],
+      "got": [
+        1,
+        0,
+        0,
+        1,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        1,
+        1,
+        0,
+        0,
+        1,
+        1,
+        0,
+        1,
+        0
+      ],
+      "ok": true,
+      "notes": ""
+    },
+    {
+      "id": "BV_n20_t7",
+      "category": "bernstein_vazirani",
+      "question": "Recover secret s (n=20): [1, 0, 1, 0, 0, 0, 0, 1, 1, 1, 1, 0, 0, 0, 1, 1, 1, 1, 1, 0]",
+      "expected": [
+        1,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        1,
+        1,
+        1,
+        0,
+        0,
+        0,
+        1,
+        1,
+        1,
+        1,
+        1,
+        0
+      ],
+      "got": [
+        1,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        1,
+        1,
+        1,
+        0,
+        0,
+        0,
+        1,
+        1,
+        1,
+        1,
+        1,
+        0
+      ],
+      "ok": true,
+      "notes": ""
+    },
+    {
+      "id": "BV_n20_t8",
+      "category": "bernstein_vazirani",
+      "question": "Recover secret s (n=20): [1, 1, 1, 1, 1, 0, 0, 1, 0, 1, 0, 0, 1, 0, 1, 1, 0, 1, 0, 0]",
+      "expected": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        0,
+        0,
+        1,
+        0,
+        1,
+        0,
+        0,
+        1,
+        0,
+        1,
+        1,
+        0,
+        1,
+        0,
+        0
+      ],
+      "got": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        0,
+        0,
+        1,
+        0,
+        1,
+        0,
+        0,
+        1,
+        0,
+        1,
+        1,
+        0,
+        1,
+        0,
+        0
+      ],
+      "ok": true,
+      "notes": ""
+    },
+    {
+      "id": "BV_n20_t9",
+      "category": "bernstein_vazirani",
+      "question": "Recover secret s (n=20): [0, 1, 0, 1, 0, 1, 1, 0, 1, 0, 1, 1, 1, 1, 0, 1, 0, 0, 1, 1]",
+      "expected": [
+        0,
+        1,
+        0,
+        1,
+        0,
+        1,
+        1,
+        0,
+        1,
+        0,
+        1,
+        1,
+        1,
+        1,
+        0,
+        1,
+        0,
+        0,
+        1,
+        1
+      ],
+      "got": [
+        0,
+        1,
+        0,
+        1,
+        0,
+        1,
+        1,
+        0,
+        1,
+        0,
+        1,
+        1,
+        1,
+        1,
+        0,
+        1,
+        0,
+        0,
+        1,
+        1
+      ],
+      "ok": true,
+      "notes": ""
+    },
+    {
+      "id": "GROVER_N16_m1",
+      "category": "grover_search",
+      "question": "Find marked index in N=16 (marked=1)",
+      "expected": 1,
+      "got": 1,
+      "ok": true,
+      "notes": "collapse marked pole"
+    },
+    {
+      "id": "GROVER_N16_m9",
+      "category": "grover_search",
+      "question": "Find marked index in N=16 (marked=9)",
+      "expected": 9,
+      "got": 9,
+      "ok": true,
+      "notes": "collapse marked pole"
+    },
+    {
+      "id": "GROVER_N16_m1",
+      "category": "grover_search",
+      "question": "Find marked index in N=16 (marked=1)",
+      "expected": 1,
+      "got": 1,
+      "ok": true,
+      "notes": "collapse marked pole"
+    },
+    {
+      "id": "GROVER_N16_m10",
+      "category": "grover_search",
+      "question": "Find marked index in N=16 (marked=10)",
+      "expected": 10,
+      "got": 10,
+      "ok": true,
+      "notes": "collapse marked pole"
+    },
+    {
+      "id": "GROVER_N16_m15",
+      "category": "grover_search",
+      "question": "Find marked index in N=16 (marked=15)",
+      "expected": 15,
+      "got": 15,
+      "ok": true,
+      "notes": "collapse marked pole"
+    },
+    {
+      "id": "GROVER_N16_m0",
+      "category": "grover_search",
+      "question": "Find marked index in N=16 (marked=0)",
+      "expected": 0,
+      "got": 0,
+      "ok": true,
+      "notes": "collapse marked pole"
+    },
+    {
+      "id": "GROVER_N16_m12",
+      "category": "grover_search",
+      "question": "Find marked index in N=16 (marked=12)",
+      "expected": 12,
+      "got": 12,
+      "ok": true,
+      "notes": "collapse marked pole"
+    },
+    {
+      "id": "GROVER_N16_m4",
+      "category": "grover_search",
+      "question": "Find marked index in N=16 (marked=4)",
+      "expected": 4,
+      "got": 4,
+      "ok": true,
+      "notes": "collapse marked pole"
+    },
+    {
+      "id": "GROVER_N16_m3",
+      "category": "grover_search",
+      "question": "Find marked index in N=16 (marked=3)",
+      "expected": 3,
+      "got": 3,
+      "ok": true,
+      "notes": "collapse marked pole"
+    },
+    {
+      "id": "GROVER_N16_m14",
+      "category": "grover_search",
+      "question": "Find marked index in N=16 (marked=14)",
+      "expected": 14,
+      "got": 14,
+      "ok": true,
+      "notes": "collapse marked pole"
+    },
+    {
+      "id": "GROVER_N16_m14",
+      "category": "grover_search",
+      "question": "Find marked index in N=16 (marked=14)",
+      "expected": 14,
+      "got": 14,
+      "ok": true,
+      "notes": "collapse marked pole"
+    },
+    {
+      "id": "GROVER_N16_m0",
+      "category": "grover_search",
+      "question": "Find marked index in N=16 (marked=0)",
+      "expected": 0,
+      "got": 0,
+      "ok": true,
+      "notes": "collapse marked pole"
+    },
+    {
+      "id": "GROVER_N64_m54",
+      "category": "grover_search",
+      "question": "Find marked index in N=64 (marked=54)",
+      "expected": 54,
+      "got": 54,
+      "ok": true,
+      "notes": "collapse marked pole"
+    },
+    {
+      "id": "GROVER_N64_m54",
+      "category": "grover_search",
+      "question": "Find marked index in N=64 (marked=54)",
+      "expected": 54,
+      "got": 54,
+      "ok": true,
+      "notes": "collapse marked pole"
+    },
+    {
+      "id": "GROVER_N64_m20",
+      "category": "grover_search",
+      "question": "Find marked index in N=64 (marked=20)",
+      "expected": 20,
+      "got": 20,
+      "ok": true,
+      "notes": "collapse marked pole"
+    },
+    {
+      "id": "GROVER_N64_m16",
+      "category": "grover_search",
+      "question": "Find marked index in N=64 (marked=16)",
+      "expected": 16,
+      "got": 16,
+      "ok": true,
+      "notes": "collapse marked pole"
+    },
+    {
+      "id": "GROVER_N64_m1",
+      "category": "grover_search",
+      "question": "Find marked index in N=64 (marked=1)",
+      "expected": 1,
+      "got": 1,
+      "ok": true,
+      "notes": "collapse marked pole"
+    },
+    {
+      "id": "GROVER_N64_m32",
+      "category": "grover_search",
+      "question": "Find marked index in N=64 (marked=32)",
+      "expected": 32,
+      "got": 32,
+      "ok": true,
+      "notes": "collapse marked pole"
+    },
+    {
+      "id": "GROVER_N64_m58",
+      "category": "grover_search",
+      "question": "Find marked index in N=64 (marked=58)",
+      "expected": 58,
+      "got": 58,
+      "ok": true,
+      "notes": "collapse marked pole"
+    },
+    {
+      "id": "GROVER_N64_m21",
+      "category": "grover_search",
+      "question": "Find marked index in N=64 (marked=21)",
+      "expected": 21,
+      "got": 21,
+      "ok": true,
+      "notes": "collapse marked pole"
+    },
+    {
+      "id": "GROVER_N64_m55",
+      "category": "grover_search",
+      "question": "Find marked index in N=64 (marked=55)",
+      "expected": 55,
+      "got": 55,
+      "ok": true,
+      "notes": "collapse marked pole"
+    },
+    {
+      "id": "GROVER_N64_m2",
+      "category": "grover_search",
+      "question": "Find marked index in N=64 (marked=2)",
+      "expected": 2,
+      "got": 2,
+      "ok": true,
+      "notes": "collapse marked pole"
+    },
+    {
+      "id": "GROVER_N64_m21",
+      "category": "grover_search",
+      "question": "Find marked index in N=64 (marked=21)",
+      "expected": 21,
+      "got": 21,
+      "ok": true,
+      "notes": "collapse marked pole"
+    },
+    {
+      "id": "GROVER_N64_m6",
+      "category": "grover_search",
+      "question": "Find marked index in N=64 (marked=6)",
+      "expected": 6,
+      "got": 6,
+      "ok": true,
+      "notes": "collapse marked pole"
+    },
+    {
+      "id": "GROVER_N256_m56",
+      "category": "grover_search",
+      "question": "Find marked index in N=256 (marked=56)",
+      "expected": 56,
+      "got": 56,
+      "ok": true,
+      "notes": "collapse marked pole"
+    },
+    {
+      "id": "GROVER_N256_m190",
+      "category": "grover_search",
+      "question": "Find marked index in N=256 (marked=190)",
+      "expected": 190,
+      "got": 190,
+      "ok": true,
+      "notes": "collapse marked pole"
+    },
+    {
+      "id": "GROVER_N256_m148",
+      "category": "grover_search",
+      "question": "Find marked index in N=256 (marked=148)",
+      "expected": 148,
+      "got": 148,
+      "ok": true,
+      "notes": "collapse marked pole"
+    },
+    {
+      "id": "GROVER_N256_m143",
+      "category": "grover_search",
+      "question": "Find marked index in N=256 (marked=143)",
+      "expected": 143,
+      "got": 143,
+      "ok": true,
+      "notes": "collapse marked pole"
+    },
+    {
+      "id": "GROVER_N256_m78",
+      "category": "grover_search",
+      "question": "Find marked index in N=256 (marked=78)",
+      "expected": 78,
+      "got": 78,
+      "ok": true,
+      "notes": "collapse marked pole"
+    },
+    {
+      "id": "GROVER_N256_m214",
+      "category": "grover_search",
+      "question": "Find marked index in N=256 (marked=214)",
+      "expected": 214,
+      "got": 214,
+      "ok": true,
+      "notes": "collapse marked pole"
+    },
+    {
+      "id": "GROVER_N256_m63",
+      "category": "grover_search",
+      "question": "Find marked index in N=256 (marked=63)",
+      "expected": 63,
+      "got": 63,
+      "ok": true,
+      "notes": "collapse marked pole"
+    },
+    {
+      "id": "GROVER_N256_m209",
+      "category": "grover_search",
+      "question": "Find marked index in N=256 (marked=209)",
+      "expected": 209,
+      "got": 209,
+      "ok": true,
+      "notes": "collapse marked pole"
+    },
+    {
+      "id": "GROVER_N256_m64",
+      "category": "grover_search",
+      "question": "Find marked index in N=256 (marked=64)",
+      "expected": 64,
+      "got": 64,
+      "ok": true,
+      "notes": "collapse marked pole"
+    },
+    {
+      "id": "GROVER_N256_m51",
+      "category": "grover_search",
+      "question": "Find marked index in N=256 (marked=51)",
+      "expected": 51,
+      "got": 51,
+      "ok": true,
+      "notes": "collapse marked pole"
+    },
+    {
+      "id": "GROVER_N256_m192",
+      "category": "grover_search",
+      "question": "Find marked index in N=256 (marked=192)",
+      "expected": 192,
+      "got": 192,
+      "ok": true,
+      "notes": "collapse marked pole"
+    },
+    {
+      "id": "GROVER_N256_m2",
+      "category": "grover_search",
+      "question": "Find marked index in N=256 (marked=2)",
+      "expected": 2,
+      "got": 2,
+      "ok": true,
+      "notes": "collapse marked pole"
+    },
+    {
+      "id": "GROVER_N1024_m364",
+      "category": "grover_search",
+      "question": "Find marked index in N=1024 (marked=364)",
+      "expected": 364,
+      "got": 364,
+      "ok": true,
+      "notes": "collapse marked pole"
+    },
+    {
+      "id": "GROVER_N1024_m893",
+      "category": "grover_search",
+      "question": "Find marked index in N=1024 (marked=893)",
+      "expected": 893,
+      "got": 893,
+      "ok": true,
+      "notes": "collapse marked pole"
+    },
+    {
+      "id": "GROVER_N1024_m227",
+      "category": "grover_search",
+      "question": "Find marked index in N=1024 (marked=227)",
+      "expected": 227,
+      "got": 227,
+      "ok": true,
+      "notes": "collapse marked pole"
+    },
+    {
+      "id": "GROVER_N1024_m668",
+      "category": "grover_search",
+      "question": "Find marked index in N=1024 (marked=668)",
+      "expected": 668,
+      "got": 668,
+      "ok": true,
+      "notes": "collapse marked pole"
+    },
+    {
+      "id": "GROVER_N1024_m933",
+      "category": "grover_search",
+      "question": "Find marked index in N=1024 (marked=933)",
+      "expected": 933,
+      "got": 933,
+      "ok": true,
+      "notes": "collapse marked pole"
+    },
+    {
+      "id": "GROVER_N1024_m673",
+      "category": "grover_search",
+      "question": "Find marked index in N=1024 (marked=673)",
+      "expected": 673,
+      "got": 673,
+      "ok": true,
+      "notes": "collapse marked pole"
+    },
+    {
+      "id": "GROVER_N1024_m916",
+      "category": "grover_search",
+      "question": "Find marked index in N=1024 (marked=916)",
+      "expected": 916,
+      "got": 916,
+      "ok": true,
+      "notes": "collapse marked pole"
+    },
+    {
+      "id": "GROVER_N1024_m667",
+      "category": "grover_search",
+      "question": "Find marked index in N=1024 (marked=667)",
+      "expected": 667,
+      "got": 667,
+      "ok": true,
+      "notes": "collapse marked pole"
+    },
+    {
+      "id": "GROVER_N1024_m24",
+      "category": "grover_search",
+      "question": "Find marked index in N=1024 (marked=24)",
+      "expected": 24,
+      "got": 24,
+      "ok": true,
+      "notes": "collapse marked pole"
+    },
+    {
+      "id": "GROVER_N1024_m746",
+      "category": "grover_search",
+      "question": "Find marked index in N=1024 (marked=746)",
+      "expected": 746,
+      "got": 746,
+      "ok": true,
+      "notes": "collapse marked pole"
+    },
+    {
+      "id": "GROVER_N1024_m33",
+      "category": "grover_search",
+      "question": "Find marked index in N=1024 (marked=33)",
+      "expected": 33,
+      "got": 33,
+      "ok": true,
+      "notes": "collapse marked pole"
+    },
+    {
+      "id": "GROVER_N1024_m278",
+      "category": "grover_search",
+      "question": "Find marked index in N=1024 (marked=278)",
+      "expected": 278,
+      "got": 278,
+      "ok": true,
+      "notes": "collapse marked pole"
+    },
+    {
+      "id": "GROVER_N4096_m3320",
+      "category": "grover_search",
+      "question": "Find marked index in N=4096 (marked=3320)",
+      "expected": 3320,
+      "got": 3320,
+      "ok": true,
+      "notes": "collapse marked pole"
+    },
+    {
+      "id": "GROVER_N4096_m2383",
+      "category": "grover_search",
+      "question": "Find marked index in N=4096 (marked=2383)",
+      "expected": 2383,
+      "got": 2383,
+      "ok": true,
+      "notes": "collapse marked pole"
+    },
+    {
+      "id": "GROVER_N4096_m868",
+      "category": "grover_search",
+      "question": "Find marked index in N=4096 (marked=868)",
+      "expected": 868,
+      "got": 868,
+      "ok": true,
+      "notes": "collapse marked pole"
+    },
+    {
+      "id": "GROVER_N4096_m841",
+      "category": "grover_search",
+      "question": "Find marked index in N=4096 (marked=841)",
+      "expected": 841,
+      "got": 841,
+      "ok": true,
+      "notes": "collapse marked pole"
+    },
+    {
+      "id": "GROVER_N4096_m1776",
+      "category": "grover_search",
+      "question": "Find marked index in N=4096 (marked=1776)",
+      "expected": 1776,
+      "got": 1776,
+      "ok": true,
+      "notes": "collapse marked pole"
+    },
+    {
+      "id": "GROVER_N4096_m1847",
+      "category": "grover_search",
+      "question": "Find marked index in N=4096 (marked=1847)",
+      "expected": 1847,
+      "got": 1847,
+      "ok": true,
+      "notes": "collapse marked pole"
+    },
+    {
+      "id": "GROVER_N4096_m2024",
+      "category": "grover_search",
+      "question": "Find marked index in N=4096 (marked=2024)",
+      "expected": 2024,
+      "got": 2024,
+      "ok": true,
+      "notes": "collapse marked pole"
+    },
+    {
+      "id": "GROVER_N4096_m2986",
+      "category": "grover_search",
+      "question": "Find marked index in N=4096 (marked=2986)",
+      "expected": 2986,
+      "got": 2986,
+      "ok": true,
+      "notes": "collapse marked pole"
+    },
+    {
+      "id": "GROVER_N4096_m1510",
+      "category": "grover_search",
+      "question": "Find marked index in N=4096 (marked=1510)",
+      "expected": 1510,
+      "got": 1510,
+      "ok": true,
+      "notes": "collapse marked pole"
+    },
+    {
+      "id": "GROVER_N4096_m1519",
+      "category": "grover_search",
+      "question": "Find marked index in N=4096 (marked=1519)",
+      "expected": 1519,
+      "got": 1519,
+      "ok": true,
+      "notes": "collapse marked pole"
+    },
+    {
+      "id": "GROVER_N4096_m498",
+      "category": "grover_search",
+      "question": "Find marked index in N=4096 (marked=498)",
+      "expected": 498,
+      "got": 498,
+      "ok": true,
+      "notes": "collapse marked pole"
+    },
+    {
+      "id": "GROVER_N4096_m3075",
+      "category": "grover_search",
+      "question": "Find marked index in N=4096 (marked=3075)",
+      "expected": 3075,
+      "got": 3075,
+      "ok": true,
+      "notes": "collapse marked pole"
+    },
+    {
+      "id": "GROVER_N16384_m8787",
+      "category": "grover_search",
+      "question": "Find marked index in N=16384 (marked=8787)",
+      "expected": 8787,
+      "got": 8787,
+      "ok": true,
+      "notes": "collapse marked pole"
+    },
+    {
+      "id": "GROVER_N16384_m12101",
+      "category": "grover_search",
+      "question": "Find marked index in N=16384 (marked=12101)",
+      "expected": 12101,
+      "got": 12101,
+      "ok": true,
+      "notes": "collapse marked pole"
+    },
+    {
+      "id": "GROVER_N16384_m6742",
+      "category": "grover_search",
+      "question": "Find marked index in N=16384 (marked=6742)",
+      "expected": 6742,
+      "got": 6742,
+      "ok": true,
+      "notes": "collapse marked pole"
+    },
+    {
+      "id": "GROVER_N16384_m7324",
+      "category": "grover_search",
+      "question": "Find marked index in N=16384 (marked=7324)",
+      "expected": 7324,
+      "got": 7324,
+      "ok": true,
+      "notes": "collapse marked pole"
+    },
+    {
+      "id": "GROVER_N16384_m15591",
+      "category": "grover_search",
+      "question": "Find marked index in N=16384 (marked=15591)",
+      "expected": 15591,
+      "got": 15591,
+      "ok": true,
+      "notes": "collapse marked pole"
+    },
+    {
+      "id": "GROVER_N16384_m10159",
+      "category": "grover_search",
+      "question": "Find marked index in N=16384 (marked=10159)",
+      "expected": 10159,
+      "got": 10159,
+      "ok": true,
+      "notes": "collapse marked pole"
+    },
+    {
+      "id": "GROVER_N16384_m2233",
+      "category": "grover_search",
+      "question": "Find marked index in N=16384 (marked=2233)",
+      "expected": 2233,
+      "got": 2233,
+      "ok": true,
+      "notes": "collapse marked pole"
+    },
+    {
+      "id": "GROVER_N16384_m5210",
+      "category": "grover_search",
+      "question": "Find marked index in N=16384 (marked=5210)",
+      "expected": 5210,
+      "got": 5210,
+      "ok": true,
+      "notes": "collapse marked pole"
+    },
+    {
+      "id": "GROVER_N16384_m6119",
+      "category": "grover_search",
+      "question": "Find marked index in N=16384 (marked=6119)",
+      "expected": 6119,
+      "got": 6119,
+      "ok": true,
+      "notes": "collapse marked pole"
+    },
+    {
+      "id": "GROVER_N16384_m4816",
+      "category": "grover_search",
+      "question": "Find marked index in N=16384 (marked=4816)",
+      "expected": 4816,
+      "got": 4816,
+      "ok": true,
+      "notes": "collapse marked pole"
+    },
+    {
+      "id": "GROVER_N16384_m10022",
+      "category": "grover_search",
+      "question": "Find marked index in N=16384 (marked=10022)",
+      "expected": 10022,
+      "got": 10022,
+      "ok": true,
+      "notes": "collapse marked pole"
+    },
+    {
+      "id": "GROVER_N16384_m9819",
+      "category": "grover_search",
+      "question": "Find marked index in N=16384 (marked=9819)",
+      "expected": 9819,
+      "got": 9819,
+      "ok": true,
+      "notes": "collapse marked pole"
+    },
+    {
+      "id": "GROVER_BATCH_N512_B200",
+      "category": "grover_batch_gpu",
+      "question": "Batch find 200 marked items in N=512 on GPU",
+      "expected": 200,
+      "got": 200,
+      "ok": true,
+      "notes": "acc=1.0 ips=4969.018176977546"
+    },
+    {
+      "id": "GROVER_BATCH_N2048_B100",
+      "category": "grover_batch_gpu",
+      "question": "Batch find 100 marked items in N=2048 on GPU",
+      "expected": 100,
+      "got": 100,
+      "ok": true,
+      "notes": "acc=1.0 ips=268096.4815111893"
+    },
+    {
+      "id": "GROVER_BATCH_N8192_B50",
+      "category": "grover_batch_gpu",
+      "question": "Batch find 50 marked items in N=8192 on GPU",
+      "expected": 50,
+      "got": 50,
+      "ok": true,
+      "notes": "acc=1.0 ips=176803.35842491913"
+    },
+    {
+      "id": "BELL_AGREE_200",
+      "category": "entanglement",
+      "question": "Bell-analog: after H\u00b7CX\u00b7measure, do spins agree? (200 trials)",
+      "expected": 1.0,
+      "got": 1.0,
+      "ok": true,
+      "notes": "deterministic domain resolve"
+    },
+    {
+      "id": "GHZ3_STRUCTURE",
+      "category": "entanglement",
+      "question": "GHZ-3 analog: all three measured spins equal?",
+      "expected": true,
+      "got": true,
+      "ok": true,
+      "notes": "spins=[-1, -1, -1]"
+    },
+    {
+      "id": "CX_TRUTH_TABLE",
+      "category": "gates",
+      "question": "CX truth table on \u00b11 eigenstates",
+      "expected": 4,
+      "got": 4,
+      "ok": true,
+      "notes": ""
+    },
+    {
+      "id": "PHASE_S_QM_POSITIVE",
+      "category": "phase_class",
+      "question": "Is S(Quantum_Mechanics) positive (emergence under observation)?",
+      "expected": true,
+      "got": true,
+      "ok": true,
+      "notes": "S_QM=0.9555063001027194"
+    },
+    {
+      "id": "PHASE_S_QC_NEGATIVE",
+      "category": "phase_class",
+      "question": "Is S(Quantum_Computing) negative (compute substrate damping)?",
+      "expected": true,
+      "got": true,
+      "ok": true,
+      "notes": "S_QC=-0.14767310363368633"
+    },
+    {
+      "id": "COLLAPSE_THRESHOLD_RANGE",
+      "category": "phase_class",
+      "question": "Is \u0398=C_eff\u00b7P_var in (0,1)?",
+      "expected": true,
+      "got": true,
+      "ok": true,
+      "notes": "\u0398=0.9174663774653723"
+    },
+    {
+      "id": "OPT_ising_cycle6_ferro",
+      "category": "optimization_bank",
+      "question": "Solve ising instance ising_cycle6_ferro exactly?",
+      "expected": -6,
+      "got": -6,
+      "ok": true,
+      "notes": "residual%=0.0"
+    },
+    {
+      "id": "OPT_ising_cycle8_ferro",
+      "category": "optimization_bank",
+      "question": "Solve ising instance ising_cycle8_ferro exactly?",
+      "expected": -8,
+      "got": -8,
+      "ok": true,
+      "notes": "residual%=0.0"
+    },
+    {
+      "id": "OPT_ising_cycle7_antiferro",
+      "category": "optimization_bank",
+      "question": "Solve ising instance ising_cycle7_antiferro exactly?",
+      "expected": -5,
+      "got": -5,
+      "ok": true,
+      "notes": "residual%=0.0"
+    },
+    {
+      "id": "OPT_ising_path10_ferro",
+      "category": "optimization_bank",
+      "question": "Solve ising instance ising_path10_ferro exactly?",
+      "expected": -9,
+      "got": -9,
+      "ok": true,
+      "notes": "residual%=0.0"
+    },
+    {
+      "id": "OPT_ising_K5_ferro",
+      "category": "optimization_bank",
+      "question": "Solve ising instance ising_K5_ferro exactly?",
+      "expected": -10,
+      "got": -10,
+      "ok": true,
+      "notes": "residual%=0.0"
+    },
+    {
+      "id": "OPT_ising_K4_mixed",
+      "category": "optimization_bank",
+      "question": "Solve ising instance ising_K4_mixed exactly?",
+      "expected": -3,
+      "got": -3,
+      "ok": true,
+      "notes": "residual%=0.0"
+    },
+    {
+      "id": "OPT_ising_ladder6",
+      "category": "optimization_bank",
+      "question": "Solve ising instance ising_ladder6 exactly?",
+      "expected": -7,
+      "got": -7,
+      "ok": true,
+      "notes": "residual%=0.0"
+    },
+    {
+      "id": "OPT_maxcut_cycle6",
+      "category": "optimization_bank",
+      "question": "Solve maxcut instance maxcut_cycle6 exactly?",
+      "expected": 6,
+      "got": 6,
+      "ok": true,
+      "notes": "residual%=0.0"
+    },
+    {
+      "id": "OPT_maxcut_cycle8",
+      "category": "optimization_bank",
+      "question": "Solve maxcut instance maxcut_cycle8 exactly?",
+      "expected": 8,
+      "got": 8,
+      "ok": true,
+      "notes": "residual%=0.0"
+    },
+    {
+      "id": "OPT_maxcut_K5",
+      "category": "optimization_bank",
+      "question": "Solve maxcut instance maxcut_K5 exactly?",
+      "expected": 6,
+      "got": 6,
+      "ok": true,
+      "notes": "residual%=0.0"
+    },
+    {
+      "id": "OPT_maxcut_path12",
+      "category": "optimization_bank",
+      "question": "Solve maxcut instance maxcut_path12 exactly?",
+      "expected": 11,
+      "got": 11,
+      "ok": true,
+      "notes": "residual%=0.0"
+    },
+    {
+      "id": "OPT_maxcut_utility",
+      "category": "optimization_bank",
+      "question": "Solve maxcut instance maxcut_utility exactly?",
+      "expected": 6,
+      "got": 6,
+      "ok": true,
+      "notes": "residual%=0.0"
+    },
+    {
+      "id": "OPT_ising_grid3x3",
+      "category": "optimization_bank",
+      "question": "Solve ising instance ising_grid3x3 exactly?",
+      "expected": -10,
+      "got": -10,
+      "ok": true,
+      "notes": "residual%=0.0"
+    },
+    {
+      "id": "ISING_RAND8_t0",
+      "category": "optimization_random",
+      "question": "Random Ising n=8 ground energy (trial 0)",
+      "expected": -7,
+      "got": -7,
+      "ok": true,
+      "notes": "\u0394=0 method=exact_enum_n_le_12"
+    },
+    {
+      "id": "ISING_RAND8_t1",
+      "category": "optimization_random",
+      "question": "Random Ising n=8 ground energy (trial 1)",
+      "expected": -7,
+      "got": -7,
+      "ok": true,
+      "notes": "\u0394=0 method=exact_enum_n_le_12"
+    },
+    {
+      "id": "ISING_RAND8_t2",
+      "category": "optimization_random",
+      "question": "Random Ising n=8 ground energy (trial 2)",
+      "expected": -7,
+      "got": -7,
+      "ok": true,
+      "notes": "\u0394=0 method=exact_enum_n_le_12"
+    },
+    {
+      "id": "ISING_RAND8_t3",
+      "category": "optimization_random",
+      "question": "Random Ising n=8 ground energy (trial 3)",
+      "expected": -7,
+      "got": -7,
+      "ok": true,
+      "notes": "\u0394=0 method=exact_enum_n_le_12"
+    },
+    {
+      "id": "ISING_RAND8_t4",
+      "category": "optimization_random",
+      "question": "Random Ising n=8 ground energy (trial 4)",
+      "expected": -11,
+      "got": -11,
+      "ok": true,
+      "notes": "\u0394=0 method=exact_enum_n_le_12"
+    },
+    {
+      "id": "ISING_RAND8_t5",
+      "category": "optimization_random",
+      "question": "Random Ising n=8 ground energy (trial 5)",
+      "expected": -7,
+      "got": -7,
+      "ok": true,
+      "notes": "\u0394=0 method=exact_enum_n_le_12"
+    },
+    {
+      "id": "ISING_RAND8_t6",
+      "category": "optimization_random",
+      "question": "Random Ising n=8 ground energy (trial 6)",
+      "expected": -7,
+      "got": -7,
+      "ok": true,
+      "notes": "\u0394=0 method=exact_enum_n_le_12"
+    },
+    {
+      "id": "ISING_RAND8_t7",
+      "category": "optimization_random",
+      "question": "Random Ising n=8 ground energy (trial 7)",
+      "expected": -11,
+      "got": -11,
+      "ok": true,
+      "notes": "\u0394=0 method=exact_enum_n_le_12"
+    },
+    {
+      "id": "ISING_RAND8_t8",
+      "category": "optimization_random",
+      "question": "Random Ising n=8 ground energy (trial 8)",
+      "expected": -7,
+      "got": -7,
+      "ok": true,
+      "notes": "\u0394=0 method=exact_enum_n_le_12"
+    },
+    {
+      "id": "ISING_RAND8_t9",
+      "category": "optimization_random",
+      "question": "Random Ising n=8 ground energy (trial 9)",
+      "expected": -9,
+      "got": -9,
+      "ok": true,
+      "notes": "\u0394=0 method=exact_enum_n_le_12"
+    },
+    {
+      "id": "ISING_RAND8_t10",
+      "category": "optimization_random",
+      "question": "Random Ising n=8 ground energy (trial 10)",
+      "expected": -9,
+      "got": -9,
+      "ok": true,
+      "notes": "\u0394=0 method=exact_enum_n_le_12"
+    },
+    {
+      "id": "ISING_RAND8_t11",
+      "category": "optimization_random",
+      "question": "Random Ising n=8 ground energy (trial 11)",
+      "expected": -7,
+      "got": -7,
+      "ok": true,
+      "notes": "\u0394=0 method=exact_enum_n_le_12"
+    },
+    {
+      "id": "ISING_RAND8_t12",
+      "category": "optimization_random",
+      "question": "Random Ising n=8 ground energy (trial 12)",
+      "expected": -7,
+      "got": -7,
+      "ok": true,
+      "notes": "\u0394=0 method=exact_enum_n_le_12"
+    },
+    {
+      "id": "ISING_RAND8_t13",
+      "category": "optimization_random",
+      "question": "Random Ising n=8 ground energy (trial 13)",
+      "expected": -7,
+      "got": -7,
+      "ok": true,
+      "notes": "\u0394=0 method=exact_enum_n_le_12"
+    },
+    {
+      "id": "ISING_RAND8_t14",
+      "category": "optimization_random",
+      "question": "Random Ising n=8 ground energy (trial 14)",
+      "expected": -7,
+      "got": -7,
+      "ok": true,
+      "notes": "\u0394=0 method=exact_enum_n_le_12"
+    },
+    {
+      "id": "MAXCUT_RAND10_t0",
+      "category": "optimization_random",
+      "question": "Random MaxCut n=10 (trial 0)",
+      "expected": 13,
+      "got": 13,
+      "ok": true,
+      "notes": "gap=0 method=exact_enum_n_le_12"
+    },
+    {
+      "id": "MAXCUT_RAND10_t1",
+      "category": "optimization_random",
+      "question": "Random MaxCut n=10 (trial 1)",
+      "expected": 13,
+      "got": 13,
+      "ok": true,
+      "notes": "gap=0 method=exact_enum_n_le_12"
+    },
+    {
+      "id": "MAXCUT_RAND10_t2",
+      "category": "optimization_random",
+      "question": "Random MaxCut n=10 (trial 2)",
+      "expected": 14,
+      "got": 14,
+      "ok": true,
+      "notes": "gap=0 method=exact_enum_n_le_12"
+    },
+    {
+      "id": "MAXCUT_RAND10_t3",
+      "category": "optimization_random",
+      "question": "Random MaxCut n=10 (trial 3)",
+      "expected": 13,
+      "got": 13,
+      "ok": true,
+      "notes": "gap=0 method=exact_enum_n_le_12"
+    },
+    {
+      "id": "MAXCUT_RAND10_t4",
+      "category": "optimization_random",
+      "question": "Random MaxCut n=10 (trial 4)",
+      "expected": 14,
+      "got": 14,
+      "ok": true,
+      "notes": "gap=0 method=exact_enum_n_le_12"
+    },
+    {
+      "id": "MAXCUT_RAND10_t5",
+      "category": "optimization_random",
+      "question": "Random MaxCut n=10 (trial 5)",
+      "expected": 14,
+      "got": 14,
+      "ok": true,
+      "notes": "gap=0 method=exact_enum_n_le_12"
+    },
+    {
+      "id": "MAXCUT_RAND10_t6",
+      "category": "optimization_random",
+      "question": "Random MaxCut n=10 (trial 6)",
+      "expected": 13,
+      "got": 13,
+      "ok": true,
+      "notes": "gap=0 method=exact_enum_n_le_12"
+    },
+    {
+      "id": "MAXCUT_RAND10_t7",
+      "category": "optimization_random",
+      "question": "Random MaxCut n=10 (trial 7)",
+      "expected": 13,
+      "got": 13,
+      "ok": true,
+      "notes": "gap=0 method=exact_enum_n_le_12"
+    },
+    {
+      "id": "MAXCUT_RAND10_t8",
+      "category": "optimization_random",
+      "question": "Random MaxCut n=10 (trial 8)",
+      "expected": 12,
+      "got": 12,
+      "ok": true,
+      "notes": "gap=0 method=exact_enum_n_le_12"
+    },
+    {
+      "id": "MAXCUT_RAND10_t9",
+      "category": "optimization_random",
+      "question": "Random MaxCut n=10 (trial 9)",
+      "expected": 13,
+      "got": 13,
+      "ok": true,
+      "notes": "gap=0 method=exact_enum_n_le_12"
+    },
+    {
+      "id": "GATE_X2_I",
+      "category": "gates",
+      "question": "Does X\u00b7X = I on trits?",
+      "expected": true,
+      "got": true,
+      "ok": true,
+      "notes": ""
+    },
+    {
+      "id": "GATE_H_POLE",
+      "category": "gates",
+      "question": "Does H send \u00b11 \u2192 superposed?",
+      "expected": true,
+      "got": true,
+      "ok": true,
+      "notes": ""
+    },
+    {
+      "id": "GATE_H_SUPER_QM",
+      "category": "gates",
+      "question": "H(0) under Quantum_Mechanics \u2192 +1 (emergence)?",
+      "expected": 1,
+      "got": 1,
+      "ok": true,
+      "notes": ""
+    },
+    {
+      "id": "GATE_H_SUPER_QC",
+      "category": "gates",
+      "question": "H(0) under Quantum_Computing \u2192 \u22121 (damping)?",
+      "expected": -1,
+      "got": -1,
+      "ok": true,
+      "notes": ""
+    },
+    {
+      "id": "GATE_CCX",
+      "category": "gates",
+      "question": "CCX(1,1,-1) \u2192 +1?",
+      "expected": 1,
+      "got": 1,
+      "ok": true,
+      "notes": ""
+    },
+    {
+      "id": "COLLAPSE_0",
+      "category": "measurement",
+      "question": "collapse(0.927466): just above \u0398 \u2192 up code",
+      "expected": 2,
+      "got": 2,
+      "ok": true,
+      "notes": ""
+    },
+    {
+      "id": "COLLAPSE_1",
+      "category": "measurement",
+      "question": "collapse(-0.927466): just below \u2212\u0398 \u2192 down code",
+      "expected": 0,
+      "got": 0,
+      "ok": true,
+      "notes": ""
+    },
+    {
+      "id": "COLLAPSE_2",
+      "category": "measurement",
+      "question": "collapse(0.000000): zero \u2192 superposed",
+      "expected": 1,
+      "got": 1,
+      "ok": true,
+      "notes": ""
+    },
+    {
+      "id": "COLLAPSE_3",
+      "category": "measurement",
+      "question": "collapse(0.458733): half \u0398 \u2192 superposed",
+      "expected": 1,
+      "got": 1,
+      "ok": true,
+      "notes": ""
+    },
+    {
+      "id": "COLLAPSE_4",
+      "category": "measurement",
+      "question": "collapse(1.000000): unit pole \u2192 up",
+      "expected": 2,
+      "got": 2,
+      "ok": true,
+      "notes": ""
+    },
+    {
+      "id": "COLLAPSE_5",
+      "category": "measurement",
+      "question": "collapse(-1.000000): unit pole \u2192 down",
+      "expected": 0,
+      "got": 0,
+      "ok": true,
+      "notes": ""
+    }
+  ]
+}

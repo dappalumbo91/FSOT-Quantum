@@ -4,7 +4,7 @@
 **device:** `cuda`
 **algorithms:** 16/16 (100.0%)
 **gpu_parallel_all_ok:** `True`
-**wall_s:** `0.0723`
+**wall_s:** `1.6012`
 **Θ:** `0.9174663774653723`
 
 ## Algorithms
@@ -30,10 +30,10 @@
 
 ## GPU parallel
 
-- **pack_stress:** ok=True device=cuda detail=`{'groups': 32768, 'trits': 1048576, 'seconds': 0.0009546000510454178, 'roundtrip_ok': True, 'device': 'cuda'}`
-- **grover_batch:** ok=True device=cuda detail=`{'batch': 256, 'n_items': 512, 'correct': 256, 'accuracy': 1.0, 'seconds': 0.002637899946421385, 'instances_per_sec': 97046.89533327203, 'device': 'cuda'}`
-- **bv_batch:** ok=True device=cuda detail=`{'batch': 128, 'n': 8, 'correct': 128, 'accuracy': 1.0, 'seconds': 0.00022879999596625566, 'device': 'cuda', 'note': 'parity oracle f(x)=s·x — exact recover on basis probes'}`
-- **consensus_batch:** ok=True device=cuda detail=`{'batch': 16, 'seq': 48, 'dim': 48, 'out_shape': [16, 48, 48], 'seconds': 0.056000799988396466, 'finite': True, 'device': 'cuda'}`
+- **pack_stress:** ok=True device=cuda detail=`{'groups': 32768, 'trits': 1048576, 'seconds': 0.005619100062176585, 'roundtrip_ok': True, 'device': 'cuda'}`
+- **grover_batch:** ok=True device=cuda detail=`{'batch': 256, 'n_items': 512, 'correct': 256, 'accuracy': 1.0, 'seconds': 0.0027884000446647406, 'instances_per_sec': 91808.92120907271, 'device': 'cuda'}`
+- **bv_batch:** ok=True device=cuda detail=`{'batch': 128, 'n': 8, 'correct': 128, 'accuracy': 1.0, 'seconds': 0.0002647999208420515, 'device': 'cuda', 'note': 'parity oracle f(x)=s·x — exact recover on basis probes'}`
+- **consensus_batch:** ok=True device=cuda detail=`{'batch': 16, 'seq': 48, 'dim': 48, 'out_shape': [16, 48, 48], 'seconds': 0.057294400059618056, 'finite': True, 'device': 'cuda'}`
 
 ## Goal
 
