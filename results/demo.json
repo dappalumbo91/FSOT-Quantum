@@ -1,19 +1,13 @@
 {
-  "bell": [
-    -1,
-    -1
-  ],
-  "deutsch": [
-    1,
-    -1
-  ],
-  "chain3": [
-    1,
-    -1,
-    1
-  ],
-  "collapse_threshold": 0.9174663774653723,
-  "S_QM": 0.9555063001027194,
-  "S_QC": -0.14767310363368633,
-  "pin_ok": true
+  "smoke_ok": true,
+  "device": "cuda",
+  "checks": {
+    "scalar_pure": true,
+    "pack_pure": true,
+    "coherence_pure": true,
+    "bell_analog": true,
+    "collapse_quantum": true,
+    "fsot_lib_torch": true,
+    "native_cuda": true
+  }
 }

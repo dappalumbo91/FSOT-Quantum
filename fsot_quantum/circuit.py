@@ -1,15 +1,13 @@
-"""
-FSOT trinary quantum circuits.
-"""
+"""Circuit runner on TritRegister — FSOT gates only."""
 
 from __future__ import annotations
 
 from dataclasses import dataclass, field
 
 from fsot_quantum.domains import DOMAIN_COMPUTE
-from fsot_quantum.gates import Gate, GateName, apply_gate, default_domain_for_gate
+from fsot_quantum.gates import Gate, GateName, apply_gate, gate_domain
 from fsot_quantum.measure import measure_register
-from fsot_quantum.qubit import TritRegister
+from fsot_quantum.register import TritRegister
 
 
 @dataclass
@@ -21,12 +19,11 @@ class Circuit:
     def add(self, name: GateName | str, *wires: int) -> "Circuit":
         gname = GateName(name) if not isinstance(name, GateName) else name
         for w in wires:
-            if w < 0 or w >= self.n:
-                raise IndexError(f"wire {w} out of range for n={self.n}")
+            if not (0 <= w < self.n):
+                raise IndexError(w)
         self.gates.append(Gate(gname, tuple(wires)))
         return self
 
-    # fluent helpers
     def x(self, i: int) -> "Circuit":
         return self.add(GateName.X, i)
 
@@ -36,17 +33,8 @@ class Circuit:
     def z(self, i: int) -> "Circuit":
         return self.add(GateName.Z, i)
 
-    def s(self, i: int) -> "Circuit":
-        return self.add(GateName.S, i)
-
     def cx(self, c: int, t: int) -> "Circuit":
         return self.add(GateName.CX, c, t)
-
-    def cz(self, c: int, t: int) -> "Circuit":
-        return self.add(GateName.CZ, c, t)
-
-    def ccx(self, c1: int, c2: int, t: int) -> "Circuit":
-        return self.add(GateName.CCX, c1, c2, t)
 
     def measure(self, *wires: int) -> "Circuit":
         if not wires:
@@ -58,49 +46,25 @@ class Circuit:
         return self
 
 
-def run_circuit(
-    reg: TritRegister,
-    circuit: Circuit,
-    *,
-    domain: str | None = None,
-) -> TritRegister:
-    """Execute circuit on a copy of the register."""
+def run_circuit(reg: TritRegister, circuit: Circuit, *, domain: str | None = None) -> TritRegister:
     out = reg.copy()
     if domain:
         out.domain = domain
-    base_domain = out.domain or circuit.domain
-
-    pending_measure: list[int] = []
+    base = out.domain or circuit.domain
+    pending: list[int] = []
     for g in circuit.gates:
         if g.name == GateName.MEASURE:
-            pending_measure.extend(g.wires)
+            pending.extend(g.wires)
             continue
-        # flush measures before unitary-like ops if interleaved
-        if pending_measure:
-            out = measure_register(out, wires=sorted(set(pending_measure)), domain=base_domain)
-            pending_measure = []
-        gdom = default_domain_for_gate(g.name)
-        # observer-ish gates use spin law; others use compute domain
-        use_dom = gdom if g.name in (GateName.H, GateName.Z, GateName.S) else base_domain
-        out.spins = apply_gate(out.spins, g, domain=use_dom)
-
-    if pending_measure:
-        out = measure_register(out, wires=sorted(set(pending_measure)), domain=base_domain)
+        if pending:
+            out = measure_register(out, wires=sorted(set(pending)), domain=base)
+            pending = []
+        use = gate_domain(g.name)
+        out.spins = apply_gate(out.spins, g, domain=use)
+    if pending:
+        out = measure_register(out, wires=sorted(set(pending)), domain=base)
     return out
 
 
-def bell_analog_circuit() -> Circuit:
-    """
-    FSOT Bell-analog on 2 spins:
-      H on 0, CX 0→1
-    Produces correlated trinary pair under measure.
-    """
+def bell_analog() -> Circuit:
     return Circuit(2).h(0).cx(0, 1).measure(0, 1)
-
-
-def deutsch_analog() -> Circuit:
-    """
-    Minimal oracle-style 2-wire pattern for pathway demo:
-      H0, H1, CX, H0, measure
-    """
-    return Circuit(2).h(0).h(1).cx(0, 1).h(0).measure(0, 1)

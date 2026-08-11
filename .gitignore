@@ -6,13 +6,17 @@ __pycache__/
 venv/
 .pytest_cache/
 
-# CUDA / build
-cuda/*.exe
-cuda/*.dll
-cuda/*.exp
-cuda/*.lib
-cuda/*.obj
-cuda/*.pdb
+# CUDA / build (phase2 optional binaries)
+phase2_native_gpu/cuda/*.exe
+phase2_native_gpu/cuda/*.dll
+phase2_native_gpu/cuda/*.exp
+phase2_native_gpu/cuda/*.lib
+*.exe
+*.dll
+*.exp
+*.lib
+*.obj
+*.pdb
 build/
 *.o
 

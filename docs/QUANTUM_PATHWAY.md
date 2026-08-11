@@ -1,67 +1,38 @@
-# Alternative quantum computing pathway (FSOT)
+# Quantum pathway — on FSOT-GPU implementation
 
-## What this is
+## Instruction
 
-An **FSOT-native** quantum *capability* — not a simulator of industry gate-model qubits on \(\mathbb{C}^{2^n}\), and **not** a custom-CUDA science project.
-
-## GPU doctrine (same as FSOT-GPU)
-
-| Layer | Role |
-|-------|------|
-| **Owned operators** | collapse `Θ=C_eff·P_var`, trinary pack, neg/CX/consensus, scalar `S` |
-| **Device adapter** | optional **PyTorch** buffers on `cuda` if present — **speed only** |
-| **Custom `.cu` / nvcc** | **not required** for this pathway |
-
-FSOT-GPU already proved sparse trinary consensus and pack on device **without** making nvcc the product surface. This repo follows that:
-
-```text
-fsot_quantum/trinary.py   — law
-fsot_quantum/device.py    — torch-or-python adapter (prefer_device)
-scripts/run_device_smoke.py
-```
-
-Industry quantum stacks (cuQuantum, Qiskit Aer GPU, …) are **not** the spine.
-
-## Spins
-
-\[
-\mathbb{T} = \{-1,\,0,\,+1\}
-\]
-
-| Value | Name |
-|------:|------|
-| \(+1\) | Spin up |
-| \(0\) | Superposition |
-| \(-1\) | Spin down |
+Use **FSOT-GPU `fsot_lib`** as the runtime. Do not invent alternate collapse/pack/consensus.
 
 ## Domains
 
-| Domain | \(D_{\mathrm{eff}}\) | observed | Role |
-|--------|---------------------:|:--------:|------|
-| `Quantum_Mechanics` | 6 | yes | Spin law / measure |
-| `Quantum_Computing` | 11 | no | Compute substrate |
+| Domain | D_eff | observed |
+|--------|------:|:--------:|
+| Quantum_Mechanics | 6 | yes |
+| Quantum_Computing | 11 | no |
 
-## Gate set
+`S` from `fsot_lib.scalar.compute_scalar` at those routes.
 
-| Gate | Law |
-|------|-----|
-| X | `neg(t) = -t` |
-| Z | `pair(t, phase_class(S_domain))` |
-| H | poles → superposed; superposed → `sign(S)` |
-| CX | control +1 flip; 0 super; −1 hold |
-| … | see `fsot_quantum/gates.py` |
+## Forward (same as FSOT-GPU HOW_IT_WORKS)
 
-## Measurement
-
-1. Continuous field → `collapse` with \(\Theta\).  
-2. Discrete superposed → `sign(S(domain))`.  
-3. \(\pm 1\) eigenstates fixed under measure.
-
-## What about `cuda/`?
-
-Left only as an **optional** experimental note for people who already compile FSOT-GPU kernels. **Default path never needs it.** Prefer:
-
-```powershell
-python scripts\run_device_smoke.py
-python -m fsot_quantum.verify
 ```
+field → coherence_norm
+      → phase_rotation
+      → collapse → trit codes
+      → trit_similarity / consensus_aggregate
+      → measure (collapse + domain sign resolve for superposed)
+```
+
+## Spins
+
+Signed: −1 / 0 / +1  
+Pack codes (fsot_lib): 0 / 1 / 2  
+
+## Files
+
+| File | Role |
+|------|------|
+| `fsot_lib/*` | **Your** implementation (vendored from FSOT-GPU) |
+| `fsot_quantum/engine.py` | Calls fsot_lib only |
+| `fsot_quantum/gates.py` | Domain fold gates on trit algebra |
+| `phase2_native_gpu/` | **Your** CUDA/torch engine |

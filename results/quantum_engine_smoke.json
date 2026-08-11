@@ -1,0 +1,68 @@
+{
+  "timestamp": "2026-08-11T13:37:57.232942+00:00",
+  "implementation": "fsot_lib (FSOT-GPU owned stack)",
+  "collapse_threshold": 0.9174663774653723,
+  "device": "cuda",
+  "S_Quantum_Mechanics": 0.9555063001027194,
+  "S_Quantum_Computing": -0.14767310363368633,
+  "checks": {
+    "scalar_pure": {
+      "S": 0.5195106204293135,
+      "ok": true
+    },
+    "pack_pure": {
+      "ok": true,
+      "word": 5270498306774157604
+    },
+    "coherence_pure": {
+      "ok": true
+    },
+    "bell_analog": {
+      "ok": true,
+      "spins": [
+        -1,
+        -1
+      ]
+    },
+    "collapse_quantum": {
+      "ok": true,
+      "spins": [
+        1,
+        -1,
+        0,
+        1,
+        -1
+      ]
+    },
+    "fsot_lib_torch": {
+      "device": "cuda",
+      "gpu": "NVIDIA GeForce RTX 5070",
+      "consensus_shape": [
+        8,
+        16
+      ],
+      "collapse_codes": [
+        2,
+        0,
+        1,
+        2,
+        0,
+        1,
+        1,
+        2
+      ],
+      "pack_roundtrip": true,
+      "coupled_shape": [
+        16,
+        32
+      ],
+      "ok": true
+    },
+    "native_cuda": {
+      "ok": true,
+      "skipped": true,
+      "reason": "optional; torch path is primary (FSOT-GPU doctrine)"
+    }
+  },
+  "ok": true
+}

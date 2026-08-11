@@ -31,16 +31,22 @@
       "vendor": 0.4202216641606967
     },
     {
-      "name": "c_eff",
-      "ok": true
-    },
-    {
-      "name": "p_var",
-      "ok": true
-    },
-    {
       "name": "pack",
       "ok": true
+    },
+    {
+      "name": "golden_present",
+      "ok": true,
+      "keys": [
+        "description",
+        "collapse_threshold",
+        "seeds",
+        "scalar_observed_D8_dp0_7",
+        "pack_codes_0_to_31_mod3",
+        "pack_u64_word",
+        "eps_f64",
+        "eps_threshold"
+      ]
     }
   ],
   "overall_ok": true

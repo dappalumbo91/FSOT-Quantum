@@ -1,61 +1,52 @@
 """
-FSOT-Quantum — Fluid Spacetime Omni-Theory alternative quantum computing.
+FSOT-Quantum — Quantum_Mechanics / Quantum_Computing domain fold.
 
-Theory authority: FSOT-2.1-Lean (pin D1D38A).
-Trinary spins: −1 = spin down, 0 = superposition, +1 = spin up.
-Zero free parameters. No ad-hoc coefficients.
+Implementation authority: FSOT-GPU fsot_lib (this repo vendors it).
+Theory authority: FSOT-2.1-Lean pin D1D38A.
+
+Spins (signed, same as Lean/Zig/GPU):
+  -1 = spin down, 0 = superposed, +1 = spin up
+Pack codes (fsot_lib): 0=down, 1=super, 2=up
 """
 
-from fsot_quantum.seeds import SEEDS, COLLAPSE_THRESHOLD, PIN_EXPECTED
-from fsot_quantum.scalar import compute_scalar, domain_scalar
-from fsot_quantum.domains import DOMAINS, DomainConfig
-from fsot_quantum.trinary import (
-    Spin,
-    SPIN_DOWN,
-    SUPERPOSED,
-    SPIN_UP,
-    collapse_scalar,
-    code_to_signed,
-    signed_to_code,
-    pack_u64,
-    unpack_u64,
-)
-from fsot_quantum.qubit import TritRegister, continuous_field_from_spins
-from fsot_quantum.gates import Gate, apply_gate, GATE_TABLE
+from fsot_lib.seeds import SEEDS, COLLAPSE_THRESHOLD
+from fsot_lib.scalar import compute_scalar
+from fsot_lib.trinary import collapse, pack_u64, unpack_u64, trit_similarity
+from fsot_lib.coherence import coherence_norm, position_coherence
+from fsot_lib.consensus import consensus_aggregate, apply_phase_rotation
+
+from fsot_quantum.domains import DOMAINS, domain_scalar, DOMAIN_SPIN_LAW, DOMAIN_COMPUTE
+from fsot_quantum.register import TritRegister
+from fsot_quantum.gates import Gate, GateName, apply_gate
 from fsot_quantum.circuit import Circuit, run_circuit
-from fsot_quantum.measure import measure_register, measure_spin
-from fsot_quantum.device import prefer_device, smoke_device, backend_info, collapse
+from fsot_quantum.engine import QuantumEngine, run_engine_smoke
+from fsot_quantum.measure import measure_register
 
 __all__ = [
     "SEEDS",
     "COLLAPSE_THRESHOLD",
-    "PIN_EXPECTED",
     "compute_scalar",
-    "domain_scalar",
-    "DOMAINS",
-    "DomainConfig",
-    "Spin",
-    "SPIN_DOWN",
-    "SUPERPOSED",
-    "SPIN_UP",
-    "collapse_scalar",
-    "code_to_signed",
-    "signed_to_code",
+    "collapse",
     "pack_u64",
     "unpack_u64",
+    "trit_similarity",
+    "coherence_norm",
+    "position_coherence",
+    "consensus_aggregate",
+    "apply_phase_rotation",
+    "DOMAINS",
+    "domain_scalar",
+    "DOMAIN_SPIN_LAW",
+    "DOMAIN_COMPUTE",
     "TritRegister",
-    "continuous_field_from_spins",
     "Gate",
+    "GateName",
     "apply_gate",
-    "GATE_TABLE",
     "Circuit",
     "run_circuit",
+    "QuantumEngine",
+    "run_engine_smoke",
     "measure_register",
-    "measure_spin",
-    "prefer_device",
-    "smoke_device",
-    "backend_info",
-    "collapse",
 ]
 
-__version__ = "0.1.0"
+__version__ = "0.2.0"

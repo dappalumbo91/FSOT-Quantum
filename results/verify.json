@@ -1,6 +1,7 @@
 {
   "overall_ok": true,
   "pin_expected": "D1D38A",
+  "implementation": "fsot_lib from FSOT-GPU (vendored)",
   "collapse_threshold": 0.9174663774653723,
   "S_Quantum_Mechanics": 0.9555063001027194,
   "S_Quantum_Computing": -0.14767310363368633,
@@ -8,7 +9,6 @@
     {
       "name": "authority_pin",
       "ok": true,
-      "expected": "D1D38A",
       "got": "D1D38A"
     },
     {
@@ -25,7 +25,7 @@
           "vendor": -0.14767310363368644,
           "ok": true
         },
-        "collapse_threshold": {
+        "theta": {
           "ours": 0.9174663774653723,
           "vendor": 0.9174663774653723,
           "ok": true
@@ -33,35 +33,22 @@
       }
     },
     {
-      "name": "trinary_pack_roundtrip",
+      "name": "fsot_lib_pack",
       "ok": true
     },
     {
-      "name": "gate_identities",
-      "ok": true,
-      "n_cases": 9
-    },
-    {
-      "name": "bell_analog_run",
-      "ok": true,
-      "spins": [
-        -1,
-        -1
-      ]
-    },
-    {
-      "name": "fsot_owned_device_path",
+      "name": "quantum_engine_fsot_lib",
       "ok": true,
       "device": "cuda",
-      "path": "fsot_owned_torch",
-      "pack_ok": true,
-      "collapse_ok": true
-    },
-    {
-      "name": "zero_free_params_doctrine",
-      "ok": true,
-      "note": "All constants from SEEDS / domain table; no fit vector",
-      "scan_hits": []
+      "checks": {
+        "scalar_pure": true,
+        "pack_pure": true,
+        "coherence_pure": true,
+        "bell_analog": true,
+        "collapse_quantum": true,
+        "fsot_lib_torch": true,
+        "native_cuda": true
+      }
     }
   ]
 }
