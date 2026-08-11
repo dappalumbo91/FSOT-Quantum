@@ -1,0 +1,65 @@
+{
+  "panel": "shor_full_modular_exp",
+  "cases": [
+    {
+      "a": 7,
+      "N": 15,
+      "t_bits": 4,
+      "l_bits": 4,
+      "n_qubits": 8,
+      "true_period": 4,
+      "recovered_period": 4,
+      "measure_mode": 0,
+      "mode_prob": 0.2500000000000001,
+      "ok": true,
+      "norm": 1.0000000000000002,
+      "n_candidates": 2
+    },
+    {
+      "a": 2,
+      "N": 15,
+      "t_bits": 4,
+      "l_bits": 4,
+      "n_qubits": 8,
+      "true_period": 4,
+      "recovered_period": 4,
+      "measure_mode": 0,
+      "mode_prob": 0.2500000000000001,
+      "ok": true,
+      "norm": 1.0000000000000002,
+      "n_candidates": 2
+    },
+    {
+      "a": 4,
+      "N": 15,
+      "t_bits": 4,
+      "l_bits": 4,
+      "n_qubits": 8,
+      "true_period": 2,
+      "recovered_period": 2,
+      "measure_mode": 0,
+      "mode_prob": 0.5,
+      "ok": true,
+      "norm": 1.0000000000000002,
+      "n_candidates": 3
+    },
+    {
+      "a": 5,
+      "N": 21,
+      "t_bits": 5,
+      "l_bits": 5,
+      "n_qubits": 10,
+      "true_period": 6,
+      "recovered_period": 6,
+      "measure_mode": 0,
+      "mode_prob": 0.1679687499999999,
+      "ok": true,
+      "norm": 1.0000000000000004,
+      "n_candidates": 1
+    }
+  ],
+  "pass_count": 4,
+  "total": 4,
+  "overall_ok": true,
+  "note": "Full Hilbert modular multiply + IQFT + CF; tiny N only"
+}

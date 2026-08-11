@@ -1,0 +1,42 @@
+{
+  "panel": "stronger_logical_codes",
+  "ladder": {
+    "d3": 3,
+    "d5": 5,
+    "d7": 7
+  },
+  "default_d3": 3,
+  "instances": [
+    {
+      "code": "d3",
+      "distance": 3,
+      "correctable_t": 1,
+      "majority_corrects_t": true,
+      "graph_consensus_corrects_t": true,
+      "ok": true
+    },
+    {
+      "code": "d5",
+      "distance": 5,
+      "correctable_t": 2,
+      "majority_corrects_t": true,
+      "graph_consensus_corrects_t": true,
+      "ok": true
+    },
+    {
+      "code": "d7",
+      "distance": 7,
+      "correctable_t": 3,
+      "majority_corrects_t": true,
+      "graph_consensus_corrects_t": true,
+      "ok": true
+    }
+  ],
+  "multi_logical_d5": {
+    "ok": true
+  },
+  "pass_count": 4,
+  "total": 4,
+  "overall_ok": true,
+  "note": "Repetition + ring consensus; not surface-code FTQC thresholds"
+}

@@ -5,3 +5,4 @@ session FSOT_Quantum = HOL +
     Gates
     Pack
     Domains
+    Hilbert

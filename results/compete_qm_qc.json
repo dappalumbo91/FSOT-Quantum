@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-08-11T14:27:08.644259+00:00",
+  "timestamp": "2026-08-11T14:32:37.665408+00:00",
   "suite": "compete_qm_qc",
   "goal": "Extend FSOT-QC toward Hilbert unitaries, logical encoding, QFT/Shor structure, chemistry residuals \u2014 zero free params",
   "device": "cuda",
@@ -92,7 +92,7 @@
     }
   },
   "overall_ok": true,
-  "wall_seconds": 1.316249799914658,
+  "wall_seconds": 1.3389669000171125,
   "still_not_claimed": [
     "cryptographically large Shor",
     "surface-code FTQC thresholds",

@@ -1,0 +1,135 @@
+{
+  "panel": "circuit_library_large_n",
+  "seed_depth": 3,
+  "seed_layers": 2,
+  "angles": [
+    "pi",
+    "half_pi",
+    "quarter_pi",
+    "eighth_pi",
+    "theta_s",
+    "psi_con",
+    "phi_fold"
+  ],
+  "instances": [
+    {
+      "name": "ghz_n8",
+      "n": 8,
+      "ok": true,
+      "detail": {
+        "norm": 1.0000000000000002,
+        "p0": 0.5000000000000001,
+        "p_all1": 0.5000000000000001
+      }
+    },
+    {
+      "name": "qft_zero_n8",
+      "n": 8,
+      "ok": true,
+      "detail": {
+        "uniform": true
+      }
+    },
+    {
+      "name": "qft_roundtrip_n8",
+      "n": 8,
+      "ok": true,
+      "detail": {
+        "fidelity": 1.0
+      }
+    },
+    {
+      "name": "clifford_t_ladder_n8",
+      "n": 8,
+      "ok": true,
+      "detail": {
+        "norm": 1.0000000000000004,
+        "depth_pi": 3,
+        "layers_e": 2
+      }
+    },
+    {
+      "name": "ghz_n10",
+      "n": 10,
+      "ok": true,
+      "detail": {
+        "norm": 1.0000000000000002,
+        "p0": 0.5000000000000001,
+        "p_all1": 0.5000000000000001
+      }
+    },
+    {
+      "name": "qft_zero_n10",
+      "n": 10,
+      "ok": true,
+      "detail": {
+        "uniform": true
+      }
+    },
+    {
+      "name": "qft_roundtrip_n10",
+      "n": 10,
+      "ok": true,
+      "detail": {
+        "fidelity": 1.0
+      }
+    },
+    {
+      "name": "clifford_t_ladder_n10",
+      "n": 10,
+      "ok": true,
+      "detail": {
+        "norm": 1.0,
+        "depth_pi": 3,
+        "layers_e": 2
+      }
+    },
+    {
+      "name": "ghz_n12",
+      "n": 12,
+      "ok": true,
+      "detail": {
+        "norm": 1.0000000000000002,
+        "p0": 0.5000000000000001,
+        "p_all1": 0.5000000000000001
+      }
+    },
+    {
+      "name": "qft_zero_n12",
+      "n": 12,
+      "ok": true,
+      "detail": {
+        "uniform": true
+      }
+    },
+    {
+      "name": "qft_roundtrip_n12",
+      "n": 12,
+      "ok": true,
+      "detail": {
+        "fidelity": 1.0
+      }
+    },
+    {
+      "name": "clifford_t_ladder_n12",
+      "n": 12,
+      "ok": true,
+      "detail": {
+        "norm": 1.0,
+        "depth_pi": 3,
+        "layers_e": 2
+      }
+    },
+    {
+      "name": "w_state_n3",
+      "n": 3,
+      "ok": true,
+      "detail": {}
+    }
+  ],
+  "pass_count": 13,
+  "total": 13,
+  "overall_ok": true,
+  "max_n": 12,
+  "dim_at_max": 4096
+}

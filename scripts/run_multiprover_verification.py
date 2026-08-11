@@ -174,7 +174,7 @@ def run_coq() -> dict[str, Any]:
             "reason": "coqc not on PATH",
         }
     coq_dir = ROOT / "formal" / "coq"
-    files = ["Trinary.v", "Gates.v", "Pack.v", "Domains.v"]
+    files = ["Trinary.v", "Gates.v", "Pack.v", "Domains.v", "Hilbert.v"]
     logs = []
     all_ok = True
     # Plain coqc in-order so Require Import Trinary finds Trinary.vo (no -Q rename)

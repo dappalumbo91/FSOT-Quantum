@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-08-11T14:08:16.578123+00:00",
+  "timestamp": "2026-08-11T14:33:11.371939+00:00",
   "kit": "FSOT-Quantum multiprover verification",
   "pin": {
     "ok": true,
@@ -125,10 +125,10 @@
     },
     "lean4": {
       "prover": "lean4",
-      "ok": true,
-      "status": "pass",
-      "exit_code": 0,
-      "log_tail": "Build completed successfully.\n",
+      "ok": false,
+      "status": "fail",
+      "exit_code": 1,
+      "log_tail": "\u2716 [6/8] Building FSOTQuantumFormal.Hilbert\ntrace: .> LEAN_PATH=.\\.\\.lake\\build\\lib PATH c:\\Users\\damia\\.elan\\toolchains\\leanprover--lean4---v4.14.0\\bin\\lean.exe .\\.\\.\\.\\FSOTQuantumFormal\\Hilbert.lean -R .\\.\\.\\. -o .\\.\\.lake\\build\\lib\\FSOTQuantumFormal\\Hilbert.olean -i .\\.\\.lake\\build\\lib\\FSOTQuantumFormal\\Hilbert.ilean -c .\\.\\.lake\\build\\ir\\FSOTQuantumFormal\\Hilbert.c --json\nerror: .\\.\\.\\.\\FSOTQuantumFormal\\Hilbert.lean:37:51: application type mismatch\n  dim q.n\nargument\n  q.n\nhas type\n  Nat : Type\nbut is expected to have type\n  QFTRegister : Type\nerror: .\\.\\.\\.\\FSOTQuantumFormal\\Hilbert.lean:37:4: fail to show termination for\n  FSOT.Quantum.Hilbert.QFTRegister.dim\nwith errors\nfailed to infer structural recursion:\nCannot use parameter q:\n  the type QFTRegister does not have a `.brecOn` recursor\n\n\nfailed to prove termination, possible solutions:\n  - Use `have`-expressions to prove the remaining goals\n  - Use `termination_by` to specify a different well-founded relation\n  - Use `decreasing_by` to specify your own tactic for discharging this kind of goal\nq : QFTRegister\n\u22a2 sizeOf sorry < sizeOf q\nerror: .\\.\\.\\.\\FSOTQuantumFormal\\Hilbert.lean:39:66: type mismatch\n  rfl\nhas type\n  { n := n }.dim = { n := n }.dim : Prop\nbut is expected to have type\n  { n := n }.dim = 2 ^ n : Prop\nerror: Lean exited with code 1\nSome required builds logged failures:\n- FSOTQuantumFormal.Hilbert\nerror: build failed\n",
       "cwd": "C:\\Users\\damia\\Desktop\\fsot quantum\\formal\\lean"
     },
     "coq": {
@@ -155,6 +155,11 @@
           "file": "Domains.v",
           "exit_code": 0,
           "ok": true
+        },
+        {
+          "file": "Hilbert.v",
+          "exit_code": 0,
+          "ok": true
         }
       ]
     },
@@ -168,9 +173,9 @@
       "log_tail": "Running FSOT_Quantum ...\nFinished FSOT_Quantum (0:00:02 elapsed time)\n0:00:08 elapsed time\n"
     }
   },
-  "overall_ok": true,
-  "stamp": "FSOT_QUANTUM_MULTIPROVER_OK",
-  "wall_seconds": 22.959965600050054,
+  "overall_ok": false,
+  "stamp": "FSOT_QUANTUM_MULTIPROVER_OPEN",
+  "wall_seconds": 24.284001199994236,
   "claims": {
     "math": "trinary spin algebra, pack contracts, domain D_eff folds",
     "programming_structure": "gates CX/neg/pair, pack capacity, runtime parity",

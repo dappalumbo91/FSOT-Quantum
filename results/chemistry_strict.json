@@ -1,0 +1,135 @@
+{
+  "panel": "chemistry_strict",
+  "green_pct": 0.5,
+  "band_5_pct": 5.0,
+  "n_observables": 68,
+  "n_green_0_5": 67,
+  "n_band_5": 68,
+  "frac_green_0_5": 0.9852941176470589,
+  "frac_band_5": 1.0,
+  "median_rel_err_pct": 0.02202261701877489,
+  "overall_ok": true,
+  "aspiration_0_5_ok": false,
+  "worst": [
+    {
+      "wave": "chemistry_bond_energies",
+      "name": "BE_O=O",
+      "computed": 495.15025120911446,
+      "measured": 498.0,
+      "rel_err_pct": 0.5722387130292251,
+      "green_0_5": false,
+      "band_5": true
+    },
+    {
+      "wave": "chemistry_bond_energies",
+      "name": "BE_N\u2212H",
+      "computed": 392.33862354898565,
+      "measured": 391.0,
+      "rel_err_pct": 0.3423589639349484,
+      "green_0_5": true,
+      "band_5": true
+    },
+    {
+      "wave": "chemistry_bond_energies",
+      "name": "BE_F\u2212F",
+      "computed": 159.5033290463261,
+      "measured": 159.0,
+      "rel_err_pct": 0.31655914863275325,
+      "green_0_5": true,
+      "band_5": true
+    },
+    {
+      "wave": "chemistry_molecular",
+      "name": "BP_CO\u2082_sub",
+      "computed": 194.13470599823293,
+      "measured": 194.65,
+      "rel_err_pct": 0.2647284879358133,
+      "green_0_5": true,
+      "band_5": true
+    },
+    {
+      "wave": "chemistry_bond_energies",
+      "name": "BE_H\u2212H",
+      "computed": 434.9159090016865,
+      "measured": 436.0,
+      "rel_err_pct": 0.24864472438383173,
+      "green_0_5": true,
+      "band_5": true
+    },
+    {
+      "wave": "chemistry_bond_energies",
+      "name": "BE_C\u2212C",
+      "computed": 348.8306434595909,
+      "measured": 348.0,
+      "rel_err_pct": 0.23869064930772513,
+      "green_0_5": true,
+      "band_5": true
+    },
+    {
+      "wave": "chemistry_molecular",
+      "name": "BP_H\u2082O",
+      "computed": 372.4225168124353,
+      "measured": 373.15,
+      "rel_err_pct": 0.19495730606048442,
+      "green_0_5": true,
+      "band_5": true
+    },
+    {
+      "wave": "chemistry_bond_energies",
+      "name": "BE_C=C",
+      "computed": 613.0050760137398,
+      "measured": 614.0,
+      "rel_err_pct": 0.1620397371759285,
+      "green_0_5": true,
+      "band_5": true
+    }
+  ],
+  "best": [
+    {
+      "wave": "chemistry_molecular",
+      "name": "pH_water",
+      "computed": 7.0,
+      "measured": 7.0,
+      "rel_err_pct": 1.5272941200526831e-49,
+      "green_0_5": true,
+      "band_5": true
+    },
+    {
+      "wave": "chemistry_radii",
+      "name": "R_N",
+      "computed": 0.7500001632454713,
+      "measured": 0.75,
+      "rel_err_pct": 2.176606282729395e-05,
+      "green_0_5": true,
+      "band_5": true
+    },
+    {
+      "wave": "chemistry_ionization",
+      "name": "IE_Ar",
+      "computed": 15.760123778469742,
+      "measured": 15.76,
+      "rel_err_pct": 0.0007853963816084153,
+      "green_0_5": true,
+      "band_5": true
+    },
+    {
+      "wave": "chemistry_bond_lengths",
+      "name": "BL_N\u2212H",
+      "computed": 1.0099883725773517,
+      "measured": 1.01,
+      "rel_err_pct": 0.001151229965176719,
+      "green_0_5": true,
+      "band_5": true
+    },
+    {
+      "wave": "chemistry_ionization",
+      "name": "IE_S",
+      "computed": 10.360130217649854,
+      "measured": 10.36,
+      "rel_err_pct": 0.0012569271221466618,
+      "green_0_5": true,
+      "band_5": true
+    }
+  ],
+  "note": "0.5% is atlas green aspiration; panel gate is all within 5% + median<=5%"
+}

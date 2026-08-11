@@ -13,6 +13,7 @@ import FSOTQuantumFormal.Trinary
 import FSOTQuantumFormal.Gates
 import FSOTQuantumFormal.Pack
 import FSOTQuantumFormal.Domains
+import FSOTQuantumFormal.Hilbert
 
 namespace FSOT.Quantum
 
@@ -20,7 +21,9 @@ namespace FSOT.Quantum
 theorem quantum_formal_surface_ok :
     statesPerU64 = 32
     ∧ Domain.QuantumMechanics.D_eff = 6
-    ∧ Domain.QuantumComputing.D_eff = 11 := by
-  exact ⟨statesPerU64_eq, Domain.QM_D_eff, Domain.QC_D_eff⟩
+    ∧ Domain.QuantumComputing.D_eff = 11
+    ∧ Hilbert.dim 12 = 4096 := by
+  refine ⟨statesPerU64_eq, Domain.QM_D_eff, Domain.QC_D_eff, ?_⟩
+  exact Hilbert.dim_twelve
 
 end FSOT.Quantum

@@ -49,6 +49,9 @@ python -c "from fsot_quantum.scale_scoreboard import run_scale_scoreboard; print
 # Hilbert · logical qubits · QFT/Shor · chemistry residual (compete QM/QC)
 python -m fsot_quantum.compete_qm_qc
 
+# Next steps: n=8–12 circuits · d=5/7 codes · full modular Shor · chemistry strict
+python -m fsot_quantum.next_steps_suite
+
 # QAOA exact column (must be 11/11)
 python -c "from fsot_quantum.qaoa_fsot import run_qaoa_panel; r=run_qaoa_panel(); print(r['metrics_summary']); assert r['overall_ok']"
 
