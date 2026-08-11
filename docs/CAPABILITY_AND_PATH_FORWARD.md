@@ -54,21 +54,31 @@ Regenerate: `python -m fsot_quantum.capability_suite`
 - Claiming: same *jobs* (oracle class, secret recover, search, coupling, optimization) with seed-locked accuracy ledgers on GPU
 - Scale path: batch more instances / longer registers on same GPU
 
-## Next builds
+## Next builds — status
 
-1. Larger Ising / MaxCut panels with residual gates vs public benchmarks
-1. Circuit depth library mapped 1:1 to industry textbook algorithms
-1. Zig/QEMU twin of quantum register (same as neuron/genetics multi-lang)
-1. Publish capability ledger + skeptic kit
+| Item | Status | Where |
+|------|--------|--------|
+| Ising / MaxCut residual panels | **Done** (13/13 exact, n≤16) | `results/optimization_panel.json` |
+| Textbook circuit map | **Done** (13/13) | `docs/TEXTBOOK_CIRCUIT_MAP.md` |
+| Scale / throughput scoreboard | **Done** (GPU) | `results/SCALE_SCOREBOARD.md` |
+| Zig quantum register twin | **Done** | `zig/` · `zig build run` |
+| Skeptic one-command kit | **Done** | `python -m fsot_quantum.skeptic_kit` |
+| GitHub publish | **Open** (HTTPS token needed) | `scripts/push_github.ps1` |
+
+### Still open
+
+1. Larger MaxCut banks (n>16) with approximate + certified bounds  
+2. QEMU freestanding twin (neuron-style ladder)  
+3. arXiv-style methods note with ledgers  
 
 ## How to run
 
 ```powershell
 cd "C:\Users\damia\Desktop\fsot quantum"
 $env:PYTHONPATH = (Get-Location).Path
-python -m fsot_lib.smoke_owned
-python -m fsot_quantum.verify
-python -m fsot_quantum.capability_suite
+python -m fsot_quantum.skeptic_kit
+# or full script including Zig:
+.\scripts\run_skeptic_kit.ps1
 ```
 
-Ledgers: `results/capability_suite.json`, `results/CAPABILITY_REPORT.md`
+Ledgers: `results/skeptic_kit.json`, `results/capability_suite.json`, `results/optimization_panel.json`, `results/scale_scoreboard.json`
