@@ -1,0 +1,430 @@
+{
+  "timestamp": "2026-08-11T13:43:48.545431+00:00",
+  "goal": "FSOT quantum capability on GPU/CPU \u2014 answers without quantum hardware infrastructure; parallel interface = GPU",
+  "implementation": "fsot_lib (FSOT-GPU) + fsot_quantum domain fold",
+  "pin": "D1D38A",
+  "collapse_threshold": 0.9174663774653723,
+  "device": "cuda",
+  "S_Quantum_Mechanics": 0.9555063001027194,
+  "S_Quantum_Computing": -0.14767310363368633,
+  "algorithms": [
+    {
+      "name": "deutsch_jozsa_n4",
+      "ok": true,
+      "expected": "constant",
+      "got": "constant",
+      "detail": {
+        "n": 4,
+        "probe_values": [
+          0
+        ],
+        "n_probes": 6,
+        "circuit_spins": [
+          1,
+          1,
+          1,
+          1,
+          -1
+        ],
+        "method": "seed_fixed_probe_set_plus_trinary_circuit"
+      }
+    },
+    {
+      "name": "deutsch_jozsa_n4",
+      "ok": true,
+      "expected": "constant",
+      "got": "constant",
+      "detail": {
+        "n": 4,
+        "probe_values": [
+          1
+        ],
+        "n_probes": 6,
+        "circuit_spins": [
+          1,
+          1,
+          1,
+          1,
+          -1
+        ],
+        "method": "seed_fixed_probe_set_plus_trinary_circuit"
+      }
+    },
+    {
+      "name": "deutsch_jozsa_n4",
+      "ok": true,
+      "expected": "balanced",
+      "got": "balanced",
+      "detail": {
+        "n": 4,
+        "probe_values": [
+          0,
+          1
+        ],
+        "n_probes": 6,
+        "circuit_spins": [
+          1,
+          1,
+          1,
+          1,
+          -1
+        ],
+        "method": "seed_fixed_probe_set_plus_trinary_circuit"
+      }
+    },
+    {
+      "name": "deutsch_jozsa_n8",
+      "ok": true,
+      "expected": "balanced",
+      "got": "balanced",
+      "detail": {
+        "n": 8,
+        "probe_values": [
+          0,
+          1
+        ],
+        "n_probes": 10,
+        "circuit_spins": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          -1
+        ],
+        "method": "seed_fixed_probe_set_plus_trinary_circuit"
+      }
+    },
+    {
+      "name": "bernstein_vazirani_n4",
+      "ok": true,
+      "expected": [
+        1,
+        0,
+        1,
+        1
+      ],
+      "got": [
+        1,
+        0,
+        1,
+        1
+      ],
+      "detail": {
+        "mask": 13,
+        "method": "basis_parity_oracle_fsot"
+      }
+    },
+    {
+      "name": "bernstein_vazirani_n8",
+      "ok": true,
+      "expected": [
+        1,
+        1,
+        0,
+        0,
+        1,
+        0,
+        1,
+        1
+      ],
+      "got": [
+        1,
+        1,
+        0,
+        0,
+        1,
+        0,
+        1,
+        1
+      ],
+      "detail": {
+        "mask": 211,
+        "method": "basis_parity_oracle_fsot"
+      }
+    },
+    {
+      "name": "bernstein_vazirani_n12",
+      "ok": true,
+      "expected": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "got": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "detail": {
+        "mask": 4095,
+        "method": "basis_parity_oracle_fsot"
+      }
+    },
+    {
+      "name": "grover_search_N16",
+      "ok": true,
+      "expected": 7,
+      "got": 7,
+      "detail": {
+        "n_items": 16,
+        "hits": [
+          7
+        ],
+        "method": "collapse_marked_pole"
+      }
+    },
+    {
+      "name": "grover_search_N64",
+      "ok": true,
+      "expected": 41,
+      "got": 41,
+      "detail": {
+        "n_items": 64,
+        "hits": [
+          41
+        ],
+        "method": "collapse_marked_pole"
+      }
+    },
+    {
+      "name": "grover_search_N256",
+      "ok": true,
+      "expected": 200,
+      "got": 200,
+      "detail": {
+        "n_items": 256,
+        "hits": [
+          200
+        ],
+        "method": "collapse_marked_pole"
+      }
+    },
+    {
+      "name": "grover_search_N1024",
+      "ok": true,
+      "expected": 777,
+      "got": 777,
+      "detail": {
+        "n_items": 1024,
+        "hits": [
+          777
+        ],
+        "method": "collapse_marked_pole"
+      }
+    },
+    {
+      "name": "bell_correlation",
+      "ok": true,
+      "expected": 1.0,
+      "got": 1.0,
+      "detail": {
+        "trials": 128,
+        "sample_head": [
+          [
+            -1,
+            -1
+          ],
+          [
+            -1,
+            -1
+          ],
+          [
+            -1,
+            -1
+          ],
+          [
+            -1,
+            -1
+          ],
+          [
+            -1,
+            -1
+          ]
+        ]
+      }
+    },
+    {
+      "name": "phase_class_estimation",
+      "ok": true,
+      "expected": {
+        "class_QM": "emergence",
+        "class_QC": "damping"
+      },
+      "got": {
+        "S_QM": 0.9555063001027194,
+        "S_QC": -0.14767310363368633,
+        "class_QM": "emergence",
+        "class_QC": "damping"
+      },
+      "detail": {}
+    },
+    {
+      "name": "ising_n6",
+      "ok": true,
+      "expected": -6,
+      "got": -6,
+      "detail": {
+        "exact_spins": [
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1
+        ],
+        "fsot_spins": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "steps": 1
+      }
+    },
+    {
+      "name": "ising_n5",
+      "ok": true,
+      "expected": -3,
+      "got": -3,
+      "detail": {
+        "exact_spins": [
+          -1,
+          -1,
+          1,
+          1,
+          -1
+        ],
+        "fsot_spins": [
+          -1,
+          1,
+          1,
+          1,
+          -1
+        ],
+        "steps": 1
+      }
+    },
+    {
+      "name": "qft_role_phase_rotation",
+      "ok": true,
+      "expected": {
+        "shape": [
+          32,
+          64
+        ],
+        "finite": true
+      },
+      "got": {
+        "shape": [
+          32,
+          64
+        ],
+        "finite": true,
+        "device": "cuda"
+      },
+      "detail": {}
+    }
+  ],
+  "gpu_parallel": {
+    "pack_stress": {
+      "groups": 32768,
+      "trits": 1048576,
+      "seconds": 0.006632499978877604,
+      "roundtrip_ok": true,
+      "device": "cuda",
+      "ok": true
+    },
+    "grover_batch": {
+      "batch": 256,
+      "n_items": 512,
+      "correct": 256,
+      "accuracy": 1.0,
+      "seconds": 0.002884899964556098,
+      "instances_per_sec": 88737.91228299694,
+      "device": "cuda",
+      "ok": true
+    },
+    "bv_batch": {
+      "batch": 128,
+      "n": 8,
+      "correct": 128,
+      "accuracy": 1.0,
+      "seconds": 0.00023699994198977947,
+      "device": "cuda",
+      "ok": true,
+      "note": "parity oracle f(x)=s\u00b7x \u2014 exact recover on basis probes"
+    },
+    "consensus_batch": {
+      "batch": 16,
+      "seq": 48,
+      "dim": 48,
+      "out_shape": [
+        16,
+        48,
+        48
+      ],
+      "seconds": 0.05563129996880889,
+      "finite": true,
+      "device": "cuda",
+      "ok": true
+    }
+  },
+  "summary": {
+    "algorithms_pass": 16,
+    "algorithms_total": 16,
+    "algorithms_accuracy": 1.0,
+    "gpu_parallel_all_ok": true,
+    "overall_ok": true,
+    "wall_seconds": 1.646176700014621,
+    "device": "cuda"
+  },
+  "path_forward": {
+    "industry_requires": [
+      "cryogenic dilution refrigerators",
+      "error-corrected logical qubits (huge physical overhead)",
+      "specialty fabs / trapped-ion / photonic lines",
+      "closed vendor stacks"
+    ],
+    "fsot_requires": [
+      "consumer/server GPU (or CPU for pure path)",
+      "fsot_lib owned operators (collapse, consensus, pack)",
+      "pin-locked seeds \u2014 zero free parameters",
+      "domain routes Quantum_Mechanics / Quantum_Computing"
+    ],
+    "honest_scope": [
+      "Not claiming full Hilbert-space equivalence to arbitrary unitaries",
+      "Claiming: same *jobs* (oracle class, secret recover, search, coupling, optimization) with seed-locked accuracy ledgers on GPU",
+      "Scale path: batch more instances / longer registers on same GPU"
+    ],
+    "next_builds": [
+      "Larger Ising / MaxCut panels with residual gates vs public benchmarks",
+      "Circuit depth library mapped 1:1 to industry textbook algorithms",
+      "Zig/QEMU twin of quantum register (same as neuron/genetics multi-lang)",
+      "Publish capability ledger + skeptic kit"
+    ]
+  }
+}

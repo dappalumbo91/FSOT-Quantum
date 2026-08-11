@@ -37,10 +37,15 @@ python -m fsot_lib.smoke_owned
 python -m fsot_quantum.verify
 python parity\run_parity.py
 python scripts\run_demo.py
+
+# Capability suite — QC jobs on GPU without quantum hardware
+python -m fsot_quantum.capability_suite
 ```
 
+**Goal:** answers for quantum-computing *jobs* (oracle class, search, secret recover, coupling, optimization) via FSOT trinary + GPU parallel — not cryogenic QPU infrastructure.
+
 Device path is **exactly** FSOT-GPU: torch CUDA buffers when available; pure Python always works.  
-Native `.cu` under `phase2_native_gpu/cuda/` is the **same** optional path as FSOT-GPU.
+See `docs/CAPABILITY_AND_PATH_FORWARD.md` and `results/CAPABILITY_REPORT.md`.
 
 ---
 
