@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-08-11T14:36:40.931893+00:00",
+  "timestamp": "2026-08-11T16:55:19.830002+00:00",
   "suite": "next_steps_natural",
   "device": "cuda",
   "panels": {
@@ -445,5 +445,5 @@
     }
   },
   "overall_ok": true,
-  "wall_seconds": 1.5754362000152469
+  "wall_seconds": 0.18653629999607801
 }

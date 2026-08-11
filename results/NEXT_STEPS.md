@@ -2,7 +2,7 @@
 
 **overall_ok:** `True`
 **device:** `cuda`
-**wall_s:** `1.58`
+**wall_s:** `0.19`
 
 | Panel | OK | Detail |
 |-------|----|--------|

@@ -1,0 +1,110 @@
+{
+  "timestamp": "2026-08-11T16:55:19.831521+00:00",
+  "suite": "climb_competitor",
+  "goal": "FSOT-QC as infrastructure-light competitor to QC job capabilities",
+  "fused_gpu": {
+    "ok": true,
+    "gpu": "NVIDIA GeForce RTX 5070",
+    "highlights": {
+      "max_n_ok": 20,
+      "max_circuits_per_sec": 342111.636941093,
+      "max_amp_updates_per_sec": 350322316.22767925,
+      "max_peak_mem_mb": 935.34423828125,
+      "max_pack_trits_per_sec": 3468768884.037978
+    }
+  },
+  "shor_gpu": {
+    "ok": true,
+    "pass": "8/8",
+    "cases": [
+      {
+        "a": 7,
+        "N": 15,
+        "r": 4,
+        "hat": 4,
+        "ok": true,
+        "s": 0.01761179999448359,
+        "mem_mb": 0.02978515625
+      },
+      {
+        "a": 2,
+        "N": 15,
+        "r": 4,
+        "hat": 4,
+        "ok": true,
+        "s": 0.010260700015351176,
+        "mem_mb": 0.02978515625
+      },
+      {
+        "a": 4,
+        "N": 15,
+        "r": 2,
+        "hat": 2,
+        "ok": true,
+        "s": 0.010741299949586391,
+        "mem_mb": 0.02978515625
+      },
+      {
+        "a": 5,
+        "N": 21,
+        "r": 6,
+        "hat": 6,
+        "ok": true,
+        "s": 0.014815500006079674,
+        "mem_mb": 0.1181640625
+      },
+      {
+        "a": 2,
+        "N": 33,
+        "r": 10,
+        "hat": 10,
+        "ok": true,
+        "s": 0.06853509997017682,
+        "mem_mb": 1.890625
+      },
+      {
+        "a": 2,
+        "N": 35,
+        "r": 12,
+        "hat": 12,
+        "ok": true,
+        "s": 0.06906629994045943,
+        "mem_mb": 1.890625
+      },
+      {
+        "a": 2,
+        "N": 39,
+        "r": 12,
+        "hat": 12,
+        "ok": true,
+        "s": 0.06857509992551059,
+        "mem_mb": 1.890625
+      },
+      {
+        "a": 8,
+        "N": 51,
+        "r": 8,
+        "hat": 8,
+        "ok": true,
+        "s": 0.20964559994172305,
+        "mem_mb": 7.5625
+      }
+    ]
+  },
+  "opt_gpu": {
+    "ok": true,
+    "highlights": {
+      "max_ips": 25782.79991858396,
+      "best_mean_ratio": 0.8644301470588234
+    }
+  },
+  "qaoa_exact": {
+    "qaoa_exact": "11/11",
+    "local_exact": "11/11",
+    "require": "qaoa_exact_hits == total"
+  },
+  "qaoa_ok": true,
+  "next_steps_ok": true,
+  "overall_ok": true,
+  "wall_seconds": 4.241789099993184
+}

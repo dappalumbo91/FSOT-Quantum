@@ -1,0 +1,75 @@
+{
+  "panel": "opt_gpu",
+  "instances": [
+    {
+      "job": "maxcut_n16_B512",
+      "n": 16,
+      "batch": 512,
+      "n_edges": 24,
+      "seconds": 0.01985820010304451,
+      "instances_per_sec": 25782.79991858396,
+      "mean_cut": 19.1953125,
+      "max_cut": 20.0,
+      "mean_ratio": 0.7998046875,
+      "ok": true,
+      "device": "cuda"
+    },
+    {
+      "job": "maxcut_n20_B256",
+      "n": 20,
+      "batch": 256,
+      "n_edges": 29,
+      "seconds": 0.01580850000027567,
+      "instances_per_sec": 16193.819780215443,
+      "mean_cut": 23.0234375,
+      "max_cut": 24.0,
+      "mean_ratio": 0.7939116379310345,
+      "ok": true,
+      "device": "cuda"
+    },
+    {
+      "job": "maxcut_n24_B128",
+      "n": 24,
+      "batch": 128,
+      "n_edges": 34,
+      "seconds": 0.018924799980595708,
+      "instances_per_sec": 6763.611775619457,
+      "mean_cut": 29.390625,
+      "max_cut": 32.0,
+      "mean_ratio": 0.8644301470588234,
+      "ok": true,
+      "device": "cuda"
+    },
+    {
+      "job": "maxcut_n32_B64",
+      "n": 32,
+      "batch": 64,
+      "n_edges": 45,
+      "seconds": 0.024812899995595217,
+      "instances_per_sec": 2579.3035079076317,
+      "mean_cut": 36.21875,
+      "max_cut": 39.0,
+      "mean_ratio": 0.804861111111111,
+      "ok": true,
+      "device": "cuda"
+    },
+    {
+      "job": "maxcut_n48_B32",
+      "n": 48,
+      "batch": 32,
+      "n_edges": 70,
+      "seconds": 0.03674689994659275,
+      "instances_per_sec": 870.8217576586923,
+      "mean_cut": 57.84375,
+      "max_cut": 62.0,
+      "mean_ratio": 0.8263392857142857,
+      "ok": true,
+      "device": "cuda"
+    }
+  ],
+  "overall_ok": true,
+  "highlights": {
+    "max_ips": 25782.79991858396,
+    "best_mean_ratio": 0.8644301470588234
+  }
+}

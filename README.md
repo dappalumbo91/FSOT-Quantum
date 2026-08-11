@@ -52,6 +52,12 @@ python -m fsot_quantum.compete_qm_qc
 # Next steps: n=8–12 circuits · d=5/7 codes · full modular Shor · chemistry strict
 python -m fsot_quantum.next_steps_suite
 
+# Competitor climb v1: fused Hilbert n≤20 · Shor GPU · opt GPU · QAOA 11/11
+python -m fsot_quantum.climb_suite
+
+# Competitor climb v2: surface code d=3/5/7 · Shor N≤51 · mega GPU · chemistry
+python -m fsot_quantum.climb_v2
+
 # QAOA exact column (must be 11/11)
 python -c "from fsot_quantum.qaoa_fsot import run_qaoa_panel; r=run_qaoa_panel(); print(r['metrics_summary']); assert r['overall_ok']"
 
@@ -80,6 +86,8 @@ cd zig; zig build run; cd ..
 | Ising/MaxCut residual | `results/optimization_panel.json` |
 | Textbook map | `docs/TEXTBOOK_CIRCUIT_MAP.md` |
 | Scale scoreboard | `results/SCALE_SCOREBOARD.md` |
+| Climb v1 | `results/CLIMB.md` |
+| Climb v2 (surface + Shor mid + mega GPU) | `results/CLIMB_V2.md` |
 | Skeptic kit | `results/SKEPTIC_KIT.md` |
 
 Device path is **exactly** FSOT-GPU: torch CUDA buffers when available.

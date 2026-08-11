@@ -1,0 +1,165 @@
+{
+  "timestamp": "2026-08-11T16:54:48.969240+00:00",
+  "suite": "climb_competitor_v2",
+  "goal": "FSOT-QC competitor climb: surface-code style stabilizers, larger modular Shor on GPU, mega-batch occupancy, chemistry ledger",
+  "pin": "D1D38A",
+  "surface_code": {
+    "ok": true,
+    "pass": "4/4",
+    "ladder": {
+      "d3": 3,
+      "d5": 5,
+      "d7": 7
+    },
+    "noise_gate": {
+      "require": "d3 @ p=0.01 \u2192 p_logical < 0.15",
+      "p_logical": 0.0,
+      "ok": true
+    },
+    "note": "Planar CSS Z-plaquette surface substrate + min-weight syndrome decoder; NOT a published FTQC threshold certificate"
+  },
+  "shor_gpu": {
+    "ok": true,
+    "pass": "8/8",
+    "cases": [
+      {
+        "a": 7,
+        "N": 15,
+        "r": 4,
+        "hat": 4,
+        "ok": true,
+        "n_qubits": 8,
+        "s": 0.3629206999903545,
+        "mem_mb": 0.02978515625
+      },
+      {
+        "a": 2,
+        "N": 15,
+        "r": 4,
+        "hat": 4,
+        "ok": true,
+        "n_qubits": 8,
+        "s": 0.010381400003097951,
+        "mem_mb": 0.02978515625
+      },
+      {
+        "a": 4,
+        "N": 15,
+        "r": 2,
+        "hat": 2,
+        "ok": true,
+        "n_qubits": 8,
+        "s": 0.009721800102852285,
+        "mem_mb": 0.02978515625
+      },
+      {
+        "a": 5,
+        "N": 21,
+        "r": 6,
+        "hat": 6,
+        "ok": true,
+        "n_qubits": 10,
+        "s": 0.014499500044621527,
+        "mem_mb": 0.1181640625
+      },
+      {
+        "a": 2,
+        "N": 33,
+        "r": 10,
+        "hat": 10,
+        "ok": true,
+        "n_qubits": 14,
+        "s": 0.0663736000424251,
+        "mem_mb": 1.890625
+      },
+      {
+        "a": 2,
+        "N": 35,
+        "r": 12,
+        "hat": 12,
+        "ok": true,
+        "n_qubits": 14,
+        "s": 0.06756150000728667,
+        "mem_mb": 1.890625
+      },
+      {
+        "a": 2,
+        "N": 39,
+        "r": 12,
+        "hat": 12,
+        "ok": true,
+        "n_qubits": 14,
+        "s": 0.06743679998908192,
+        "mem_mb": 1.890625
+      },
+      {
+        "a": 8,
+        "N": 51,
+        "r": 8,
+        "hat": 8,
+        "ok": true,
+        "n_qubits": 16,
+        "s": 0.2075682000722736,
+        "mem_mb": 7.5625
+      }
+    ]
+  },
+  "mega_gpu": {
+    "ok": true,
+    "gpu": "NVIDIA GeForce RTX 5070",
+    "highlights": {
+      "max_amp_updates_per_sec": 288135634.849888,
+      "max_circuits_per_sec": 701345.8443790947,
+      "max_pack_trits_per_sec": 3390028013.779111,
+      "max_opt_ips": 16417.62330390909,
+      "max_peak_mem_mb": 8422.85205078125,
+      "vram_frac_peak": 0.688897803514377,
+      "jobs_ok": "21/21"
+    }
+  },
+  "chemistry_strict": {
+    "ok": true,
+    "frac_0_5": 0.9852941176470589,
+    "frac_5": 1.0,
+    "median_pct": 0.02202261701877489,
+    "aspiration_0_5_ok": false,
+    "n_green": "67/68"
+  },
+  "fused_gpu": {
+    "ok": true,
+    "highlights": {
+      "max_n_ok": 20,
+      "max_circuits_per_sec": 912961.0948077133,
+      "max_amp_updates_per_sec": 345187474.85584056,
+      "max_peak_mem_mb": 935.34423828125,
+      "max_pack_trits_per_sec": 3327717810.4801126
+    }
+  },
+  "opt_gpu": {
+    "ok": true,
+    "highlights": {
+      "max_ips": 38368.442015411005,
+      "best_mean_ratio": 0.8644301470588234
+    }
+  },
+  "qaoa_exact": {
+    "qaoa_exact": "11/11",
+    "local_exact": "11/11",
+    "require": "qaoa_exact_hits == total"
+  },
+  "qaoa_ok": true,
+  "overall_ok": true,
+  "wall_seconds": 5.958884399966337,
+  "still_not_claimed": [
+    "cryptographically large Shor (RSA-scale)",
+    "device-scale surface-code FTQC threshold proofs",
+    "full molecular FCI / CASSCF",
+    "100% chemistry observables @ 0.5% (aspiration)"
+  ],
+  "now_implemented_v2": [
+    "planar surface-code Z-plaquette stabilizers d=3/5/7 + greedy MWPM decoder",
+    "GPU modular Shor ladder N\u2208{15,21,33,35,39,51}",
+    "mega-batch GPU occupancy (pack + fused Hilbert + MaxCut + surface spins)",
+    "chemistry strict 5% band + 0.5% green fraction ledger"
+  ]
+}

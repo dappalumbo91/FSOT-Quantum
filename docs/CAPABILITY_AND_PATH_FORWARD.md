@@ -54,12 +54,20 @@ Regenerate: `python -m fsot_quantum.capability_suite`
 - Claiming: same *jobs* (oracle class, secret recover, search, coupling, optimization) with seed-locked accuracy ledgers on GPU
 - Scale path: batch more instances / longer registers on same GPU
 
+## Climb status (competitor path)
+
+| Layer | Status | How to run |
+|-------|--------|------------|
+| Climb v1 (fused Hilbert n≤20, Shor GPU, opt, QAOA) | green | `python -m fsot_quantum.climb_suite` |
+| Climb v2 (surface code d=3/5/7, Shor N≤51, mega GPU ~69% VRAM) | green | `python -m fsot_quantum.climb_v2` |
+
 ## Next builds
 
 1. Larger Ising / MaxCut panels with residual gates vs public benchmarks
-1. Circuit depth library mapped 1:1 to industry textbook algorithms
+1. Surface-code phase channel + lattice surgery logical ops (still not FTQC threshold cert)
+1. Mid-scale Shor N beyond 51 when counting-register memory allows
+1. Chemistry 0.5% aspiration (currently 67/68 @0.5%, 68/68 @5%)
 1. Zig/QEMU twin of quantum register (same as neuron/genetics multi-lang)
-1. Publish capability ledger + skeptic kit
 
 ## How to run
 

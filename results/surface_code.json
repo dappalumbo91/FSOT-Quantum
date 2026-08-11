@@ -1,0 +1,114 @@
+{
+  "panel": "surface_code_stabilizer",
+  "ladder": {
+    "d3": 3,
+    "d5": 5,
+    "d7": 7
+  },
+  "instances": [
+    {
+      "code": "d3",
+      "distance": 3,
+      "correctable_t": 1,
+      "n_data": 9,
+      "n_z_stabilizers": 4,
+      "w1_correct_frac": 1.0,
+      "w1_ok": true,
+      "wt_samples_ok": "10/10",
+      "wt_ok": true,
+      "overweight_fail_frac": 0.4,
+      "logical1_encode_ok": true,
+      "logical1_single_err_ok": true,
+      "ok": true
+    },
+    {
+      "code": "d5",
+      "distance": 5,
+      "correctable_t": 2,
+      "n_data": 25,
+      "n_z_stabilizers": 16,
+      "w1_correct_frac": 1.0,
+      "w1_ok": true,
+      "wt_samples_ok": "10/10",
+      "wt_ok": true,
+      "overweight_fail_frac": 0.0,
+      "logical1_encode_ok": true,
+      "logical1_single_err_ok": true,
+      "ok": true
+    },
+    {
+      "code": "d7",
+      "distance": 7,
+      "correctable_t": 3,
+      "n_data": 49,
+      "n_z_stabilizers": 36,
+      "w1_correct_frac": 1.0,
+      "w1_ok": true,
+      "wt_samples_ok": "10/10",
+      "wt_ok": true,
+      "overweight_fail_frac": 0.0,
+      "logical1_encode_ok": true,
+      "logical1_single_err_ok": true,
+      "ok": true
+    }
+  ],
+  "noise_monte_carlo": [
+    {
+      "d": 3,
+      "p_phys": 0.01,
+      "trials": 125,
+      "logical_errors": 0,
+      "residual_syndrome": 0,
+      "p_logical": 0.0
+    },
+    {
+      "d": 3,
+      "p_phys": 0.02,
+      "trials": 125,
+      "logical_errors": 0,
+      "residual_syndrome": 0,
+      "p_logical": 0.0
+    },
+    {
+      "d": 3,
+      "p_phys": 0.05,
+      "trials": 125,
+      "logical_errors": 6,
+      "residual_syndrome": 0,
+      "p_logical": 0.048
+    },
+    {
+      "d": 5,
+      "p_phys": 0.01,
+      "trials": 125,
+      "logical_errors": 0,
+      "residual_syndrome": 0,
+      "p_logical": 0.0
+    },
+    {
+      "d": 5,
+      "p_phys": 0.02,
+      "trials": 125,
+      "logical_errors": 0,
+      "residual_syndrome": 0,
+      "p_logical": 0.0
+    },
+    {
+      "d": 5,
+      "p_phys": 0.05,
+      "trials": 125,
+      "logical_errors": 1,
+      "residual_syndrome": 0,
+      "p_logical": 0.008
+    }
+  ],
+  "noise_gate": {
+    "require": "d3 @ p=0.01 \u2192 p_logical < 0.15",
+    "p_logical": 0.0,
+    "ok": true
+  },
+  "pass_count": 4,
+  "total": 4,
+  "overall_ok": true,
+  "note": "Planar CSS Z-plaquette surface substrate + min-weight syndrome decoder; NOT a published FTQC threshold certificate"
+}
