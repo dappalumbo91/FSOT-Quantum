@@ -60,14 +60,26 @@ Regenerate: `python -m fsot_quantum.capability_suite`
 |-------|--------|------------|
 | Climb v1 (fused Hilbert n≤20, Shor GPU, opt, QAOA) | green | `python -m fsot_quantum.climb_suite` |
 | Climb v2 (surface code d=3/5/7, Shor N≤51, mega GPU ~69% VRAM) | green | `python -m fsot_quantum.climb_v2` |
+| **Fold-not-Hilbert** (scale by D_eff folds, not 2^n) | green | `python -m fsot_quantum.fold_suite` |
+
+## Scaling law (important)
+
+Industry QC’s hard wall is **Hilbert-space dimension / degrees of freedom**  
+(amplitudes in \(\mathbb{C}^{2^n}\)). Expanding that space is the brute path.
+
+FSOT treats complexity as **domain folds** (`D_eff` routes, collapse Θ, consensus,  
+modular algebra) — same *questions* QC is sold for, different geometry of work.  
+Hilbert fragments remain optional bridges; **fold path is the scaling law**.
+
+See `docs/FOLD_NOT_HILBERT.md`.
 
 ## Next builds
 
-1. Larger Ising / MaxCut panels with residual gates vs public benchmarks
-1. Surface-code phase channel + lattice surgery logical ops (still not FTQC threshold cert)
-1. Mid-scale Shor N beyond 51 when counting-register memory allows
-1. Chemistry 0.5% aspiration (currently 67/68 @0.5%, 68/68 @5%)
-1. Zig/QEMU twin of quantum register (same as neuron/genetics multi-lang)
+1. Deeper nested folds for chemistry residual (close 0.5% aspiration without free params)
+1. GPU-batched fold job queue (occupancy without amplitude tensors)
+1. Surface-code phase channel as a fold, not a larger statevector
+1. Public benchmark residual panels (MaxCut / Ising) under fold cost ledger
+1. Zig/QEMU twin of fold register (same multi-lang pattern)
 
 ## How to run
 

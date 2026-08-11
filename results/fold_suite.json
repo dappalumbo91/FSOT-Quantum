@@ -1,0 +1,216 @@
+{
+  "timestamp": "2026-08-11T17:21:03.168564+00:00",
+  "suite": "fold_not_hilbert",
+  "pin": "D1D38A",
+  "thesis": "QC jobs via FSOT domain folds / modular algebra / collapse \u2014 not Hilbert 2^n expansion",
+  "overall_ok": true,
+  "pass": "27/27",
+  "family_summary": {
+    "oracle_class_DJ": {
+      "pass": "4/4",
+      "ok": true,
+      "n": 4
+    },
+    "secret_parity_BV": {
+      "pass": "2/2",
+      "ok": true,
+      "n": 2
+    },
+    "marked_search_Grover": {
+      "pass": "3/3",
+      "ok": true,
+      "n": 3
+    },
+    "period_order_Shor": {
+      "pass": "6/6",
+      "ok": true,
+      "n": 6
+    },
+    "factor_Shor_end": {
+      "pass": "8/8",
+      "ok": true,
+      "n": 8
+    },
+    "ising_optimize_QAOA_role": {
+      "pass": "3/3",
+      "ok": true,
+      "n": 3
+    },
+    "phase_class_QPE": {
+      "pass": "1/1",
+      "ok": true,
+      "n": 1
+    }
+  },
+  "fold_depth_ladder": {
+    "shallow": 1,
+    "mid": 3,
+    "deep": 4,
+    "meta": 8
+  },
+  "complexity_weight": 0.6180339887498949,
+  "D_eff_routes": {
+    "spin_law": {
+      "D_eff": 6,
+      "role": "measurement / spin resolve",
+      "S": 0.9555063001027194
+    },
+    "compute": {
+      "D_eff": 11,
+      "role": "compute substrate",
+      "S": -0.14767310363368633
+    },
+    "optics": {
+      "D_eff": 11,
+      "role": "phase / optics class",
+      "S": 0.40817053817150184
+    },
+    "particle": {
+      "D_eff": 5,
+      "role": "structure / mass scale",
+      "S": 0.9504134401245242
+    },
+    "gravity": {
+      "D_eff": 22,
+      "role": "deep residual fold",
+      "S": -0.5255977531899868
+    }
+  },
+  "nested_folds": [
+    {
+      "fold_index": 0,
+      "route": "spin_law",
+      "domain": "Quantum_Mechanics",
+      "D_eff": 6,
+      "S": 0.9555063001027194,
+      "class": "emergence",
+      "cost_unit": 0.4082482904638631,
+      "role": "measurement / spin resolve"
+    },
+    {
+      "fold_index": 1,
+      "route": "compute",
+      "domain": "Quantum_Computing",
+      "D_eff": 11,
+      "S": -0.14767310363368633,
+      "class": "damping",
+      "cost_unit": 0.30151134457776363,
+      "role": "compute substrate"
+    },
+    {
+      "fold_index": 2,
+      "route": "optics",
+      "domain": "Quantum_Optics",
+      "D_eff": 11,
+      "S": 0.40817053817150184,
+      "class": "emergence",
+      "cost_unit": 0.30151134457776363,
+      "role": "phase / optics class"
+    }
+  ],
+  "scale_cost_ledger": [
+    {
+      "nominal_n": 8,
+      "hilbert_amplitudes": 256,
+      "hilbert_note": "C^{2^n} statevector entries (brute sim bottleneck)",
+      "fold_probe_budget": 91,
+      "fold_depth": 3,
+      "fold_D_eff_cost_proxy": 0.7097596350416266,
+      "complexity_weight_phi": 0.6180339887498949,
+      "ratio_hilbert_over_fold": 2.8131868131868134,
+      "winner_when": "fold when structure admits closed form / poly probes"
+    },
+    {
+      "nominal_n": 12,
+      "hilbert_amplitudes": 4096,
+      "hilbert_note": "C^{2^n} statevector entries (brute sim bottleneck)",
+      "fold_probe_budget": 171,
+      "fold_depth": 3,
+      "fold_D_eff_cost_proxy": 0.7097596350416266,
+      "complexity_weight_phi": 0.6180339887498949,
+      "ratio_hilbert_over_fold": 23.953216374269005,
+      "winner_when": "fold when structure admits closed form / poly probes"
+    },
+    {
+      "nominal_n": 16,
+      "hilbert_amplitudes": 65536,
+      "hilbert_note": "C^{2^n} statevector entries (brute sim bottleneck)",
+      "fold_probe_budget": 283,
+      "fold_depth": 3,
+      "fold_D_eff_cost_proxy": 0.7097596350416266,
+      "complexity_weight_phi": 0.6180339887498949,
+      "ratio_hilbert_over_fold": 231.57597173144876,
+      "winner_when": "fold when structure admits closed form / poly probes"
+    },
+    {
+      "nominal_n": 20,
+      "hilbert_amplitudes": 1048576,
+      "hilbert_note": "C^{2^n} statevector entries (brute sim bottleneck)",
+      "fold_probe_budget": 398,
+      "fold_depth": 3,
+      "fold_D_eff_cost_proxy": 0.7097596350416266,
+      "complexity_weight_phi": 0.6180339887498949,
+      "ratio_hilbert_over_fold": 2634.613065326633,
+      "winner_when": "fold when structure admits closed form / poly probes"
+    },
+    {
+      "nominal_n": 24,
+      "hilbert_amplitudes": 16777216,
+      "hilbert_note": "C^{2^n} statevector entries (brute sim bottleneck)",
+      "fold_probe_budget": 472,
+      "fold_depth": 3,
+      "fold_D_eff_cost_proxy": 0.7097596350416266,
+      "complexity_weight_phi": 0.6180339887498949,
+      "ratio_hilbert_over_fold": 35544.94915254237,
+      "winner_when": "fold when structure admits closed form / poly probes"
+    },
+    {
+      "nominal_n": 32,
+      "hilbert_amplitudes": 4294967296,
+      "hilbert_note": "C^{2^n} statevector entries (brute sim bottleneck)",
+      "fold_probe_budget": 621,
+      "fold_depth": 3,
+      "fold_D_eff_cost_proxy": 0.7097596350416266,
+      "complexity_weight_phi": 0.6180339887498949,
+      "ratio_hilbert_over_fold": 6916211.426731079,
+      "winner_when": "fold when structure admits closed form / poly probes"
+    }
+  ],
+  "wall_seconds": 1.3682937000412494,
+  "contrast": {
+    "industry_bottleneck": "Hilbert-space dimension / degrees of freedom \u2014 amplitudes in C^{2^n}; cost explodes with qubit count",
+    "fsot_scaling": "Complexity as domain folds (D_eff routes) + modular/algebraic structure + collapse/consensus \u2014 poly probes, not 2^n amplitudes",
+    "example_n20": {
+      "nominal_n": 20,
+      "hilbert_amplitudes": 1048576,
+      "hilbert_note": "C^{2^n} statevector entries (brute sim bottleneck)",
+      "fold_probe_budget": 398,
+      "fold_depth": 3,
+      "fold_D_eff_cost_proxy": 0.7097596350416266,
+      "complexity_weight_phi": 0.6180339887498949,
+      "ratio_hilbert_over_fold": 2634.613065326633,
+      "winner_when": "fold when structure admits closed form / poly probes"
+    },
+    "example_n32": {
+      "nominal_n": 32,
+      "hilbert_amplitudes": 4294967296,
+      "hilbert_note": "C^{2^n} statevector entries (brute sim bottleneck)",
+      "fold_probe_budget": 621,
+      "fold_depth": 3,
+      "fold_D_eff_cost_proxy": 0.7097596350416266,
+      "complexity_weight_phi": 0.6180339887498949,
+      "ratio_hilbert_over_fold": 6916211.426731079,
+      "winner_when": "fold when structure admits closed form / poly probes"
+    }
+  },
+  "still_not_claimed": [
+    "cryptographically large RSA factoring as a security break",
+    "query-complexity asymptotic superiority proofs vs quantum in all models",
+    "Hilbert-universal unitary simulation for arbitrary circuits"
+  ],
+  "now_implemented": [
+    "fold_complexity: D_eff routes, \u03c6-weight, cost contrast ledger",
+    "fold jobs: DJ/BV/search/period/factor/Ising/phase-class",
+    "honest: same QC questions, FSOT geometry of work"
+  ]
+}

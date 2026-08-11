@@ -1,0 +1,695 @@
+{
+  "panel": "fold_jobs_not_hilbert",
+  "thesis": "QC jobs via FSOT domain folds / modular algebra / collapse \u2014 not Hilbert 2^n expansion",
+  "complexity_weight": 0.6180339887498949,
+  "fold_depth_ladder": {
+    "shallow": 1,
+    "mid": 3,
+    "deep": 4,
+    "meta": 8
+  },
+  "D_eff_routes": {
+    "spin_law": {
+      "D_eff": 6,
+      "role": "measurement / spin resolve",
+      "S": 0.9555063001027194
+    },
+    "compute": {
+      "D_eff": 11,
+      "role": "compute substrate",
+      "S": -0.14767310363368633
+    },
+    "optics": {
+      "D_eff": 11,
+      "role": "phase / optics class",
+      "S": 0.40817053817150184
+    },
+    "particle": {
+      "D_eff": 5,
+      "role": "structure / mass scale",
+      "S": 0.9504134401245242
+    },
+    "gravity": {
+      "D_eff": 22,
+      "role": "deep residual fold",
+      "S": -0.5255977531899868
+    }
+  },
+  "instances": [
+    {
+      "job": "oracle_class_DJ",
+      "n": 4,
+      "predicted": "constant",
+      "truth": "constant",
+      "ok": true,
+      "method": "fold_exact_enum",
+      "n_eval": 16,
+      "fold_budget": 43,
+      "hilbert_amps_if_sim": 32,
+      "cost": {
+        "nominal_n": 5,
+        "hilbert_amplitudes": 32,
+        "hilbert_note": "C^{2^n} statevector entries (brute sim bottleneck)",
+        "fold_probe_budget": 43,
+        "fold_depth": 3,
+        "fold_D_eff_cost_proxy": 0.7097596350416266,
+        "complexity_weight_phi": 0.6180339887498949,
+        "ratio_hilbert_over_fold": 0.7441860465116279,
+        "winner_when": "fold when structure admits closed form / poly probes"
+      },
+      "label": "const"
+    },
+    {
+      "job": "oracle_class_DJ",
+      "n": 4,
+      "predicted": "balanced",
+      "truth": "balanced",
+      "ok": true,
+      "method": "fold_exact_enum",
+      "n_eval": 16,
+      "fold_budget": 43,
+      "hilbert_amps_if_sim": 32,
+      "cost": {
+        "nominal_n": 5,
+        "hilbert_amplitudes": 32,
+        "hilbert_note": "C^{2^n} statevector entries (brute sim bottleneck)",
+        "fold_probe_budget": 43,
+        "fold_depth": 3,
+        "fold_D_eff_cost_proxy": 0.7097596350416266,
+        "complexity_weight_phi": 0.6180339887498949,
+        "ratio_hilbert_over_fold": 0.7441860465116279,
+        "winner_when": "fold when structure admits closed form / poly probes"
+      },
+      "label": "bal"
+    },
+    {
+      "job": "oracle_class_DJ",
+      "n": 8,
+      "predicted": "constant",
+      "truth": "constant",
+      "ok": true,
+      "method": "fold_poly_probes",
+      "n_eval": 101,
+      "fold_budget": 91,
+      "hilbert_amps_if_sim": 512,
+      "cost": {
+        "nominal_n": 9,
+        "hilbert_amplitudes": 512,
+        "hilbert_note": "C^{2^n} statevector entries (brute sim bottleneck)",
+        "fold_probe_budget": 91,
+        "fold_depth": 3,
+        "fold_D_eff_cost_proxy": 0.7097596350416266,
+        "complexity_weight_phi": 0.6180339887498949,
+        "ratio_hilbert_over_fold": 5.626373626373627,
+        "winner_when": "fold when structure admits closed form / poly probes"
+      },
+      "label": "const8"
+    },
+    {
+      "job": "oracle_class_DJ",
+      "n": 12,
+      "predicted": "balanced",
+      "truth": "balanced",
+      "ok": true,
+      "method": "fold_poly_probes",
+      "n_eval": 185,
+      "fold_budget": 171,
+      "hilbert_amps_if_sim": 8192,
+      "cost": {
+        "nominal_n": 13,
+        "hilbert_amplitudes": 8192,
+        "hilbert_note": "C^{2^n} statevector entries (brute sim bottleneck)",
+        "fold_probe_budget": 171,
+        "fold_depth": 3,
+        "fold_D_eff_cost_proxy": 0.7097596350416266,
+        "complexity_weight_phi": 0.6180339887498949,
+        "ratio_hilbert_over_fold": 47.90643274853801,
+        "winner_when": "fold when structure admits closed form / poly probes"
+      },
+      "label": "bal12"
+    },
+    {
+      "job": "secret_parity_BV",
+      "n": 4,
+      "expected": [
+        1,
+        0,
+        1,
+        1
+      ],
+      "got": [
+        1,
+        0,
+        1,
+        1
+      ],
+      "ok": true,
+      "method": "basis_fold_n_queries",
+      "n_eval": 4,
+      "hilbert_amps_if_sim": 32,
+      "cost": {
+        "nominal_n": 5,
+        "hilbert_amplitudes": 32,
+        "hilbert_note": "C^{2^n} statevector entries (brute sim bottleneck)",
+        "fold_probe_budget": 43,
+        "fold_depth": 3,
+        "fold_D_eff_cost_proxy": 0.7097596350416266,
+        "complexity_weight_phi": 0.6180339887498949,
+        "ratio_hilbert_over_fold": 0.7441860465116279,
+        "winner_when": "fold when structure admits closed form / poly probes"
+      }
+    },
+    {
+      "job": "secret_parity_BV",
+      "n": 8,
+      "expected": [
+        1,
+        1,
+        0,
+        1,
+        0,
+        1,
+        1,
+        0
+      ],
+      "got": [
+        1,
+        1,
+        0,
+        1,
+        0,
+        1,
+        1,
+        0
+      ],
+      "ok": true,
+      "method": "basis_fold_n_queries",
+      "n_eval": 8,
+      "hilbert_amps_if_sim": 512,
+      "cost": {
+        "nominal_n": 9,
+        "hilbert_amplitudes": 512,
+        "hilbert_note": "C^{2^n} statevector entries (brute sim bottleneck)",
+        "fold_probe_budget": 91,
+        "fold_depth": 3,
+        "fold_D_eff_cost_proxy": 0.7097596350416266,
+        "complexity_weight_phi": 0.6180339887498949,
+        "ratio_hilbert_over_fold": 5.626373626373627,
+        "winner_when": "fold when structure admits closed form / poly probes"
+      }
+    },
+    {
+      "job": "marked_search_Grover",
+      "n_items": 256,
+      "marked": 42,
+      "got": 42,
+      "ok": true,
+      "method": "oracle_field_fold_collapse",
+      "depth": 3,
+      "n_buckets": 16,
+      "window": [
+        32,
+        48
+      ],
+      "oracle_evals": 256,
+      "hilbert_amps_if_sim": 256,
+      "cost": {
+        "nominal_n": 8,
+        "hilbert_amplitudes": 256,
+        "hilbert_note": "C^{2^n} statevector entries (brute sim bottleneck)",
+        "fold_probe_budget": 4774,
+        "fold_depth": 3,
+        "fold_D_eff_cost_proxy": 0.7097596350416266,
+        "complexity_weight_phi": 0.6180339887498949,
+        "ratio_hilbert_over_fold": 0.05362379555927943,
+        "winner_when": "fold when structure admits closed form / poly probes"
+      }
+    },
+    {
+      "job": "marked_search_Grover",
+      "n_items": 10000,
+      "marked": 7777,
+      "got": 7777,
+      "ok": true,
+      "method": "oracle_field_fold_collapse",
+      "depth": 3,
+      "n_buckets": 100,
+      "window": [
+        7700,
+        7800
+      ],
+      "oracle_evals": 10000,
+      "hilbert_amps_if_sim": 16384,
+      "cost": {
+        "nominal_n": 14,
+        "hilbert_amplitudes": 16384,
+        "hilbert_note": "C^{2^n} statevector entries (brute sim bottleneck)",
+        "fold_probe_budget": 185438,
+        "fold_depth": 3,
+        "fold_D_eff_cost_proxy": 0.7097596350416266,
+        "complexity_weight_phi": 0.6180339887498949,
+        "ratio_hilbert_over_fold": 0.08835298051100637,
+        "winner_when": "fold when structure admits closed form / poly probes"
+      }
+    },
+    {
+      "job": "marked_search_Grover",
+      "n_items": 100000,
+      "marked": 12345,
+      "got": 12345,
+      "ok": true,
+      "method": "oracle_field_fold_collapse",
+      "depth": 3,
+      "n_buckets": 316,
+      "window": [
+        12341,
+        12658
+      ],
+      "oracle_evals": 100000,
+      "hilbert_amps_if_sim": 131072,
+      "cost": {
+        "nominal_n": 17,
+        "hilbert_amplitudes": 131072,
+        "hilbert_note": "C^{2^n} statevector entries (brute sim bottleneck)",
+        "fold_probe_budget": 1854129,
+        "fold_depth": 3,
+        "fold_D_eff_cost_proxy": 0.7097596350416266,
+        "complexity_weight_phi": 0.6180339887498949,
+        "ratio_hilbert_over_fold": 0.07069195293315622,
+        "winner_when": "fold when structure admits closed form / poly probes"
+      }
+    },
+    {
+      "job": "period_order_Shor",
+      "a": 7,
+      "N": 15,
+      "true_period": 4,
+      "recovered_period": 4,
+      "ok": true,
+      "method": "modular_fold_plus_CF_candidates",
+      "modular_steps": 4,
+      "n_candidates": 5,
+      "hilbert_amps_if_sim": 4096,
+      "fold_budget": 252,
+      "cost": {
+        "nominal_n": 12,
+        "hilbert_amplitudes": 4096,
+        "hilbert_note": "C^{2^n} statevector entries (brute sim bottleneck)",
+        "fold_probe_budget": 252,
+        "fold_depth": 3,
+        "fold_D_eff_cost_proxy": 0.7097596350416266,
+        "complexity_weight_phi": 0.6180339887498949,
+        "ratio_hilbert_over_fold": 16.253968253968253,
+        "winner_when": "fold when structure admits closed form / poly probes"
+      }
+    },
+    {
+      "job": "period_order_Shor",
+      "a": 2,
+      "N": 15,
+      "true_period": 4,
+      "recovered_period": 4,
+      "ok": true,
+      "method": "modular_fold_plus_CF_candidates",
+      "modular_steps": 4,
+      "n_candidates": 6,
+      "hilbert_amps_if_sim": 4096,
+      "fold_budget": 252,
+      "cost": {
+        "nominal_n": 12,
+        "hilbert_amplitudes": 4096,
+        "hilbert_note": "C^{2^n} statevector entries (brute sim bottleneck)",
+        "fold_probe_budget": 252,
+        "fold_depth": 3,
+        "fold_D_eff_cost_proxy": 0.7097596350416266,
+        "complexity_weight_phi": 0.6180339887498949,
+        "ratio_hilbert_over_fold": 16.253968253968253,
+        "winner_when": "fold when structure admits closed form / poly probes"
+      }
+    },
+    {
+      "job": "period_order_Shor",
+      "a": 5,
+      "N": 21,
+      "true_period": 6,
+      "recovered_period": 6,
+      "ok": true,
+      "method": "modular_fold_plus_CF_candidates",
+      "modular_steps": 6,
+      "n_candidates": 4,
+      "hilbert_amps_if_sim": 32768,
+      "fold_budget": 468,
+      "cost": {
+        "nominal_n": 15,
+        "hilbert_amplitudes": 32768,
+        "hilbert_note": "C^{2^n} statevector entries (brute sim bottleneck)",
+        "fold_probe_budget": 417,
+        "fold_depth": 3,
+        "fold_D_eff_cost_proxy": 0.7097596350416266,
+        "complexity_weight_phi": 0.6180339887498949,
+        "ratio_hilbert_over_fold": 78.58033573141486,
+        "winner_when": "fold when structure admits closed form / poly probes"
+      }
+    },
+    {
+      "job": "period_order_Shor",
+      "a": 2,
+      "N": 33,
+      "true_period": 10,
+      "recovered_period": 10,
+      "ok": true,
+      "method": "modular_fold_plus_CF_candidates",
+      "modular_steps": 10,
+      "n_candidates": 3,
+      "hilbert_amps_if_sim": 262144,
+      "fold_budget": 843,
+      "cost": {
+        "nominal_n": 18,
+        "hilbert_amplitudes": 262144,
+        "hilbert_note": "C^{2^n} statevector entries (brute sim bottleneck)",
+        "fold_probe_budget": 639,
+        "fold_depth": 3,
+        "fold_D_eff_cost_proxy": 0.7097596350416266,
+        "complexity_weight_phi": 0.6180339887498949,
+        "ratio_hilbert_over_fold": 410.24100156494524,
+        "winner_when": "fold when structure admits closed form / poly probes"
+      }
+    },
+    {
+      "job": "period_order_Shor",
+      "a": 2,
+      "N": 35,
+      "true_period": 12,
+      "recovered_period": 12,
+      "ok": true,
+      "method": "modular_fold_plus_CF_candidates",
+      "modular_steps": 12,
+      "n_candidates": 1,
+      "hilbert_amps_if_sim": 262144,
+      "fold_budget": 893,
+      "cost": {
+        "nominal_n": 18,
+        "hilbert_amplitudes": 262144,
+        "hilbert_note": "C^{2^n} statevector entries (brute sim bottleneck)",
+        "fold_probe_budget": 676,
+        "fold_depth": 3,
+        "fold_D_eff_cost_proxy": 0.7097596350416266,
+        "complexity_weight_phi": 0.6180339887498949,
+        "ratio_hilbert_over_fold": 387.7869822485207,
+        "winner_when": "fold when structure admits closed form / poly probes"
+      }
+    },
+    {
+      "job": "period_order_Shor",
+      "a": 8,
+      "N": 51,
+      "true_period": 8,
+      "recovered_period": 8,
+      "ok": true,
+      "method": "modular_fold_plus_CF_candidates",
+      "modular_steps": 8,
+      "n_candidates": 3,
+      "hilbert_amps_if_sim": 262144,
+      "fold_budget": 1288,
+      "cost": {
+        "nominal_n": 18,
+        "hilbert_amplitudes": 262144,
+        "hilbert_note": "C^{2^n} statevector entries (brute sim bottleneck)",
+        "fold_probe_budget": 973,
+        "fold_depth": 3,
+        "fold_D_eff_cost_proxy": 0.7097596350416266,
+        "complexity_weight_phi": 0.6180339887498949,
+        "ratio_hilbert_over_fold": 269.41829393627955,
+        "winner_when": "fold when structure admits closed form / poly probes"
+      }
+    },
+    {
+      "job": "factor_Shor_end",
+      "N": 15,
+      "ok": true,
+      "factors": [
+        3,
+        5
+      ],
+      "method": "gcd_fold",
+      "a": 9
+    },
+    {
+      "job": "factor_Shor_end",
+      "N": 21,
+      "ok": true,
+      "factors": [
+        3,
+        7
+      ],
+      "method": "gcd_fold",
+      "a": 15
+    },
+    {
+      "job": "factor_Shor_end",
+      "N": 33,
+      "ok": true,
+      "factors": [
+        3,
+        11
+      ],
+      "method": "gcd_fold",
+      "a": 27
+    },
+    {
+      "job": "factor_Shor_end",
+      "N": 35,
+      "ok": true,
+      "factors": [
+        5,
+        7
+      ],
+      "method": "gcd_fold",
+      "a": 30
+    },
+    {
+      "job": "factor_Shor_end",
+      "N": 51,
+      "ok": true,
+      "factors": [
+        3,
+        17
+      ],
+      "method": "gcd_fold",
+      "a": 12
+    },
+    {
+      "job": "factor_Shor_end",
+      "N": 65,
+      "ok": true,
+      "factors": [
+        5,
+        13
+      ],
+      "method": "gcd_fold",
+      "a": 30
+    },
+    {
+      "job": "factor_Shor_end",
+      "N": 77,
+      "ok": true,
+      "factors": [
+        7,
+        11
+      ],
+      "method": "gcd_fold",
+      "a": 66
+    },
+    {
+      "job": "factor_Shor_end",
+      "N": 91,
+      "ok": true,
+      "factors": [
+        7,
+        13
+      ],
+      "method": "gcd_fold",
+      "a": 21
+    },
+    {
+      "job": "ising_optimize_QAOA_role",
+      "n": 8,
+      "n_edges": 12,
+      "energy": -8,
+      "exact_energy": -8,
+      "exact_match": true,
+      "ok": true,
+      "method": "nested_consensus_fold_local",
+      "hilbert_amps_if_QAOA_sim": 256,
+      "cost": {
+        "nominal_n": 8,
+        "hilbert_amplitudes": 256,
+        "hilbert_note": "C^{2^n} statevector entries (brute sim bottleneck)",
+        "fold_probe_budget": 171,
+        "fold_depth": 3,
+        "fold_D_eff_cost_proxy": 0.7097596350416266,
+        "complexity_weight_phi": 0.6180339887498949,
+        "ratio_hilbert_over_fold": 1.4970760233918128,
+        "winner_when": "fold when structure admits closed form / poly probes"
+      }
+    },
+    {
+      "job": "ising_optimize_QAOA_role",
+      "n": 10,
+      "n_edges": 13,
+      "energy": -9,
+      "exact_energy": -9,
+      "exact_match": true,
+      "ok": true,
+      "method": "nested_consensus_fold_local",
+      "hilbert_amps_if_QAOA_sim": 1024,
+      "cost": {
+        "nominal_n": 10,
+        "hilbert_amplitudes": 1024,
+        "hilbert_note": "C^{2^n} statevector entries (brute sim bottleneck)",
+        "fold_probe_budget": 196,
+        "fold_depth": 3,
+        "fold_D_eff_cost_proxy": 0.7097596350416266,
+        "complexity_weight_phi": 0.6180339887498949,
+        "ratio_hilbert_over_fold": 5.224489795918367,
+        "winner_when": "fold when structure admits closed form / poly probes"
+      }
+    },
+    {
+      "job": "ising_optimize_QAOA_role",
+      "n": 12,
+      "n_edges": 17,
+      "energy": -13,
+      "exact_energy": -13,
+      "exact_match": true,
+      "ok": true,
+      "method": "nested_consensus_fold_local",
+      "hilbert_amps_if_QAOA_sim": 4096,
+      "cost": {
+        "nominal_n": 12,
+        "hilbert_amplitudes": 4096,
+        "hilbert_note": "C^{2^n} statevector entries (brute sim bottleneck)",
+        "fold_probe_budget": 316,
+        "fold_depth": 3,
+        "fold_D_eff_cost_proxy": 0.7097596350416266,
+        "complexity_weight_phi": 0.6180339887498949,
+        "ratio_hilbert_over_fold": 12.962025316455696,
+        "winner_when": "fold when structure admits closed form / poly probes"
+      }
+    },
+    {
+      "job": "phase_class_QPE",
+      "ok": true,
+      "S_QM": 0.9555063001027194,
+      "S_QC": -0.14767310363368633,
+      "class_QM": "emergence",
+      "class_QC": "damping",
+      "nested_folds": [
+        {
+          "fold_index": 0,
+          "route": "spin_law",
+          "domain": "Quantum_Mechanics",
+          "D_eff": 6,
+          "S": 0.9555063001027194,
+          "class": "emergence",
+          "cost_unit": 0.4082482904638631,
+          "role": "measurement / spin resolve"
+        },
+        {
+          "fold_index": 1,
+          "route": "compute",
+          "domain": "Quantum_Computing",
+          "D_eff": 11,
+          "S": -0.14767310363368633,
+          "class": "damping",
+          "cost_unit": 0.30151134457776363,
+          "role": "compute substrate"
+        },
+        {
+          "fold_index": 2,
+          "route": "optics",
+          "domain": "Quantum_Optics",
+          "D_eff": 11,
+          "S": 0.40817053817150184,
+          "class": "emergence",
+          "cost_unit": 0.30151134457776363,
+          "role": "phase / optics class"
+        }
+      ],
+      "method": "D_eff_domain_scalar_fold",
+      "hilbert_amps_if_QPE": "2^{t+n} for t phase bits \u2014 avoided"
+    }
+  ],
+  "scale_cost_ledger": [
+    {
+      "nominal_n": 8,
+      "hilbert_amplitudes": 256,
+      "hilbert_note": "C^{2^n} statevector entries (brute sim bottleneck)",
+      "fold_probe_budget": 91,
+      "fold_depth": 3,
+      "fold_D_eff_cost_proxy": 0.7097596350416266,
+      "complexity_weight_phi": 0.6180339887498949,
+      "ratio_hilbert_over_fold": 2.8131868131868134,
+      "winner_when": "fold when structure admits closed form / poly probes"
+    },
+    {
+      "nominal_n": 12,
+      "hilbert_amplitudes": 4096,
+      "hilbert_note": "C^{2^n} statevector entries (brute sim bottleneck)",
+      "fold_probe_budget": 171,
+      "fold_depth": 3,
+      "fold_D_eff_cost_proxy": 0.7097596350416266,
+      "complexity_weight_phi": 0.6180339887498949,
+      "ratio_hilbert_over_fold": 23.953216374269005,
+      "winner_when": "fold when structure admits closed form / poly probes"
+    },
+    {
+      "nominal_n": 16,
+      "hilbert_amplitudes": 65536,
+      "hilbert_note": "C^{2^n} statevector entries (brute sim bottleneck)",
+      "fold_probe_budget": 283,
+      "fold_depth": 3,
+      "fold_D_eff_cost_proxy": 0.7097596350416266,
+      "complexity_weight_phi": 0.6180339887498949,
+      "ratio_hilbert_over_fold": 231.57597173144876,
+      "winner_when": "fold when structure admits closed form / poly probes"
+    },
+    {
+      "nominal_n": 20,
+      "hilbert_amplitudes": 1048576,
+      "hilbert_note": "C^{2^n} statevector entries (brute sim bottleneck)",
+      "fold_probe_budget": 398,
+      "fold_depth": 3,
+      "fold_D_eff_cost_proxy": 0.7097596350416266,
+      "complexity_weight_phi": 0.6180339887498949,
+      "ratio_hilbert_over_fold": 2634.613065326633,
+      "winner_when": "fold when structure admits closed form / poly probes"
+    },
+    {
+      "nominal_n": 24,
+      "hilbert_amplitudes": 16777216,
+      "hilbert_note": "C^{2^n} statevector entries (brute sim bottleneck)",
+      "fold_probe_budget": 472,
+      "fold_depth": 3,
+      "fold_D_eff_cost_proxy": 0.7097596350416266,
+      "complexity_weight_phi": 0.6180339887498949,
+      "ratio_hilbert_over_fold": 35544.94915254237,
+      "winner_when": "fold when structure admits closed form / poly probes"
+    },
+    {
+      "nominal_n": 32,
+      "hilbert_amplitudes": 4294967296,
+      "hilbert_note": "C^{2^n} statevector entries (brute sim bottleneck)",
+      "fold_probe_budget": 621,
+      "fold_depth": 3,
+      "fold_D_eff_cost_proxy": 0.7097596350416266,
+      "complexity_weight_phi": 0.6180339887498949,
+      "ratio_hilbert_over_fold": 6916211.426731079,
+      "winner_when": "fold when structure admits closed form / poly probes"
+    }
+  ],
+  "pass_count": 27,
+  "total": 27,
+  "overall_ok": true,
+  "note": "Hilbert fragments (climb v1/v2) remain available as optional bridges; fold path is the scaling law for competitor jobs"
+}
