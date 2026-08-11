@@ -61,6 +61,9 @@ python -m fsot_quantum.climb_v2
 # Fold-not-Hilbert: QC jobs via D_eff folds (not 2^n amplitude expansion)
 python -m fsot_quantum.fold_suite
 
+# Fold v2: chemistry 0.5% · GPU fold queue · surface+phase folds
+python -m fsot_quantum.fold_v2
+
 # QAOA exact column (must be 11/11)
 python -c "from fsot_quantum.qaoa_fsot import run_qaoa_panel; r=run_qaoa_panel(); print(r['metrics_summary']); assert r['overall_ok']"
 
@@ -92,6 +95,7 @@ cd zig; zig build run; cd ..
 | Climb v1 | `results/CLIMB.md` |
 | Climb v2 (surface + Shor mid + mega GPU) | `results/CLIMB_V2.md` |
 | Fold-not-Hilbert (scaling law) | `results/FOLD_NOT_HILBERT.md` |
+| Fold v2 (chem + GPU queue + phase) | `results/FOLD_V2.md` |
 | Skeptic kit | `results/SKEPTIC_KIT.md` |
 
 Device path is **exactly** FSOT-GPU: torch CUDA buffers when available.

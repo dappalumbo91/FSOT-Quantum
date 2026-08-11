@@ -1,0 +1,75 @@
+{
+  "timestamp": "2026-08-11T17:32:52.916115+00:00",
+  "suite": "fold_v2_natural_steps",
+  "pin": "D1D38A",
+  "thesis": "Next natural steps on fold path: chemistry residual folds, GPU fold job queue, surface+phase folds \u2014 still not Hilbert 2^n",
+  "chemistry_fold": {
+    "ok": true,
+    "aspiration_0_5_ok": true,
+    "green_base": "67/68",
+    "green_fold": "68/68",
+    "median_fold_pct": 0.02024340075118086,
+    "rules": {
+      "identity": 67,
+      "pi5_phi_plus_pi_minus_theta_s": 1
+    },
+    "improved": 1
+  },
+  "fold_gpu_queue": {
+    "ok": true,
+    "gpu": "NVIDIA GeForce RTX 5070",
+    "highlights": {
+      "jobs_ok": "9/9",
+      "max_search_ips": 263130.82591716695,
+      "max_ising_ips": 27372.726189351826,
+      "max_pack_trits_per_sec": 3234716593.5778975,
+      "max_scalar_per_sec": 2480817.0779685243,
+      "peak_mem_mb": 4213.17626953125,
+      "complexity_weight": 0.6180339887498949,
+      "fold_depth": {
+        "shallow": 1,
+        "mid": 3,
+        "deep": 4,
+        "meta": 8
+      }
+    }
+  },
+  "surface_phase_fold": {
+    "ok": true,
+    "pass": "13/13",
+    "ladder": {
+      "d3": 3,
+      "d5": 5,
+      "d7": 7
+    }
+  },
+  "fold_jobs_v1": {
+    "ok": true,
+    "pass": "27/27"
+  },
+  "cost_contrast_n32": {
+    "nominal_n": 32,
+    "hilbert_amplitudes": 4294967296,
+    "hilbert_note": "C^{2^n} statevector entries (brute sim bottleneck)",
+    "fold_probe_budget": 621,
+    "fold_depth": 3,
+    "fold_D_eff_cost_proxy": 0.7097596350416266,
+    "complexity_weight_phi": 0.6180339887498949,
+    "ratio_hilbert_over_fold": 6916211.426731079,
+    "winner_when": "fold when structure admits closed form / poly probes"
+  },
+  "overall_ok": true,
+  "wall_seconds": 1.9784157000249252,
+  "now_implemented": [
+    "chemistry formula-family fold: \u03c0\u2075\u00b7\u03c6 \u2192 \u03c0\u2075\u00b7\u03c6+(\u03c0\u2212\u03b8_s) (0.5% aspiration)",
+    "GPU fold queue: search/modular/Ising/pack/D_eff scalars",
+    "surface bit+phase nested CSS folds d=3/5/7",
+    "phase class via D_eff + surface distance (no QPE Hilbert)"
+  ],
+  "still_not_claimed": [
+    "full molecular FCI/CASSCF",
+    "device-scale FTQC thresholds",
+    "RSA-scale factoring",
+    "Hilbert-universal unitary simulation"
+  ]
+}

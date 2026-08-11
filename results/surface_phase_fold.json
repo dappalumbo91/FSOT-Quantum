@@ -1,0 +1,146 @@
+{
+  "panel": "surface_phase_fold",
+  "ladder": {
+    "d3": 3,
+    "d5": 5,
+    "d7": 7
+  },
+  "instances": [
+    {
+      "job": "bit_w1_d3",
+      "d": 3,
+      "ok": true,
+      "w1_frac": 1.0,
+      "channel": "bit"
+    },
+    {
+      "job": "bit_w1_d5",
+      "d": 5,
+      "ok": true,
+      "w1_frac": 1.0,
+      "channel": "bit"
+    },
+    {
+      "job": "bit_w1_d7",
+      "d": 7,
+      "ok": true,
+      "w1_frac": 1.0,
+      "channel": "bit"
+    },
+    {
+      "job": "phase_w1_d3",
+      "d": 3,
+      "ok": true,
+      "w1_frac": 1.0,
+      "channel": "phase"
+    },
+    {
+      "job": "phase_w1_d5",
+      "d": 5,
+      "ok": true,
+      "w1_frac": 1.0,
+      "channel": "phase"
+    },
+    {
+      "job": "phase_w1_d7",
+      "d": 7,
+      "ok": true,
+      "w1_frac": 1.0,
+      "channel": "phase"
+    },
+    {
+      "job": "nested_bit_phase_d3",
+      "d": 3,
+      "ok": true,
+      "pass": "10/10",
+      "channel": "nested",
+      "correctable_t": 1
+    },
+    {
+      "job": "nested_bit_phase_d5",
+      "d": 5,
+      "ok": true,
+      "pass": "10/10",
+      "channel": "nested",
+      "correctable_t": 2
+    },
+    {
+      "job": "nested_bit_phase_d7",
+      "d": 7,
+      "ok": true,
+      "pass": "10/10",
+      "channel": "nested",
+      "correctable_t": 3
+    },
+    {
+      "job": "nested_logical1_d3",
+      "d": 3,
+      "ok": true,
+      "channel": "nested_L1"
+    },
+    {
+      "job": "nested_logical1_d5",
+      "d": 5,
+      "ok": true,
+      "channel": "nested_L1"
+    },
+    {
+      "job": "nested_logical1_d7",
+      "d": 7,
+      "ok": true,
+      "channel": "nested_L1"
+    },
+    {
+      "job": "phase_class_surface_fold",
+      "ok": true,
+      "S_QM": 0.9555063001027194,
+      "S_QC": -0.14767310363368633,
+      "class_QM": "emergence",
+      "class_QC": "damping",
+      "surface_ladder": {
+        "d3": 3,
+        "d5": 5,
+        "d7": 7
+      },
+      "phase_depth_d": 5,
+      "nested_domain_folds": [
+        {
+          "fold_index": 0,
+          "route": "spin_law",
+          "domain": "Quantum_Mechanics",
+          "D_eff": 6,
+          "S": 0.9555063001027194,
+          "class": "emergence",
+          "cost_unit": 0.4082482904638631,
+          "role": "measurement / spin resolve"
+        },
+        {
+          "fold_index": 1,
+          "route": "compute",
+          "domain": "Quantum_Computing",
+          "D_eff": 11,
+          "S": -0.14767310363368633,
+          "class": "damping",
+          "cost_unit": 0.30151134457776363,
+          "role": "compute substrate"
+        },
+        {
+          "fold_index": 2,
+          "route": "optics",
+          "domain": "Quantum_Optics",
+          "D_eff": 11,
+          "S": 0.40817053817150184,
+          "class": "emergence",
+          "cost_unit": 0.30151134457776363,
+          "role": "phase / optics class"
+        }
+      ],
+      "method": "D_eff_plus_surface_distance_fold",
+      "hilbert_amps_avoided": "2^{t+n} QPE register"
+    }
+  ],
+  "pass_count": 13,
+  "total": 13,
+  "overall_ok": true,
+  "note": "Bit + phase CSS folds on planar surface geometry; phase class via D_eff \u2014 not QPE Hilbert expansion. Not a device-scale FTQC threshold certificate."
+}

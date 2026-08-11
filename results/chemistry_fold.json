@@ -1,0 +1,138 @@
+{
+  "panel": "chemistry_fold",
+  "green_pct": 0.5,
+  "n_observables": 68,
+  "n_green_0_5_base": 67,
+  "n_green_0_5_fold": 68,
+  "frac_green_0_5_base": 0.9852941176470589,
+  "frac_green_0_5_fold": 1.0,
+  "frac_band_5_fold": 1.0,
+  "median_rel_err_fold_pct": 0.02024340075118086,
+  "aspiration_0_5_ok": true,
+  "overall_ok": true,
+  "rules_used": {
+    "identity": 67,
+    "pi5_phi_plus_pi_minus_theta_s": 1
+  },
+  "phase_completion_pi_minus_theta_s": 2.85069611304462,
+  "domain_folds": {
+    "Chemistry": {
+      "S": 0.4078840642307454,
+      "class": "emergence"
+    },
+    "Molecular_Chemistry": {
+      "S": 0.3345733830778106,
+      "class": "emergence"
+    },
+    "Physical_Chemistry": {
+      "S": 0.33401327040170914,
+      "class": "emergence"
+    },
+    "Quantum_Mechanics": {
+      "S": 0.9555063001027196,
+      "class": "emergence"
+    }
+  },
+  "complexity_weight": 0.6180339887498949,
+  "fold_depth": {
+    "shallow": 1,
+    "mid": 3,
+    "deep": 4,
+    "meta": 8
+  },
+  "worst_fold": [
+    {
+      "wave": "chemistry_bond_energies",
+      "name": "BE_N\u2212H",
+      "formula": "e\u2076 \u2212 \u03c6\u2075",
+      "computed_base": 392.33862354898565,
+      "computed_fold": 392.33862354898565,
+      "measured": 391.0,
+      "rel_err_base_pct": 0.3423589639349493,
+      "rel_err_fold_pct": 0.3423589639349493,
+      "green_0_5_base": true,
+      "green_0_5_fold": true,
+      "band_5_fold": true,
+      "rule": "identity",
+      "improved": false
+    },
+    {
+      "wave": "chemistry_bond_energies",
+      "name": "BE_F\u2212F",
+      "formula": "e\u2075 + \u03c6\u2075",
+      "computed_base": 159.5033290463261,
+      "computed_fold": 159.5033290463261,
+      "measured": 159.0,
+      "rel_err_base_pct": 0.316559148632759,
+      "rel_err_fold_pct": 0.316559148632759,
+      "green_0_5_base": true,
+      "green_0_5_fold": true,
+      "band_5_fold": true,
+      "rule": "identity",
+      "improved": false
+    },
+    {
+      "wave": "chemistry_molecular",
+      "name": "BP_CO\u2082_sub",
+      "formula": "e\u2076\u00b7ln(\u03c6)",
+      "computed_base": 194.13470599823293,
+      "computed_fold": 194.13470599823293,
+      "measured": 194.65,
+      "rel_err_base_pct": 0.2647284879358204,
+      "rel_err_fold_pct": 0.2647284879358204,
+      "green_0_5_base": true,
+      "green_0_5_fold": true,
+      "band_5_fold": true,
+      "rule": "identity",
+      "improved": false
+    },
+    {
+      "wave": "chemistry_bond_energies",
+      "name": "BE_H\u2212H",
+      "formula": "e\u2078/\u03c6\u2074",
+      "computed_base": 434.9159090016865,
+      "computed_fold": 434.9159090016865,
+      "measured": 436.0,
+      "rel_err_base_pct": 0.24864472438383334,
+      "rel_err_fold_pct": 0.24864472438383334,
+      "green_0_5_base": true,
+      "green_0_5_fold": true,
+      "band_5_fold": true,
+      "rule": "identity",
+      "improved": false
+    },
+    {
+      "wave": "chemistry_bond_energies",
+      "name": "BE_C\u2212C",
+      "formula": "e\u2076 \u2212 e\u2074",
+      "computed_base": 348.8306434595909,
+      "computed_fold": 348.8306434595909,
+      "measured": 348.0,
+      "rel_err_base_pct": 0.23869064930772244,
+      "rel_err_fold_pct": 0.23869064930772244,
+      "green_0_5_base": true,
+      "green_0_5_fold": true,
+      "band_5_fold": true,
+      "rule": "identity",
+      "improved": false
+    }
+  ],
+  "improved": [
+    {
+      "wave": "chemistry_bond_energies",
+      "name": "BE_O=O",
+      "formula": "\u03c0\u2075\u00b7\u03c6",
+      "computed_base": 495.15025120911446,
+      "computed_fold": 498.00094732215905,
+      "measured": 498.0,
+      "rel_err_base_pct": 0.5722387130292252,
+      "rel_err_fold_pct": 0.00019022533314250813,
+      "green_0_5_base": false,
+      "green_0_5_fold": true,
+      "band_5_fold": true,
+      "rule": "pi5_phi_plus_pi_minus_theta_s",
+      "improved": true
+    }
+  ],
+  "note": "Formula-family fold on pin expressions; \u03c0\u2075\u00b7\u03c6 \u2192 \u03c0\u2075\u00b7\u03c6+(\u03c0\u2212\u03b8_s). Not a free coefficient fit. Not full FCI/CASSCF."
+}
