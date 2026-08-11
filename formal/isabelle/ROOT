@@ -1,0 +1,7 @@
+session FSOT_Quantum = HOL +
+  options [document = false]
+  theories
+    Trinary
+    Gates
+    Pack
+    Domains

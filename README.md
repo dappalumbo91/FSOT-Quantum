@@ -46,7 +46,10 @@ python -c "from fsot_quantum.optimization import run_optimization_panel; print(r
 python -c "from fsot_quantum.textbook_map import run_textbook_map; print(run_textbook_map()['overall_ok'])"
 python -c "from fsot_quantum.scale_scoreboard import run_scale_scoreboard; print(run_scale_scoreboard()['overall_ok'])"
 
-# Full skeptic kit (pin + smoke + capability + residual + textbook + scale)
+# Multiprover formal stamp (Lean 4 · Coq · Isabelle · Python runtime)
+python scripts\run_multiprover_verification.py
+
+# Full skeptic kit (pin + smoke + capability + residual + textbook + scale + multiprover)
 python -m fsot_quantum.skeptic_kit
 # or:  .\scripts\run_skeptic_kit.ps1
 

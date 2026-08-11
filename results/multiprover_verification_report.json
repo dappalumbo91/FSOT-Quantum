@@ -1,0 +1,179 @@
+{
+  "timestamp": "2026-08-11T14:08:16.578123+00:00",
+  "kit": "FSOT-Quantum multiprover verification",
+  "pin": {
+    "ok": true,
+    "got": "D1D38A",
+    "expected": "D1D38A"
+  },
+  "spine": {
+    "path": "verification\\obligations\\quantum_spine.json",
+    "n_obligations": 16,
+    "ids": [
+      "Q-TRIT-001",
+      "Q-TRIT-002",
+      "Q-TRIT-003",
+      "Q-GATE-001",
+      "Q-GATE-002",
+      "Q-GATE-003",
+      "Q-GATE-004",
+      "Q-PACK-001",
+      "Q-PACK-002",
+      "Q-DOM-001",
+      "Q-DOM-002",
+      "Q-DOM-003",
+      "Q-DOM-004",
+      "Q-NUM-001",
+      "Q-NUM-002",
+      "Q-STRUCT-001"
+    ]
+  },
+  "provers": {
+    "python_runtime": {
+      "prover": "python_runtime",
+      "ok": true,
+      "status": "pass",
+      "n_obligations": 16,
+      "n_pass": 16,
+      "checks": [
+        {
+          "id": "Q-TRIT-001",
+          "ok": true,
+          "detail": null
+        },
+        {
+          "id": "Q-TRIT-002",
+          "ok": true,
+          "detail": null
+        },
+        {
+          "id": "Q-TRIT-003",
+          "ok": true,
+          "detail": null
+        },
+        {
+          "id": "Q-GATE-001",
+          "ok": true,
+          "detail": null
+        },
+        {
+          "id": "Q-GATE-002",
+          "ok": true,
+          "detail": null
+        },
+        {
+          "id": "Q-GATE-003",
+          "ok": true,
+          "detail": null
+        },
+        {
+          "id": "Q-GATE-004",
+          "ok": true,
+          "detail": null
+        },
+        {
+          "id": "Q-PACK-001",
+          "ok": true,
+          "detail": null
+        },
+        {
+          "id": "Q-PACK-002",
+          "ok": true,
+          "detail": null
+        },
+        {
+          "id": "Q-DOM-001",
+          "ok": true,
+          "detail": null
+        },
+        {
+          "id": "Q-DOM-002",
+          "ok": true,
+          "detail": null
+        },
+        {
+          "id": "Q-DOM-003",
+          "ok": true,
+          "detail": null
+        },
+        {
+          "id": "Q-DOM-004",
+          "ok": true,
+          "detail": null
+        },
+        {
+          "id": "Q-NUM-001",
+          "ok": true,
+          "detail": {
+            "theta": 0.9174663774653723
+          }
+        },
+        {
+          "id": "Q-NUM-002",
+          "ok": true,
+          "detail": {
+            "S_QM": 0.9555063001027194,
+            "S_QC": -0.14767310363368633
+          }
+        },
+        {
+          "id": "Q-STRUCT-001",
+          "ok": true,
+          "detail": null
+        }
+      ]
+    },
+    "lean4": {
+      "prover": "lean4",
+      "ok": true,
+      "status": "pass",
+      "exit_code": 0,
+      "log_tail": "Build completed successfully.\n",
+      "cwd": "C:\\Users\\damia\\Desktop\\fsot quantum\\formal\\lean"
+    },
+    "coq": {
+      "prover": "coq",
+      "ok": true,
+      "status": "pass",
+      "files": [
+        {
+          "file": "Trinary.v",
+          "exit_code": 0,
+          "ok": true
+        },
+        {
+          "file": "Gates.v",
+          "exit_code": 0,
+          "ok": true
+        },
+        {
+          "file": "Pack.v",
+          "exit_code": 0,
+          "ok": true
+        },
+        {
+          "file": "Domains.v",
+          "exit_code": 0,
+          "ok": true
+        }
+      ]
+    },
+    "isabelle": {
+      "prover": "isabelle",
+      "ok": true,
+      "status": "pass",
+      "exit_code": 0,
+      "isabelle_home": "C:\\Users\\damia\\Desktop\\Isabelle2025-2",
+      "bash": "C:\\Users\\damia\\Desktop\\Isabelle2025-2\\contrib\\cygwin\\bin\\bash.exe",
+      "log_tail": "Running FSOT_Quantum ...\nFinished FSOT_Quantum (0:00:02 elapsed time)\n0:00:08 elapsed time\n"
+    }
+  },
+  "overall_ok": true,
+  "stamp": "FSOT_QUANTUM_MULTIPROVER_OK",
+  "wall_seconds": 22.959965600050054,
+  "claims": {
+    "math": "trinary spin algebra, pack contracts, domain D_eff folds",
+    "programming_structure": "gates CX/neg/pair, pack capacity, runtime parity",
+    "not_claimed": "full Hilbert unitary equivalence; Isabelle may skip if not installed"
+  }
+}

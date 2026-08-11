@@ -1,0 +1,152 @@
+{
+  "spine": "FSOT-Quantum multiprover",
+  "pin": "D1D38A",
+  "authority": "vendor/fsot_compute.py + fsot_lib + formal/",
+  "provers": ["lean4", "coq", "isabelle", "python_runtime"],
+  "obligations": [
+    {
+      "id": "Q-TRIT-001",
+      "name": "spin_bits_roundtrip",
+      "statement": "ofBits(toBits(s)) = some s for all Spin s",
+      "lean": "FSOT.Quantum.Spin.roundtrip_bits",
+      "coq": "spin_roundtrip_bits",
+      "isabelle": "spin_roundtrip_bits",
+      "python": "code_to_signed(signed_to_code(s)) == s"
+    },
+    {
+      "id": "Q-TRIT-002",
+      "name": "toBits_valid_le_2",
+      "statement": "toBits(s) ∈ {0,1,2}",
+      "lean": "FSOT.Quantum.toBits_valid",
+      "coq": "to_bits_valid",
+      "isabelle": "to_bits_valid",
+      "python": "signed_to_code(s) in (0,1,2)"
+    },
+    {
+      "id": "Q-TRIT-003",
+      "name": "states_per_u64_32",
+      "statement": "32 trits per UInt64 at 2 bits each",
+      "lean": "FSOT.Quantum.statesPerU64_eq",
+      "coq": "states_per_u64_eq",
+      "isabelle": "states_per_u64_eq",
+      "python": "STATES_PER_U64 == 32"
+    },
+    {
+      "id": "Q-GATE-001",
+      "name": "neg_involutive",
+      "statement": "neg(neg(s)) = s",
+      "lean": "FSOT.Quantum.neg_involutive",
+      "coq": "neg_involutive",
+      "isabelle": "neg_involutive",
+      "python": "neg(neg(s)) == s"
+    },
+    {
+      "id": "Q-GATE-002",
+      "name": "cx_control_up_flips",
+      "statement": "cx(up, t) = neg(t)",
+      "lean": "FSOT.Quantum.cx_control_up_flips",
+      "coq": "cx_control_up",
+      "isabelle": "cx_control_up",
+      "python": "apply_cx(1, t) == -t"
+    },
+    {
+      "id": "Q-GATE-003",
+      "name": "cx_control_down_holds",
+      "statement": "cx(down, t) = t",
+      "lean": "FSOT.Quantum.cx_control_down_holds",
+      "coq": "cx_control_down",
+      "isabelle": "cx_control_down",
+      "python": "apply_cx(-1, t) == t"
+    },
+    {
+      "id": "Q-GATE-004",
+      "name": "pair_superposed_absorbs",
+      "statement": "pair(super, t) = super",
+      "lean": "FSOT.Quantum.pair_superposed_left",
+      "coq": "pair_super_left",
+      "isabelle": "pair_super_left",
+      "python": "pair(0, t) == 0"
+    },
+    {
+      "id": "Q-PACK-001",
+      "name": "pack_capacity_64",
+      "statement": "32 * 2 = 64 bits",
+      "lean": "FSOT.Quantum.pack_capacity",
+      "coq": "pack_capacity",
+      "isabelle": "pack_capacity",
+      "python": "32 * 2 == 64"
+    },
+    {
+      "id": "Q-PACK-002",
+      "name": "pack_unpack_roundtrip",
+      "statement": "unpack(pack(codes)) = codes for 32 codes in {0,1,2}",
+      "lean": "structural (runtime golden)",
+      "coq": "structural (runtime golden)",
+      "isabelle": "structural (runtime golden)",
+      "python": "pack_roundtrip_ok"
+    },
+    {
+      "id": "Q-DOM-001",
+      "name": "QM_D_eff_6",
+      "statement": "Quantum_Mechanics.D_eff = 6",
+      "lean": "FSOT.Quantum.Domain.QM_D_eff",
+      "coq": "QM_D_eff",
+      "isabelle": "QM_D_eff",
+      "python": "DOMAINS['Quantum_Mechanics'].D_eff == 6"
+    },
+    {
+      "id": "Q-DOM-002",
+      "name": "QC_D_eff_11",
+      "statement": "Quantum_Computing.D_eff = 11",
+      "lean": "FSOT.Quantum.Domain.QC_D_eff",
+      "coq": "QC_D_eff",
+      "isabelle": "QC_D_eff",
+      "python": "DOMAINS['Quantum_Computing'].D_eff == 11"
+    },
+    {
+      "id": "Q-DOM-003",
+      "name": "QM_observed_QC_not",
+      "statement": "QM observed=true; QC observed=false",
+      "lean": "QM_observed / QC_unobserved",
+      "coq": "QM_observed / QC_unobserved",
+      "isabelle": "QM_observed / QC_unobserved",
+      "python": "observed flags match domains.py"
+    },
+    {
+      "id": "Q-DOM-004",
+      "name": "domains_below_ceiling_25",
+      "statement": "D_eff(QM), D_eff(QC) < 25",
+      "lean": "QM_below_ceiling / QC_below_ceiling",
+      "coq": "QM_below_ceiling / QC_below_ceiling",
+      "isabelle": "QM_below_ceiling / QC_below_ceiling",
+      "python": "D_eff < 25"
+    },
+    {
+      "id": "Q-NUM-001",
+      "name": "collapse_threshold_identity",
+      "statement": "Θ = C_eff * P_var matches golden 0.9174663774653723",
+      "lean": "CollapseThresholdContract (name-level)",
+      "coq": "runtime parity",
+      "isabelle": "runtime parity",
+      "python": "abs(C_eff*P_var - golden) < 1e-12"
+    },
+    {
+      "id": "Q-NUM-002",
+      "name": "domain_scalar_sign_QM_QC",
+      "statement": "S(QM)>0 and S(QC)<0 (pin-locked)",
+      "lean": "runtime parity",
+      "coq": "runtime parity",
+      "isabelle": "runtime parity",
+      "python": "domain_scalar signs"
+    },
+    {
+      "id": "Q-STRUCT-001",
+      "name": "quantum_formal_surface_ok",
+      "statement": "Lean surface stamp: statesPerU64=32 ∧ D_eff QM=6 ∧ QC=11",
+      "lean": "FSOT.Quantum.quantum_formal_surface_ok",
+      "coq": "conjunction of lemmas",
+      "isabelle": "conjunction of lemmas",
+      "python": "structure constants"
+    }
+  ]
+}

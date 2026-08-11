@@ -111,7 +111,33 @@ def run_skeptic() -> dict[str, Any]:
     except Exception as e:
         gates.append({"name": "scale_scoreboard", "ok": False, "error": str(e)})
 
-    # 8 zero free params doctrine
+    # 8 multiprover (Lean · Coq · Isabelle · Python)
+    try:
+        from scripts.run_multiprover_verification import main as multi_main
+        import io
+        from contextlib import redirect_stdout
+
+        buf = io.StringIO()
+        with redirect_stdout(buf):
+            rc = multi_main()
+        # re-read stamp
+        mp = ROOT / "results" / "multiprover_verification_report.json"
+        stamp = None
+        if mp.exists():
+            stamp = json.loads(mp.read_text(encoding="utf-8")).get("stamp")
+        gates.append(
+            {
+                "name": "multiprover_lean_coq_isabelle",
+                "ok": rc == 0,
+                "stamp": stamp,
+            }
+        )
+    except Exception as e:
+        gates.append(
+            {"name": "multiprover_lean_coq_isabelle", "ok": False, "error": str(e)}
+        )
+
+    # 9 zero free params doctrine
     gates.append(
         {
             "name": "zero_free_params",

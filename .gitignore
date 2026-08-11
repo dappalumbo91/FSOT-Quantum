@@ -37,3 +37,12 @@ zig/zig-out/
 .env
 *.pem
 .git-credentials
+
+# Formal build products
+formal/coq/*.vo
+formal/coq/*.glob
+formal/coq/*.vok
+formal/coq/*.vos
+formal/coq/.*.aux
+formal/lean/.lake/
+formal/lean/lake-manifest.json
