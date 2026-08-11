@@ -1,0 +1,30 @@
+{
+  "panel": "fold_scheduler_multistream",
+  "device": "cuda",
+  "gpu_name": "NVIDIA GeForce RTX 5070",
+  "serial": {
+    "ok": true,
+    "wall_seconds": 0.3540310999378562,
+    "jobs_ok": 4,
+    "jobs_total": 4
+  },
+  "streamed": {
+    "ok": true,
+    "mode": "streamed_cuda",
+    "wall_seconds": 0.07473879994358867,
+    "n_streams": 3,
+    "peak_mem_mb": 2105.71337890625,
+    "jobs_ok": 4,
+    "jobs_total": 4
+  },
+  "speedup_serial_over_streamed": 4.736911754069796,
+  "complexity_weight": 0.6180339887498949,
+  "fold_depth": {
+    "shallow": 1,
+    "mid": 3,
+    "deep": 4,
+    "meta": 8
+  },
+  "overall_ok": true,
+  "note": "Multi-stream fold queue on CUDA; work is fold jobs not 2^n amps. Speedup depends on kernel length vs launch overhead."
+}

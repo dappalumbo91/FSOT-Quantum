@@ -1,0 +1,344 @@
+{
+  "panel": "lattice_surgery_fold",
+  "ladder": {
+    "d3": 3,
+    "d5": 5,
+    "d7": 7
+  },
+  "instances": [
+    {
+      "job": "encode0_d3",
+      "ok": true,
+      "d": 3
+    },
+    {
+      "job": "encode1_d3",
+      "ok": true,
+      "d": 3
+    },
+    {
+      "job": "merge_split_d3",
+      "ok": true,
+      "d": 3,
+      "lz": [
+        1,
+        -1
+      ]
+    },
+    {
+      "op": "logical_zz_measure_fold",
+      "zz": 1,
+      "zz_merged": 1,
+      "seam": 1,
+      "ok": true,
+      "d": 3,
+      "job": "zz_d3_00"
+    },
+    {
+      "op": "logical_zz_measure_fold",
+      "zz": -1,
+      "zz_merged": -1,
+      "seam": -1,
+      "ok": true,
+      "d": 3,
+      "job": "zz_d3_01"
+    },
+    {
+      "op": "logical_zz_measure_fold",
+      "zz": -1,
+      "zz_merged": -1,
+      "seam": -1,
+      "ok": true,
+      "d": 3,
+      "job": "zz_d3_10"
+    },
+    {
+      "op": "logical_zz_measure_fold",
+      "zz": 1,
+      "zz_merged": 1,
+      "seam": -1,
+      "ok": true,
+      "d": 3,
+      "job": "zz_d3_11"
+    },
+    {
+      "op": "logical_cnot_fold",
+      "control_in": 0,
+      "target_in": 0,
+      "control_out": 0,
+      "target_out": 0,
+      "expect_target": 0,
+      "seam": 1,
+      "ok": true,
+      "d": 3,
+      "job": "cnot_d3_00"
+    },
+    {
+      "op": "logical_cnot_fold",
+      "control_in": 0,
+      "target_in": 1,
+      "control_out": 0,
+      "target_out": 1,
+      "expect_target": 1,
+      "seam": -1,
+      "ok": true,
+      "d": 3,
+      "job": "cnot_d3_01"
+    },
+    {
+      "op": "logical_cnot_fold",
+      "control_in": 1,
+      "target_in": 0,
+      "control_out": 1,
+      "target_out": 1,
+      "expect_target": 1,
+      "seam": -1,
+      "ok": true,
+      "d": 3,
+      "job": "cnot_d3_10"
+    },
+    {
+      "op": "logical_cnot_fold",
+      "control_in": 1,
+      "target_in": 1,
+      "control_out": 1,
+      "target_out": 0,
+      "expect_target": 0,
+      "seam": -1,
+      "ok": true,
+      "d": 3,
+      "job": "cnot_d3_11"
+    },
+    {
+      "job": "cnot_after_w1_d3",
+      "ok": true,
+      "d": 3,
+      "correct_ok": true,
+      "cnot_ok": true
+    },
+    {
+      "job": "encode0_d5",
+      "ok": true,
+      "d": 5
+    },
+    {
+      "job": "encode1_d5",
+      "ok": true,
+      "d": 5
+    },
+    {
+      "job": "merge_split_d5",
+      "ok": true,
+      "d": 5,
+      "lz": [
+        1,
+        -1
+      ]
+    },
+    {
+      "op": "logical_zz_measure_fold",
+      "zz": 1,
+      "zz_merged": 1,
+      "seam": 1,
+      "ok": true,
+      "d": 5,
+      "job": "zz_d5_00"
+    },
+    {
+      "op": "logical_zz_measure_fold",
+      "zz": -1,
+      "zz_merged": -1,
+      "seam": -1,
+      "ok": true,
+      "d": 5,
+      "job": "zz_d5_01"
+    },
+    {
+      "op": "logical_zz_measure_fold",
+      "zz": -1,
+      "zz_merged": -1,
+      "seam": -1,
+      "ok": true,
+      "d": 5,
+      "job": "zz_d5_10"
+    },
+    {
+      "op": "logical_zz_measure_fold",
+      "zz": 1,
+      "zz_merged": 1,
+      "seam": -1,
+      "ok": true,
+      "d": 5,
+      "job": "zz_d5_11"
+    },
+    {
+      "op": "logical_cnot_fold",
+      "control_in": 0,
+      "target_in": 0,
+      "control_out": 0,
+      "target_out": 0,
+      "expect_target": 0,
+      "seam": 1,
+      "ok": true,
+      "d": 5,
+      "job": "cnot_d5_00"
+    },
+    {
+      "op": "logical_cnot_fold",
+      "control_in": 0,
+      "target_in": 1,
+      "control_out": 0,
+      "target_out": 1,
+      "expect_target": 1,
+      "seam": -1,
+      "ok": true,
+      "d": 5,
+      "job": "cnot_d5_01"
+    },
+    {
+      "op": "logical_cnot_fold",
+      "control_in": 1,
+      "target_in": 0,
+      "control_out": 1,
+      "target_out": 1,
+      "expect_target": 1,
+      "seam": -1,
+      "ok": true,
+      "d": 5,
+      "job": "cnot_d5_10"
+    },
+    {
+      "op": "logical_cnot_fold",
+      "control_in": 1,
+      "target_in": 1,
+      "control_out": 1,
+      "target_out": 0,
+      "expect_target": 0,
+      "seam": -1,
+      "ok": true,
+      "d": 5,
+      "job": "cnot_d5_11"
+    },
+    {
+      "job": "cnot_after_w1_d5",
+      "ok": true,
+      "d": 5,
+      "correct_ok": true,
+      "cnot_ok": true
+    },
+    {
+      "job": "encode0_d7",
+      "ok": true,
+      "d": 7
+    },
+    {
+      "job": "encode1_d7",
+      "ok": true,
+      "d": 7
+    },
+    {
+      "job": "merge_split_d7",
+      "ok": true,
+      "d": 7,
+      "lz": [
+        1,
+        -1
+      ]
+    },
+    {
+      "op": "logical_zz_measure_fold",
+      "zz": 1,
+      "zz_merged": 1,
+      "seam": 1,
+      "ok": true,
+      "d": 7,
+      "job": "zz_d7_00"
+    },
+    {
+      "op": "logical_zz_measure_fold",
+      "zz": -1,
+      "zz_merged": -1,
+      "seam": -1,
+      "ok": true,
+      "d": 7,
+      "job": "zz_d7_01"
+    },
+    {
+      "op": "logical_zz_measure_fold",
+      "zz": -1,
+      "zz_merged": -1,
+      "seam": -1,
+      "ok": true,
+      "d": 7,
+      "job": "zz_d7_10"
+    },
+    {
+      "op": "logical_zz_measure_fold",
+      "zz": 1,
+      "zz_merged": 1,
+      "seam": -1,
+      "ok": true,
+      "d": 7,
+      "job": "zz_d7_11"
+    },
+    {
+      "op": "logical_cnot_fold",
+      "control_in": 0,
+      "target_in": 0,
+      "control_out": 0,
+      "target_out": 0,
+      "expect_target": 0,
+      "seam": 1,
+      "ok": true,
+      "d": 7,
+      "job": "cnot_d7_00"
+    },
+    {
+      "op": "logical_cnot_fold",
+      "control_in": 0,
+      "target_in": 1,
+      "control_out": 0,
+      "target_out": 1,
+      "expect_target": 1,
+      "seam": -1,
+      "ok": true,
+      "d": 7,
+      "job": "cnot_d7_01"
+    },
+    {
+      "op": "logical_cnot_fold",
+      "control_in": 1,
+      "target_in": 0,
+      "control_out": 1,
+      "target_out": 1,
+      "expect_target": 1,
+      "seam": -1,
+      "ok": true,
+      "d": 7,
+      "job": "cnot_d7_10"
+    },
+    {
+      "op": "logical_cnot_fold",
+      "control_in": 1,
+      "target_in": 1,
+      "control_out": 1,
+      "target_out": 0,
+      "expect_target": 0,
+      "seam": -1,
+      "ok": true,
+      "d": 7,
+      "job": "cnot_d7_11"
+    },
+    {
+      "job": "cnot_after_w1_d7",
+      "ok": true,
+      "d": 7,
+      "correct_ok": true,
+      "cnot_ok": true
+    }
+  ],
+  "pass_count": 36,
+  "total": 36,
+  "overall_ok": true,
+  "note": "Abstract merge/split/CNOT/ZZ folds on planar patches \u2014 logical multi-qubit jobs without Hilbert surgery sim. Not a continuum FTQC threshold claim."
+}

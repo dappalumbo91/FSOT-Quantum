@@ -35,19 +35,74 @@ def _phase_completion() -> float:
     return float(SEEDS.pi) - float(SEEDS.theta_s)
 
 
-def _formula_family_fold(name: str, formula: str, base: float) -> tuple[float, str]:
+def classify_formula_family(formula: str) -> str:
     """
-    Apply discrete formula-family fold. Returns (value, rule_tag).
+    Broader formula-family catalog — structural classification only.
+    Tags coverage; completions are a separate a priori map.
+    """
+    f = (formula or "").strip()
+    if not f:
+        return "unknown"
+    if f in ("π⁵·φ", "π⁵*φ"):
+        return "pi5_phi_product"
+    if "ln(φ)" in f or "ln(phi)" in f.lower():
+        return "ln_phi_modulated"
+    if "γ" in f or "GAMMA" in f:
+        return "gamma_tower"
+    if "G" in f or "Catalan" in f or "G_CAT" in f:
+        return "catalan_tower"
+    if "e⁶" in f or "e^6" in f or "E**6" in f:
+        return "e6_tower"
+    if "e⁵" in f or "e^5" in f:
+        return "e5_tower"
+    if "e⁸" in f or "e^8" in f:
+        return "e8_tower"
+    if "π⁶" in f or "π^6" in f:
+        return "pi6_tower"
+    if "π⁷" in f or "π⁸" in f:
+        return "pi_high_tower"
+    if "φ" in f and "π" in f:
+        return "pi_phi_mixed"
+    if "φ" in f:
+        return "phi_family"
+    if "π" in f:
+        return "pi_family"
+    if "P_var" in f or "P_VAR" in f or "θ" in f or "THETA" in f:
+        return "phase_var_family"
+    if "C_eff" in f or "C_EFF" in f:
+        return "ceff_family"
+    if "√" in f or "sqrt" in f.lower():
+        return "radical_family"
+    return "other_seed_closed"
+
+
+# A priori completion map: family → optional additive seed term (or None)
+# Only families listed with a term get a non-identity numeric fold.
+_COMPLETION_MAP: dict[str, str] = {
+    # phase completion on pure π⁵·φ product (BE_O=O)
+    "pi5_phi_product": "pi_minus_theta_s",
+}
+
+
+def _completion_value(tag: str) -> float:
+    if tag == "pi_minus_theta_s":
+        return _phase_completion()
+    return 0.0
+
+
+def _formula_family_fold(name: str, formula: str, base: float) -> tuple[float, str, str]:
+    """
+    Apply discrete formula-family fold. Returns (value, rule_tag, family).
     Only structural rules on the formula string (a priori family), not fits.
     """
-    f = (formula or "").strip().replace(" ", "")
-    # Pure π⁵·φ product family (vendor BE_O=O) — phase completion π−θ_s
-    if f == "π⁵·φ" or f == "π⁵*φ":
-        return base + _phase_completion(), "pi5_phi_plus_pi_minus_theta_s"
-    return base, "identity"
+    family = classify_formula_family(formula)
+    comp = _COMPLETION_MAP.get(family)
+    if comp:
+        return base + _completion_value(comp), f"{family}__{comp}", family
+    return base, "identity", family
 
 
-def _apply_folds_to_result(name: str, formula: str, computed: float) -> tuple[float, str]:
+def _apply_folds_to_result(name: str, formula: str, computed: float) -> tuple[float, str, str]:
     return _formula_family_fold(name, formula, computed)
 
 
@@ -78,6 +133,7 @@ def run_chemistry_fold_panel() -> dict[str, Any]:
 
     rows = []
     rules_used: dict[str, int] = {}
+    family_counts: dict[str, int] = {}
     for w in waves:
         fn = getattr(f, w)
         for r in fn():
@@ -86,14 +142,16 @@ def run_chemistry_fold_panel() -> dict[str, Any]:
             base = float(r.computed)
             meas = float(r.measured)
             formula = getattr(r, "formula_str", None) or getattr(r, "formula", "") or ""
-            folded, rule = _apply_folds_to_result(r.name, formula, base)
+            folded, rule, family = _apply_folds_to_result(r.name, formula, base)
             rules_used[rule] = rules_used.get(rule, 0) + 1
+            family_counts[family] = family_counts.get(family, 0) + 1
             rel_base = abs(base - meas) / abs(meas) * 100
             rel_fold = abs(folded - meas) / abs(meas) * 100
             rows.append({
                 "wave": w,
                 "name": r.name,
                 "formula": formula,
+                "family": family,
                 "computed_base": base,
                 "computed_fold": folded,
                 "measured": meas,
@@ -126,6 +184,9 @@ def run_chemistry_fold_panel() -> dict[str, Any]:
         "aspiration_0_5_ok": n_green_fold == n,
         "overall_ok": n_5 == n and median_f is not None and median_f <= BAND_5,
         "rules_used": rules_used,
+        "formula_family_catalog": family_counts,
+        "n_families": len(family_counts),
+        "completion_map": dict(_COMPLETION_MAP),
         "phase_completion_pi_minus_theta_s": _phase_completion(),
         "domain_folds": domain_folds,
         "complexity_weight": complexity_weight(),
@@ -133,8 +194,8 @@ def run_chemistry_fold_panel() -> dict[str, Any]:
         "worst_fold": sorted(rows, key=lambda r: -r["rel_err_fold_pct"])[:5],
         "improved": [r for r in rows if r["improved"]],
         "note": (
-            "Formula-family fold on pin expressions; π⁵·φ → π⁵·φ+(π−θ_s). "
-            "Not a free coefficient fit. Not full FCI/CASSCF."
+            "Broader formula-family catalog + a priori completions "
+            "(π⁵·φ → π⁵·φ+(π−θ_s)). Not free coefficient fits. Not FCI/CASSCF."
         ),
     }
     out = ROOT / "results" / "chemistry_fold.json"

@@ -62,6 +62,7 @@ Regenerate: `python -m fsot_quantum.capability_suite`
 | Climb v2 (surface code d=3/5/7, Shor N≤51, mega GPU ~69% VRAM) | green | `python -m fsot_quantum.climb_v2` |
 | **Fold-not-Hilbert** (scale by D_eff folds, not 2^n) | green | `python -m fsot_quantum.fold_suite` |
 | **Fold v2** (chem 68/68 @0.5%, GPU fold queue, surface+phase) | green | `python -m fsot_quantum.fold_v2` |
+| **Fold v3** (MaxCut/Ising ledger, multi-stream, lattice surgery) | green | `python -m fsot_quantum.fold_v3` |
 
 ## Scaling law (important)
 
@@ -76,11 +77,11 @@ See `docs/FOLD_NOT_HILBERT.md`.
 
 ## Next builds
 
-1. Public benchmark residual panels (MaxCut / Ising) under fold cost ledger
-1. Multi-stream fold scheduler (true job-queue occupancy on multi-GPU)
-1. Lattice-surgery style logical ops as pure folds
+1. Multi-GPU / multi-process fold scheduler (beyond single-device streams)
+1. Deeper lattice-surgery sequences (teleportation, multi-logical algorithms)
 1. Zig/QEMU twin of fold register (same multi-lang pattern)
-1. Chemistry multi-wave formula-family catalog (more families, still zero free params)
+1. External public MaxCut datasets residual ledger (Gset-style) under fold cost
+1. Formal multiprover stamp of fold cost contrast lemmas
 
 ## How to run
 

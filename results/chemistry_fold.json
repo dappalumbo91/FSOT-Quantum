@@ -12,7 +12,27 @@
   "overall_ok": true,
   "rules_used": {
     "identity": 67,
-    "pi5_phi_plus_pi_minus_theta_s": 1
+    "pi5_phi_product__pi_minus_theta_s": 1
+  },
+  "formula_family_catalog": {
+    "pi_family": 8,
+    "gamma_tower": 22,
+    "phi_family": 10,
+    "pi_phi_mixed": 5,
+    "ceff_family": 1,
+    "other_seed_closed": 3,
+    "catalan_tower": 6,
+    "e8_tower": 1,
+    "e6_tower": 4,
+    "ln_phi_modulated": 3,
+    "pi5_phi_product": 1,
+    "e5_tower": 2,
+    "radical_family": 1,
+    "phase_var_family": 1
+  },
+  "n_families": 14,
+  "completion_map": {
+    "pi5_phi_product": "pi_minus_theta_s"
   },
   "phase_completion_pi_minus_theta_s": 2.85069611304462,
   "domain_folds": {
@@ -45,6 +65,7 @@
       "wave": "chemistry_bond_energies",
       "name": "BE_N\u2212H",
       "formula": "e\u2076 \u2212 \u03c6\u2075",
+      "family": "e6_tower",
       "computed_base": 392.33862354898565,
       "computed_fold": 392.33862354898565,
       "measured": 391.0,
@@ -60,6 +81,7 @@
       "wave": "chemistry_bond_energies",
       "name": "BE_F\u2212F",
       "formula": "e\u2075 + \u03c6\u2075",
+      "family": "e5_tower",
       "computed_base": 159.5033290463261,
       "computed_fold": 159.5033290463261,
       "measured": 159.0,
@@ -75,6 +97,7 @@
       "wave": "chemistry_molecular",
       "name": "BP_CO\u2082_sub",
       "formula": "e\u2076\u00b7ln(\u03c6)",
+      "family": "ln_phi_modulated",
       "computed_base": 194.13470599823293,
       "computed_fold": 194.13470599823293,
       "measured": 194.65,
@@ -90,6 +113,7 @@
       "wave": "chemistry_bond_energies",
       "name": "BE_H\u2212H",
       "formula": "e\u2078/\u03c6\u2074",
+      "family": "e8_tower",
       "computed_base": 434.9159090016865,
       "computed_fold": 434.9159090016865,
       "measured": 436.0,
@@ -105,6 +129,7 @@
       "wave": "chemistry_bond_energies",
       "name": "BE_C\u2212C",
       "formula": "e\u2076 \u2212 e\u2074",
+      "family": "e6_tower",
       "computed_base": 348.8306434595909,
       "computed_fold": 348.8306434595909,
       "measured": 348.0,
@@ -122,6 +147,7 @@
       "wave": "chemistry_bond_energies",
       "name": "BE_O=O",
       "formula": "\u03c0\u2075\u00b7\u03c6",
+      "family": "pi5_phi_product",
       "computed_base": 495.15025120911446,
       "computed_fold": 498.00094732215905,
       "measured": 498.0,
@@ -130,9 +156,9 @@
       "green_0_5_base": false,
       "green_0_5_fold": true,
       "band_5_fold": true,
-      "rule": "pi5_phi_plus_pi_minus_theta_s",
+      "rule": "pi5_phi_product__pi_minus_theta_s",
       "improved": true
     }
   ],
-  "note": "Formula-family fold on pin expressions; \u03c0\u2075\u00b7\u03c6 \u2192 \u03c0\u2075\u00b7\u03c6+(\u03c0\u2212\u03b8_s). Not a free coefficient fit. Not full FCI/CASSCF."
+  "note": "Broader formula-family catalog + a priori completions (\u03c0\u2075\u00b7\u03c6 \u2192 \u03c0\u2075\u00b7\u03c6+(\u03c0\u2212\u03b8_s)). Not free coefficient fits. Not FCI/CASSCF."
 }

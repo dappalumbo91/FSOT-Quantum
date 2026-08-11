@@ -1,0 +1,82 @@
+{
+  "timestamp": "2026-08-11T17:37:05.327644+00:00",
+  "suite": "fold_v3_natural_steps",
+  "pin": "D1D38A",
+  "thesis": "Fold path v3: public MaxCut/Ising under cost ledger, multi-stream fold scheduler, lattice-surgery logical folds, broader chem catalog",
+  "fold_benchmarks": {
+    "ok": true,
+    "pass": "30/30",
+    "summary": {
+      "exact_matches": 21,
+      "exact_total": 21,
+      "ratio_floor_passes": 9,
+      "ratio_floor_total": 9,
+      "max_n": 36,
+      "mean_fold_over_hilbert_ratio": 4189726.362626614
+    }
+  },
+  "fold_scheduler": {
+    "ok": true,
+    "gpu": "NVIDIA GeForce RTX 5070",
+    "serial_s": 0.3540310999378562,
+    "streamed_s": 0.07473879994358867,
+    "speedup": 4.736911754069796,
+    "mode": "streamed_cuda"
+  },
+  "lattice_surgery_fold": {
+    "ok": true,
+    "pass": "36/36",
+    "ladder": {
+      "d3": 3,
+      "d5": 5,
+      "d7": 7
+    }
+  },
+  "chemistry_fold": {
+    "ok": true,
+    "aspiration_0_5_ok": true,
+    "green_fold": "68/68",
+    "n_families": 14,
+    "catalog": {
+      "pi_family": 8,
+      "gamma_tower": 22,
+      "phi_family": 10,
+      "pi_phi_mixed": 5,
+      "ceff_family": 1,
+      "other_seed_closed": 3,
+      "catalan_tower": 6,
+      "e8_tower": 1,
+      "e6_tower": 4,
+      "ln_phi_modulated": 3,
+      "pi5_phi_product": 1,
+      "e5_tower": 2,
+      "radical_family": 1,
+      "phase_var_family": 1
+    }
+  },
+  "cost_contrast_n24": {
+    "nominal_n": 24,
+    "hilbert_amplitudes": 16777216,
+    "hilbert_note": "C^{2^n} statevector entries (brute sim bottleneck)",
+    "fold_probe_budget": 472,
+    "fold_depth": 3,
+    "fold_D_eff_cost_proxy": 0.7097596350416266,
+    "complexity_weight_phi": 0.6180339887498949,
+    "ratio_hilbert_over_fold": 35544.94915254237,
+    "winner_when": "fold when structure admits closed form / poly probes"
+  },
+  "overall_ok": true,
+  "wall_seconds": 3.0790248999837786,
+  "now_implemented": [
+    "MaxCut/Ising fold benchmarks + Hilbert-vs-fold cost ledger",
+    "multi-stream CUDA fold scheduler (search/Ising/pack/scalar)",
+    "lattice-surgery merge/split/CNOT/ZZ folds d=3/5/7",
+    "broader chemistry formula-family catalog + 0.5% green held"
+  ],
+  "still_not_claimed": [
+    "continuum FTQC lattice-surgery thresholds",
+    "QAOA circuit-depth equivalence",
+    "RSA-scale factoring",
+    "full FCI/CASSCF chemistry"
+  ]
+}
