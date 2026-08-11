@@ -46,6 +46,9 @@ python -c "from fsot_quantum.optimization import run_optimization_panel; print(r
 python -c "from fsot_quantum.textbook_map import run_textbook_map; print(run_textbook_map()['overall_ok'])"
 python -c "from fsot_quantum.scale_scoreboard import run_scale_scoreboard; print(run_scale_scoreboard()['overall_ok'])"
 
+# Hilbert · logical qubits · QFT/Shor · chemistry residual (compete QM/QC)
+python -m fsot_quantum.compete_qm_qc
+
 # QAOA exact column (must be 11/11)
 python -c "from fsot_quantum.qaoa_fsot import run_qaoa_panel; r=run_qaoa_panel(); print(r['metrics_summary']); assert r['overall_ok']"
 

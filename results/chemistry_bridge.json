@@ -1,0 +1,38 @@
+{
+  "panel": "chemistry_residual_bridge",
+  "S_Chemistry": 0.4078840642307454,
+  "S_Quantum_Mechanics": 0.9555063001027196,
+  "waves": [
+    {
+      "wave": "chemistry_bond_lengths",
+      "n": 10,
+      "within_5pct": 10,
+      "median_rel_err_pct": 0.018849458044547587,
+      "ok": true
+    },
+    {
+      "wave": "chemistry_bond_energies",
+      "n": 10,
+      "within_5pct": 10,
+      "median_rel_err_pct": 0.23869064930772513,
+      "ok": true
+    },
+    {
+      "wave": "chemistry_ionization",
+      "n": 20,
+      "within_5pct": 20,
+      "median_rel_err_pct": 0.02692190401623394,
+      "ok": true
+    },
+    {
+      "wave": "chemistry_molecular",
+      "n": 10,
+      "within_5pct": 10,
+      "median_rel_err_pct": 0.08137446553288685,
+      "ok": true
+    }
+  ],
+  "overall_ok": true,
+  "note": "Seed-formula residuals from vendor chemistry waves; not full many-body quantum chemistry simulation.",
+  "seeds_pin": "D1D38A"
+}
