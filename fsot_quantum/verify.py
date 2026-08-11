@@ -123,6 +123,21 @@ def check_bell_analog() -> dict:
     }
 
 
+def check_device_path() -> dict:
+    """FSOT-GPU style device path — owned ops, no custom .cu required."""
+    from fsot_quantum.device import smoke_device
+
+    r = smoke_device(n_groups=512)
+    return {
+        "name": "fsot_owned_device_path",
+        "ok": bool(r.get("overall_ok")),
+        "device": r.get("device"),
+        "path": r.get("path"),
+        "pack_ok": r.get("pack_ok"),
+        "collapse_ok": r.get("collapse_ok"),
+    }
+
+
 def check_zero_free_params() -> dict:
     """Doctrine flags — no least-squares knobs in this package."""
     forbidden = ["fit", "least_squares", "trainable", "learnable_lr"]
@@ -151,6 +166,7 @@ def run_all() -> dict:
         check_trinary_pack(),
         check_gate_identities(),
         check_bell_analog(),
+        check_device_path(),
         check_zero_free_params(),
     ]
     overall = all(r.get("ok") for r in results)

@@ -1,42 +1,34 @@
 # Architecture
 
 ```
-                    FSOT-2.1-Lean (pin D1D38A)
-                              |
-              +---------------+---------------+
-              |               |               |
-         seeds/scalar    domains QM/QC    trinary Θ
-              |               |               |
-              +------- fsot_quantum (Python host) ----+
-                              |
-              +---------------+---------------+
-              |                               |
-        Circuit / Gates                  gpu_host.py
-              |                               |
-        TritRegister                    cuda/*.cu kernels
-        measure / collapse              pack · collapse · CX · consensus
+                 FSOT-2.1-Lean pin D1D38A
+                            |
+              seeds · scalar · domains QM/QC
+                            |
+                 fsot_quantum (owned ops)
+                    trinary · gates · circuit · measure
+                            |
+              +-------------+-------------+
+              |                           |
+     pure Python host              device.py adapter
+     (always works)                torch cuda if present
+                                   (buffers + speed only)
 ```
+
+**Not in the critical path:** custom `nvcc` / `.cu` product surface.
 
 ## Packages
 
 | Path | Role |
 |------|------|
-| `fsot_quantum/seeds.py` | Layer 0/1/2 constants + pin helper |
+| `fsot_quantum/seeds.py` | Layer 0/1/2 + pin |
 | `fsot_quantum/scalar.py` | \(S=K(T_1+T_2+T_3)\) |
-| `fsot_quantum/domains.py` | QM / QC interfaces |
-| `fsot_quantum/trinary.py` | Spin algebra + pack |
-| `fsot_quantum/qubit.py` | Trit register |
-| `fsot_quantum/gates.py` | Gate set |
-| `fsot_quantum/circuit.py` | Circuit runner |
+| `fsot_quantum/trinary.py` | Spin algebra + pack law |
+| `fsot_quantum/device.py` | **FSOT-GPU-style** GPU/CPU adapter |
+| `fsot_quantum/gates.py` / `circuit.py` | Pathway gates |
 | `fsot_quantum/measure.py` | Collapse / resolve |
-| `fsot_quantum/verify.py` | Gates for CI / local |
-| `cuda/fsot_quantum.cu` | Bare-metal CUDA |
-| `vendor/fsot_compute.py` | Byte pin authority |
+| `vendor/fsot_compute.py` | Pin authority |
 
-## Data flow (one step)
+## Twin
 
-1. Encode classical bits or zeros → `TritRegister`  
-2. Apply FSOT gates (domain-routed)  
-3. Optional GPU pack / batch collapse  
-4. Measure → eigen-spins in \(\{-1,+1\}\) (or rare residual 0 if \(S=0\))  
-5. Ledger JSON under `results/`  
+[FSOT-GPU](https://github.com/dappalumbo91/FSOT-GPU) `fsot_lib/` — same collapse, pack, consensus ownership model.

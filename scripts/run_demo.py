@@ -12,7 +12,7 @@ sys.path.insert(0, str(ROOT))
 
 from fsot_quantum.circuit import Circuit, bell_analog_circuit, deutsch_analog, run_circuit
 from fsot_quantum.domains import DOMAIN_COMPUTE, DOMAIN_SPIN_LAW
-from fsot_quantum.gpu_host import backend_info, collapse_batch_python, pack_spins
+from fsot_quantum.device import backend_info, batch_collapse_field, pack_spins
 from fsot_quantum.qubit import TritRegister
 from fsot_quantum.scalar import domain_scalar
 from fsot_quantum.seeds import COLLAPSE_THRESHOLD, PIN_EXPECTED, pin_matches
@@ -51,7 +51,7 @@ def main() -> int:
     words = pack_spins(out3.spins)
     print("  packed u64 words:", [hex(w) for w in words])
     field = [1.0, -1.0, 0.0, COLLAPSE_THRESHOLD + 0.01, -(COLLAPSE_THRESHOLD + 0.01)]
-    print("  collapse:", collapse_batch_python(field))
+    print("  collapse:", batch_collapse_field(field))
 
     report = {
         "bell": out.spins,

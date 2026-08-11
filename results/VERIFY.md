@@ -13,4 +13,5 @@
 | trinary_pack_roundtrip | True |
 | gate_identities | True |
 | bell_analog_run | True |
+| fsot_owned_device_path | True |
 | zero_free_params_doctrine | True |

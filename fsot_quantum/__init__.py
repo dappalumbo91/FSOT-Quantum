@@ -24,6 +24,7 @@ from fsot_quantum.qubit import TritRegister, continuous_field_from_spins
 from fsot_quantum.gates import Gate, apply_gate, GATE_TABLE
 from fsot_quantum.circuit import Circuit, run_circuit
 from fsot_quantum.measure import measure_register, measure_spin
+from fsot_quantum.device import prefer_device, smoke_device, backend_info, collapse
 
 __all__ = [
     "SEEDS",
@@ -51,6 +52,10 @@ __all__ = [
     "run_circuit",
     "measure_register",
     "measure_spin",
+    "prefer_device",
+    "smoke_device",
+    "backend_info",
+    "collapse",
 ]
 
 __version__ = "0.1.0"

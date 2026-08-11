@@ -50,6 +50,14 @@
       ]
     },
     {
+      "name": "fsot_owned_device_path",
+      "ok": true,
+      "device": "cuda",
+      "path": "fsot_owned_torch",
+      "pack_ok": true,
+      "collapse_ok": true
+    },
+    {
       "name": "zero_free_params_doctrine",
       "ok": true,
       "note": "All constants from SEEDS / domain table; no fit vector",

@@ -1,0 +1,52 @@
+{
+  "backend": {
+    "path": "fsot_owned_torch_or_python",
+    "device": "cuda",
+    "torch": true,
+    "cuda_runtime": true,
+    "collapse_threshold": 0.9174663774653723,
+    "note": "Custom .cu is NOT required \u2014 FSOT-GPU doctrine: owned ops + optional torch buffers",
+    "torch_version": "2.11.0+cu128",
+    "gpu_name": "NVIDIA GeForce RTX 5070"
+  },
+  "smoke": {
+    "device": "cuda",
+    "torch": true,
+    "gpu_name": "NVIDIA GeForce RTX 5070",
+    "groups": 4096,
+    "pack_ok": true,
+    "collapse_ok": true,
+    "neg_sample": [
+      -1,
+      1,
+      0,
+      -1,
+      1,
+      0,
+      -1,
+      1
+    ],
+    "cx_sample": [
+      1,
+      1,
+      0,
+      0,
+      -1,
+      0,
+      1,
+      1
+    ],
+    "consensus_sample": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "overall_ok": true,
+    "path": "fsot_owned_torch"
+  }
+}

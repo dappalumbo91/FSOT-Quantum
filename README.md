@@ -38,7 +38,7 @@ It is an **FSOT domain fold** for quantum capability: **trinary fluid spins** on
 cd "C:\Users\damia\Desktop\fsot quantum"
 $env:PYTHONPATH = (Get-Location).Path
 
-# Pin + scalar + gate + pack verify (must pass)
+# Pin + scalar + gate + pack + device verify (must pass)
 python -m fsot_quantum.verify
 
 # Vendor parity (byte pin D1D38A)
@@ -47,26 +47,28 @@ python parity\run_parity.py
 # Host demo circuits
 python scripts\run_demo.py
 
-# CUDA bare-metal (RTX / nvcc)
-.\scripts\set_env.ps1
-.\scripts\build_cuda.ps1
+# Device smoke — FSOT-owned ops on torch cuda if present (NO nvcc)
+python scripts\run_device_smoke.py
 ```
 
-**Hardware path (sibling-validated):** NVIDIA GeForce RTX 5070, CUDA 13.x.
+**GPU path = FSOT-GPU doctrine:** owned trinary operators; PyTorch is optional buffers/speed only.  
+**Not required:** custom CUDA C++ / `nvcc` product surface.
+
+**Hardware (optional accelerate):** NVIDIA GeForce RTX 5070 via torch CUDA when installed.
 
 ---
 
 ## Layout
 
 ```
-fsot_quantum/     host engine (seeds, scalar, trinary, gates, circuit, measure)
-cuda/             bare-metal CUDA kernels
+fsot_quantum/     owned engine (seeds, scalar, trinary, gates, device adapter)
 vendor/           fsot_compute.py pin authority (D1D38A)
 formal/           Lean spin/pack spec
 parity/           numeric twin vs vendor
 docs/             math authority + pathway + architecture
-results/          verify / demo ledgers
+results/          verify / demo / device_smoke ledgers
 config/           seed triangulation JSON (FSOT-GPU twin)
+cuda/             optional experiment only — NOT the product path
 ```
 
 ---
