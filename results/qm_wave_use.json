@@ -1,0 +1,217 @@
+{
+  "panel": "qm_wave_field_of_use",
+  "n_observables": 14,
+  "n_green_0_5": 14,
+  "n_band_5": 14,
+  "frac_green_0_5": 1.0,
+  "frac_band_5": 1.0,
+  "median_rel_err_pct": 0.002173459608308579,
+  "S_QM": 0.9555063001027194,
+  "S_QC": -0.14767310363368633,
+  "overall_ok": true,
+  "worst": [
+    {
+      "wave": "validation_qm",
+      "name": "M_Z/M_W",
+      "formula": "(\u221a\u03c0 \u2212 \u03b3\u00b3)/(1/\u221ae + 1/\u221a\u03c6)",
+      "computed": 1.1346009294087023,
+      "measured": 1.134,
+      "rel_err_pct": 0.052992011349416016,
+      "green_0_5": true,
+      "band_5": true
+    },
+    {
+      "wave": "validation_qm",
+      "name": "alpha_FSOT",
+      "formula": "ln(\u03c0)/(e\u00b7\u03c6\u00b9\u00b3)",
+      "computed": 0.0008082937414140405,
+      "measured": 0.000808,
+      "rel_err_pct": 0.03635413540104757,
+      "green_0_5": true,
+      "band_5": true
+    },
+    {
+      "wave": "wave2_qm_sm",
+      "name": "sin2_theta_W",
+      "formula": "\u221ae\u00b7P_new\u00b7\u03b7_eff",
+      "computed": 0.23118997459960097,
+      "measured": 0.23122,
+      "rel_err_pct": 0.01298564155308206,
+      "green_0_5": true,
+      "band_5": true
+    },
+    {
+      "wave": "wave2_qm_sm",
+      "name": "N_eff",
+      "formula": "P_new\u00b7e\u00b7\u03c0 + ln(\u03c6)",
+      "computed": 3.045713454288361,
+      "measured": 3.046,
+      "rel_err_pct": 0.009407278780006465,
+      "green_0_5": true,
+      "band_5": true
+    },
+    {
+      "wave": "wave2_qm_sm",
+      "name": "tau_reion",
+      "formula": "\u03c6\u00b7|Chaos| \u2212 ln(\u03c6)",
+      "computed": 0.05439655350230806,
+      "measured": 0.0544,
+      "rel_err_pct": 0.006335473698407175,
+      "green_0_5": true,
+      "band_5": true
+    },
+    {
+      "wave": "wave2_qm_sm",
+      "name": "sigma_8",
+      "formula": "|S_cosm|\u00b7S_quant + |Chaos|",
+      "computed": 0.8111240047382514,
+      "measured": 0.8111,
+      "rel_err_pct": 0.00295952881905694,
+      "green_0_5": true,
+      "band_5": true
+    }
+  ],
+  "instances": [
+    {
+      "wave": "wave2_qm_sm",
+      "name": "1/alpha_em",
+      "formula": "e\u00b3\u00b7\u03c6\u2074 \u2212 \u03c8_con",
+      "computed": 137.03619755957268,
+      "measured": 137.036,
+      "rel_err_pct": 0.0001441661845670506,
+      "green_0_5": true,
+      "band_5": true
+    },
+    {
+      "wave": "wave2_qm_sm",
+      "name": "sin2_theta_W",
+      "formula": "\u221ae\u00b7P_new\u00b7\u03b7_eff",
+      "computed": 0.23118997459960097,
+      "measured": 0.23122,
+      "rel_err_pct": 0.01298564155308206,
+      "green_0_5": true,
+      "band_5": true
+    },
+    {
+      "wave": "wave2_qm_sm",
+      "name": "M_W/M_Z",
+      "formula": "S_quant\u00b7ln(\u03c0) \u2212 P_base",
+      "computed": 0.8814508416055906,
+      "measured": 0.88147,
+      "rel_err_pct": 0.002173459608308579,
+      "green_0_5": true,
+      "band_5": true
+    },
+    {
+      "wave": "wave2_qm_sm",
+      "name": "Omega_Lambda",
+      "formula": "S_quant/e + \u03b3\u00b2",
+      "computed": 0.6846890475252997,
+      "measured": 0.6847,
+      "rel_err_pct": 0.0015996019717084266,
+      "green_0_5": true,
+      "band_5": true
+    },
+    {
+      "wave": "wave2_qm_sm",
+      "name": "Omega_m",
+      "formula": "C_eff\u00b7C\u00b7ln(\u03c0)",
+      "computed": 0.31529901823577033,
+      "measured": 0.3153,
+      "rel_err_pct": 0.00031137463675564236,
+      "green_0_5": true,
+      "band_5": true
+    },
+    {
+      "wave": "wave2_qm_sm",
+      "name": "Omega_DM_h2",
+      "formula": "(1 \u2212 S_quant)\u00b7\u03c6\u00b7A_in",
+      "computed": 0.120000673267622,
+      "measured": 0.12,
+      "rel_err_pct": 0.0005610563516671626,
+      "green_0_5": true,
+      "band_5": true
+    },
+    {
+      "wave": "wave2_qm_sm",
+      "name": "sigma_8",
+      "formula": "|S_cosm|\u00b7S_quant + |Chaos|",
+      "computed": 0.8111240047382514,
+      "measured": 0.8111,
+      "rel_err_pct": 0.00295952881905694,
+      "green_0_5": true,
+      "band_5": true
+    },
+    {
+      "wave": "wave2_qm_sm",
+      "name": "tau_reion",
+      "formula": "\u03c6\u00b7|Chaos| \u2212 ln(\u03c6)",
+      "computed": 0.05439655350230806,
+      "measured": 0.0544,
+      "rel_err_pct": 0.006335473698407175,
+      "green_0_5": true,
+      "band_5": true
+    },
+    {
+      "wave": "wave2_qm_sm",
+      "name": "m_pi/m_p",
+      "formula": "K\u00b7P_new\u00b7ln(\u03c0)",
+      "computed": 0.14445749655332277,
+      "measured": 0.14446,
+      "rel_err_pct": 0.0017329687645284413,
+      "green_0_5": true,
+      "band_5": true
+    },
+    {
+      "wave": "wave2_qm_sm",
+      "name": "N_eff",
+      "formula": "P_new\u00b7e\u00b7\u03c0 + ln(\u03c6)",
+      "computed": 3.045713454288361,
+      "measured": 3.046,
+      "rel_err_pct": 0.009407278780006465,
+      "green_0_5": true,
+      "band_5": true
+    },
+    {
+      "wave": "validation_qm",
+      "name": "alpha_FSOT",
+      "formula": "ln(\u03c0)/(e\u00b7\u03c6\u00b9\u00b3)",
+      "computed": 0.0008082937414140405,
+      "measured": 0.000808,
+      "rel_err_pct": 0.03635413540104757,
+      "green_0_5": true,
+      "band_5": true
+    },
+    {
+      "wave": "validation_qm",
+      "name": "Proton_radius",
+      "formula": "exact",
+      "computed": 0.8413,
+      "measured": 0.8413,
+      "rel_err_pct": 0.0,
+      "green_0_5": true,
+      "band_5": true
+    },
+    {
+      "wave": "validation_qm",
+      "name": "sin2_theta_W",
+      "formula": "(\u03b3 \u2212 1/\u03c0\u00b2)/\u03c6^(3/2)",
+      "computed": 0.23122202914793052,
+      "measured": 0.23122,
+      "rel_err_pct": 0.0008775832239925928,
+      "green_0_5": true,
+      "band_5": true
+    },
+    {
+      "wave": "validation_qm",
+      "name": "M_Z/M_W",
+      "formula": "(\u221a\u03c0 \u2212 \u03b3\u00b3)/(1/\u221ae + 1/\u221a\u03c6)",
+      "computed": 1.1346009294087023,
+      "measured": 1.134,
+      "rel_err_pct": 0.052992011349416016,
+      "green_0_5": true,
+      "band_5": true
+    }
+  ],
+  "note": "Pin seed formulas vs measured constants. Not a claim that FSOT replaces the Standard Model Lagrangian."
+}

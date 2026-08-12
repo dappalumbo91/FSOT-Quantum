@@ -1,0 +1,154 @@
+{
+  "panel": "fsot_field_opt",
+  "instances": [
+    {
+      "name": "ising_cycle6_ferro",
+      "kind": "ising",
+      "n": 6,
+      "E_field": -6,
+      "E_exact": -6,
+      "rel_pct": 0.0,
+      "exact": true,
+      "ok": true,
+      "operators": "collapse+consensus+domain_S+D_eff_depth"
+    },
+    {
+      "name": "ising_cycle8_ferro",
+      "kind": "ising",
+      "n": 8,
+      "E_field": -8,
+      "E_exact": -8,
+      "rel_pct": 0.0,
+      "exact": true,
+      "ok": true,
+      "operators": "collapse+consensus+domain_S+D_eff_depth"
+    },
+    {
+      "name": "ising_cycle7_antiferro",
+      "kind": "ising",
+      "n": 7,
+      "E_field": -5,
+      "E_exact": -5,
+      "rel_pct": 0.0,
+      "exact": true,
+      "ok": true,
+      "operators": "collapse+consensus+domain_S+D_eff_depth"
+    },
+    {
+      "name": "ising_path10_ferro",
+      "kind": "ising",
+      "n": 10,
+      "E_field": -9,
+      "E_exact": -9,
+      "rel_pct": 0.0,
+      "exact": true,
+      "ok": true,
+      "operators": "collapse+consensus+domain_S+D_eff_depth"
+    },
+    {
+      "name": "ising_K5_ferro",
+      "kind": "ising",
+      "n": 5,
+      "E_field": -10,
+      "E_exact": -10,
+      "rel_pct": 0.0,
+      "exact": true,
+      "ok": true,
+      "operators": "collapse+consensus+domain_S+D_eff_depth"
+    },
+    {
+      "name": "ising_K4_mixed",
+      "kind": "ising",
+      "n": 4,
+      "E_field": -3,
+      "E_exact": -3,
+      "rel_pct": 0.0,
+      "exact": true,
+      "ok": true,
+      "operators": "collapse+consensus+domain_S+D_eff_depth"
+    },
+    {
+      "name": "ising_ladder6",
+      "kind": "ising",
+      "n": 6,
+      "E_field": -7,
+      "E_exact": -7,
+      "rel_pct": 0.0,
+      "exact": true,
+      "ok": true,
+      "operators": "collapse+consensus+domain_S+D_eff_depth"
+    },
+    {
+      "name": "maxcut_cycle6",
+      "kind": "maxcut",
+      "n": 6,
+      "cut_field": 6,
+      "cut_exact": 6,
+      "rel_pct": 0.0,
+      "exact": true,
+      "ok": true,
+      "operators": "collapse+consensus+domain_S+D_eff_depth"
+    },
+    {
+      "name": "maxcut_cycle8",
+      "kind": "maxcut",
+      "n": 8,
+      "cut_field": 8,
+      "cut_exact": 8,
+      "rel_pct": 0.0,
+      "exact": true,
+      "ok": true,
+      "operators": "collapse+consensus+domain_S+D_eff_depth"
+    },
+    {
+      "name": "maxcut_K5",
+      "kind": "maxcut",
+      "n": 5,
+      "cut_field": 6,
+      "cut_exact": 6,
+      "rel_pct": 0.0,
+      "exact": true,
+      "ok": true,
+      "operators": "collapse+consensus+domain_S+D_eff_depth"
+    },
+    {
+      "name": "maxcut_path12",
+      "kind": "maxcut",
+      "n": 12,
+      "cut_field": 11,
+      "cut_exact": 11,
+      "rel_pct": 0.0,
+      "exact": true,
+      "ok": true,
+      "operators": "collapse+consensus+domain_S+D_eff_depth"
+    },
+    {
+      "name": "maxcut_utility",
+      "kind": "maxcut",
+      "n": 6,
+      "cut_field": 6,
+      "cut_exact": 6,
+      "rel_pct": 0.0,
+      "exact": true,
+      "ok": true,
+      "operators": "collapse+consensus+domain_S+D_eff_depth"
+    },
+    {
+      "name": "ising_grid3x3",
+      "kind": "ising",
+      "n": 9,
+      "E_field": -10,
+      "E_exact": -10,
+      "rel_pct": 0.0,
+      "exact": true,
+      "ok": true,
+      "operators": "collapse+consensus+domain_S+D_eff_depth"
+    }
+  ],
+  "pass_count": 13,
+  "total": 13,
+  "exact_hits": 13,
+  "exact_total": 13,
+  "overall_ok": true,
+  "note": "FSOT field law only (collapse \u0398, consensus, domain S). Not unlabeled 1-flip theater. Gate: exact or \u22645% vs enum n\u226412."
+}

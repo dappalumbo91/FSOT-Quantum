@@ -1,0 +1,151 @@
+{
+  "timestamp": "2026-08-12T23:17:03.667551+00:00",
+  "suite": "field_of_use_honest",
+  "pin": "D1D38A",
+  "thesis": "Apply FSOT mathematics (\u0398 collapse, consensus, D_eff / S, pin formulas) to QM/QC *jobs*. Label theater. Do not sell 2^n bridges as the path.",
+  "job_classification": [
+    {
+      "job": "chemistry observables",
+      "industry": "quantum chemistry / FCI sales pitch",
+      "fsot_math": "pin seed formulas + formula-family fold (\u03c0\u2212\u03b8_s)",
+      "class": "applied_fsot",
+      "not": "FCI / CASSCF"
+    },
+    {
+      "job": "QM / SM constants (\u03b1, Weinberg, mass ratios)",
+      "industry": "precision QM / particle data",
+      "fsot_math": "vendor pin expressions vs measured",
+      "class": "applied_fsot",
+      "not": "replacing the Standard Model"
+    },
+    {
+      "job": "marked search",
+      "industry": "Grover",
+      "fsot_math": "collapse through \u0398 on oracle field",
+      "class": "applied_fsot",
+      "not": "O(\u221aN) query-complexity theorem"
+    },
+    {
+      "job": "Ising / MaxCut",
+      "industry": "QAOA / annealer",
+      "fsot_math": "h_i=\u03a3 J s_j \u2192 collapse + consensus + domain S",
+      "class": "applied_fsot",
+      "not": "QAOA circuit depth equivalence"
+    },
+    {
+      "job": "period / factor (tiny N)",
+      "industry": "Shor",
+      "fsot_math": "modular order + collapse over candidate scores",
+      "class": "applied_fsot",
+      "not": "RSA-scale / Hilbert modular-exp"
+    },
+    {
+      "job": "phase class",
+      "industry": "QPE",
+      "fsot_math": "S(D_eff) emergence/damping",
+      "class": "applied_fsot",
+      "not": "eigenphase of an arbitrary unitary"
+    },
+    {
+      "job": "bit-reversal 'QFT-role'",
+      "industry": "QFT",
+      "fsot_math": "none \u2014 bit reverse is not a QFT",
+      "class": "theater_do_not_claim",
+      "not": "textbook QFT"
+    },
+    {
+      "job": "Hilbert H/CX/QFT fragments",
+      "industry": "circuit sim",
+      "fsot_math": "seed \u03c0 angles only; still 2^n amps",
+      "class": "optional_bridge",
+      "not": "the scaling law"
+    }
+  ],
+  "panels": {
+    "field_opt": {
+      "ok": true,
+      "pass": "13/13",
+      "exact": "13/13"
+    },
+    "qm_waves": {
+      "ok": true,
+      "green": "14/14",
+      "band5": "14/14",
+      "median_pct": 0.002173459608308579,
+      "worst": [
+        {
+          "wave": "validation_qm",
+          "name": "M_Z/M_W",
+          "formula": "(\u221a\u03c0 \u2212 \u03b3\u00b3)/(1/\u221ae + 1/\u221a\u03c6)",
+          "computed": 1.1346009294087023,
+          "measured": 1.134,
+          "rel_err_pct": 0.052992011349416016,
+          "green_0_5": true,
+          "band_5": true
+        },
+        {
+          "wave": "validation_qm",
+          "name": "alpha_FSOT",
+          "formula": "ln(\u03c0)/(e\u00b7\u03c6\u00b9\u00b3)",
+          "computed": 0.0008082937414140405,
+          "measured": 0.000808,
+          "rel_err_pct": 0.03635413540104757,
+          "green_0_5": true,
+          "band_5": true
+        },
+        {
+          "wave": "wave2_qm_sm",
+          "name": "sin2_theta_W",
+          "formula": "\u221ae\u00b7P_new\u00b7\u03b7_eff",
+          "computed": 0.23118997459960097,
+          "measured": 0.23122,
+          "rel_err_pct": 0.01298564155308206,
+          "green_0_5": true,
+          "band_5": true
+        }
+      ]
+    },
+    "chemistry": {
+      "ok": true,
+      "green_0_5": "68/68"
+    },
+    "gset": {
+      "ok": true,
+      "status": "official",
+      "pass": "1/1"
+    },
+    "search": {
+      "ok": true,
+      "n": 10000
+    },
+    "period": {
+      "ok": true,
+      "pass": "3/3"
+    },
+    "factor": {
+      "ok": true,
+      "pass": "4/4"
+    },
+    "S_QM": 0.9555063001027194,
+    "S_QC": -0.14767310363368633
+  },
+  "jobs_ok": {
+    "field_opt": true,
+    "qm_waves": true,
+    "chemistry_fold": true,
+    "gset_official": true,
+    "search_collapse": true,
+    "period_fold": true,
+    "factor_fold": true,
+    "domain_signs": true
+  },
+  "overall_ok": true,
+  "wall_seconds": 1.3735939000034705,
+  "still_not_claimed": [
+    "Hilbert-universal competitor to arbitrary QC circuits",
+    "bit-reversal as QFT",
+    "RSA-scale Shor",
+    "FCI chemistry",
+    "device-scale FTQC"
+  ]
+}

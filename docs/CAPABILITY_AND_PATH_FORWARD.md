@@ -66,6 +66,7 @@ Regenerate: `python -m fsot_quantum.capability_suite`
 | **Fold v4** (mp scheduler, teleport, Gset-style, formal cost) | green | `python -m fsot_quantum.fold_v4` |
 | **Fold v5** (Gset loader, multi-GPU shards, adder/QFT-role, QEMU) | green | `python -m fsot_quantum.fold_v5` |
 | **Fold v6** (official G1 residual, 4-bit/modmul, GPU occupancy) | green | `python -m fsot_quantum.fold_v6` |
+| **Field of use** (collapse/consensus/S on QM/QC jobs; theater labeled) | green | `python -m fsot_quantum.field_of_use` |
 
 ## Scaling law (important)
 
@@ -80,10 +81,10 @@ See `docs/FOLD_NOT_HILBERT.md`.
 
 ## Next builds
 
-1. More official Gset files (G11–G54) under the same published-cut 5% band
-1. Second physical GPU → live multi-device speedup (API already shards)
-1. Full arXiv pipeline on `papers/02-fold-not-hilbert/` if you want a submission package
-1. Wider modular multiply (Shor-adjacent) still as folds
+1. More official Gset files only with cited champion cuts (no invented BKS)
+1. Keep field-of-use class=`theater_do_not_claim` out of competitive ledgers
+1. Second physical GPU if/when hardware exists
+1. arXiv package only if you want a submission — note already exists
 
 ## How to run
 
