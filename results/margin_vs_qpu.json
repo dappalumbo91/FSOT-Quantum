@@ -1,0 +1,211 @@
+{
+  "timestamp": "2026-08-12T23:28:05.788480+00:00",
+  "suite": "margin_vs_qpu",
+  "pin": "D1D38A",
+  "overall_ok": true,
+  "wall_seconds": 1.400653600001533,
+  "live": {
+    "chem_green": "68/68",
+    "chem_median_pct": 0.02024340075118086,
+    "qm_green": "14/14",
+    "qm_median_pct": 0.002173459608308579,
+    "qm_worst": {
+      "wave": "validation_qm",
+      "name": "M_Z/M_W",
+      "formula": "(\u221a\u03c0 \u2212 \u03b3\u00b3)/(1/\u221ae + 1/\u221a\u03c6)",
+      "computed": 1.1346009294087023,
+      "measured": 1.134,
+      "rel_err_pct": 0.052992011349416016,
+      "green_0_5": true,
+      "band_5": true
+    },
+    "field_opt_exact": "13/13",
+    "g1": {
+      "name": "G1.txt",
+      "path": "C:\\Users\\damia\\Desktop\\fsot quantum\\data\\gset\\G1.txt",
+      "official": true,
+      "n": 800,
+      "n_edges": 19176,
+      "cut_fold": 11397,
+      "ratio_lb": 0.5943366708385481,
+      "ratio_floor_sparse": 0.6180339887498948,
+      "published_cut": 11624,
+      "rel_err_vs_published_pct": 1.952856159669649,
+      "ok": true,
+      "hilbert_amps_if_QAOA": null,
+      "fold_budget_formal": 16827,
+      "cost": {
+        "nominal_n": 32,
+        "hilbert_amplitudes": 4294967296,
+        "hilbert_note": "C^{2^n} statevector entries (brute sim bottleneck)",
+        "fold_probe_budget": 355570,
+        "fold_depth": 3,
+        "fold_D_eff_cost_proxy": 0.7097596350416266,
+        "complexity_weight_phi": 0.6180339887498949,
+        "ratio_hilbert_over_fold": 12079.10480636724,
+        "winner_when": "fold when structure admits closed form / poly probes"
+      }
+    },
+    "S_QM": 0.9555063001027194,
+    "S_QC": -0.14767310363368633
+  },
+  "compare": [
+    {
+      "job": "two_qubit_gate",
+      "qpu_error": "0.1\u20131% per gate (fidelity ~99.0\u201399.9%)",
+      "fsot_margin": "\u0398 = C_eff\u00b7P_var \u2248 0.917 (not a % gate error)",
+      "same_object": false,
+      "cite": "device data sheets / IBM Quantum / Google Sycamore-class papers 2019\u20132025"
+    },
+    {
+      "job": "readout",
+      "qpu_error": "~0.5\u20135% typical superconducting; lower on some ions",
+      "fsot_margin": "0% RNG readout; wrong *domain* is the residual source",
+      "same_object": false,
+      "cite": "IBM Quantum backend properties (typical range)"
+    },
+    {
+      "job": "VQE_small_molecule",
+      "qpu_error": "Often misses chemical accuracy (1.6 mHa) without heavy mitigation; rare demos claim <1.6 mHa on toy geometries",
+      "fsot_margin": "chemistry fold 68/68 @0.5% (median 0.0202%)",
+      "same_object": "partial \u2014 both hired as 'chemistry answers'; objects differ",
+      "cite": "Kandala et al. Nature 2017; Qunova 2024 chemical-accuracy claims on commercial NISQ"
+    },
+    {
+      "job": "QAOA_MaxCut",
+      "qpu_error": "Approximation ratio often ~0.7\u20130.9 of optimum; noise + shallow p",
+      "fsot_margin": "field opt exact 13/13; G1 rel vs published BKS 1.952856159669649%",
+      "same_object": true,
+      "cite": "Farhi et al.; IBM QAOA hardware papers (typical NISQ ratios)"
+    },
+    {
+      "job": "Shor_tiny",
+      "qpu_error": "Demo success; not a scalable period-finding machine",
+      "fsot_margin": "period/factor exact on ledgered tiny N (not RSA)",
+      "same_object": true,
+      "cite": "Vandersypen et al. Nature 2001; later photonic/ion compiled Shor-15"
+    },
+    {
+      "job": "Bell_GHZ",
+      "qpu_error": "Typically a few % below ideal fidelity",
+      "fsot_margin": "sim F=1 is not a hardware fidelity \u2014 do not advertise as beating IBM Bell",
+      "same_object": false,
+      "cite": "standard device characterization"
+    },
+    {
+      "job": "surface_code",
+      "qpu_error": "Logical error still large at small distance; physical ~1e-3",
+      "fsot_margin": "correctable-t exact on the abstract code; not a device threshold",
+      "same_object": false,
+      "cite": "Google quantum error-correction papers (Sycamore / Willow class)"
+    }
+  ],
+  "refine": [
+    {
+      "target": "Gset G1 MaxCut",
+      "current_margin_pct": 1.952856159669649,
+      "qpu_typical": "NISQ QAOA rarely reports 800-vertex hardware cuts",
+      "fsot_next": "Keep collapse+consensus field; more \u03c6-starts from seeds only. Do not add a free temperature or learning rate.",
+      "domain_route": "Quantum_Computing (compute) + Condensed_Matter (graph pack)"
+    },
+    {
+      "target": "QM pin M_Z/M_W",
+      "current_margin_pct": 0.052992011349416016,
+      "qpu_typical": "QPUs do not compute \u03b1 or M_Z/M_W; that is SM/data",
+      "fsot_next": "If residual grows, retune *route* (Particle / High_Energy / Atomic) not a coefficient. Default stays pin formula.",
+      "domain_route": "Particle_Physics D=5 / High_Energy D=7 / Atomic D=7"
+    },
+    {
+      "target": "add field jobs QPUs are actually paid for",
+      "current_margin_pct": null,
+      "qpu_typical": "sampling, small VQE, small QAOA, characterization",
+      "fsot_next": "More pin-formula QM/QC atlas rows from FSOT-2.1-Lean (Quantum_Information 21 obs, QC gap-fill 177, QM gap-fill 50) ported as *formulas*, not as 2^n circuits.",
+      "domain_route": "import Lean gap-fill observables; still zero free params"
+    }
+  ],
+  "domain_probe": {
+    "ok": true,
+    "physics_reading": "QM D=6 observed emergence (S>0) is the measurement / spin-law interface. QC D=11 unobserved damping (S<0) is the compute substrate before an observer hit. If that reading is wrong, the route table is what to correct \u2014 not a fit.",
+    "n_domains": 8
+  },
+  "lean_atlas_ready_to_port": {
+    "Quantum_Mechanics_gap_fill": "50 records, median% ~9.5e-5",
+    "Quantum_Computing_gap_fill": "177 records, median% ~3.0e-4",
+    "Quantum_Information": "21 records, median% 0",
+    "Quantum_Optics_gap_fill": "50 records, median% ~9.5e-5",
+    "source": "FSOT-2.1-Lean verified solves inventory"
+  },
+  "question_for_author": "QC domain is pin-unobserved and S<0 (damping). Reading used here: compute substrate sits *before* observer collapse; QM D=6 observed S>0 is the measurement law. If the fluid picture is different (e.g. QC damping is decoherence-class on purpose), say how the system should interact and we will route that way.",
+  "qpu_field": [
+    {
+      "job": "two_qubit_gate",
+      "qpu_what": "Physical 2q gate fidelity on IBM/Google/IonQ NISQ",
+      "qpu_error": "0.1\u20131% per gate (fidelity ~99.0\u201399.9%)",
+      "qpu_cite": "device data sheets / IBM Quantum / Google Sycamore-class papers 2019\u20132025",
+      "fsot_object": "no physical gate; collapse \u0398 is the analog of 'error floor' on a field",
+      "fsot_margin": "\u0398 = C_eff\u00b7P_var \u2248 0.917 (not a % gate error)",
+      "apples": false,
+      "note": "Do not convert \u0398 into a fake IBM-style gate fidelity."
+    },
+    {
+      "job": "readout",
+      "qpu_what": "Measurement assignment error",
+      "qpu_error": "~0.5\u20135% typical superconducting; lower on some ions",
+      "qpu_cite": "IBM Quantum backend properties (typical range)",
+      "fsot_object": "superposed (0) resolves with sign(S(domain)) \u2014 deterministic",
+      "fsot_margin": "0% RNG readout; wrong *domain* is the residual source",
+      "apples": false,
+      "note": "Different mechanism. Refinement = correct D_eff route, not a readout matrix."
+    },
+    {
+      "job": "VQE_small_molecule",
+      "qpu_what": "Ground-state energy of H2/LiH/BeH2 on NISQ",
+      "qpu_error": "Often misses chemical accuracy (1.6 mHa) without heavy mitigation; rare demos claim <1.6 mHa on toy geometries",
+      "qpu_cite": "Kandala et al. Nature 2017; Qunova 2024 chemical-accuracy claims on commercial NISQ",
+      "fsot_object": "pin chemistry observables (not the electronic Hamiltonian FCI)",
+      "fsot_margin": "chemistry fold 68/68 @0.5% (median 0.0202%)",
+      "apples": "partial \u2014 both hired as 'chemistry answers'; objects differ",
+      "note": "Chemical accuracy \u2248 1.6 mHa. Our 0.5% band is relative error on pin formulas."
+    },
+    {
+      "job": "QAOA_MaxCut",
+      "qpu_what": "Small MaxCut / Ising on 4\u201320 noisy qubits",
+      "qpu_error": "Approximation ratio often ~0.7\u20130.9 of optimum; noise + shallow p",
+      "qpu_cite": "Farhi et al.; IBM QAOA hardware papers (typical NISQ ratios)",
+      "fsot_object": "collapse+consensus field on the graph (exact enum n\u226412; G1 vs published BKS)",
+      "fsot_margin": "field opt exact 13/13; G1 rel vs published BKS 1.952856159669649%",
+      "apples": true,
+      "note": "Same job class: cut / energy. We do not run a noisy p-layer QAOA circuit."
+    },
+    {
+      "job": "Shor_tiny",
+      "qpu_what": "Factor 15 (and a few other tiny N) with compiled circuits",
+      "qpu_error": "Demo success; not a scalable period-finding machine",
+      "qpu_cite": "Vandersypen et al. Nature 2001; later photonic/ion compiled Shor-15",
+      "fsot_object": "modular order fold + GPU statevector N\u226451",
+      "fsot_margin": "period/factor exact on ledgered tiny N (not RSA)",
+      "apples": true,
+      "note": "Both are tiny-N. Neither is RSA. Exact recovery is the margin (0 or fail)."
+    },
+    {
+      "job": "Bell_GHZ",
+      "qpu_what": "Few-qubit Bell/GHZ on hardware after mitigation",
+      "qpu_error": "Typically a few % below ideal fidelity",
+      "qpu_cite": "standard device characterization",
+      "fsot_object": "optional Hilbert bridge Bell F (sim) + consensus Bell analog",
+      "fsot_margin": "sim F=1 is not a hardware fidelity \u2014 do not advertise as beating IBM Bell",
+      "apples": false,
+      "note": "Simulated unitaries have zero shot noise. That is not a QPU win."
+    },
+    {
+      "job": "surface_code",
+      "qpu_what": "Below-threshold logical-qubit demos (small d)",
+      "qpu_error": "Logical error still large at small distance; physical ~1e-3",
+      "qpu_cite": "Google quantum error-correction papers (Sycamore / Willow class)",
+      "fsot_object": "planar d=3/5/7 decode of injected t errors",
+      "fsot_margin": "correctable-t exact on the abstract code; not a device threshold",
+      "apples": false,
+      "note": "We are not claiming a fridge-threshold experiment."
+    }
+  ]
+}

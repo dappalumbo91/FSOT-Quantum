@@ -67,6 +67,7 @@ Regenerate: `python -m fsot_quantum.capability_suite`
 | **Fold v5** (Gset loader, multi-GPU shards, adder/QFT-role, QEMU) | green | `python -m fsot_quantum.fold_v5` |
 | **Fold v6** (official G1 residual, 4-bit/modmul, GPU occupancy) | green | `python -m fsot_quantum.fold_v6` |
 | **Field of use** (collapse/consensus/S on QM/QC jobs; theater labeled) | green | `python -m fsot_quantum.field_of_use` |
+| **Margin vs QPU** (job residuals vs published NISQ) | green | `python -m fsot_quantum.margin_vs_qpu` |
 
 ## Scaling law (important)
 
@@ -81,10 +82,10 @@ See `docs/FOLD_NOT_HILBERT.md`.
 
 ## Next builds
 
-1. More official Gset files only with cited champion cuts (no invented BKS)
-1. Keep field-of-use class=`theater_do_not_claim` out of competitive ledgers
-1. Second physical GPU if/when hardware exists
-1. arXiv package only if you want a submission — note already exists
+1. Port FSOT-2.1-Lean QM/QC gap-fill formulas (50+177+21+50 rows) as pin observables
+1. G1 MaxCut: more seed φ-starts + consensus field (target << 1.95% vs BKS 11624)
+1. Author confirm: QC damping (S<0, unobserved) = pre-observer compute substrate?
+1. More official Gset only with cited champion cuts
 
 ## How to run
 

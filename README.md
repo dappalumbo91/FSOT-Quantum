@@ -79,6 +79,9 @@ python -m fsot_quantum.fold_v6
 # Field of use (honest): collapse/consensus/D_eff on QM/QC jobs — theater labeled
 python -m fsot_quantum.field_of_use
 
+# Margin vs published QPU field results + D_eff refine probe
+python -m fsot_quantum.margin_vs_qpu
+
 # QAOA exact column (must be 11/11)
 python -c "from fsot_quantum.qaoa_fsot import run_qaoa_panel; r=run_qaoa_panel(); print(r['metrics_summary']); assert r['overall_ok']"
 
@@ -116,6 +119,7 @@ cd zig; zig build run; cd ..
 | Fold v5 (leftovers + QEMU + paper note) | `results/FOLD_V5.md` |
 | Fold v6 (official G1 + wider arith) | `results/FOLD_V6.md` |
 | Field of use (honest FSOT jobs) | `results/FIELD_OF_USE.md` |
+| Margin vs QPU field results | `results/MARGIN_VS_QPU.md` |
 | Skeptic kit | `results/SKEPTIC_KIT.md` |
 
 Device path is **exactly** FSOT-GPU: torch CUDA buffers when available.

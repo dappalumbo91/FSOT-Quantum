@@ -44,6 +44,31 @@ def _build() -> dict[str, DomainConfig]:
         "Quantum_Gravity": DomainConfig(
             "Quantum_Gravity", 22, 0, 1.0, 1.0, False, 1.0 / (s.phi**2)
         ),
+        # Adjacent pin-table domains (vendor §5) for lawful residual routing
+        "Atomic_Physics": DomainConfig(
+            "Atomic_Physics", 7, 0, 0.85, 1.0, True, s.e / s.pi
+        ),
+        "Physical_Chemistry": DomainConfig(
+            "Physical_Chemistry", 8, 0, 0.5, 1.0, True, s.e / s.pi
+        ),
+        "Chemistry": DomainConfig(
+            "Chemistry", 8, 0, 0.6, 1.0, True, s.e / s.pi
+        ),
+        "Electromagnetism": DomainConfig(
+            "Electromagnetism", 9, 0, 0.7, 1.0, True, s.e / s.pi
+        ),
+        "Molecular_Chemistry": DomainConfig(
+            "Molecular_Chemistry", 9, 0, 0.5, 1.0, True, math.log(s.pi) / s.e
+        ),
+        "High_Energy_Physics": DomainConfig(
+            "High_Energy_Physics", 7, 1, 0.95, 1.0, True, s.alpha / math.sqrt(2.0)
+        ),
+        "Nuclear_Physics": DomainConfig(
+            "Nuclear_Physics", 15, 1, 1.0, 1.0, True, s.alpha / s.phi
+        ),
+        "Condensed_Matter": DomainConfig(
+            "Condensed_Matter", 14, 0, 0.5, 1.0, True, s.a_bleed / s.e
+        ),
     }
 
 
