@@ -1,0 +1,110 @@
+{
+  "timestamp": "2026-08-12T23:40:16.142505+00:00",
+  "suite": "medium_next",
+  "pin": "D1D38A",
+  "thesis": "Quantum side = water body of the medium. Three strings T1/T2/T3 strum (T3 bleed). Observation (C_factor) snaps collapse \u0398. Entanglement/QI jobs replayed from FSOT-2.1-Lean material records.",
+  "medium": {
+    "ok": true,
+    "S_match": true,
+    "chsh": {
+      "chsh_classical": 2.0,
+      "chsh_tsirelson": 2.8284271247461903,
+      "bell_margin": 0.8284271247461903,
+      "ok": true
+    },
+    "observe_agree": true,
+    "strum_ok": true,
+    "T1_QM": 1.2738149448128522,
+    "T3_QM": 1.9990920171588208e-17,
+    "T1_QC": -1.3514171596284354,
+    "T3_QC": 2.271226302200873e-17
+  },
+  "entangle_qi": {
+    "ok": true,
+    "replayed": 40,
+    "green": "40/40",
+    "band5": "40/40",
+    "skipped_broken": 2,
+    "worst": [
+      {
+        "source": "quantum_mechanics_entanglement_depth_panel_benchmark.json",
+        "name": "e519765ed2390456",
+        "domain": "Particle_Physics",
+        "formula_branch": null,
+        "computed": 7.901075596837236,
+        "measured": 7.92,
+        "rel_err_pct": 0.23894448437833055,
+        "green_0_5": true,
+        "band_5": true,
+        "skip": false
+      },
+      {
+        "source": "quantum_information_benchmark.json",
+        "name": "e519765ed2390456",
+        "domain": "Particle_Physics",
+        "formula_branch": null,
+        "computed": 7.901075596837236,
+        "measured": 7.92,
+        "rel_err_pct": 0.23894448437833055,
+        "green_0_5": true,
+        "band_5": true,
+        "skip": false
+      },
+      {
+        "source": "quantum_mechanics_entanglement_depth_panel_benchmark.json",
+        "name": "fine_structure_inverse",
+        "domain": "Atomic_Physics",
+        "formula_branch": null,
+        "computed": 137.136833,
+        "measured": 137.035999084,
+        "rel_err_pct": 0.07358206359935407,
+        "green_0_5": true,
+        "band_5": true,
+        "skip": false
+      },
+      {
+        "source": "quantum_mechanics_entanglement_depth_panel_benchmark.json",
+        "name": "bell_inequality_margin",
+        "domain": "Quantum_Optics",
+        "formula_branch": null,
+        "computed": 0.414383,
+        "measured": 0.414214,
+        "rel_err_pct": 0.040800166097711504,
+        "green_0_5": true,
+        "band_5": true,
+        "skip": false
+      },
+      {
+        "source": "quantum_mechanics_entanglement_depth_panel_benchmark.json",
+        "name": "chsh_tsirelson_bound",
+        "domain": "Quantum_Optics",
+        "formula_branch": null,
+        "computed": 2.829581,
+        "measured": 2.828427,
+        "rel_err_pct": 0.04080006307393118,
+        "green_0_5": true,
+        "band_5": true,
+        "skip": false
+      },
+      {
+        "source": "quantum_mechanics_entanglement_depth_panel_benchmark.json",
+        "name": "chsh_classical_bound",
+        "domain": "Quantum_Optics",
+        "formula_branch": null,
+        "computed": 2.000816,
+        "measured": 2.0,
+        "rel_err_pct": 0.040799999999996395,
+        "green_0_5": true,
+        "band_5": true,
+        "skip": false
+      }
+    ]
+  },
+  "bleed_still": {
+    "dS_QM": -0.021941372207572085,
+    "dS_QC": 0.005297980881030229
+  },
+  "overall_ok": true,
+  "wall_seconds": 1.4311470000029658,
+  "plain": "The water is the continuum. The three strings are T1 (look), T2 (body), T3 (strum). Looking turns the observer valve on QM. Strum is the bleed vibration. Snap is collapse. Bonds agreeing after a look is consensus. We did not add a new knob."
+}

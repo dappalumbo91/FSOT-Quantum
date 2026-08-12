@@ -1,0 +1,64 @@
+{
+  "panel": "medium_three_strings",
+  "picture": {
+    "water": "quantum continuum / bonds connect and let go",
+    "three_strings": "T1 observe \u00b7 T2 body \u00b7 T3 strum (acoustic bleed)",
+    "look": "observed=True on QM (C_factor on T1)",
+    "snap": "collapse \u0398 = C_eff\u00b7P_var"
+  },
+  "strings_QM": {
+    "T1_observe_string": 1.2738149448128522,
+    "T2_body_string": 1.0,
+    "T3_strum_string": 1.9990920171588208e-17,
+    "S": 0.9555063001027194,
+    "K": 0.4202216641606967,
+    "Theta": 0.9174663774653723,
+    "observed": 1.0,
+    "D_eff": 6
+  },
+  "strings_QC": {
+    "T1_observe_string": -1.3514171596284354,
+    "T2_body_string": 1.0,
+    "T3_strum_string": 2.271226302200873e-17,
+    "S": -0.14767310363368633,
+    "K": 0.4202216641606967,
+    "Theta": 0.9174663774653723,
+    "observed": 0.0,
+    "D_eff": 11
+  },
+  "S_match_domain_scalar": true,
+  "chsh": {
+    "chsh_classical": 2.0,
+    "chsh_tsirelson": 2.8284271247461903,
+    "bell_margin": 0.8284271247461903,
+    "ok": true
+  },
+  "observe_pair": {
+    "after_H": [
+      0,
+      0
+    ],
+    "consensus": 0,
+    "after_look": [
+      1,
+      1
+    ],
+    "agree": true,
+    "S_QM": 0.9555063001027194,
+    "collapse_codes": [
+      1,
+      1
+    ],
+    "ok": true
+  },
+  "strum": {
+    "ok": true,
+    "device": "cuda",
+    "norm": 20.665314259028236,
+    "n_up": 73,
+    "n_down": 74,
+    "n_super": 365
+  },
+  "overall_ok": true,
+  "note": "Naming layer on the existing engine. No new coefficients."
+}

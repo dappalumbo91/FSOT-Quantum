@@ -69,6 +69,7 @@ Regenerate: `python -m fsot_quantum.capability_suite`
 | **Field of use** (collapse/consensus/S on QM/QC jobs; theater labeled) | green | `python -m fsot_quantum.field_of_use` |
 | **Margin vs QPU** (job residuals vs published NISQ) | green | `python -m fsot_quantum.margin_vs_qpu` |
 | **Bleed refine** (Lean κ coupling + 569 atlas records ingested) | green | `python -m fsot_quantum.bleed_refine` |
+| **Medium next** (T1/T2/T3 strings + Lean entanglement/QI 40/40) | green | `python -m fsot_quantum.medium_next` |
 
 ## Scaling law (important)
 

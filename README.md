@@ -85,6 +85,9 @@ python -m fsot_quantum.margin_vs_qpu
 # Quantum-sector bleed (Lean connective κ) + ingest 2.1-Lean atlas headlines
 python -m fsot_quantum.bleed_refine
 
+# Water / three-string / look-snap medium + Lean entanglement/QI jobs
+python -m fsot_quantum.medium_next
+
 # QAOA exact column (must be 11/11)
 python -c "from fsot_quantum.qaoa_fsot import run_qaoa_panel; r=run_qaoa_panel(); print(r['metrics_summary']); assert r['overall_ok']"
 
@@ -124,6 +127,7 @@ cd zig; zig build run; cd ..
 | Field of use (honest FSOT jobs) | `results/FIELD_OF_USE.md` |
 | Margin vs QPU field results | `results/MARGIN_VS_QPU.md` |
 | Bleed refine (full Lean fabric) | `results/BLEED_REFINE.md` |
+| Medium / three-string / QI jobs | `results/MEDIUM_NEXT.md` |
 | Skeptic kit | `results/SKEPTIC_KIT.md` |
 
 Device path is **exactly** FSOT-GPU: torch CUDA buffers when available.
