@@ -1,0 +1,9 @@
+{
+  "ok": true,
+  "status": "pass",
+  "exit_code": 0,
+  "fold_pass": true,
+  "cnotfold_pass": true,
+  "kernel_pass": true,
+  "serial_tail": "FSOT_QUANTUM_KERNEL boot\npin D1D38A trinary pathway\nFPU ok\ntest:pack...\nFSOT pack PASS\ntest:collapse...\nFSOT collapse PASS\ntest:gates...\nFSOT gates PASS\ntest:bell...\nFSOT bell PASS\ntest:bv...\nFSOT bv PASS\ntest:ising4...\nFSOT ising4 PASS\ntest:fold...\nFSOT fold PASS\ntest:cnotfold...\nFSOT cnotfold PASS\ntest:selftest...\nFSOT_QUANTUM_KERNEL PASS\n"
+}

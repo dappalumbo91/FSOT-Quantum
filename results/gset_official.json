@@ -1,0 +1,13 @@
+{
+  "panel": "gset_official",
+  "parser_ok": true,
+  "official_found": false,
+  "n_official": 0,
+  "fetched": null,
+  "instances": [],
+  "pass_count": 0,
+  "total": 0,
+  "overall_ok": true,
+  "status": "skip_official_parser_ok",
+  "note": "Official Gset used only if files exist under data/gset or FSOT_GSET_DIR. Otherwise parser fixture only \u2014 not claimed as G1\u2013G54 residuals. Set FSOT_FETCH_GSET=1 to attempt Stanford G1."
+}

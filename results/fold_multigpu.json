@@ -1,0 +1,74 @@
+{
+  "panel": "fold_multigpu",
+  "inventory": {
+    "n_gpu": 1,
+    "names": [
+      "NVIDIA GeForce RTX 5070"
+    ],
+    "prefer": "cuda",
+    "multi_gpu_available": false
+  },
+  "shards": [
+    {
+      "job": "batch_search_fold",
+      "batch": 512,
+      "n_items": 2048,
+      "ok": true,
+      "seconds": 0.014558899994881358,
+      "instances_per_sec": 35167.49206190096,
+      "device": "cuda:0",
+      "method": "gpu_oracle_field_collapse",
+      "seconds_wall": 0.049830399999336805,
+      "shard": 0,
+      "device_id": 0
+    },
+    {
+      "job": "batch_search_fold",
+      "batch": 256,
+      "n_items": 4096,
+      "ok": true,
+      "seconds": 0.0002918999962275848,
+      "instances_per_sec": 877012.686908037,
+      "device": "cuda:0",
+      "method": "gpu_oracle_field_collapse",
+      "seconds_wall": 0.0010111999945365824,
+      "shard": 1,
+      "device_id": 0
+    },
+    {
+      "job": "batch_ising_fold",
+      "n": 24,
+      "batch": 256,
+      "n_edges": 24,
+      "ok": true,
+      "mean_energy": -15.921875,
+      "min_energy": -24.0,
+      "seconds": 0.03845549999823561,
+      "instances_per_sec": 6657.04515639494,
+      "device": "cuda:0",
+      "seconds_wall": 0.06168690000049537,
+      "shard": 2,
+      "device_id": 0
+    },
+    {
+      "job": "batch_ising_fold",
+      "n": 32,
+      "batch": 128,
+      "n_edges": 32,
+      "ok": true,
+      "mean_energy": -21.15625,
+      "min_energy": -28.0,
+      "seconds": 0.02154349999909755,
+      "instances_per_sec": 5941.467264156794,
+      "device": "cuda:0",
+      "seconds_wall": 0.023148399995989166,
+      "shard": 3,
+      "device_id": 0
+    }
+  ],
+  "pass_count": 4,
+  "total": 4,
+  "overall_ok": true,
+  "claimed_multi_gpu_speedup": false,
+  "note": "Shard runner is multi-GPU ready (device_id % n_gpu). This machine reports n_gpu in inventory \u2014 no fabricated extra devices."
+}

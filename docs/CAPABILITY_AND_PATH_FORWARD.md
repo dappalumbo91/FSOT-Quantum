@@ -64,6 +64,7 @@ Regenerate: `python -m fsot_quantum.capability_suite`
 | **Fold v2** (chem 68/68 @0.5%, GPU fold queue, surface+phase) | green | `python -m fsot_quantum.fold_v2` |
 | **Fold v3** (MaxCut/Ising ledger, multi-stream, lattice surgery) | green | `python -m fsot_quantum.fold_v3` |
 | **Fold v4** (mp scheduler, teleport, Gset-style, formal cost) | green | `python -m fsot_quantum.fold_v4` |
+| **Fold v5** (Gset loader, multi-GPU shards, adder/QFT-role, QEMU) | green | `python -m fsot_quantum.fold_v5` |
 
 ## Scaling law (important)
 
@@ -78,11 +79,10 @@ See `docs/FOLD_NOT_HILBERT.md`.
 
 ## Next builds
 
-1. Official Gset file residuals (if archive present locally) under fold cost
-1. Multi-GPU distributed fold scheduler
-1. Longer logical algorithms (adder / QFT-role) as fold sequences
-1. QEMU serial gate for fold budget + CNOT fold (kernel already extended)
-1. Paper-facing fold-vs-Hilbert cost note (arxiv pipeline)
+1. Drop official Gset files in `data/gset/` (or `FSOT_GSET_DIR`) for published-graph residuals
+1. Second physical GPU → live multi-device speedup (API already shards)
+1. Full arXiv pipeline on `papers/02-fold-not-hilbert/` if you want a submission package
+1. Adder width climb (n>3) still as folds, not statevectors
 
 ## How to run
 

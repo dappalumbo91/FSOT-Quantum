@@ -1,0 +1,70 @@
+{
+  "timestamp": "2026-08-12T21:32:56.302004+00:00",
+  "suite": "fold_v5_leftovers",
+  "pin": "D1D38A",
+  "thesis": "Hit leftover rungs honestly: official Gset if present, multi-GPU inventory+shards, adder/QFT-role folds, QEMU fold kernel, paper note",
+  "gset_official": {
+    "ok": true,
+    "status": "skip_official_parser_ok",
+    "parser_ok": true,
+    "official_found": false,
+    "n_official": 0,
+    "pass": "0/0"
+  },
+  "multigpu": {
+    "ok": true,
+    "n_gpu": 1,
+    "names": [
+      "NVIDIA GeForce RTX 5070"
+    ],
+    "multi_gpu_available": false,
+    "claimed_multi_gpu_speedup": false,
+    "shards": "4/4"
+  },
+  "logical_algos": {
+    "ok": true,
+    "pass": "38/38"
+  },
+  "qemu_fold": {
+    "ok": true,
+    "status": "pass",
+    "fold_pass": true,
+    "cnotfold_pass": true,
+    "kernel_pass": true,
+    "reason": null
+  },
+  "paper_note": {
+    "ok": true,
+    "path": "papers\\02-fold-not-hilbert\\NOTE.md"
+  },
+  "fold_budget_formal": {
+    "8": 195,
+    "16": 363,
+    "32": 699
+  },
+  "cost_contrast_n32": {
+    "nominal_n": 32,
+    "hilbert_amplitudes": 4294967296,
+    "hilbert_note": "C^{2^n} statevector entries (brute sim bottleneck)",
+    "fold_probe_budget": 621,
+    "fold_depth": 3,
+    "fold_D_eff_cost_proxy": 0.7097596350416266,
+    "complexity_weight_phi": 0.6180339887498949,
+    "ratio_hilbert_over_fold": 6916211.426731079,
+    "winner_when": "fold when structure admits closed form / poly probes"
+  },
+  "overall_ok": true,
+  "wall_seconds": 14.860009999996691,
+  "now_implemented": [
+    "Gset official loader + parser fixture (skip if no archive)",
+    "multi-GPU inventory + shard runner (honest n_gpu=1 on this host)",
+    "ripple-carry adder + QFT-role bit-reversal/phase folds",
+    "QEMU serial gate for fold + cnotfold kernel tests",
+    "papers/02-fold-not-hilbert/NOTE.md"
+  ],
+  "still_not_claimed": [
+    "G1\u2013G54 published residual table without local/official files",
+    "multi-GPU speedup on a 1-GPU machine",
+    "Hilbert QFT/adder circuit equivalence"
+  ]
+}

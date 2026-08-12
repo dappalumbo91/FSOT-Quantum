@@ -1,0 +1,902 @@
+{
+  "panel": "logical_algo_fold",
+  "d": 3,
+  "instances": [
+    {
+      "op": "logical_and",
+      "a": 0,
+      "b": 0,
+      "got": 0,
+      "expect": 0,
+      "ok": true,
+      "d": 3,
+      "job": "and_00"
+    },
+    {
+      "op": "logical_and",
+      "a": 0,
+      "b": 1,
+      "got": 0,
+      "expect": 0,
+      "ok": true,
+      "d": 3,
+      "job": "and_01"
+    },
+    {
+      "op": "logical_and",
+      "a": 1,
+      "b": 0,
+      "got": 0,
+      "expect": 0,
+      "ok": true,
+      "d": 3,
+      "job": "and_10"
+    },
+    {
+      "op": "logical_and",
+      "a": 1,
+      "b": 1,
+      "got": 1,
+      "expect": 1,
+      "ok": true,
+      "d": 3,
+      "job": "and_11"
+    },
+    {
+      "op": "ripple_add",
+      "a": [
+        0,
+        0
+      ],
+      "b": [
+        0,
+        0
+      ],
+      "sum_bits": [
+        0,
+        0
+      ],
+      "cout": 0,
+      "got": 0,
+      "expect": 0,
+      "ok": true,
+      "d": 3,
+      "job": "add2_0_0"
+    },
+    {
+      "op": "ripple_add",
+      "a": [
+        0,
+        0
+      ],
+      "b": [
+        1,
+        0
+      ],
+      "sum_bits": [
+        1,
+        0
+      ],
+      "cout": 0,
+      "got": 1,
+      "expect": 1,
+      "ok": true,
+      "d": 3,
+      "job": "add2_0_1"
+    },
+    {
+      "op": "ripple_add",
+      "a": [
+        0,
+        0
+      ],
+      "b": [
+        0,
+        1
+      ],
+      "sum_bits": [
+        0,
+        1
+      ],
+      "cout": 0,
+      "got": 2,
+      "expect": 2,
+      "ok": true,
+      "d": 3,
+      "job": "add2_0_2"
+    },
+    {
+      "op": "ripple_add",
+      "a": [
+        0,
+        0
+      ],
+      "b": [
+        1,
+        1
+      ],
+      "sum_bits": [
+        1,
+        1
+      ],
+      "cout": 0,
+      "got": 3,
+      "expect": 3,
+      "ok": true,
+      "d": 3,
+      "job": "add2_0_3"
+    },
+    {
+      "op": "ripple_add",
+      "a": [
+        1,
+        0
+      ],
+      "b": [
+        0,
+        0
+      ],
+      "sum_bits": [
+        1,
+        0
+      ],
+      "cout": 0,
+      "got": 1,
+      "expect": 1,
+      "ok": true,
+      "d": 3,
+      "job": "add2_1_0"
+    },
+    {
+      "op": "ripple_add",
+      "a": [
+        1,
+        0
+      ],
+      "b": [
+        1,
+        0
+      ],
+      "sum_bits": [
+        0,
+        1
+      ],
+      "cout": 0,
+      "got": 2,
+      "expect": 2,
+      "ok": true,
+      "d": 3,
+      "job": "add2_1_1"
+    },
+    {
+      "op": "ripple_add",
+      "a": [
+        1,
+        0
+      ],
+      "b": [
+        0,
+        1
+      ],
+      "sum_bits": [
+        1,
+        1
+      ],
+      "cout": 0,
+      "got": 3,
+      "expect": 3,
+      "ok": true,
+      "d": 3,
+      "job": "add2_1_2"
+    },
+    {
+      "op": "ripple_add",
+      "a": [
+        1,
+        0
+      ],
+      "b": [
+        1,
+        1
+      ],
+      "sum_bits": [
+        0,
+        0
+      ],
+      "cout": 1,
+      "got": 4,
+      "expect": 4,
+      "ok": true,
+      "d": 3,
+      "job": "add2_1_3"
+    },
+    {
+      "op": "ripple_add",
+      "a": [
+        0,
+        1
+      ],
+      "b": [
+        0,
+        0
+      ],
+      "sum_bits": [
+        0,
+        1
+      ],
+      "cout": 0,
+      "got": 2,
+      "expect": 2,
+      "ok": true,
+      "d": 3,
+      "job": "add2_2_0"
+    },
+    {
+      "op": "ripple_add",
+      "a": [
+        0,
+        1
+      ],
+      "b": [
+        1,
+        0
+      ],
+      "sum_bits": [
+        1,
+        1
+      ],
+      "cout": 0,
+      "got": 3,
+      "expect": 3,
+      "ok": true,
+      "d": 3,
+      "job": "add2_2_1"
+    },
+    {
+      "op": "ripple_add",
+      "a": [
+        0,
+        1
+      ],
+      "b": [
+        0,
+        1
+      ],
+      "sum_bits": [
+        0,
+        0
+      ],
+      "cout": 1,
+      "got": 4,
+      "expect": 4,
+      "ok": true,
+      "d": 3,
+      "job": "add2_2_2"
+    },
+    {
+      "op": "ripple_add",
+      "a": [
+        0,
+        1
+      ],
+      "b": [
+        1,
+        1
+      ],
+      "sum_bits": [
+        1,
+        0
+      ],
+      "cout": 1,
+      "got": 5,
+      "expect": 5,
+      "ok": true,
+      "d": 3,
+      "job": "add2_2_3"
+    },
+    {
+      "op": "ripple_add",
+      "a": [
+        1,
+        1
+      ],
+      "b": [
+        0,
+        0
+      ],
+      "sum_bits": [
+        1,
+        1
+      ],
+      "cout": 0,
+      "got": 3,
+      "expect": 3,
+      "ok": true,
+      "d": 3,
+      "job": "add2_3_0"
+    },
+    {
+      "op": "ripple_add",
+      "a": [
+        1,
+        1
+      ],
+      "b": [
+        1,
+        0
+      ],
+      "sum_bits": [
+        0,
+        0
+      ],
+      "cout": 1,
+      "got": 4,
+      "expect": 4,
+      "ok": true,
+      "d": 3,
+      "job": "add2_3_1"
+    },
+    {
+      "op": "ripple_add",
+      "a": [
+        1,
+        1
+      ],
+      "b": [
+        0,
+        1
+      ],
+      "sum_bits": [
+        1,
+        0
+      ],
+      "cout": 1,
+      "got": 5,
+      "expect": 5,
+      "ok": true,
+      "d": 3,
+      "job": "add2_3_2"
+    },
+    {
+      "op": "ripple_add",
+      "a": [
+        1,
+        1
+      ],
+      "b": [
+        1,
+        1
+      ],
+      "sum_bits": [
+        0,
+        1
+      ],
+      "cout": 1,
+      "got": 6,
+      "expect": 6,
+      "ok": true,
+      "d": 3,
+      "job": "add2_3_3"
+    },
+    {
+      "op": "ripple_add",
+      "a": [
+        0,
+        1,
+        1
+      ],
+      "b": [
+        1,
+        0,
+        0
+      ],
+      "sum_bits": [
+        1,
+        1,
+        1
+      ],
+      "cout": 0,
+      "got": 7,
+      "expect": 7,
+      "ok": true,
+      "d": 3,
+      "job": "add3_6_1"
+    },
+    {
+      "op": "ripple_add",
+      "a": [
+        0,
+        1,
+        1
+      ],
+      "b": [
+        0,
+        1,
+        0
+      ],
+      "sum_bits": [
+        0,
+        0,
+        0
+      ],
+      "cout": 1,
+      "got": 8,
+      "expect": 8,
+      "ok": true,
+      "d": 3,
+      "job": "add3_6_2"
+    },
+    {
+      "op": "ripple_add",
+      "a": [
+        0,
+        1,
+        1
+      ],
+      "b": [
+        0,
+        0,
+        1
+      ],
+      "sum_bits": [
+        0,
+        1,
+        0
+      ],
+      "cout": 1,
+      "got": 10,
+      "expect": 10,
+      "ok": true,
+      "d": 3,
+      "job": "add3_6_4"
+    },
+    {
+      "op": "ripple_add",
+      "a": [
+        0,
+        0,
+        1
+      ],
+      "b": [
+        1,
+        1,
+        1
+      ],
+      "sum_bits": [
+        1,
+        1,
+        0
+      ],
+      "cout": 1,
+      "got": 11,
+      "expect": 11,
+      "ok": true,
+      "d": 3,
+      "job": "add3_4_7"
+    },
+    {
+      "op": "ripple_add",
+      "a": [
+        1,
+        1,
+        1
+      ],
+      "b": [
+        1,
+        1,
+        0
+      ],
+      "sum_bits": [
+        0,
+        1,
+        0
+      ],
+      "cout": 1,
+      "got": 10,
+      "expect": 10,
+      "ok": true,
+      "d": 3,
+      "job": "add3_7_3"
+    },
+    {
+      "op": "ripple_add",
+      "a": [
+        0,
+        0,
+        1
+      ],
+      "b": [
+        0,
+        0,
+        0
+      ],
+      "sum_bits": [
+        0,
+        0,
+        1
+      ],
+      "cout": 0,
+      "got": 4,
+      "expect": 4,
+      "ok": true,
+      "d": 3,
+      "job": "add3_4_0"
+    },
+    {
+      "op": "qft_role_bitrev_phase",
+      "bits": [
+        0,
+        0,
+        0
+      ],
+      "reversed": [
+        0,
+        0,
+        0
+      ],
+      "val": 0,
+      "val_rev": 0,
+      "theta": 0.0,
+      "roundtrip": [
+        0,
+        0,
+        0
+      ],
+      "ok": true,
+      "n": 3,
+      "hilbert_amps_avoided": 8,
+      "job": "qftrole_n3_0"
+    },
+    {
+      "op": "qft_role_bitrev_phase",
+      "bits": [
+        1,
+        0,
+        0
+      ],
+      "reversed": [
+        0,
+        0,
+        1
+      ],
+      "val": 1,
+      "val_rev": 4,
+      "theta": 0.7853981633974483,
+      "roundtrip": [
+        1,
+        0,
+        0
+      ],
+      "ok": true,
+      "n": 3,
+      "hilbert_amps_avoided": 8,
+      "job": "qftrole_n3_e0"
+    },
+    {
+      "op": "qft_role_bitrev_phase",
+      "bits": [
+        0,
+        1,
+        0
+      ],
+      "reversed": [
+        0,
+        1,
+        0
+      ],
+      "val": 2,
+      "val_rev": 2,
+      "theta": 1.5707963267948966,
+      "roundtrip": [
+        0,
+        1,
+        0
+      ],
+      "ok": true,
+      "n": 3,
+      "hilbert_amps_avoided": 8,
+      "job": "qftrole_n3_alt"
+    },
+    {
+      "op": "qft_role_bitrev_phase",
+      "bits": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "reversed": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "val": 0,
+      "val_rev": 0,
+      "theta": 0.0,
+      "roundtrip": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "ok": true,
+      "n": 4,
+      "hilbert_amps_avoided": 16,
+      "job": "qftrole_n4_0"
+    },
+    {
+      "op": "qft_role_bitrev_phase",
+      "bits": [
+        1,
+        0,
+        0,
+        0
+      ],
+      "reversed": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "val": 1,
+      "val_rev": 8,
+      "theta": 0.39269908169872414,
+      "roundtrip": [
+        1,
+        0,
+        0,
+        0
+      ],
+      "ok": true,
+      "n": 4,
+      "hilbert_amps_avoided": 16,
+      "job": "qftrole_n4_e0"
+    },
+    {
+      "op": "qft_role_bitrev_phase",
+      "bits": [
+        0,
+        1,
+        0,
+        1
+      ],
+      "reversed": [
+        1,
+        0,
+        1,
+        0
+      ],
+      "val": 10,
+      "val_rev": 5,
+      "theta": 3.9269908169872414,
+      "roundtrip": [
+        0,
+        1,
+        0,
+        1
+      ],
+      "ok": true,
+      "n": 4,
+      "hilbert_amps_avoided": 16,
+      "job": "qftrole_n4_alt"
+    },
+    {
+      "op": "qft_role_bitrev_phase",
+      "bits": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "reversed": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "val": 0,
+      "val_rev": 0,
+      "theta": 0.0,
+      "roundtrip": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "ok": true,
+      "n": 5,
+      "hilbert_amps_avoided": 32,
+      "job": "qftrole_n5_0"
+    },
+    {
+      "op": "qft_role_bitrev_phase",
+      "bits": [
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      "reversed": [
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "val": 1,
+      "val_rev": 16,
+      "theta": 0.19634954084936207,
+      "roundtrip": [
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      "ok": true,
+      "n": 5,
+      "hilbert_amps_avoided": 32,
+      "job": "qftrole_n5_e0"
+    },
+    {
+      "op": "qft_role_bitrev_phase",
+      "bits": [
+        0,
+        1,
+        0,
+        1,
+        0
+      ],
+      "reversed": [
+        0,
+        1,
+        0,
+        1,
+        0
+      ],
+      "val": 10,
+      "val_rev": 10,
+      "theta": 1.9634954084936207,
+      "roundtrip": [
+        0,
+        1,
+        0,
+        1,
+        0
+      ],
+      "ok": true,
+      "n": 5,
+      "hilbert_amps_avoided": 32,
+      "job": "qftrole_n5_alt"
+    },
+    {
+      "op": "qft_role_bitrev_phase",
+      "bits": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "reversed": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "val": 0,
+      "val_rev": 0,
+      "theta": 0.0,
+      "roundtrip": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "ok": true,
+      "n": 8,
+      "hilbert_amps_avoided": 256,
+      "job": "qftrole_n8_0"
+    },
+    {
+      "op": "qft_role_bitrev_phase",
+      "bits": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "reversed": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "val": 1,
+      "val_rev": 128,
+      "theta": 0.02454369260617026,
+      "roundtrip": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "ok": true,
+      "n": 8,
+      "hilbert_amps_avoided": 256,
+      "job": "qftrole_n8_e0"
+    },
+    {
+      "op": "qft_role_bitrev_phase",
+      "bits": [
+        0,
+        1,
+        0,
+        1,
+        0,
+        1,
+        0,
+        1
+      ],
+      "reversed": [
+        1,
+        0,
+        1,
+        0,
+        1,
+        0,
+        1,
+        0
+      ],
+      "val": 170,
+      "val_rev": 85,
+      "theta": 4.172427743048944,
+      "roundtrip": [
+        0,
+        1,
+        0,
+        1,
+        0,
+        1,
+        0,
+        1
+      ],
+      "ok": true,
+      "n": 8,
+      "hilbert_amps_avoided": 256,
+      "job": "qftrole_n8_alt"
+    }
+  ],
+  "pass_count": 38,
+  "total": 38,
+  "overall_ok": true,
+  "note": "Ripple-carry + QFT-role bit-reversal/phase folds. Not a Hilbert QFT/adder circuit equivalence claim."
+}
