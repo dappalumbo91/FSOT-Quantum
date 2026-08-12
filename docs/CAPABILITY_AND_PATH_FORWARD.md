@@ -72,6 +72,7 @@ Regenerate: `python -m fsot_quantum.capability_suite`
 | **Medium next** (T1/T2/T3 strings + Lean entanglement/QI) | green | `python -m fsot_quantum.medium_next` |
 | **Keep going** (concepts + fridge/hits + 116 Lean QI/math jobs) | green | `python -m fsot_quantum.keep_going` |
 | **QC/QM accuracy** (hired jobs, no fridge) | green | `python -m fsot_quantum.qc_accuracy` |
+| **Bare-metal jobs** (Zig/QEMU, 9/9, no host OS) | green | `.\run_qemu.ps1` |
 
 ## Scaling law (important)
 

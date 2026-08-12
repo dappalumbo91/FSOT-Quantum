@@ -97,8 +97,9 @@ python -m fsot_quantum.qc_accuracy
 # QAOA exact column (must be 11/11)
 python -c "from fsot_quantum.qaoa_fsot import run_qaoa_panel; r=run_qaoa_panel(); print(r['metrics_summary']); assert r['overall_ok']"
 
-# Freestanding QEMU kernel (Multiboot serial gate)
+# Freestanding QEMU kernel — Multiboot, no host OS; hired QC/QM jobs on metal
 .\run_qemu.ps1
+# expect: JOBS 9/9 · FSOT_QUANTUM_JOBS PASS · FSOT_QUANTUM_KERNEL PASS
 
 # Next stress: large MaxCut · QAOA-FSOT · textbook sim job compare
 python -m fsot_quantum.stress_next
@@ -137,6 +138,7 @@ cd zig; zig build run; cd ..
 | Concepts (traceable pictures) | `docs/CONCEPTS.md` |
 | Keep going (fridge probe + 116 QI jobs) | `results/KEEP_GOING.md` |
 | QC/QM accuracy board | `results/QC_ACCURACY.md` |
+| Bare metal / QEMU | `docs/BARE_METAL.md` |
 | Skeptic kit | `results/SKEPTIC_KIT.md` |
 
 Device path is **exactly** FSOT-GPU: torch CUDA buffers when available.

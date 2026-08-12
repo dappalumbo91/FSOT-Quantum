@@ -18,4 +18,17 @@ FSOT fold PASS
 test:cnotfold...
 FSOT cnotfold PASS
 test:selftest...
+FSOT selftest PASS
+jobs:qc_qm...
+JOB dj PASS
+JOB bv PASS
+JOB search PASS
+JOB period PASS
+JOB factor PASS
+JOB ising PASS
+JOB chsh PASS
+JOB domain PASS
+JOB foldcost PASS
+JOBS 9/9
+FSOT_QUANTUM_JOBS PASS
 FSOT_QUANTUM_KERNEL PASS

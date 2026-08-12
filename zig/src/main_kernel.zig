@@ -4,6 +4,7 @@
 
 const serial = @import("serial.zig");
 const qc = @import("quantum_core.zig");
+const jobs = @import("jobs.zig");
 
 const MULTIBOOT_MAGIC: u32 = 0x1BADB002;
 const MULTIBOOT_FLAGS: u32 = 0x00000003;
@@ -79,10 +80,28 @@ fn kmain() noreturn {
     if (qc.cnotFoldOk()) serial.write("FSOT cnotfold PASS\n") else serial.write("FSOT cnotfold FAIL\n");
 
     serial.write("test:selftest...\n");
-    const ok = qc.selftest();
+    const core_ok = qc.selftest();
+    if (core_ok) serial.write("FSOT selftest PASS\n") else serial.write("FSOT selftest FAIL\n");
+
+    serial.write("jobs:qc_qm...\n");
+    const js = jobs.allJobs();
+    for (js) |j| {
+        serial.write("JOB ");
+        serial.write(j.name);
+        if (j.ok) serial.write(" PASS\n") else serial.write(" FAIL\n");
+    }
+    serial.write("JOBS ");
+    serial.writeU32(jobs.jobsPassCount());
+    serial.write("/");
+    serial.writeU32(jobs.jobsTotal());
+    serial.write("\n");
+
+    const ok = core_ok and jobs.jobsAllOk();
     if (ok) {
+        serial.write("FSOT_QUANTUM_JOBS PASS\n");
         serial.write("FSOT_QUANTUM_KERNEL PASS\n");
     } else {
+        serial.write("FSOT_QUANTUM_JOBS FAIL\n");
         serial.write("FSOT_QUANTUM_KERNEL FAIL\n");
     }
 
