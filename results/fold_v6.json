@@ -1,0 +1,75 @@
+{
+  "timestamp": "2026-08-12T22:22:30.201706+00:00",
+  "suite": "fold_v6_push",
+  "pin": "D1D38A",
+  "thesis": "Official Gset G1 fold residual + 4-bit/modular-multiply folds + GPU occupancy \u2014 still not Hilbert 2^n",
+  "gset_official": {
+    "ok": true,
+    "status": "official",
+    "official_found": true,
+    "pass": "1/1",
+    "g1": {
+      "name": "G1.txt",
+      "path": "C:\\Users\\damia\\Desktop\\fsot quantum\\data\\gset\\G1.txt",
+      "official": true,
+      "n": 800,
+      "n_edges": 19176,
+      "cut_fold": 11397,
+      "ratio_lb": 0.5943366708385481,
+      "ratio_floor_sparse": 0.6180339887498948,
+      "published_cut": 11624,
+      "rel_err_vs_published_pct": 1.952856159669649,
+      "ok": true,
+      "hilbert_amps_if_QAOA": null,
+      "fold_budget_formal": 16827,
+      "cost": {
+        "nominal_n": 32,
+        "hilbert_amplitudes": 4294967296,
+        "hilbert_note": "C^{2^n} statevector entries (brute sim bottleneck)",
+        "fold_probe_budget": 355570,
+        "fold_depth": 3,
+        "fold_D_eff_cost_proxy": 0.7097596350416266,
+        "complexity_weight_phi": 0.6180339887498949,
+        "ratio_hilbert_over_fold": 12079.10480636724,
+        "winner_when": "fold when structure admits closed form / poly probes"
+      }
+    }
+  },
+  "arith": {
+    "ok": true,
+    "pass": "14/14"
+  },
+  "gpu_occupancy": {
+    "ok": true,
+    "device": "cuda",
+    "n_gpu": 1
+  },
+  "fold_budget_formal": {
+    "8": 195,
+    "16": 363,
+    "32": 699
+  },
+  "cost_contrast_n32": {
+    "nominal_n": 32,
+    "hilbert_amplitudes": 4294967296,
+    "hilbert_note": "C^{2^n} statevector entries (brute sim bottleneck)",
+    "fold_probe_budget": 621,
+    "fold_depth": 3,
+    "fold_D_eff_cost_proxy": 0.7097596350416266,
+    "complexity_weight_phi": 0.6180339887498949,
+    "ratio_hilbert_over_fold": 6916211.426731079,
+    "winner_when": "fold when structure admits closed form / poly probes"
+  },
+  "overall_ok": true,
+  "wall_seconds": 1.6387303000010434,
+  "now_implemented": [
+    "official Stanford Gset G1 parse + incremental fold MaxCut residual",
+    "4-bit ripple samples + modular multiply shift-add folds",
+    "GPU occupancy climb (search 8k, pack 12M, D_eff scalars)"
+  ],
+  "still_not_claimed": [
+    "full Gset G1\u2013G54 published champion-cut table",
+    "multi-GPU speedup (n_gpu still 1 here)",
+    "Hilbert modular-multiply / QFT adder equivalence"
+  ]
+}

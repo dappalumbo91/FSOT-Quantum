@@ -47,7 +47,9 @@ The inequality is a **cost-geometry** statement: when the job admits modular / c
 
 ## Numerically verified (same jobs)
 
-Fold suites on this lineage (see `results/FOLD_V4.md`, `results/FOLD_V5.md`):
+Official Gset **G1** (Stanford/Ye, n=800, m=19176): fold cut **11397** vs published champion **11624** (rel **1.95%**, within 5% band). Hilbert QAOA on 800 qubits is not simulated.
+
+Fold suites on this lineage (see `results/FOLD_V4.md`–`results/FOLD_V6.md`):
 
 - Oracle class, secret, search, period, factor, Ising  
 - Surface / lattice-surgery / teleport / adder sequences  

@@ -1,0 +1,322 @@
+{
+  "panel": "fold_arith_wider",
+  "d": 3,
+  "instances": [
+    {
+      "op": "ripple_add",
+      "a": [
+        1,
+        0,
+        0,
+        1
+      ],
+      "b": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "sum_bits": [
+        1,
+        0,
+        0,
+        1
+      ],
+      "cout": 0,
+      "got": 9,
+      "expect": 9,
+      "ok": true,
+      "d": 3,
+      "job": "add4_9_0"
+    },
+    {
+      "op": "ripple_add",
+      "a": [
+        0,
+        0,
+        1,
+        1
+      ],
+      "b": [
+        0,
+        1,
+        1,
+        1
+      ],
+      "sum_bits": [
+        0,
+        1,
+        0,
+        1
+      ],
+      "cout": 1,
+      "got": 26,
+      "expect": 26,
+      "ok": true,
+      "d": 3,
+      "job": "add4_12_14"
+    },
+    {
+      "op": "ripple_add",
+      "a": [
+        0,
+        0,
+        1,
+        0
+      ],
+      "b": [
+        1,
+        1,
+        0,
+        1
+      ],
+      "sum_bits": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "cout": 0,
+      "got": 15,
+      "expect": 15,
+      "ok": true,
+      "d": 3,
+      "job": "add4_4_11"
+    },
+    {
+      "op": "ripple_add",
+      "a": [
+        1,
+        0,
+        0,
+        1
+      ],
+      "b": [
+        1,
+        1,
+        1,
+        0
+      ],
+      "sum_bits": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "cout": 1,
+      "got": 16,
+      "expect": 16,
+      "ok": true,
+      "d": 3,
+      "job": "add4_9_7"
+    },
+    {
+      "op": "ripple_add",
+      "a": [
+        0,
+        0,
+        1,
+        0
+      ],
+      "b": [
+        0,
+        1,
+        0,
+        0
+      ],
+      "sum_bits": [
+        0,
+        1,
+        1,
+        0
+      ],
+      "cout": 0,
+      "got": 6,
+      "expect": 6,
+      "ok": true,
+      "d": 3,
+      "job": "add4_4_2"
+    },
+    {
+      "op": "ripple_add",
+      "a": [
+        1,
+        0,
+        1,
+        1
+      ],
+      "b": [
+        0,
+        0,
+        1,
+        1
+      ],
+      "sum_bits": [
+        1,
+        0,
+        0,
+        1
+      ],
+      "cout": 1,
+      "got": 25,
+      "expect": 25,
+      "ok": true,
+      "d": 3,
+      "job": "add4_13_12"
+    },
+    {
+      "op": "ripple_add",
+      "a": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "b": [
+        1,
+        0,
+        1,
+        0
+      ],
+      "sum_bits": [
+        0,
+        0,
+        1,
+        0
+      ],
+      "cout": 1,
+      "got": 20,
+      "expect": 20,
+      "ok": true,
+      "d": 3,
+      "job": "add4_15_5"
+    },
+    {
+      "op": "ripple_add",
+      "a": [
+        1,
+        0,
+        0,
+        0
+      ],
+      "b": [
+        1,
+        0,
+        1,
+        1
+      ],
+      "sum_bits": [
+        0,
+        1,
+        1,
+        1
+      ],
+      "cout": 0,
+      "got": 14,
+      "expect": 14,
+      "ok": true,
+      "d": 3,
+      "job": "add4_1_13"
+    },
+    {
+      "op": "modular_multiply_fold",
+      "a": 3,
+      "b": 5,
+      "N": 7,
+      "product_fold": 15,
+      "got": 1,
+      "expect_product": 15,
+      "expect": 1,
+      "fold_adds": 2,
+      "ok": true,
+      "n_bits": 3,
+      "d": 3,
+      "hilbert_amps_if_QFT_mul": 512,
+      "job": "mulmod_3_5_7"
+    },
+    {
+      "op": "modular_multiply_fold",
+      "a": 2,
+      "b": 7,
+      "N": 15,
+      "product_fold": 14,
+      "got": 14,
+      "expect_product": 14,
+      "expect": 14,
+      "fold_adds": 3,
+      "ok": true,
+      "n_bits": 4,
+      "d": 3,
+      "hilbert_amps_if_QFT_mul": 4096,
+      "job": "mulmod_2_7_15"
+    },
+    {
+      "op": "modular_multiply_fold",
+      "a": 4,
+      "b": 4,
+      "N": 15,
+      "product_fold": 16,
+      "got": 1,
+      "expect_product": 16,
+      "expect": 1,
+      "fold_adds": 1,
+      "ok": true,
+      "n_bits": 4,
+      "d": 3,
+      "hilbert_amps_if_QFT_mul": 4096,
+      "job": "mulmod_4_4_15"
+    },
+    {
+      "op": "modular_multiply_fold",
+      "a": 5,
+      "b": 3,
+      "N": 21,
+      "product_fold": 15,
+      "got": 15,
+      "expect_product": 15,
+      "expect": 15,
+      "fold_adds": 2,
+      "ok": true,
+      "n_bits": 5,
+      "d": 3,
+      "hilbert_amps_if_QFT_mul": 32768,
+      "job": "mulmod_5_3_21"
+    },
+    {
+      "op": "modular_multiply_fold",
+      "a": 6,
+      "b": 7,
+      "N": 15,
+      "product_fold": 42,
+      "got": 12,
+      "expect_product": 42,
+      "expect": 12,
+      "fold_adds": 3,
+      "ok": true,
+      "n_bits": 4,
+      "d": 3,
+      "hilbert_amps_if_QFT_mul": 4096,
+      "job": "mulmod_6_7_15"
+    },
+    {
+      "op": "modular_multiply_fold",
+      "a": 8,
+      "b": 3,
+      "N": 21,
+      "product_fold": 24,
+      "got": 3,
+      "expect_product": 24,
+      "expect": 3,
+      "fold_adds": 2,
+      "ok": true,
+      "n_bits": 5,
+      "d": 3,
+      "hilbert_amps_if_QFT_mul": 32768,
+      "job": "mulmod_8_3_21"
+    }
+  ],
+  "pass_count": 14,
+  "total": 14,
+  "overall_ok": true,
+  "note": "4-bit add samples + shift-add modular multiply via ripple folds. Not a Hilbert modular-mult circuit claim."
+}

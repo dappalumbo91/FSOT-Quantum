@@ -73,6 +73,9 @@ python -m fsot_quantum.fold_v4
 # Fold v5 leftovers: official Gset loader · multi-GPU shards · adder/QFT-role · QEMU
 python -m fsot_quantum.fold_v5
 
+# Fold v6: official G1 residual · 4-bit/modular-mul folds · GPU occupancy
+python -m fsot_quantum.fold_v6
+
 # QAOA exact column (must be 11/11)
 python -c "from fsot_quantum.qaoa_fsot import run_qaoa_panel; r=run_qaoa_panel(); print(r['metrics_summary']); assert r['overall_ok']"
 
@@ -108,6 +111,7 @@ cd zig; zig build run; cd ..
 | Fold v3 (benchmarks + surgery + streams) | `results/FOLD_V3.md` |
 | Fold v4 (mp + teleport + Gset + formal) | `results/FOLD_V4.md` |
 | Fold v5 (leftovers + QEMU + paper note) | `results/FOLD_V5.md` |
+| Fold v6 (official G1 + wider arith) | `results/FOLD_V6.md` |
 | Skeptic kit | `results/SKEPTIC_KIT.md` |
 
 Device path is **exactly** FSOT-GPU: torch CUDA buffers when available.

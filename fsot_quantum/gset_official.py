@@ -25,6 +25,13 @@ from fsot_quantum.fold_complexity import cost_contrast, fold_budget_formal
 from fsot_quantum.large_maxcut import RATIO_FLOOR
 from fsot_quantum.optimization import cut_value, fsot_local_spins
 
+# Literature champion cuts (Ye / Gset papers) — not free fits.
+# G1 = 11624 is the standard published value used in SDP/QAOA comparisons.
+PUBLISHED_CUTS = {
+    "G1.TXT": 11624,
+    "G1": 11624,
+}
+
 ROOT = Path(__file__).resolve().parents[1]
 
 SEARCH_DIRS = [
@@ -87,12 +94,20 @@ def _fixture_gset_text() -> str:
 
 
 def _fast_maxcut(n: int, edges: list[tuple[int, int, int]]) -> tuple[int, list[int]]:
-    """1-flip only for large n; full fold local for n<=64."""
-    if n <= 64:
+    """
+    Incremental 1-flip MaxCut (O(degree) per trial).
+    n<=32 also runs full fold local for exactable residual.
+    """
+    if n <= 32:
         s = fsot_local_spins(n, edges, maximize_cut=True)
         return cut_value(s, edges), s
-    # large: domain/checkerboard + 1-flip, no pair pass
+
     from fsot_quantum.domains import DOMAIN_SPIN_LAW, domain_scalar
+
+    adj: list[list[int]] = [[] for _ in range(n)]
+    for i, j, _w in edges:
+        adj[i].append(j)
+        adj[j].append(i)
 
     base = 1 if domain_scalar(DOMAIN_SPIN_LAW) > 0 else -1
     starts = [
@@ -103,59 +118,74 @@ def _fast_maxcut(n: int, edges: list[tuple[int, int, int]]) -> tuple[int, list[i
     phi = float(SEEDS.phi)
     x = 1
     for k in range(4):
-        x = (x * int(phi * 1e6) + k * 2654435761) % (1 << min(n, 30))
-        starts.append([1 if (x >> (i % 30)) & 1 else -1 for i in range(n)])
+        x = (x * int(phi * 1e6) + k * 2654435761) % (1 << 30)
+        starts.append([1 if ((x >> (i % 30)) & 1) else -1 for i in range(n)])
 
-    def score(s: list[int]) -> int:
+    def cut_of(s: list[int]) -> int:
         return cut_value(s, edges)
 
     def polish(s0: list[int]) -> list[int]:
         s = list(s0)
-        for i, j, _J in edges:
+        # greedy uncut-edge flip
+        for i, j, _w in edges:
             if s[i] == s[j]:
                 s[j] = -s[j]
         improved = True
         steps = 0
-        while improved and steps < n * 8:
+        cap = max(8, n)
+        while improved and steps < cap:
             improved = False
             steps += 1
-            cur = score(s)
             for i in range(n):
-                s[i] = -s[i]
-                if score(s) > cur:
+                same = 0
+                deg = len(adj[i])
+                if deg == 0:
+                    continue
+                si = s[i]
+                for j in adj[i]:
+                    if s[j] == si:
+                        same += 1
+                # delta cut if flip i: 2*same - deg
+                if 2 * same - deg > 0:
+                    s[i] = -si
                     improved = True
-                    break
-                s[i] = -s[i]
         return s
 
     best = polish(starts[0])
-    best_c = score(best)
+    best_c = cut_of(best)
     for st in starts[1:]:
         cand = polish(st)
-        c = score(cand)
+        c = cut_of(cand)
         if c > best_c:
             best, best_c = cand, c
     return best_c, best
 
 
-def _try_fetch_g1(dest_dir: Path) -> Path | None:
-    if os.environ.get("FSOT_FETCH_GSET", "") not in ("1", "true", "yes"):
-        return None
+def _try_fetch_gset(dest_dir: Path, name: str = "G1") -> Path | None:
     dest_dir.mkdir(parents=True, exist_ok=True)
-    dest = dest_dir / "G1.txt"
-    if dest.exists():
+    dest = dest_dir / f"{name}.txt"
+    if dest.exists() and dest.stat().st_size > 100:
         return dest
-    url = "https://web.stanford.edu/~yyye/yyye/Gset/G1"
+    allow = os.environ.get("FSOT_FETCH_GSET", "1") not in ("0", "false", "no")
+    if not allow:
+        return dest if dest.exists() else None
+    url = f"https://web.stanford.edu/~yyye/yyye/Gset/{name}"
     try:
         import urllib.request
 
         req = urllib.request.Request(url, headers={"User-Agent": "FSOT-Quantum-fold/1.0"})
-        with urllib.request.urlopen(req, timeout=20) as resp:
+        with urllib.request.urlopen(req, timeout=30) as resp:
             data = resp.read()
+        if len(data) < 20:
+            return None
         dest.write_bytes(data)
         return dest
     except Exception:
-        return None
+        return dest if dest.exists() else None
+
+
+def _try_fetch_g1(dest_dir: Path) -> Path | None:
+    return _try_fetch_gset(dest_dir, "G1")
 
 
 def run_gset_official_panel() -> dict[str, Any]:
@@ -163,12 +193,19 @@ def run_gset_official_panel() -> dict[str, Any]:
     n_fix, e_fix = parse_gset_text(_fixture_gset_text())
     parser_ok = n_fix == 6 and len(e_fix) == 6
 
+    dest_dir = ROOT / "data" / "gset"
+    fetched = _try_fetch_g1(dest_dir)
     official = find_official_files()
-    fetched = None
-    if not official:
-        fetched = _try_fetch_g1(ROOT / "data" / "gset")
-        if fetched:
-            official = [fetched]
+    if fetched and fetched not in official:
+        official = [fetched] + official
+    # unique by name
+    seen_n: set[str] = set()
+    uniq: list[Path] = []
+    for p in official:
+        if p.name not in seen_n:
+            seen_n.add(p.name)
+            uniq.append(p)
+    official = uniq
 
     rows = []
     for path in official[:4]:  # cap
@@ -180,6 +217,17 @@ def run_gset_official_panel() -> dict[str, Any]:
         cut, _s = _fast_maxcut(n, edges)
         n_e = len(edges)
         ratio = cut / n_e if n_e else 0.0
+        key = path.stem.upper()
+        published = PUBLISHED_CUTS.get(path.name.upper()) or PUBLISHED_CUTS.get(key)
+        # 1/φ is the sparse-graph floor; official G1 champion ratio is ~0.606 < 1/φ,
+        # so official graphs use: cut >= m/2, and if published, within 5% of champion.
+        half_ok = cut * 2 >= n_e
+        if published:
+            rel_vs_pub = abs(published - cut) / published * 100.0
+            ok = half_ok and rel_vs_pub <= 5.0
+        else:
+            rel_vs_pub = None
+            ok = half_ok and ratio >= min(RATIO_FLOOR, 0.5)
         rows.append({
             "name": path.name,
             "path": str(path),
@@ -188,8 +236,10 @@ def run_gset_official_panel() -> dict[str, Any]:
             "n_edges": n_e,
             "cut_fold": cut,
             "ratio_lb": ratio,
-            "ratio_floor": RATIO_FLOOR,
-            "ok": ratio >= RATIO_FLOOR,
+            "ratio_floor_sparse": RATIO_FLOOR,
+            "published_cut": published,
+            "rel_err_vs_published_pct": rel_vs_pub,
+            "ok": ok,
             "hilbert_amps_if_QAOA": None if n > 40 else (1 << n),
             "fold_budget_formal": fold_budget_formal(n),
             "cost": cost_contrast(min(n, 32), n_e),

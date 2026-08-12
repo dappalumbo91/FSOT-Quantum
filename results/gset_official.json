@@ -1,13 +1,40 @@
 {
   "panel": "gset_official",
   "parser_ok": true,
-  "official_found": false,
-  "n_official": 0,
-  "fetched": null,
-  "instances": [],
-  "pass_count": 0,
-  "total": 0,
+  "official_found": true,
+  "n_official": 1,
+  "fetched": "C:\\Users\\damia\\Desktop\\fsot quantum\\data\\gset\\G1.txt",
+  "instances": [
+    {
+      "name": "G1.txt",
+      "path": "C:\\Users\\damia\\Desktop\\fsot quantum\\data\\gset\\G1.txt",
+      "official": true,
+      "n": 800,
+      "n_edges": 19176,
+      "cut_fold": 11397,
+      "ratio_lb": 0.5943366708385481,
+      "ratio_floor_sparse": 0.6180339887498948,
+      "published_cut": 11624,
+      "rel_err_vs_published_pct": 1.952856159669649,
+      "ok": true,
+      "hilbert_amps_if_QAOA": null,
+      "fold_budget_formal": 16827,
+      "cost": {
+        "nominal_n": 32,
+        "hilbert_amplitudes": 4294967296,
+        "hilbert_note": "C^{2^n} statevector entries (brute sim bottleneck)",
+        "fold_probe_budget": 355570,
+        "fold_depth": 3,
+        "fold_D_eff_cost_proxy": 0.7097596350416266,
+        "complexity_weight_phi": 0.6180339887498949,
+        "ratio_hilbert_over_fold": 12079.10480636724,
+        "winner_when": "fold when structure admits closed form / poly probes"
+      }
+    }
+  ],
+  "pass_count": 1,
+  "total": 1,
   "overall_ok": true,
-  "status": "skip_official_parser_ok",
+  "status": "official",
   "note": "Official Gset used only if files exist under data/gset or FSOT_GSET_DIR. Otherwise parser fixture only \u2014 not claimed as G1\u2013G54 residuals. Set FSOT_FETCH_GSET=1 to attempt Stanford G1."
 }
