@@ -71,6 +71,7 @@ Regenerate: `python -m fsot_quantum.capability_suite`
 | **Bleed refine** (Lean κ coupling + 569 atlas records ingested) | green | `python -m fsot_quantum.bleed_refine` |
 | **Medium next** (T1/T2/T3 strings + Lean entanglement/QI) | green | `python -m fsot_quantum.medium_next` |
 | **Keep going** (concepts + fridge/hits + 116 Lean QI/math jobs) | green | `python -m fsot_quantum.keep_going` |
+| **QC/QM accuracy** (hired jobs, no fridge) | green | `python -m fsot_quantum.qc_accuracy` |
 
 ## Scaling law (important)
 

@@ -16,6 +16,7 @@ Zero free parameters. pin D1D38A.
 
 from __future__ import annotations
 
+import math
 import os
 from pathlib import Path
 from typing import Any
@@ -114,10 +115,12 @@ def _fast_maxcut(n: int, edges: list[tuple[int, int, int]]) -> tuple[int, list[i
         [base] * n,
         [-base] * n,
         [base if (i % 2 == 0) else -base for i in range(n)],
+        [-base if (i % 2 == 0) else base for i in range(n)],
     ]
     phi = float(SEEDS.phi)
+    n_phi = max(4, int(math.floor(float(SEEDS.e) * float(SEEDS.pi))))  # 8
     x = 1
-    for k in range(4):
+    for k in range(n_phi):
         x = (x * int(phi * 1e6) + k * 2654435761) % (1 << 30)
         starts.append([1 if ((x >> (i % 30)) & 1) else -1 for i in range(n)])
 
@@ -149,6 +152,24 @@ def _fast_maxcut(n: int, edges: list[tuple[int, int, int]]) -> tuple[int, list[i
                 if 2 * same - deg > 0:
                     s[i] = -si
                     improved = True
+        # FSOT snap: collapse the cut-gradient field, flip poles
+        from fsot_lib.seeds import COLLAPSE_THRESHOLD
+        from fsot_lib.trinary import collapse, code_to_signed
+
+        field = []
+        for i in range(n):
+            deg = len(adj[i])
+            same = sum(1 for j in adj[i] if s[j] == s[i])
+            field.append(float(2 * same - deg))
+        codes = collapse(field, threshold=COLLAPSE_THRESHOLD)
+        if hasattr(codes, "tolist"):
+            codes = codes.tolist()
+        trial = list(s)
+        for i, c in enumerate(codes):
+            if code_to_signed(int(c)) > 0:
+                trial[i] = -trial[i]
+        if cut_of(trial) > cut_of(s):
+            s = trial
         return s
 
     best = polish(starts[0])

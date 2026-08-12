@@ -91,6 +91,9 @@ python -m fsot_quantum.medium_next
 # Keep going: concepts + fridge/hits probe + more Lean math/QI jobs
 python -m fsot_quantum.keep_going
 
+# QC/QM accuracy board — hired jobs on ordinary hardware
+python -m fsot_quantum.qc_accuracy
+
 # QAOA exact column (must be 11/11)
 python -c "from fsot_quantum.qaoa_fsot import run_qaoa_panel; r=run_qaoa_panel(); print(r['metrics_summary']); assert r['overall_ok']"
 
@@ -133,6 +136,7 @@ cd zig; zig build run; cd ..
 | Medium / three-string / QI jobs | `results/MEDIUM_NEXT.md` |
 | Concepts (traceable pictures) | `docs/CONCEPTS.md` |
 | Keep going (fridge probe + 116 QI jobs) | `results/KEEP_GOING.md` |
+| QC/QM accuracy board | `results/QC_ACCURACY.md` |
 | Skeptic kit | `results/SKEPTIC_KIT.md` |
 
 Device path is **exactly** FSOT-GPU: torch CUDA buffers when available.

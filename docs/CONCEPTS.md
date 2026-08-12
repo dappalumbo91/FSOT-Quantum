@@ -80,28 +80,14 @@ Then \(S\) relaxes. Wave = \(\Delta S\), not a new coefficient.
 
 ---
 
-## C5 — Why a fridge? (author thought, 2026-08-12)
+## C5 — Aside only (not doctrine)
 
-**Said (plain):** If it really works like water and strings, maybe we need ultra-cold machines because that is a **different working state** of the medium — cold brings it into usability at our scale.
-
-**FSOT reading (interpretation, not a new lab claim)**
-
-- Superposed / usable compute water = trit **0** = field inside \(\pm\Theta\).
-- Heat = extra **hits** / jostle. Hits ride the same `recent_hits` slot in \(T_1\), and a seed kick \(\propto |\mathrm{Chaos}|\) on the field.
-- More jostle → more sites leave the quiet band → **snap to ±1** (poles). That is decoherence in water language.
-- A dilution fridge tries to **hold hits near 0** so the water stays still long enough to strum.
-- QC domain is already **unobserved / damping** (\(S<0\)): compute does not turn the look valve. The fridge is the *physical* way to keep from accidentally looking (thermal kicks).
-
-**This fold does not need a fridge** because the substrate is the **math** (collapse / consensus / GPU), not a physical superposition held in aluminum.
-
-**Probe (seed-locked, no free T):** `fsot_quantum/thermal_hits.py`  
-Raise `recent_hits` and a Chaos-kick on a quiet field → superposed fraction should **fall**. That is the fridge thought, tested as a pattern, not sold as “we derived millikelvin.”
-
-**Not claimed:** a new state of matter, or that ice = a qubit.
+Author noticed, once: ice, metals, rock — we often chill or freeze a medium to *use* it. Same pattern as a QPU fridge.  
+**Not** a claim, not a program goal. Left here so it is not mistaken for a research track.
 
 ---
 
-## C6 — LLM vs this fold (author, out of scope here)
+## C6 — LLM vs this fold (out of scope here)
 
 LLMs are full of free parameters. FSOT is parameter-free. They fight.  
 That problem lives in FSOT-GPU, not this QC job fold.

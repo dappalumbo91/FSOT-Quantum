@@ -1,0 +1,35 @@
+{
+  "timestamp": "2026-08-12T23:49:37.219614+00:00",
+  "suite": "qc_accuracy",
+  "pin": "D1D38A",
+  "goal": "Same QC/QM jobs, FSOT math on ordinary hardware \u2014 not a dilution fridge. Accuracy ledger only.",
+  "jobs_ok": {
+    "chemistry_0_5": true,
+    "qm_waves_0_5": true,
+    "field_opt_exact": true,
+    "gset_g1": true,
+    "dj": true,
+    "bv": true,
+    "search": true,
+    "period": true,
+    "factor": true,
+    "entangle_qi": true,
+    "domain_signs": true
+  },
+  "detail": {
+    "chemistry": "68/68 @0.5% median=0.02024340075118086",
+    "qm_waves": "14/14 @0.5% median=0.002173459608308579",
+    "field_opt": "13/13 exact",
+    "g1_rel_pct_vs_bks": 1.952856159669649,
+    "g1_cut": 11397,
+    "period": "4/4",
+    "factor": "5/5",
+    "entangle_qi": "116/116"
+  },
+  "overall_ok": true,
+  "wall_seconds": 1.53167620000022,
+  "not_this_program": [
+    "cryogenic QPU design",
+    "LLM free-parameter substrate"
+  ]
+}
