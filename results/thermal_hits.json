@@ -1,0 +1,59 @@
+{
+  "panel": "thermal_hits_fridge",
+  "concept": "C5",
+  "instances": [
+    {
+      "hits": 0,
+      "frac_superposed": 1.0,
+      "n_super": 64,
+      "n": 64,
+      "S_QC_at_hits": -0.14767310363368633,
+      "T1": -1.3514171596284354
+    },
+    {
+      "hits": 1,
+      "frac_superposed": 1.0,
+      "n_super": 64,
+      "n": 64,
+      "S_QC_at_hits": -0.1471342206125599,
+      "T1": -1.3501347816191942
+    },
+    {
+      "hits": 1,
+      "frac_superposed": 1.0,
+      "n_super": 64,
+      "n": 64,
+      "S_QC_at_hits": -0.1471342206125599,
+      "T1": -1.3501347816191942
+    },
+    {
+      "hits": 3,
+      "frac_superposed": 1.0,
+      "n_super": 64,
+      "n": 64,
+      "S_QC_at_hits": -0.14605802344142133,
+      "T1": -1.347573759037724
+    },
+    {
+      "hits": 5,
+      "frac_superposed": 1.0,
+      "n_super": 64,
+      "n": 64,
+      "S_QC_at_hits": -0.14498391464220575,
+      "T1": -1.345017706147493
+    },
+    {
+      "hits": 8,
+      "frac_superposed": 0.5,
+      "n_super": 32,
+      "n": 64,
+      "S_QC_at_hits": -0.14337665808646782,
+      "T1": -1.341192923436806
+    }
+  ],
+  "frac_super_cold": 1.0,
+  "frac_super_hot": 0.5,
+  "fridge_pattern_ok": true,
+  "overall_ok": true,
+  "note": "Ultra-cold analog = hits 0 \u2192 stay in \u00b1\u0398 (water usable). Heat analog = more hits \u2192 snap to poles. Not a millikelvin derivation."
+}

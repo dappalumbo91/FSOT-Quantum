@@ -1,0 +1,49 @@
+{
+  "timestamp": "2026-08-12T23:44:01.749419+00:00",
+  "suite": "keep_going",
+  "pin": "D1D38A",
+  "concepts_doc": "docs/CONCEPTS.md",
+  "concepts_ok": true,
+  "medium_ok": true,
+  "entangle_qi": {
+    "ok": true,
+    "replayed": 116,
+    "green": "116/116",
+    "band5": "116/116",
+    "skipped": 3
+  },
+  "thermal_hits": {
+    "ok": true,
+    "fridge_pattern_ok": true,
+    "frac_super_cold": 1.0,
+    "frac_super_hot": 0.5,
+    "ladder": [
+      {
+        "hits": 0,
+        "frac_super": 1.0
+      },
+      {
+        "hits": 1,
+        "frac_super": 1.0
+      },
+      {
+        "hits": 1,
+        "frac_super": 1.0
+      },
+      {
+        "hits": 3,
+        "frac_super": 1.0
+      },
+      {
+        "hits": 5,
+        "frac_super": 1.0
+      },
+      {
+        "hits": 8,
+        "frac_super": 0.5
+      }
+    ]
+  },
+  "overall_ok": true,
+  "wall_seconds": 1.398425599996699
+}

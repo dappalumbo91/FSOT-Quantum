@@ -88,6 +88,9 @@ python -m fsot_quantum.bleed_refine
 # Water / three-string / look-snap medium + Lean entanglement/QI jobs
 python -m fsot_quantum.medium_next
 
+# Keep going: concepts + fridge/hits probe + more Lean math/QI jobs
+python -m fsot_quantum.keep_going
+
 # QAOA exact column (must be 11/11)
 python -c "from fsot_quantum.qaoa_fsot import run_qaoa_panel; r=run_qaoa_panel(); print(r['metrics_summary']); assert r['overall_ok']"
 
@@ -128,6 +131,8 @@ cd zig; zig build run; cd ..
 | Margin vs QPU field results | `results/MARGIN_VS_QPU.md` |
 | Bleed refine (full Lean fabric) | `results/BLEED_REFINE.md` |
 | Medium / three-string / QI jobs | `results/MEDIUM_NEXT.md` |
+| Concepts (traceable pictures) | `docs/CONCEPTS.md` |
+| Keep going (fridge probe + 116 QI jobs) | `results/KEEP_GOING.md` |
 | Skeptic kit | `results/SKEPTIC_KIT.md` |
 
 Device path is **exactly** FSOT-GPU: torch CUDA buffers when available.

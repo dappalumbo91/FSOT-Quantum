@@ -21,6 +21,7 @@ LEAN_DATA = ROOT / "_ref" / "FSOT-2.1-Lean" / "data"
 FILES = (
     "quantum_mechanics_entanglement_depth_panel_benchmark.json",
     "quantum_information_benchmark.json",
+    "quantum_computing_math_depth_panel_benchmark.json",
 )
 
 
