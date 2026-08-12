@@ -142,6 +142,37 @@ pub fn isingCycle4ExactOk() bool {
     return best == -4;
 }
 
+/// Integer fold budget twin of Python/Lean fold_budget_formal: 3*n*7+27
+pub fn foldBudget(n: u32) u64 {
+    return 3 * @as(u64, n) * 7 + 27;
+}
+
+pub fn hilbertAmps(n: u32) u64 {
+    return @as(u64, 1) << @intCast(n);
+}
+
+pub fn foldLtHilbertOk() bool {
+    if (foldBudget(8) != 195) return false;
+    if (!(foldBudget(8) < hilbertAmps(8))) return false;
+    if (!(foldBudget(16) < hilbertAmps(16))) return false;
+    if (!(foldBudget(32) < hilbertAmps(32))) return false;
+    return true;
+}
+
+/// Logical CNOT on bits (lattice-surgery fold twin)
+pub fn cnotBit(c: u8, t: u8) u8 {
+    return t ^ (c & 1);
+}
+
+pub fn cnotFoldOk() bool {
+    // truth table
+    if (cnotBit(0, 0) != 0) return false;
+    if (cnotBit(0, 1) != 1) return false;
+    if (cnotBit(1, 0) != 1) return false;
+    if (cnotBit(1, 1) != 0) return false;
+    return true;
+}
+
 pub fn selftest() bool {
     if (!packRoundtripOk()) return false;
     if (!collapseRoundtripOk()) return false;
@@ -152,5 +183,7 @@ pub fn selftest() bool {
     if (b[0] != -1 or b[1] != -1) return false;
     if (!bvRecover101()) return false;
     if (!isingCycle4ExactOk()) return false;
+    if (!foldLtHilbertOk()) return false;
+    if (!cnotFoldOk()) return false;
     return true;
 }

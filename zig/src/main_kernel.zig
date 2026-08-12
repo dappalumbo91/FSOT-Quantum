@@ -72,6 +72,12 @@ fn kmain() noreturn {
     serial.write("test:ising4...\n");
     if (qc.isingCycle4ExactOk()) serial.write("FSOT ising4 PASS\n") else serial.write("FSOT ising4 FAIL\n");
 
+    serial.write("test:fold...\n");
+    if (qc.foldLtHilbertOk()) serial.write("FSOT fold PASS\n") else serial.write("FSOT fold FAIL\n");
+
+    serial.write("test:cnotfold...\n");
+    if (qc.cnotFoldOk()) serial.write("FSOT cnotfold PASS\n") else serial.write("FSOT cnotfold FAIL\n");
+
     serial.write("test:selftest...\n");
     const ok = qc.selftest();
     if (ok) {

@@ -1,0 +1,110 @@
+{
+  "panel": "gset_style_maxcut_fold",
+  "instances": [
+    {
+      "name": "gset_like_n40",
+      "n": 40,
+      "n_edges": 100,
+      "avg_degree_target": 5,
+      "cut_fold": 100,
+      "ratio_lb": 1.0,
+      "ratio_floor": 0.6180339887498948,
+      "ok": true,
+      "seconds": 0.12798910000128672,
+      "hilbert_amps_if_QAOA": 1099511627776,
+      "fold_budget": 769,
+      "fold_budget_formal": 867,
+      "cost": {
+        "nominal_n": 40,
+        "hilbert_amplitudes": 1099511627776,
+        "hilbert_note": "C^{2^n} statevector entries (brute sim bottleneck)",
+        "fold_probe_budget": 1882,
+        "fold_depth": 3,
+        "fold_D_eff_cost_proxy": 0.7097596350416266,
+        "complexity_weight_phi": 0.6180339887498949,
+        "ratio_hilbert_over_fold": 584225094.4612114,
+        "winner_when": "fold when structure admits closed form / poly probes"
+      }
+    },
+    {
+      "name": "gset_like_n60",
+      "n": 60,
+      "n_edges": 150,
+      "avg_degree_target": 5,
+      "cut_fold": 150,
+      "ratio_lb": 1.0,
+      "ratio_floor": 0.6180339887498948,
+      "ok": true,
+      "seconds": 0.4296935000020312,
+      "hilbert_amps_if_QAOA": 1152921504606846976,
+      "fold_budget": 1140,
+      "fold_budget_formal": 1287,
+      "cost": {
+        "nominal_n": 60,
+        "hilbert_amplitudes": 1152921504606846976,
+        "hilbert_note": "C^{2^n} statevector entries (brute sim bottleneck)",
+        "fold_probe_budget": 2809,
+        "fold_depth": 3,
+        "fold_D_eff_cost_proxy": 0.7097596350416266,
+        "complexity_weight_phi": 0.6180339887498949,
+        "ratio_hilbert_over_fold": 410438413886382.0,
+        "winner_when": "fold when structure admits closed form / poly probes"
+      }
+    },
+    {
+      "name": "gset_like_n80",
+      "n": 80,
+      "n_edges": 200,
+      "avg_degree_target": 5,
+      "cut_fold": 200,
+      "ratio_lb": 1.0,
+      "ratio_floor": 0.6180339887498948,
+      "ok": true,
+      "seconds": 0.9635271999941324,
+      "hilbert_amps_if_QAOA": 4611686018427387904,
+      "fold_budget": 1511,
+      "fold_budget_formal": 1707,
+      "cost": {
+        "nominal_n": 80,
+        "hilbert_amplitudes": 1208925819614629174706176,
+        "hilbert_note": "C^{2^n} statevector entries (brute sim bottleneck)",
+        "fold_probe_budget": 3736,
+        "fold_depth": 3,
+        "fold_D_eff_cost_proxy": 0.7097596350416266,
+        "complexity_weight_phi": 0.6180339887498949,
+        "ratio_hilbert_over_fold": 3.235882814814318e+20,
+        "winner_when": "fold when structure admits closed form / poly probes"
+      }
+    },
+    {
+      "name": "gset_like_n100",
+      "n": 100,
+      "n_edges": 250,
+      "avg_degree_target": 5,
+      "cut_fold": 250,
+      "ratio_lb": 1.0,
+      "ratio_floor": 0.6180339887498948,
+      "ok": true,
+      "seconds": 2.088375500003167,
+      "hilbert_amps_if_QAOA": 4611686018427387904,
+      "fold_budget": 1882,
+      "fold_budget_formal": 2127,
+      "cost": {
+        "nominal_n": 100,
+        "hilbert_amplitudes": 1267650600228229401496703205376,
+        "hilbert_note": "C^{2^n} statevector entries (brute sim bottleneck)",
+        "fold_probe_budget": 4663,
+        "fold_depth": 3,
+        "fold_D_eff_cost_proxy": 0.7097596350416266,
+        "complexity_weight_phi": 0.6180339887498949,
+        "ratio_hilbert_over_fold": 2.7185301313065182e+26,
+        "winner_when": "fold when structure admits closed form / poly probes"
+      }
+    }
+  ],
+  "pass_count": 4,
+  "total": 4,
+  "overall_ok": true,
+  "ratio_floor": 0.6180339887498948,
+  "note": "Gset-style seed-locked sparse MaxCut (not the downloaded Gset files). Fold local search vs 1/\u03c6 floor \u2014 no 2^n QAOA sim."
+}

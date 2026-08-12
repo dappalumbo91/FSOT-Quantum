@@ -63,6 +63,7 @@ Regenerate: `python -m fsot_quantum.capability_suite`
 | **Fold-not-Hilbert** (scale by D_eff folds, not 2^n) | green | `python -m fsot_quantum.fold_suite` |
 | **Fold v2** (chem 68/68 @0.5%, GPU fold queue, surface+phase) | green | `python -m fsot_quantum.fold_v2` |
 | **Fold v3** (MaxCut/Ising ledger, multi-stream, lattice surgery) | green | `python -m fsot_quantum.fold_v3` |
+| **Fold v4** (mp scheduler, teleport, Gset-style, formal cost) | green | `python -m fsot_quantum.fold_v4` |
 
 ## Scaling law (important)
 
@@ -77,11 +78,11 @@ See `docs/FOLD_NOT_HILBERT.md`.
 
 ## Next builds
 
-1. Multi-GPU / multi-process fold scheduler (beyond single-device streams)
-1. Deeper lattice-surgery sequences (teleportation, multi-logical algorithms)
-1. Zig/QEMU twin of fold register (same multi-lang pattern)
-1. External public MaxCut datasets residual ledger (Gset-style) under fold cost
-1. Formal multiprover stamp of fold cost contrast lemmas
+1. Official Gset file residuals (if archive present locally) under fold cost
+1. Multi-GPU distributed fold scheduler
+1. Longer logical algorithms (adder / QFT-role) as fold sequences
+1. QEMU serial gate for fold budget + CNOT fold (kernel already extended)
+1. Paper-facing fold-vs-Hilbert cost note (arxiv pipeline)
 
 ## How to run
 

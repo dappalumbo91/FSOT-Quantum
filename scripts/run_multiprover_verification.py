@@ -130,6 +130,20 @@ def python_runtime_obligations() -> dict[str, Any]:
         and DOMAINS["Quantum_Computing"].D_eff == 11,
     )
 
+    # Q-FOLD cost contrast (integer proxy shared with Lean/Coq/Isabelle/Zig)
+    from fsot_quantum.fold_complexity import fold_budget_formal
+
+    add(
+        "Q-FOLD-001",
+        fold_budget_formal(8) == 195 and fold_budget_formal(8) < (1 << 8),
+        {"fold8": fold_budget_formal(8), "hilbert8": 1 << 8},
+    )
+    add(
+        "Q-FOLD-002",
+        fold_budget_formal(16) < (1 << 16) and fold_budget_formal(32) < (1 << 32),
+        {"fold16": fold_budget_formal(16), "fold32": fold_budget_formal(32)},
+    )
+
     ok = all(c["ok"] for c in checks)
     return {
         "prover": "python_runtime",
@@ -174,7 +188,7 @@ def run_coq() -> dict[str, Any]:
             "reason": "coqc not on PATH",
         }
     coq_dir = ROOT / "formal" / "coq"
-    files = ["Trinary.v", "Gates.v", "Pack.v", "Domains.v", "Hilbert.v"]
+    files = ["Trinary.v", "Gates.v", "Pack.v", "Domains.v", "Hilbert.v", "Fold.v"]
     logs = []
     all_ok = True
     # Plain coqc in-order so Require Import Trinary finds Trinary.vo (no -Q rename)

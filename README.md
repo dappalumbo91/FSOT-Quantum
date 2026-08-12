@@ -67,6 +67,9 @@ python -m fsot_quantum.fold_v2
 # Fold v3: MaxCut/Ising ledger · multi-stream scheduler · lattice surgery
 python -m fsot_quantum.fold_v3
 
+# Fold v4: multi-process · teleport sequences · Gset-style · formal cost
+python -m fsot_quantum.fold_v4
+
 # QAOA exact column (must be 11/11)
 python -c "from fsot_quantum.qaoa_fsot import run_qaoa_panel; r=run_qaoa_panel(); print(r['metrics_summary']); assert r['overall_ok']"
 
@@ -100,6 +103,7 @@ cd zig; zig build run; cd ..
 | Fold-not-Hilbert (scaling law) | `results/FOLD_NOT_HILBERT.md` |
 | Fold v2 (chem + GPU queue + phase) | `results/FOLD_V2.md` |
 | Fold v3 (benchmarks + surgery + streams) | `results/FOLD_V3.md` |
+| Fold v4 (mp + teleport + Gset + formal) | `results/FOLD_V4.md` |
 | Skeptic kit | `results/SKEPTIC_KIT.md` |
 
 Device path is **exactly** FSOT-GPU: torch CUDA buffers when available.

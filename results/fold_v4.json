@@ -1,0 +1,98 @@
+{
+  "timestamp": "2026-08-12T21:26:35.197441+00:00",
+  "suite": "fold_v4_natural_steps",
+  "pin": "D1D38A",
+  "thesis": "Fold v4: multi-process scheduler, teleportation sequences, Gset-style MaxCut ledger, fold-vs-Hilbert formal cost, Zig twin",
+  "mp_scheduler": {
+    "ok": true,
+    "workers": 4,
+    "n_tasks": 26,
+    "serial_s": 1.2413387000051443,
+    "pool_s": 1.939772300000186,
+    "speedup": 0.6399404198137201
+  },
+  "lattice_teleport": {
+    "ok": true,
+    "pass": "30/30"
+  },
+  "gset_style": {
+    "ok": true,
+    "pass": "4/4",
+    "instances": [
+      {
+        "name": "gset_like_n40",
+        "n": 40,
+        "ratio": 1.0,
+        "ok": true,
+        "s": 0.12798910000128672
+      },
+      {
+        "name": "gset_like_n60",
+        "n": 60,
+        "ratio": 1.0,
+        "ok": true,
+        "s": 0.4296935000020312
+      },
+      {
+        "name": "gset_like_n80",
+        "n": 80,
+        "ratio": 1.0,
+        "ok": true,
+        "s": 0.9635271999941324
+      },
+      {
+        "name": "gset_like_n100",
+        "n": 100,
+        "ratio": 1.0,
+        "ok": true,
+        "s": 2.088375500003167
+      }
+    ]
+  },
+  "formal_fold_cost": {
+    "ok": true,
+    "checks": {
+      "fold8": true,
+      "fold16": true,
+      "fold20": true,
+      "fold32": true,
+      "runtime_le_formal8": true
+    },
+    "status": "pass"
+  },
+  "zig_fold_twin": {
+    "ok": true,
+    "status": "pass",
+    "reason": null
+  },
+  "cost_contrast_n32": {
+    "nominal_n": 32,
+    "hilbert_amplitudes": 4294967296,
+    "hilbert_note": "C^{2^n} statevector entries (brute sim bottleneck)",
+    "fold_probe_budget": 621,
+    "fold_depth": 3,
+    "fold_D_eff_cost_proxy": 0.7097596350416266,
+    "complexity_weight_phi": 0.6180339887498949,
+    "ratio_hilbert_over_fold": 6916211.426731079,
+    "winner_when": "fold when structure admits closed form / poly probes"
+  },
+  "fold_budget_formal": {
+    "8": 195,
+    "16": 363,
+    "20": 447,
+    "32": 699
+  },
+  "overall_ok": true,
+  "wall_seconds": 7.638541399996029,
+  "now_implemented": [
+    "multi-process fold scheduler (search/period/factor/Ising)",
+    "lattice-surgery SWAP / copy / GHZ-class / A\u2192B\u2192C teleport chain",
+    "Gset-style MaxCut n=40..100 under 1/\u03c6 floor + cost ledger",
+    "foldBudget vs 2^n lemmas (Lean/Coq/Isabelle + Python + Zig)"
+  ],
+  "still_not_claimed": [
+    "downloaded official Gset archive residuals",
+    "continuum FTQC teleportation thresholds",
+    "multi-GPU distributed fold (this is multi-process on one host)"
+  ]
+}

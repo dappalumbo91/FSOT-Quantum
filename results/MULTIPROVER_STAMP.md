@@ -3,7 +3,7 @@
 **stamp:** `FSOT_QUANTUM_MULTIPROVER_OK`
 **overall_ok:** `True`
 **pin:** `D1D38A` (expect D1D38A)
-**wall_s:** `18.38`
+**wall_s:** `17.92`
 
 ## Provers
 
@@ -14,7 +14,7 @@
 | coq | pass | True |
 | isabelle | pass | True |
 
-## Obligations: 16
+## Obligations: 18
 
 Spine: `verification/obligations/quantum_spine.json`
 

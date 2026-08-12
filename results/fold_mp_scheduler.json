@@ -1,0 +1,32 @@
+{
+  "panel": "fold_mp_scheduler",
+  "n_tasks": 26,
+  "ncpu": 16,
+  "workers": 4,
+  "serial": {
+    "mode": "serial",
+    "wall_seconds": 1.2413387000051443,
+    "ok": true,
+    "pass": "26/26",
+    "n_tasks": 26
+  },
+  "pooled": {
+    "mode": "process_pool",
+    "workers": 4,
+    "wall_seconds": 1.939772300000186,
+    "ok": true,
+    "pass": "26/26",
+    "n_tasks": 26
+  },
+  "speedup_serial_over_pool": 0.6399404198137201,
+  "speedup_floor": 0.6180339887498948,
+  "complexity_weight": 0.6180339887498949,
+  "fold_depth": {
+    "shallow": 1,
+    "mid": 3,
+    "deep": 4,
+    "meta": 8
+  },
+  "overall_ok": true,
+  "note": "Process-pool fold jobs (search/period/factor/Ising) \u2014 not Hilbert 2^n tensors. Beyond CUDA streams."
+}

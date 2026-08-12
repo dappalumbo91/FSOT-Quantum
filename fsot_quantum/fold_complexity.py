@@ -94,6 +94,17 @@ def hilbert_amp_cost(n_qubits: int) -> int:
     return 1 << n_qubits
 
 
+def fold_budget_formal(n: int) -> int:
+    """
+    Integer fold-budget proxy shared with Lean/Coq/Isabelle/Zig.
+
+    mid-depth=3, 10·φ/(1+φ) < 7, + Metatron 27:
+      3 · n · 7 + 27
+    Upper-bounds the runtime poly probe budget for n ≥ 1.
+    """
+    return 3 * int(n) * 7 + 27
+
+
 def fold_probe_budget(structure_size: int, depth: int | None = None) -> int:
     """
     How many structure probes a fold path is allowed — poly in structure,

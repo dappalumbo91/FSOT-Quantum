@@ -147,6 +147,24 @@
       "coq": "conjunction of lemmas",
       "isabelle": "conjunction of lemmas",
       "python": "structure constants"
+    },
+    {
+      "id": "Q-FOLD-001",
+      "name": "fold_budget_formal_eight",
+      "statement": "foldBudget(8)=195 and 195 < 2^8=256",
+      "lean": "FSOT.Quantum.Fold.fold_lt_hilbert_eight",
+      "coq": "fold_lt_hilbert_eight",
+      "isabelle": "fold_lt_hilbert_eight",
+      "python": "fold_budget_formal(8)==195 and fold_budget_formal(8) < (1<<8)"
+    },
+    {
+      "id": "Q-FOLD-002",
+      "name": "fold_lt_hilbert_sixteen_thirtytwo",
+      "statement": "foldBudget(16)<2^16 and foldBudget(32)<2^32",
+      "lean": "FSOT.Quantum.Fold.fold_cost_surface",
+      "coq": "fold_lt_hilbert_sixteen / fold_lt_hilbert_thirtytwo",
+      "isabelle": "fold_lt_hilbert_sixteen / fold_lt_hilbert_thirtytwo",
+      "python": "fold_budget_formal(n) < 2**n for n in (16,32)"
     }
   ]
 }

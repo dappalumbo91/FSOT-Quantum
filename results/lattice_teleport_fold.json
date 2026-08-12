@@ -1,0 +1,416 @@
+{
+  "panel": "lattice_teleport_fold",
+  "ladder": {
+    "d3": 3,
+    "d5": 5,
+    "d7": 7
+  },
+  "instances": [
+    {
+      "op": "logical_swap_fold",
+      "in": [
+        0,
+        0
+      ],
+      "out": [
+        0,
+        0
+      ],
+      "expect": [
+        0,
+        0
+      ],
+      "ok": true,
+      "d": 3,
+      "job": "swap_d3_00"
+    },
+    {
+      "op": "logical_swap_fold",
+      "in": [
+        0,
+        1
+      ],
+      "out": [
+        1,
+        0
+      ],
+      "expect": [
+        1,
+        0
+      ],
+      "ok": true,
+      "d": 3,
+      "job": "swap_d3_01"
+    },
+    {
+      "op": "logical_swap_fold",
+      "in": [
+        1,
+        0
+      ],
+      "out": [
+        0,
+        1
+      ],
+      "expect": [
+        0,
+        1
+      ],
+      "ok": true,
+      "d": 3,
+      "job": "swap_d3_10"
+    },
+    {
+      "op": "logical_swap_fold",
+      "in": [
+        1,
+        1
+      ],
+      "out": [
+        1,
+        1
+      ],
+      "expect": [
+        1,
+        1
+      ],
+      "ok": true,
+      "d": 3,
+      "job": "swap_d3_11"
+    },
+    {
+      "op": "logical_copy_teleport_fold",
+      "src": 0,
+      "src_out": 0,
+      "dest_out": 0,
+      "zz": 1,
+      "ok": true,
+      "d": 3,
+      "job": "copy_d3_0"
+    },
+    {
+      "op": "logical_ghz_class_fold",
+      "bit": 0,
+      "out": [
+        0,
+        0,
+        0
+      ],
+      "ok": true,
+      "d": 3,
+      "job": "ghz_d3_0"
+    },
+    {
+      "op": "logical_teleport_chain_fold",
+      "bit": 0,
+      "mid": 0,
+      "final": 0,
+      "ok": true,
+      "d": 3,
+      "job": "teleport_chain_d3_0"
+    },
+    {
+      "op": "logical_copy_teleport_fold",
+      "src": 1,
+      "src_out": 1,
+      "dest_out": 1,
+      "zz": 1,
+      "ok": true,
+      "d": 3,
+      "job": "copy_d3_1"
+    },
+    {
+      "op": "logical_ghz_class_fold",
+      "bit": 1,
+      "out": [
+        1,
+        1,
+        1
+      ],
+      "ok": true,
+      "d": 3,
+      "job": "ghz_d3_1"
+    },
+    {
+      "op": "logical_teleport_chain_fold",
+      "bit": 1,
+      "mid": 1,
+      "final": 1,
+      "ok": true,
+      "d": 3,
+      "job": "teleport_chain_d3_1"
+    },
+    {
+      "op": "logical_swap_fold",
+      "in": [
+        0,
+        0
+      ],
+      "out": [
+        0,
+        0
+      ],
+      "expect": [
+        0,
+        0
+      ],
+      "ok": true,
+      "d": 5,
+      "job": "swap_d5_00"
+    },
+    {
+      "op": "logical_swap_fold",
+      "in": [
+        0,
+        1
+      ],
+      "out": [
+        1,
+        0
+      ],
+      "expect": [
+        1,
+        0
+      ],
+      "ok": true,
+      "d": 5,
+      "job": "swap_d5_01"
+    },
+    {
+      "op": "logical_swap_fold",
+      "in": [
+        1,
+        0
+      ],
+      "out": [
+        0,
+        1
+      ],
+      "expect": [
+        0,
+        1
+      ],
+      "ok": true,
+      "d": 5,
+      "job": "swap_d5_10"
+    },
+    {
+      "op": "logical_swap_fold",
+      "in": [
+        1,
+        1
+      ],
+      "out": [
+        1,
+        1
+      ],
+      "expect": [
+        1,
+        1
+      ],
+      "ok": true,
+      "d": 5,
+      "job": "swap_d5_11"
+    },
+    {
+      "op": "logical_copy_teleport_fold",
+      "src": 0,
+      "src_out": 0,
+      "dest_out": 0,
+      "zz": 1,
+      "ok": true,
+      "d": 5,
+      "job": "copy_d5_0"
+    },
+    {
+      "op": "logical_ghz_class_fold",
+      "bit": 0,
+      "out": [
+        0,
+        0,
+        0
+      ],
+      "ok": true,
+      "d": 5,
+      "job": "ghz_d5_0"
+    },
+    {
+      "op": "logical_teleport_chain_fold",
+      "bit": 0,
+      "mid": 0,
+      "final": 0,
+      "ok": true,
+      "d": 5,
+      "job": "teleport_chain_d5_0"
+    },
+    {
+      "op": "logical_copy_teleport_fold",
+      "src": 1,
+      "src_out": 1,
+      "dest_out": 1,
+      "zz": 1,
+      "ok": true,
+      "d": 5,
+      "job": "copy_d5_1"
+    },
+    {
+      "op": "logical_ghz_class_fold",
+      "bit": 1,
+      "out": [
+        1,
+        1,
+        1
+      ],
+      "ok": true,
+      "d": 5,
+      "job": "ghz_d5_1"
+    },
+    {
+      "op": "logical_teleport_chain_fold",
+      "bit": 1,
+      "mid": 1,
+      "final": 1,
+      "ok": true,
+      "d": 5,
+      "job": "teleport_chain_d5_1"
+    },
+    {
+      "op": "logical_swap_fold",
+      "in": [
+        0,
+        0
+      ],
+      "out": [
+        0,
+        0
+      ],
+      "expect": [
+        0,
+        0
+      ],
+      "ok": true,
+      "d": 7,
+      "job": "swap_d7_00"
+    },
+    {
+      "op": "logical_swap_fold",
+      "in": [
+        0,
+        1
+      ],
+      "out": [
+        1,
+        0
+      ],
+      "expect": [
+        1,
+        0
+      ],
+      "ok": true,
+      "d": 7,
+      "job": "swap_d7_01"
+    },
+    {
+      "op": "logical_swap_fold",
+      "in": [
+        1,
+        0
+      ],
+      "out": [
+        0,
+        1
+      ],
+      "expect": [
+        0,
+        1
+      ],
+      "ok": true,
+      "d": 7,
+      "job": "swap_d7_10"
+    },
+    {
+      "op": "logical_swap_fold",
+      "in": [
+        1,
+        1
+      ],
+      "out": [
+        1,
+        1
+      ],
+      "expect": [
+        1,
+        1
+      ],
+      "ok": true,
+      "d": 7,
+      "job": "swap_d7_11"
+    },
+    {
+      "op": "logical_copy_teleport_fold",
+      "src": 0,
+      "src_out": 0,
+      "dest_out": 0,
+      "zz": 1,
+      "ok": true,
+      "d": 7,
+      "job": "copy_d7_0"
+    },
+    {
+      "op": "logical_ghz_class_fold",
+      "bit": 0,
+      "out": [
+        0,
+        0,
+        0
+      ],
+      "ok": true,
+      "d": 7,
+      "job": "ghz_d7_0"
+    },
+    {
+      "op": "logical_teleport_chain_fold",
+      "bit": 0,
+      "mid": 0,
+      "final": 0,
+      "ok": true,
+      "d": 7,
+      "job": "teleport_chain_d7_0"
+    },
+    {
+      "op": "logical_copy_teleport_fold",
+      "src": 1,
+      "src_out": 1,
+      "dest_out": 1,
+      "zz": 1,
+      "ok": true,
+      "d": 7,
+      "job": "copy_d7_1"
+    },
+    {
+      "op": "logical_ghz_class_fold",
+      "bit": 1,
+      "out": [
+        1,
+        1,
+        1
+      ],
+      "ok": true,
+      "d": 7,
+      "job": "ghz_d7_1"
+    },
+    {
+      "op": "logical_teleport_chain_fold",
+      "bit": 1,
+      "mid": 1,
+      "final": 1,
+      "ok": true,
+      "d": 7,
+      "job": "teleport_chain_d7_1"
+    }
+  ],
+  "pass_count": 30,
+  "total": 30,
+  "overall_ok": true,
+  "note": "SWAP / copy / GHZ-class / A\u2192B\u2192C teleport chain as fold sequences. Not a device-scale FTQC teleportation threshold."
+}
