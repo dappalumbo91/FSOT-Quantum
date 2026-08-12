@@ -1,0 +1,300 @@
+{
+  "timestamp": "2026-08-12T23:38:01.615128+00:00",
+  "suite": "bleed_refine",
+  "pin": "D1D38A",
+  "thesis": "Quantum jobs are not stuck at one D_eff. QM/QC/QO/particle/chem/CM bleed through A_bleed\u00b7POOF\u00b7|S_i||S_j| / (1+|\u0394D|/25), then relax. Same connective law as FSOT-2.1-Lean complex-system derivation.",
+  "bleed": {
+    "yin_yang": 0.510728588773961,
+    "steps": 7,
+    "dt": 0.022567101748263627,
+    "qc_job_mod": {
+      "mod": 1.0,
+      "I_QC_CM": 1.0,
+      "I_QM_QC": 1.0
+    },
+    "QM_S_eq": 0.9555063001027194,
+    "QC_S_eq": -0.14767310363368633,
+    "QM_S_coupled": 0.9335649278951473,
+    "QC_S_coupled": -0.1423751227526561,
+    "dS_QM": -0.021941372207572085,
+    "dS_QC": 0.005297980881030229,
+    "n_edges": 15,
+    "note_I": "I_ab=1 when signs oppose (emergence vs damping). The wave is \u0394S after relaxation, not I+\u2212I\u2212."
+  },
+  "interfaces": {
+    "QM-QC": {
+      "kappa": 0.018895026822594838,
+      "I_bare": 1.0,
+      "I_coupled": 1.0,
+      "D": [
+        6.0,
+        11.0
+      ]
+    },
+    "QM-QO": {
+      "kappa": 0.05222612024241489,
+      "I_bare": 0.4013676455954838,
+      "I_coupled": 0.38798740289258565,
+      "D": [
+        6.0,
+        11.0
+      ]
+    },
+    "QM-PART": {
+      "kappa": 0.1403158030642765,
+      "I_bare": 0.0026721271996416663,
+      "I_coupled": 0.0065150719113998565,
+      "D": [
+        6.0,
+        5.0
+      ]
+    },
+    "QM-ATOM": {
+      "kappa": 0.10863452924115155,
+      "I_bare": 0.12988737424580646,
+      "I_coupled": 0.11545532947034158,
+      "D": [
+        6.0,
+        7.0
+      ]
+    },
+    "QC-QO": {
+      "kappa": 0.009685830349142933,
+      "I_bare": 1.0,
+      "I_coupled": 1.0,
+      "D": [
+        11.0,
+        11.0
+      ]
+    },
+    "QC-CM": {
+      "kappa": 0.007169935191186858,
+      "I_bare": 1.0,
+      "I_coupled": 1.0,
+      "D": [
+        11.0,
+        14.0
+      ]
+    },
+    "QC-CHEM": {
+      "kappa": 0.008641993180534316,
+      "I_bare": 1.0,
+      "I_coupled": 1.0,
+      "D": [
+        11.0,
+        8.0
+      ]
+    },
+    "QC-MOL": {
+      "kappa": 0.007351277824241706,
+      "I_bare": 1.0,
+      "I_coupled": 1.0,
+      "D": [
+        11.0,
+        9.0
+      ]
+    },
+    "PART-HEP": {
+      "kappa": 0.12532731961917815,
+      "I_bare": 0.034926863094143154,
+      "I_coupled": 0.03183417910316917,
+      "D": [
+        5.0,
+        7.0
+      ]
+    },
+    "PART-ATOM": {
+      "kappa": 0.10405345013011283,
+      "I_bare": 0.12725941568238744,
+      "I_coupled": 0.1218787242329115,
+      "D": [
+        5.0,
+        7.0
+      ]
+    },
+    "ATOM-CHEM": {
+      "kappa": 0.04637362757096543,
+      "I_bare": 0.2867338706003293,
+      "I_coupled": 0.28819711641610657,
+      "D": [
+        7.0,
+        8.0
+      ]
+    },
+    "CHEM-MOL": {
+      "kappa": 0.021085727416325094,
+      "I_bare": 0.09874058293669165,
+      "I_coupled": 0.10061552902119911,
+      "D": [
+        8.0,
+        9.0
+      ]
+    },
+    "CM-CHEM": {
+      "kappa": 0.01788738699774417,
+      "I_bare": 0.09309794192972437,
+      "I_coupled": 0.0950250309174562,
+      "D": [
+        14.0,
+        8.0
+      ]
+    },
+    "QG-QM": {
+      "kappa": 0.04920814664967973,
+      "I_bare": 1.0,
+      "I_coupled": 1.0,
+      "D": [
+        22.0,
+        6.0
+      ]
+    },
+    "QG-QC": {
+      "kappa": 0.008661362431059456,
+      "I_bare": 0.5613263157405273,
+      "I_coupled": 0.5661951093775052,
+      "D": [
+        22.0,
+        11.0
+      ]
+    }
+  },
+  "nodes": {
+    "QM": {
+      "domain": "Quantum_Mechanics",
+      "role": "measurement_spin_law",
+      "D_eff": 6.0,
+      "S_eq": 0.9555063001027194,
+      "S_coupled": 0.9335649278951473
+    },
+    "QC": {
+      "domain": "Quantum_Computing",
+      "role": "compute_substrate",
+      "D_eff": 11.0,
+      "S_eq": -0.14767310363368633,
+      "S_coupled": -0.1423751227526561
+    },
+    "QO": {
+      "domain": "Quantum_Optics",
+      "role": "phase_optics",
+      "D_eff": 11.0,
+      "S_eq": 0.40817053817150184,
+      "S_coupled": 0.4116417014295636
+    },
+    "PART": {
+      "domain": "Particle_Physics",
+      "role": "micro_flavor",
+      "D_eff": 5.0,
+      "S_eq": 0.9504134401245242,
+      "S_coupled": 0.945809185391634
+    },
+    "ATOM": {
+      "domain": "Atomic_Physics",
+      "role": "atomic_bridge",
+      "D_eff": 7.0,
+      "S_eq": 0.7358238658627416,
+      "S_coupled": 0.7403074419440602
+    },
+    "HEP": {
+      "domain": "High_Energy_Physics",
+      "role": "ew_higgs_class",
+      "D_eff": 7.0,
+      "S_eq": 0.886264056646702,
+      "S_coupled": 0.8874489185678515
+    },
+    "CHEM": {
+      "domain": "Chemistry",
+      "role": "bond_observables",
+      "D_eff": 8.0,
+      "S_eq": 0.4078840642307453,
+      "S_coupled": 0.40906237500393866
+    },
+    "MOL": {
+      "domain": "Molecular_Chemistry",
+      "role": "molecular_jobs",
+      "D_eff": 9.0,
+      "S_eq": 0.3345733830778105,
+      "S_coupled": 0.3342714490567241
+    },
+    "CM": {
+      "domain": "Condensed_Matter",
+      "role": "packing_graphs",
+      "D_eff": 14.0,
+      "S_eq": 0.33840599557977497,
+      "S_coupled": 0.33806643658351826
+    },
+    "QG": {
+      "domain": "Quantum_Gravity",
+      "role": "deep_residual",
+      "D_eff": 22.0,
+      "S_eq": -0.5255977531899868,
+      "S_coupled": -0.5140265261469344
+    }
+  },
+  "lean_atlas": {
+    "ok": true,
+    "status": "ingested",
+    "n_files": 8,
+    "total_records": 569,
+    "panels": [
+      {
+        "domain": "Quantum_Computing",
+        "D_eff": 11,
+        "n": 177,
+        "median_pct": 0.0002953462072651492
+      },
+      {
+        "domain": "Quantum_Mechanics",
+        "D_eff": 6,
+        "n": 50,
+        "median_pct": 9.52387420324368e-05
+      },
+      {
+        "domain": "Quantum_Optics",
+        "D_eff": 6,
+        "n": 50,
+        "median_pct": 9.52387420324368e-05
+      },
+      {
+        "domain": "Quantum_Information",
+        "D_eff": 11,
+        "n": 21,
+        "median_pct": 0.0
+      },
+      {
+        "domain": "Quantum_Mechanics_Entanglement_Depth_Panel",
+        "D_eff": 16,
+        "n": 21,
+        "median_pct": 0.014767
+      },
+      {
+        "domain": "Quantum_Computing_Math_Depth_Panel",
+        "D_eff": 19,
+        "n": 77,
+        "median_pct": 0.014767
+      },
+      {
+        "domain": null,
+        "D_eff": 16,
+        "n": 168,
+        "median_pct": 0.01692529386942307
+      },
+      {
+        "domain": "Founding_Quantum_Vacuum_Panel",
+        "D_eff": 8,
+        "n": 5,
+        "median_pct": 0.047775
+      }
+    ]
+  },
+  "job_ledgers_unchanged_default": {
+    "field_opt_ok": true,
+    "field_opt_exact": "13/13",
+    "chem_0_5": "68/68",
+    "qm_0_5": "14/14",
+    "g1_rel_pct": 1.952856159669649
+  },
+  "overall_ok": true,
+  "wall_seconds": 1.3889752999966731,
+  "plain_language": "Think of D_eff like which part of the machine you're turning: measurement (QM, 6), compute (QC, 11), light (optics, 11 observed), atoms, bonds, packing. They share oil \u2014 A_bleed and POOF/SUCTION. The leak between gears is \u03ba, smaller when the gears are farther apart in D. We let S wave until it settles. We do not add a new bolt (free parameter). LLM-style weights are that extra bolt; this fold stays mechanical.",
+  "note": "Default job answers stay pin/field ledgers. Bleed is the connective picture for refinement \u2014 not a silent rescale of measured targets."
+}

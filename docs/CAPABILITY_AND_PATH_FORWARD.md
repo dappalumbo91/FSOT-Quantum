@@ -68,6 +68,7 @@ Regenerate: `python -m fsot_quantum.capability_suite`
 | **Fold v6** (official G1 residual, 4-bit/modmul, GPU occupancy) | green | `python -m fsot_quantum.fold_v6` |
 | **Field of use** (collapse/consensus/S on QM/QC jobs; theater labeled) | green | `python -m fsot_quantum.field_of_use` |
 | **Margin vs QPU** (job residuals vs published NISQ) | green | `python -m fsot_quantum.margin_vs_qpu` |
+| **Bleed refine** (Lean κ coupling + 569 atlas records ingested) | green | `python -m fsot_quantum.bleed_refine` |
 
 ## Scaling law (important)
 

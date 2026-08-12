@@ -1,0 +1,82 @@
+{
+  "panel": "lean_quantum_atlas",
+  "ok": true,
+  "status": "ingested",
+  "n_files": 8,
+  "instances": [
+    {
+      "file": "quantum_computing_gap_fill_benchmark.json",
+      "ok": true,
+      "domain": "Quantum_Computing",
+      "D_eff": 11,
+      "record_count": 177,
+      "median_error_pct": 0.0002953462072651492,
+      "free_parameters": 0
+    },
+    {
+      "file": "quantum_mechanics_gap_fill_benchmark.json",
+      "ok": true,
+      "domain": "Quantum_Mechanics",
+      "D_eff": 6,
+      "record_count": 50,
+      "median_error_pct": 9.52387420324368e-05,
+      "free_parameters": 0
+    },
+    {
+      "file": "quantum_optics_gap_fill_benchmark.json",
+      "ok": true,
+      "domain": "Quantum_Optics",
+      "D_eff": 6,
+      "record_count": 50,
+      "median_error_pct": 9.52387420324368e-05,
+      "free_parameters": 0
+    },
+    {
+      "file": "quantum_information_benchmark.json",
+      "ok": true,
+      "domain": "Quantum_Information",
+      "D_eff": 11,
+      "record_count": 21,
+      "median_error_pct": 0.0,
+      "free_parameters": 0
+    },
+    {
+      "file": "quantum_mechanics_entanglement_depth_panel_benchmark.json",
+      "ok": true,
+      "domain": "Quantum_Mechanics_Entanglement_Depth_Panel",
+      "D_eff": 16,
+      "record_count": 21,
+      "median_error_pct": 0.014767,
+      "free_parameters": 0
+    },
+    {
+      "file": "quantum_computing_math_depth_panel_benchmark.json",
+      "ok": true,
+      "domain": "Quantum_Computing_Math_Depth_Panel",
+      "D_eff": 19,
+      "record_count": 77,
+      "median_error_pct": 0.014767,
+      "free_parameters": 0
+    },
+    {
+      "file": "quantum_materials_benchmark.json",
+      "ok": true,
+      "domain": null,
+      "D_eff": 16,
+      "record_count": 168,
+      "median_error_pct": 0.01692529386942307,
+      "free_parameters": 0
+    },
+    {
+      "file": "founding_quantum_vacuum_panel_benchmark.json",
+      "ok": true,
+      "domain": "Founding_Quantum_Vacuum_Panel",
+      "D_eff": 8,
+      "record_count": 5,
+      "median_error_pct": 0.047775,
+      "free_parameters": 0
+    }
+  ],
+  "total_records": 569,
+  "note": "Headlines from FSOT-2.1-Lean verification fabric \u2014 403+ domain interfaces live there. This fold is the QC/QM job layer."
+}
