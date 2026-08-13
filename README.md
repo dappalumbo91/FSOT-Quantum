@@ -104,6 +104,9 @@ python -c "from fsot_quantum.qaoa_fsot import run_qaoa_panel; r=run_qaoa_panel()
 # Pull more Lean chemistry/QM atlas into this fold
 python -m fsot_quantum.expand_sim
 
+# Full Lean solved atlas (all benchmark files, not chemistry-only)
+python -m fsot_quantum.lean_full_atlas
+
 # Next stress: large MaxCut · QAOA-FSOT · textbook sim job compare
 python -m fsot_quantum.stress_next
 
@@ -144,6 +147,7 @@ cd zig; zig build run; cd ..
 | Bare metal / QEMU | `docs/BARE_METAL.md` |
 | FSOT-QC-OS (own job OS) | `docs/QC_OS.md` |
 | Expand sim (Lean chem + QM) | `results/EXPAND_SIM.md` |
+| Full Lean atlas (all solved panels) | `results/LEAN_FULL_ATLAS.md` |
 | Skeptic kit | `results/SKEPTIC_KIT.md` |
 
 Device path is **exactly** FSOT-GPU: torch CUDA buffers when available.

@@ -1,0 +1,110 @@
+{
+  "timestamp": "2026-08-13T00:36:53.003423+00:00",
+  "suite": "lean_full_atlas",
+  "pin": "D1D38A",
+  "overall_ok": true,
+  "wall_seconds": 1.3299247000031755,
+  "panel": "lean_full_atlas",
+  "status": "scanned",
+  "n_files": 473,
+  "n_parsed": 473,
+  "n_domains_named": 432,
+  "total_headline_records": 2346836,
+  "total_replayed": 13228,
+  "n_replay_fail_files": 0,
+  "cap_per_file": 40,
+  "fail_files": [],
+  "sample": [
+    {
+      "domain": "Acoustic_Resonance_Materials",
+      "D_eff": 15,
+      "n": 29,
+      "median_pct": 0.008381497018411083
+    },
+    {
+      "domain": "Actuarial_Science_Panel",
+      "D_eff": 20,
+      "n": 60,
+      "median_pct": 0.02261
+    },
+    {
+      "domain": "Adjacent_Rung_Coupling",
+      "D_eff": 17,
+      "n": 36,
+      "median_pct": 0.020098237848404983
+    },
+    {
+      "domain": "Adversarial_Fractal_Break_Tests",
+      "D_eff": 17,
+      "n": 13,
+      "median_pct": 0.0
+    },
+    {
+      "domain": "Agriculture_Agroecology",
+      "D_eff": 16,
+      "n": 276,
+      "median_pct": 0.018019024892929635
+    },
+    {
+      "domain": "AI_Galactic_Orbital_Bridge",
+      "D_eff": 16,
+      "n": 48,
+      "median_pct": 0.005168558627176023
+    },
+    {
+      "domain": "AlphaFold_Batch_Meta_Open",
+      "D_eff": 14,
+      "n": 182,
+      "median_pct": 0.015311
+    },
+    {
+      "domain": "Alternate_Base_Mathematics_Explorer_Panel",
+      "D_eff": 17,
+      "n": 56,
+      "median_pct": 0.009504
+    },
+    {
+      "domain": "Alternate_Base_Mathematics_Spine",
+      "D_eff": 18,
+      "n": 21,
+      "median_pct": 0.0
+    },
+    {
+      "domain": "Anthropology",
+      "D_eff": 17,
+      "n": 160,
+      "median_pct": 0.019504399572476606
+    },
+    {
+      "domain": "Architecture_Building_Science",
+      "D_eff": 16,
+      "n": 43,
+      "median_pct": 0.07869745016115058
+    },
+    {
+      "domain": "Arxiv_Brain_Knowledge_Panel",
+      "D_eff": 16,
+      "n": 20,
+      "median_pct": 0.018003
+    },
+    {
+      "domain": "Arxiv_Gravitational_Waves_Panel",
+      "D_eff": 21,
+      "n": 60,
+      "median_pct": 0.01748
+    },
+    {
+      "domain": "Arxiv_Primitives_Panel",
+      "D_eff": 15,
+      "n": 22,
+      "median_pct": 0.031506
+    },
+    {
+      "domain": "Arxiv_Primitives_V14",
+      "D_eff": 12,
+      "n": 21,
+      "median_pct": 5.5479e-05
+    }
+  ],
+  "note": "Full Lean solved atlas ingest. Headlines from every benchmark file. Residuals replayed on material_records (cap per file). Coarse/zero-computed source rows skipped, not faked."
+}

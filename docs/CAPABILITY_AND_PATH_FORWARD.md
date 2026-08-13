@@ -73,7 +73,8 @@ Regenerate: `python -m fsot_quantum.capability_suite`
 | **Keep going** (concepts + fridge/hits + 116 Lean QI/math jobs) | green | `python -m fsot_quantum.keep_going` |
 | **QC/QM accuracy** (hired jobs, no fridge) | green | `python -m fsot_quantum.qc_accuracy` |
 | **Bare-metal jobs** (Zig/QEMU QC-OS v0.2, 11/11) | green | `.\run_qemu.ps1` |
-| **Expand sim** (Lean chem 145 + QM 217 replay) | green | `python -m fsot_quantum.expand_sim` |
+| **Expand sim** (Lean chem + QM replay) | green | `python -m fsot_quantum.expand_sim` |
+| **Full Lean atlas** (473 files / 432 domains) | green | `python -m fsot_quantum.lean_full_atlas` |
 
 ## Scaling law (important)
 
