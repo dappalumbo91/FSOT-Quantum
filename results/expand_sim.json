@@ -1,0 +1,208 @@
+{
+  "timestamp": "2026-08-13T00:16:15.217003+00:00",
+  "suite": "expand_sim",
+  "pin": "D1D38A",
+  "thesis": "Pull solved Lean chemistry/QM atlas into this fold; keep pin chemistry 68/68; grow what we can simulate.",
+  "pin_chemistry": {
+    "ok": true,
+    "green": "68/68"
+  },
+  "pin_qm": {
+    "ok": true,
+    "green": "14/14"
+  },
+  "lean_chemistry": {
+    "ok": true,
+    "replayed": 145,
+    "green": "145/145",
+    "band5": "145/145",
+    "worst": [
+      {
+        "source": "maillard_chemistry_gap_fill_benchmark.json",
+        "name": "sucrose_hydrolysis",
+        "domain": "Maillard_Chemistry",
+        "computed": 108.49926097775192,
+        "measured": 108.0,
+        "rel_err_pct": 0.46227868310362624,
+        "green_0_5": true,
+        "band_5": true,
+        "skip": false
+      },
+      {
+        "source": "maillard_chemistry_gap_fill_benchmark.json",
+        "name": "pumpkin_bread:pumpkin_mass_fraction",
+        "domain": "Maillard_Chemistry",
+        "computed": 0.310293,
+        "measured": 0.31,
+        "rel_err_pct": 0.09451612903225409,
+        "green_0_5": true,
+        "band_5": true,
+        "skip": false
+      },
+      {
+        "source": "maillard_chemistry_gap_fill_benchmark.json",
+        "name": "zucchini_bread:zucchini_mass_fraction",
+        "domain": "Maillard_Chemistry",
+        "computed": 0.290274,
+        "measured": 0.29,
+        "rel_err_pct": 0.09448275862068845,
+        "green_0_5": true,
+        "band_5": true,
+        "skip": false
+      },
+      {
+        "source": "maillard_chemistry_gap_fill_benchmark.json",
+        "name": "coffee_roast:weight_loss_pct",
+        "domain": "Maillard_Chemistry",
+        "computed": 14.813977,
+        "measured": 14.8,
+        "rel_err_pct": 0.09443918918918104,
+        "green_0_5": true,
+        "band_5": true,
+        "skip": false
+      },
+      {
+        "source": "maillard_chemistry_gap_fill_benchmark.json",
+        "name": "banana_bread:final_moisture_pct",
+        "domain": "Maillard_Chemistry",
+        "computed": 28.526915,
+        "measured": 28.5,
+        "rel_err_pct": 0.09443859649122426,
+        "green_0_5": true,
+        "band_5": true,
+        "skip": false
+      },
+      {
+        "source": "maillard_chemistry_gap_fill_benchmark.json",
+        "name": "zucchini_bread:final_moisture_pct",
+        "domain": "Maillard_Chemistry",
+        "computed": 26.024554,
+        "measured": 26.0,
+        "rel_err_pct": 0.09443846153845542,
+        "green_0_5": true,
+        "band_5": true,
+        "skip": false
+      },
+      {
+        "source": "maillard_chemistry_gap_fill_benchmark.json",
+        "name": "pumpkin_bread:final_moisture_pct",
+        "domain": "Maillard_Chemistry",
+        "computed": 27.225687,
+        "measured": 27.2,
+        "rel_err_pct": 0.09443750000000496,
+        "green_0_5": true,
+        "band_5": true,
+        "skip": false
+      },
+      {
+        "source": "maillard_chemistry_gap_fill_benchmark.json",
+        "name": "banana_bread:bake_temperature_C",
+        "domain": "Maillard_Chemistry",
+        "computed": 175.165265,
+        "measured": 175.0,
+        "rel_err_pct": 0.09443714285714577,
+        "green_0_5": true,
+        "band_5": true,
+        "skip": false
+      }
+    ]
+  },
+  "lean_qm_more": {
+    "ok": true,
+    "replayed": 217,
+    "green": "217/217",
+    "band5": "217/217",
+    "worst": [
+      {
+        "source": "quantum_materials_benchmark.json",
+        "name": "K",
+        "domain": null,
+        "computed": 90.55498906775276,
+        "measured": 91.0,
+        "rel_err_pct": 0.48902300246949765,
+        "green_0_5": true,
+        "band_5": true,
+        "skip": false
+      },
+      {
+        "source": "quantum_materials_benchmark.json",
+        "name": "Au",
+        "domain": null,
+        "computed": -27.864684026710027,
+        "measured": -28.0,
+        "rel_err_pct": 0.48327133317847626,
+        "green_0_5": true,
+        "band_5": true,
+        "skip": false
+      },
+      {
+        "source": "quantum_materials_benchmark.json",
+        "name": "ZnO",
+        "domain": null,
+        "computed": 3.3539384298291717,
+        "measured": 3.37,
+        "rel_err_pct": 0.47660445610766855,
+        "green_0_5": true,
+        "band_5": true,
+        "skip": false
+      },
+      {
+        "source": "quantum_materials_benchmark.json",
+        "name": "Cu\u00b2\u207a",
+        "domain": null,
+        "computed": 1.908930529295068,
+        "measured": 1.9,
+        "rel_err_pct": 0.47002785763516325,
+        "green_0_5": true,
+        "band_5": true,
+        "skip": false
+      },
+      {
+        "source": "quantum_materials_benchmark.json",
+        "name": "[Ni(H\u2082O)\u2086]\u00b2\u207a",
+        "domain": null,
+        "computed": 8560.607961933852,
+        "measured": 8600.0,
+        "rel_err_pct": 0.4580469542575291,
+        "green_0_5": true,
+        "band_5": true,
+        "skip": false
+      },
+      {
+        "source": "quantum_materials_benchmark.json",
+        "name": "R\u2082-CH\u2082",
+        "domain": null,
+        "computed": 1.2941305780559662,
+        "measured": 1.3,
+        "rel_err_pct": 0.4514939956949105,
+        "green_0_5": true,
+        "band_5": true,
+        "skip": false
+      },
+      {
+        "source": "quantum_materials_benchmark.json",
+        "name": "NaBr",
+        "domain": null,
+        "computed": 750.1705909456103,
+        "measured": 747.0,
+        "rel_err_pct": 0.4244432323440887,
+        "green_0_5": true,
+        "band_5": true,
+        "skip": false
+      },
+      {
+        "source": "quantum_materials_benchmark.json",
+        "name": "Cu",
+        "domain": null,
+        "computed": -5.482025100406171,
+        "measured": -5.46,
+        "rel_err_pct": 0.4033901173291332,
+        "green_0_5": true,
+        "band_5": true,
+        "skip": false
+      }
+    ]
+  },
+  "overall_ok": true,
+  "wall_seconds": 0.032366799998271745
+}

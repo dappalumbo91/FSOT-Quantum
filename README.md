@@ -97,9 +97,12 @@ python -m fsot_quantum.qc_accuracy
 # QAOA exact column (must be 11/11)
 python -c "from fsot_quantum.qaoa_fsot import run_qaoa_panel; r=run_qaoa_panel(); print(r['metrics_summary']); assert r['overall_ok']"
 
-# FSOT-QC-OS — standalone Multiboot job OS (QEMU; later Reality OS optional host)
+# FSOT-QC-OS v0.2.0 — standalone job OS (QEMU file serial defaults to 'a')
 .\run_qemu.ps1
-# expect: JOBS 11/11 · FSOT-QC-OS READY · FSOT_QUANTUM_KERNEL PASS
+# interactive: .\run_qemu_stdio.ps1   (a=all c=core j=jobs h=help)
+
+# Pull more Lean chemistry/QM atlas into this fold
+python -m fsot_quantum.expand_sim
 
 # Next stress: large MaxCut · QAOA-FSOT · textbook sim job compare
 python -m fsot_quantum.stress_next
@@ -140,6 +143,7 @@ cd zig; zig build run; cd ..
 | QC/QM accuracy board | `results/QC_ACCURACY.md` |
 | Bare metal / QEMU | `docs/BARE_METAL.md` |
 | FSOT-QC-OS (own job OS) | `docs/QC_OS.md` |
+| Expand sim (Lean chem + QM) | `results/EXPAND_SIM.md` |
 | Skeptic kit | `results/SKEPTIC_KIT.md` |
 
 Device path is **exactly** FSOT-GPU: torch CUDA buffers when available.

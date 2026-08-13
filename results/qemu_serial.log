@@ -1,6 +1,9 @@
-FSOT-QC-OS v0.1.0
+FSOT-QC-OS v0.2.0
 standalone quantum job OS - no host OS, no fridge
 pin D1D38A Apache-2.0 trinary -1/0/+1
+SHELL a=all c=core j=jobs h=help
+no input -> a (default)
+CMD a
 svc:core...
 FSOT selftest PASS
 svc:jobs...

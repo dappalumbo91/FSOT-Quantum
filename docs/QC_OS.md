@@ -8,7 +8,7 @@ This image is already a tiny OS: Multiboot, no Linux, no Windows, QEMU-loadable.
 - Own kernel (`zig/src/os.zig` + `main_kernel.zig`)
 - Serial is the console
 - Services: core selftest + hired QC/QM job table
-- Version `0.1.0`
+- Version `0.2.0` (serial shell: a/c/j/h; file-serial defaults to all)
 - Apache-2.0 · pin D1D38A
 
 ## Run anywhere QEMU exists
@@ -20,13 +20,15 @@ This image is already a tiny OS: Multiboot, no Linux, no Windows, QEMU-loadable.
 Expect:
 
 ```text
-FSOT-QC-OS v0.1.0
+FSOT-QC-OS v0.2.0
+SHELL a=all c=core j=jobs h=help
+CMD a
 ...
 JOBS 11/11
-FSOT_QUANTUM_JOBS PASS
 FSOT-QC-OS READY
-FSOT_QUANTUM_KERNEL PASS
 ```
+
+Interactive: `.\run_qemu_stdio.ps1`
 
 ## Hosted path (Omen / Python / GPU)
 

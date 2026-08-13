@@ -43,6 +43,15 @@ pub fn write(s: []const u8) void {
     }
 }
 
+pub fn dataReady() bool {
+    return (inb(COM1 + 5) & 0x01) != 0;
+}
+
+pub fn getc() ?u8 {
+    if (!dataReady()) return null;
+    return inb(COM1);
+}
+
 pub fn writeU32(n: u32) void {
     var buf: [10]u8 = undefined;
     var x = n;

@@ -1,0 +1,323 @@
+{
+  "status": "replayed",
+  "n_replayed": 217,
+  "n_skipped": 55,
+  "n_green_0_5": 217,
+  "n_band_5": 217,
+  "frac_green_0_5": 1.0,
+  "frac_band_5": 1.0,
+  "overall_ok": true,
+  "worst": [
+    {
+      "source": "quantum_materials_benchmark.json",
+      "name": "K",
+      "domain": null,
+      "computed": 90.55498906775276,
+      "measured": 91.0,
+      "rel_err_pct": 0.48902300246949765,
+      "green_0_5": true,
+      "band_5": true,
+      "skip": false
+    },
+    {
+      "source": "quantum_materials_benchmark.json",
+      "name": "Au",
+      "domain": null,
+      "computed": -27.864684026710027,
+      "measured": -28.0,
+      "rel_err_pct": 0.48327133317847626,
+      "green_0_5": true,
+      "band_5": true,
+      "skip": false
+    },
+    {
+      "source": "quantum_materials_benchmark.json",
+      "name": "ZnO",
+      "domain": null,
+      "computed": 3.3539384298291717,
+      "measured": 3.37,
+      "rel_err_pct": 0.47660445610766855,
+      "green_0_5": true,
+      "band_5": true,
+      "skip": false
+    },
+    {
+      "source": "quantum_materials_benchmark.json",
+      "name": "Cu\u00b2\u207a",
+      "domain": null,
+      "computed": 1.908930529295068,
+      "measured": 1.9,
+      "rel_err_pct": 0.47002785763516325,
+      "green_0_5": true,
+      "band_5": true,
+      "skip": false
+    },
+    {
+      "source": "quantum_materials_benchmark.json",
+      "name": "[Ni(H\u2082O)\u2086]\u00b2\u207a",
+      "domain": null,
+      "computed": 8560.607961933852,
+      "measured": 8600.0,
+      "rel_err_pct": 0.4580469542575291,
+      "green_0_5": true,
+      "band_5": true,
+      "skip": false
+    },
+    {
+      "source": "quantum_materials_benchmark.json",
+      "name": "R\u2082-CH\u2082",
+      "domain": null,
+      "computed": 1.2941305780559662,
+      "measured": 1.3,
+      "rel_err_pct": 0.4514939956949105,
+      "green_0_5": true,
+      "band_5": true,
+      "skip": false
+    },
+    {
+      "source": "quantum_materials_benchmark.json",
+      "name": "NaBr",
+      "domain": null,
+      "computed": 750.1705909456103,
+      "measured": 747.0,
+      "rel_err_pct": 0.4244432323440887,
+      "green_0_5": true,
+      "band_5": true,
+      "skip": false
+    },
+    {
+      "source": "quantum_materials_benchmark.json",
+      "name": "Cu",
+      "domain": null,
+      "computed": -5.482025100406171,
+      "measured": -5.46,
+      "rel_err_pct": 0.4033901173291332,
+      "green_0_5": true,
+      "band_5": true,
+      "skip": false
+    }
+  ],
+  "instances_head": [
+    {
+      "source": "quantum_mechanics_gap_fill_benchmark.json",
+      "name": "alpha particle mass energy equivalent",
+      "domain": "Quantum_Mechanics",
+      "computed": 5.97e-10,
+      "measured": 5.9719201997e-10,
+      "rel_err_pct": 0.03215380708028297,
+      "green_0_5": true,
+      "band_5": true,
+      "skip": false
+    },
+    {
+      "source": "quantum_mechanics_gap_fill_benchmark.json",
+      "name": "alpha particle molar mass",
+      "domain": "Quantum_Mechanics",
+      "computed": 0.004001544214,
+      "measured": 0.0040015061833,
+      "rel_err_pct": 0.0009504096272173753,
+      "green_0_5": true,
+      "band_5": true,
+      "skip": false
+    },
+    {
+      "source": "quantum_mechanics_gap_fill_benchmark.json",
+      "name": "Angstrom star",
+      "domain": "Quantum_Mechanics",
+      "computed": 1e-10,
+      "measured": 1.00001495e-10,
+      "rel_err_pct": 0.0014949776500747258,
+      "green_0_5": true,
+      "band_5": true,
+      "skip": false
+    },
+    {
+      "source": "quantum_mechanics_gap_fill_benchmark.json",
+      "name": "atomic mass constant energy equivalent",
+      "domain": "Quantum_Mechanics",
+      "computed": 1.49e-10,
+      "measured": 1.49241808768e-10,
+      "rel_err_pct": 0.1620248173056517,
+      "green_0_5": true,
+      "band_5": true,
+      "skip": false
+    },
+    {
+      "source": "quantum_mechanics_gap_fill_benchmark.json",
+      "name": "atomic mass unit-joule relationship",
+      "domain": "Quantum_Mechanics",
+      "computed": 1.49e-10,
+      "measured": 1.49241808768e-10,
+      "rel_err_pct": 0.1620248173056517,
+      "green_0_5": true,
+      "band_5": true,
+      "skip": false
+    },
+    {
+      "source": "quantum_mechanics_gap_fill_benchmark.json",
+      "name": "atomic unit of current",
+      "domain": "Quantum_Mechanics",
+      "computed": 0.006623681189,
+      "measured": 0.0066236182375082,
+      "rel_err_pct": 0.0009504094218965843,
+      "green_0_5": true,
+      "band_5": true,
+      "skip": false
+    },
+    {
+      "source": "quantum_mechanics_gap_fill_benchmark.json",
+      "name": "atomic unit of force",
+      "domain": "Quantum_Mechanics",
+      "computed": 8.2388e-08,
+      "measured": 8.2387235038e-08,
+      "rel_err_pct": 0.0009284957792800257,
+      "green_0_5": true,
+      "band_5": true,
+      "skip": false
+    },
+    {
+      "source": "quantum_mechanics_gap_fill_benchmark.json",
+      "name": "atomic unit of length",
+      "domain": "Quantum_Mechanics",
+      "computed": 5.3e-11,
+      "measured": 5.29177210544e-11,
+      "rel_err_pct": 0.1554846731124657,
+      "green_0_5": true,
+      "band_5": true,
+      "skip": false
+    },
+    {
+      "source": "quantum_mechanics_gap_fill_benchmark.json",
+      "name": "atomic unit of permittivity",
+      "domain": "Quantum_Mechanics",
+      "computed": 1.11e-10,
+      "measured": 1.1126500562e-10,
+      "rel_err_pct": 0.2381751733380276,
+      "green_0_5": true,
+      "band_5": true,
+      "skip": false
+    },
+    {
+      "source": "quantum_mechanics_gap_fill_benchmark.json",
+      "name": "Avogadro constant",
+      "domain": "Quantum_Mechanics",
+      "computed": 6.022197995235166e+23,
+      "measured": 6.02214076e+23,
+      "rel_err_pct": 0.000950413440124328,
+      "green_0_5": true,
+      "band_5": true,
+      "skip": false
+    },
+    {
+      "source": "quantum_mechanics_gap_fill_benchmark.json",
+      "name": "Bohr magneton in eV/T",
+      "domain": "Quantum_Mechanics",
+      "computed": 5.7884368e-05,
+      "measured": 5.7883817982e-05,
+      "rel_err_pct": 0.0009502102991337963,
+      "green_0_5": true,
+      "band_5": true,
+      "skip": false
+    },
+    {
+      "source": "quantum_mechanics_gap_fill_benchmark.json",
+      "name": "Bohr radius",
+      "domain": "Quantum_Mechanics",
+      "computed": 5.3e-11,
+      "measured": 5.29177210544e-11,
+      "rel_err_pct": 0.1554846731124657,
+      "green_0_5": true,
+      "band_5": true,
+      "skip": false
+    },
+    {
+      "source": "quantum_mechanics_gap_fill_benchmark.json",
+      "name": "conventional value of Josephson constant",
+      "domain": "Quantum_Mechanics",
+      "computed": 483602496179437.75,
+      "measured": 483597900000000.0,
+      "rel_err_pct": 0.0009504134401224654,
+      "green_0_5": true,
+      "band_5": true,
+      "skip": false
+    },
+    {
+      "source": "quantum_mechanics_gap_fill_benchmark.json",
+      "name": "conventional value of von Klitzing constant",
+      "domain": "Quantum_Mechanics",
+      "computed": 25813.052328387002,
+      "measured": 25812.807,
+      "rel_err_pct": 0.0009504134401260245,
+      "green_0_5": true,
+      "band_5": true,
+      "skip": false
+    },
+    {
+      "source": "quantum_mechanics_gap_fill_benchmark.json",
+      "name": "deuteron-electron mag. mom. ratio",
+      "domain": "Quantum_Mechanics",
+      "computed": -0.000466438988,
+      "measured": -0.000466434555,
+      "rel_err_pct": 0.0009504012840586632,
+      "green_0_5": true,
+      "band_5": true,
+      "skip": false
+    },
+    {
+      "source": "quantum_mechanics_gap_fill_benchmark.json",
+      "name": "deuteron mag. mom. to Bohr magneton ratio",
+      "domain": "Quantum_Mechanics",
+      "computed": 0.000466979895,
+      "measured": 0.0004669754568,
+      "rel_err_pct": 0.0009504139747336236,
+      "green_0_5": true,
+      "band_5": true,
+      "skip": false
+    },
+    {
+      "source": "quantum_mechanics_gap_fill_benchmark.json",
+      "name": "deuteron mass energy equivalent",
+      "domain": "Quantum_Mechanics",
+      "computed": 3.01e-10,
+      "measured": 3.00506323491e-10,
+      "rel_err_pct": 0.16428157093831813,
+      "green_0_5": true,
+      "band_5": true,
+      "skip": false
+    },
+    {
+      "source": "quantum_mechanics_gap_fill_benchmark.json",
+      "name": "deuteron molar mass",
+      "domain": "Quantum_Mechanics",
+      "computed": 0.002013572352,
+      "measured": 0.00201355321466,
+      "rel_err_pct": 0.0009504263339399771,
+      "green_0_5": true,
+      "band_5": true,
+      "skip": false
+    },
+    {
+      "source": "quantum_mechanics_gap_fill_benchmark.json",
+      "name": "electron-deuteron mass ratio",
+      "domain": "Quantum_Mechanics",
+      "computed": 0.0002724463,
+      "measured": 0.0002724437107629,
+      "rel_err_pct": 0.0009503750674799973,
+      "green_0_5": true,
+      "band_5": true,
+      "skip": false
+    },
+    {
+      "source": "quantum_mechanics_gap_fill_benchmark.json",
+      "name": "electron-helion mass ratio",
+      "domain": "Quantum_Mechanics",
+      "computed": 0.000181956037,
+      "measured": 0.0001819543074649,
+      "rel_err_pct": 0.0009505326497148342,
+      "green_0_5": true,
+      "band_5": true,
+      "skip": false
+    }
+  ],
+  "n_instances_omitted": 197
+}
