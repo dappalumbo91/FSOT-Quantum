@@ -36,6 +36,7 @@ It does **not** claim a cryogenic QPU, Hilbert-universal simulation, RSA-scale f
 | Known answers | `python -m fsot_quantum forward` | published α, Weinberg, chemistry, … | required |
 | Harder QC-for | `python -m fsot_quantum harder` | CKM / PMNS / 2D Ising / nuclear / Gset | required |
 | Physics + QI | `python -m fsot_quantum qi` | 3D Ising / XY / Heisenberg / g−2 / Lean QI fabric | required |
+| Physics + QI II | `python -m fsot_quantum push` | Higgs/Z BR, nuclear, cosmology, Casimir, CHSH/EPR | required |
 
 Ledgers live in `docs/` and `results/` with the same names.
 
@@ -53,6 +54,8 @@ These are published values. Miss one and the pin is wrong.
 | Proton radius | 0.8413 fm | 0.8413 | 0 |
 | Water bond angle | 104.5° | 104.537° | 0.035% |
 | CKM / PMNS / 2D Ising / nuclear / Higgs set | 20 published | 20/20 inside 0.5% | see `HARDER_QC.md` |
+| Physics + QI I | 16 published + 326 Lean | 16/16 and 326/326 @0.5% | `PHYSICS_QI.md` |
+| Physics + QI II | 22 published + 126 Lean | 21/22 @0.5% · 22/22 @5% | `PHYSICS_QI2.md` — **BR_H_gg open at 4.23%** |
 | Chemistry pin set | — | 68/68 @ 0.5% | — |
 | QM/SM pin set | — | 14/14 @ 0.5% | — |
 | C_factor | \(C_{\mathrm{eff}}\cdot P_{\mathrm{new}}\) | identity | — |

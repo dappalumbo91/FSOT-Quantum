@@ -11,6 +11,7 @@ Field entry: python -m fsot_quantum [cmd]
   forward    architecture + known-answer checks + questions people want QC for
   harder     harder QC-for questions (CKM, Ising, nuclear, Gset, fabric)
   qi         physics + quantum-information rung (after graphs)
+  push       physics + QI push II (CKM/Higgs/nuclear/Casimir/CHSH)
   stamp      Lean · Coq · Isabelle · F* · Python multiprover
   atlas      full Lean solved atlas
   expand     Lean chem + extra QM
@@ -67,6 +68,9 @@ def main() -> int:
         return m()
     if c in ("qi", "physics"):
         from fsot_quantum.physics_qi import main as m
+        return m()
+    if c in ("push", "qi2"):
+        from fsot_quantum.physics_qi2 import main as m
         return m()
     if c == "stamp":
         return subprocess.call(

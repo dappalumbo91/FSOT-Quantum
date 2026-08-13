@@ -1,0 +1,465 @@
+{
+  "timestamp": "2026-08-13T03:00:42.605281+00:00",
+  "suite": "physics_qi2",
+  "pin": "D1D38A",
+  "overall_ok": true,
+  "wall_seconds": 0.02816839999286458,
+  "S_QM": 0.9555063001027194,
+  "S_QC": -0.14767310363368633,
+  "waves": {
+    "n": 22,
+    "n_band5": 22,
+    "n_green_0_5": 21,
+    "ok": true,
+    "questions": [
+      {
+        "id": "P2-|V_cd|",
+        "question": "What is |V_cd|?",
+        "route": [
+          "Particle_Physics"
+        ],
+        "formula": "\u221a\u03b3\u00b7\u03b8_S",
+        "computed": 0.22100780479132598,
+        "published": 0.221,
+        "rel_err_pct": 0.003531579785510005,
+        "green_0_5": true,
+        "band_5": true,
+        "ok": true
+      },
+      {
+        "id": "P2-delta_CP_PMNS",
+        "question": "What is delta_CP_PMNS?",
+        "route": [
+          "High_Energy_Physics"
+        ],
+        "formula": "\u03c6\u00b3 \u2212 1/e",
+        "computed": 3.8681885363283475,
+        "published": 3.8685,
+        "rel_err_pct": 0.008051277540456992,
+        "green_0_5": true,
+        "band_5": true,
+        "ok": true
+      },
+      {
+        "id": "P2-m_t/m_b",
+        "question": "What is m_t/m_b?",
+        "route": [
+          "High_Energy_Physics"
+        ],
+        "formula": "\u03c0\u2074\u00b7K",
+        "computed": 40.933410338689306,
+        "published": 41.08,
+        "rel_err_pct": 0.35683948712437213,
+        "green_0_5": true,
+        "band_5": true,
+        "ok": true
+      },
+      {
+        "id": "P2-BR_Z_had",
+        "question": "What is BR_Z_had?",
+        "route": [
+          "High_Energy_Physics"
+        ],
+        "formula": "sin(\u03b3) + Poof",
+        "computed": 0.6991750380984436,
+        "published": 0.6991,
+        "rel_err_pct": 0.010733528600137083,
+        "green_0_5": true,
+        "band_5": true,
+        "ok": true
+      },
+      {
+        "id": "P2-BR_Z_inv",
+        "question": "What is BR_Z_inv?",
+        "route": [
+          "High_Energy_Physics"
+        ],
+        "formula": "(1/3)/A_in",
+        "computed": 0.19997754112174054,
+        "published": 0.2,
+        "rel_err_pct": 0.011229439129734065,
+        "green_0_5": true,
+        "band_5": true,
+        "ok": true
+      },
+      {
+        "id": "P2-BR_H_ZZ",
+        "question": "What is BR_H_ZZ?",
+        "route": [
+          "High_Energy_Physics"
+        ],
+        "formula": "1/(e\u2074ln(2))",
+        "computed": 0.026423881395489845,
+        "published": 0.0264,
+        "rel_err_pct": 0.09045983140093045,
+        "green_0_5": true,
+        "band_5": true,
+        "ok": true
+      },
+      {
+        "id": "P2-BR_H_gg",
+        "question": "What is BR_H_gg?",
+        "route": [
+          "High_Energy_Physics"
+        ],
+        "formula": "\u03c6\u207b\u2074 \u2212 \u03b3\u2075",
+        "computed": 0.08182274913982478,
+        "published": 0.0785,
+        "rel_err_pct": 4.232801452006084,
+        "green_0_5": false,
+        "band_5": true,
+        "ok": true
+      },
+      {
+        "id": "P2-BR_H_gamgam",
+        "question": "What is BR_H_gamgam?",
+        "route": [
+          "High_Energy_Physics"
+        ],
+        "formula": "\u03b3\u2076\u00b7C_cosm",
+        "computed": 0.0022858146532987495,
+        "published": 0.00228,
+        "rel_err_pct": 0.2550286534539278,
+        "green_0_5": true,
+        "band_5": true,
+        "ok": true
+      },
+      {
+        "id": "P2-He4_binding_MeV",
+        "question": "What is He4_binding_MeV?",
+        "route": [
+          "Nuclear_Physics"
+        ],
+        "formula": "\u03c0\u03b3/\u03b3\u2075",
+        "computed": 28.30071693656917,
+        "published": 28.3,
+        "rel_err_pct": 0.002533344767383359,
+        "green_0_5": true,
+        "band_5": true,
+        "ok": true
+      },
+      {
+        "id": "P2-Triton_binding_MeV",
+        "question": "What is Triton_binding_MeV?",
+        "route": [
+          "Nuclear_Physics"
+        ],
+        "formula": "e\u00b2 + G\u207b\u00b9",
+        "computed": 8.480800162634557,
+        "published": 8.482,
+        "rel_err_pct": 0.014145689288404753,
+        "green_0_5": true,
+        "band_5": true,
+        "ok": true
+      },
+      {
+        "id": "P2-S_8",
+        "question": "What is S_8?",
+        "route": [
+          "Cosmology"
+        ],
+        "formula": "\u03c8_con/\u221a\u03b3",
+        "computed": 0.8320144347134201,
+        "published": 0.832,
+        "rel_err_pct": 0.0017349415168399496,
+        "green_0_5": true,
+        "band_5": true,
+        "ok": true
+      },
+      {
+        "id": "P2-z_reion",
+        "question": "What is z_reion?",
+        "route": [
+          "Cosmology"
+        ],
+        "formula": "e\u00b3/\u03c6\u00b2",
+        "computed": 7.671992422366703,
+        "published": 7.68,
+        "rel_err_pct": 0.10426533376688604,
+        "green_0_5": true,
+        "band_5": true,
+        "ok": true
+      },
+      {
+        "id": "P2-Omega_r",
+        "question": "What is Omega_r?",
+        "route": [
+          "Cosmology"
+        ],
+        "formula": "\u03b3\u2076/e\u2076",
+        "computed": 9.167728879734846e-05,
+        "published": 9.15e-05,
+        "rel_err_pct": 0.19375824846825943,
+        "green_0_5": true,
+        "band_5": true,
+        "ok": true
+      },
+      {
+        "id": "P2-XY_beta",
+        "question": "What is XY_beta?",
+        "route": [
+          "Condensed_Matter"
+        ],
+        "formula": "\u03c8_con/(\u03c0\u03b3)",
+        "computed": 0.3485875996963401,
+        "published": 0.3486,
+        "rel_err_pct": 0.003557172593200954,
+        "green_0_5": true,
+        "band_5": true,
+        "ok": true
+      },
+      {
+        "id": "P2-XY_gamma",
+        "question": "What is XY_gamma?",
+        "route": [
+          "Condensed_Matter"
+        ],
+        "formula": "\u03c6 \u2212 P_new",
+        "computed": 1.3177317120795233,
+        "published": 1.3177,
+        "rel_err_pct": 0.0024066236262607877,
+        "green_0_5": true,
+        "band_5": true,
+        "ok": true
+      },
+      {
+        "id": "P2-Heisenberg_beta",
+        "question": "What is Heisenberg_beta?",
+        "route": [
+          "Condensed_Matter"
+        ],
+        "formula": "\u03c6/\u03c0 \u2212 \u03c6\u207b\u2074",
+        "computed": 0.36913818105016843,
+        "published": 0.3689,
+        "rel_err_pct": 0.06456520741892896,
+        "green_0_5": true,
+        "band_5": true,
+        "ok": true
+      },
+      {
+        "id": "P2-Heisenberg_gamma",
+        "question": "What is Heisenberg_gamma?",
+        "route": [
+          "Condensed_Matter"
+        ],
+        "formula": "\u221a2 \u2212 e\u207b\u2074",
+        "computed": 1.395897923484361,
+        "published": 1.3962,
+        "rel_err_pct": 0.021635619226413296,
+        "green_0_5": true,
+        "band_5": true,
+        "ok": true
+      },
+      {
+        "id": "P2-Perc3D_nu",
+        "question": "What is Perc3D_nu?",
+        "route": [
+          "Condensed_Matter"
+        ],
+        "formula": "sin(\u03b3) \u2212 Chaos",
+        "computed": 0.8767170058144746,
+        "published": 0.875,
+        "rel_err_pct": 0.19622923593995978,
+        "green_0_5": true,
+        "band_5": true,
+        "ok": true
+      },
+      {
+        "id": "P2-Gluon_condensate",
+        "question": "What is Gluon_condensate?",
+        "route": [
+          "High_Energy_Physics"
+        ],
+        "formula": "C_cosm \u2212 e\u207b\u00b3",
+        "computed": 0.012016330507125542,
+        "published": 0.012,
+        "rel_err_pct": 0.13608755937951147,
+        "green_0_5": true,
+        "band_5": true,
+        "ok": true
+      },
+      {
+        "id": "P2-eta_baryon_photon",
+        "question": "What is eta_baryon_photon?",
+        "route": [
+          "Cosmology"
+        ],
+        "formula": "Poof\u00b9\u00b9/(\u03c0\u03b3)",
+        "computed": 6.139749535425554e-10,
+        "published": 6.14e-10,
+        "rel_err_pct": 0.004079227596853056,
+        "green_0_5": true,
+        "band_5": true,
+        "ok": true
+      },
+      {
+        "id": "P2-Water_triple_K",
+        "question": "What is Water_triple_K?",
+        "route": [
+          "Chemistry"
+        ],
+        "formula": "\u03c0\u2075sin(\u03c0/\u03c6)\u00b7C_eff",
+        "computed": 273.1560794175609,
+        "published": 273.16,
+        "rel_err_pct": 0.0014352695999231826,
+        "green_0_5": true,
+        "band_5": true,
+        "ok": true
+      },
+      {
+        "id": "P2-CO2_bond_angle",
+        "question": "What is CO2_bond_angle?",
+        "route": [
+          "Chemistry"
+        ],
+        "formula": "\u03c0\u2074/cos(1) \u2212 C",
+        "computed": 179.99867657892466,
+        "published": 180.0,
+        "rel_err_pct": 0.0007352339307450013,
+        "green_0_5": true,
+        "band_5": true,
+        "ok": true
+      }
+    ]
+  },
+  "lean": {
+    "n_live": 126,
+    "n_green_0_5": 126,
+    "n_band_5": 126,
+    "n_named": 12,
+    "named": [
+      {
+        "source": "quantum_mechanics_entanglement_depth_panel_benchmark.json",
+        "name": "chsh_classical_bound",
+        "domain": "Quantum_Optics",
+        "computed": 2.000816,
+        "measured": 2.0,
+        "rel_err_pct": 0.040799999999996395,
+        "green_0_5": true,
+        "band_5": true,
+        "skip": false
+      },
+      {
+        "source": "quantum_mechanics_entanglement_depth_panel_benchmark.json",
+        "name": "chsh_tsirelson_bound",
+        "domain": "Quantum_Optics",
+        "computed": 2.829581,
+        "measured": 2.828427,
+        "rel_err_pct": 0.04080006307393118,
+        "green_0_5": true,
+        "band_5": true,
+        "skip": false
+      },
+      {
+        "source": "quantum_mechanics_entanglement_depth_panel_benchmark.json",
+        "name": "bell_inequality_margin",
+        "domain": "Quantum_Optics",
+        "computed": 0.414383,
+        "measured": 0.414214,
+        "rel_err_pct": 0.040800166097711504,
+        "green_0_5": true,
+        "band_5": true,
+        "skip": false
+      },
+      {
+        "source": "quantum_mechanics_entanglement_depth_panel_benchmark.json",
+        "name": "epr_entangled_pair_spin_correlation",
+        "domain": "Quantum_Optics",
+        "computed": 1.000408,
+        "measured": 1.0,
+        "rel_err_pct": 0.040799999999996395,
+        "green_0_5": true,
+        "band_5": true,
+        "skip": false
+      },
+      {
+        "source": "quantum_mechanics_entanglement_depth_panel_benchmark.json",
+        "name": "superconducting_qubit_T1_us",
+        "domain": "Quantum_Computing",
+        "computed": 120.017721,
+        "measured": 120.0,
+        "rel_err_pct": 0.014767499999995454,
+        "green_0_5": true,
+        "band_5": true,
+        "skip": false
+      },
+      {
+        "source": "quantum_mechanics_entanglement_depth_panel_benchmark.json",
+        "name": "superconducting_qubit_T2_us",
+        "domain": "Quantum_Computing",
+        "computed": 95.014029,
+        "measured": 95.0,
+        "rel_err_pct": 0.014767368421045925,
+        "green_0_5": true,
+        "band_5": true,
+        "skip": false
+      },
+      {
+        "source": "quantum_mechanics_entanglement_depth_panel_benchmark.json",
+        "name": "trapped_ion_T1_s",
+        "domain": "Quantum_Computing",
+        "computed": 10.001477,
+        "measured": 10.0,
+        "rel_err_pct": 0.014769999999995065,
+        "green_0_5": true,
+        "band_5": true,
+        "skip": false
+      },
+      {
+        "source": "quantum_mechanics_entanglement_depth_panel_benchmark.json",
+        "name": "nv_center_T2_ms",
+        "domain": "Quantum_Computing",
+        "computed": 1.800266,
+        "measured": 1.8,
+        "rel_err_pct": 0.01477777777777097,
+        "green_0_5": true,
+        "band_5": true,
+        "skip": false
+      },
+      {
+        "source": "quantum_mechanics_entanglement_depth_panel_benchmark.json",
+        "name": "fine_structure_inverse",
+        "domain": "Atomic_Physics",
+        "computed": 137.136833,
+        "measured": 137.035999084,
+        "rel_err_pct": 0.07358206359935407,
+        "green_0_5": true,
+        "band_5": true,
+        "skip": false
+      },
+      {
+        "source": "founding_quantum_vacuum_panel_benchmark.json",
+        "name": "casimir_pressure_1um",
+        "domain": "Founding_Quantum_Vacuum_Panel",
+        "computed": 0.1300621079,
+        "measured": 0.13,
+        "rel_err_pct": 0.04777530769230529,
+        "green_0_5": true,
+        "band_5": true,
+        "skip": false
+      },
+      {
+        "source": "founding_quantum_vacuum_panel_benchmark.json",
+        "name": "casimir_force_sphere_plate_1um",
+        "domain": "Founding_Quantum_Vacuum_Panel",
+        "computed": 98.0468198087,
+        "measured": 98.0,
+        "rel_err_pct": 0.04777531499999322,
+        "green_0_5": true,
+        "band_5": true,
+        "skip": false
+      },
+      {
+        "source": "founding_quantum_vacuum_panel_benchmark.json",
+        "name": "casimir_energy_density_1um",
+        "domain": "Founding_Quantum_Vacuum_Panel",
+        "computed": 0.0013006211,
+        "measured": 0.0013,
+        "rel_err_pct": 0.04777692307693558,
+        "green_0_5": true,
+        "band_5": true,
+        "skip": false
+      }
+    ]
+  }
+}
