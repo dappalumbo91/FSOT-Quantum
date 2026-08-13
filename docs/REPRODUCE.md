@@ -22,6 +22,12 @@ python -m fsot_quantum.harder     # CKM / Ising / nuclear / Gset
 
 Gset G1 ships in `data/gset/G1.txt`. G14/G22 fetch from Stanford Ye when `FSOT_FETCH_GSET` is not `0`.
 
+If MaxCut residuals look wrong, run the diagnosis (why 1-opt plateaus):
+
+```powershell
+python -m fsot_quantum.gset_diagnose
+```
+
 ## Fold architecture + mind (GPU if present)
 
 ```powershell

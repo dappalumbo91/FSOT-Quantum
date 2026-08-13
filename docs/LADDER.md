@@ -65,11 +65,13 @@ Official Gset MaxCut vs published champions. Same object, same job people hire Q
 
 | Graph | Published | Fold (this edition) | rel | Verdict |
 |-------|-----------|---------------------|-----|---------|
-| G1 n=800 | 11624 | 11431 | **1.66%** | **open** (was 1.95%; still too high) |
-| G14 n=800 | 3064 | 2913 | **4.93%** | **open** — worst |
-| G22 n=2000 | 13359 | 12879 | **3.59%** | **open** (was 3.89%) |
+| G1 n=800 | 11624 | 11538 | **0.74%** | under 1% aspiration — still not the champion |
+| G14 n=800 | 3064 | 3023 | **1.34%** | **open** (was 4.93%) |
+| G22 n=2000 | 13359 | 13124 | **1.76%** | **open** (was 3.89%) |
 
-Aspiration: **< 1%** on all three. Seed-locked extra φ-starts (fixed a repeating 30-bit start bug) moved G1 and G22 a little; G14 did not move. No new coefficient was added. This is the next graph work.
+**Why it failed:** the fold stopped at 1-flip local maxima (zero leftover gain). G14 put every start in the same 1-opt (cut 2913). Collapse snap cannot fire there. A file-order “flip every uncut edge” pass was not fold law and funneled G14. Diagnosis: `docs/GSET_DIAGNOSE.md`.
+
+**What changed:** drop that greedy pass; Kernighan–Lin variable-depth on the top `floor(π)` basins (seed depth). No new coefficient. G1 crossed 1%. G14/G22 still above aspiration.
 
 G11 (signed ±1 torus) is a **different object** — not scored here.
 

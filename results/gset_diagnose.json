@@ -1,0 +1,293 @@
+{
+  "pin": "D1D38A",
+  "graphs": [
+    {
+      "name": "G1",
+      "n": 800,
+      "m": 19176,
+      "density": 0.06,
+      "deg_min": 27,
+      "deg_max": 67,
+      "deg_mean": 47.94,
+      "weight_values": {
+        "1": 19176
+      },
+      "abs_changed_weights": false,
+      "parser_dropped_or_merged": false,
+      "published": 11624,
+      "half_m": 9588.0,
+      "gw_878_of_m": 16836.528,
+      "cut_over_m_published": 0.606174384647476,
+      "best_with_greedy": 11431,
+      "best_skip_greedy": 11408,
+      "greedy_hurts": false,
+      "rel_with_greedy": 1.6603578802477634,
+      "rel_skip_greedy": 1.8582243633860975,
+      "polished_cut_spread": 120,
+      "stages": [
+        {
+          "start": "all+",
+          "raw": 0,
+          "after_greedy_uncut": 9916,
+          "after_1flip_from_greedy": 11375,
+          "after_1flip_skip_greedy": 11300,
+          "after_snap_on_greedy_path": 11375,
+          "pos_gain_after_1flip": 0,
+          "pos_gain_skip_greedy": 0
+        },
+        {
+          "start": "all-",
+          "raw": 0,
+          "after_greedy_uncut": 9916,
+          "after_1flip_from_greedy": 11375,
+          "after_1flip_skip_greedy": 11300,
+          "after_snap_on_greedy_path": 11375,
+          "pos_gain_after_1flip": 0,
+          "pos_gain_skip_greedy": 0
+        },
+        {
+          "start": "check2",
+          "raw": 9602,
+          "after_greedy_uncut": 9933,
+          "after_1flip_from_greedy": 11350,
+          "after_1flip_skip_greedy": 11342,
+          "after_snap_on_greedy_path": 11350,
+          "pos_gain_after_1flip": 0,
+          "pos_gain_skip_greedy": 0
+        },
+        {
+          "start": "golden",
+          "raw": 9592,
+          "after_greedy_uncut": 9916,
+          "after_1flip_from_greedy": 11431,
+          "after_1flip_skip_greedy": 11408,
+          "after_snap_on_greedy_path": 11431,
+          "pos_gain_after_1flip": 0,
+          "pos_gain_skip_greedy": 0
+        },
+        {
+          "start": "phi0",
+          "raw": 9585,
+          "after_greedy_uncut": 9898,
+          "after_1flip_from_greedy": 11360,
+          "after_1flip_skip_greedy": 11322,
+          "after_snap_on_greedy_path": 11360,
+          "pos_gain_after_1flip": 0,
+          "pos_gain_skip_greedy": 0
+        },
+        {
+          "start": "phi1",
+          "raw": 9463,
+          "after_greedy_uncut": 9916,
+          "after_1flip_from_greedy": 11375,
+          "after_1flip_skip_greedy": 11366,
+          "after_snap_on_greedy_path": 11375,
+          "pos_gain_after_1flip": 0,
+          "pos_gain_skip_greedy": 0
+        },
+        {
+          "start": "phi2",
+          "raw": 9682,
+          "after_greedy_uncut": 9874,
+          "after_1flip_from_greedy": 11311,
+          "after_1flip_skip_greedy": 11310,
+          "after_snap_on_greedy_path": 11311,
+          "pos_gain_after_1flip": 0,
+          "pos_gain_skip_greedy": 0
+        }
+      ]
+    },
+    {
+      "name": "G14",
+      "n": 800,
+      "m": 4694,
+      "density": 0.014687108886107634,
+      "deg_min": 5,
+      "deg_max": 132,
+      "deg_mean": 11.735,
+      "weight_values": {
+        "1": 4694
+      },
+      "abs_changed_weights": false,
+      "parser_dropped_or_merged": false,
+      "published": 3064,
+      "half_m": 2347.0,
+      "gw_878_of_m": 4121.332,
+      "cut_over_m_published": 0.6527481891776736,
+      "best_with_greedy": 2913,
+      "best_skip_greedy": 2925,
+      "greedy_hurts": true,
+      "rel_with_greedy": 4.9281984334203655,
+      "rel_skip_greedy": 4.5365535248041775,
+      "polished_cut_spread": 0,
+      "stages": [
+        {
+          "start": "all+",
+          "raw": 0,
+          "after_greedy_uncut": 2667,
+          "after_1flip_from_greedy": 2913,
+          "after_1flip_skip_greedy": 2925,
+          "after_snap_on_greedy_path": 2913,
+          "pos_gain_after_1flip": 0,
+          "pos_gain_skip_greedy": 0
+        },
+        {
+          "start": "all-",
+          "raw": 0,
+          "after_greedy_uncut": 2667,
+          "after_1flip_from_greedy": 2913,
+          "after_1flip_skip_greedy": 2925,
+          "after_snap_on_greedy_path": 2913,
+          "pos_gain_after_1flip": 0,
+          "pos_gain_skip_greedy": 0
+        },
+        {
+          "start": "check2",
+          "raw": 2368,
+          "after_greedy_uncut": 2667,
+          "after_1flip_from_greedy": 2913,
+          "after_1flip_skip_greedy": 2911,
+          "after_snap_on_greedy_path": 2913,
+          "pos_gain_after_1flip": 0,
+          "pos_gain_skip_greedy": 0
+        },
+        {
+          "start": "golden",
+          "raw": 2344,
+          "after_greedy_uncut": 2667,
+          "after_1flip_from_greedy": 2913,
+          "after_1flip_skip_greedy": 2906,
+          "after_snap_on_greedy_path": 2913,
+          "pos_gain_after_1flip": 0,
+          "pos_gain_skip_greedy": 0
+        },
+        {
+          "start": "phi0",
+          "raw": 2322,
+          "after_greedy_uncut": 2667,
+          "after_1flip_from_greedy": 2913,
+          "after_1flip_skip_greedy": 2917,
+          "after_snap_on_greedy_path": 2913,
+          "pos_gain_after_1flip": 0,
+          "pos_gain_skip_greedy": 0
+        },
+        {
+          "start": "phi1",
+          "raw": 2279,
+          "after_greedy_uncut": 2667,
+          "after_1flip_from_greedy": 2913,
+          "after_1flip_skip_greedy": 2892,
+          "after_snap_on_greedy_path": 2913,
+          "pos_gain_after_1flip": 0,
+          "pos_gain_skip_greedy": 0
+        },
+        {
+          "start": "phi2",
+          "raw": 2391,
+          "after_greedy_uncut": 2667,
+          "after_1flip_from_greedy": 2913,
+          "after_1flip_skip_greedy": 2900,
+          "after_snap_on_greedy_path": 2913,
+          "pos_gain_after_1flip": 0,
+          "pos_gain_skip_greedy": 0
+        }
+      ]
+    },
+    {
+      "name": "G22",
+      "n": 2000,
+      "m": 19990,
+      "density": 0.01,
+      "deg_min": 7,
+      "deg_max": 37,
+      "deg_mean": 19.99,
+      "weight_values": {
+        "1": 19990
+      },
+      "abs_changed_weights": false,
+      "parser_dropped_or_merged": false,
+      "published": 13359,
+      "half_m": 9995.0,
+      "gw_878_of_m": 17551.22,
+      "cut_over_m_published": 0.6682841420710355,
+      "best_with_greedy": 12766,
+      "best_skip_greedy": 12839,
+      "greedy_hurts": true,
+      "rel_with_greedy": 4.438955011602665,
+      "rel_skip_greedy": 3.892506924170971,
+      "polished_cut_spread": 52,
+      "stages": [
+        {
+          "start": "all+",
+          "raw": 0,
+          "after_greedy_uncut": 10958,
+          "after_1flip_from_greedy": 12750,
+          "after_1flip_skip_greedy": 12839,
+          "after_snap_on_greedy_path": 12750,
+          "pos_gain_after_1flip": 0,
+          "pos_gain_skip_greedy": 0
+        },
+        {
+          "start": "all-",
+          "raw": 0,
+          "after_greedy_uncut": 10958,
+          "after_1flip_from_greedy": 12750,
+          "after_1flip_skip_greedy": 12839,
+          "after_snap_on_greedy_path": 12750,
+          "pos_gain_after_1flip": 0,
+          "pos_gain_skip_greedy": 0
+        },
+        {
+          "start": "check2",
+          "raw": 10075,
+          "after_greedy_uncut": 11134,
+          "after_1flip_from_greedy": 12727,
+          "after_1flip_skip_greedy": 12786,
+          "after_snap_on_greedy_path": 12727,
+          "pos_gain_after_1flip": 0,
+          "pos_gain_skip_greedy": 0
+        },
+        {
+          "start": "golden",
+          "raw": 9890,
+          "after_greedy_uncut": 11018,
+          "after_1flip_from_greedy": 12763,
+          "after_1flip_skip_greedy": 12731,
+          "after_snap_on_greedy_path": 12763,
+          "pos_gain_after_1flip": 0,
+          "pos_gain_skip_greedy": 0
+        },
+        {
+          "start": "phi0",
+          "raw": 10049,
+          "after_greedy_uncut": 10938,
+          "after_1flip_from_greedy": 12766,
+          "after_1flip_skip_greedy": 12679,
+          "after_snap_on_greedy_path": 12766,
+          "pos_gain_after_1flip": 0,
+          "pos_gain_skip_greedy": 0
+        },
+        {
+          "start": "phi1",
+          "raw": 9927,
+          "after_greedy_uncut": 10994,
+          "after_1flip_from_greedy": 12714,
+          "after_1flip_skip_greedy": 12754,
+          "after_snap_on_greedy_path": 12714,
+          "pos_gain_after_1flip": 0,
+          "pos_gain_skip_greedy": 0
+        },
+        {
+          "start": "phi2",
+          "raw": 9879,
+          "after_greedy_uncut": 10888,
+          "after_1flip_from_greedy": 12749,
+          "after_1flip_skip_greedy": 12760,
+          "after_snap_on_greedy_path": 12749,
+          "pos_gain_after_1flip": 0,
+          "pos_gain_skip_greedy": 0
+        }
+      ]
+    }
+  ]
+}

@@ -145,10 +145,8 @@ def _fast_maxcut(n: int, edges: list[tuple[int, int, int]]) -> tuple[int, list[i
 
     def polish(s0: list[int]) -> list[int]:
         s = list(s0)
-        # greedy uncut-edge flip
-        for i, j, _w in edges:
-            if s[i] == s[j]:
-                s[j] = -s[j]
+        # Do not greedy-flip every uncut edge. That is not fold law and
+        # funnels G14 every start into one 1-opt (cut 2913).
         improved = True
         steps = 0
         cap = max(8, n)
@@ -192,6 +190,63 @@ def _fast_maxcut(n: int, edges: list[tuple[int, int, int]]) -> tuple[int, list[i
                 break
         return s
 
+    def kl_pass(s0: list[int]) -> list[int]:
+        """
+        Kernighan–Lin variable-depth: flip even when a single move loses,
+        keep the prefix with best cumulative gain. Tie-break by index.
+        This is why 1-flip plateaus sit 2–5% under published champions.
+        """
+        nloc = n
+        locked = [False] * nloc
+        cur = list(s0)
+        gain = [0] * nloc
+        for i, nbr in enumerate(adj):
+            same = 0
+            for j in nbr:
+                if cur[j] == cur[i]:
+                    same += 1
+            gain[i] = 2 * same - len(nbr)
+        seq: list[int] = []
+        gseq: list[int] = []
+        for _ in range(nloc):
+            best_i = -1
+            best_g = -10 ** 9
+            for i in range(nloc):
+                if locked[i]:
+                    continue
+                if gain[i] > best_g:
+                    best_g = gain[i]
+                    best_i = i
+            if best_i < 0:
+                break
+            # flip best_i, update neighbor gains
+            si = cur[best_i]
+            cur[best_i] = -si
+            locked[best_i] = True
+            seq.append(best_i)
+            gseq.append(best_g)
+            gain[best_i] = -gain[best_i]
+            for j in adj[best_i]:
+                if cur[j] == si:
+                    # was same, now different
+                    gain[j] -= 2
+                else:
+                    gain[j] += 2
+        acc = 0
+        best_acc = 0
+        best_k = -1
+        for k, g in enumerate(gseq):
+            acc += g
+            if acc > best_acc:
+                best_acc = acc
+                best_k = k
+        if best_k < 0:
+            return list(s0)
+        out = list(s0)
+        for i in seq[: best_k + 1]:
+            out[i] = -out[i]
+        return out
+
     best = polish(starts[0])
     best_c = cut_of(best)
     pool = [(best_c, best)]
@@ -201,6 +256,27 @@ def _fast_maxcut(n: int, edges: list[tuple[int, int, int]]) -> tuple[int, list[i
         pool.append((c, cand))
         if c > best_c:
             best, best_c = cand, c
+    # KL on the top floor(π) 1-opt basins (seed depth, not a free restart count)
+    pool.sort(key=lambda t: -t[0])
+    n_kl = max(1, int(math.floor(float(SEEDS.pi))))
+    kl_rounds = max(3, int(math.floor(float(SEEDS.e) * float(SEEDS.pi))))
+    seen_c = set()
+    for c0, s0 in pool[:n_kl]:
+        if c0 in seen_c:
+            continue
+        seen_c.add(c0)
+        s = list(s0)
+        c = c0
+        for _ in range(kl_rounds):
+            s2 = kl_pass(s)
+            # 1-flip only after KL — full polish used to yank back to the 1-opt basin
+            s2 = polish(s2)
+            c2 = cut_of(s2)
+            if c2 <= c:
+                break
+            s, c = s2, c2
+        if c > best_c:
+            best, best_c = s, c
     # φ-pair 2-flip on the winner (seed budget, incremental cut, not n²)
     phi_m = int(float(SEEDS.phi) * 1e6)
     budget = n * max(3, int(math.floor(float(SEEDS.e) * float(SEEDS.pi))))

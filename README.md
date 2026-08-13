@@ -191,6 +191,7 @@ python -m fsot_quantum predict    # preregistered predictions (killable)
 | Forward questions (arch + known + QC-for) | `results/FORWARD_ASK.md` |
 | Harder QC-for (CKM / Ising / Gset / fabric) | `results/HARDER_QC.md` |
 | Ladder (hits + open residuals) | `docs/LADDER.md` |
+| Gset MaxCut diagnosis | `docs/GSET_DIAGNOSE.md` |
 | Reproduce | `docs/REPRODUCE.md` |
 | Multiprover stamp (Lean/Coq/Isabelle/F*) | `results/MULTIPROVER_STAMP.md` |
 | Preregistered predictions | `predictions/qc_preregistered.json` |
