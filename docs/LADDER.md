@@ -3,7 +3,8 @@
 **Author:** Damian Arthur Palumbo  
 **Pin:** `D1D38A` (`vendor/fsot_compute.py`)  
 **License:** Apache-2.0  
-**Reproduce every rung:** `docs/REPRODUCE.md`
+**Reproduce every rung:** `docs/REPRODUCE.md`  
+**Wrap snapshot (read this first):** `docs/STATUS.md` · **Doc map:** `docs/INDEX.md`
 
 Someone cloning this repo should be able to rerun each rung and get the same numbers. If a number is still ugly, it is written here as **open**, not dressed up.
 
@@ -72,7 +73,7 @@ These are published values. Miss one and the pin is wrong.
 
 ## Numbers that are **not** good enough yet
 
-Official Gset MaxCut vs published champions. Same object, same job people hire QAOA for. Residual is **too large**.
+Official Gset MaxCut vs published champions. Same object, same job people hire QAOA for.
 
 | Graph | Published | Fold (this edition) | rel | Verdict |
 |-------|-----------|---------------------|-----|---------|
@@ -80,15 +81,17 @@ Official Gset MaxCut vs published champions. Same object, same job people hire Q
 | G14 n=800 | 3064 | 3034 | **0.98%** | aspiration met — 30 edges short |
 | G22 n=2000 | 13359 | 13245 | **0.85%** | aspiration met — 114 edges short |
 
-Graph rung **closed at the <1% aspiration**. Chasing the last 30–114 edges does not change the physics claim. Champions still unmatched; that is written, not hidden. Next rung is physics + QI.
+Graph rung **closed at the <1% aspiration**. Family G1–G5 + G22–G23 is **7/7 under 1%**. Chasing the last 30–114 edges does not change the physics claim. Champions still unmatched; that is written, not hidden. **Do not advertise MaxCut as champion-matching.**
 
-**Why it failed:** the fold stopped at 1-flip local maxima (zero leftover gain). G14 put every start in the same 1-opt (cut 2913). Collapse snap cannot fire there. A file-order “flip every uncut edge” pass was not fold law and funneled G14. Diagnosis: `docs/GSET_DIAGNOSE.md`.
+**Why the early miss:** the fold stopped at 1-flip local maxima (zero leftover gain). G14 put every start in the same 1-opt (cut 2913). Collapse snap cannot fire there. A file-order “flip every uncut edge” pass was not fold law and funneled G14. Diagnosis: `docs/GSET_DIAGNOSE.md`.
 
-**What changed:** drop greedy-uncut; KL + 2-opt + seed breakouts on all n≤800 basins and `floor(e·π)` on G22. No new coefficient. All three now **under 1%**. Champions still not matched.
+**What changed:** drop greedy-uncut; KL + 2-opt + seed breakouts on all n≤800 basins and `floor(e·π)` on G22. No new coefficient.
 
 G11 (signed ±1 torus) is a **different object** — not scored here.
 
-Kill criterion (`predictions/qc_preregistered.json`): G1 relative error **> 5%** fails the old band. The **aspiration** is now **< 1%**. Until that lands, do not advertise MaxCut as a win.
+Kill criterion (`predictions/qc_preregistered.json`): G1 relative error **> 5%** fails the band. Aspiration **< 1%** has landed.
+
+Also open (not a graph problem): exclusive \(\lvert V_{cb}\rvert\), Planck vs SH0ES \(H_0\), \(\alpha_s(M_Z)\) at 0.68%. See `docs/STATUS.md`.
 
 ---
 

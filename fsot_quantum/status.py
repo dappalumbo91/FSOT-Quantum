@@ -1,0 +1,59 @@
+"""
+Print the wrap snapshot pointer and the locked headline numbers.
+
+Does not recompute physics. The living ledgers are the docs.
+python -m fsot_quantum.status
+python -m fsot_quantum status
+"""
+
+from __future__ import annotations
+
+import json
+from pathlib import Path
+
+ROOT = Path(__file__).resolve().parents[1]
+
+
+def main() -> int:
+    snap = {
+        "suite": "status",
+        "pin": "D1D38A",
+        "wrap": "docs/STATUS.md",
+        "ladder": "docs/LADDER.md",
+        "index": "docs/INDEX.md",
+        "reproduce": "docs/REPRODUCE.md",
+        "headlines": {
+            "audit": "20/20 fold vs YR4/PDG @0.5%",
+            "harder": "20/20 @0.5%",
+            "physics_qi": "16/16 + 326/326 Lean",
+            "physics_qi2": "22/22 + 126/126 Lean",
+            "physics_qi3": "41/41 + 212/212 Lean",
+            "gset_family": "7/7 under 1%",
+            "chemistry": "68/68 @0.5%",
+            "S_QM": "+0.9555 emergence",
+            "S_QC": "-0.1477 damping",
+            "V_cb": "inclusive 0.0422 (exclusive is a different extraction)",
+            "open": [
+                "Gset champions unmatched (aspiration <1% landed)",
+                "exclusive |V_cb|",
+                "H0 Planck vs SH0ES",
+                "alpha_s(M_Z) 0.68%",
+                "vendor BR_H_gg field still stale; fold matches YR4",
+            ],
+        },
+        "not_claimed": [
+            "cryogenic QPU",
+            "Hilbert-universal simulation",
+            "RSA-scale factoring",
+            "FTQC threshold",
+            "chatbot mind",
+        ],
+    }
+    print(json.dumps(snap, indent=2))
+    print()
+    print((ROOT / "docs" / "STATUS.md").resolve())
+    return 0
+
+
+if __name__ == "__main__":
+    raise SystemExit(main())

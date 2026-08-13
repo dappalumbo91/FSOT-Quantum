@@ -2,6 +2,8 @@
 
 See `NOTE.md`. This is the focused cost-geometry writeup, not a full arXiv bundle.
 
+Living wrap of the fold (physics + graphs + honesty): `docs/STATUS.md`.
+
 Reproduce the proved lemmas:
 
 ```powershell

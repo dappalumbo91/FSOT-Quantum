@@ -1,228 +1,134 @@
 # FSOT-Quantum
 
-**Fluid Spacetime Omni-Theory — quantum computing domain fold**
+**Fluid Spacetime Omni-Theory — Quantum_Mechanics / Quantum_Computing domain fold**
 
-**Ladder (what hit, what is still open):** [`docs/LADDER.md`](docs/LADDER.md)  
-**Reproduce:** [`docs/REPRODUCE.md`](docs/REPRODUCE.md)
+Answers the jobs people hire quantum computers and precision-physics codes for, on ordinary GPU/CPU hardware. Zero free parameters. Scale by **folds**, not Hilbert \(2^n\).
 
-Author: **Damian Arthur Palumbo**  
-License: **Apache-2.0**  
-Theory authority: **[FSOT-2.1-Lean](https://github.com/dappalumbo91/FSOT-2.1-Lean)** (pin **D1D38A**)  
-**Runtime authority: [FSOT-GPU](https://github.com/dappalumbo91/FSOT-GPU) `fsot_lib`** (vendored here)
+| | |
+|--|--|
+| **Author** | Damian Arthur Palumbo |
+| **Pin** | **D1D38A** (`vendor/fsot_compute.py`) |
+| **License** | Apache-2.0 |
+| **Theory** | [FSOT-2.1-Lean](https://github.com/dappalumbo91/FSOT-2.1-Lean) |
+| **Runtime** | [FSOT-GPU](https://github.com/dappalumbo91/FSOT-GPU) `fsot_lib` (vendored) |
+| **Mind / body** | [fsot-neuron-zig](https://github.com/dappalumbo91/fsot-neuron-zig) |
 
-This repository does **not** invent a second GPU stack.  
-It is the **Quantum_Mechanics / Quantum_Computing** fold on the **same owned operators** already proven in FSOT-GPU:
+**Read first:** [`docs/STATUS.md`](docs/STATUS.md) — current system, findings, capability, what is still open.  
+**Rungs:** [`docs/LADDER.md`](docs/LADDER.md) · **Reproduce:** [`docs/REPRODUCE.md`](docs/REPRODUCE.md) · **Doc map:** [`docs/INDEX.md`](docs/INDEX.md)
 
-| Operator | Module |
-|----------|--------|
-| Seeds / Θ = C_eff·P_var | `fsot_lib.seeds` |
-| S = K(T1+T2+T3) | `fsot_lib.scalar` |
-| Collapse / pack / trit similarity | `fsot_lib.trinary` |
-| Coherence norm | `fsot_lib.coherence` |
-| Consensus attention (no softmax) | `fsot_lib.consensus` |
-| Suction–poof LR | `fsot_lib.learn` |
-| Torch / native adapters | `fsot_lib.backend` |
+---
 
-Spins: **−1** down · **0** superposed · **+1** up.
+## What this is
+
+\[
+S = K(T_1+T_2+T_3),\quad
+\Theta = C_{\mathrm{eff}}\cdot P_{\mathrm{var}},\quad
+\kappa_{ij}=A_{\mathrm{bleed}}\cdot\mathrm{POOF}\cdot|S_i||S_j|\big/\bigl(1+|D_i-D_j|/25\bigr)
+\]
+
+\(K=\varphi\cdot(\gamma/e)\cdot\sqrt{2}/\ln(\pi)\cdot 99/100\approx 0.420222\) is the universal scale. Change **domain / \(D_{\mathrm{eff}}\) / observed**, not a fit.
+
+Trinary spins: **−1** down · **0** superposed · **+1** up. Consensus, not softmax.
+
+This repo is **not** a second GPU stack. It is the QM/QC fold on the same owned operators already in FSOT-GPU (`seeds`, `scalar`, `trinary`, `coherence`, `consensus`, `learn`, `backend`).
+
+It does **not** claim a cryogenic QPU, Hilbert-universal simulation, RSA-scale factoring, FTQC threshold, FCI, or a chatbot mind.
+
+---
+
+## Current findings (this wrap)
+
+Living numbers. Miss one and the pin is wrong — except where we scored the wrong object, which is written down and fixed without touching the pin.
+
+| Panel | Result | Ledger |
+|-------|--------|--------|
+| Stale-target audit vs YR4/PDG | **20/20 @ 0.5%** | [`docs/STALE_TARGETS.md`](docs/STALE_TARGETS.md) · [`docs/MISS_THREE.md`](docs/MISS_THREE.md) |
+| Harder QC-for (CKM / PMNS / Ising / nuclear / Higgs) | 20/20 @ 0.5% | [`docs/HARDER_QC.md`](docs/HARDER_QC.md) |
+| Physics + QI I | 16/16 + 326/326 Lean | [`docs/PHYSICS_QI.md`](docs/PHYSICS_QI.md) |
+| Physics + QI II | 22/22 + 126/126 Lean | [`docs/PHYSICS_QI2.md`](docs/PHYSICS_QI2.md) |
+| Physics + QI III (leftover hired physics) | **41/41 + 212/212 Lean** | [`docs/PHYSICS_QI3.md`](docs/PHYSICS_QI3.md) |
+| Gset family G1–G5 + G22–G23 | **7/7 under 1%** | [`docs/GSET_FAMILY.md`](docs/GSET_FAMILY.md) |
+| Chemistry pin set | 68/68 @ 0.5% | — |
+| \(1/\alpha\), Weinberg, proton radius, water angle | match | [`docs/STATUS.md`](docs/STATUS.md) |
+| Inclusive \(\lvert V_{cb}\rvert\) | 0.0422008 vs 0.0422 | inclusive PDG; exclusive is a different extraction |
+| Tsirelson | exact \(2\sqrt{2}\) | — |
+| \(S(\mathrm{QM})\), \(S(\mathrm{QC})\) | \(+0.9555\), \(−0.1477\) | emergence / damping |
+
+**Still open, written as open:** Gset champions unmatched (30–114 edges); exclusive \(V_{cb}\); Planck vs SH0ES \(H_0\); \(\alpha_s(M_Z)\) 0.68%; vendor `BR_H_gg` field still stale (fold already matches YR4).
 
 ---
 
 ## Quick start
 
 ```powershell
-cd "C:\Users\damia\Desktop\fsot quantum"
+git clone https://github.com/dappalumbo91/FSOT-Quantum.git
+cd FSOT-Quantum
 $env:PYTHONPATH = (Get-Location).Path
+pip install -r requirements.txt   # torch optional; pin checks run without it
 
-# Owned stack (FSOT-GPU)
-python -m fsot_lib.smoke_owned
-
-# Quantum fold + pin + vendor parity
-python -m fsot_quantum.verify
-python parity\run_parity.py
-python scripts\run_demo.py
-
-# Capability suite — QC jobs on GPU without quantum hardware
-python -m fsot_quantum.capability_suite
-
-# Next-track panels
-python -c "from fsot_quantum.optimization import run_optimization_panel; print(run_optimization_panel()['overall_ok'])"
-python -c "from fsot_quantum.textbook_map import run_textbook_map; print(run_textbook_map()['overall_ok'])"
-python -c "from fsot_quantum.scale_scoreboard import run_scale_scoreboard; print(run_scale_scoreboard()['overall_ok'])"
-
-# Hilbert · logical qubits · QFT/Shor · chemistry residual (compete QM/QC)
-python -m fsot_quantum.compete_qm_qc
-
-# Next steps: n=8–12 circuits · d=5/7 codes · full modular Shor · chemistry strict
-python -m fsot_quantum.next_steps_suite
-
-# Competitor climb v1: fused Hilbert n≤20 · Shor GPU · opt GPU · QAOA 11/11
-python -m fsot_quantum.climb_suite
-
-# Competitor climb v2: surface code d=3/5/7 · Shor N≤51 · mega GPU · chemistry
-python -m fsot_quantum.climb_v2
-
-# Fold-not-Hilbert: QC jobs via D_eff folds (not 2^n amplitude expansion)
-python -m fsot_quantum.fold_suite
-
-# Fold v2: chemistry 0.5% · GPU fold queue · surface+phase folds
-python -m fsot_quantum.fold_v2
-
-# Fold v3: MaxCut/Ising ledger · multi-stream scheduler · lattice surgery
-python -m fsot_quantum.fold_v3
-
-# Fold v4: multi-process · teleport sequences · Gset-style · formal cost
-python -m fsot_quantum.fold_v4
-
-# Fold v5 leftovers: official Gset loader · multi-GPU shards · adder/QFT-role · QEMU
-python -m fsot_quantum.fold_v5
-
-# Fold v6: official G1 residual · 4-bit/modular-mul folds · GPU occupancy
-python -m fsot_quantum.fold_v6
-
-# Field of use (honest): collapse/consensus/D_eff on QM/QC jobs — theater labeled
-python -m fsot_quantum.field_of_use
-
-# Margin vs published QPU field results + D_eff refine probe
-python -m fsot_quantum.margin_vs_qpu
-
-# Quantum-sector bleed (Lean connective κ) + ingest 2.1-Lean atlas headlines
-python -m fsot_quantum.bleed_refine
-
-# Water / three-string / look-snap medium + Lean entanglement/QI jobs
-python -m fsot_quantum.medium_next
-
-# Keep going: concepts + fridge/hits probe + more Lean math/QI jobs
-python -m fsot_quantum.keep_going
-
-# QC/QM accuracy board — hired jobs on ordinary hardware
-python -m fsot_quantum.qc_accuracy
-
-# QAOA exact column (must be 11/11)
-python -c "from fsot_quantum.qaoa_fsot import run_qaoa_panel; r=run_qaoa_panel(); print(r['metrics_summary']); assert r['overall_ok']"
-
-# FSOT-QC-OS v0.3.0 — standalone job OS (13 hired jobs on metal)
-.\run_qemu.ps1
-# interactive: .\run_qemu_stdio.ps1   (a=all c=core j=jobs h=help)
-
-# Pull more Lean chemistry/QM atlas into this fold
-python -m fsot_quantum.expand_sim
-
-# Full Lean solved atlas (all benchmark files, not chemistry-only)
-python -m fsot_quantum.lean_full_atlas
-
-# Next stress: large MaxCut · QAOA-FSOT · textbook sim job compare
-python -m fsot_quantum.stress_next
-
-# QC questions (DJ / BV / Grover / period / factor / Ising / G1 / chem / QM)
-python -m fsot_quantum.ask_qc
-# or: python -m fsot_quantum ask
-
-# Hard questions — FSOT math / K-scale, not foreign circuits (sizes 2^n cannot finish)
-python -m fsot_quantum.hard_questions
-# or: python -m fsot_quantum hard
-
-# Fold architecture — 35 pin domains + Lean atlas on GPU (not Hilbert n)
-python -m fsot_quantum.fold_architecture
-# or: python -m fsot_quantum fold
-
-# Multiprover formal stamp (Lean 4 · Coq · Isabelle · F* · Python runtime)
-python scripts\run_multiprover_verification.py
-# or: python -m fsot_quantum stamp
-
-# Full skeptic kit (pin + smoke + capability + residual + textbook + scale + multiprover)
-python -m fsot_quantum.skeptic_kit
-# or:  .\scripts\run_skeptic_kit.ps1
-
-# Zig twin (if zig on PATH)
-cd zig; zig build run; cd ..
+python -m fsot_quantum check      # pin D1D38A
+python -m fsot_quantum audit      # 20/20 vs current literature
+python -m fsot_quantum harder     # hired physics 20/20
+python -m fsot_quantum push3      # leftover hired physics 41/41
+python -m fsot_quantum family     # Gset 7/7 under 1%
 ```
 
-**Goal:** answers for quantum-computing *jobs* via FSOT trinary + GPU parallel — not cryogenic QPU infrastructure.
+Optional: clone [FSOT-2.1-Lean](https://github.com/dappalumbo91/FSOT-2.1-Lean) to `_ref\FSOT-2.1-Lean` for the 432-domain atlas. Without it, atlas counts skip; pin domains still score.
 
-Field commands (ordinary PC):
-
-```powershell
-python -m fsot_quantum check      # pin/seeds/D_eff vs Lean clone
-python -m fsot_quantum accuracy   # hired QC/QM jobs
-python -m fsot_quantum ask        # QC question ledger (DJ/BV/Grover/Shor/…)
-python -m fsot_quantum hard       # hard questions via K (not foreign circuits)
-python -m fsot_quantum fold       # 35 pin + Lean atlas folds on GPU
-python -m fsot_quantum observe    # typical questions + lawful look path
-python -m fsot_quantum mind       # how genuine intelligence emerges (not an LLM)
-python -m fsot_quantum forward    # mind architecture + known answers + real QC questions
-python -m fsot_quantum harder     # harder QC-for: CKM, Ising, nuclear, G14/G22, Lean fabric
-python -m fsot_quantum qi         # physics + QI: 3D Ising/XY/Heisenberg, g-2, Lean fabric
-python -m fsot_quantum push       # QI II: Higgs/Z, nuclear, cosmology, Casimir, CHSH
-python -m fsot_quantum audit      # stale vendor targets vs PDG/YR4
-python -m fsot_quantum family     # Gset G1–G5 + G22–G23
-python -m fsot_quantum organ      # export organ JSON for neuron-zig
-python -m fsot_quantum stamp      # Lean · Coq · Isabelle · F* · Python
-python -m fsot_quantum atlas      # full Lean solved atlas
-python -m fsot_quantum predict    # preregistered predictions (killable)
-.\run_qemu.ps1                    # FSOT-QC-OS standalone
-```
-
-| Panel | Ledger |
-|-------|--------|
-| Capability | `results/CAPABILITY_REPORT.md` |
-| Ising/MaxCut residual | `results/optimization_panel.json` |
-| Textbook map | `docs/TEXTBOOK_CIRCUIT_MAP.md` |
-| Scale scoreboard | `results/SCALE_SCOREBOARD.md` |
-| Climb v1 | `results/CLIMB.md` |
-| Climb v2 (surface + Shor mid + mega GPU) | `results/CLIMB_V2.md` |
-| Fold-not-Hilbert (scaling law) | `results/FOLD_NOT_HILBERT.md` |
-| Fold v2 (chem + GPU queue + phase) | `results/FOLD_V2.md` |
-| Fold v3 (benchmarks + surgery + streams) | `results/FOLD_V3.md` |
-| Fold v4 (mp + teleport + Gset + formal) | `results/FOLD_V4.md` |
-| Fold v5 (leftovers + QEMU + paper note) | `results/FOLD_V5.md` |
-| Fold v6 (official G1 + wider arith) | `results/FOLD_V6.md` |
-| Field of use (honest FSOT jobs) | `results/FIELD_OF_USE.md` |
-| Margin vs QPU field results | `results/MARGIN_VS_QPU.md` |
-| Bleed refine (full Lean fabric) | `results/BLEED_REFINE.md` |
-| Medium / three-string / QI jobs | `results/MEDIUM_NEXT.md` |
-| Concepts (traceable pictures) | `docs/CONCEPTS.md` |
-| Keep going (fridge probe + 116 QI jobs) | `results/KEEP_GOING.md` |
-| QC/QM accuracy board | `results/QC_ACCURACY.md` |
-| Bare metal / QEMU | `docs/BARE_METAL.md` |
-| FSOT-QC-OS (own job OS) | `docs/QC_OS.md` |
-| Expand sim (Lean chem + QM) | `results/EXPAND_SIM.md` |
-| Full Lean atlas (all solved panels) | `results/LEAN_FULL_ATLAS.md` |
-| Cross-check vs Lean | `results/CROSSCHECK.md` |
-| QC question ledger | `results/ASK_QC.md` |
-| Hard questions (K-scale) | `results/HARD_QUESTIONS.md` |
-| Fold architecture (35 pin + atlas GPU) | `results/FOLD_ARCHITECTURE.md` |
-| Observe / emerge (typical Q + look path) | `results/OBSERVE_EMERGE.md` |
-| Mind emergence (C_factor, not LLM) | `results/EMERGE_MIND.md` |
-| Forward questions (arch + known + QC-for) | `results/FORWARD_ASK.md` |
-| Harder QC-for (CKM / Ising / Gset / fabric) | `results/HARDER_QC.md` |
-| Physics + QI rung | `results/PHYSICS_QI.md` |
-| Physics + QI push II | `results/PHYSICS_QI2.md` |
-| BR(H→gg) diagnosis | `docs/BR_H_GG.md` |
-| Stale-target audit | `docs/STALE_TARGETS.md` |
-| Gset family G1–G5/G22–G23 | `docs/GSET_FAMILY.md` |
-| Ladder (hits + open residuals) | `docs/LADDER.md` |
-| Gset MaxCut diagnosis | `docs/GSET_DIAGNOSE.md` |
-| Reproduce | `docs/REPRODUCE.md` |
-| Multiprover stamp (Lean/Coq/Isabelle/F*) | `results/MULTIPROVER_STAMP.md` |
-| Preregistered predictions | `predictions/qc_preregistered.json` |
-| Skeptic kit | `results/SKEPTIC_KIT.md` |
-
-Device path is **exactly** FSOT-GPU: torch CUDA buffers when available.
+CUDA is used when present. Pin and constants do not require a GPU.
 
 ---
 
-## Layout
+## Field commands
+
+```powershell
+python -m fsot_quantum            # help
+python -m fsot_quantum check      # pin / seeds / D_eff vs Lean clone
+python -m fsot_quantum status     # print the wrap snapshot path
+python -m fsot_quantum accuracy   # hired QC/QM jobs
+python -m fsot_quantum ask        # DJ / BV / Grover / Shor / Ising / chem
+python -m fsot_quantum hard       # hard questions via K (not foreign circuits)
+python -m fsot_quantum fold       # 35 pin + Lean atlas on GPU
+python -m fsot_quantum observe    # typical questions + lawful look path
+python -m fsot_quantum mind       # how intelligence emerges (not an LLM)
+python -m fsot_quantum forward    # known answers + QC-for questions
+python -m fsot_quantum harder     # CKM / Ising / nuclear / Gset
+python -m fsot_quantum qi         # physics + QI I
+python -m fsot_quantum push       # physics + QI II
+python -m fsot_quantum push3      # physics + QI III
+python -m fsot_quantum audit      # vendor vs YR4/PDG
+python -m fsot_quantum family     # Gset G1–G5 + G22–G23
+python -m fsot_quantum organ      # JSON for neuron-zig
+python -m fsot_quantum stamp      # Lean · Coq · Isabelle · F* · Python
+python -m fsot_quantum atlas      # full Lean solved atlas
+python -m fsot_quantum predict    # preregistered predictions (killable)
+.\run_qemu.ps1                    # FSOT-QC-OS on metal
+```
+
+Older climb panels (`climb_suite`, `fold_v2`…`fold_v6`, `capability_suite`, …) still run. They are history. The wrap is `docs/STATUS.md`.
+
+---
+
+## Architecture
 
 ```
-fsot_lib/                 ← FSOT-GPU owned stack (vendored)
-phase1_formal_gpu/        ← Lean/Coq/Isabelle/F* trinary contracts (vendored)
-phase2_native_gpu/        ← GPU engine + CUDA (vendored)
-fsot_quantum/             ← Quantum domain fold only (gates, circuit, engine)
-vendor/fsot_compute.py    ← pin D1D38A
-config/fsot_seeds.json
-parity/
-results/
+FSOT-2.1-Lean pin D1D38A
+        │
+        ▼
+fsot_lib          seeds · S=K(T1+T2+T3) · collapse · consensus · pack
+        │
+        ▼
+fsot_quantum      domains · questions · Gset · organ export
+        ├── GPU when present (organ, not mind)
+        ├── formal/  Lean · Coq · Isabelle · F*
+        └── zig/     QC-OS (QEMU)
+                 │
+                 ▼
+        fsot-neuron-zig   mind authority
 ```
+
+Observe path: **QC (dark) → Quantum_Optics (look) → QM (measure)**.  
+Do not look at QC. That flip is the Hilbert move.
 
 ---
 
@@ -230,9 +136,9 @@ results/
 
 | Repo | Role |
 |------|------|
-| [FSOT-2.1-Lean](https://github.com/dappalumbo91/FSOT-2.1-Lean) | Theory pin |
+| [FSOT-2.1-Lean](https://github.com/dappalumbo91/FSOT-2.1-Lean) | Theory pin, 432-domain atlas |
 | [FSOT-GPU](https://github.com/dappalumbo91/FSOT-GPU) | Owned GPU/CPU operators |
-| [fsot-neuron-zig](https://github.com/dappalumbo91/fsot-neuron-zig) | Neural fold / bare metal |
+| [fsot-neuron-zig](https://github.com/dappalumbo91/fsot-neuron-zig) | Neural mind / body; this fold is the law organ |
 | [FSOT-Genetics](https://github.com/dappalumbo91/FSOT-Genetics) | Genetics fold |
 | [Protofluid-Language-Translator-2.0-Zig](https://github.com/dappalumbo91/Protofluid-Language-Translator-2.0-Zig) | Language densify |
 

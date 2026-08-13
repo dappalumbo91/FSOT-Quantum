@@ -85,6 +85,12 @@ def build_organ() -> dict[str, Any]:
             "Zig Fixed lattice is the mind. This JSON is an organ readout: "
             "domain S, bleed κ, and pin QI. Do not softmax. Do not spawn an LLM."
         ),
+        "wrap": {
+            "quantum_status": "https://github.com/dappalumbo91/FSOT-Quantum/blob/main/docs/STATUS.md",
+            "audit": "20/20 vs YR4/PDG @0.5%",
+            "physics_qi3": "41/41 + 212/212 Lean",
+            "gset_family": "7/7 under 1%",
+        },
     }
 
 

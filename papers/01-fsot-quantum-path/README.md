@@ -30,14 +30,18 @@
 9. **Limitations & falsifiers** — residual green gates; adversarial DJ; n>16 approx floor  
 10. **Conclusion**
 
+Living wrap of what the code can do now: `docs/STATUS.md` (not this scaffold).
+
 ## Reproduce numbers
 
 ```powershell
 git clone https://github.com/dappalumbo91/FSOT-Quantum.git
 cd FSOT-Quantum
 $env:PYTHONPATH = (Get-Location).Path
-python -m fsot_quantum.question_battery
-python -m fsot_quantum.stress_next
+python -m fsot_quantum audit
+python -m fsot_quantum harder
+python -m fsot_quantum push3
+python -m fsot_quantum family
 python scripts\run_multiprover_verification.py
 ```
 
@@ -45,6 +49,10 @@ python scripts\run_multiprover_verification.py
 
 | Ledger | Path |
 |--------|------|
+| Wrap snapshot | `docs/STATUS.md` |
+| Stale-target audit | `docs/STALE_TARGETS.md` |
+| Physics + QI III | `docs/PHYSICS_QI3.md` |
+| Gset family | `docs/GSET_FAMILY.md` |
 | Question battery | `results/question_battery.json` |
 | Large MaxCut | `results/large_maxcut.json` |
 | QAOA-FSOT | `results/qaoa_fsot.json` |

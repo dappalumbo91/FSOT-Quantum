@@ -2,6 +2,7 @@
 Field entry: python -m fsot_quantum [cmd]
 
   check      pin/seed/D_eff vs Lean clone
+  status     wrap snapshot pointer (docs/STATUS.md)
   accuracy   hired QC/QM jobs (Python/GPU)
   ask        run QC question battery (DJ/BV/Grover/Shor/Ising/G1/chem)
   hard       hard questions via FSOT math (K-scale; not foreign circuits)
@@ -45,6 +46,9 @@ def main() -> int:
         return 0
     if c == "check":
         from fsot_quantum.crosscheck import main as m
+        return m()
+    if c == "status":
+        from fsot_quantum.status import main as m
         return m()
     if c == "accuracy":
         from fsot_quantum.qc_accuracy import main as m
