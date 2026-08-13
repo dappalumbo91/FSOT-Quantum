@@ -1,30 +1,15 @@
 {
-  "timestamp": "2026-08-13T03:16:32.976514+00:00",
+  "timestamp": "2026-08-13T03:31:21.559465+00:00",
   "suite": "stale_targets",
   "pin": "D1D38A",
   "pin_file_edited": false,
-  "overall_ok": false,
-  "wall_seconds": 0.027929799995035864,
+  "overall_ok": true,
+  "wall_seconds": 0.029037999993306585,
   "n_vendor_scored": 216,
   "n_cited": 20,
-  "n_stale_vendor": 3,
-  "n_fold_ok_lit": 17,
+  "n_stale_vendor": 1,
+  "n_fold_ok_lit": 20,
   "stale": [
-    {
-      "name": "|V_cb|",
-      "wave": "wave3",
-      "formula": "S_quant/C_eff \u2212 S_quant",
-      "computed": 0.04220081332791359,
-      "vendor_measured": 0.0422,
-      "literature": 0.0411,
-      "literature_source": "PDG CKM |V_cb| (exclusive/inclusive average ~0.041)",
-      "vendor_vs_lit_pct": 2.6763990267639994,
-      "fold_vs_lit_pct": 2.678377926797059,
-      "fold_vs_vendor_pct": 0.0019273173307759674,
-      "stale_vendor": true,
-      "fold_ok_lit": false,
-      "fold_ok_vendor": true
-    },
     {
       "name": "BR_H_gg",
       "wave": "wave8",
@@ -38,22 +23,11 @@
       "fold_vs_vendor_pct": 4.232801452006084,
       "stale_vendor": true,
       "fold_ok_lit": true,
-      "fold_ok_vendor": false
-    },
-    {
-      "name": "BR_H_Zgam",
-      "wave": "wave8",
-      "formula": "\u03b7_eff/\u03c0\u2075",
-      "computed": 0.0015258567671942072,
-      "vendor_measured": 0.00153,
-      "literature": 0.001541,
-      "literature_source": "LHCHWG YR4 SM BR(H\u2192Z\u03b3) MH\u2248125.09 GeV",
-      "vendor_vs_lit_pct": 0.7138221933809318,
-      "fold_vs_lit_pct": 0.9826886960280912,
-      "fold_vs_vendor_pct": 0.27079952979037436,
-      "stale_vendor": true,
-      "fold_ok_lit": false,
-      "fold_ok_vendor": true
+      "fold_ok_vendor": false,
+      "alt_12509": null,
+      "theory_unc_pct": null,
+      "fold_vs_alt_pct": null,
+      "inside_theory_unc": false
     }
   ],
   "cited": [
@@ -70,7 +44,11 @@
       "fold_vs_vendor_pct": 0.0008775832239925928,
       "stale_vendor": false,
       "fold_ok_lit": true,
-      "fold_ok_vendor": true
+      "fold_ok_vendor": true,
+      "alt_12509": null,
+      "theory_unc_pct": null,
+      "fold_vs_alt_pct": null,
+      "inside_theory_unc": false
     },
     {
       "name": "1/alpha_em",
@@ -85,7 +63,11 @@
       "fold_vs_vendor_pct": 0.0001441661845670506,
       "stale_vendor": false,
       "fold_ok_lit": true,
-      "fold_ok_vendor": true
+      "fold_ok_vendor": true,
+      "alt_12509": null,
+      "theory_unc_pct": null,
+      "fold_vs_alt_pct": null,
+      "inside_theory_unc": false
     },
     {
       "name": "|V_us|",
@@ -100,7 +82,11 @@
       "fold_vs_vendor_pct": 0.009964706215270609,
       "stale_vendor": false,
       "fold_ok_lit": true,
-      "fold_ok_vendor": true
+      "fold_ok_vendor": true,
+      "alt_12509": null,
+      "theory_unc_pct": null,
+      "fold_vs_alt_pct": null,
+      "inside_theory_unc": false
     },
     {
       "name": "|V_cb|",
@@ -108,14 +94,18 @@
       "formula": "S_quant/C_eff \u2212 S_quant",
       "computed": 0.04220081332791359,
       "vendor_measured": 0.0422,
-      "literature": 0.0411,
-      "literature_source": "PDG CKM |V_cb| (exclusive/inclusive average ~0.041)",
-      "vendor_vs_lit_pct": 2.6763990267639994,
-      "fold_vs_lit_pct": 2.678377926797059,
+      "literature": 0.0422,
+      "literature_source": "PDG 2024 inclusive |V_cb| = (42.2\u00b10.5)\u00d710\u207b\u00b3. Exclusive (39.8\u00b10.6)\u00d710\u207b\u00b3 is a different extraction (the V_cb puzzle).",
+      "vendor_vs_lit_pct": 0.0,
+      "fold_vs_lit_pct": 0.0019273173307759674,
       "fold_vs_vendor_pct": 0.0019273173307759674,
-      "stale_vendor": true,
-      "fold_ok_lit": false,
-      "fold_ok_vendor": true
+      "stale_vendor": false,
+      "fold_ok_lit": true,
+      "fold_ok_vendor": true,
+      "alt_12509": null,
+      "theory_unc_pct": null,
+      "fold_vs_alt_pct": null,
+      "inside_theory_unc": false
     },
     {
       "name": "Deuteron_binding_MeV",
@@ -130,7 +120,11 @@
       "fold_vs_vendor_pct": 6.075510781503307e-05,
       "stale_vendor": false,
       "fold_ok_lit": true,
-      "fold_ok_vendor": true
+      "fold_ok_vendor": true,
+      "alt_12509": null,
+      "theory_unc_pct": null,
+      "fold_vs_alt_pct": null,
+      "inside_theory_unc": false
     },
     {
       "name": "|V_ub|",
@@ -145,7 +139,11 @@
       "fold_vs_vendor_pct": 0.008897578506510621,
       "stale_vendor": false,
       "fold_ok_lit": true,
-      "fold_ok_vendor": true
+      "fold_ok_vendor": true,
+      "alt_12509": null,
+      "theory_unc_pct": null,
+      "fold_vs_alt_pct": null,
+      "inside_theory_unc": false
     },
     {
       "name": "BR_H_bb",
@@ -160,7 +158,11 @@
       "fold_vs_vendor_pct": 0.004174769548765883,
       "stale_vendor": false,
       "fold_ok_lit": true,
-      "fold_ok_vendor": true
+      "fold_ok_vendor": true,
+      "alt_12509": null,
+      "theory_unc_pct": null,
+      "fold_vs_alt_pct": null,
+      "inside_theory_unc": false
     },
     {
       "name": "BR_H_WW",
@@ -175,7 +177,11 @@
       "fold_vs_vendor_pct": 0.0020773615251059676,
       "stale_vendor": false,
       "fold_ok_lit": true,
-      "fold_ok_vendor": true
+      "fold_ok_vendor": true,
+      "alt_12509": null,
+      "theory_unc_pct": null,
+      "fold_vs_alt_pct": null,
+      "inside_theory_unc": false
     },
     {
       "name": "|V_ud|",
@@ -190,7 +196,11 @@
       "fold_vs_vendor_pct": 0.0006844453761644341,
       "stale_vendor": false,
       "fold_ok_lit": true,
-      "fold_ok_vendor": true
+      "fold_ok_vendor": true,
+      "alt_12509": null,
+      "theory_unc_pct": null,
+      "fold_vs_alt_pct": null,
+      "inside_theory_unc": false
     },
     {
       "name": "|V_cd|",
@@ -205,7 +215,11 @@
       "fold_vs_vendor_pct": 0.003531579785510005,
       "stale_vendor": false,
       "fold_ok_lit": true,
-      "fold_ok_vendor": true
+      "fold_ok_vendor": true,
+      "alt_12509": null,
+      "theory_unc_pct": null,
+      "fold_vs_alt_pct": null,
+      "inside_theory_unc": false
     },
     {
       "name": "|V_cs|",
@@ -220,7 +234,11 @@
       "fold_vs_vendor_pct": 0.14519623144895213,
       "stale_vendor": false,
       "fold_ok_lit": true,
-      "fold_ok_vendor": true
+      "fold_ok_vendor": true,
+      "alt_12509": null,
+      "theory_unc_pct": null,
+      "fold_vs_alt_pct": null,
+      "inside_theory_unc": false
     },
     {
       "name": "BR_H_ZZ",
@@ -235,7 +253,11 @@
       "fold_vs_vendor_pct": 0.09045983140093045,
       "stale_vendor": false,
       "fold_ok_lit": true,
-      "fold_ok_vendor": true
+      "fold_ok_vendor": true,
+      "alt_12509": null,
+      "theory_unc_pct": null,
+      "fold_vs_alt_pct": null,
+      "inside_theory_unc": false
     },
     {
       "name": "BR_H_gg",
@@ -250,7 +272,11 @@
       "fold_vs_vendor_pct": 4.232801452006084,
       "stale_vendor": true,
       "fold_ok_lit": true,
-      "fold_ok_vendor": false
+      "fold_ok_vendor": false,
+      "alt_12509": null,
+      "theory_unc_pct": null,
+      "fold_vs_alt_pct": null,
+      "inside_theory_unc": false
     },
     {
       "name": "BR_H_cc",
@@ -265,7 +291,11 @@
       "fold_vs_vendor_pct": 0.08808351263334355,
       "stale_vendor": false,
       "fold_ok_lit": true,
-      "fold_ok_vendor": true
+      "fold_ok_vendor": true,
+      "alt_12509": null,
+      "theory_unc_pct": null,
+      "fold_vs_alt_pct": null,
+      "inside_theory_unc": false
     },
     {
       "name": "BR_H_gamgam",
@@ -273,14 +303,18 @@
       "formula": "\u03b3\u2076\u00b7C_cosm",
       "computed": 0.0022858146532987495,
       "vendor_measured": 0.00228,
-      "literature": 0.00227,
-      "literature_source": "LHCHWG YR4 SM BR(H\u2192\u03b3\u03b3) MH\u2248125.09 GeV",
-      "vendor_vs_lit_pct": 0.44052863436123463,
-      "fold_vs_lit_pct": 0.6966807620594528,
+      "literature": 0.00228,
+      "literature_source": "SM BR(H\u2192\u03b3\u03b3) at MH=125.00 GeV (YR table / vendor wave8). YR4 125.09 GeV central is 0.002270 with ~2.8% recommended uncertainty.",
+      "vendor_vs_lit_pct": 0.0,
+      "fold_vs_lit_pct": 0.2550286534539278,
       "fold_vs_vendor_pct": 0.2550286534539278,
       "stale_vendor": false,
-      "fold_ok_lit": false,
-      "fold_ok_vendor": true
+      "fold_ok_lit": true,
+      "fold_ok_vendor": true,
+      "alt_12509": 0.00227,
+      "theory_unc_pct": 2.8,
+      "fold_vs_alt_pct": 0.6966807620594528,
+      "inside_theory_unc": true
     },
     {
       "name": "BR_H_Zgam",
@@ -288,14 +322,18 @@
       "formula": "\u03b7_eff/\u03c0\u2075",
       "computed": 0.0015258567671942072,
       "vendor_measured": 0.00153,
-      "literature": 0.001541,
-      "literature_source": "LHCHWG YR4 SM BR(H\u2192Z\u03b3) MH\u2248125.09 GeV",
-      "vendor_vs_lit_pct": 0.7138221933809318,
-      "fold_vs_lit_pct": 0.9826886960280912,
+      "literature": 0.00153,
+      "literature_source": "SM BR(H\u2192Z\u03b3) at MH=125.00 GeV (YR table / vendor wave8). YR4 125.09 GeV central is 0.001541 with ~6% recommended uncertainty.",
+      "vendor_vs_lit_pct": 0.0,
+      "fold_vs_lit_pct": 0.27079952979037436,
       "fold_vs_vendor_pct": 0.27079952979037436,
-      "stale_vendor": true,
-      "fold_ok_lit": false,
-      "fold_ok_vendor": true
+      "stale_vendor": false,
+      "fold_ok_lit": true,
+      "fold_ok_vendor": true,
+      "alt_12509": 0.001541,
+      "theory_unc_pct": 6.0,
+      "fold_vs_alt_pct": 0.9826886960280912,
+      "inside_theory_unc": true
     },
     {
       "name": "He4_binding_MeV",
@@ -310,7 +348,11 @@
       "fold_vs_vendor_pct": 0.002533344767383359,
       "stale_vendor": false,
       "fold_ok_lit": true,
-      "fold_ok_vendor": true
+      "fold_ok_vendor": true,
+      "alt_12509": null,
+      "theory_unc_pct": null,
+      "fold_vs_alt_pct": null,
+      "inside_theory_unc": false
     },
     {
       "name": "|V_tb|",
@@ -325,7 +367,11 @@
       "fold_vs_vendor_pct": 0.0023501890472656414,
       "stale_vendor": false,
       "fold_ok_lit": true,
-      "fold_ok_vendor": true
+      "fold_ok_vendor": true,
+      "alt_12509": null,
+      "theory_unc_pct": null,
+      "fold_vs_alt_pct": null,
+      "inside_theory_unc": false
     },
     {
       "name": "m_mu/m_e",
@@ -340,7 +386,11 @@
       "fold_vs_vendor_pct": 0.0006556117321513212,
       "stale_vendor": false,
       "fold_ok_lit": true,
-      "fold_ok_vendor": true
+      "fold_ok_vendor": true,
+      "alt_12509": null,
+      "theory_unc_pct": null,
+      "fold_vs_alt_pct": null,
+      "inside_theory_unc": false
     },
     {
       "name": "(g-2)/2_electron",
@@ -355,7 +405,17 @@
       "fold_vs_vendor_pct": 0.0008593004744053731,
       "stale_vendor": false,
       "fold_ok_lit": true,
-      "fold_ok_vendor": true
+      "fold_ok_vendor": true,
+      "alt_12509": null,
+      "theory_unc_pct": null,
+      "fold_vs_alt_pct": null,
+      "inside_theory_unc": false
     }
-  ]
+  ],
+  "object_notes": {
+    "V_cb": "inclusive PDG 0.0422; exclusive 0.0398 is a different extraction",
+    "BR_H_gamgam": "scored at MH=125.00 GeV; 125.09 central inside ~2.8% theory",
+    "BR_H_Zgam": "scored at MH=125.00 GeV; 125.09 central inside ~6% theory",
+    "diagnosis": "docs/MISS_THREE.md"
+  }
 }

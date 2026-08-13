@@ -24,6 +24,7 @@ python -m fsot_quantum.stale_targets
 python -m fsot_quantum.gset_family
 python -m fsot_quantum.organ_export
 # BR(H→gg) vs YR4 (not the stale 0.0785 in vendor wave8): docs/BR_H_GG.md
+# Three earlier audit misses were wrong objects: docs/MISS_THREE.md
 ```
 
 Gset G1 ships in `data/gset/G1.txt`. G14/G22 fetch from Stanford Ye when `FSOT_FETCH_GSET` is not `0`.
