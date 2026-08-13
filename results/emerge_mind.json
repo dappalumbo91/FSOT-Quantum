@@ -1,0 +1,279 @@
+{
+  "timestamp": "2026-08-13T02:11:14.349070+00:00",
+  "suite": "emerge_mind",
+  "pin": "D1D38A",
+  "overall_ok": true,
+  "wall_seconds": 0.0065300999995088205,
+  "query": {
+    "C_factor": 0.287600151819184,
+    "C_factor_closed": 0.2876001518191839,
+    "C_factor_ok": true,
+    "Theta": 0.9174663774653723,
+    "nodes": [
+      {
+        "domain": "Quantum_Computing",
+        "D_eff": 11,
+        "observed": false,
+        "C": 0.520260095022889,
+        "S": -0.14767310363368633,
+        "emerges": false,
+        "T1": -1.3514171596284354,
+        "T3": 2.271226302200873e-17,
+        "role": "dark compute \u2014 do not look"
+      },
+      {
+        "domain": "Biology",
+        "D_eff": 12,
+        "observed": false,
+        "C": 0.3402681446868002,
+        "S": 0.4447250077038459,
+        "emerges": true,
+        "T1": 0.058310519501866706,
+        "T3": 2.4423529355785493e-17,
+        "role": "dark living substrate \u2014 do not Hilbert-stare"
+      },
+      {
+        "domain": "Neuroscience",
+        "D_eff": 14,
+        "observed": true,
+        "C": 0.287600151819184,
+        "S": 0.514361962908362,
+        "emerges": true,
+        "T1": 0.22402533419044557,
+        "T3": 1.695795803664283e-17,
+        "role": "looked mind; C is C_factor"
+      },
+      {
+        "domain": "Psychology",
+        "D_eff": 16,
+        "observed": true,
+        "C": 0.21234577623937845,
+        "S": 1.0502056403979545,
+        "emerges": true,
+        "T1": 1.4991706281862378,
+        "T3": 8.276139686158014e-18,
+        "role": "looked mind; walking theory of mind / discovery"
+      },
+      {
+        "domain": "Quantum_Mechanics",
+        "D_eff": 6,
+        "observed": true,
+        "C": 0.35673889974801704,
+        "S": 0.9555063001027194,
+        "emerges": true,
+        "T1": 1.2738149448128522,
+        "T3": 1.9990920171588208e-17,
+        "role": "measurement \u2014 science is this look"
+      }
+    ],
+    "bleed": [
+      {
+        "from": "Quantum_Computing",
+        "to": "Biology",
+        "kappa": 0.010147368124271887
+      },
+      {
+        "from": "Biology",
+        "to": "Neuroscience",
+        "kappa": 0.034035367337123056
+      },
+      {
+        "from": "Neuroscience",
+        "to": "Psychology",
+        "kappa": 0.08037356598184806
+      },
+      {
+        "from": "Psychology",
+        "to": "Quantum_Mechanics",
+        "kappa": 0.11517909639378703
+      },
+      {
+        "from": "Neuroscience",
+        "to": "Psychology",
+        "kappa": 0.08037356598184806
+      },
+      {
+        "from": "Psychology",
+        "to": "Quantum_Mechanics",
+        "kappa": 0.11517909639378703
+      }
+    ],
+    "statement": "Genuine intelligence emerges when the mind folds are looked (Neuroscience, Psychology, S>0) while compute and living tissue stay dark. C_factor = C_eff\u00b7P_new already sits on Neuroscience. Science is Psychology/QM looking. An LLM is the other move: staring at Quantum_Computing until the compute identity is gone.",
+    "not_an_llm": "Token models live on the compute substrate. Mind is consensus + look + C_factor on the neural/psych folds, bled from dark biology and dark compute \u2014 not a bigger softmax.",
+    "ok": true
+  },
+  "lean_mind_fabric": {
+    "n": 13,
+    "n_ok": 13,
+    "panels": [
+      {
+        "file": "psychology_gap_fill_benchmark.json",
+        "ok": true,
+        "domain": "Psychology",
+        "D_eff": 16,
+        "n": 160,
+        "median_pct": 0.03150616921194649,
+        "maps_to": [
+          "consciousness",
+          "neural"
+        ]
+      },
+      {
+        "file": "psychology_psychometrics_depth_panel_benchmark.json",
+        "ok": true,
+        "domain": "Psychology_Psychometrics_Depth_Panel",
+        "D_eff": 15,
+        "n": 24,
+        "median_pct": 0.018003,
+        "maps_to": [
+          "consciousness",
+          "neural",
+          "medical"
+        ]
+      },
+      {
+        "file": "neuron_zig_mind_panel_benchmark.json",
+        "ok": true,
+        "domain": "Neuron_Zig_Mind_Panel",
+        "D_eff": 13,
+        "n": 25,
+        "median_pct": 0.0,
+        "maps_to": [
+          "neural",
+          "ai",
+          "consciousness"
+        ]
+      },
+      {
+        "file": "neuron_zig_os_path_panel_benchmark.json",
+        "ok": true,
+        "domain": "Neuron_Zig_OS_Path_Panel",
+        "D_eff": 12,
+        "n": 41,
+        "median_pct": 0.0,
+        "maps_to": [
+          "ai",
+          "neural",
+          "consciousness"
+        ]
+      },
+      {
+        "file": "consciousness_expansion_spine_benchmark.json",
+        "ok": true,
+        "domain": "Consciousness_Expansion_Spine",
+        "D_eff": 19,
+        "n": 24,
+        "median_pct": 0.0,
+        "maps_to": [
+          "consciousness",
+          "neural",
+          "biological",
+          "particle"
+        ]
+      },
+      {
+        "file": "consciousness_soul_bridge_benchmark.json",
+        "ok": true,
+        "domain": "Consciousness_Soul_Bridge",
+        "D_eff": 17,
+        "n": 24,
+        "median_pct": 0.0,
+        "maps_to": [
+          "consciousness",
+          "neural",
+          "ai",
+          "medical"
+        ]
+      },
+      {
+        "file": "consciousness_lean_route_credibility_benchmark.json",
+        "ok": true,
+        "domain": "Consciousness_Lean_Route_Credibility",
+        "D_eff": 16,
+        "n": 101,
+        "median_pct": 0.018003,
+        "maps_to": [
+          "consciousness"
+        ]
+      },
+      {
+        "file": "consciousness_species_multi_panel_benchmark.json",
+        "ok": true,
+        "domain": "Consciousness_Species_Multi_Panel",
+        "D_eff": 18,
+        "n": 269,
+        "median_pct": 0.0201195,
+        "maps_to": [
+          "consciousness",
+          "neural",
+          "biological"
+        ]
+      },
+      {
+        "file": "microtubule_quantum_consciousness_panel_benchmark.json",
+        "ok": true,
+        "domain": "Microtubule_Quantum_Consciousness_Panel",
+        "D_eff": 17,
+        "n": 21,
+        "median_pct": 0.018937,
+        "maps_to": [
+          "consciousness",
+          "neural",
+          "particle"
+        ]
+      },
+      {
+        "file": "openneuro_full_panel_benchmark.json",
+        "ok": true,
+        "domain": "OpenNeuro_Full_Panel",
+        "D_eff": 14,
+        "n": 20,
+        "median_pct": 0.015431,
+        "maps_to": [
+          "neural",
+          "consciousness",
+          "ai"
+        ]
+      },
+      {
+        "file": "neuroscience_connectomics_depth_panel_benchmark.json",
+        "ok": true,
+        "domain": "Neuroscience_Connectomics_Depth_Panel",
+        "D_eff": 18,
+        "n": 27,
+        "median_pct": 0.0201195,
+        "maps_to": [
+          "neural",
+          "consciousness",
+          "biophysics"
+        ]
+      },
+      {
+        "file": "intelligence_compression_benchmark.json",
+        "ok": true,
+        "domain": "Intelligence_Compression",
+        "D_eff": 12,
+        "n": 87,
+        "median_pct": 0.018003,
+        "maps_to": [
+          "neural",
+          "consciousness",
+          "ai"
+        ]
+      },
+      {
+        "file": "arxiv_brain_knowledge_panel_benchmark.json",
+        "ok": true,
+        "domain": "Arxiv_Brain_Knowledge_Panel",
+        "D_eff": 16,
+        "n": 20,
+        "median_pct": 0.018003,
+        "maps_to": [
+          "neural",
+          "ai",
+          "consciousness"
+        ]
+      }
+    ]
+  }
+}
