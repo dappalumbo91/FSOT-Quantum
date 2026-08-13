@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-08-13T00:16:15.217003+00:00",
+  "timestamp": "2026-08-13T00:18:49.562218+00:00",
   "suite": "expand_sim",
   "pin": "D1D38A",
   "thesis": "Pull solved Lean chemistry/QM atlas into this fold; keep pin chemistry 68/68; grow what we can simulate.",
@@ -13,9 +13,9 @@
   },
   "lean_chemistry": {
     "ok": true,
-    "replayed": 145,
-    "green": "145/145",
-    "band5": "145/145",
+    "replayed": 565,
+    "green": "565/565",
+    "band5": "565/565",
     "worst": [
       {
         "source": "maillard_chemistry_gap_fill_benchmark.json",
@@ -109,9 +109,9 @@
   },
   "lean_qm_more": {
     "ok": true,
-    "replayed": 217,
-    "green": "217/217",
-    "band5": "217/217",
+    "replayed": 265,
+    "green": "265/265",
+    "band5": "265/265",
     "worst": [
       {
         "source": "quantum_materials_benchmark.json",
@@ -204,5 +204,5 @@
     ]
   },
   "overall_ok": true,
-  "wall_seconds": 0.032366799998271745
+  "wall_seconds": 0.03906199999619275
 }

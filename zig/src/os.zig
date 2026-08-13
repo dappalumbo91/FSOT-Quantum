@@ -4,7 +4,7 @@ const serial = @import("serial.zig");
 const qc = @import("quantum_core.zig");
 const jobs = @import("jobs.zig");
 
-pub const VERSION: []const u8 = "0.2.0";
+pub const VERSION: []const u8 = "0.3.0";
 
 pub fn banner() void {
     serial.write("FSOT-QC-OS v");

@@ -160,7 +160,61 @@ pub fn jobPeriodMid() bool {
     return periodOf(2, 33) == 10 and periodOf(2, 35) == 12;
 }
 
-pub fn allJobs() [11]Job {
+fn add3(a: u32, b: u32) u32 {
+    var cin: u32 = 0;
+    var sum: u32 = 0;
+    var i: u32 = 0;
+    while (i < 3) : (i += 1) {
+        const ai = (a >> @intCast(i)) & 1;
+        const bi = (b >> @intCast(i)) & 1;
+        const s = ai ^ bi ^ cin;
+        cin = (ai & bi) | (ai & cin) | (bi & cin);
+        sum |= s << @intCast(i);
+    }
+    return sum + (cin << 3);
+}
+
+pub fn jobAdd3() bool {
+    var a: u32 = 0;
+    while (a < 8) : (a += 1) {
+        var b: u32 = 0;
+        while (b < 8) : (b += 1) {
+            if (add3(a, b) != a + b) return false;
+        }
+    }
+    return true;
+}
+
+pub fn jobMulmod() bool {
+    // Shor-adjacent: (a*b) mod N on tiny integers
+    const cases = [_][3]u32{
+        .{ 3, 5, 7 },
+        .{ 2, 7, 15 },
+        .{ 4, 4, 15 },
+        .{ 5, 3, 21 },
+        .{ 6, 7, 15 },
+        .{ 8, 3, 21 },
+    };
+    for (cases) |c| {
+        if ((c[0] * c[1]) % c[2] != (c[0] * c[1]) % c[2]) return false;
+        if ((c[0] * c[1]) % c[2] != mulmod(c[0], c[1], c[2])) return false;
+    }
+    return true;
+}
+
+fn mulmod(a: u32, b: u32, N: u32) u32 {
+    var acc: u32 = 0;
+    var aa = a % N;
+    var bb = b;
+    while (bb > 0) {
+        if ((bb & 1) == 1) acc = (acc + aa) % N;
+        aa = (aa + aa) % N;
+        bb >>= 1;
+    }
+    return acc;
+}
+
+pub fn allJobs() [13]Job {
     return .{
         .{ .name = "dj", .ok = jobDj() },
         .{ .name = "bv", .ok = jobBv() },
@@ -170,6 +224,8 @@ pub fn allJobs() [11]Job {
         .{ .name = "factor", .ok = jobFactor() },
         .{ .name = "ising", .ok = jobIsing() },
         .{ .name = "add2", .ok = jobAdd2() },
+        .{ .name = "add3", .ok = jobAdd3() },
+        .{ .name = "mulmod", .ok = jobMulmod() },
         .{ .name = "chsh", .ok = jobChsh() },
         .{ .name = "domain", .ok = jobDomainSigns() },
         .{ .name = "foldcost", .ok = jobFoldCost() },
@@ -194,5 +250,5 @@ pub fn jobsPassCount() u32 {
 }
 
 pub fn jobsTotal() u32 {
-    return 11;
+    return 13;
 }

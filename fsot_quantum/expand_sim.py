@@ -25,6 +25,10 @@ CHEM_FILES = (
     "fuel_thermochemistry_public_anchors_benchmark.json",
     "maillard_chemistry_gap_fill_benchmark.json",
     "pubchem_stability_panel_benchmark.json",
+    "chemical_engineering_extension_benchmark.json",
+    "geochemistry_benchmark.json",
+    "ionospheric_chemistry_coupling_benchmark.json",
+    "pubchem_depth_open_benchmark.json",
 )
 
 QM_MORE = (
@@ -32,6 +36,8 @@ QM_MORE = (
     "quantum_optics_gap_fill_benchmark.json",
     "quantum_materials_benchmark.json",
     "founding_quantum_vacuum_panel_benchmark.json",
+    "quantum_trinary_syntax_benchmark.json",
+    "microtubule_quantum_consciousness_panel_benchmark.json",
 )
 
 

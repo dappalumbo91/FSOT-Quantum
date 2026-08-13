@@ -1,9 +1,9 @@
 {
   "status": "replayed",
-  "n_replayed": 217,
+  "n_replayed": 265,
   "n_skipped": 55,
-  "n_green_0_5": 217,
-  "n_band_5": 217,
+  "n_green_0_5": 265,
+  "n_band_5": 265,
   "frac_green_0_5": 1.0,
   "frac_band_5": 1.0,
   "overall_ok": true,
@@ -319,5 +319,5 @@
       "skip": false
     }
   ],
-  "n_instances_omitted": 197
+  "n_instances_omitted": 245
 }

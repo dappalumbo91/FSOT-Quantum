@@ -97,7 +97,7 @@ python -m fsot_quantum.qc_accuracy
 # QAOA exact column (must be 11/11)
 python -c "from fsot_quantum.qaoa_fsot import run_qaoa_panel; r=run_qaoa_panel(); print(r['metrics_summary']); assert r['overall_ok']"
 
-# FSOT-QC-OS v0.2.0 — standalone job OS (QEMU file serial defaults to 'a')
+# FSOT-QC-OS v0.3.0 — standalone job OS (13 hired jobs on metal)
 .\run_qemu.ps1
 # interactive: .\run_qemu_stdio.ps1   (a=all c=core j=jobs h=help)
 

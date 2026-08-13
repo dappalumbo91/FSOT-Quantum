@@ -1,4 +1,4 @@
-FSOT-QC-OS v0.2.0
+FSOT-QC-OS v0.3.0
 standalone quantum job OS - no host OS, no fridge
 pin D1D38A Apache-2.0 trinary -1/0/+1
 SHELL a=all c=core j=jobs h=help
@@ -15,10 +15,12 @@ JOB periodmid PASS
 JOB factor PASS
 JOB ising PASS
 JOB add2 PASS
+JOB add3 PASS
+JOB mulmod PASS
 JOB chsh PASS
 JOB domain PASS
 JOB foldcost PASS
-JOBS 11/11
+JOBS 13/13
 FSOT_QUANTUM_JOBS PASS
 FSOT-QC-OS READY
 FSOT_QUANTUM_KERNEL PASS
