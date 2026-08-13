@@ -2,7 +2,7 @@
   "spine": "FSOT-Quantum multiprover",
   "pin": "D1D38A",
   "authority": "vendor/fsot_compute.py + fsot_lib + formal/",
-  "provers": ["lean4", "coq", "isabelle", "python_runtime"],
+  "provers": ["lean4", "coq", "isabelle", "fstar", "python_runtime"],
   "obligations": [
     {
       "id": "Q-TRIT-001",
@@ -165,6 +165,56 @@
       "coq": "fold_lt_hilbert_sixteen / fold_lt_hilbert_thirtytwo",
       "isabelle": "fold_lt_hilbert_sixteen / fold_lt_hilbert_thirtytwo",
       "python": "fold_budget_formal(n) < 2**n for n in (16,32)"
+    },
+    {
+      "id": "Q-JOB-001",
+      "name": "shor_period_seven_mod_fifteen",
+      "statement": "7^4 ≡ 1 (mod 15) — order of 7 mod 15 is 4",
+      "lean": "FSOT.Quantum.Jobs.seven_pow_four_mod_fifteen",
+      "coq": "seven_pow_four_mod_fifteen",
+      "isabelle": "seven_pow_four_mod_fifteen",
+      "fstar": "Jobs.seven_pow_four_mod_fifteen",
+      "python": "pow(7,4) % 15 == 1"
+    },
+    {
+      "id": "Q-JOB-002",
+      "name": "shor_period_five_mod_twentyone",
+      "statement": "5^6 ≡ 1 (mod 21) — order of 5 mod 21 is 6",
+      "lean": "FSOT.Quantum.Jobs.five_pow_six_mod_twentyone",
+      "coq": "five_pow_six_mod_twentyone",
+      "isabelle": "five_pow_six_mod_twentyone",
+      "fstar": "Jobs.five_pow_six_mod_twentyone",
+      "python": "pow(5,6) % 21 == 1"
+    },
+    {
+      "id": "Q-JOB-003",
+      "name": "shor_period_two_mod_thirtythree",
+      "statement": "2^10 ≡ 1 (mod 33) and 8^8 ≡ 1 (mod 51)",
+      "lean": "two_pow_ten_mod_thirtythree / eight_pow_eight_mod_fiftyone",
+      "coq": "two_pow_ten_mod_thirtythree / eight_pow_eight_mod_fiftyone",
+      "isabelle": "two_pow_ten_mod_thirtythree / eight_pow_eight_mod_fiftyone",
+      "fstar": "two_pow_ten_mod_thirtythree",
+      "python": "pow(2,10)%33==1 and pow(8,8)%51==1"
+    },
+    {
+      "id": "Q-JOB-004",
+      "name": "factor_composites_15_21_33",
+      "statement": "15=3*5, 21=3*7, 33=3*11",
+      "lean": "Jobs.factor_fifteen / factor_twentyone / factor_thirtythree",
+      "coq": "factor_fifteen / factor_twentyone / factor_thirtythree",
+      "isabelle": "factor_fifteen / factor_twentyone / factor_thirtythree",
+      "fstar": "factor_fifteen / factor_twentyone / factor_thirtythree",
+      "python": "3*5==15 and 3*7==21 and 3*11==33"
+    },
+    {
+      "id": "Q-JOB-005",
+      "name": "shor_gcd_fold_fifteen",
+      "statement": "7^2 ≡ 4 (mod 15); gcd(3,15)=3; gcd(5,15)=5",
+      "lean": "Jobs.shor_gcd_fold_fifteen",
+      "coq": "shor_gcd_fold_fifteen",
+      "isabelle": "shor_gcd_fold_fifteen",
+      "fstar": "shor_gcd_fold_fifteen",
+      "python": "gcd fold on 15 via 7^{r/2}"
     }
   ]
 }

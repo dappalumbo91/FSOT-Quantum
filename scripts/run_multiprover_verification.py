@@ -1,11 +1,11 @@
 #!/usr/bin/env python3
 """
-FSOT-Quantum multiprover verification — Lean 4 · Coq · Isabelle · Python runtime.
+FSOT-Quantum multiprover verification — Lean 4 · Coq · Isabelle · F* · Python runtime.
 
 Modeled on FSOT-2.1-Lean cross-proof discipline:
   - shared obligation spine (verification/obligations/quantum_spine.json)
   - each prover reports ok / skip / fail
-  - overall_ok requires Python runtime + at least Lean structural pass when lake present
+  - overall_ok requires Python runtime + all present formal provers
   - stamp written to results/multiprover_verification_report.json
 
 Usage:
@@ -130,8 +130,9 @@ def python_runtime_obligations() -> dict[str, Any]:
         and DOMAINS["Quantum_Computing"].D_eff == 11,
     )
 
-    # Q-FOLD cost contrast (integer proxy shared with Lean/Coq/Isabelle/Zig)
+    # Q-FOLD cost contrast (integer proxy shared with Lean/Coq/Isabelle/F*/Zig)
     from fsot_quantum.fold_complexity import fold_budget_formal
+    import math as _math
 
     add(
         "Q-FOLD-001",
@@ -142,6 +143,20 @@ def python_runtime_obligations() -> dict[str, Any]:
         "Q-FOLD-002",
         fold_budget_formal(16) < (1 << 16) and fold_budget_formal(32) < (1 << 32),
         {"fold16": fold_budget_formal(16), "fold32": fold_budget_formal(32)},
+    )
+
+    # Q-JOB integer facts shared with formal/lean|coq|isabelle|fstar Jobs
+    add("Q-JOB-001", pow(7, 4) % 15 == 1)
+    add("Q-JOB-002", pow(5, 6) % 21 == 1)
+    add("Q-JOB-003", pow(2, 10) % 33 == 1 and pow(8, 8) % 51 == 1)
+    add("Q-JOB-004", 3 * 5 == 15 and 3 * 7 == 21 and 3 * 11 == 33)
+    add(
+        "Q-JOB-005",
+        _math.gcd(3, 15) == 3
+        and _math.gcd(5, 15) == 5
+        and pow(7, 2) % 15 == 4
+        and _math.gcd(4 - 1, 15) == 3
+        and _math.gcd(4 + 1, 15) == 5,
     )
 
     ok = all(c["ok"] for c in checks)
@@ -188,7 +203,15 @@ def run_coq() -> dict[str, Any]:
             "reason": "coqc not on PATH",
         }
     coq_dir = ROOT / "formal" / "coq"
-    files = ["Trinary.v", "Gates.v", "Pack.v", "Domains.v", "Hilbert.v", "Fold.v"]
+    files = [
+        "Trinary.v",
+        "Gates.v",
+        "Pack.v",
+        "Domains.v",
+        "Hilbert.v",
+        "Fold.v",
+        "Jobs.v",
+    ]
     logs = []
     all_ok = True
     # Plain coqc in-order so Require Import Trinary finds Trinary.vo (no -Q rename)
@@ -207,6 +230,76 @@ def run_coq() -> dict[str, Any]:
         "ok": all_ok,
         "status": "pass" if all_ok else "fail",
         "files": logs,
+    }
+
+
+def _resolve_fstar() -> str | None:
+    """Prefer a working local fstar.exe; skip broken removable-drive stubs."""
+    candidates: list[Path] = []
+    home = os.environ.get("FSTAR_HOME")
+    if home:
+        candidates.append(Path(home) / "bin" / "fstar.exe")
+    candidates.extend(
+        [
+            Path.home() / "tools" / "fstar-v2026.07.05" / "bin" / "fstar.exe",
+            ROOT / "tools" / "fstar" / "bin" / "fstar.exe",
+            Path(r"I:\FSOT-Physical-Archive\07_Portable-Toolchain\fstar\bin\fstar.exe"),
+        ]
+    )
+    for name in ("fstar.exe", "fstar"):
+        found = shutil.which(name)
+        if found:
+            candidates.append(Path(found))
+    seen: set[str] = set()
+    for cand in candidates:
+        key = str(cand)
+        if key in seen or not cand.exists():
+            continue
+        seen.add(key)
+        try:
+            r = subprocess.run(
+                [str(cand), "--version"],
+                capture_output=True,
+                text=True,
+                timeout=30,
+            )
+            blob = (r.stdout or "") + (r.stderr or "")
+            if r.returncode == 0 or "F*" in blob:
+                return str(cand)
+        except OSError:
+            continue
+        except Exception:
+            continue
+    return None
+
+
+def run_fstar() -> dict[str, Any]:
+    exe = _resolve_fstar()
+    if not exe:
+        return {
+            "prover": "fstar",
+            "ok": False,
+            "status": "skip",
+            "reason": "no working fstar.exe",
+        }
+    jobs = ROOT / "formal" / "fstar" / "Jobs.fst"
+    if not jobs.is_file():
+        return {
+            "prover": "fstar",
+            "ok": False,
+            "status": "fail",
+            "reason": f"missing {jobs}",
+        }
+    code, out = _run([exe, "--cache_off", str(jobs)], jobs.parent, timeout=300)
+    verified = "Verified module: Jobs" in (out or "") and code == 0
+    return {
+        "prover": "fstar",
+        "ok": verified,
+        "status": "pass" if verified else "fail",
+        "exit_code": code,
+        "tool": exe,
+        "entry": str(jobs.relative_to(ROOT)),
+        "log_tail": (out or "")[-4000:],
     }
 
 
@@ -283,26 +376,24 @@ def main() -> int:
     lean = run_lean()
     coq = run_coq()
     isa = run_isabelle()
+    fstar = run_fstar()
 
     provers = {
         "python_runtime": py,
         "lean4": lean,
         "coq": coq,
         "isabelle": isa,
+        "fstar": fstar,
     }
 
-    # overall: pin + python required; formal provers pass if present
-    formal_present = [
-        p for p in (lean, coq, isa) if p.get("status") != "skip"
-    ]
+    formal = (lean, coq, isa, fstar)
+    formal_present = [p for p in formal if p.get("status") != "skip"]
     formal_ok = all(p.get("ok") for p in formal_present) if formal_present else False
-    # Require at least one formal prover PASS for stamp (prefer all present)
-    at_least_one_formal = any(p.get("ok") for p in (lean, coq, isa))
+    at_least_one_formal = any(p.get("ok") for p in formal)
     overall = bool(pin["ok"] and py["ok"] and at_least_one_formal and formal_ok)
 
-    # Softer: if some skipped, require python+pin+all non-skipped formal pass
-    if any(p.get("status") == "skip" for p in (lean, coq, isa)):
-        nonskip = [p for p in (lean, coq, isa) if p.get("status") != "skip"]
+    if any(p.get("status") == "skip" for p in formal):
+        nonskip = [p for p in formal if p.get("status") != "skip"]
         overall = bool(pin["ok"] and py["ok"] and nonskip and all(p["ok"] for p in nonskip))
 
     report = {
@@ -319,9 +410,9 @@ def main() -> int:
         "stamp": "FSOT_QUANTUM_MULTIPROVER_OK" if overall else "FSOT_QUANTUM_MULTIPROVER_OPEN",
         "wall_seconds": time.perf_counter() - t0,
         "claims": {
-            "math": "trinary spin algebra, pack contracts, domain D_eff folds",
-            "programming_structure": "gates CX/neg/pair, pack capacity, runtime parity",
-            "not_claimed": "full Hilbert unitary equivalence; Isabelle may skip if not installed",
+            "math": "trinary spin algebra, pack contracts, domain D_eff folds, hired QC job integers",
+            "programming_structure": "gates CX/neg/pair, pack capacity, runtime parity, Jobs twins",
+            "not_claimed": "full Hilbert unitary equivalence; a prover may skip if not installed",
         },
     }
 
@@ -358,8 +449,9 @@ def main() -> int:
         "```",
         "",
         "Lean: `cd formal\\lean; lake build`",
-        "Coq: `cd formal\\coq; coqc Trinary.v Gates.v Pack.v Domains.v`",
+        "Coq: `cd formal\\coq; coqc Trinary.v Gates.v Pack.v Domains.v Hilbert.v Fold.v Jobs.v`",
         "Isabelle: `isabelle build -d formal/isabelle FSOT_Quantum`",
+        "F*: `fstar --cache_off formal\\fstar\\Jobs.fst`",
         "",
     ]
     (ROOT / "results" / "MULTIPROVER_STAMP.md").write_text("\n".join(md), encoding="utf-8")

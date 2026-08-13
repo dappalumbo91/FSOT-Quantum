@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-08-12T21:27:56.989423+00:00",
+  "timestamp": "2026-08-13T00:53:43.897178+00:00",
   "kit": "FSOT-Quantum multiprover verification",
   "pin": {
     "ok": true,
@@ -8,7 +8,7 @@
   },
   "spine": {
     "path": "verification\\obligations\\quantum_spine.json",
-    "n_obligations": 18,
+    "n_obligations": 23,
     "ids": [
       "Q-TRIT-001",
       "Q-TRIT-002",
@@ -27,7 +27,12 @@
       "Q-NUM-002",
       "Q-STRUCT-001",
       "Q-FOLD-001",
-      "Q-FOLD-002"
+      "Q-FOLD-002",
+      "Q-JOB-001",
+      "Q-JOB-002",
+      "Q-JOB-003",
+      "Q-JOB-004",
+      "Q-JOB-005"
     ]
   },
   "provers": {
@@ -35,8 +40,8 @@
       "prover": "python_runtime",
       "ok": true,
       "status": "pass",
-      "n_obligations": 18,
-      "n_pass": 18,
+      "n_obligations": 23,
+      "n_pass": 23,
       "checks": [
         {
           "id": "Q-TRIT-001",
@@ -138,6 +143,31 @@
             "fold16": 363,
             "fold32": 699
           }
+        },
+        {
+          "id": "Q-JOB-001",
+          "ok": true,
+          "detail": null
+        },
+        {
+          "id": "Q-JOB-002",
+          "ok": true,
+          "detail": null
+        },
+        {
+          "id": "Q-JOB-003",
+          "ok": true,
+          "detail": null
+        },
+        {
+          "id": "Q-JOB-004",
+          "ok": true,
+          "detail": null
+        },
+        {
+          "id": "Q-JOB-005",
+          "ok": true,
+          "detail": null
         }
       ]
     },
@@ -183,6 +213,11 @@
           "file": "Fold.v",
           "exit_code": 0,
           "ok": true
+        },
+        {
+          "file": "Jobs.v",
+          "exit_code": 0,
+          "ok": true
         }
       ]
     },
@@ -193,15 +228,24 @@
       "exit_code": 0,
       "isabelle_home": "C:\\Users\\damia\\Desktop\\Isabelle2025-2",
       "bash": "C:\\Users\\damia\\Desktop\\Isabelle2025-2\\contrib\\cygwin\\bin\\bash.exe",
-      "log_tail": "Running FSOT_Quantum ...\nFinished FSOT_Quantum (0:00:01 elapsed time)\n0:00:05 elapsed time\n"
+      "log_tail": "Running FSOT_Quantum ...\nFinished FSOT_Quantum (0:00:01 elapsed time)\n0:00:06 elapsed time\n"
+    },
+    "fstar": {
+      "prover": "fstar",
+      "ok": true,
+      "status": "pass",
+      "exit_code": 0,
+      "tool": "I:\\FSOT-Physical-Archive\\07_Portable-Toolchain\\fstar\\bin\\fstar.exe",
+      "entry": "formal\\fstar\\Jobs.fst",
+      "log_tail": "Verified module: Jobs\nAll verification conditions discharged successfully\n"
     }
   },
   "overall_ok": true,
   "stamp": "FSOT_QUANTUM_MULTIPROVER_OK",
-  "wall_seconds": 17.920593000002555,
+  "wall_seconds": 59.91396459999669,
   "claims": {
-    "math": "trinary spin algebra, pack contracts, domain D_eff folds",
-    "programming_structure": "gates CX/neg/pair, pack capacity, runtime parity",
-    "not_claimed": "full Hilbert unitary equivalence; Isabelle may skip if not installed"
+    "math": "trinary spin algebra, pack contracts, domain D_eff folds, hired QC job integers",
+    "programming_structure": "gates CX/neg/pair, pack capacity, runtime parity, Jobs twins",
+    "not_claimed": "full Hilbert unitary equivalence; a prover may skip if not installed"
   }
 }

@@ -110,8 +110,13 @@ python -m fsot_quantum.lean_full_atlas
 # Next stress: large MaxCut · QAOA-FSOT · textbook sim job compare
 python -m fsot_quantum.stress_next
 
-# Multiprover formal stamp (Lean 4 · Coq · Isabelle · Python runtime)
+# QC questions (DJ / BV / Grover / period / factor / Ising / G1 / chem / QM)
+python -m fsot_quantum.ask_qc
+# or: python -m fsot_quantum ask
+
+# Multiprover formal stamp (Lean 4 · Coq · Isabelle · F* · Python runtime)
 python scripts\run_multiprover_verification.py
+# or: python -m fsot_quantum stamp
 
 # Full skeptic kit (pin + smoke + capability + residual + textbook + scale + multiprover)
 python -m fsot_quantum.skeptic_kit
@@ -128,6 +133,8 @@ Field commands (ordinary PC):
 ```powershell
 python -m fsot_quantum check      # pin/seeds/D_eff vs Lean clone
 python -m fsot_quantum accuracy   # hired QC/QM jobs
+python -m fsot_quantum ask        # QC question ledger (DJ/BV/Grover/Shor/…)
+python -m fsot_quantum stamp      # Lean · Coq · Isabelle · F* · Python
 python -m fsot_quantum atlas      # full Lean solved atlas
 python -m fsot_quantum predict    # preregistered predictions (killable)
 .\run_qemu.ps1                    # FSOT-QC-OS standalone
@@ -159,6 +166,8 @@ python -m fsot_quantum predict    # preregistered predictions (killable)
 | Expand sim (Lean chem + QM) | `results/EXPAND_SIM.md` |
 | Full Lean atlas (all solved panels) | `results/LEAN_FULL_ATLAS.md` |
 | Cross-check vs Lean | `results/CROSSCHECK.md` |
+| QC question ledger | `results/ASK_QC.md` |
+| Multiprover stamp (Lean/Coq/Isabelle/F*) | `results/MULTIPROVER_STAMP.md` |
 | Preregistered predictions | `predictions/qc_preregistered.json` |
 | Skeptic kit | `results/SKEPTIC_KIT.md` |
 

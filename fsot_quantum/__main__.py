@@ -3,6 +3,8 @@ Field entry: python -m fsot_quantum [cmd]
 
   check      pin/seed/D_eff vs Lean clone
   accuracy   hired QC/QM jobs (Python/GPU)
+  ask        run QC question battery (DJ/BV/Grover/Shor/Ising/G1/chem)
+  stamp      Lean · Coq · Isabelle · F* · Python multiprover
   atlas      full Lean solved atlas
   expand     Lean chem + extra QM
   predict    print preregistered predictions
@@ -35,6 +37,14 @@ def main() -> int:
     if c == "accuracy":
         from fsot_quantum.qc_accuracy import main as m
         return m()
+    if c == "ask":
+        from fsot_quantum.ask_qc import main as m
+        return m()
+    if c == "stamp":
+        return subprocess.call(
+            [sys.executable, str(ROOT / "scripts" / "run_multiprover_verification.py")],
+            cwd=str(ROOT),
+        )
     if c == "atlas":
         from fsot_quantum.lean_full_atlas import main as m
         return m()

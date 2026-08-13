@@ -1,0 +1,186 @@
+{
+  "timestamp": "2026-08-13T00:54:18.283881+00:00",
+  "suite": "ask_qc",
+  "pin": "D1D38A",
+  "n": 19,
+  "n_ok": 19,
+  "overall_ok": true,
+  "wall_seconds": 1.5383941999898525,
+  "questions": [
+    {
+      "id": "Q-DJ-CONST",
+      "question": "Is f=0 constant on 6 bits? (DJ role)",
+      "expected": "constant",
+      "answer": "constant",
+      "ok": true,
+      "notes": ""
+    },
+    {
+      "id": "Q-DJ-BAL",
+      "question": "Is parity-mask 101011 balanced? (DJ role)",
+      "expected": "balanced",
+      "answer": "balanced",
+      "ok": true,
+      "notes": ""
+    },
+    {
+      "id": "Q-BV",
+      "question": "What is the secret of f(x)=s\u00b7x for s=101101?",
+      "expected": [
+        1,
+        0,
+        1,
+        1,
+        0,
+        1
+      ],
+      "answer": [
+        1,
+        0,
+        1,
+        1,
+        0,
+        1
+      ],
+      "ok": true,
+      "notes": ""
+    },
+    {
+      "id": "Q-GROVER",
+      "question": "Find the marked index in 10000 items (marked=4242).",
+      "expected": 4242,
+      "answer": 4242,
+      "ok": true,
+      "notes": ""
+    },
+    {
+      "id": "Q-PERIOD-7-15",
+      "question": "What is the order of 7 mod 15?",
+      "expected": 4,
+      "answer": 4,
+      "ok": true,
+      "notes": ""
+    },
+    {
+      "id": "Q-PERIOD-5-21",
+      "question": "What is the order of 5 mod 21?",
+      "expected": 6,
+      "answer": 6,
+      "ok": true,
+      "notes": ""
+    },
+    {
+      "id": "Q-PERIOD-2-33",
+      "question": "What is the order of 2 mod 33?",
+      "expected": 10,
+      "answer": 10,
+      "ok": true,
+      "notes": ""
+    },
+    {
+      "id": "Q-PERIOD-8-51",
+      "question": "What is the order of 8 mod 51?",
+      "expected": 8,
+      "answer": 8,
+      "ok": true,
+      "notes": ""
+    },
+    {
+      "id": "Q-FACTOR-15",
+      "question": "Factor the composite 15.",
+      "expected": 15,
+      "answer": [
+        3,
+        5
+      ],
+      "ok": true,
+      "notes": ""
+    },
+    {
+      "id": "Q-FACTOR-21",
+      "question": "Factor the composite 21.",
+      "expected": 21,
+      "answer": [
+        3,
+        7
+      ],
+      "ok": true,
+      "notes": ""
+    },
+    {
+      "id": "Q-FACTOR-33",
+      "question": "Factor the composite 33.",
+      "expected": 33,
+      "answer": [
+        3,
+        11
+      ],
+      "ok": true,
+      "notes": ""
+    },
+    {
+      "id": "Q-ISING-BANK",
+      "question": "Do collapse+consensus field solves match exact Ising/MaxCut (n<=12 bank)?",
+      "expected": "13/13",
+      "answer": "13/13",
+      "ok": true,
+      "notes": ""
+    },
+    {
+      "id": "Q-MAXCUT-G1",
+      "question": "Official Gset G1 (n=800): fold cut vs published 11624 \u2014 within 5%?",
+      "expected": "rel<=5%",
+      "answer": "cut=11397 rel=1.952856159669649%",
+      "ok": true,
+      "notes": ""
+    },
+    {
+      "id": "Q-CHEM",
+      "question": "Pin chemistry observables inside 0.5%?",
+      "expected": "68/68",
+      "answer": "68/68",
+      "ok": true,
+      "notes": ""
+    },
+    {
+      "id": "Q-QM-CONST",
+      "question": "QM/SM pin constants (alpha, Weinberg, \u2026) inside 0.5%?",
+      "expected": "14/14",
+      "answer": "14/14",
+      "ok": true,
+      "notes": ""
+    },
+    {
+      "id": "Q-S-QM",
+      "question": "Is S(QM) emergence (>0)?",
+      "expected": true,
+      "answer": true,
+      "ok": true,
+      "notes": "S=0.9555063001027194"
+    },
+    {
+      "id": "Q-S-QC",
+      "question": "Is S(QC) damping (<0)?",
+      "expected": true,
+      "answer": true,
+      "ok": true,
+      "notes": "S=-0.14767310363368633"
+    },
+    {
+      "id": "Q-CHSH",
+      "question": "What is the Tsirelson bound (seed 2\u221a2)?",
+      "expected": 2.8284271247461903,
+      "answer": 2.8284271247461903,
+      "ok": true,
+      "notes": ""
+    },
+    {
+      "id": "Q-FOLD-COST",
+      "question": "Is foldBudget(8)=195 < 256?",
+      "expected": true,
+      "answer": true,
+      "ok": true,
+      "notes": ""
+    }
+  ]
+}
