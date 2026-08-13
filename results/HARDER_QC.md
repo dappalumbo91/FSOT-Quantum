@@ -34,9 +34,9 @@ These are the numbers and jobs people wanted a QPU or a supercomputer for: CKM/P
 
 | Graph | n / cut | published | rel% | OK |
 |-------|---------|-----------|-----:|----|
-| G1.txt | n=`800` cut=`11397` | `11624` | 1.952856159669649 | True |
+| G1.txt | n=`800` cut=`11431` | `11624` | 1.6603578802477634 | True |
 | G14.txt | n=`800` cut=`2913` | `3064` | 4.9281984334203655 | True |
-| G22.txt | n=`2000` cut=`12840` | `13359` | 3.8850213339321806 | True |
+| G22.txt | n=`2000` cut=`12879` | `13359` | 3.593083314619358 | True |
 
 ## Factors
 

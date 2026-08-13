@@ -117,18 +117,28 @@ def _fast_maxcut(n: int, edges: list[tuple[int, int, int]]) -> tuple[int, list[i
         adj[j].append(i)
 
     base = 1 if domain_scalar(DOMAIN_SPIN_LAW) > 0 else -1
+    cm = 1 if domain_scalar("Condensed_Matter") > 0 else -1
+    mat = 1 if domain_scalar("Materials_Science") > 0 else -1
     starts = [
         [base] * n,
         [-base] * n,
         [base if (i % 2 == 0) else -base for i in range(n)],
         [-base if (i % 2 == 0) else base for i in range(n)],
+        [cm if (i % 2 == 0) else -cm for i in range(n)],
+        [mat if (i % 3 == 0) else -mat for i in range(n)],
     ]
-    phi = float(SEEDS.phi)
-    n_phi = max(4, int(math.floor(float(SEEDS.e) * float(SEEDS.pi))))  # 8
-    x = 1
+    # Per-vertex φ bits. A 30-bit stripe repeating across n=800 was a broken start.
+    phi_m = int(float(SEEDS.phi) * 1e6)
+    n_phi = int(math.floor(float(SEEDS.e) * float(SEEDS.pi))) * int(math.floor(float(SEEDS.pi)))
     for k in range(n_phi):
-        x = (x * int(phi * 1e6) + k * 2654435761) % (1 << 30)
-        starts.append([1 if ((x >> (i % 30)) & 1) else -1 for i in range(n)])
+        row = []
+        for i in range(n):
+            x = (phi_m * (k + 1) * (i + 1) + (k + 3) * 2654435761 + i * 40503) & 0xFFFFFFFF
+            row.append(1 if (x >> 16) & 1 else -1)
+        starts.append(row)
+    # golden partition (seed φ)
+    half = n // 2
+    starts.append([1 if ((i * phi_m) % n) < half else -1 for i in range(n)])
 
     def cut_of(s: list[int]) -> int:
         return cut_value(s, edges)
@@ -158,33 +168,84 @@ def _fast_maxcut(n: int, edges: list[tuple[int, int, int]]) -> tuple[int, list[i
                 if 2 * same - deg > 0:
                     s[i] = -si
                     improved = True
-        # FSOT snap: collapse the cut-gradient field, flip poles
+        # FSOT snap: collapse the cut-gradient field, floor(π) rounds
         from fsot_lib.seeds import COLLAPSE_THRESHOLD
         from fsot_lib.trinary import collapse, code_to_signed
 
-        field = []
-        for i in range(n):
-            deg = len(adj[i])
-            same = sum(1 for j in adj[i] if s[j] == s[i])
-            field.append(float(2 * same - deg))
-        codes = collapse(field, threshold=COLLAPSE_THRESHOLD)
-        if hasattr(codes, "tolist"):
-            codes = codes.tolist()
-        trial = list(s)
-        for i, c in enumerate(codes):
-            if code_to_signed(int(c)) > 0:
-                trial[i] = -trial[i]
-        if cut_of(trial) > cut_of(s):
-            s = trial
+        snap_rounds = max(1, int(math.floor(float(SEEDS.pi))))
+        for _ in range(snap_rounds):
+            field = []
+            for i in range(n):
+                deg = len(adj[i])
+                same = sum(1 for j in adj[i] if s[j] == s[i])
+                field.append(float(2 * same - deg))
+            codes = collapse(field, threshold=COLLAPSE_THRESHOLD)
+            if hasattr(codes, "tolist"):
+                codes = codes.tolist()
+            trial = list(s)
+            for i, c in enumerate(codes):
+                if code_to_signed(int(c)) > 0:
+                    trial[i] = -trial[i]
+            if cut_of(trial) > cut_of(s):
+                s = trial
+            else:
+                break
         return s
 
     best = polish(starts[0])
     best_c = cut_of(best)
+    pool = [(best_c, best)]
     for st in starts[1:]:
         cand = polish(st)
         c = cut_of(cand)
+        pool.append((c, cand))
         if c > best_c:
             best, best_c = cand, c
+    # φ-pair 2-flip on the winner (seed budget, incremental cut, not n²)
+    phi_m = int(float(SEEDS.phi) * 1e6)
+    budget = n * max(3, int(math.floor(float(SEEDS.e) * float(SEEDS.pi))))
+
+    def flip_gain(s: list[int], i: int) -> int:
+        same = 0
+        for j in adj[i]:
+            if s[j] == s[i]:
+                same += 1
+        return 2 * same - len(adj[i])
+
+    s = list(best)
+    cur = best_c
+    for t in range(budget):
+        i = (phi_m * (t + 1)) % n
+        j = (phi_m * (t + 1) * 7 + 27) % n
+        if i == j:
+            continue
+        g = flip_gain(s, i)
+        s[i] = -s[i]
+        g += flip_gain(s, j)
+        if g > 0:
+            s[j] = -s[j]
+            cur += g
+        else:
+            s[i] = -s[i]
+    # one more 1-flip / snap polish
+    s = polish(s)
+    c = cut_of(s)
+    if c > best_c:
+        best, best_c = s, c
+    # seed-locked breakout: flip a φ-subset, re-polish, keep if better
+    rounds = max(3, int(math.floor(float(SEEDS.e) * float(SEEDS.pi))))
+    stride = max(2, int(math.floor(float(SEEDS.pi))))
+    s = list(best)
+    for r in range(rounds):
+        trial = list(s)
+        for i in range(n):
+            x = (phi_m * (r + 1) * (i + 1) + r * 2654435761) & 0xFFFFFFFF
+            if (x >> 16) % stride == 0:
+                trial[i] = -trial[i]
+        trial = polish(trial)
+        tc = cut_of(trial)
+        if tc > best_c:
+            best, best_c, s = trial, tc, trial
     return best_c, best
 
 

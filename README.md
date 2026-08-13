@@ -2,6 +2,9 @@
 
 **Fluid Spacetime Omni-Theory — quantum computing domain fold**
 
+**Ladder (what hit, what is still open):** [`docs/LADDER.md`](docs/LADDER.md)  
+**Reproduce:** [`docs/REPRODUCE.md`](docs/REPRODUCE.md)
+
 Author: **Damian Arthur Palumbo**  
 License: **Apache-2.0**  
 Theory authority: **[FSOT-2.1-Lean](https://github.com/dappalumbo91/FSOT-2.1-Lean)** (pin **D1D38A**)  
@@ -187,6 +190,8 @@ python -m fsot_quantum predict    # preregistered predictions (killable)
 | Mind emergence (C_factor, not LLM) | `results/EMERGE_MIND.md` |
 | Forward questions (arch + known + QC-for) | `results/FORWARD_ASK.md` |
 | Harder QC-for (CKM / Ising / Gset / fabric) | `results/HARDER_QC.md` |
+| Ladder (hits + open residuals) | `docs/LADDER.md` |
+| Reproduce | `docs/REPRODUCE.md` |
 | Multiprover stamp (Lean/Coq/Isabelle/F*) | `results/MULTIPROVER_STAMP.md` |
 | Preregistered predictions | `predictions/qc_preregistered.json` |
 | Skeptic kit | `results/SKEPTIC_KIT.md` |

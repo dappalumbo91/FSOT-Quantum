@@ -19,7 +19,7 @@
     },
     {
       "id": "P-G1-5PCT",
-      "statement": "Official Gset G1 fold cut stays within 5% of published champion 11624.",
+      "statement": "Official Gset G1 fold cut stays within 5% of published champion 11624. Aspiration <1% — 5% is the kill floor, not the win.",
       "check": "python -m fsot_quantum.gset_official",
       "kill": "rel_err_vs_published_pct > 5"
     },
