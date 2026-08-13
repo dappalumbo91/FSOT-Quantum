@@ -1,0 +1,309 @@
+{
+  "timestamp": "2026-08-13T01:58:13.525037+00:00",
+  "panel": "fold_architecture",
+  "pin": "D1D38A",
+  "device": "cuda",
+  "overall_ok": true,
+  "why_they_grow_n": {
+    "S_Quantum_Mechanics": 0.9555063001027194,
+    "S_Quantum_Computing": -0.14767310363368633,
+    "QM": {
+      "D_eff": 6,
+      "observed": true,
+      "role": "measurement / spin law \u2014 emergence"
+    },
+    "QC": {
+      "D_eff": 11,
+      "observed": false,
+      "role": "compute substrate \u2014 damping when forced into observation"
+    },
+    "n_pin_domains": 35,
+    "geometry": "D_eff domain folds + bleed \u03ba_ij",
+    "refused_geometry": "Hilbert n-qubit amplitude expansion",
+    "statement": "The industry grows registers because it is trying to instantiate the unobserved compute substrate as an observed Hilbert space. S(QC)<0 is that damping. The answer is already a fold at D_eff, bled across the pin table and the Lean atlas \u2014 not a larger n.",
+    "ok": true
+  },
+  "gpu_pin_scalars": {
+    "ok": true,
+    "device": "cuda",
+    "n_domains": 35,
+    "seconds": 0.24340590000792872,
+    "max_abs_delta_vs_cpu": 2.220446049250313e-16,
+    "n_emergence": 25,
+    "n_damping": 10,
+    "emergence": [
+      "Acoustics",
+      "Astronomy",
+      "Astrophysics",
+      "Atomic_Physics",
+      "Biochemistry",
+      "Biology",
+      "Chemistry",
+      "Condensed_Matter",
+      "Ecology",
+      "Economics",
+      "Electromagnetism",
+      "High_Energy_Physics",
+      "Materials_Science",
+      "Molecular_Chemistry",
+      "Neuroscience",
+      "Nuclear_Physics",
+      "Optics",
+      "Particle_Physics",
+      "Physical_Chemistry",
+      "Planetary_Science",
+      "Psychology",
+      "Quantum_Mechanics",
+      "Quantum_Optics",
+      "Sociology",
+      "Thermodynamics"
+    ],
+    "damping": [
+      "Atmospheric_Physics",
+      "Cosmology",
+      "Fluid_Dynamics",
+      "Geophysics",
+      "Meteorology",
+      "Oceanography",
+      "Particle_Astrophysics",
+      "Quantum_Computing",
+      "Quantum_Gravity",
+      "Seismology"
+    ]
+  },
+  "gpu_bleed": {
+    "ok": true,
+    "device": "cuda",
+    "seconds": 0.1724943000008352,
+    "mean_abs_wave": 0.9143171528712403,
+    "max_abs_wave": 5.765300766987924
+  },
+  "atlas_fabric": {
+    "ok": true,
+    "n_domains": 432,
+    "n_files": 473,
+    "workers": 8,
+    "seconds": 0.879997199997888,
+    "D_eff_values": [
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      29
+    ]
+  },
+  "question_routes": [
+    {
+      "question_kind": "fine_structure_and_sm_constants",
+      "route": [
+        "Quantum_Mechanics",
+        "Particle_Physics",
+        "High_Energy_Physics"
+      ],
+      "D_eff": [
+        6,
+        5,
+        7
+      ],
+      "observed": [
+        true,
+        true,
+        true
+      ],
+      "S": [
+        0.9555063001027194,
+        0.9504134401245242,
+        0.886264056646702
+      ]
+    },
+    {
+      "question_kind": "chemistry_observables",
+      "route": [
+        "Chemistry",
+        "Molecular_Chemistry",
+        "Physical_Chemistry"
+      ],
+      "D_eff": [
+        8,
+        9,
+        8
+      ],
+      "observed": [
+        true,
+        true,
+        true
+      ],
+      "S": [
+        0.4078840642307453,
+        0.3345733830778105,
+        0.33401327040170903
+      ]
+    },
+    {
+      "question_kind": "spin_measurement",
+      "route": [
+        "Quantum_Mechanics",
+        "Atomic_Physics"
+      ],
+      "D_eff": [
+        6,
+        7
+      ],
+      "observed": [
+        true,
+        true
+      ],
+      "S": [
+        0.9555063001027194,
+        0.7358238658627416
+      ]
+    },
+    {
+      "question_kind": "compute_substrate",
+      "route": [
+        "Quantum_Computing"
+      ],
+      "D_eff": [
+        11
+      ],
+      "observed": [
+        false
+      ],
+      "S": [
+        -0.14767310363368633
+      ]
+    },
+    {
+      "question_kind": "packing_and_cut",
+      "route": [
+        "Condensed_Matter",
+        "Materials_Science"
+      ],
+      "D_eff": [
+        14,
+        10
+      ],
+      "observed": [
+        true,
+        true
+      ],
+      "S": [
+        0.33840599557977497,
+        0.33525988073638363
+      ]
+    },
+    {
+      "question_kind": "phase_optics",
+      "route": [
+        "Quantum_Optics",
+        "Optics"
+      ],
+      "D_eff": [
+        11,
+        10
+      ],
+      "observed": [
+        true,
+        true
+      ],
+      "S": [
+        0.40817053817150184,
+        0.4080624712153454
+      ]
+    },
+    {
+      "question_kind": "nuclear_and_mass",
+      "route": [
+        "Nuclear_Physics",
+        "Particle_Physics"
+      ],
+      "D_eff": [
+        15,
+        5
+      ],
+      "observed": [
+        true,
+        true
+      ],
+      "S": [
+        0.9213094330291351,
+        0.9504134401245242
+      ]
+    },
+    {
+      "question_kind": "deep_residual",
+      "route": [
+        "Quantum_Gravity",
+        "Cosmology"
+      ],
+      "D_eff": [
+        22,
+        25
+      ],
+      "observed": [
+        false,
+        false
+      ],
+      "S": [
+        -0.5255977531899868,
+        -0.5024559462100433
+      ]
+    }
+  ],
+  "S": {
+    "Acoustics": 0.31159079708634146,
+    "Astronomy": 0.8984595681660624,
+    "Astrophysics": 0.882410798418129,
+    "Atmospheric_Physics": -0.47643190542960023,
+    "Atomic_Physics": 0.7358238658627416,
+    "Biochemistry": 0.3062212293865662,
+    "Biology": 0.4447250077038459,
+    "Chemistry": 0.4078840642307453,
+    "Condensed_Matter": 0.33840599557977497,
+    "Cosmology": -0.5024559462100433,
+    "Ecology": 0.3003170815488648,
+    "Economics": 0.6460045206857497,
+    "Electromagnetism": 0.5188655207983146,
+    "Fluid_Dynamics": -0.5627338062568507,
+    "Geophysics": -0.5490942927204094,
+    "High_Energy_Physics": 0.886264056646702,
+    "Materials_Science": 0.33525988073638363,
+    "Meteorology": -0.48499702084688,
+    "Molecular_Chemistry": 0.3345733830778105,
+    "Neuroscience": 0.514361962908362,
+    "Nuclear_Physics": 0.9213094330291351,
+    "Oceanography": -0.37715907584612013,
+    "Optics": 0.4080624712153454,
+    "Particle_Astrophysics": -0.42441172002888605,
+    "Particle_Physics": 0.9504134401245242,
+    "Physical_Chemistry": 0.33401327040170903,
+    "Planetary_Science": 0.7671791385407585,
+    "Psychology": 1.0502056403979545,
+    "Quantum_Computing": -0.14767310363368633,
+    "Quantum_Gravity": -0.5255977531899868,
+    "Quantum_Mechanics": 0.9555063001027194,
+    "Quantum_Optics": 0.40817053817150184,
+    "Seismology": -0.4459015721103036,
+    "Sociology": 0.6501466524159137,
+    "Thermodynamics": 0.7869745016115726
+  },
+  "wall_seconds": 4.792663400003221
+}
