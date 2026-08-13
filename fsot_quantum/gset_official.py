@@ -31,6 +31,12 @@ from fsot_quantum.optimization import cut_value, fsot_local_spins
 PUBLISHED_CUTS = {
     "G1.TXT": 11624,
     "G1": 11624,
+    "G11.TXT": 564,
+    "G11": 564,
+    "G14.TXT": 3064,
+    "G14": 3064,
+    "G22.TXT": 13359,
+    "G22": 13359,
 }
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -216,9 +222,16 @@ def run_gset_official_panel() -> dict[str, Any]:
 
     dest_dir = ROOT / "data" / "gset"
     fetched = _try_fetch_g1(dest_dir)
+    extra = []
+    # G14/G22: unweighted MaxCut. Skip signed ±1 grids (G11) — different object.
+    for gname in ("G14", "G22"):
+        hit = _try_fetch_gset(dest_dir, gname)
+        if hit:
+            extra.append(hit)
     official = find_official_files()
-    if fetched and fetched not in official:
-        official = [fetched] + official
+    for p in ([fetched] if fetched else []) + extra:
+        if p and p not in official:
+            official = [p] + official
     # unique by name
     seen_n: set[str] = set()
     uniq: list[Path] = []
@@ -226,7 +239,7 @@ def run_gset_official_panel() -> dict[str, Any]:
         if p.name not in seen_n:
             seen_n.add(p.name)
             uniq.append(p)
-    official = uniq
+    official = [p for p in uniq if not p.stem.upper() == "G11"]
 
     rows = []
     for path in official[:4]:  # cap

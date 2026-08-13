@@ -1,0 +1,548 @@
+{
+  "timestamp": "2026-08-13T02:26:15.275618+00:00",
+  "suite": "harder_qc",
+  "pin": "D1D38A",
+  "overall_ok": true,
+  "wall_seconds": 1.7852614000003086,
+  "S_QM": 0.9555063001027194,
+  "S_QC": -0.14767310363368633,
+  "waves": {
+    "n": 20,
+    "n_band5": 20,
+    "n_green_0_5": 20,
+    "ok": true,
+    "questions": [
+      {
+        "id": "H-|V_us|",
+        "question": "What is |V_us|?",
+        "route": [
+          "Particle_Physics"
+        ],
+        "formula": "\u03b8_S/\u03c6 + (1 \u2212 S_quant)",
+        "computed": 0.22427764916395915,
+        "published": 0.2243,
+        "rel_err_pct": 0.009964706215270609,
+        "green_0_5": true,
+        "band_5": true,
+        "ok": true
+      },
+      {
+        "id": "H-|V_cb|",
+        "question": "What is |V_cb|?",
+        "route": [
+          "Particle_Physics"
+        ],
+        "formula": "S_quant/C_eff \u2212 S_quant",
+        "computed": 0.04220081332791359,
+        "published": 0.0422,
+        "rel_err_pct": 0.0019273173307759674,
+        "green_0_5": true,
+        "band_5": true,
+        "ok": true
+      },
+      {
+        "id": "H-|V_ub|",
+        "question": "What is |V_ub|?",
+        "route": [
+          "Particle_Physics"
+        ],
+        "formula": "C_cosm\u00b2",
+        "computed": 0.0038196601125010513,
+        "published": 0.00382,
+        "rel_err_pct": 0.008897578506510621,
+        "green_0_5": true,
+        "band_5": true,
+        "ok": true
+      },
+      {
+        "id": "H-sin_theta_C",
+        "question": "What is sin_theta_C?",
+        "route": [
+          "Particle_Physics"
+        ],
+        "formula": "\u03c6/e\u00b3 + Suction",
+        "computed": 0.22759115424752144,
+        "published": 0.22759,
+        "rel_err_pct": 0.0005071609128041613,
+        "green_0_5": true,
+        "band_5": true,
+        "ok": true
+      },
+      {
+        "id": "H-sin2_theta12",
+        "question": "What is sin2_theta12?",
+        "route": [
+          "High_Energy_Physics"
+        ],
+        "formula": "2\u00b7Poof",
+        "computed": 0.3069644297889016,
+        "published": 0.307,
+        "rel_err_pct": 0.011586387979935279,
+        "green_0_5": true,
+        "band_5": true,
+        "ok": true
+      },
+      {
+        "id": "H-sin2_theta23",
+        "question": "What is sin2_theta23?",
+        "route": [
+          "High_Energy_Physics"
+        ],
+        "formula": "|Chaos|\u00b7\u221ae",
+        "computed": 0.5457666109860249,
+        "published": 0.546,
+        "rel_err_pct": 0.04274524065479535,
+        "green_0_5": true,
+        "band_5": true,
+        "ok": true
+      },
+      {
+        "id": "H-sin2_theta13",
+        "question": "What is sin2_theta13?",
+        "route": [
+          "High_Energy_Physics"
+        ],
+        "formula": "\u03b3\u2076\u00b7\u03c6/e",
+        "computed": 0.02201515822114412,
+        "published": 0.022,
+        "rel_err_pct": 0.06890100520055274,
+        "green_0_5": true,
+        "band_5": true,
+        "ok": true
+      },
+      {
+        "id": "H-Ising2D_beta",
+        "question": "What is Ising2D_beta?",
+        "route": [
+          "Condensed_Matter"
+        ],
+        "formula": "\u03b8_S/\u03c6\u2075 + P_new",
+        "computed": 0.3265324013682464,
+        "published": 0.32653,
+        "rel_err_pct": 0.0007354204043789445,
+        "green_0_5": true,
+        "band_5": true,
+        "ok": true
+      },
+      {
+        "id": "H-Ising2D_nu",
+        "question": "What is Ising2D_nu?",
+        "route": [
+          "Condensed_Matter"
+        ],
+        "formula": "\u221a\u03c6/ln(\u03c0) \u2212 ln(\u03c6)",
+        "computed": 0.6299845062655096,
+        "published": 0.63002,
+        "rel_err_pct": 0.005633747260469587,
+        "green_0_5": true,
+        "band_5": true,
+        "ok": true
+      },
+      {
+        "id": "H-Ising2D_gamma",
+        "question": "What is Ising2D_gamma?",
+        "route": [
+          "Condensed_Matter"
+        ],
+        "formula": "(1\u2212S_quant)/ln(\u03c6) + ln(\u03c0)",
+        "computed": 1.2371916616832948,
+        "published": 1.2372,
+        "rel_err_pct": 0.0006739667560075375,
+        "green_0_5": true,
+        "band_5": true,
+        "ok": true
+      },
+      {
+        "id": "H-Deuteron_binding_MeV",
+        "question": "What is Deuteron_binding_MeV?",
+        "route": [
+          "Nuclear_Physics"
+        ],
+        "formula": "\u221ae/e + \u03c6",
+        "computed": 2.224564648462528,
+        "published": 2.224566,
+        "rel_err_pct": 6.075510781503307e-05,
+        "green_0_5": true,
+        "band_5": true,
+        "ok": true
+      },
+      {
+        "id": "H-Neutron_lifetime_s",
+        "question": "What is Neutron_lifetime_s?",
+        "route": [
+          "Nuclear_Physics"
+        ],
+        "formula": "\u03c0\u2077\u00b7\u03b8_S",
+        "computed": 878.5928513922833,
+        "published": 878.4,
+        "rel_err_pct": 0.021954848848277954,
+        "green_0_5": true,
+        "band_5": true,
+        "ok": true
+      },
+      {
+        "id": "H-m_t/m_W",
+        "question": "What is m_t/m_W?",
+        "route": [
+          "High_Energy_Physics"
+        ],
+        "formula": "|S_cosm|/|Chaos| + \u03c8_con",
+        "computed": 2.15000345864463,
+        "published": 2.1498,
+        "rel_err_pct": 0.009464073152396864,
+        "green_0_5": true,
+        "band_5": true,
+        "ok": true
+      },
+      {
+        "id": "H-m_H/m_W",
+        "question": "What is m_H/m_W?",
+        "route": [
+          "High_Energy_Physics"
+        ],
+        "formula": "S_quant\u00b7\u03c8_con + S_quant",
+        "computed": 1.5595014764878583,
+        "published": 1.5595,
+        "rel_err_pct": 9.46770027700249e-05,
+        "green_0_5": true,
+        "band_5": true,
+        "ok": true
+      },
+      {
+        "id": "H-m_n-m_p_MeV",
+        "question": "What is m_n-m_p_MeV?",
+        "route": [
+          "Nuclear_Physics"
+        ],
+        "formula": "\u03b3\u2074/|Chaos| + P_var",
+        "computed": 1.2933328005542002,
+        "published": 1.29333,
+        "rel_err_pct": 0.00021653825397228277,
+        "green_0_5": true,
+        "band_5": true,
+        "ok": true
+      },
+      {
+        "id": "H-Age_Gyr",
+        "question": "What is Age_Gyr?",
+        "route": [
+          "Cosmology"
+        ],
+        "formula": "A_in\u00b7\u03c6 + \u03c6\u2075",
+        "computed": 13.787196119245323,
+        "published": 13.787,
+        "rel_err_pct": 0.00142249398217106,
+        "green_0_5": true,
+        "band_5": true,
+        "ok": true
+      },
+      {
+        "id": "H-Jarlskog_J",
+        "question": "What is Jarlskog_J?",
+        "route": [
+          "Particle_Physics"
+        ],
+        "formula": "G/(\u03c0\u2079)",
+        "computed": 3.072771786665467e-05,
+        "published": 3.08e-05,
+        "rel_err_pct": 0.23468225112121452,
+        "green_0_5": true,
+        "band_5": true,
+        "ok": true
+      },
+      {
+        "id": "H-Gamma_Z/M_Z",
+        "question": "What is Gamma_Z/M_Z?",
+        "route": [
+          "High_Energy_Physics"
+        ],
+        "formula": "\u03c6\u2075/e\u2076",
+        "computed": 0.027489782887668835,
+        "published": 0.02749,
+        "rel_err_pct": 0.0007897865811767023,
+        "green_0_5": true,
+        "band_5": true,
+        "ok": true
+      },
+      {
+        "id": "H-BR_H_bb",
+        "question": "What is BR_H_bb?",
+        "route": [
+          "High_Energy_Physics"
+        ],
+        "formula": "C_eff/\u221ae",
+        "computed": 0.5808757487636912,
+        "published": 0.5809,
+        "rel_err_pct": 0.004174769548765883,
+        "green_0_5": true,
+        "band_5": true,
+        "ok": true
+      },
+      {
+        "id": "H-m_H/m_t",
+        "question": "What is m_H/m_t?",
+        "route": [
+          "High_Energy_Physics"
+        ],
+        "formula": "A_bleed\u00b7ln(2)",
+        "computed": 0.7257068201623708,
+        "published": 0.7256,
+        "rel_err_pct": 0.014721632079759569,
+        "green_0_5": true,
+        "band_5": true,
+        "ok": true
+      }
+    ]
+  },
+  "lean_atlas": {
+    "panel": "lean_quantum_atlas",
+    "ok": true,
+    "status": "ingested",
+    "n_files": 8,
+    "instances": [
+      {
+        "file": "quantum_computing_gap_fill_benchmark.json",
+        "ok": true,
+        "domain": "Quantum_Computing",
+        "D_eff": 11,
+        "record_count": 177,
+        "median_error_pct": 0.0002953462072651492,
+        "free_parameters": 0
+      },
+      {
+        "file": "quantum_mechanics_gap_fill_benchmark.json",
+        "ok": true,
+        "domain": "Quantum_Mechanics",
+        "D_eff": 6,
+        "record_count": 50,
+        "median_error_pct": 9.52387420324368e-05,
+        "free_parameters": 0
+      },
+      {
+        "file": "quantum_optics_gap_fill_benchmark.json",
+        "ok": true,
+        "domain": "Quantum_Optics",
+        "D_eff": 6,
+        "record_count": 50,
+        "median_error_pct": 9.52387420324368e-05,
+        "free_parameters": 0
+      },
+      {
+        "file": "quantum_information_benchmark.json",
+        "ok": true,
+        "domain": "Quantum_Information",
+        "D_eff": 11,
+        "record_count": 21,
+        "median_error_pct": 0.0,
+        "free_parameters": 0
+      },
+      {
+        "file": "quantum_mechanics_entanglement_depth_panel_benchmark.json",
+        "ok": true,
+        "domain": "Quantum_Mechanics_Entanglement_Depth_Panel",
+        "D_eff": 16,
+        "record_count": 21,
+        "median_error_pct": 0.014767,
+        "free_parameters": 0
+      },
+      {
+        "file": "quantum_computing_math_depth_panel_benchmark.json",
+        "ok": true,
+        "domain": "Quantum_Computing_Math_Depth_Panel",
+        "D_eff": 19,
+        "record_count": 77,
+        "median_error_pct": 0.014767,
+        "free_parameters": 0
+      },
+      {
+        "file": "quantum_materials_benchmark.json",
+        "ok": true,
+        "domain": null,
+        "D_eff": 16,
+        "record_count": 168,
+        "median_error_pct": 0.01692529386942307,
+        "free_parameters": 0
+      },
+      {
+        "file": "founding_quantum_vacuum_panel_benchmark.json",
+        "ok": true,
+        "domain": "Founding_Quantum_Vacuum_Panel",
+        "D_eff": 8,
+        "record_count": 5,
+        "median_error_pct": 0.047775,
+        "free_parameters": 0
+      }
+    ],
+    "total_records": 569,
+    "note": "Headlines from FSOT-2.1-Lean verification fabric \u2014 403+ domain interfaces live there. This fold is the QC/QM job layer."
+  },
+  "lean_replay": {
+    "n_live": 0,
+    "status": "replayed",
+    "n_replayed": 322
+  },
+  "gset": {
+    "n_official": 3,
+    "n_ok": 3,
+    "instances": [
+      {
+        "name": "G1.txt",
+        "path": "C:\\Users\\damia\\Desktop\\fsot quantum\\data\\gset\\G1.txt",
+        "official": true,
+        "n": 800,
+        "n_edges": 19176,
+        "cut_fold": 11397,
+        "ratio_lb": 0.5943366708385481,
+        "ratio_floor_sparse": 0.6180339887498948,
+        "published_cut": 11624,
+        "rel_err_vs_published_pct": 1.952856159669649,
+        "ok": true,
+        "hilbert_amps_if_QAOA": null,
+        "fold_budget_formal": 16827,
+        "cost": {
+          "nominal_n": 32,
+          "hilbert_amplitudes": 4294967296,
+          "hilbert_note": "C^{2^n} statevector entries (brute sim bottleneck)",
+          "fold_probe_budget": 355570,
+          "fold_depth": 3,
+          "fold_D_eff_cost_proxy": 0.7097596350416266,
+          "complexity_weight_phi": 0.6180339887498949,
+          "ratio_hilbert_over_fold": 12079.10480636724,
+          "winner_when": "fold when structure admits closed form / poly probes"
+        }
+      },
+      {
+        "name": "G14.txt",
+        "path": "C:\\Users\\damia\\Desktop\\fsot quantum\\data\\gset\\G14.txt",
+        "official": true,
+        "n": 800,
+        "n_edges": 4694,
+        "cut_fold": 2913,
+        "ratio_lb": 0.6205794631444397,
+        "ratio_floor_sparse": 0.6180339887498948,
+        "published_cut": 3064,
+        "rel_err_vs_published_pct": 4.9281984334203655,
+        "ok": true,
+        "hilbert_amps_if_QAOA": null,
+        "fold_budget_formal": 16827,
+        "cost": {
+          "nominal_n": 32,
+          "hilbert_amplitudes": 4294967296,
+          "hilbert_note": "C^{2^n} statevector entries (brute sim bottleneck)",
+          "fold_probe_budget": 87059,
+          "fold_depth": 3,
+          "fold_D_eff_cost_proxy": 0.7097596350416266,
+          "complexity_weight_phi": 0.6180339887498949,
+          "ratio_hilbert_over_fold": 49333.983804086885,
+          "winner_when": "fold when structure admits closed form / poly probes"
+        }
+      },
+      {
+        "name": "G22.txt",
+        "path": "C:\\Users\\damia\\Desktop\\fsot quantum\\data\\gset\\G22.txt",
+        "official": true,
+        "n": 2000,
+        "n_edges": 19990,
+        "cut_fold": 12840,
+        "ratio_lb": 0.6423211605802901,
+        "ratio_floor_sparse": 0.6180339887498948,
+        "published_cut": 13359,
+        "rel_err_vs_published_pct": 3.8850213339321806,
+        "ok": true,
+        "hilbert_amps_if_QAOA": null,
+        "fold_budget_formal": 42027,
+        "cost": {
+          "nominal_n": 32,
+          "hilbert_amplitudes": 4294967296,
+          "hilbert_note": "C^{2^n} statevector entries (brute sim bottleneck)",
+          "fold_probe_budget": 370662,
+          "fold_depth": 3,
+          "fold_D_eff_cost_proxy": 0.7097596350416266,
+          "complexity_weight_phi": 0.6180339887498949,
+          "ratio_hilbert_over_fold": 11587.28786873216,
+          "winner_when": "fold when structure admits closed form / poly probes"
+        }
+      }
+    ]
+  },
+  "factors": [
+    {
+      "question": "What are the factors of 10403?",
+      "N": 10403,
+      "answer": [
+        101,
+        103
+      ],
+      "ok": true,
+      "method": "gcd_fold",
+      "route": [
+        "Quantum_Computing"
+      ]
+    },
+    {
+      "question": "What are the factors of 8051?",
+      "N": 8051,
+      "answer": [
+        83,
+        97
+      ],
+      "ok": true,
+      "method": "gcd_fold",
+      "route": [
+        "Quantum_Computing"
+      ]
+    },
+    {
+      "question": "What are the factors of 1147?",
+      "N": 1147,
+      "answer": [
+        31,
+        37
+      ],
+      "ok": true,
+      "method": "gcd_fold",
+      "route": [
+        "Quantum_Computing"
+      ]
+    },
+    {
+      "question": "What are the factors of 6557?",
+      "N": 6557,
+      "answer": [
+        79,
+        83
+      ],
+      "ok": true,
+      "method": "fermat_fold",
+      "route": [
+        "Quantum_Computing"
+      ]
+    },
+    {
+      "question": "What are the factors of 8633?",
+      "N": 8633,
+      "answer": [
+        89,
+        97
+      ],
+      "ok": true,
+      "method": "fermat_fold",
+      "route": [
+        "Quantum_Computing"
+      ]
+    },
+    {
+      "question": "What are the factors of 1517?",
+      "N": 1517,
+      "answer": [
+        37,
+        41
+      ],
+      "ok": true,
+      "method": "gcd_fold",
+      "route": [
+        "Quantum_Computing"
+      ]
+    }
+  ]
+}
