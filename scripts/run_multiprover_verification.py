@@ -131,7 +131,12 @@ def python_runtime_obligations() -> dict[str, Any]:
     )
 
     # Q-FOLD cost contrast (integer proxy shared with Lean/Coq/Isabelle/F*/Zig)
-    from fsot_quantum.fold_complexity import fold_budget_formal
+    from fsot_quantum.fold_complexity import (
+        fold_budget_formal,
+        fold_work_k_int,
+        fold_work_via_k,
+        k_matches_pin,
+    )
     import math as _math
 
     add(
@@ -157,6 +162,18 @@ def python_runtime_obligations() -> dict[str, Any]:
         and pow(7, 2) % 15 == 4
         and _math.gcd(4 - 1, 15) == 3
         and _math.gcd(4 + 1, 15) == 5,
+    )
+
+    # Q-K universal scaling — S = K(T1+T2+T3)
+    add("Q-K-001", k_matches_pin(), {"K": float(SEEDS.k)})
+    add(
+        "Q-K-002",
+        fold_work_k_int(8) == 47
+        and fold_work_via_k(8) == 47
+        and fold_work_k_int(64) == 180
+        and fold_work_k_int(8) < (1 << 8)
+        and fold_work_k_int(64) < (1 << 20),
+        {"work8": fold_work_k_int(8), "work64": fold_work_k_int(64)},
     )
 
     ok = all(c["ok"] for c in checks)

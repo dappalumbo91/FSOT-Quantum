@@ -10,7 +10,7 @@ from fsot_lib.seeds import SEEDS
 Number = Union[float, "torch.Tensor"]
 
 
-def compute_scalar(
+def compute_scalar_terms(
     *,
     N: float = 1.0,
     P: float = 1.0,
@@ -23,11 +23,10 @@ def compute_scalar(
     scale: float = 1.0,
     amplitude: float = 1.0,
     trend_bias: float = 0.0,
-    device: str | None = None,
-) -> float:
+) -> dict[str, float]:
     """
-    Pure-float path (always available — no CUDA required).
-    Matches archive compute_scalar structure.
+    Law S = K·(T1+T2+T3) with terms exported.
+    Same arithmetic as compute_scalar — no second formula.
     """
     s = SEEDS
     growth = math.exp(s.alpha * (1.0 - recent_hits / N) * s.gamma / s.phi)
@@ -55,7 +54,49 @@ def compute_scalar(
     )
     phase = 1.0 + s.b_in * s.p_var
     t3 = valve * acoustic * phase
-    return s.k * (t1 + t2 + t3)
+    total = t1 + t2 + t3
+    return {
+        "T1": float(t1),
+        "T2": float(t2),
+        "T3": float(t3),
+        "K": float(s.k),
+        "S": float(s.k * total),
+    }
+
+
+def compute_scalar(
+    *,
+    N: float = 1.0,
+    P: float = 1.0,
+    D_eff: float = 25.0,
+    delta_psi: float = 1.0,
+    recent_hits: float = 0.0,
+    rho: float = 1.0,
+    observed: bool = False,
+    delta_theta: float = 1.0,
+    scale: float = 1.0,
+    amplitude: float = 1.0,
+    trend_bias: float = 0.0,
+    device: str | None = None,
+) -> float:
+    """
+    Pure-float path (always available — no CUDA required).
+    Matches archive compute_scalar structure.
+    """
+    del device  # torch path is compute_scalar_torch
+    return compute_scalar_terms(
+        N=N,
+        P=P,
+        D_eff=D_eff,
+        delta_psi=delta_psi,
+        recent_hits=recent_hits,
+        rho=rho,
+        observed=observed,
+        delta_theta=delta_theta,
+        scale=scale,
+        amplitude=amplitude,
+        trend_bias=trend_bias,
+    )["S"]
 
 
 def compute_scalar_torch(**kwargs):

@@ -215,6 +215,26 @@
       "isabelle": "shor_gcd_fold_fifteen",
       "fstar": "shor_gcd_fold_fifteen",
       "python": "gcd fold on 15 via 7^{r/2}"
+    },
+    {
+      "id": "Q-K-001",
+      "name": "universal_K_closed_form",
+      "statement": "K = φ·(γ/e)·√2/ln(π)·99/100 matches SEEDS.k (pin D1D38A)",
+      "lean": "runtime pin (kMicro=420222)",
+      "coq": "runtime pin (k_micro=420222)",
+      "isabelle": "runtime pin (k_micro=420222)",
+      "fstar": "runtime pin (k_micro=420222)",
+      "python": "k_matches_pin()"
+    },
+    {
+      "id": "Q-K-002",
+      "name": "fold_work_via_K",
+      "statement": "foldWorkK(8)=47 < 256 and foldWorkK(64)=180 < 2^20",
+      "lean": "FSOT.Quantum.Fold.foldWorkK_eight / foldWorkK_sixtyfour",
+      "coq": "fold_work_k_eight / fold_work_k_sixtyfour",
+      "isabelle": "fold_work_k_eight / fold_work_k_sixtyfour",
+      "fstar": "fold_work_k_eight / fold_work_k_sixtyfour",
+      "python": "fold_work_k_int(8)==47 and fold_work_k_int(64)==180"
     }
   ]
 }

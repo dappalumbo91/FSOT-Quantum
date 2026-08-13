@@ -46,6 +46,26 @@
       "statement": "vendor/fsot_compute.py SHA-256 prefix remains D1D38A unless a new pin is announced.",
       "check": "python -m fsot_quantum.crosscheck",
       "kill": "pin prefix changes silently"
+    },
+    {
+      "id": "P-K-CLOSED",
+      "statement": "SEEDS.k matches φ·(γ/e)·√2/ln(π)·99/100 within 1e-15.",
+      "check": "python -m fsot_quantum.hard_questions",
+      "kill": "abs(SEEDS.k - k_closed_form()) > 1e-15"
+    },
+    {
+      "id": "P-K-WORK",
+      "statement": "fold_work_k_int(8)=47 and fold_work_k_int(64)=180 (Lean/Coq/Isabelle/F*/Python).",
+      "check": "python scripts/run_multiprover_verification.py",
+      "kill": "any prover or runtime disagrees"
+    },
+    {
+      "id": "P-ISING-CYCLE-64",
+      "statement": "Ferromagnetic Ising cycle n=64 ground energy from the fold is -64 (enum 2^64 is infeasible).",
+      "check": "python -m fsot_quantum.hard_questions",
+      "kill": "energy != -64"
     }
+  ]
+}
   ]
 }

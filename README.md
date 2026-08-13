@@ -114,6 +114,10 @@ python -m fsot_quantum.stress_next
 python -m fsot_quantum.ask_qc
 # or: python -m fsot_quantum ask
 
+# Hard questions — FSOT math / K-scale, not foreign circuits (sizes 2^n cannot finish)
+python -m fsot_quantum.hard_questions
+# or: python -m fsot_quantum hard
+
 # Multiprover formal stamp (Lean 4 · Coq · Isabelle · F* · Python runtime)
 python scripts\run_multiprover_verification.py
 # or: python -m fsot_quantum stamp
@@ -134,6 +138,7 @@ Field commands (ordinary PC):
 python -m fsot_quantum check      # pin/seeds/D_eff vs Lean clone
 python -m fsot_quantum accuracy   # hired QC/QM jobs
 python -m fsot_quantum ask        # QC question ledger (DJ/BV/Grover/Shor/…)
+python -m fsot_quantum hard       # hard questions via K (not foreign circuits)
 python -m fsot_quantum stamp      # Lean · Coq · Isabelle · F* · Python
 python -m fsot_quantum atlas      # full Lean solved atlas
 python -m fsot_quantum predict    # preregistered predictions (killable)
@@ -167,6 +172,7 @@ python -m fsot_quantum predict    # preregistered predictions (killable)
 | Full Lean atlas (all solved panels) | `results/LEAN_FULL_ATLAS.md` |
 | Cross-check vs Lean | `results/CROSSCHECK.md` |
 | QC question ledger | `results/ASK_QC.md` |
+| Hard questions (K-scale) | `results/HARD_QUESTIONS.md` |
 | Multiprover stamp (Lean/Coq/Isabelle/F*) | `results/MULTIPROVER_STAMP.md` |
 | Preregistered predictions | `predictions/qc_preregistered.json` |
 | Skeptic kit | `results/SKEPTIC_KIT.md` |

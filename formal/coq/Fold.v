@@ -31,3 +31,16 @@ Proof.
   - simpl. lia.
   - apply Nat.pow_lt_mono_r; lia.
 Qed.
+
+(* Universal scale K ≈ 0.420222 — integer micro twin. S = K(T1+T2+T3). *)
+Definition k_micro : nat := 420222.
+Definition fold_work_k (n : nat) : nat := (n * 1000000 + 420221) / k_micro + 27.
+
+Lemma fold_work_k_eight : fold_work_k 8 = 47.
+Proof. vm_compute. reflexivity. Qed.
+
+Lemma fold_work_k_sixtyfour : fold_work_k 64 = 180.
+Proof. vm_compute. reflexivity. Qed.
+
+Lemma fold_work_k_eight_lt : fold_work_k 8 < hilbert_amps 8.
+Proof. vm_compute. apply Nat.ltb_lt. reflexivity. Qed.

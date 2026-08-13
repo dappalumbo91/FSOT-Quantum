@@ -105,6 +105,78 @@ def fold_budget_formal(n: int) -> int:
     return 3 * int(n) * 7 + 27
 
 
+def k_closed_form() -> float:
+    """
+    Universal scaling K (vendor 3.11, pin D1D38A):
+
+        K = φ · (γ / e) · √2 / ln(π) · 99/100
+
+    This is the scale in S = K(T1+T2+T3). Not a fit.
+    """
+    phi = float(SEEDS.phi)
+    gamma = float(SEEDS.gamma)
+    e = float(SEEDS.e)
+    pi = float(SEEDS.pi)
+    return phi * (gamma / e) * math.sqrt(2.0) / math.log(pi) * (99.0 / 100.0)
+
+
+K_MICRO = 420222  # floor(K · 1e6 + 1/2) integer twin for provers
+
+
+def k_matches_pin(tol: float = 1e-15) -> bool:
+    return abs(float(SEEDS.k) - k_closed_form()) <= tol
+
+
+def fold_work_k_int(n: int) -> int:
+    """
+    Integer K-scaling work units (Lean/Coq/Isabelle/F* twin):
+
+        ceil(n / K) + 27  ≈  (n·10^6 + 420221) // 420222 + 27
+
+    Hilbert competing cost is 2^n amplitudes. This is poly in n / K.
+    """
+    n = int(n)
+    return (n * 1_000_000 + 420_221) // K_MICRO + 27
+
+
+def fold_work_via_k(n: int) -> int:
+    """Runtime ceil(n / K) + Metatron 27. Must match fold_work_k_int."""
+    n = int(n)
+    k = float(SEEDS.k)
+    return int(math.ceil(n / k)) + 27
+
+
+def hilbert_statevector_bytes(n: int) -> int:
+    """Complex128 amplitudes: 16 bytes each."""
+    if n >= 63:
+        return -1  # overflow / not a machine size
+    return (1 << int(n)) * 16
+
+
+def k_scaling_law(sizes: Sequence[int] | None = None) -> list[dict[str, Any]]:
+    """
+    Side-by-side: Hilbert 2^n vs K-scaled fold work.
+    n≥32 is already past typical desktop statevector RAM.
+    """
+    if sizes is None:
+        sizes = (8, 16, 20, 28, 32, 40, 48, 64, 80, 128, 256)
+    rows = []
+    omen_ram = 32 * (1 << 30)  # 32 GiB class (Omen 35L typical)
+    for n in sizes:
+        hb = hilbert_statevector_bytes(n)
+        work = fold_work_k_int(n)
+        rows.append({
+            "n": n,
+            "hilbert_amps": None if n >= 63 else (1 << n),
+            "hilbert_bytes": hb,
+            "hilbert_fits_omen_32gib": bool(hb != -1 and hb <= omen_ram),
+            "fold_work_k": work,
+            "fold_budget_formal": fold_budget_formal(n),
+            "K": float(SEEDS.k),
+        })
+    return rows
+
+
 def fold_probe_budget(structure_size: int, depth: int | None = None) -> int:
     """
     How many structure probes a fold path is allowed — poly in structure,

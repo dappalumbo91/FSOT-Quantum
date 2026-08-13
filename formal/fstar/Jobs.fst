@@ -66,3 +66,13 @@ val jobs_surface: unit -> Lemma (
   fold_budget 8 < hilbert_amps_eight
 )
 let jobs_surface () = ()
+
+/// Universal scale K ≈ 0.420222. Work = ceil(n/K)+27.
+let k_micro: nat = 420222
+let fold_work_k (n: nat) : nat = (n * 1000000 + 420221) / k_micro + 27
+val fold_work_k_eight: unit -> Lemma (fold_work_k 8 == 47)
+let fold_work_k_eight () = ()
+val fold_work_k_sixtyfour: unit -> Lemma (fold_work_k 64 == 180)
+let fold_work_k_sixtyfour () = ()
+val fold_work_k_eight_lt: unit -> Lemma (fold_work_k 8 < hilbert_amps_eight)
+let fold_work_k_eight_lt () = ()

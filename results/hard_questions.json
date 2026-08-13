@@ -1,0 +1,353 @@
+{
+  "timestamp": "2026-08-13T01:21:37.430987+00:00",
+  "suite": "hard_questions",
+  "pin": "D1D38A",
+  "thesis": "Answer the hired questions with FSOT math (K-scale). Do not run foreign circuits.",
+  "n": 16,
+  "n_ok": 16,
+  "overall_ok": true,
+  "wall_seconds": 3.6868939000123646,
+  "K": 0.4202216641606967,
+  "k_closed_form": 0.4202216641606968,
+  "questions": [
+    {
+      "id": "H-K-CLOSED",
+      "question": "What is the universal scaling constant K?",
+      "expected": 0.4202216641606967,
+      "answer": 0.4202216641606968,
+      "ok": true,
+      "why_hard": "Not a circuit. Closed form from seeds only: \u03c6\u00b7(\u03b3/e)\u00b7\u221a2/ln(\u03c0)\u00b799/100.",
+      "method": "vendor 3.11 / SEEDS.k",
+      "independent_check": "closed_form vs pin",
+      "notes": "",
+      "extra": {
+        "abs_delta": 1.1102230246251565e-16,
+        "k_micro": 420222
+      }
+    },
+    {
+      "id": "H-K-WORK-8",
+      "question": "What is K-scaled fold work at n=8 vs Hilbert 256?",
+      "expected": 47,
+      "answer": 47,
+      "ok": true,
+      "why_hard": "Integer twin of ceil(n/K)+27. Competing cost is 2^n.",
+      "method": "fold_work_k_int",
+      "independent_check": "integer identity",
+      "notes": ""
+    },
+    {
+      "id": "H-K-WORK-64",
+      "question": "What is K-scaled fold work at n=64 vs 2^64 amplitudes?",
+      "expected": 180,
+      "answer": 180,
+      "ok": true,
+      "why_hard": "2^64 statevector is ~295 exabytes. K-work is 180 units.",
+      "method": "fold_work_k_int",
+      "independent_check": "integer identity",
+      "notes": "",
+      "extra": {
+        "n": 64,
+        "hilbert_amps": null,
+        "hilbert_bytes": -1,
+        "fits_omen_32gib": false,
+        "fold_work_k": 180
+      }
+    },
+    {
+      "id": "H-S-Quantum_Mechanics",
+      "question": "Does S(Quantum_Mechanics) equal K\u00b7(T1+T2+T3) at D_eff=6?",
+      "expected": true,
+      "answer": true,
+      "ok": true,
+      "why_hard": "The theory identity. If this fails, nothing else is FSOT.",
+      "method": "compute_scalar_terms",
+      "independent_check": "algebraic identity",
+      "notes": "",
+      "extra": {
+        "S": 0.9555063001027194,
+        "domain_scalar": 0.9555063001027194,
+        "T1": 1.2738149448128522,
+        "T2": 1.0,
+        "T3": 1.9990920171588208e-17,
+        "K": 0.4202216641606967
+      }
+    },
+    {
+      "id": "H-S-Quantum_Computing",
+      "question": "Does S(Quantum_Computing) equal K\u00b7(T1+T2+T3) at D_eff=11?",
+      "expected": true,
+      "answer": true,
+      "ok": true,
+      "why_hard": "The theory identity. If this fails, nothing else is FSOT.",
+      "method": "compute_scalar_terms",
+      "independent_check": "algebraic identity",
+      "notes": "",
+      "extra": {
+        "S": -0.6278295436788414,
+        "domain_scalar": -0.14767310363368633,
+        "T1": -2.4940437326875977,
+        "T2": 1.0,
+        "T3": 1.3983286148987943e-17,
+        "K": 0.4202216641606967
+      }
+    },
+    {
+      "id": "H-CHEM",
+      "question": "What are the pin chemistry observables (closed form, not FCI)?",
+      "expected": "68/68 inside 0.5%",
+      "answer": "68/68",
+      "ok": true,
+      "why_hard": "FCI / Hilbert chemistry on the same list is the supercomputer job. We evaluate pin formulas.",
+      "method": "chemistry_fold pin families",
+      "independent_check": "tabulated residual \u22640.5%",
+      "notes": ""
+    },
+    {
+      "id": "H-QM",
+      "question": "What are the QM/SM pin constants (\u03b1, Weinberg, \u2026)?",
+      "expected": "14/14 inside 0.5%",
+      "answer": "14/14",
+      "ok": true,
+      "why_hard": "QPUs do not compute \u03b1. Supercomputers do not derive it. Pin closed forms do.",
+      "method": "qm_wave_use pin",
+      "independent_check": "tabulated residual \u22640.5%",
+      "notes": ""
+    },
+    {
+      "id": "H-ISING-CYCLE-48",
+      "question": "What is the ground-state energy of a ferromagnetic Ising cycle on 48 sites?",
+      "expected": -48,
+      "answer": -48,
+      "ok": true,
+      "why_hard": "Full enum is 2^48 assignments. Structure + S-signed fold must land on all-aligned E=-48.",
+      "method": "fsot_local_spins + energy_ising",
+      "independent_check": "structure exact (ferro cycle GS = -n)",
+      "notes": "",
+      "extra": {
+        "n": 48,
+        "hilbert_amps": 281474976710656,
+        "hilbert_bytes": 4503599627370496,
+        "fits_omen_32gib": false,
+        "fold_work_k": 142
+      }
+    },
+    {
+      "id": "H-ISING-CYCLE-64",
+      "question": "What is the ground-state energy of a ferromagnetic Ising cycle on 64 sites?",
+      "expected": -64,
+      "answer": -64,
+      "ok": true,
+      "why_hard": "Full enum is 2^64 assignments. Structure + S-signed fold must land on all-aligned E=-64.",
+      "method": "fsot_local_spins + energy_ising",
+      "independent_check": "structure exact (ferro cycle GS = -n)",
+      "notes": "",
+      "extra": {
+        "n": 64,
+        "hilbert_amps": null,
+        "hilbert_bytes": -1,
+        "fits_omen_32gib": false,
+        "fold_work_k": 180
+      }
+    },
+    {
+      "id": "H-MAXCUT-G1",
+      "question": "What is a MaxCut of official Gset G1 (n=800, published champion 11624)?",
+      "expected": "rel\u22645% of 11624",
+      "answer": "cut=11397 rel=1.952856159669649%",
+      "ok": true,
+      "why_hard": "2^800 assignments. No supercomputer enumerates G1. Published BKS is the check, not a QAOA circuit.",
+      "method": "collapse+consensus 1-flip fold",
+      "independent_check": "published champion 11624",
+      "notes": ""
+    },
+    {
+      "id": "H-MAXCUT-4096",
+      "question": "What is a MaxCut of a 4096-vertex \u03c6-chord cycle (|E|=6144)?",
+      "expected": "ratio\u22651/\u03c6 (0.618034)",
+      "answer": "cut=5231 ratio=0.851400",
+      "ok": true,
+      "why_hard": "2^4096 is not a physical memory. K-work=56.",
+      "method": "\u03c6-starts + collapse 1-flip",
+      "independent_check": "seed floor 1/\u03c6 vs |E| (no published champion)",
+      "notes": "",
+      "extra": {
+        "seconds": 0.08500340000318829,
+        "n": 4096,
+        "n_edges": 6144,
+        "ratio": 0.8513997395833334
+      }
+    },
+    {
+      "id": "H-SEARCH-1e7",
+      "question": "Which index is marked in a 10000000-item oracle field (marked=6374291)?",
+      "expected": 6374291,
+      "answer": 6374291,
+      "ok": true,
+      "why_hard": "Unstructured search of 10^7. Competing quantum pitch is Grover. We collapse the oracle field.",
+      "method": "oracle-field fold collapse",
+      "independent_check": "planted mark recovered",
+      "notes": "",
+      "extra": {
+        "oracle_evals": 10000000,
+        "n_buckets": 3162
+      }
+    },
+    {
+      "id": "H-FACTOR-10403",
+      "question": "What are the prime factors of 10403?",
+      "expected": 10403,
+      "answer": [
+        101,
+        103
+      ],
+      "ok": true,
+      "why_hard": "The hired question is the factorization. Modular order + gcd fold, not a QFT circuit.",
+      "method": "gcd_fold",
+      "independent_check": "product of factors equals N",
+      "notes": ""
+    },
+    {
+      "id": "H-FACTOR-8051",
+      "question": "What are the prime factors of 8051?",
+      "expected": 8051,
+      "answer": [
+        83,
+        97
+      ],
+      "ok": true,
+      "why_hard": "The hired question is the factorization. Modular order + gcd fold, not a QFT circuit.",
+      "method": "gcd_fold",
+      "independent_check": "product of factors equals N",
+      "notes": ""
+    },
+    {
+      "id": "H-FACTOR-1147",
+      "question": "What are the prime factors of 1147?",
+      "expected": 1147,
+      "answer": [
+        31,
+        37
+      ],
+      "ok": true,
+      "why_hard": "The hired question is the factorization. Modular order + gcd fold, not a QFT circuit.",
+      "method": "gcd_fold",
+      "independent_check": "product of factors equals N",
+      "notes": ""
+    },
+    {
+      "id": "H-SCALE-TABLE",
+      "question": "At what n does a 32 GiB Hilbert statevector stop fitting, and what is K-work there?",
+      "expected": "n\u226532 does not fit; K-work stays hundreds",
+      "answer": "first_nofit_n=32 work64=180 work256=637",
+      "ok": true,
+      "why_hard": "This is the scaling law: Hilbert dies exponentially; K-work stays n/K + 27.",
+      "method": "k_scaling_law",
+      "independent_check": "RAM contrast + integer work",
+      "notes": "",
+      "extra": {
+        "rows": [
+          {
+            "n": 8,
+            "hilbert_amps": 256,
+            "hilbert_bytes": 4096,
+            "hilbert_fits_omen_32gib": true,
+            "fold_work_k": 47,
+            "fold_budget_formal": 195,
+            "K": 0.4202216641606967
+          },
+          {
+            "n": 16,
+            "hilbert_amps": 65536,
+            "hilbert_bytes": 1048576,
+            "hilbert_fits_omen_32gib": true,
+            "fold_work_k": 66,
+            "fold_budget_formal": 363,
+            "K": 0.4202216641606967
+          },
+          {
+            "n": 20,
+            "hilbert_amps": 1048576,
+            "hilbert_bytes": 16777216,
+            "hilbert_fits_omen_32gib": true,
+            "fold_work_k": 75,
+            "fold_budget_formal": 447,
+            "K": 0.4202216641606967
+          },
+          {
+            "n": 28,
+            "hilbert_amps": 268435456,
+            "hilbert_bytes": 4294967296,
+            "hilbert_fits_omen_32gib": true,
+            "fold_work_k": 94,
+            "fold_budget_formal": 615,
+            "K": 0.4202216641606967
+          },
+          {
+            "n": 32,
+            "hilbert_amps": 4294967296,
+            "hilbert_bytes": 68719476736,
+            "hilbert_fits_omen_32gib": false,
+            "fold_work_k": 104,
+            "fold_budget_formal": 699,
+            "K": 0.4202216641606967
+          },
+          {
+            "n": 40,
+            "hilbert_amps": 1099511627776,
+            "hilbert_bytes": 17592186044416,
+            "hilbert_fits_omen_32gib": false,
+            "fold_work_k": 123,
+            "fold_budget_formal": 867,
+            "K": 0.4202216641606967
+          },
+          {
+            "n": 48,
+            "hilbert_amps": 281474976710656,
+            "hilbert_bytes": 4503599627370496,
+            "hilbert_fits_omen_32gib": false,
+            "fold_work_k": 142,
+            "fold_budget_formal": 1035,
+            "K": 0.4202216641606967
+          },
+          {
+            "n": 64,
+            "hilbert_amps": null,
+            "hilbert_bytes": -1,
+            "hilbert_fits_omen_32gib": false,
+            "fold_work_k": 180,
+            "fold_budget_formal": 1371,
+            "K": 0.4202216641606967
+          },
+          {
+            "n": 80,
+            "hilbert_amps": null,
+            "hilbert_bytes": -1,
+            "hilbert_fits_omen_32gib": false,
+            "fold_work_k": 218,
+            "fold_budget_formal": 1707,
+            "K": 0.4202216641606967
+          },
+          {
+            "n": 128,
+            "hilbert_amps": null,
+            "hilbert_bytes": -1,
+            "hilbert_fits_omen_32gib": false,
+            "fold_work_k": 332,
+            "fold_budget_formal": 2715,
+            "K": 0.4202216641606967
+          },
+          {
+            "n": 256,
+            "hilbert_amps": null,
+            "hilbert_bytes": -1,
+            "hilbert_fits_omen_32gib": false,
+            "fold_work_k": 637,
+            "fold_budget_formal": 5403,
+            "K": 0.4202216641606967
+          }
+        ]
+      }
+    }
+  ]
+}

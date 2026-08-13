@@ -29,4 +29,19 @@ lemma fold_lt_hilbert_sixteen: "fold_budget 16 < hilbert_amps 16"
 lemma fold_lt_hilbert_thirtytwo: "fold_budget 32 < hilbert_amps 32"
   by (simp add: fold_budget_def hilbert_amps_def)
 
+definition k_micro :: nat where
+  "k_micro = 420222"
+
+definition fold_work_k :: "nat => nat" where
+  "fold_work_k n = (n * 1000000 + 420221) div k_micro + 27"
+
+lemma fold_work_k_eight: "fold_work_k 8 = 47"
+  unfolding fold_work_k_def k_micro_def by eval
+
+lemma fold_work_k_sixtyfour: "fold_work_k 64 = 180"
+  unfolding fold_work_k_def k_micro_def by eval
+
+lemma fold_work_k_eight_lt: "fold_work_k 8 < hilbert_amps 8"
+  unfolding fold_work_k_def k_micro_def hilbert_amps_def by eval
+
 end
