@@ -6,6 +6,7 @@ Field entry: python -m fsot_quantum [cmd]
   ask        run QC question battery (DJ/BV/Grover/Shor/Ising/G1/chem)
   hard       hard questions via FSOT math (K-scale; not foreign circuits)
   fold       domain-fold architecture on GPU (35 pin + Lean atlas)
+  observe    typical questions + how the compute substrate is looked at
   stamp      Lean · Coq · Isabelle · F* · Python multiprover
   atlas      full Lean solved atlas
   expand     Lean chem + extra QM
@@ -47,6 +48,9 @@ def main() -> int:
         return m()
     if c == "fold":
         from fsot_quantum.fold_architecture import main as m
+        return m()
+    if c == "observe":
+        from fsot_quantum.observe_emerge import main as m
         return m()
     if c == "stamp":
         return subprocess.call(

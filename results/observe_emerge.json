@@ -1,0 +1,723 @@
+{
+  "timestamp": "2026-08-13T02:04:54.173084+00:00",
+  "suite": "observe_emerge",
+  "pin": "D1D38A",
+  "device": "cuda",
+  "n": 15,
+  "n_ok": 15,
+  "overall_ok": true,
+  "wall_seconds": 1.7544094000040786,
+  "questions": [
+    {
+      "id": "T-DJ-CONST",
+      "question": "Is f=0 constant?",
+      "route": [
+        "Quantum_Computing"
+      ],
+      "D_eff": [
+        11
+      ],
+      "expected": "constant",
+      "answer": "constant",
+      "ok": true,
+      "notes": ""
+    },
+    {
+      "id": "T-DJ-BAL",
+      "question": "Is parity-mask 101011 balanced?",
+      "route": [
+        "Quantum_Computing"
+      ],
+      "D_eff": [
+        11
+      ],
+      "expected": "balanced",
+      "answer": "balanced",
+      "ok": true,
+      "notes": ""
+    },
+    {
+      "id": "T-SECRET",
+      "question": "What is the secret of f(x)=s\u00b7x for s=101101?",
+      "route": [
+        "Quantum_Computing"
+      ],
+      "D_eff": [
+        11
+      ],
+      "expected": [
+        1,
+        0,
+        1,
+        1,
+        0,
+        1
+      ],
+      "answer": [
+        1,
+        0,
+        1,
+        1,
+        0,
+        1
+      ],
+      "ok": true,
+      "notes": ""
+    },
+    {
+      "id": "T-SEARCH",
+      "question": "Which index is marked in 10000 items?",
+      "route": [
+        "Quantum_Computing"
+      ],
+      "D_eff": [
+        11
+      ],
+      "expected": 4242,
+      "answer": 4242,
+      "ok": true,
+      "notes": ""
+    },
+    {
+      "id": "T-ORDER-7-15",
+      "question": "What is the order of 7 mod 15?",
+      "route": [
+        "Quantum_Computing"
+      ],
+      "D_eff": [
+        11
+      ],
+      "expected": 4,
+      "answer": 4,
+      "ok": true,
+      "notes": ""
+    },
+    {
+      "id": "T-ORDER-5-21",
+      "question": "What is the order of 5 mod 21?",
+      "route": [
+        "Quantum_Computing"
+      ],
+      "D_eff": [
+        11
+      ],
+      "expected": 6,
+      "answer": 6,
+      "ok": true,
+      "notes": ""
+    },
+    {
+      "id": "T-ORDER-2-33",
+      "question": "What is the order of 2 mod 33?",
+      "route": [
+        "Quantum_Computing"
+      ],
+      "D_eff": [
+        11
+      ],
+      "expected": 10,
+      "answer": 10,
+      "ok": true,
+      "notes": ""
+    },
+    {
+      "id": "T-FACTOR-15",
+      "question": "What are the factors of 15?",
+      "route": [
+        "Quantum_Computing"
+      ],
+      "D_eff": [
+        11
+      ],
+      "expected": 15,
+      "answer": [
+        3,
+        5
+      ],
+      "ok": true,
+      "notes": ""
+    },
+    {
+      "id": "T-FACTOR-21",
+      "question": "What are the factors of 21?",
+      "route": [
+        "Quantum_Computing"
+      ],
+      "D_eff": [
+        11
+      ],
+      "expected": 21,
+      "answer": [
+        3,
+        7
+      ],
+      "ok": true,
+      "notes": ""
+    },
+    {
+      "id": "T-FACTOR-33",
+      "question": "What are the factors of 33?",
+      "route": [
+        "Quantum_Computing"
+      ],
+      "D_eff": [
+        11
+      ],
+      "expected": 33,
+      "answer": [
+        3,
+        11
+      ],
+      "ok": true,
+      "notes": ""
+    },
+    {
+      "id": "T-FACTOR-10403",
+      "question": "What are the factors of 10403?",
+      "route": [
+        "Quantum_Computing"
+      ],
+      "D_eff": [
+        11
+      ],
+      "expected": 10403,
+      "answer": [
+        101,
+        103
+      ],
+      "ok": true,
+      "notes": ""
+    },
+    {
+      "id": "T-MAXCUT-G1",
+      "question": "What is a MaxCut of Gset G1 (n=800, published 11624)?",
+      "route": [
+        "Condensed_Matter",
+        "Materials_Science"
+      ],
+      "D_eff": [
+        14,
+        10
+      ],
+      "expected": "rel\u22645%",
+      "answer": "cut=11397 rel=1.952856159669649%",
+      "ok": true,
+      "notes": ""
+    },
+    {
+      "id": "T-CHEM",
+      "question": "What are the chemistry pin observables?",
+      "route": [
+        "Chemistry",
+        "Molecular_Chemistry",
+        "Physical_Chemistry"
+      ],
+      "D_eff": [
+        8,
+        9,
+        8
+      ],
+      "expected": "68/68 @0.5%",
+      "answer": "68/68",
+      "ok": true,
+      "notes": ""
+    },
+    {
+      "id": "T-QM",
+      "question": "What are the QM/SM pin constants?",
+      "route": [
+        "Quantum_Mechanics",
+        "Particle_Physics",
+        "High_Energy_Physics"
+      ],
+      "D_eff": [
+        6,
+        5,
+        7
+      ],
+      "expected": "14/14 @0.5%",
+      "answer": "14/14",
+      "ok": true,
+      "notes": ""
+    },
+    {
+      "id": "T-CHSH",
+      "question": "What is the Tsirelson bound?",
+      "route": [
+        "Quantum_Mechanics",
+        "Atomic_Physics"
+      ],
+      "D_eff": [
+        6,
+        7
+      ],
+      "expected": 2.8284271247461903,
+      "answer": 2.8284271247461903,
+      "ok": true,
+      "notes": "2\u221a2 from seeds"
+    }
+  ],
+  "observation": {
+    "device": "cuda",
+    "seconds": 0.09671160001016688,
+    "Theta": 0.9174663774653723,
+    "poof": 0.1534822148944508,
+    "suction": 0.14703398542810284,
+    "compress_fraction": 0.510728588773961,
+    "decompress_fraction": 0.4892714112260389,
+    "brute_look_at_QC": {
+      "S_unobserved": -0.14767310363368633,
+      "S_forced_look": 0.3360149934618379,
+      "sign_flips": true,
+      "note": "Forcing the look onto the compute substrate flips it to emergence. That is no longer the compute identity."
+    },
+    "lawful_look_same_D": {
+      "domain": "Quantum_Optics",
+      "D_eff": 11,
+      "S_observed": 0.40817053817150184,
+      "S_if_darkened": -0.29404723236734975,
+      "note": "Same D_eff as QC. The look is already lawful. Darkening it makes it damp like QC."
+    },
+    "measurement_law": {
+      "domain": "Quantum_Mechanics",
+      "D_eff": 6,
+      "S_observed": 0.9555063001027194,
+      "S_if_darkened": -0.6560210328361333,
+      "note": "Darkening QM kills emergence. Discovery has to look here, not at QC."
+    },
+    "strings": {
+      "QC_dark_T1": -1.3514171596284354,
+      "QC_look_T1": -0.20038631484419947,
+      "QO_look_T1": -0.028678021665694935,
+      "look_is_T1": true,
+      "strum_is_T3": true
+    },
+    "natural_path": [
+      "Quantum_Computing",
+      "Quantum_Optics",
+      "Quantum_Mechanics"
+    ],
+    "kappa_QC_QO": 0.009685830349142933,
+    "kappa_QO_QM": 0.05222612024241488,
+    "kappa_QC_QM": 0.018895026822594835,
+    "strongest_QC_to_QM_bridges": [
+      {
+        "to": "Quantum_Mechanics",
+        "D_eff": 6,
+        "observed": true,
+        "kappa_from_QC": 0.018895026822594835,
+        "kappa_to_QM": 0.14671040338707247,
+        "S": 0.9555063001027194
+      },
+      {
+        "to": "Particle_Physics",
+        "D_eff": 5,
+        "observed": true,
+        "kappa_from_QC": 0.018188047842796897,
+        "kappa_to_QM": 0.14031580306427646,
+        "S": 0.9504134401245242
+      },
+      {
+        "to": "Psychology",
+        "D_eff": 16,
+        "observed": true,
+        "kappa_from_QC": 0.020767695348975188,
+        "kappa_to_QM": 0.11517909639378703,
+        "S": 1.0502056403979545
+      },
+      {
+        "to": "High_Energy_Physics",
+        "D_eff": 7,
+        "observed": true,
+        "kappa_from_QC": 0.01813010632609038,
+        "kappa_to_QM": 0.13084500658901882,
+        "S": 0.886264056646702
+      },
+      {
+        "to": "Nuclear_Physics",
+        "D_eff": 15,
+        "observed": true,
+        "kappa_from_QC": 0.018847021781801625,
+        "kappa_to_QM": 0.10401451915619224,
+        "S": 0.9213094330291351
+      },
+      {
+        "to": "Atomic_Physics",
+        "D_eff": 7,
+        "observed": true,
+        "kappa_from_QC": 0.015052584864878956,
+        "kappa_to_QM": 0.10863452924115152,
+        "S": 0.7358238658627416
+      },
+      {
+        "to": "Thermodynamics",
+        "D_eff": 15,
+        "observed": true,
+        "kappa_from_QC": 0.016098962022813395,
+        "kappa_to_QM": 0.08884829725901995,
+        "S": 0.7869745016115725
+      },
+      {
+        "to": "Astronomy",
+        "D_eff": 20,
+        "observed": true,
+        "kappa_from_QC": 0.015676706718998745,
+        "kappa_to_QM": 0.08843034024679233,
+        "S": 0.8984595681660624
+      }
+    ],
+    "ok": true
+  },
+  "domain_look_table": [
+    {
+      "domain": "Acoustics",
+      "D_eff": 10,
+      "pin_observed": true,
+      "S_pin": 0.31159079708634146,
+      "S_forced_look": 0.31159079708634146,
+      "S_forced_dark": 0.15222836170012785,
+      "sign_flip_if_looked": false,
+      "sign_flip_if_darkened": false
+    },
+    {
+      "domain": "Astronomy",
+      "D_eff": 20,
+      "pin_observed": true,
+      "S_pin": 0.8984595681660624,
+      "S_forced_look": 0.8984595681660624,
+      "S_forced_dark": -0.5413229366983381,
+      "sign_flip_if_looked": false,
+      "sign_flip_if_darkened": true
+    },
+    {
+      "domain": "Astrophysics",
+      "D_eff": 24,
+      "pin_observed": true,
+      "S_pin": 0.882410798418129,
+      "S_forced_look": 0.882410798418129,
+      "S_forced_dark": -0.5090552979931842,
+      "sign_flip_if_looked": false,
+      "sign_flip_if_darkened": true
+    },
+    {
+      "domain": "Atmospheric_Physics",
+      "D_eff": 17,
+      "pin_observed": false,
+      "S_pin": -0.47643190542960023,
+      "S_forced_look": 0.6400205633463272,
+      "S_forced_dark": -0.47643190542960023,
+      "sign_flip_if_looked": true,
+      "sign_flip_if_darkened": false
+    },
+    {
+      "domain": "Atomic_Physics",
+      "D_eff": 7,
+      "pin_observed": true,
+      "S_pin": 0.7358238658627416,
+      "S_forced_look": 0.7358238658627416,
+      "S_forced_dark": -0.5994642842555603,
+      "sign_flip_if_looked": false,
+      "sign_flip_if_darkened": true
+    },
+    {
+      "domain": "Biochemistry",
+      "D_eff": 13,
+      "pin_observed": true,
+      "S_pin": 0.3062212293865662,
+      "S_forced_look": 0.3062212293865662,
+      "S_forced_dark": 0.08708591709380606,
+      "sign_flip_if_looked": false,
+      "sign_flip_if_darkened": false
+    },
+    {
+      "domain": "Biology",
+      "D_eff": 12,
+      "pin_observed": false,
+      "S_pin": 0.4447250077038459,
+      "S_forced_look": 0.4366164719697689,
+      "S_forced_dark": 0.4447250077038459,
+      "sign_flip_if_looked": false,
+      "sign_flip_if_darkened": false
+    },
+    {
+      "domain": "Chemistry",
+      "D_eff": 8,
+      "pin_observed": true,
+      "S_pin": 0.4078840642307453,
+      "S_forced_look": 0.4078840642307453,
+      "S_forced_dark": -0.3110265109618702,
+      "sign_flip_if_looked": false,
+      "sign_flip_if_darkened": true
+    },
+    {
+      "domain": "Condensed_Matter",
+      "D_eff": 14,
+      "pin_observed": true,
+      "S_pin": 0.33840599557977497,
+      "S_forced_look": 0.33840599557977497,
+      "S_forced_dark": -0.13154804392888367,
+      "sign_flip_if_looked": false,
+      "sign_flip_if_darkened": true
+    },
+    {
+      "domain": "Cosmology",
+      "D_eff": 25,
+      "pin_observed": false,
+      "S_pin": -0.5024559462100433,
+      "S_forced_look": 0.8791285168040014,
+      "S_forced_dark": -0.5024559462100433,
+      "sign_flip_if_looked": true,
+      "sign_flip_if_darkened": false
+    },
+    {
+      "domain": "Ecology",
+      "D_eff": 15,
+      "pin_observed": false,
+      "S_pin": 0.3003170815488648,
+      "S_forced_look": 0.3568587495735666,
+      "S_forced_dark": 0.3003170815488648,
+      "sign_flip_if_looked": false,
+      "sign_flip_if_darkened": false
+    },
+    {
+      "domain": "Economics",
+      "D_eff": 20,
+      "pin_observed": true,
+      "S_pin": 0.6460045206857497,
+      "S_forced_look": 0.6460045206857497,
+      "S_forced_dark": 0.19913361846288266,
+      "sign_flip_if_looked": false,
+      "sign_flip_if_darkened": false
+    },
+    {
+      "domain": "Electromagnetism",
+      "D_eff": 9,
+      "pin_observed": true,
+      "S_pin": 0.5188655207983146,
+      "S_forced_look": 0.5188655207983146,
+      "S_forced_dark": -0.4397699000691044,
+      "sign_flip_if_looked": false,
+      "sign_flip_if_darkened": true
+    },
+    {
+      "domain": "Fluid_Dynamics",
+      "D_eff": 15,
+      "pin_observed": false,
+      "S_pin": -0.5627338062568507,
+      "S_forced_look": 0.7869745016115726,
+      "S_forced_dark": -0.5627338062568507,
+      "sign_flip_if_looked": true,
+      "sign_flip_if_darkened": false
+    },
+    {
+      "domain": "Geophysics",
+      "D_eff": 19,
+      "pin_observed": false,
+      "S_pin": -0.5490942927204094,
+      "S_forced_look": 0.9023247627830928,
+      "S_forced_dark": -0.5490942927204094,
+      "sign_flip_if_looked": true,
+      "sign_flip_if_darkened": false
+    },
+    {
+      "domain": "High_Energy_Physics",
+      "D_eff": 7,
+      "pin_observed": true,
+      "S_pin": 0.886264056646702,
+      "S_forced_look": 0.886264056646702,
+      "S_forced_dark": -0.6492153713016101,
+      "sign_flip_if_looked": false,
+      "sign_flip_if_darkened": true
+    },
+    {
+      "domain": "Materials_Science",
+      "D_eff": 10,
+      "pin_observed": true,
+      "S_pin": 0.33525988073638363,
+      "S_forced_look": 0.33525988073638363,
+      "S_forced_dark": -0.1527656285170651,
+      "sign_flip_if_looked": false,
+      "sign_flip_if_darkened": true
+    },
+    {
+      "domain": "Meteorology",
+      "D_eff": 16,
+      "pin_observed": false,
+      "S_pin": -0.48499702084688,
+      "S_forced_look": 0.6421201511960428,
+      "S_forced_dark": -0.48499702084688,
+      "sign_flip_if_looked": true,
+      "sign_flip_if_darkened": false
+    },
+    {
+      "domain": "Molecular_Chemistry",
+      "D_eff": 9,
+      "pin_observed": true,
+      "S_pin": 0.3345733830778105,
+      "S_forced_look": 0.3345733830778105,
+      "S_forced_dark": -0.1573954093309986,
+      "sign_flip_if_looked": false,
+      "sign_flip_if_darkened": true
+    },
+    {
+      "domain": "Neuroscience",
+      "D_eff": 14,
+      "pin_observed": true,
+      "S_pin": 0.514361962908362,
+      "S_forced_look": 0.514361962908362,
+      "S_forced_dark": -0.40050722394921245,
+      "sign_flip_if_looked": false,
+      "sign_flip_if_darkened": true
+    },
+    {
+      "domain": "Nuclear_Physics",
+      "D_eff": 15,
+      "pin_observed": true,
+      "S_pin": 0.9213094330291351,
+      "S_forced_look": 0.9213094330291351,
+      "S_forced_dark": -0.5872648497199366,
+      "sign_flip_if_looked": false,
+      "sign_flip_if_darkened": true
+    },
+    {
+      "domain": "Oceanography",
+      "D_eff": 17,
+      "pin_observed": false,
+      "S_pin": -0.37715907584612013,
+      "S_forced_look": 0.5116838536453973,
+      "S_forced_dark": -0.37715907584612013,
+      "sign_flip_if_looked": true,
+      "sign_flip_if_darkened": false
+    },
+    {
+      "domain": "Optics",
+      "D_eff": 10,
+      "pin_observed": true,
+      "S_pin": 0.4080624712153454,
+      "S_forced_look": 0.4080624712153454,
+      "S_forced_dark": -0.30045234883482475,
+      "sign_flip_if_looked": false,
+      "sign_flip_if_darkened": true
+    },
+    {
+      "domain": "Particle_Astrophysics",
+      "D_eff": 24,
+      "pin_observed": false,
+      "S_pin": -0.42441172002888605,
+      "S_forced_look": 0.6272687271028895,
+      "S_forced_dark": -0.42441172002888605,
+      "sign_flip_if_looked": true,
+      "sign_flip_if_darkened": false
+    },
+    {
+      "domain": "Particle_Physics",
+      "D_eff": 5,
+      "pin_observed": true,
+      "S_pin": 0.9504134401245242,
+      "S_forced_look": 0.9504134401245242,
+      "S_forced_dark": -0.6457813341967092,
+      "sign_flip_if_looked": false,
+      "sign_flip_if_darkened": true
+    },
+    {
+      "domain": "Physical_Chemistry",
+      "D_eff": 8,
+      "pin_observed": true,
+      "S_pin": 0.33401327040170903,
+      "S_forced_look": 0.33401327040170903,
+      "S_forced_dark": -0.16117284234780616,
+      "sign_flip_if_looked": false,
+      "sign_flip_if_darkened": true
+    },
+    {
+      "domain": "Planetary_Science",
+      "D_eff": 21,
+      "pin_observed": true,
+      "S_pin": 0.7671791385407585,
+      "S_forced_look": 0.7671791385407585,
+      "S_forced_dark": -0.5096791099262068,
+      "sign_flip_if_looked": false,
+      "sign_flip_if_darkened": true
+    },
+    {
+      "domain": "Psychology",
+      "D_eff": 16,
+      "pin_observed": true,
+      "S_pin": 1.0502056403979545,
+      "S_forced_look": 1.0502056403979545,
+      "S_forced_dark": -0.5144039645136882,
+      "sign_flip_if_looked": false,
+      "sign_flip_if_darkened": true
+    },
+    {
+      "domain": "Quantum_Computing",
+      "D_eff": 11,
+      "pin_observed": false,
+      "S_pin": -0.14767310363368633,
+      "S_forced_look": 0.3360149934618379,
+      "S_forced_dark": -0.14767310363368633,
+      "sign_flip_if_looked": true,
+      "sign_flip_if_darkened": false
+    },
+    {
+      "domain": "Quantum_Gravity",
+      "D_eff": 22,
+      "pin_observed": false,
+      "S_pin": -0.5255977531899868,
+      "S_forced_look": 0.8906384241500543,
+      "S_forced_dark": -0.5255977531899868,
+      "sign_flip_if_looked": true,
+      "sign_flip_if_darkened": false
+    },
+    {
+      "domain": "Quantum_Mechanics",
+      "D_eff": 6,
+      "pin_observed": true,
+      "S_pin": 0.9555063001027194,
+      "S_forced_look": 0.9555063001027194,
+      "S_forced_dark": -0.6560210328361333,
+      "sign_flip_if_looked": false,
+      "sign_flip_if_darkened": true
+    },
+    {
+      "domain": "Quantum_Optics",
+      "D_eff": 11,
+      "pin_observed": true,
+      "S_pin": 0.40817053817150184,
+      "S_forced_look": 0.40817053817150184,
+      "S_forced_dark": -0.29404723236734975,
+      "sign_flip_if_looked": false,
+      "sign_flip_if_darkened": true
+    },
+    {
+      "domain": "Seismology",
+      "D_eff": 18,
+      "pin_observed": false,
+      "S_pin": -0.4459015721103036,
+      "S_forced_look": 1.052290410477736,
+      "S_forced_dark": -0.4459015721103036,
+      "sign_flip_if_looked": true,
+      "sign_flip_if_darkened": false
+    },
+    {
+      "domain": "Sociology",
+      "D_eff": 18,
+      "pin_observed": true,
+      "S_pin": 0.6501466524159137,
+      "S_forced_look": 0.6501466524159137,
+      "S_forced_dark": 0.19507761605712318,
+      "sign_flip_if_looked": false,
+      "sign_flip_if_darkened": false
+    },
+    {
+      "domain": "Thermodynamics",
+      "D_eff": 15,
+      "pin_observed": true,
+      "S_pin": 0.7869745016115726,
+      "S_forced_look": 0.7869745016115726,
+      "S_forced_dark": -0.5627338062568507,
+      "sign_flip_if_looked": false,
+      "sign_flip_if_darkened": true
+    }
+  ]
+}

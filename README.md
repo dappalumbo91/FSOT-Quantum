@@ -144,6 +144,7 @@ python -m fsot_quantum accuracy   # hired QC/QM jobs
 python -m fsot_quantum ask        # QC question ledger (DJ/BV/Grover/Shor/…)
 python -m fsot_quantum hard       # hard questions via K (not foreign circuits)
 python -m fsot_quantum fold       # 35 pin + Lean atlas folds on GPU
+python -m fsot_quantum observe    # typical questions + lawful look path
 python -m fsot_quantum stamp      # Lean · Coq · Isabelle · F* · Python
 python -m fsot_quantum atlas      # full Lean solved atlas
 python -m fsot_quantum predict    # preregistered predictions (killable)
@@ -179,6 +180,7 @@ python -m fsot_quantum predict    # preregistered predictions (killable)
 | QC question ledger | `results/ASK_QC.md` |
 | Hard questions (K-scale) | `results/HARD_QUESTIONS.md` |
 | Fold architecture (35 pin + atlas GPU) | `results/FOLD_ARCHITECTURE.md` |
+| Observe / emerge (typical Q + look path) | `results/OBSERVE_EMERGE.md` |
 | Multiprover stamp (Lean/Coq/Isabelle/F*) | `results/MULTIPROVER_STAMP.md` |
 | Preregistered predictions | `predictions/qc_preregistered.json` |
 | Skeptic kit | `results/SKEPTIC_KIT.md` |
