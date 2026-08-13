@@ -8,6 +8,7 @@ Field entry: python -m fsot_quantum [cmd]
   fold       domain-fold architecture on GPU (35 pin + Lean atlas)
   observe    typical questions + how the compute substrate is looked at
   mind       query: how genuine intelligence emerges (not an LLM)
+  forward    architecture + known-answer checks + questions people want QC for
   stamp      Lean · Coq · Isabelle · F* · Python multiprover
   atlas      full Lean solved atlas
   expand     Lean chem + extra QM
@@ -55,6 +56,9 @@ def main() -> int:
         return m()
     if c == "mind":
         from fsot_quantum.emerge_mind import main as m
+        return m()
+    if c == "forward":
+        from fsot_quantum.forward_ask import main as m
         return m()
     if c == "stamp":
         return subprocess.call(

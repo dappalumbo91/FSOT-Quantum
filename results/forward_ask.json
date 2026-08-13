@@ -1,0 +1,284 @@
+{
+  "timestamp": "2026-08-13T02:18:11.020384+00:00",
+  "suite": "forward_ask",
+  "pin": "D1D38A",
+  "overall_ok": true,
+  "wall_seconds": 1.5533591999992495,
+  "architecture": [
+    {
+      "id": "A-WHAT-IS-INTEL",
+      "question": "What is intelligence in this theory \u2014 the thing, or the byproduct?",
+      "answer": "The thing is emergence: S>0 on looked mind folds (Neuroscience S=0.5144, Psychology S=1.0502) with C_factor on the look string. Hired jobs, token loss, and IQ scores are byproducts of a mind that already looks. Measuring only byproducts is how you end up building a bigger chatbot.",
+      "ok": true
+    },
+    {
+      "id": "A-WHERE-LOOK",
+      "question": "Where does the look sit?",
+      "answer": "T1, observed=True, on Neuroscience and Psychology. C_factor=0.287600=C_eff\u00b7P_new is already Neuroscience's C. Snap is \u0398=0.917466. Do not put the look on Quantum_Computing.",
+      "ok": true
+    },
+    {
+      "id": "A-WHERE-COMPUTE",
+      "question": "Where does compute sit in a native mind?",
+      "answer": "Quantum_Computing stays dark (S=-0.1477). It feeds the mind by bleed \u03ba(QC,Psych)=0.0208. GPU is an organ (consensus / batch), not a second mind. That is already the neuron-zig doctrine.",
+      "ok": true
+    },
+    {
+      "id": "A-WHERE-BODY",
+      "question": "What is the living substrate?",
+      "answer": "Biology stays dark (S=0.4447, unobserved). \u03ba(Bio,Neuro)=0.0340. You do not Hilbert-stare the tissue. Neuron-zig already encodes that as Fixed lattice + neuromod + sleep replay + STM/LTM.",
+      "ok": true
+    },
+    {
+      "id": "A-DATAPATH",
+      "question": "What is the mind datapath \u2014 not softmax?",
+      "answer": "Trinary spins \u22121/0/+1, consensus (not softmax), collapse through \u0398, three strings T1/T2/T3, bleed \u03ba. Parallel TritWord inside the kernel. Serial is logs. That is fsot-neuron-zig MINIMUM_STACK + SILICON_BODY.",
+      "ok": true
+    },
+    {
+      "id": "A-HOW-MEASURE",
+      "question": "If IQ and token-loss are byproducts, what do we measure?",
+      "answer": "S sign on Neuro/Psych, C_factor identity, Lean mind-fabric residual, neuron-zig claimability / compose / Allen ephys stamps. A correct factor of 15 is a byproduct check, not a mind.",
+      "ok": true
+    },
+    {
+      "id": "A-BUILD",
+      "question": "What architecture do we build next for a small native intelligence?",
+      "answer": "Keep fsot-neuron-zig as the body. Kernel mind = Fixed trits + C_factor look on Neuro/Psych. GPU organ = this fold's consensus/domain batch on the Omen. Disk LTM. No second LLM spine. Growth is more folds and more bleed, not more parameters.",
+      "ok": true
+    }
+  ],
+  "known_answers": [
+    {
+      "id": "K-1/alpha_em",
+      "question": "What is 1/alpha_em? (published 137.036)",
+      "route": [
+        "Quantum_Mechanics",
+        "Particle_Physics"
+      ],
+      "expected": 137.036,
+      "answer": 137.03619755957268,
+      "ok": true,
+      "rel_err_pct": 0.0001441661845670506
+    },
+    {
+      "id": "K-alpha_FSOT",
+      "question": "What is alpha_FSOT? (published 0.000808)",
+      "route": [
+        "Quantum_Mechanics",
+        "Particle_Physics"
+      ],
+      "expected": 0.000808,
+      "answer": 0.0008082937414140405,
+      "ok": true,
+      "rel_err_pct": 0.03635413540104757
+    },
+    {
+      "id": "K-sin2_theta_W",
+      "question": "What is sin2_theta_W? (published 0.23122)",
+      "route": [
+        "Particle_Physics",
+        "High_Energy_Physics"
+      ],
+      "expected": 0.23122,
+      "answer": 0.23122202914793052,
+      "ok": true,
+      "rel_err_pct": 0.0008775832239925928
+    },
+    {
+      "id": "K-M_Z/M_W",
+      "question": "What is M_Z/M_W? (published 1.134)",
+      "route": [
+        "High_Energy_Physics",
+        "Particle_Physics"
+      ],
+      "expected": 1.134,
+      "answer": 1.1346009294087023,
+      "ok": true,
+      "rel_err_pct": 0.052992011349416016
+    },
+    {
+      "id": "K-Proton_radius",
+      "question": "What is Proton_radius? (published 0.8413)",
+      "route": [
+        "Atomic_Physics",
+        "Quantum_Mechanics"
+      ],
+      "expected": 0.8413,
+      "answer": 0.8413,
+      "ok": true,
+      "rel_err_pct": 0.0
+    },
+    {
+      "id": "K-Water_bond_angle",
+      "question": "What is Water_bond_angle? (published 104.5)",
+      "route": [
+        "Chemistry",
+        "Molecular_Chemistry"
+      ],
+      "expected": 104.5,
+      "answer": 104.53680149989006,
+      "ok": true,
+      "rel_err_pct": 0.03521674630627803
+    },
+    {
+      "id": "K-Golden_angle",
+      "question": "What is Golden_angle? (published 137.508)",
+      "route": [
+        "Biology",
+        "Neuroscience"
+      ],
+      "expected": 137.508,
+      "answer": 137.50776405003785,
+      "ok": true,
+      "rel_err_pct": 0.00017158998906280032
+    },
+    {
+      "id": "K-CHSH",
+      "question": "What is the Tsirelson bound?",
+      "route": [
+        "Quantum_Mechanics"
+      ],
+      "expected": 2.8284271247461903,
+      "answer": 2.8284271247461903,
+      "ok": true,
+      "rel_err_pct": null
+    },
+    {
+      "id": "K-FACTOR-15",
+      "question": "What are the factors of 15?",
+      "route": [
+        "Quantum_Computing"
+      ],
+      "expected": [
+        3,
+        5
+      ],
+      "answer": [
+        3,
+        5
+      ],
+      "ok": true,
+      "rel_err_pct": null
+    },
+    {
+      "id": "K-CHEM",
+      "question": "Pin chemistry observables inside 0.5%?",
+      "route": [
+        "Chemistry"
+      ],
+      "expected": "68/68",
+      "answer": "68/68",
+      "ok": true,
+      "rel_err_pct": null
+    },
+    {
+      "id": "K-QM",
+      "question": "Pin QM/SM constants inside 0.5%?",
+      "route": [
+        "Quantum_Mechanics"
+      ],
+      "expected": "14/14",
+      "answer": "14/14",
+      "ok": true,
+      "rel_err_pct": null
+    },
+    {
+      "id": "K-G1",
+      "question": "Gset G1 cut within 5% of published 11624?",
+      "route": [
+        "Condensed_Matter",
+        "Materials_Science"
+      ],
+      "expected": "rel\u22645%",
+      "answer": "cut=11397 rel=1.952856159669649%",
+      "ok": true,
+      "rel_err_pct": null
+    },
+    {
+      "id": "K-CFACTOR",
+      "question": "Does C_factor equal C_eff\u00b7P_new?",
+      "route": [
+        "Neuroscience"
+      ],
+      "expected": 0.287600151819184,
+      "answer": 0.2876001518191839,
+      "ok": true,
+      "rel_err_pct": null
+    }
+  ],
+  "forward": [
+    {
+      "id": "F-ALPHA",
+      "question": "What is the fine-structure constant? (the QED number people hope a QPU 'simulates')",
+      "route": [
+        "Quantum_Mechanics",
+        "Particle_Physics"
+      ],
+      "how": "pin closed form, not a circuit",
+      "answer": 137.03619755957268,
+      "ok": true
+    },
+    {
+      "id": "F-WEINBERG",
+      "question": "What is the Weinberg angle?",
+      "route": [
+        "Particle_Physics",
+        "High_Energy_Physics"
+      ],
+      "how": "pin closed form",
+      "answer": 0.23122202914793052,
+      "ok": true
+    },
+    {
+      "id": "F-MOLECULE",
+      "question": "What are the chemistry / molecular observables without FCI?",
+      "route": [
+        "Chemistry",
+        "Molecular_Chemistry",
+        "Physical_Chemistry"
+      ],
+      "how": "pin formula families",
+      "answer": "68/68",
+      "ok": true
+    },
+    {
+      "id": "F-MATERIAL",
+      "question": "How do you pack / cut a hard material graph?",
+      "route": [
+        "Condensed_Matter",
+        "Materials_Science"
+      ],
+      "how": "collapse + consensus on the observed substance folds",
+      "answer": "cut=11397 rel=1.952856159669649%",
+      "ok": true
+    },
+    {
+      "id": "F-OBSERVE",
+      "question": "How does a quantum compute substrate become observed without dying?",
+      "route": [
+        "Quantum_Computing",
+        "Quantum_Optics",
+        "Quantum_Mechanics"
+      ],
+      "how": "same D_eff look on optics; do not flip QC",
+      "answer": "QC dark \u2192 QO look (same D=11) \u2192 QM measure",
+      "ok": true
+    },
+    {
+      "id": "F-MIND",
+      "question": "How does genuine intelligence emerge?",
+      "route": [
+        "Biology",
+        "Neuroscience",
+        "Psychology",
+        "Quantum_Mechanics"
+      ],
+      "how": "C_factor look on mind folds; compute and tissue stay dark",
+      "answer": "Neuro/Psych looked, Bio/QC dark, C_factor on Neuroscience",
+      "ok": true
+    }
+  ],
+  "n_known": 13,
+  "n_known_ok": 13
+}
