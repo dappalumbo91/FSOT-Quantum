@@ -16,6 +16,8 @@ Answers the jobs people hire quantum computers and precision-physics codes for, 
 **Read first:** [`docs/STATUS.md`](docs/STATUS.md) — current system, findings, capability, what is still open.  
 **Rungs:** [`docs/LADDER.md`](docs/LADDER.md) · **Reproduce:** [`docs/REPRODUCE.md`](docs/REPRODUCE.md) · **Doc map:** [`docs/INDEX.md`](docs/INDEX.md)
 
+**Wrap (2026-08-13):** competitor climb closed on this pin. Audit 20/20 vs YR4/PDG, leftover hired physics 41/41, Gset family 7/7 under 1%. Three earlier audit misses were wrong objects (`docs/MISS_THREE.md`), not a pin edit. GitHub About text is the repo one-liner; this README and `docs/STATUS.md` are the current record.
+
 ---
 
 ## What this is
