@@ -151,6 +151,7 @@ python -m fsot_quantum observe    # typical questions + lawful look path
 python -m fsot_quantum mind       # how genuine intelligence emerges (not an LLM)
 python -m fsot_quantum forward    # mind architecture + known answers + real QC questions
 python -m fsot_quantum harder     # harder QC-for: CKM, Ising, nuclear, G14/G22, Lean fabric
+python -m fsot_quantum qi         # physics + QI: 3D Ising/XY/Heisenberg, g-2, Lean fabric
 python -m fsot_quantum stamp      # Lean · Coq · Isabelle · F* · Python
 python -m fsot_quantum atlas      # full Lean solved atlas
 python -m fsot_quantum predict    # preregistered predictions (killable)
@@ -190,6 +191,7 @@ python -m fsot_quantum predict    # preregistered predictions (killable)
 | Mind emergence (C_factor, not LLM) | `results/EMERGE_MIND.md` |
 | Forward questions (arch + known + QC-for) | `results/FORWARD_ASK.md` |
 | Harder QC-for (CKM / Ising / Gset / fabric) | `results/HARDER_QC.md` |
+| Physics + QI rung | `results/PHYSICS_QI.md` |
 | Ladder (hits + open residuals) | `docs/LADDER.md` |
 | Gset MaxCut diagnosis | `docs/GSET_DIAGNOSE.md` |
 | Reproduce | `docs/REPRODUCE.md` |

@@ -18,7 +18,12 @@ def _rel(c: float, m: float) -> float | None:
     return abs(c - m) / abs(m) * 100
 
 
-def replay_files(files: tuple[str, ...], *, cap_per_file: int = 200) -> dict[str, Any]:
+def replay_files(
+    files: tuple[str, ...],
+    *,
+    cap_per_file: int = 200,
+    return_all: bool = False,
+) -> dict[str, Any]:
     if not LEAN_DATA.is_dir():
         return {
             "ok": False,
@@ -101,6 +106,7 @@ def replay_files(files: tuple[str, ...], *, cap_per_file: int = 200) -> dict[str
         "frac_band_5": n5 / n if n else 0.0,
         "overall_ok": n > 0 and n5 == n,
         "worst": sorted(live, key=lambda r: -float(r.get("rel_err_pct") or 0))[:8],
+        "instances": live if return_all else live[:20],
         "instances_head": live[:20],
-        "n_instances_omitted": max(0, n - 20),
+        "n_instances_omitted": 0 if return_all else max(0, n - 20),
     }

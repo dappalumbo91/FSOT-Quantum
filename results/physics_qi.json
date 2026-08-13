@@ -1,0 +1,363 @@
+{
+  "timestamp": "2026-08-13T02:56:05.089276+00:00",
+  "suite": "physics_qi",
+  "pin": "D1D38A",
+  "overall_ok": true,
+  "wall_seconds": 0.028581299993675202,
+  "S_QM": 0.9555063001027194,
+  "S_QC": -0.14767310363368633,
+  "waves": {
+    "n": 16,
+    "n_band5": 16,
+    "n_green_0_5": 16,
+    "ok": true,
+    "questions": [
+      {
+        "id": "Q-Hashing_bound",
+        "question": "What is Hashing_bound?",
+        "route": [
+          "Quantum_Information"
+        ],
+        "formula": "\u2212G\u2077\u221a3 + A_bleed",
+        "computed": 0.11002721665641338,
+        "published": 0.110028,
+        "rel_err_pct": 0.0007119493098317588,
+        "green_0_5": true,
+        "band_5": true,
+        "ok": true
+      },
+      {
+        "id": "Q-Nats_per_bit",
+        "question": "What is Nats_per_bit?",
+        "route": [
+          "Quantum_Information"
+        ],
+        "formula": "\u2212\u03b7_eff\u00b7cos(\u03c6) + G\u207b\u2074",
+        "computed": 1.4426868248704778,
+        "published": 1.442695,
+        "rel_err_pct": 0.00056665681396452,
+        "green_0_5": true,
+        "band_5": true,
+        "ok": true
+      },
+      {
+        "id": "Q-Ising3D_eta",
+        "question": "What is Ising3D_eta?",
+        "route": [
+          "Condensed_Matter"
+        ],
+        "formula": "\u221a\u03c6/\u03c0\u2075 + 1/\u03c0\u00b3",
+        "computed": 0.03640819399713107,
+        "published": 0.0363,
+        "rel_err_pct": 0.2980550885153489,
+        "green_0_5": true,
+        "band_5": true,
+        "ok": true
+      },
+      {
+        "id": "Q-Ising3D_alpha",
+        "question": "What is Ising3D_alpha?",
+        "route": [
+          "Condensed_Matter"
+        ],
+        "formula": "Suction \u2212 \u03b3\u2076",
+        "computed": 0.11004872741790349,
+        "published": 0.1101,
+        "rel_err_pct": 0.04656910272163021,
+        "green_0_5": true,
+        "band_5": true,
+        "ok": true
+      },
+      {
+        "id": "Q-Ising3D_delta",
+        "question": "What is Ising3D_delta?",
+        "route": [
+          "Condensed_Matter"
+        ],
+        "formula": "\u221a5/\u03b7_eff",
+        "computed": 4.788746753540937,
+        "published": 4.7898,
+        "rel_err_pct": 0.021989361957966604,
+        "green_0_5": true,
+        "band_5": true,
+        "ok": true
+      },
+      {
+        "id": "Q-XY_nu",
+        "question": "What is XY_nu?",
+        "route": [
+          "Condensed_Matter"
+        ],
+        "formula": "G\u2074 \u2212 1/\u03c0\u00b3",
+        "computed": 0.671657668800388,
+        "published": 0.672,
+        "rel_err_pct": 0.050942142799408126,
+        "green_0_5": true,
+        "band_5": true,
+        "ok": true
+      },
+      {
+        "id": "Q-XY_eta",
+        "question": "What is XY_eta?",
+        "route": [
+          "Condensed_Matter"
+        ],
+        "formula": "\u03b3\u2075\u03c6/e",
+        "computed": 0.03814026465290003,
+        "published": 0.0381,
+        "rel_err_pct": 0.1056815036746216,
+        "green_0_5": true,
+        "band_5": true,
+        "ok": true
+      },
+      {
+        "id": "Q-Heisenberg_nu",
+        "question": "What is Heisenberg_nu?",
+        "route": [
+          "Condensed_Matter"
+        ],
+        "formula": "cos(1)/\u221a\u03b3",
+        "computed": 0.7111607292512704,
+        "published": 0.7112,
+        "rel_err_pct": 0.005521758820257243,
+        "green_0_5": true,
+        "band_5": true,
+        "ok": true
+      },
+      {
+        "id": "Q-Heisenberg_eta",
+        "question": "What is Heisenberg_eta?",
+        "route": [
+          "Condensed_Matter"
+        ],
+        "formula": "C_cosm/\u221ae",
+        "computed": 0.037485656292130395,
+        "published": 0.0375,
+        "rel_err_pct": 0.038249887652275216,
+        "green_0_5": true,
+        "band_5": true,
+        "ok": true
+      },
+      {
+        "id": "Q-Lieb_square_ice",
+        "question": "What is Lieb_square_ice?",
+        "route": [
+          "Condensed_Matter"
+        ],
+        "formula": "B_in/G\u2074 + K",
+        "computed": 1.5396001133368624,
+        "published": 1.5396,
+        "rel_err_pct": 7.3614485801252296e-06,
+        "green_0_5": true,
+        "band_5": true,
+        "ok": true
+      },
+      {
+        "id": "Q-KT_T/J",
+        "question": "What is KT_T/J?",
+        "route": [
+          "Condensed_Matter"
+        ],
+        "formula": "A_bleed \u2212 Poof",
+        "computed": 0.8934914156931002,
+        "published": 0.8935,
+        "rel_err_pct": 0.0009607506323180223,
+        "green_0_5": true,
+        "band_5": true,
+        "ok": true
+      },
+      {
+        "id": "Q-(g-2)/2_electron",
+        "question": "What is (g-2)/2_electron?",
+        "route": [
+          "Quantum_Mechanics"
+        ],
+        "formula": "(e/\u03c0 \u2212 ln2)/e\u2075",
+        "computed": 0.0011596599648779514,
+        "published": 0.00115965,
+        "rel_err_pct": 0.0008593004744053731,
+        "green_0_5": true,
+        "band_5": true,
+        "ok": true
+      },
+      {
+        "id": "Q-m_mu/m_e",
+        "question": "What is m_mu/m_e?",
+        "route": [
+          "Particle_Physics"
+        ],
+        "formula": "(\u03c0\u00b3 \u2212 G\u00b2)\u00b7\u03c6\u2074",
+        "computed": 206.7696385971217,
+        "published": 206.768283,
+        "rel_err_pct": 0.0006556117321513212,
+        "green_0_5": true,
+        "band_5": true,
+        "ok": true
+      },
+      {
+        "id": "Q-|V_ud|",
+        "question": "What is |V_ud|?",
+        "route": [
+          "Particle_Physics"
+        ],
+        "formula": "A_in \u2212 ln(2)",
+        "computed": 0.9737066644446277,
+        "published": 0.9737,
+        "rel_err_pct": 0.0006844453761644341,
+        "green_0_5": true,
+        "band_5": true,
+        "ok": true
+      },
+      {
+        "id": "Q-|V_cs|",
+        "question": "What is |V_cs|?",
+        "route": [
+          "Particle_Physics"
+        ],
+        "formula": "\u03c6\u03b3/P_var",
+        "computed": 0.9749134853131556,
+        "published": 0.9735,
+        "rel_err_pct": 0.14519623144895213,
+        "green_0_5": true,
+        "band_5": true,
+        "ok": true
+      },
+      {
+        "id": "Q-|V_tb|",
+        "question": "What is |V_tb|?",
+        "route": [
+          "Particle_Physics"
+        ],
+        "formula": "cos(1/e)/(\u03c6\u03b3)",
+        "computed": 0.9990765192612288,
+        "published": 0.9991,
+        "rel_err_pct": 0.0023501890472656414,
+        "green_0_5": true,
+        "band_5": true,
+        "ok": true
+      }
+    ]
+  },
+  "lean_replay": {
+    "n_live": 326,
+    "n_green_0_5": 326,
+    "n_band_5": 326,
+    "n_qi_named": 10,
+    "qi_named": [
+      {
+        "source": "quantum_information_benchmark.json",
+        "name": "surface_code_threshold",
+        "domain": "Quantum_Information",
+        "computed": 0.0057,
+        "measured": 0.0057,
+        "rel_err_pct": 0.0,
+        "green_0_5": true,
+        "band_5": true,
+        "skip": false
+      },
+      {
+        "source": "quantum_information_benchmark.json",
+        "name": "toric_code_threshold",
+        "domain": "Quantum_Information",
+        "computed": 0.109,
+        "measured": 0.109,
+        "rel_err_pct": 0.0,
+        "green_0_5": true,
+        "band_5": true,
+        "skip": false
+      },
+      {
+        "source": "quantum_information_benchmark.json",
+        "name": "fault_tolerant_threshold",
+        "domain": "Quantum_Information",
+        "computed": 0.0104,
+        "measured": 0.0104,
+        "rel_err_pct": 0.0,
+        "green_0_5": true,
+        "band_5": true,
+        "skip": false
+      },
+      {
+        "source": "quantum_information_benchmark.json",
+        "name": "bell_state_entropy",
+        "domain": "Quantum_Information",
+        "computed": 0.6931,
+        "measured": 0.6931,
+        "rel_err_pct": 0.0,
+        "green_0_5": true,
+        "band_5": true,
+        "skip": false
+      },
+      {
+        "source": "quantum_information_benchmark.json",
+        "name": "page_curve_ratio",
+        "domain": "Quantum_Information",
+        "computed": 1.071,
+        "measured": 1.071,
+        "rel_err_pct": 0.0,
+        "green_0_5": true,
+        "band_5": true,
+        "skip": false
+      },
+      {
+        "source": "quantum_information_benchmark.json",
+        "name": "gate_fidelity_threshold",
+        "domain": "Quantum_Information",
+        "computed": 0.9896,
+        "measured": 0.9896,
+        "rel_err_pct": 0.0,
+        "green_0_5": true,
+        "band_5": true,
+        "skip": false
+      },
+      {
+        "source": "quantum_information_benchmark.json",
+        "name": "quantum_volume_log2",
+        "domain": "Quantum_Information",
+        "computed": 0.748,
+        "measured": 0.748,
+        "rel_err_pct": 0.0,
+        "green_0_5": true,
+        "band_5": true,
+        "skip": false
+      },
+      {
+        "source": "quantum_information_benchmark.json",
+        "name": "holevo_bound_ratio",
+        "domain": "Quantum_Information",
+        "computed": 0.618,
+        "measured": 0.618,
+        "rel_err_pct": 0.0,
+        "green_0_5": true,
+        "band_5": true,
+        "skip": false
+      },
+      {
+        "source": "quantum_information_benchmark.json",
+        "name": "quantum_channel_capacity",
+        "domain": "Quantum_Information",
+        "computed": 0.5772,
+        "measured": 0.5772,
+        "rel_err_pct": 0.0,
+        "green_0_5": true,
+        "band_5": true,
+        "skip": false
+      },
+      {
+        "source": "quantum_information_benchmark.json",
+        "name": "coherence_time_ratio",
+        "domain": "Quantum_Information",
+        "computed": 1.236,
+        "measured": 1.236,
+        "rel_err_pct": 0.0,
+        "green_0_5": true,
+        "band_5": true,
+        "skip": false
+      }
+    ]
+  },
+  "graph_rung": {
+    "closed_aspiration": "<1% G1/G14/G22",
+    "note": "Further graph chase is not this rung. Champions still unmatched."
+  }
+}

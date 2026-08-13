@@ -18,6 +18,7 @@ python -m fsot_lib.smoke_owned
 python -m fsot_quantum.verify
 python -m fsot_quantum.forward    # known published answers
 python -m fsot_quantum.harder     # CKM / Ising / nuclear / Gset
+python -m fsot_quantum.physics_qi # 3D Ising / XY / Heisenberg / g-2 / Lean QI
 ```
 
 Gset G1 ships in `data/gset/G1.txt`. G14/G22 fetch from Stanford Ye when `FSOT_FETCH_GSET` is not `0`.

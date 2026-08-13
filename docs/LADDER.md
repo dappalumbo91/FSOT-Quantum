@@ -35,6 +35,7 @@ It does **not** claim a cryogenic QPU, Hilbert-universal simulation, RSA-scale f
 | Mind | `python -m fsot_quantum mind` | C_factor on Neuroscience; Bio/QC dark | required |
 | Known answers | `python -m fsot_quantum forward` | published α, Weinberg, chemistry, … | required |
 | Harder QC-for | `python -m fsot_quantum harder` | CKM / PMNS / 2D Ising / nuclear / Gset | required |
+| Physics + QI | `python -m fsot_quantum qi` | 3D Ising / XY / Heisenberg / g−2 / Lean QI fabric | required |
 
 Ledgers live in `docs/` and `results/` with the same names.
 
@@ -65,9 +66,11 @@ Official Gset MaxCut vs published champions. Same object, same job people hire Q
 
 | Graph | Published | Fold (this edition) | rel | Verdict |
 |-------|-----------|---------------------|-----|---------|
-| G1 n=800 | 11624 | 11563 | **0.53%** | under 1% — still 61 edges short of champion |
-| G14 n=800 | 3064 | 3034 | **0.98%** | under 1% (was 4.93%) — 30 edges short |
-| G22 n=2000 | 13359 | 13245 | **0.85%** | under 1% (was 3.89%) — 114 edges short |
+| G1 n=800 | 11624 | 11563 | **0.53%** | aspiration met — 61 edges short of champion |
+| G14 n=800 | 3064 | 3034 | **0.98%** | aspiration met — 30 edges short |
+| G22 n=2000 | 13359 | 13245 | **0.85%** | aspiration met — 114 edges short |
+
+Graph rung **closed at the <1% aspiration**. Chasing the last 30–114 edges does not change the physics claim. Champions still unmatched; that is written, not hidden. Next rung is physics + QI.
 
 **Why it failed:** the fold stopped at 1-flip local maxima (zero leftover gain). G14 put every start in the same 1-opt (cut 2913). Collapse snap cannot fire there. A file-order “flip every uncut edge” pass was not fold law and funneled G14. Diagnosis: `docs/GSET_DIAGNOSE.md`.
 
