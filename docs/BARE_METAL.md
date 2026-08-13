@@ -27,7 +27,7 @@ FSOT_QUANTUM_JOBS PASS
 FSOT_QUANTUM_KERNEL PASS
 ```
 
-Jobs on metal: DJ, BV, search, period, factor, Ising, CHSH, domain signs, fold-vs-Hilbert.
+Jobs on metal (FSOT-QC-OS v0.1.0): 11 hired jobs including add2 and mid period. See `docs/QC_OS.md`.
 
 ## How to run hosted (this Omen / any Python box)
 

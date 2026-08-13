@@ -130,14 +130,46 @@ pub fn jobFoldCost() bool {
     return core.foldLtHilbertOk();
 }
 
-pub fn allJobs() [9]Job {
+fn add2(a: u32, b: u32) u32 {
+    var cin: u32 = 0;
+    var sum: u32 = 0;
+    var i: u32 = 0;
+    while (i < 2) : (i += 1) {
+        const ai = (a >> @intCast(i)) & 1;
+        const bi = (b >> @intCast(i)) & 1;
+        const s = ai ^ bi ^ cin;
+        cin = (ai & bi) | (ai & cin) | (bi & cin);
+        sum |= s << @intCast(i);
+    }
+    return sum + (cin << 2);
+}
+
+/// 2-bit ripple-add exhaustive (16 cases) — QPU adder job, integer fold.
+pub fn jobAdd2() bool {
+    var a: u32 = 0;
+    while (a < 4) : (a += 1) {
+        var b: u32 = 0;
+        while (b < 4) : (b += 1) {
+            if (add2(a, b) != a + b) return false;
+        }
+    }
+    return true;
+}
+
+pub fn jobPeriodMid() bool {
+    return periodOf(2, 33) == 10 and periodOf(2, 35) == 12;
+}
+
+pub fn allJobs() [11]Job {
     return .{
         .{ .name = "dj", .ok = jobDj() },
         .{ .name = "bv", .ok = jobBv() },
         .{ .name = "search", .ok = jobSearch() },
         .{ .name = "period", .ok = jobPeriod() },
+        .{ .name = "periodmid", .ok = jobPeriodMid() },
         .{ .name = "factor", .ok = jobFactor() },
         .{ .name = "ising", .ok = jobIsing() },
+        .{ .name = "add2", .ok = jobAdd2() },
         .{ .name = "chsh", .ok = jobChsh() },
         .{ .name = "domain", .ok = jobDomainSigns() },
         .{ .name = "foldcost", .ok = jobFoldCost() },
@@ -162,5 +194,5 @@ pub fn jobsPassCount() u32 {
 }
 
 pub fn jobsTotal() u32 {
-    return 9;
+    return 11;
 }

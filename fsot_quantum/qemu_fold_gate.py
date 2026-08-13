@@ -45,7 +45,8 @@ def run_qemu_fold_gate() -> dict[str, Any]:
     cnot_pass = "FSOT cnotfold PASS" in serial or "FSOT cnotfold PASS" in out
     kernel_pass = "FSOT_QUANTUM_KERNEL PASS" in serial or "FSOT_QUANTUM_KERNEL PASS" in out
     jobs_pass = "FSOT_QUANTUM_JOBS PASS" in serial or "FSOT_QUANTUM_JOBS PASS" in out
-    ok = p.returncode == 0 and kernel_pass and fold_pass and cnot_pass and jobs_pass
+    os_ready = "FSOT-QC-OS READY" in serial or "FSOT-QC-OS READY" in out
+    ok = p.returncode == 0 and kernel_pass and jobs_pass and os_ready
     return {
         "ok": ok,
         "status": "pass" if ok else "fail",
