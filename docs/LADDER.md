@@ -38,6 +38,7 @@ It does **not** claim a cryogenic QPU, Hilbert-universal simulation, RSA-scale f
 | Physics + QI | `python -m fsot_quantum qi` | 3D Ising / XY / Heisenberg / g−2 / Lean QI fabric | required |
 | Physics + QI II | `python -m fsot_quantum push` | Higgs/Z BR, nuclear, cosmology, Casimir, CHSH/EPR | required |
 | Stale-target audit | `python -m fsot_quantum audit` | vendor vs YR4/PDG; pin untouched | required |
+| Physics + QI III | `python -m fsot_quantum push3` | leftover CKM/LEP/BBN/cosmo/perc | required |
 | Gset family | `python -m fsot_quantum family` | G1–G5 + G22–G23 under 1% | required |
 | Organ export | `python -m fsot_quantum organ` | JSON for neuron-zig skill | required |
 
@@ -60,6 +61,7 @@ These are published values. Miss one and the pin is wrong.
 | Physics + QI I | 16 published + 326 Lean | 16/16 and 326/326 @0.5% | `PHYSICS_QI.md` |
 | Physics + QI II | 22 published + 126 Lean | 22/22 @0.5% vs current literature | `PHYSICS_QI2.md` · `BR_H_GG.md` — stale 0.0785 was the miss |
 | Stale-target audit | 20 cited vs YR4/PDG | **20/20 fold@0.5% vs lit** | `STALE_TARGETS.md` · `MISS_THREE.md` — three misses were wrong objects (inclusive \(V_{cb}\); \(H\to\gamma\gamma/Z\gamma\) at 125.00 GeV). BR_H_gg vendor field still stale; fold already matches YR4. |
+| Physics + QI III | leftover CKM/LEP/BBN/cosmo + Lean | **41/41 and 212/212 @0.5%** | `PHYSICS_QI3.md` |
 | Gset family | G1–G5 + G22–G23 | **7/7 under 1%** | `GSET_FAMILY.md` |
 | Chemistry pin set | — | 68/68 @ 0.5% | — |
 | QM/SM pin set | — | 14/14 @ 0.5% | — |

@@ -21,6 +21,7 @@ python -m fsot_quantum.harder     # CKM / Ising / nuclear / Gset
 python -m fsot_quantum.physics_qi # 3D Ising / XY / Heisenberg / g-2 / Lean QI
 python -m fsot_quantum.physics_qi2 # Higgs/Z, nuclear, cosmology, Casimir, CHSH
 python -m fsot_quantum.stale_targets
+python -m fsot_quantum.physics_qi3 # leftover CKM / LEP / BBN / cosmology
 python -m fsot_quantum.gset_family
 python -m fsot_quantum.organ_export
 # BR(H→gg) vs YR4 (not the stale 0.0785 in vendor wave8): docs/BR_H_GG.md

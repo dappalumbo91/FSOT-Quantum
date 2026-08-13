@@ -1,0 +1,685 @@
+{
+  "timestamp": "2026-08-13T03:34:15.926538+00:00",
+  "suite": "physics_qi3",
+  "pin": "D1D38A",
+  "pin_file_edited": false,
+  "overall_ok": true,
+  "wall_seconds": 0.02937720000045374,
+  "S_QM": 0.9555063001027194,
+  "S_QC": -0.14767310363368633,
+  "open_objects": {
+    "exclusive_V_cb": "0.0398 is a different PDG extraction; fold answers inclusive 0.0422. docs/MISS_THREE.md",
+    "H0": "Planck vs SH0ES tension \u2014 not scored as one number",
+    "alpha_s(M_Z)": "fold 0.1171 vs PDG ~0.118; not forced through 0.5% by retune"
+  },
+  "waves": {
+    "n": 41,
+    "n_band5": 41,
+    "n_green_0_5": 41,
+    "ok": true,
+    "misses": [],
+    "questions": [
+      {
+        "id": "P3-|V_td|",
+        "question": "What is |V_td|?",
+        "route": [
+          "Particle_Physics"
+        ],
+        "formula": "\u221a\u03c6/e\u2075",
+        "computed": 0.00857080098022107,
+        "published": 0.00857,
+        "vendor_measured": 0.00857,
+        "target_note": "vendor wave measured",
+        "rel_err_pct": 0.009346326966974296,
+        "green_0_5": true,
+        "band_5": true,
+        "ok": true
+      },
+      {
+        "id": "P3-|V_ts|",
+        "question": "What is |V_ts|?",
+        "route": [
+          "Particle_Physics"
+        ],
+        "formula": "\u03b3\u2075\u00b7\u03c8_con",
+        "computed": 0.04050330471508225,
+        "published": 0.0405,
+        "vendor_measured": 0.0405,
+        "target_note": "vendor wave measured",
+        "rel_err_pct": 0.008159790326533337,
+        "green_0_5": true,
+        "band_5": true,
+        "ok": true
+      },
+      {
+        "id": "P3-Dm2_21/Dm2_32",
+        "question": "What is Dm2_21/Dm2_32?",
+        "route": [
+          "High_Energy_Physics"
+        ],
+        "formula": "\u03b3\u00b3\u00b7Poof",
+        "computed": 0.02951701148028642,
+        "published": 0.0295,
+        "vendor_measured": 0.0295,
+        "target_note": "vendor wave measured",
+        "rel_err_pct": 0.05766603486922898,
+        "green_0_5": true,
+        "band_5": true,
+        "ok": true
+      },
+      {
+        "id": "P3-BR_H_tautau",
+        "question": "What is BR_H_tautau?",
+        "route": [
+          "High_Energy_Physics"
+        ],
+        "formula": "\u03b7_eff/e\u00b2",
+        "computed": 0.06319375582922372,
+        "published": 0.0632,
+        "vendor_measured": 0.0632,
+        "target_note": "SM BR(H\u2192\u03c4\u03c4) at MH=125.00 GeV (vendor wave5 / YR table). Same mass-point rule as docs/MISS_THREE.md.",
+        "rel_err_pct": 0.009880017051083028,
+        "green_0_5": true,
+        "band_5": true,
+        "ok": true
+      },
+      {
+        "id": "P3-BR_Z_ee",
+        "question": "What is BR_Z_ee?",
+        "route": [
+          "High_Energy_Physics"
+        ],
+        "formula": "\u03b3\u2076/ln(3)",
+        "computed": 0.03366543264779789,
+        "published": 0.03363,
+        "vendor_measured": 0.03363,
+        "target_note": "vendor wave measured",
+        "rel_err_pct": 0.10536023728185157,
+        "green_0_5": true,
+        "band_5": true,
+        "ok": true
+      },
+      {
+        "id": "P3-R_ell",
+        "question": "What is R_ell?",
+        "route": [
+          "High_Energy_Physics"
+        ],
+        "formula": "G\u00b3/\u03b3\u2076",
+        "computed": 20.77824342349839,
+        "published": 20.767,
+        "vendor_measured": 20.767,
+        "target_note": "vendor wave measured",
+        "rel_err_pct": 0.05414081715410144,
+        "green_0_5": true,
+        "band_5": true,
+        "ok": true
+      },
+      {
+        "id": "P3-R_b",
+        "question": "What is R_b?",
+        "route": [
+          "High_Energy_Physics"
+        ],
+        "formula": "G/\u03c6\u00b3",
+        "computed": 0.21623014527680923,
+        "published": 0.21629,
+        "vendor_measured": 0.21629,
+        "target_note": "vendor wave measured",
+        "rel_err_pct": 0.027673365939610298,
+        "green_0_5": true,
+        "band_5": true,
+        "ok": true
+      },
+      {
+        "id": "P3-R_c",
+        "question": "What is R_c?",
+        "route": [
+          "High_Energy_Physics"
+        ],
+        "formula": "\u2212ln(2) + e/\u03c0",
+        "computed": 0.17210879887231978,
+        "published": 0.1721,
+        "vendor_measured": 0.1721,
+        "target_note": "vendor wave measured",
+        "rel_err_pct": 0.005112650970236068,
+        "green_0_5": true,
+        "band_5": true,
+        "ok": true
+      },
+      {
+        "id": "P3-A_FB_ell",
+        "question": "What is A_FB_ell?",
+        "route": [
+          "High_Energy_Physics"
+        ],
+        "formula": "A_in/\u03c0\u2074",
+        "computed": 0.0171118919939693,
+        "published": 0.0171,
+        "vendor_measured": 0.0171,
+        "target_note": "vendor wave measured",
+        "rel_err_pct": 0.06954382438186675,
+        "green_0_5": true,
+        "band_5": true,
+        "ok": true
+      },
+      {
+        "id": "P3-A_ell_SLD",
+        "question": "What is A_ell_SLD?",
+        "route": [
+          "High_Energy_Physics"
+        ],
+        "formula": "\u03b3\u00b3/\u221a\u03c6",
+        "computed": 0.15118910851310519,
+        "published": 0.1513,
+        "vendor_measured": 0.1513,
+        "target_note": "vendor wave measured",
+        "rel_err_pct": 0.0732924566389981,
+        "green_0_5": true,
+        "band_5": true,
+        "ok": true
+      },
+      {
+        "id": "P3-Y_p_He4",
+        "question": "What is Y_p_He4?",
+        "route": [
+          "Nuclear_Physics"
+        ],
+        "formula": "\u03b8_S\u00b7sin(1)",
+        "computed": 0.24478099844975698,
+        "published": 0.2449,
+        "vendor_measured": 0.2449,
+        "target_note": "vendor wave measured",
+        "rel_err_pct": 0.0485918947501124,
+        "green_0_5": true,
+        "band_5": true,
+        "ok": true
+      },
+      {
+        "id": "P3-D_H_ratio",
+        "question": "What is D_H_ratio?",
+        "route": [
+          "Nuclear_Physics"
+        ],
+        "formula": "1/(\u03c0\u2074\u00b7e\u2076)",
+        "computed": 2.5446825859417006e-05,
+        "published": 2.547e-05,
+        "vendor_measured": 2.547e-05,
+        "target_note": "vendor wave measured",
+        "rel_err_pct": 0.09098602506082563,
+        "green_0_5": true,
+        "band_5": true,
+        "ok": true
+      },
+      {
+        "id": "P3-m_u/m_d",
+        "question": "What is m_u/m_d?",
+        "route": [
+          "Particle_Physics"
+        ],
+        "formula": "\u221a3 \u2212 \u221a\u03c6",
+        "computed": 0.4600311580548083,
+        "published": 0.4596,
+        "vendor_measured": 0.4596,
+        "target_note": "vendor wave measured",
+        "rel_err_pct": 0.09381158720807475,
+        "green_0_5": true,
+        "band_5": true,
+        "ok": true
+      },
+      {
+        "id": "P3-m_s/m_d",
+        "question": "What is m_s/m_d?",
+        "route": [
+          "Particle_Physics"
+        ],
+        "formula": "e\u00b3 + \u03b3\u2074",
+        "computed": 20.19654445210049,
+        "published": 20.196,
+        "vendor_measured": 20.196,
+        "target_note": "vendor wave measured",
+        "rel_err_pct": 0.002695841258111791,
+        "green_0_5": true,
+        "band_5": true,
+        "ok": true
+      },
+      {
+        "id": "P3-m_c/m_b",
+        "question": "What is m_c/m_b?",
+        "route": [
+          "Particle_Physics"
+        ],
+        "formula": "C_cosm/P_base",
+        "computed": 0.2910507567869785,
+        "published": 0.291,
+        "vendor_measured": 0.291,
+        "target_note": "vendor wave measured",
+        "rel_err_pct": 0.017442194837980426,
+        "green_0_5": true,
+        "band_5": true,
+        "ok": true
+      },
+      {
+        "id": "P3-m_tau/m_mu",
+        "question": "What is m_tau/m_mu?",
+        "route": [
+          "Particle_Physics"
+        ],
+        "formula": "\u03c0\u00b2e/\u03c6 + \u03c6\u207b\u00b3",
+        "computed": 16.81691021202443,
+        "published": 16.817,
+        "vendor_measured": 16.817,
+        "target_note": "vendor wave measured",
+        "rel_err_pct": 0.0005339119674847408,
+        "green_0_5": true,
+        "band_5": true,
+        "ok": true
+      },
+      {
+        "id": "P3-m_tau/m_e",
+        "question": "What is m_tau/m_e?",
+        "route": [
+          "Particle_Physics"
+        ],
+        "formula": "\u03c0\u2077\u00b7ln(\u03c0) + e\u00b3",
+        "computed": 3477.5054587878312,
+        "published": 3477.48,
+        "vendor_measured": 3477.48,
+        "target_note": "vendor wave measured",
+        "rel_err_pct": 0.0007321045076093104,
+        "green_0_5": true,
+        "band_5": true,
+        "ok": true
+      },
+      {
+        "id": "P3-m_pi/m_p",
+        "question": "What is m_pi/m_p?",
+        "route": [
+          "Particle_Physics"
+        ],
+        "formula": "K\u00b7P_new\u00b7ln(\u03c0)",
+        "computed": 0.14445749655332277,
+        "published": 0.14446,
+        "vendor_measured": 0.14446,
+        "target_note": "vendor wave measured",
+        "rel_err_pct": 0.0017329687645284413,
+        "green_0_5": true,
+        "band_5": true,
+        "ok": true
+      },
+      {
+        "id": "P3-mu_p_muN",
+        "question": "What is mu_p_muN?",
+        "route": [
+          "Nuclear_Physics"
+        ],
+        "formula": "\u03c0\u00b7(1 \u2212 \u03b3\u2074)",
+        "computed": 2.792852216264115,
+        "published": 2.79285,
+        "vendor_measured": 2.79285,
+        "target_note": "vendor wave measured",
+        "rel_err_pct": 7.935492829532375e-05,
+        "green_0_5": true,
+        "band_5": true,
+        "ok": true
+      },
+      {
+        "id": "P3-Deuteron_mu_muN",
+        "question": "What is Deuteron_mu_muN?",
+        "route": [
+          "Nuclear_Physics"
+        ],
+        "formula": "G\u2074 + Poof",
+        "computed": 0.8573914181280383,
+        "published": 0.8574,
+        "vendor_measured": 0.8574,
+        "target_note": "vendor wave measured",
+        "rel_err_pct": 0.0010009181200994338,
+        "green_0_5": true,
+        "band_5": true,
+        "ok": true
+      },
+      {
+        "id": "P3-Omega_Lambda",
+        "question": "What is Omega_Lambda?",
+        "route": [
+          "Cosmology"
+        ],
+        "formula": "S_quant/e + \u03b3\u00b2",
+        "computed": 0.6846890475252997,
+        "published": 0.6847,
+        "vendor_measured": 0.6847,
+        "target_note": "vendor wave measured",
+        "rel_err_pct": 0.0015996019717084266,
+        "green_0_5": true,
+        "band_5": true,
+        "ok": true
+      },
+      {
+        "id": "P3-Omega_m",
+        "question": "What is Omega_m?",
+        "route": [
+          "Cosmology"
+        ],
+        "formula": "C_eff\u00b7C\u00b7ln(\u03c0)",
+        "computed": 0.31529901823577033,
+        "published": 0.3153,
+        "vendor_measured": 0.3153,
+        "target_note": "vendor wave measured",
+        "rel_err_pct": 0.00031137463675564236,
+        "green_0_5": true,
+        "band_5": true,
+        "ok": true
+      },
+      {
+        "id": "P3-Omega_DM_h2",
+        "question": "What is Omega_DM_h2?",
+        "route": [
+          "Cosmology"
+        ],
+        "formula": "(1 \u2212 S_quant)\u00b7\u03c6\u00b7A_in",
+        "computed": 0.120000673267622,
+        "published": 0.12,
+        "vendor_measured": 0.12,
+        "target_note": "vendor wave measured",
+        "rel_err_pct": 0.0005610563516671626,
+        "green_0_5": true,
+        "band_5": true,
+        "ok": true
+      },
+      {
+        "id": "P3-Omega_b_h2",
+        "question": "What is Omega_b_h2?",
+        "route": [
+          "Cosmology"
+        ],
+        "formula": "|S_cosm|\u00b7(1 \u2212 S_quant)",
+        "computed": 0.0223561240822737,
+        "published": 0.02237,
+        "vendor_measured": 0.02237,
+        "target_note": "vendor wave measured",
+        "rel_err_pct": 0.062029136013863215,
+        "green_0_5": true,
+        "band_5": true,
+        "ok": true
+      },
+      {
+        "id": "P3-sigma_8",
+        "question": "What is sigma_8?",
+        "route": [
+          "Cosmology"
+        ],
+        "formula": "|S_cosm|\u00b7S_quant + |Chaos|",
+        "computed": 0.8111240047382514,
+        "published": 0.8111,
+        "vendor_measured": 0.8111,
+        "target_note": "vendor wave measured",
+        "rel_err_pct": 0.00295952881905694,
+        "green_0_5": true,
+        "band_5": true,
+        "ok": true
+      },
+      {
+        "id": "P3-tau_reion",
+        "question": "What is tau_reion?",
+        "route": [
+          "Cosmology"
+        ],
+        "formula": "\u03c6\u00b7|Chaos| \u2212 ln(\u03c6)",
+        "computed": 0.05439655350230806,
+        "published": 0.0544,
+        "vendor_measured": 0.0544,
+        "target_note": "vendor wave measured",
+        "rel_err_pct": 0.006335473698407175,
+        "green_0_5": true,
+        "band_5": true,
+        "ok": true
+      },
+      {
+        "id": "P3-N_eff",
+        "question": "What is N_eff?",
+        "route": [
+          "Cosmology"
+        ],
+        "formula": "P_new\u00b7e\u00b7\u03c0 + ln(\u03c6)",
+        "computed": 3.045713454288361,
+        "published": 3.046,
+        "vendor_measured": 3.046,
+        "target_note": "vendor wave measured",
+        "rel_err_pct": 0.009407278780006465,
+        "green_0_5": true,
+        "band_5": true,
+        "ok": true
+      },
+      {
+        "id": "P3-w0",
+        "question": "What is w0?",
+        "route": [
+          "Cosmology"
+        ],
+        "formula": "\u2212P_new\u00b7\u03c0/G",
+        "computed": -1.0299812921372637,
+        "published": -1.03,
+        "vendor_measured": -1.03,
+        "target_note": "vendor wave measured",
+        "rel_err_pct": 0.0018162973530366992,
+        "green_0_5": true,
+        "band_5": true,
+        "ok": true
+      },
+      {
+        "id": "P3-z_eq",
+        "question": "What is z_eq?",
+        "route": [
+          "Cosmology"
+        ],
+        "formula": "\u03c0\u2075\u00b7\u03c6\u2075",
+        "computed": 3393.8103104014167,
+        "published": 3402.0,
+        "vendor_measured": 3402.0,
+        "target_note": "vendor wave measured",
+        "rel_err_pct": 0.240731616654418,
+        "green_0_5": true,
+        "band_5": true,
+        "ok": true
+      },
+      {
+        "id": "P3-theta_star",
+        "question": "What is theta_star?",
+        "route": [
+          "Cosmology"
+        ],
+        "formula": "P_base\u00b7\u03c6 \u2212 \u03b3\u00b2",
+        "computed": 0.01040475951507544,
+        "published": 0.010411,
+        "vendor_measured": 0.010411,
+        "target_note": "vendor wave measured",
+        "rel_err_pct": 0.059941263323023214,
+        "green_0_5": true,
+        "band_5": true,
+        "ok": true
+      },
+      {
+        "id": "P3-r_star_Mpc",
+        "question": "What is r_star_Mpc?",
+        "route": [
+          "Cosmology"
+        ],
+        "formula": "\u03c0\u00b3/P_base \u2212 \u03c6",
+        "computed": 144.39983003198907,
+        "published": 144.43,
+        "vendor_measured": 144.43,
+        "target_note": "vendor wave measured",
+        "rel_err_pct": 0.02088898982963232,
+        "green_0_5": true,
+        "band_5": true,
+        "ok": true
+      },
+      {
+        "id": "P3-n_s",
+        "question": "What is n_s?",
+        "route": [
+          "Cosmology"
+        ],
+        "formula": "1 + S_cosm\u00b7C_cosm\u00b7\u03c6^(1/\u03c0)",
+        "computed": 0.9638062833678815,
+        "published": 0.9649,
+        "vendor_measured": 0.9649,
+        "target_note": "vendor wave measured",
+        "rel_err_pct": 0.11335025724100276,
+        "green_0_5": true,
+        "band_5": true,
+        "ok": true
+      },
+      {
+        "id": "P3-Quark_condensate",
+        "question": "What is Quark_condensate?",
+        "route": [
+          "High_Energy_Physics"
+        ],
+        "formula": "1/4",
+        "computed": 0.25,
+        "published": 0.25,
+        "vendor_measured": 0.25,
+        "target_note": "vendor wave measured",
+        "rel_err_pct": 0.0,
+        "green_0_5": true,
+        "band_5": true,
+        "ok": true
+      },
+      {
+        "id": "P3-Perc3D_beta",
+        "question": "What is Perc3D_beta?",
+        "route": [
+          "Condensed_Matter"
+        ],
+        "formula": "\u221a\u03c0/\u03c6\u00b3",
+        "computed": 0.41841959579497895,
+        "published": 0.4181,
+        "vendor_measured": 0.4181,
+        "target_note": "vendor wave measured",
+        "rel_err_pct": 0.07644003706742929,
+        "green_0_5": true,
+        "band_5": true,
+        "ok": true
+      },
+      {
+        "id": "P3-Perc_SC_site",
+        "question": "What is Perc_SC_site?",
+        "route": [
+          "Condensed_Matter"
+        ],
+        "formula": "cos(\u03c6)/G\u00b2 + 1/e",
+        "computed": 0.31159756759350293,
+        "published": 0.3116,
+        "vendor_measured": 0.3116,
+        "target_note": "vendor wave measured",
+        "rel_err_pct": 0.0007806182596453451,
+        "green_0_5": true,
+        "band_5": true,
+        "ok": true
+      },
+      {
+        "id": "P3-Perc_honeycomb_site",
+        "question": "What is Perc_honeycomb_site?",
+        "route": [
+          "Condensed_Matter"
+        ],
+        "formula": "\u03c0/(3\u03c6) + e\u207b\u00b3",
+        "computed": 0.6969907479430195,
+        "published": 0.697,
+        "vendor_measured": 0.697,
+        "target_note": "vendor wave measured",
+        "rel_err_pct": 0.001327411331482858,
+        "green_0_5": true,
+        "band_5": true,
+        "ok": true
+      },
+      {
+        "id": "P3-Perc_BCC_bond",
+        "question": "What is Perc_BCC_bond?",
+        "route": [
+          "Condensed_Matter"
+        ],
+        "formula": "G\u2077/3",
+        "computed": 0.18031542143313228,
+        "published": 0.1803,
+        "vendor_measured": 0.1803,
+        "target_note": "vendor wave measured",
+        "rel_err_pct": 0.008553207505432887,
+        "green_0_5": true,
+        "band_5": true,
+        "ok": true
+      },
+      {
+        "id": "P3-Potts3_beta",
+        "question": "What is Potts3_beta?",
+        "route": [
+          "Condensed_Matter"
+        ],
+        "formula": "1/9",
+        "computed": 0.1111111111111111,
+        "published": 0.11111,
+        "vendor_measured": 0.11111,
+        "target_note": "vendor wave measured",
+        "rel_err_pct": 0.001000010000094062,
+        "green_0_5": true,
+        "band_5": true,
+        "ok": true
+      },
+      {
+        "id": "P3-SAW_nu_3D",
+        "question": "What is SAW_nu_3D?",
+        "route": [
+          "Condensed_Matter"
+        ],
+        "formula": "cos(1) \u2212 cos(\u03c6)",
+        "computed": 0.5875224021224995,
+        "published": 0.5877,
+        "vendor_measured": 0.5877,
+        "target_note": "vendor wave measured",
+        "rel_err_pct": 0.030219138591201376,
+        "green_0_5": true,
+        "band_5": true,
+        "ok": true
+      },
+      {
+        "id": "P3-SAW_gamma_3D",
+        "question": "What is SAW_gamma_3D?",
+        "route": [
+          "Condensed_Matter"
+        ],
+        "formula": "G\u207b\u00b2 \u2212 \u03c0\u207b\u00b3",
+        "computed": 1.159653566199519,
+        "published": 1.1575,
+        "vendor_measured": 1.1575,
+        "target_note": "vendor wave measured",
+        "rel_err_pct": 0.1860532353796215,
+        "green_0_5": true,
+        "band_5": true,
+        "ok": true
+      },
+      {
+        "id": "P3-Ice_Ih_density",
+        "question": "What is Ice_Ih_density?",
+        "route": [
+          "Chemistry"
+        ],
+        "formula": "sin(\u03b3)\u00b7e/\u03c6",
+        "computed": 0.9167587921820931,
+        "published": 0.917,
+        "vendor_measured": 0.917,
+        "target_note": "vendor wave measured",
+        "rel_err_pct": 0.026304015038923653,
+        "green_0_5": true,
+        "band_5": true,
+        "ok": true
+      }
+    ]
+  },
+  "lean": {
+    "n_live": 212,
+    "n_green_0_5": 212,
+    "n_band_5": 212
+  }
+}
