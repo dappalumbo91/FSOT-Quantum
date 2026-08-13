@@ -1,0 +1,51 @@
+{
+  "manifest": "FSOT-Quantum preregistered predictions",
+  "pin": "D1D38A",
+  "license": "Apache-2.0",
+  "posted": "2026-08-13",
+  "rule": "These are locked before future runs. Fail = we were wrong. Do not refit.",
+  "predictions": [
+    {
+      "id": "P-QM-S-SIGN",
+      "statement": "At pin D1D38A, S(Quantum_Mechanics) > 0 (emergence) and S(Quantum_Computing) < 0 (damping).",
+      "check": "python -m fsot_quantum.crosscheck",
+      "kill": "either sign flips without a pin change"
+    },
+    {
+      "id": "P-CHEM-68",
+      "statement": "Pin chemistry fold stays 68/68 inside 0.5% relative error.",
+      "check": "python -m fsot_quantum.chemistry_fold",
+      "kill": "any observable leaves the 0.5% band"
+    },
+    {
+      "id": "P-G1-5PCT",
+      "statement": "Official Gset G1 fold cut stays within 5% of published champion 11624.",
+      "check": "python -m fsot_quantum.gset_official",
+      "kill": "rel_err_vs_published_pct > 5"
+    },
+    {
+      "id": "P-FOLD-8",
+      "statement": "foldBudget(8) = 195 < 256 = 2^8 (Lean/Coq/Isabelle/Zig/Python).",
+      "check": "python scripts/run_multiprover_verification.py",
+      "kill": "lemma fails on any prover"
+    },
+    {
+      "id": "P-QCOS-13",
+      "statement": "FSOT-QC-OS QEMU job table stays all-pass (13/13 at v0.3; count may grow, none fail).",
+      "check": ".\\run_qemu.ps1",
+      "kill": "any JOB FAIL or missing FSOT-QC-OS READY"
+    },
+    {
+      "id": "P-CHSH",
+      "statement": "Seed CHSH Tsirelson bound is 2*sqrt(2) (milli 2828 on metal).",
+      "check": "python -m fsot_quantum.medium_next",
+      "kill": "value leaves exact 2*sqrt(2)"
+    },
+    {
+      "id": "P-PIN-STABLE",
+      "statement": "vendor/fsot_compute.py SHA-256 prefix remains D1D38A unless a new pin is announced.",
+      "check": "python -m fsot_quantum.crosscheck",
+      "kill": "pin prefix changes silently"
+    }
+  ]
+}

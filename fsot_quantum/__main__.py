@@ -1,0 +1,63 @@
+"""
+Field entry: python -m fsot_quantum [cmd]
+
+  check      pin/seed/D_eff vs Lean clone
+  accuracy   hired QC/QM jobs (Python/GPU)
+  atlas      full Lean solved atlas
+  expand     Lean chem + extra QM
+  predict    print preregistered predictions
+  qemu       remind / run QEMU OS (Windows)
+"""
+
+from __future__ import annotations
+
+import json
+import subprocess
+import sys
+from pathlib import Path
+
+ROOT = Path(__file__).resolve().parents[1]
+
+
+def _cmd() -> str:
+    return (sys.argv[1] if len(sys.argv) > 1 else "help").lower()
+
+
+def main() -> int:
+    c = _cmd()
+    if c in ("help", "-h", "--help"):
+        print(__doc__)
+        print("Usable on an ordinary PC. Metal: .\\run_qemu.ps1")
+        return 0
+    if c == "check":
+        from fsot_quantum.crosscheck import main as m
+        return m()
+    if c == "accuracy":
+        from fsot_quantum.qc_accuracy import main as m
+        return m()
+    if c == "atlas":
+        from fsot_quantum.lean_full_atlas import main as m
+        return m()
+    if c == "expand":
+        from fsot_quantum.expand_sim import main as m
+        return m()
+    if c == "predict":
+        p = ROOT / "predictions" / "qc_preregistered.json"
+        print(p.read_text(encoding="utf-8"))
+        return 0
+    if c == "qemu":
+        script = ROOT / "run_qemu.ps1"
+        if not script.is_file():
+            print("run_qemu.ps1 missing")
+            return 1
+        return subprocess.call(
+            ["powershell", "-NoProfile", "-ExecutionPolicy", "Bypass", "-File", str(script)],
+            cwd=str(ROOT),
+        )
+    print("unknown cmd:", c)
+    print(__doc__)
+    return 2
+
+
+if __name__ == "__main__":
+    raise SystemExit(main())

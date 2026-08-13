@@ -1,0 +1,267 @@
+{
+  "panel": "crosscheck_lean",
+  "pin": "D1D38A",
+  "n_checks": 43,
+  "n_pass": 43,
+  "overall_ok": true,
+  "checks": [
+    {
+      "id": "pin_ours",
+      "ok": true,
+      "got": "D1D38A",
+      "want": "D1D38A"
+    },
+    {
+      "id": "pin_lean",
+      "ok": true,
+      "got": "D1D38A",
+      "want": "D1D38A",
+      "skip": false
+    },
+    {
+      "id": "pin_match_each_other",
+      "ok": true,
+      "ours": "D1D38A",
+      "lean": "D1D38A"
+    },
+    {
+      "id": "seed_pi",
+      "ok": true,
+      "ours": 3.141592653589793,
+      "vendor": 3.141592653589793
+    },
+    {
+      "id": "seed_e",
+      "ok": true,
+      "ours": 2.718281828459045,
+      "vendor": 2.718281828459045
+    },
+    {
+      "id": "seed_phi",
+      "ok": true,
+      "ours": 1.618033988749895,
+      "vendor": 1.618033988749895
+    },
+    {
+      "id": "seed_gamma",
+      "ok": true,
+      "ours": 0.5772156649015329,
+      "vendor": 0.5772156649015329
+    },
+    {
+      "id": "seed_c_eff",
+      "ok": true,
+      "ours": 0.9577022026205613,
+      "vendor": 0.9577022026205613
+    },
+    {
+      "id": "seed_p_var",
+      "ok": true,
+      "ours": 0.9579871226722757,
+      "vendor": 0.9579871226722757
+    },
+    {
+      "id": "seed_poof",
+      "ok": true,
+      "ours": 0.1534822148944508,
+      "vendor": 0.1534822148944508
+    },
+    {
+      "id": "seed_suction",
+      "ok": true,
+      "ours": 0.14703398542810284,
+      "vendor": 0.14703398542810284
+    },
+    {
+      "id": "seed_a_bleed",
+      "ok": true,
+      "ours": 1.046973630587551,
+      "vendor": 1.046973630587551
+    },
+    {
+      "id": "seed_theta",
+      "ok": true,
+      "ours": 0.9174663774653723,
+      "vendor": 0.9174663774653723
+    },
+    {
+      "id": "dom_Quantum_Mechanics_Deff",
+      "ok": true,
+      "ours": 6,
+      "vendor": 6
+    },
+    {
+      "id": "dom_Quantum_Mechanics_obs",
+      "ok": true,
+      "ours": true,
+      "vendor": true
+    },
+    {
+      "id": "dom_Quantum_Computing_Deff",
+      "ok": true,
+      "ours": 11,
+      "vendor": 11
+    },
+    {
+      "id": "dom_Quantum_Computing_obs",
+      "ok": true,
+      "ours": false,
+      "vendor": false
+    },
+    {
+      "id": "dom_Quantum_Optics_Deff",
+      "ok": true,
+      "ours": 11,
+      "vendor": 11
+    },
+    {
+      "id": "dom_Quantum_Optics_obs",
+      "ok": true,
+      "ours": true,
+      "vendor": true
+    },
+    {
+      "id": "dom_Particle_Physics_Deff",
+      "ok": true,
+      "ours": 5,
+      "vendor": 5
+    },
+    {
+      "id": "dom_Particle_Physics_obs",
+      "ok": true,
+      "ours": true,
+      "vendor": true
+    },
+    {
+      "id": "dom_Quantum_Gravity_Deff",
+      "ok": true,
+      "ours": 22,
+      "vendor": 22
+    },
+    {
+      "id": "dom_Quantum_Gravity_obs",
+      "ok": true,
+      "ours": false,
+      "vendor": false
+    },
+    {
+      "id": "dom_Atomic_Physics_Deff",
+      "ok": true,
+      "ours": 7,
+      "vendor": 7
+    },
+    {
+      "id": "dom_Atomic_Physics_obs",
+      "ok": true,
+      "ours": true,
+      "vendor": true
+    },
+    {
+      "id": "dom_Physical_Chemistry_Deff",
+      "ok": true,
+      "ours": 8,
+      "vendor": 8
+    },
+    {
+      "id": "dom_Physical_Chemistry_obs",
+      "ok": true,
+      "ours": true,
+      "vendor": true
+    },
+    {
+      "id": "dom_Chemistry_Deff",
+      "ok": true,
+      "ours": 8,
+      "vendor": 8
+    },
+    {
+      "id": "dom_Chemistry_obs",
+      "ok": true,
+      "ours": true,
+      "vendor": true
+    },
+    {
+      "id": "dom_Electromagnetism_Deff",
+      "ok": true,
+      "ours": 9,
+      "vendor": 9
+    },
+    {
+      "id": "dom_Electromagnetism_obs",
+      "ok": true,
+      "ours": true,
+      "vendor": true
+    },
+    {
+      "id": "dom_Molecular_Chemistry_Deff",
+      "ok": true,
+      "ours": 9,
+      "vendor": 9
+    },
+    {
+      "id": "dom_Molecular_Chemistry_obs",
+      "ok": true,
+      "ours": true,
+      "vendor": true
+    },
+    {
+      "id": "dom_High_Energy_Physics_Deff",
+      "ok": true,
+      "ours": 7,
+      "vendor": 7
+    },
+    {
+      "id": "dom_High_Energy_Physics_obs",
+      "ok": true,
+      "ours": true,
+      "vendor": true
+    },
+    {
+      "id": "dom_Nuclear_Physics_Deff",
+      "ok": true,
+      "ours": 15,
+      "vendor": 15
+    },
+    {
+      "id": "dom_Nuclear_Physics_obs",
+      "ok": true,
+      "ours": true,
+      "vendor": true
+    },
+    {
+      "id": "dom_Condensed_Matter_Deff",
+      "ok": true,
+      "ours": 14,
+      "vendor": 14
+    },
+    {
+      "id": "dom_Condensed_Matter_obs",
+      "ok": true,
+      "ours": true,
+      "vendor": true
+    },
+    {
+      "id": "S_QM_match",
+      "ok": true,
+      "ours": 0.9555063001027194,
+      "vendor": 0.9555063001027196
+    },
+    {
+      "id": "S_QC_match",
+      "ok": true,
+      "ours": -0.14767310363368633,
+      "vendor": -0.14767310363368644
+    },
+    {
+      "id": "S_QM_emergence",
+      "ok": true,
+      "got": 0.9555063001027194
+    },
+    {
+      "id": "S_QC_damping",
+      "ok": true,
+      "got": -0.14767310363368633
+    }
+  ],
+  "timestamp": "2026-08-13T00:41:41.931483+00:00"
+}

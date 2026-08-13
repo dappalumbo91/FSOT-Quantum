@@ -123,6 +123,16 @@ cd zig; zig build run; cd ..
 
 **Goal:** answers for quantum-computing *jobs* via FSOT trinary + GPU parallel — not cryogenic QPU infrastructure.
 
+Field commands (ordinary PC):
+
+```powershell
+python -m fsot_quantum check      # pin/seeds/D_eff vs Lean clone
+python -m fsot_quantum accuracy   # hired QC/QM jobs
+python -m fsot_quantum atlas      # full Lean solved atlas
+python -m fsot_quantum predict    # preregistered predictions (killable)
+.\run_qemu.ps1                    # FSOT-QC-OS standalone
+```
+
 | Panel | Ledger |
 |-------|--------|
 | Capability | `results/CAPABILITY_REPORT.md` |
@@ -148,6 +158,8 @@ cd zig; zig build run; cd ..
 | FSOT-QC-OS (own job OS) | `docs/QC_OS.md` |
 | Expand sim (Lean chem + QM) | `results/EXPAND_SIM.md` |
 | Full Lean atlas (all solved panels) | `results/LEAN_FULL_ATLAS.md` |
+| Cross-check vs Lean | `results/CROSSCHECK.md` |
+| Preregistered predictions | `predictions/qc_preregistered.json` |
 | Skeptic kit | `results/SKEPTIC_KIT.md` |
 
 Device path is **exactly** FSOT-GPU: torch CUDA buffers when available.
