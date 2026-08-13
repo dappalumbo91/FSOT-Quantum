@@ -136,9 +136,17 @@ def _fast_maxcut(n: int, edges: list[tuple[int, int, int]]) -> tuple[int, list[i
             x = (phi_m * (k + 1) * (i + 1) + (k + 3) * 2654435761 + i * 40503) & 0xFFFFFFFF
             row.append(1 if (x >> 16) & 1 else -1)
         starts.append(row)
-    # golden partition (seed φ)
+    # golden partition (seed φ) and e-walk (second seed, not a free RNG)
     half = n // 2
     starts.append([1 if ((i * phi_m) % n) < half else -1 for i in range(n)])
+    e_m = int(float(SEEDS.e) * 1e6)
+    n_e = int(math.floor(float(SEEDS.pi)))
+    for k in range(n_e):
+        row = []
+        for i in range(n):
+            x = (e_m * (k + 1) * (i + 3) + (k + 1) * 2246822519 + i * 17) & 0xFFFFFFFF
+            row.append(1 if (x >> 15) & 1 else -1)
+        starts.append(row)
 
     def cut_of(s: list[int]) -> int:
         return cut_value(s, edges)
@@ -256,72 +264,97 @@ def _fast_maxcut(n: int, edges: list[tuple[int, int, int]]) -> tuple[int, list[i
         pool.append((c, cand))
         if c > best_c:
             best, best_c = cand, c
-    # KL on the top floor(π) 1-opt basins (seed depth, not a free restart count)
-    pool.sort(key=lambda t: -t[0])
-    n_kl = max(1, int(math.floor(float(SEEDS.pi))))
-    kl_rounds = max(3, int(math.floor(float(SEEDS.e) * float(SEEDS.pi))))
-    seen_c = set()
-    for c0, s0 in pool[:n_kl]:
-        if c0 in seen_c:
-            continue
-        seen_c.add(c0)
+    def two_opt(s0: list[int]) -> list[int]:
+        """Improving 2-flips. Adjacent pair gain: δi+δj − 2·same_sign."""
         s = list(s0)
-        c = c0
-        for _ in range(kl_rounds):
+        neighbor = [set() for _ in range(n)]
+        for i, j, _w in edges:
+            neighbor[i].add(j)
+            neighbor[j].add(i)
+        moved = True
+        guard = 0
+        while moved and guard < n:
+            moved = False
+            guard += 1
+            dlt = [0] * n
+            for i, nbr in enumerate(adj):
+                same = 0
+                for j in nbr:
+                    if s[j] == s[i]:
+                        same += 1
+                dlt[i] = 2 * same - len(nbr)
+            best_g = 0
+            pair = None
+            if n > 800:
+                # G22-scale: only existing edges (O(m)), not n²
+                for i, j, _w in edges:
+                    if i > j:
+                        continue
+                    g = dlt[i] + dlt[j]
+                    g -= 2 if s[i] == s[j] else -2
+                    if g > best_g:
+                        best_g = g
+                        pair = (i, j)
+            else:
+                for i in range(n):
+                    for j in range(i + 1, n):
+                        g = dlt[i] + dlt[j]
+                        if j in neighbor[i]:
+                            g -= 2 if s[i] == s[j] else -2
+                        if g > best_g:
+                            best_g = g
+                            pair = (i, j)
+            if pair is None:
+                break
+            i, j = pair
+            s[i] = -s[i]
+            s[j] = -s[j]
+            moved = True
+        return s
+
+    def refine(s0: list[int]) -> list[int]:
+        s = list(s0)
+        c = cut_of(s)
+        rounds = max(3, int(math.floor(float(SEEDS.e) * float(SEEDS.pi))))
+        for _ in range(rounds):
             s2 = kl_pass(s)
-            # 1-flip only after KL — full polish used to yank back to the 1-opt basin
+            s2 = two_opt(s2)
             s2 = polish(s2)
             c2 = cut_of(s2)
             if c2 <= c:
                 break
             s, c = s2, c2
+        return s
+
+    # KL + 2-opt on the top floor(e·π) distinct 1-opt basins
+    pool.sort(key=lambda t: -t[0])
+    n_kl = len(pool) if n <= 800 else max(1, int(math.floor(float(SEEDS.e) * float(SEEDS.pi))))
+    seen_c = set()
+    for c0, s0 in pool[:n_kl]:
+        if c0 in seen_c:
+            continue
+        seen_c.add(c0)
+        s = refine(s0)
+        c = cut_of(s)
         if c > best_c:
             best, best_c = s, c
-    # φ-pair 2-flip on the winner (seed budget, incremental cut, not n²)
+    # seed-locked breakout from the winner, then refine again
     phi_m = int(float(SEEDS.phi) * 1e6)
-    budget = n * max(3, int(math.floor(float(SEEDS.e) * float(SEEDS.pi))))
-
-    def flip_gain(s: list[int], i: int) -> int:
-        same = 0
-        for j in adj[i]:
-            if s[j] == s[i]:
-                same += 1
-        return 2 * same - len(adj[i])
-
-    s = list(best)
-    cur = best_c
-    for t in range(budget):
-        i = (phi_m * (t + 1)) % n
-        j = (phi_m * (t + 1) * 7 + 27) % n
-        if i == j:
-            continue
-        g = flip_gain(s, i)
-        s[i] = -s[i]
-        g += flip_gain(s, j)
-        if g > 0:
-            s[j] = -s[j]
-            cur += g
-        else:
-            s[i] = -s[i]
-    # one more 1-flip / snap polish
-    s = polish(s)
-    c = cut_of(s)
-    if c > best_c:
-        best, best_c = s, c
-    # seed-locked breakout: flip a φ-subset, re-polish, keep if better
     rounds = max(3, int(math.floor(float(SEEDS.e) * float(SEEDS.pi))))
     stride = max(2, int(math.floor(float(SEEDS.pi))))
     s = list(best)
-    for r in range(rounds):
-        trial = list(s)
-        for i in range(n):
-            x = (phi_m * (r + 1) * (i + 1) + r * 2654435761) & 0xFFFFFFFF
-            if (x >> 16) % stride == 0:
-                trial[i] = -trial[i]
-        trial = polish(trial)
-        tc = cut_of(trial)
-        if tc > best_c:
-            best, best_c, s = trial, tc, trial
+    strides = (2, stride, max(4, int(math.floor(float(SEEDS.e) * float(SEEDS.pi)))))
+    for stride_k in strides:
+        for r in range(rounds):
+            trial = list(s)
+            for i in range(n):
+                x = (phi_m * (r + 1) * (i + 1) + r * 2654435761 + stride_k) & 0xFFFFFFFF
+                if (x >> 16) % stride_k == 0:
+                    trial[i] = -trial[i]
+            trial = refine(trial)
+            tc = cut_of(trial)
+            if tc > best_c:
+                best, best_c, s = trial, tc, trial
     return best_c, best
 
 
