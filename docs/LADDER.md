@@ -37,6 +37,9 @@ It does **not** claim a cryogenic QPU, Hilbert-universal simulation, RSA-scale f
 | Harder QC-for | `python -m fsot_quantum harder` | CKM / PMNS / 2D Ising / nuclear / Gset | required |
 | Physics + QI | `python -m fsot_quantum qi` | 3D Ising / XY / Heisenberg / g−2 / Lean QI fabric | required |
 | Physics + QI II | `python -m fsot_quantum push` | Higgs/Z BR, nuclear, cosmology, Casimir, CHSH/EPR | required |
+| Stale-target audit | `python -m fsot_quantum audit` | vendor vs YR4/PDG; pin untouched | required |
+| Gset family | `python -m fsot_quantum family` | G1–G5 + G22–G23 under 1% | required |
+| Organ export | `python -m fsot_quantum organ` | JSON for neuron-zig skill | required |
 
 Ledgers live in `docs/` and `results/` with the same names.
 
@@ -56,6 +59,8 @@ These are published values. Miss one and the pin is wrong.
 | CKM / PMNS / 2D Ising / nuclear / Higgs set | 20 published | 20/20 inside 0.5% | see `HARDER_QC.md` |
 | Physics + QI I | 16 published + 326 Lean | 16/16 and 326/326 @0.5% | `PHYSICS_QI.md` |
 | Physics + QI II | 22 published + 126 Lean | 22/22 @0.5% vs current literature | `PHYSICS_QI2.md` · `BR_H_GG.md` — stale 0.0785 was the miss |
+| Stale-target audit | 20 cited vs YR4/PDG | 17/20 fold@0.5% vs lit | `STALE_TARGETS.md` — BR_H_gg stale target; V_cb is PDG split; H→Zγ/γγ ~1% |
+| Gset family | G1–G5 + G22–G23 | **7/7 under 1%** | `GSET_FAMILY.md` |
 | Chemistry pin set | — | 68/68 @ 0.5% | — |
 | QM/SM pin set | — | 14/14 @ 0.5% | — |
 | C_factor | \(C_{\mathrm{eff}}\cdot P_{\mathrm{new}}\) | identity | — |

@@ -12,6 +12,9 @@ Field entry: python -m fsot_quantum [cmd]
   harder     harder QC-for questions (CKM, Ising, nuclear, Gset, fabric)
   qi         physics + quantum-information rung (after graphs)
   push       physics + QI push II (CKM/Higgs/nuclear/Casimir/CHSH)
+  audit      stale vendor targets vs PDG/YR4
+  family     Gset G1–G5 + G22–G23 (<1% aspiration)
+  organ      export S/κ/QI JSON for neuron-zig
   stamp      Lean · Coq · Isabelle · F* · Python multiprover
   atlas      full Lean solved atlas
   expand     Lean chem + extra QM
@@ -71,6 +74,15 @@ def main() -> int:
         return m()
     if c in ("push", "qi2"):
         from fsot_quantum.physics_qi2 import main as m
+        return m()
+    if c == "audit":
+        from fsot_quantum.stale_targets import main as m
+        return m()
+    if c == "family":
+        from fsot_quantum.gset_family import main as m
+        return m()
+    if c == "organ":
+        from fsot_quantum.organ_export import main as m
         return m()
     if c == "stamp":
         return subprocess.call(

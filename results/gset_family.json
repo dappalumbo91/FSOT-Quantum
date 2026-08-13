@@ -1,0 +1,98 @@
+{
+  "timestamp": "2026-08-13T03:20:51.312445+00:00",
+  "suite": "gset_family",
+  "pin": "D1D38A",
+  "aspiration": "<1% of published champion",
+  "kill_floor": "5%",
+  "overall_ok": true,
+  "n": 7,
+  "n_under_1": 7,
+  "n_under_5": 7,
+  "wall_seconds": 231.61740909999935,
+  "instances": [
+    {
+      "name": "G1",
+      "n": 800,
+      "m": 19176,
+      "cut_fold": 11563,
+      "published": 11624,
+      "rel_err_pct": 0.524776324845148,
+      "under_1pct": true,
+      "under_5pct": true,
+      "ok": true,
+      "seconds": 29.868232900000294
+    },
+    {
+      "name": "G2",
+      "n": 800,
+      "m": 19176,
+      "cut_fold": 11579,
+      "published": 11620,
+      "rel_err_pct": 0.3528399311531842,
+      "under_1pct": true,
+      "under_5pct": true,
+      "ok": true,
+      "seconds": 35.23599159999867
+    },
+    {
+      "name": "G3",
+      "n": 800,
+      "m": 19176,
+      "cut_fold": 11589,
+      "published": 11622,
+      "rel_err_pct": 0.2839442436757873,
+      "under_1pct": true,
+      "under_5pct": true,
+      "ok": true,
+      "seconds": 32.303590899988194
+    },
+    {
+      "name": "G4",
+      "n": 800,
+      "m": 19176,
+      "cut_fold": 11615,
+      "published": 11646,
+      "rel_err_pct": 0.26618581487205906,
+      "under_1pct": true,
+      "under_5pct": true,
+      "ok": true,
+      "seconds": 30.27733470000385
+    },
+    {
+      "name": "G5",
+      "n": 800,
+      "m": 19176,
+      "cut_fold": 11582,
+      "published": 11631,
+      "rel_err_pct": 0.4212879374086493,
+      "under_1pct": true,
+      "under_5pct": true,
+      "ok": true,
+      "seconds": 34.41453779999574
+    },
+    {
+      "name": "G22",
+      "n": 2000,
+      "m": 19990,
+      "cut_fold": 13245,
+      "published": 13359,
+      "rel_err_pct": 0.8533572872220974,
+      "under_1pct": true,
+      "under_5pct": true,
+      "ok": true,
+      "seconds": 33.24419859999034
+    },
+    {
+      "name": "G23",
+      "n": 2000,
+      "m": 19990,
+      "cut_fold": 13257,
+      "published": 13344,
+      "rel_err_pct": 0.6519784172661871,
+      "under_1pct": true,
+      "under_5pct": true,
+      "ok": true,
+      "seconds": 30.633036999992328
+    }
+  ]
+}

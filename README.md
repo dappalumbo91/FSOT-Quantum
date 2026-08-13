@@ -153,6 +153,9 @@ python -m fsot_quantum forward    # mind architecture + known answers + real QC 
 python -m fsot_quantum harder     # harder QC-for: CKM, Ising, nuclear, G14/G22, Lean fabric
 python -m fsot_quantum qi         # physics + QI: 3D Ising/XY/Heisenberg, g-2, Lean fabric
 python -m fsot_quantum push       # QI II: Higgs/Z, nuclear, cosmology, Casimir, CHSH
+python -m fsot_quantum audit      # stale vendor targets vs PDG/YR4
+python -m fsot_quantum family     # Gset G1–G5 + G22–G23
+python -m fsot_quantum organ      # export organ JSON for neuron-zig
 python -m fsot_quantum stamp      # Lean · Coq · Isabelle · F* · Python
 python -m fsot_quantum atlas      # full Lean solved atlas
 python -m fsot_quantum predict    # preregistered predictions (killable)
@@ -195,6 +198,8 @@ python -m fsot_quantum predict    # preregistered predictions (killable)
 | Physics + QI rung | `results/PHYSICS_QI.md` |
 | Physics + QI push II | `results/PHYSICS_QI2.md` |
 | BR(H→gg) diagnosis | `docs/BR_H_GG.md` |
+| Stale-target audit | `docs/STALE_TARGETS.md` |
+| Gset family G1–G5/G22–G23 | `docs/GSET_FAMILY.md` |
 | Ladder (hits + open residuals) | `docs/LADDER.md` |
 | Gset MaxCut diagnosis | `docs/GSET_DIAGNOSE.md` |
 | Reproduce | `docs/REPRODUCE.md` |
