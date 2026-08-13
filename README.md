@@ -194,6 +194,7 @@ python -m fsot_quantum predict    # preregistered predictions (killable)
 | Harder QC-for (CKM / Ising / Gset / fabric) | `results/HARDER_QC.md` |
 | Physics + QI rung | `results/PHYSICS_QI.md` |
 | Physics + QI push II | `results/PHYSICS_QI2.md` |
+| BR(H→gg) diagnosis | `docs/BR_H_GG.md` |
 | Ladder (hits + open residuals) | `docs/LADDER.md` |
 | Gset MaxCut diagnosis | `docs/GSET_DIAGNOSE.md` |
 | Reproduce | `docs/REPRODUCE.md` |

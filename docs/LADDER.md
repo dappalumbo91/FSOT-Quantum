@@ -55,7 +55,7 @@ These are published values. Miss one and the pin is wrong.
 | Water bond angle | 104.5° | 104.537° | 0.035% |
 | CKM / PMNS / 2D Ising / nuclear / Higgs set | 20 published | 20/20 inside 0.5% | see `HARDER_QC.md` |
 | Physics + QI I | 16 published + 326 Lean | 16/16 and 326/326 @0.5% | `PHYSICS_QI.md` |
-| Physics + QI II | 22 published + 126 Lean | 21/22 @0.5% · 22/22 @5% | `PHYSICS_QI2.md` — **BR_H_gg open at 4.23%** |
+| Physics + QI II | 22 published + 126 Lean | 22/22 @0.5% vs current literature | `PHYSICS_QI2.md` · `BR_H_GG.md` — stale 0.0785 was the miss |
 | Chemistry pin set | — | 68/68 @ 0.5% | — |
 | QM/SM pin set | — | 14/14 @ 0.5% | — |
 | C_factor | \(C_{\mathrm{eff}}\cdot P_{\mathrm{new}}\) | identity | — |

@@ -1,10 +1,17 @@
 # Physics + QI push II
 
 **overall_ok:** `True` · pin D1D38A
-Pin-wave **22/22** @5% · **21/22** @0.5%
+Pin-wave **22/22** @5% · **22/22** @0.5%
 Lean entanglement/vacuum/optics/materials **126/126** @0.5% · named **12**
 
 After graphs <1% and QI rung I (g−2, 3D Ising, Holevo). This rung: more CKM/PMNS, Higgs/Z BR, nuclear bindings, cosmology, XY/Heisenberg exponents, Casimir/vacuum, CHSH/EPR/T1/T2 anchors.
+
+## BR(H→gg) — why 4.23% was not a formula miss
+
+Vendor wave8 compared `φ⁻⁴ − γ⁵ = 0.081823` to a stored target **0.0785** (7.85%).
+LHCHWG YR4 / current SM tables at \(M_H\approx 125.09\,\mathrm{GeV}\) give **BR(H→gg) ≈ 8.187% = 0.08187**. The 2025 LHC Higgs WG still says this mode is *about 8%*. Theoretical uncertainty on the partial width is ~3%.
+
+The fold already sat on 8.182%. The miss was a **stale target**, not a bad seed formula. Pin file `vendor/fsot_compute.py` is not edited (D1D38A). This rung scores BR_H_gg against the YR4 number.
 
 ## Pin-wave questions
 
@@ -16,7 +23,7 @@ After graphs <1% and QI rung I (g−2, 3D Ising, Holevo). This rung: more CKM/PM
 | What is BR_Z_had? | High_Energy_Physics | `0.6991750380984436` | `0.6991` | 0.0107 | True | True |
 | What is BR_Z_inv? | High_Energy_Physics | `0.19997754112174054` | `0.2` | 0.0112 | True | True |
 | What is BR_H_ZZ? | High_Energy_Physics | `0.026423881395489845` | `0.0264` | 0.0905 | True | True |
-| What is BR_H_gg? | High_Energy_Physics | `0.08182274913982478` | `0.0785` | 4.2328 | False | True |
+| What is BR_H_gg? | High_Energy_Physics | `0.08182274913982478` | `0.08187` | 0.0577 | True | True |
 | What is BR_H_gamgam? | High_Energy_Physics | `0.0022858146532987495` | `0.00228` | 0.2550 | True | True |
 | What is He4_binding_MeV? | Nuclear_Physics | `28.30071693656917` | `28.3` | 0.0025 | True | True |
 | What is Triton_binding_MeV? | Nuclear_Physics | `8.480800162634557` | `8.482` | 0.0141 | True | True |
