@@ -28,6 +28,7 @@ Field entry: python -m fsot_quantum [cmd]
   orf        ORF climb: start-to-stop as codon-fold product
   hire3      climb 3: 8-digit factor / dlog p=1e5
   hire4      climb 4: 9-digit factor / SAT-20 / TSP-8 / HHL 5×5 / MIS
+  hire5      climb 5: 10-digit factor / SAT-24 / TSP-9 / HHL 6×6
   formulas   formula list — what each formula solves
   organ      export S/κ/QI JSON for neuron-zig
   stamp      Lean · Coq · Isabelle · F* · Python multiprover
@@ -137,6 +138,9 @@ def main() -> int:
         return m()
     if c in ("hire4", "hire_climb4"):
         from fsot_quantum.hire_climb4 import main as m
+        return m()
+    if c in ("hire5", "hire_climb5"):
+        from fsot_quantum.hire_climb5 import main as m
         return m()
     if c in ("formulas", "catalog"):
         from fsot_quantum.formula_catalog import main as m
