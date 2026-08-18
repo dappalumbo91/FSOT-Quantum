@@ -195,6 +195,8 @@ Not scored as one number, on purpose:
 - Hubble tension is Lean **BH→WH bubble-bleed**: one global rate 68.44; Planck depleted sector **0.024%**; SH0ES inflated sector **1.00%**. [`H0_TENSION.md`](H0_TENSION.md) · [FSOT-2.1-Lean §7.2](https://github.com/dappalumbo91/FSOT-2.1-Lean).
 - Contested open-science panel is **14/14**: [`CONTESTED_SECTORS.md`](CONTESTED_SECTORS.md).
 - Leftovers diagnosed: [`OPEN_REMAINING.md`](OPEN_REMAINING.md). DESI \(w_0/w_a\) is the **BAO** lane (0.37% / 0.28%). \(\alpha_s\) is inside the 0.9% vendor band. Exclusive \(V_{cb}\) combined is a blend (1.1σ). **G17 still open** (31 edges).
+- Formula catalog: [`FORMULA_LIST.md`](FORMULA_LIST.md) — engine, tension solvers, and 216 pin-wave formulas.
+- Multiprover stamp **FSOT_QUANTUM_MULTIPROVER_OK** (Lean · Coq · Isabelle · F\* · Python): [`MULTIPROVER_VERIFICATION.md`](MULTIPROVER_VERIFICATION.md).
 - Vendor wave8 `BR_H_gg` field still stale (0.0785). Fold already matches YR4. Pin not edited.
 - Hilbert fragments exist as **optional bridges**. They are not the scale path.
 - Tiny Shor is tiny. No RSA-scale claim.

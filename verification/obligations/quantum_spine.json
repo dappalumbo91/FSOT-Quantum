@@ -235,6 +235,41 @@
       "isabelle": "fold_work_k_eight / fold_work_k_sixtyfour",
       "fstar": "fold_work_k_eight / fold_work_k_sixtyfour",
       "python": "fold_work_k_int(8)==47 and fold_work_k_int(64)==180"
+    },
+    {
+      "id": "Q-FORM-001",
+      "name": "V_cb_inclusive_QM",
+      "statement": "S(QM)·(1/C_eff−1) matches PDG inclusive 0.0422 within 0.5%",
+      "lean": "runtime (float)",
+      "python": "inclusive V_cb rel <= 0.5%"
+    },
+    {
+      "id": "Q-FORM-002",
+      "name": "H0_bubble_bleed_frac",
+      "statement": "bleed_frac = H0_global/67.4 − 1 and Planck tool density −1 within 0.5%",
+      "lean": "Formulas.bleedMilli = 15431",
+      "python": "H0 Planck depleted sector rel <= 0.5%"
+    },
+    {
+      "id": "Q-FORM-003",
+      "name": "wa_bao_DESI",
+      "statement": "wa_cmb + w0_bao·(G/π) matches DESI DR2 −1.018 within 0.5%",
+      "lean": "runtime (float)",
+      "python": "wa_bao rel <= 0.5%"
+    },
+    {
+      "id": "Q-FORM-004",
+      "name": "r_c_Fornax",
+      "statement": "η_eff·φ − POOF matches Fornax 0.6 kpc within 0.5%",
+      "lean": "runtime (float)",
+      "python": "r_c rel <= 0.5%"
+    },
+    {
+      "id": "Q-FORM-005",
+      "name": "formula_catalog_present",
+      "statement": "formula catalog lists engine + tension + pin-wave rows",
+      "lean": "Formulas.formula_surface",
+      "python": "catalog n_pin_wave >= 50 and derived >= 15"
     }
   ]
 }

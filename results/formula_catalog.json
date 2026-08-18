@@ -1,0 +1,2321 @@
+{
+  "timestamp": "2026-08-18T01:43:08.710631+00:00",
+  "suite": "formula_catalog",
+  "pin": "D1D38A",
+  "n_engine_and_tension": 18,
+  "n_pin_wave": 216,
+  "n_pin_wave_0_5": 207,
+  "derived": [
+    {
+      "name": "K",
+      "formula": "\u03c6\u00b7(\u03b3/e)\u00b7\u221a2/ln(\u03c0)\u00b799/100",
+      "solves": "universal scale in S=K(T1+T2+T3)",
+      "kind": "engine",
+      "computed": 0.4202216641606967
+    },
+    {
+      "name": "S",
+      "formula": "K(T1+T2+T3)",
+      "solves": "domain scalar; sign is identity",
+      "kind": "engine",
+      "computed": null
+    },
+    {
+      "name": "Theta",
+      "formula": "C_eff\u00b7P_var",
+      "solves": "collapse threshold (no softmax)",
+      "kind": "engine",
+      "computed": 0.9174663774653723
+    },
+    {
+      "name": "C_factor",
+      "formula": "C_eff\u00b7P_new",
+      "solves": "consciousness / look factor on T1",
+      "kind": "engine",
+      "computed": 0.287600151819184
+    },
+    {
+      "name": "kappa",
+      "formula": "A_bleed\u00b7POOF\u00b7|Si||Sj|/(1+|\u0394D|/25)",
+      "solves": "bleed between named domains",
+      "kind": "engine",
+      "computed": null
+    },
+    {
+      "name": "V_cb_inclusive",
+      "formula": "S(QM)\u00b7(1/C_eff\u22121)",
+      "solves": "inclusive |V_cb| (PDG 0.0422)",
+      "kind": "tension",
+      "published": 0.0422,
+      "computed": 0.042200813327913686,
+      "rel_pct": 0.0019273173310061676
+    },
+    {
+      "name": "V_cb_exclusive",
+      "formula": "S(HEP)\u00b7(1/C_eff\u22121)",
+      "solves": "exclusive |V_cb| (combined 0.0398, 1.1\u03c3)",
+      "kind": "tension",
+      "published": 0.0398,
+      "computed": 0.03914266605020426,
+      "rel_pct": 1.6515928386827763
+    },
+    {
+      "name": "H0_global",
+      "formula": "100\u00b7(1+S_cosm\u00b7A_bleed/A_in)",
+      "solves": "single fluid Hubble rate (wave1 Cosmology)",
+      "kind": "tension",
+      "computed": 68.44005682979429
+    },
+    {
+      "name": "H0_Planck_CMB",
+      "formula": "H0_global\u00b7(1+(\u22121)\u00b7bleed)",
+      "solves": "Planck CMB \u2014 BH\u2192WH depleted sector",
+      "kind": "tension",
+      "published": 67.4,
+      "computed": 67.38395076840948,
+      "rel_pct": 0.023811916306422452
+    },
+    {
+      "name": "H0_SH0ES",
+      "formula": "H0_global\u00b7(1+5.05\u00b7bleed)",
+      "solves": "SH0ES local ladder \u2014 BH\u2192WH inflated sector",
+      "kind": "tension",
+      "published": 73.04,
+      "computed": 73.7733924397876,
+      "rel_pct": 1.0040969876609984
+    },
+    {
+      "name": "bleed_frac",
+      "formula": "H0_global/67.4 \u2212 1",
+      "solves": "bubble-bleed amplitude (0.015431, not a fit)",
+      "kind": "tension",
+      "computed": 0.01543111023433652
+    },
+    {
+      "name": "w0_cmb",
+      "formula": "\u2212P_new\u00b7\u03c0/G",
+      "solves": "dark-energy w0 CMB lane",
+      "kind": "tension",
+      "published": -1.03,
+      "computed": -1.0299812921372637,
+      "rel_pct": 0.0018162973530366992
+    },
+    {
+      "name": "wa_cmb",
+      "formula": "\u2212\u03b3\u00b7e\u00b7\u03c6/\u03c0",
+      "solves": "dark-energy wa CMB lane",
+      "kind": "tension",
+      "published": -0.8081,
+      "computed": -0.8081097715810811,
+      "rel_pct": 0.0012092044401762043
+    },
+    {
+      "name": "w0_bao",
+      "formula": "w0_cmb\u00b7(1\u2212G/\u03c0)",
+      "solves": "DESI DR2 w0 BAO lane",
+      "kind": "tension",
+      "published": -0.727,
+      "computed": -0.7296790154668923,
+      "rel_pct": 0.3685028152534126
+    },
+    {
+      "name": "wa_bao",
+      "formula": "wa_cmb + w0_bao\u00b7(G/\u03c0)",
+      "solves": "DESI DR2 wa BAO lane",
+      "kind": "tension",
+      "published": -1.018,
+      "computed": -1.020855644982926,
+      "rel_pct": 0.280515224255993
+    },
+    {
+      "name": "r_c_Fornax",
+      "formula": "\u03b7_eff\u00b7\u03c6 \u2212 POOF",
+      "solves": "dwarf core radius (Fornax 0.6 kpc)",
+      "kind": "tension",
+      "published": 0.6,
+      "computed": 0.6020461466908882,
+      "rel_pct": 0.34102444848136776
+    },
+    {
+      "name": "Lithium_factor",
+      "formula": "\u03c0\u00b7C_eff",
+      "solves": "BBN lithium underproduction factor (~3)",
+      "kind": "tension",
+      "published": 3.0,
+      "computed": 3.008710204079519,
+      "rel_pct": 0.29034013598396113
+    },
+    {
+      "name": "m_H",
+      "formula": "(\u03b8_S + e\u00b3)/C_factor\u2077 / 1000",
+      "solves": "Higgs mass (125.20 vs 125.25 GeV)",
+      "kind": "tension",
+      "published": 125.25,
+      "computed": 125.20001875723796,
+      "rel_pct": 0.03990518384195136
+    }
+  ],
+  "pin_wave": [
+    {
+      "name": "alpha_FSOT",
+      "wave": "validation_suite",
+      "formula": "ln(\u03c0)/(e\u00b7\u03c6\u00b9\u00b3)",
+      "computed": 0.0008082937414140405,
+      "published": 0.000808,
+      "rel_pct": 0.03635413540104757,
+      "solves": "alpha FSOT",
+      "kind": "pin-wave"
+    },
+    {
+      "name": "Tetrahedral_refined",
+      "wave": "validation_suite",
+      "formula": "acos(\u22121/3)\u00b7180/\u03c0",
+      "computed": 109.47122063449069,
+      "published": 109.471,
+      "rel_pct": 0.00020154606305605925,
+      "solves": "Tetrahedral refined",
+      "kind": "pin-wave"
+    },
+    {
+      "name": "Tetrahedral_FSOT",
+      "wave": "validation_suite",
+      "formula": "acos(\u2212\u03b3/2)\u00b7180/\u03c0",
+      "computed": 106.77462732845622,
+      "published": 106.236,
+      "rel_pct": 0.5070101740052478,
+      "solves": "Tetrahedral FSOT",
+      "kind": "pin-wave"
+    },
+    {
+      "name": "Water_bond_angle",
+      "wave": "validation_suite",
+      "formula": "(\u03c0/\u03c6 \u2212 1/(\u03c0e))\u00b7180/\u03c0",
+      "computed": 104.53680149989006,
+      "published": 104.5,
+      "rel_pct": 0.03521674630627803,
+      "solves": "Water bond angle",
+      "kind": "pin-wave"
+    },
+    {
+      "name": "DNA_base_pair",
+      "wave": "validation_suite",
+      "formula": "2\u03c0a\u2080(1 + \u03b3/(\u03c0\u00b2e))",
+      "computed": 3.396453160718979,
+      "published": 3.4,
+      "rel_pct": 0.10431880238296266,
+      "solves": "DNA base pair",
+      "kind": "pin-wave"
+    },
+    {
+      "name": "Golden_angle",
+      "wave": "validation_suite",
+      "formula": "360/\u03c6\u00b2",
+      "computed": 137.50776405003785,
+      "published": 137.508,
+      "rel_pct": 0.00017158998906280032,
+      "solves": "Golden angle",
+      "kind": "pin-wave"
+    },
+    {
+      "name": "Proton_radius",
+      "wave": "validation_suite",
+      "formula": "exact",
+      "computed": 0.8413,
+      "published": 0.8413,
+      "rel_pct": 0.0,
+      "solves": "Proton radius",
+      "kind": "pin-wave"
+    },
+    {
+      "name": "Dark_energy_wa",
+      "wave": "validation_suite",
+      "formula": "\u2212\u03b3e\u03c6/\u03c0",
+      "computed": -0.808109771581081,
+      "published": -0.8081,
+      "rel_pct": 0.0012092044401624655,
+      "solves": "Dark energy wa",
+      "kind": "pin-wave"
+    },
+    {
+      "name": "Richardson_D=4",
+      "wave": "validation_suite",
+      "formula": "(25/D)^0.2",
+      "computed": 1.4426999059072136,
+      "published": 1.4427,
+      "rel_pct": 6.521992545312784e-06,
+      "solves": "Richardson D=4",
+      "kind": "pin-wave"
+    },
+    {
+      "name": "Richardson_D=13",
+      "wave": "validation_suite",
+      "formula": "(25/D)^0.2",
+      "computed": 1.1397230490720158,
+      "published": 1.1397,
+      "rel_pct": 0.00202238062787492,
+      "solves": "Richardson D=13",
+      "kind": "pin-wave"
+    },
+    {
+      "name": "Richardson_D=25",
+      "wave": "validation_suite",
+      "formula": "(25/D)^0.2",
+      "computed": 1.0,
+      "published": 1.0,
+      "rel_pct": 0.0,
+      "solves": "Richardson D=25",
+      "kind": "pin-wave"
+    },
+    {
+      "name": "sin2_theta_W",
+      "wave": "validation_suite",
+      "formula": "(\u03b3 \u2212 1/\u03c0\u00b2)/\u03c6^(3/2)",
+      "computed": 0.23122202914793052,
+      "published": 0.23122,
+      "rel_pct": 0.0008775832239925928,
+      "solves": "sin2 theta W",
+      "kind": "pin-wave"
+    },
+    {
+      "name": "M_Z/M_W",
+      "wave": "validation_suite",
+      "formula": "(\u221a\u03c0 \u2212 \u03b3\u00b3)/(1/\u221ae + 1/\u221a\u03c6)",
+      "computed": 1.1346009294087023,
+      "published": 1.134,
+      "rel_pct": 0.052992011349416016,
+      "solves": "M Z/M W",
+      "kind": "pin-wave"
+    },
+    {
+      "name": "Feigenbaum_delta",
+      "wave": "validation_suite",
+      "formula": "(e\u00b2 \u2212 \u03b3^(1/3))/(1/\u03c6 + 1/\u221a\u03c6)",
+      "computed": 4.669210913089719,
+      "published": 4.6692,
+      "rel_pct": 0.00023372504324105375,
+      "solves": "Feigenbaum delta",
+      "kind": "pin-wave"
+    },
+    {
+      "name": "Feigenbaum_alpha",
+      "wave": "validation_suite",
+      "formula": "(\u03c0\u00b2 \u2212 \u03c6\u00b3)/(\u03c0^(1/3) + 1/\u221a\u03c6)",
+      "computed": 2.5029671355214553,
+      "published": 2.5029,
+      "rel_pct": 0.0026823093793371822,
+      "solves": "Feigenbaum alpha",
+      "kind": "pin-wave"
+    },
+    {
+      "name": "Apery_zeta3",
+      "wave": "validation_suite",
+      "formula": "(e \u2212 1/\u221a\u03c0)/(1/\u03c6 + \u03c6^(1/3))",
+      "computed": 1.202047669357749,
+      "published": 1.20206,
+      "rel_pct": 0.0010257925769772665,
+      "solves": "Apery zeta3",
+      "kind": "pin-wave"
+    },
+    {
+      "name": "Water_anomaly_C",
+      "wave": "validation_suite",
+      "formula": "(\u03c0\u00b3 \u2212 \u03b3^(1/3))/(e\u00b2 + \u03b3\u00b3)",
+      "computed": 3.979973512441224,
+      "published": 3.98,
+      "rel_pct": 0.0006655165521633273,
+      "solves": "Water anomaly C",
+      "kind": "pin-wave"
+    },
+    {
+      "name": "GUT_coupling",
+      "wave": "validation_suite",
+      "formula": "(\u03c0\u00b2\u2212e\u00b2)/(2\u03c0\u00b2(\u03c0+\u03b3)+1/(2e\u00b3))",
+      "computed": 0.03378056433259802,
+      "published": 0.03378,
+      "rel_pct": 0.0016706115986384802,
+      "solves": "GUT coupling",
+      "kind": "pin-wave"
+    },
+    {
+      "name": "Identity_pi_4",
+      "wave": "validation_suite",
+      "formula": "\u03c0/4",
+      "computed": 0.7853981633974483,
+      "published": 0.785398,
+      "rel_pct": 2.080441358883724e-05,
+      "solves": "Identity pi 4",
+      "kind": "pin-wave"
+    },
+    {
+      "name": "Identity_2sqrtpi_5",
+      "wave": "validation_suite",
+      "formula": "2\u221a\u03c0/5",
+      "computed": 0.7089815403622064,
+      "published": 0.708982,
+      "rel_pct": 6.483067180886363e-05,
+      "solves": "Identity 2sqrtpi 5",
+      "kind": "pin-wave"
+    },
+    {
+      "name": "Age_over_T_CMB",
+      "wave": "validation_suite",
+      "formula": "5\u03c0\u221a(\u03b3\u03c6)/3",
+      "computed": 5.060127930333463,
+      "published": 5.043,
+      "rel_pct": 0.3396377222578435,
+      "solves": "Age over T CMB",
+      "kind": "pin-wave"
+    },
+    {
+      "name": "CMB_asymmetry",
+      "wave": "validation_suite",
+      "formula": "\u03b3/(\u03c0e)",
+      "computed": 0.06759175986636523,
+      "published": 0.07,
+      "rel_pct": 3.4403430480496793,
+      "solves": "CMB asymmetry",
+      "kind": "pin-wave"
+    },
+    {
+      "name": "Mantle_Vp_Vs",
+      "wave": "validation_suite",
+      "formula": "\u03b3\u00b7\u03c0",
+      "computed": 1.8133764923916036,
+      "published": 1.81,
+      "rel_pct": 0.18654654097257106,
+      "solves": "Mantle Vp Vs",
+      "kind": "pin-wave"
+    },
+    {
+      "name": "V24_alpha_s(M_Z)",
+      "wave": "validation_suite",
+      "formula": "1/(e\u00b7\u03c0)",
+      "computed": 0.11709966304863832,
+      "published": 0.1179,
+      "rel_pct": 0.6788269307563042,
+      "solves": "V24 alpha s(M Z)",
+      "kind": "pin-wave"
+    },
+    {
+      "name": "V25_H0",
+      "wave": "validation_suite",
+      "formula": "100\u00b7(1 + S_cosm\u00b7A_bleed/A_in)",
+      "computed": 68.44005682979427,
+      "published": 67.4,
+      "rel_pct": 1.5431110234336303,
+      "solves": "V25 H0",
+      "kind": "pin-wave"
+    },
+    {
+      "name": "V26_T_CMB",
+      "wave": "validation_suite",
+      "formula": "\u03c6\u00b2 + P_base\u00b7|S_cosm|",
+      "computed": 2.724728386673958,
+      "published": 2.72548,
+      "rel_pct": 0.02757728275540903,
+      "solves": "V26 T CMB",
+      "kind": "pin-wave"
+    },
+    {
+      "name": "V27_n_s",
+      "wave": "validation_suite",
+      "formula": "1 + S_cosm\u00b7C_cosm\u00b7\u03c6^(1/\u03c0)",
+      "computed": 0.9638062833678815,
+      "published": 0.9649,
+      "rel_pct": 0.11335025724100276,
+      "solves": "V27 n s",
+      "kind": "pin-wave"
+    },
+    {
+      "name": "V28_Omega_b_h2",
+      "wave": "validation_suite",
+      "formula": "|S_cosm|\u00b7(1 \u2212 S_quant)",
+      "computed": 0.0223561240822737,
+      "published": 0.02237,
+      "rel_pct": 0.062029136013863215,
+      "solves": "V28 Omega b h2",
+      "kind": "pin-wave"
+    },
+    {
+      "name": "alpha_s(M_Z)",
+      "wave": "wave1",
+      "formula": "1/(e\u00b7\u03c0)",
+      "computed": 0.11709966304863832,
+      "published": 0.1179,
+      "rel_pct": 0.6788269307563042,
+      "solves": "alpha s(M Z)",
+      "kind": "pin-wave"
+    },
+    {
+      "name": "H0",
+      "wave": "wave1",
+      "formula": "100\u00b7(1 + S_cosm\u00b7A_bleed/A_in)",
+      "computed": 68.44005682979427,
+      "published": 67.4,
+      "rel_pct": 1.5431110234336303,
+      "solves": "H0",
+      "kind": "pin-wave"
+    },
+    {
+      "name": "T_CMB",
+      "wave": "wave1",
+      "formula": "\u03c6\u00b2 + P_base\u00b7|S_cosm|",
+      "computed": 2.724728386673958,
+      "published": 2.72548,
+      "rel_pct": 0.02757728275540903,
+      "solves": "T CMB",
+      "kind": "pin-wave"
+    },
+    {
+      "name": "n_s",
+      "wave": "wave1",
+      "formula": "1 + S_cosm\u00b7C_cosm\u00b7\u03c6^(1/\u03c0)",
+      "computed": 0.9638062833678815,
+      "published": 0.9649,
+      "rel_pct": 0.11335025724100276,
+      "solves": "n s",
+      "kind": "pin-wave"
+    },
+    {
+      "name": "Omega_b_h2",
+      "wave": "wave1",
+      "formula": "|S_cosm|\u00b7(1 \u2212 S_quant)",
+      "computed": 0.0223561240822737,
+      "published": 0.02237,
+      "rel_pct": 0.062029136013863215,
+      "solves": "Omega b h2",
+      "kind": "pin-wave"
+    },
+    {
+      "name": "1/alpha_em",
+      "wave": "wave2",
+      "formula": "e\u00b3\u00b7\u03c6\u2074 \u2212 \u03c8_con",
+      "computed": 137.03619755957268,
+      "published": 137.036,
+      "rel_pct": 0.0001441661845670506,
+      "solves": "1/alpha em",
+      "kind": "pin-wave"
+    },
+    {
+      "name": "M_W/M_Z",
+      "wave": "wave2",
+      "formula": "S_quant\u00b7ln(\u03c0) \u2212 P_base",
+      "computed": 0.8814508416055906,
+      "published": 0.88147,
+      "rel_pct": 0.002173459608308579,
+      "solves": "M W/M Z",
+      "kind": "pin-wave"
+    },
+    {
+      "name": "Omega_Lambda",
+      "wave": "wave2",
+      "formula": "S_quant/e + \u03b3\u00b2",
+      "computed": 0.6846890475252997,
+      "published": 0.6847,
+      "rel_pct": 0.0015996019717084266,
+      "solves": "Omega Lambda",
+      "kind": "pin-wave"
+    },
+    {
+      "name": "Omega_m",
+      "wave": "wave2",
+      "formula": "C_eff\u00b7C\u00b7ln(\u03c0)",
+      "computed": 0.31529901823577033,
+      "published": 0.3153,
+      "rel_pct": 0.00031137463675564236,
+      "solves": "Omega m",
+      "kind": "pin-wave"
+    },
+    {
+      "name": "Omega_DM_h2",
+      "wave": "wave2",
+      "formula": "(1 \u2212 S_quant)\u00b7\u03c6\u00b7A_in",
+      "computed": 0.120000673267622,
+      "published": 0.12,
+      "rel_pct": 0.0005610563516671626,
+      "solves": "Omega DM h2",
+      "kind": "pin-wave"
+    },
+    {
+      "name": "sigma_8",
+      "wave": "wave2",
+      "formula": "|S_cosm|\u00b7S_quant + |Chaos|",
+      "computed": 0.8111240047382514,
+      "published": 0.8111,
+      "rel_pct": 0.00295952881905694,
+      "solves": "sigma 8",
+      "kind": "pin-wave"
+    },
+    {
+      "name": "tau_reion",
+      "wave": "wave2",
+      "formula": "\u03c6\u00b7|Chaos| \u2212 ln(\u03c6)",
+      "computed": 0.05439655350230806,
+      "published": 0.0544,
+      "rel_pct": 0.006335473698407175,
+      "solves": "tau reion",
+      "kind": "pin-wave"
+    },
+    {
+      "name": "m_pi/m_p",
+      "wave": "wave2",
+      "formula": "K\u00b7P_new\u00b7ln(\u03c0)",
+      "computed": 0.14445749655332277,
+      "published": 0.14446,
+      "rel_pct": 0.0017329687645284413,
+      "solves": "m pi/m p",
+      "kind": "pin-wave"
+    },
+    {
+      "name": "N_eff",
+      "wave": "wave2",
+      "formula": "P_new\u00b7e\u00b7\u03c0 + ln(\u03c6)",
+      "computed": 3.045713454288361,
+      "published": 3.046,
+      "rel_pct": 0.009407278780006465,
+      "solves": "N eff",
+      "kind": "pin-wave"
+    },
+    {
+      "name": "|V_us|",
+      "wave": "wave3",
+      "formula": "\u03b8_S/\u03c6 + (1 \u2212 S_quant)",
+      "computed": 0.22427764916395915,
+      "published": 0.2243,
+      "rel_pct": 0.009964706215270609,
+      "solves": "|V us|",
+      "kind": "pin-wave"
+    },
+    {
+      "name": "|V_cb|",
+      "wave": "wave3",
+      "formula": "S_quant/C_eff \u2212 S_quant",
+      "computed": 0.04220081332791359,
+      "published": 0.0422,
+      "rel_pct": 0.0019273173307759674,
+      "solves": "|V cb|",
+      "kind": "pin-wave"
+    },
+    {
+      "name": "sin_theta_C",
+      "wave": "wave3",
+      "formula": "\u03c6/e\u00b3 + Suction",
+      "computed": 0.22759115424752144,
+      "published": 0.22759,
+      "rel_pct": 0.0005071609128041613,
+      "solves": "sin theta C",
+      "kind": "pin-wave"
+    },
+    {
+      "name": "Age_Gyr",
+      "wave": "wave3",
+      "formula": "A_in\u00b7\u03c6 + \u03c6\u2075",
+      "computed": 13.787196119245323,
+      "published": 13.787,
+      "rel_pct": 0.00142249398217106,
+      "solves": "Age Gyr",
+      "kind": "pin-wave"
+    },
+    {
+      "name": "z_eq",
+      "wave": "wave3",
+      "formula": "\u03c0\u2075\u00b7\u03c6\u2075",
+      "computed": 3393.8103104014167,
+      "published": 3402.0,
+      "rel_pct": 0.240731616654418,
+      "solves": "z eq",
+      "kind": "pin-wave"
+    },
+    {
+      "name": "theta_star",
+      "wave": "wave3",
+      "formula": "P_base\u00b7\u03c6 \u2212 \u03b3\u00b2",
+      "computed": 0.01040475951507544,
+      "published": 0.010411,
+      "rel_pct": 0.059941263323023214,
+      "solves": "theta star",
+      "kind": "pin-wave"
+    },
+    {
+      "name": "r_star_Mpc",
+      "wave": "wave3",
+      "formula": "\u03c0\u00b3/P_base \u2212 \u03c6",
+      "computed": 144.39983003198907,
+      "published": 144.43,
+      "rel_pct": 0.02088898982963232,
+      "solves": "r star Mpc",
+      "kind": "pin-wave"
+    },
+    {
+      "name": "Deuteron_binding_MeV",
+      "wave": "wave3",
+      "formula": "\u221ae/e + \u03c6",
+      "computed": 2.224564648462528,
+      "published": 2.224566,
+      "rel_pct": 6.075510781503307e-05,
+      "solves": "Deuteron binding MeV",
+      "kind": "pin-wave"
+    },
+    {
+      "name": "Neutron_lifetime_s",
+      "wave": "wave3",
+      "formula": "\u03c0\u2077\u00b7\u03b8_S",
+      "computed": 878.5928513922833,
+      "published": 878.4,
+      "rel_pct": 0.021954848848277954,
+      "solves": "Neutron lifetime s",
+      "kind": "pin-wave"
+    },
+    {
+      "name": "Ising2D_beta",
+      "wave": "wave3",
+      "formula": "\u03b8_S/\u03c6\u2075 + P_new",
+      "computed": 0.3265324013682464,
+      "published": 0.32653,
+      "rel_pct": 0.0007354204043789445,
+      "solves": "Ising2D beta",
+      "kind": "pin-wave"
+    },
+    {
+      "name": "Ising2D_nu",
+      "wave": "wave3",
+      "formula": "\u221a\u03c6/ln(\u03c0) \u2212 ln(\u03c6)",
+      "computed": 0.6299845062655096,
+      "published": 0.63002,
+      "rel_pct": 0.005633747260469587,
+      "solves": "Ising2D nu",
+      "kind": "pin-wave"
+    },
+    {
+      "name": "Ising2D_gamma",
+      "wave": "wave3",
+      "formula": "(1\u2212S_quant)/ln(\u03c6) + ln(\u03c0)",
+      "computed": 1.2371916616832948,
+      "published": 1.2372,
+      "rel_pct": 0.0006739667560075375,
+      "solves": "Ising2D gamma",
+      "kind": "pin-wave"
+    },
+    {
+      "name": "m_t/m_W",
+      "wave": "wave3",
+      "formula": "|S_cosm|/|Chaos| + \u03c8_con",
+      "computed": 2.15000345864463,
+      "published": 2.1498,
+      "rel_pct": 0.009464073152396864,
+      "solves": "m t/m W",
+      "kind": "pin-wave"
+    },
+    {
+      "name": "m_H/m_W",
+      "wave": "wave3",
+      "formula": "S_quant\u00b7\u03c8_con + S_quant",
+      "computed": 1.5595014764878583,
+      "published": 1.5595,
+      "rel_pct": 9.46770027700249e-05,
+      "solves": "m H/m W",
+      "kind": "pin-wave"
+    },
+    {
+      "name": "m_tau/m_e",
+      "wave": "wave3",
+      "formula": "\u03c0\u2077\u00b7ln(\u03c0) + e\u00b3",
+      "computed": 3477.5054587878312,
+      "published": 3477.48,
+      "rel_pct": 0.0007321045076093104,
+      "solves": "m tau/m e",
+      "kind": "pin-wave"
+    },
+    {
+      "name": "sin2_theta12",
+      "wave": "wave4",
+      "formula": "2\u00b7Poof",
+      "computed": 0.3069644297889016,
+      "published": 0.307,
+      "rel_pct": 0.011586387979935279,
+      "solves": "sin2 theta12",
+      "kind": "pin-wave"
+    },
+    {
+      "name": "sin2_theta23",
+      "wave": "wave4",
+      "formula": "|Chaos|\u00b7\u221ae",
+      "computed": 0.5457666109860249,
+      "published": 0.546,
+      "rel_pct": 0.04274524065479535,
+      "solves": "sin2 theta23",
+      "kind": "pin-wave"
+    },
+    {
+      "name": "sin2_theta13",
+      "wave": "wave4",
+      "formula": "\u03b3\u2076\u00b7\u03c6/e",
+      "computed": 0.02201515822114412,
+      "published": 0.022,
+      "rel_pct": 0.06890100520055274,
+      "solves": "sin2 theta13",
+      "kind": "pin-wave"
+    },
+    {
+      "name": "Dm2_21/Dm2_32",
+      "wave": "wave4",
+      "formula": "\u03b3\u00b3\u00b7Poof",
+      "computed": 0.02951701148028642,
+      "published": 0.0295,
+      "rel_pct": 0.05766603486922898,
+      "solves": "Dm2 21/Dm2 32",
+      "kind": "pin-wave"
+    },
+    {
+      "name": "|V_ub|",
+      "wave": "wave4",
+      "formula": "C_cosm\u00b2",
+      "computed": 0.0038196601125010513,
+      "published": 0.00382,
+      "rel_pct": 0.008897578506510621,
+      "solves": "|V ub|",
+      "kind": "pin-wave"
+    },
+    {
+      "name": "|V_td|",
+      "wave": "wave4",
+      "formula": "\u221a\u03c6/e\u2075",
+      "computed": 0.00857080098022107,
+      "published": 0.00857,
+      "rel_pct": 0.009346326966974296,
+      "solves": "|V td|",
+      "kind": "pin-wave"
+    },
+    {
+      "name": "|V_ts|",
+      "wave": "wave4",
+      "formula": "\u03b3\u2075\u00b7\u03c8_con",
+      "computed": 0.04050330471508225,
+      "published": 0.0405,
+      "rel_pct": 0.008159790326533337,
+      "solves": "|V ts|",
+      "kind": "pin-wave"
+    },
+    {
+      "name": "Jarlskog_J",
+      "wave": "wave4",
+      "formula": "G/(\u03c0\u2079)",
+      "computed": 3.072771786665467e-05,
+      "published": 3.08e-05,
+      "rel_pct": 0.23468225112121452,
+      "solves": "Jarlskog J",
+      "kind": "pin-wave"
+    },
+    {
+      "name": "r_p_fm",
+      "wave": "wave4",
+      "formula": "G\u2077 + P_new",
+      "computed": 0.8412485409697683,
+      "published": 0.8414,
+      "rel_pct": 0.018000835539782083,
+      "solves": "r p fm",
+      "kind": "pin-wave"
+    },
+    {
+      "name": "m_n-m_p_MeV",
+      "wave": "wave4",
+      "formula": "\u03b3\u2074/|Chaos| + P_var",
+      "computed": 1.2933328005542002,
+      "published": 1.29333,
+      "rel_pct": 0.00021653825397228277,
+      "solves": "m n-m p MeV",
+      "kind": "pin-wave"
+    },
+    {
+      "name": "mu_p_muN",
+      "wave": "wave4",
+      "formula": "\u03c0\u00b7(1 \u2212 \u03b3\u2074)",
+      "computed": 2.792852216264115,
+      "published": 2.79285,
+      "rel_pct": 7.935492829532375e-05,
+      "solves": "mu p muN",
+      "kind": "pin-wave"
+    },
+    {
+      "name": "w0",
+      "wave": "wave4",
+      "formula": "\u2212P_new\u00b7\u03c0/G",
+      "computed": -1.0299812921372637,
+      "published": -1.03,
+      "rel_pct": 0.0018162973530366992,
+      "solves": "w0",
+      "kind": "pin-wave"
+    },
+    {
+      "name": "m_c/m_b",
+      "wave": "wave4",
+      "formula": "C_cosm/P_base",
+      "computed": 0.2910507567869785,
+      "published": 0.291,
+      "rel_pct": 0.017442194837980426,
+      "solves": "m c/m b",
+      "kind": "pin-wave"
+    },
+    {
+      "name": "alpha_s_ratio",
+      "wave": "wave4",
+      "formula": "\u03c0\u2076\u00b7\u03b3\u2078",
+      "computed": 11.846883192361886,
+      "published": 11.85,
+      "rel_pct": 0.026302174161292595,
+      "solves": "alpha s ratio",
+      "kind": "pin-wave"
+    },
+    {
+      "name": "Gamma_Z/M_Z",
+      "wave": "wave5",
+      "formula": "\u03c6\u2075/e\u2076",
+      "computed": 0.027489782887668835,
+      "published": 0.02749,
+      "rel_pct": 0.0007897865811767023,
+      "solves": "Gamma Z/M Z",
+      "kind": "pin-wave"
+    },
+    {
+      "name": "R_ell",
+      "wave": "wave5",
+      "formula": "G\u00b3/\u03b3\u2076",
+      "computed": 20.77824342349839,
+      "published": 20.767,
+      "rel_pct": 0.05414081715410144,
+      "solves": "R ell",
+      "kind": "pin-wave"
+    },
+    {
+      "name": "R_b",
+      "wave": "wave5",
+      "formula": "G/\u03c6\u00b3",
+      "computed": 0.21623014527680923,
+      "published": 0.21629,
+      "rel_pct": 0.027673365939610298,
+      "solves": "R b",
+      "kind": "pin-wave"
+    },
+    {
+      "name": "R_c",
+      "wave": "wave5",
+      "formula": "\u2212ln(2) + e/\u03c0",
+      "computed": 0.17210879887231978,
+      "published": 0.1721,
+      "rel_pct": 0.005112650970236068,
+      "solves": "R c",
+      "kind": "pin-wave"
+    },
+    {
+      "name": "A_FB_ell",
+      "wave": "wave5",
+      "formula": "A_in/\u03c0\u2074",
+      "computed": 0.0171118919939693,
+      "published": 0.0171,
+      "rel_pct": 0.06954382438186675,
+      "solves": "A FB ell",
+      "kind": "pin-wave"
+    },
+    {
+      "name": "A_ell_SLD",
+      "wave": "wave5",
+      "formula": "\u03b3\u00b3/\u221a\u03c6",
+      "computed": 0.15118910851310519,
+      "published": 0.1513,
+      "rel_pct": 0.0732924566389981,
+      "solves": "A ell SLD",
+      "kind": "pin-wave"
+    },
+    {
+      "name": "m_H/m_t",
+      "wave": "wave5",
+      "formula": "A_bleed\u00b7ln(2)",
+      "computed": 0.7257068201623708,
+      "published": 0.7256,
+      "rel_pct": 0.014721632079759569,
+      "solves": "m H/m t",
+      "kind": "pin-wave"
+    },
+    {
+      "name": "BR_H_bb",
+      "wave": "wave5",
+      "formula": "C_eff/\u221ae",
+      "computed": 0.5808757487636912,
+      "published": 0.5809,
+      "rel_pct": 0.004174769548765883,
+      "solves": "BR H bb",
+      "kind": "pin-wave"
+    },
+    {
+      "name": "BR_H_WW",
+      "wave": "wave5",
+      "formula": "ln(\u03c6)/\u221a5",
+      "computed": 0.21520447048200203,
+      "published": 0.2152,
+      "rel_pct": 0.0020773615251059676,
+      "solves": "BR H WW",
+      "kind": "pin-wave"
+    },
+    {
+      "name": "BR_H_tautau",
+      "wave": "wave5",
+      "formula": "\u03b7_eff/e\u00b2",
+      "computed": 0.06319375582922372,
+      "published": 0.0632,
+      "rel_pct": 0.009880017051083028,
+      "solves": "BR H tautau",
+      "kind": "pin-wave"
+    },
+    {
+      "name": "Y_p_He4",
+      "wave": "wave5",
+      "formula": "\u03b8_S\u00b7sin(1)",
+      "computed": 0.24478099844975698,
+      "published": 0.2449,
+      "rel_pct": 0.0485918947501124,
+      "solves": "Y p He4",
+      "kind": "pin-wave"
+    },
+    {
+      "name": "D_H_ratio",
+      "wave": "wave5",
+      "formula": "1/(\u03c0\u2074\u00b7e\u2076)",
+      "computed": 2.5446825859417006e-05,
+      "published": 2.547e-05,
+      "rel_pct": 0.09098602506082563,
+      "solves": "D H ratio",
+      "kind": "pin-wave"
+    },
+    {
+      "name": "Khinchin_K0",
+      "wave": "wave5",
+      "formula": "A_bleed/ln(3) + 1/\u03b3",
+      "computed": 2.685451182405338,
+      "published": 2.685452,
+      "rel_pct": 3.0445327721168166e-05,
+      "solves": "Khinchin K0",
+      "kind": "pin-wave"
+    },
+    {
+      "name": "Glaisher_A",
+      "wave": "wave5",
+      "formula": "G\u2074\u221a5 \u2212 G/\u03c0",
+      "computed": 1.2824279243871977,
+      "published": 1.282427,
+      "rel_pct": 7.208107733820862e-05,
+      "solves": "Glaisher A",
+      "kind": "pin-wave"
+    },
+    {
+      "name": "Twin_prime_C2",
+      "wave": "wave5",
+      "formula": "\u03b3\u2074/G\u2074 + |S_cosm|",
+      "computed": 0.6601574344174435,
+      "published": 0.660162,
+      "rel_pct": 0.0006915851800876859,
+      "solves": "Twin prime C2",
+      "kind": "pin-wave"
+    },
+    {
+      "name": "Mertens_M",
+      "wave": "wave5",
+      "formula": "\u2212Poof\u00b7ln(2) + 1/e",
+      "computed": 0.2614936766512581,
+      "published": 0.261497,
+      "rel_pct": 0.0012708936400296132,
+      "solves": "Mertens M",
+      "kind": "pin-wave"
+    },
+    {
+      "name": "Dottie_number",
+      "wave": "wave5",
+      "formula": "\u2212G\u2076/e\u00b3 + G\u00b3",
+      "computed": 0.7390857024468026,
+      "published": 0.739085,
+      "rel_pct": 9.504276268818857e-05,
+      "solves": "Dottie number",
+      "kind": "pin-wave"
+    },
+    {
+      "name": "Omega_constant",
+      "wave": "wave5",
+      "formula": "Suction/\u03c6\u2074 + sin(\u03b3)",
+      "computed": 0.5671447925724256,
+      "published": 0.567143,
+      "rel_pct": 0.0003160706251522764,
+      "solves": "Omega constant",
+      "kind": "pin-wave"
+    },
+    {
+      "name": "Conway_lambda",
+      "wave": "wave5",
+      "formula": "G\u2075ln(3) + \u03c6/e",
+      "computed": 1.3035789762668335,
+      "published": 1.303577,
+      "rel_pct": 0.00015160338311541037,
+      "solves": "Conway lambda",
+      "kind": "pin-wave"
+    },
+    {
+      "name": "Plastic_number",
+      "wave": "wave5",
+      "formula": "\u2212G\u00b3\u03c0\u03b3 + e",
+      "computed": 1.324722496060228,
+      "published": 1.324718,
+      "rel_pct": 0.00033939753426002545,
+      "solves": "Plastic number",
+      "kind": "pin-wave"
+    },
+    {
+      "name": "Landau_Ramanujan",
+      "wave": "wave5",
+      "formula": "\u22121/(G\u00b3\u03c0\u2075) + G\u00b3",
+      "computed": 0.7642364991979522,
+      "published": 0.764236,
+      "rel_pct": 6.531986875746861e-05,
+      "solves": "Landau Ramanujan",
+      "kind": "pin-wave"
+    },
+    {
+      "name": "Laplace_limit",
+      "wave": "wave5",
+      "formula": "G\u2078C_cosm + \u03c8_con",
+      "computed": 0.6627434116142251,
+      "published": 0.662743,
+      "rel_pct": 6.210766845499419e-05,
+      "solves": "Laplace limit",
+      "kind": "pin-wave"
+    },
+    {
+      "name": "zeta_5",
+      "wave": "wave6",
+      "formula": "\u03c0/3 \u2212 \u03c0\u207b\u2074",
+      "computed": 1.0369315689419134,
+      "published": 1.036928,
+      "rel_pct": 0.0003441841587202251,
+      "solves": "zeta 5",
+      "kind": "pin-wave"
+    },
+    {
+      "name": "zeta_7",
+      "wave": "wave6",
+      "formula": "\u2212\u221a2\u00b7cos(1) + \u221a\u03c0",
+      "computed": 1.0083510021653366,
+      "published": 1.008349,
+      "rel_pct": 0.00019855876652173212,
+      "solves": "zeta 7",
+      "kind": "pin-wave"
+    },
+    {
+      "name": "Levy_constant",
+      "wave": "wave6",
+      "formula": "\u03c8_con\u00b7P_base + \u03c0",
+      "computed": 3.275820784331113,
+      "published": 3.275823,
+      "rel_pct": 6.763701479075501e-05,
+      "solves": "Levy constant",
+      "kind": "pin-wave"
+    },
+    {
+      "name": "Erdos_Borwein",
+      "wave": "wave6",
+      "formula": "\u221a2/G\u2076 \u2212 B_in",
+      "computed": 1.6066981052307703,
+      "published": 1.606695,
+      "rel_pct": 0.00019326821645022913,
+      "solves": "Erdos Borwein",
+      "kind": "pin-wave"
+    },
+    {
+      "name": "Bernstein",
+      "wave": "wave6",
+      "formula": "\u2212\u03b3\u2075\u03c6/e + 1/\u03c0",
+      "computed": 0.28016962153089064,
+      "published": 0.280169,
+      "rel_pct": 0.0002218414209435045,
+      "solves": "Bernstein",
+      "kind": "pin-wave"
+    },
+    {
+      "name": "Backhouse",
+      "wave": "wave6",
+      "formula": "\u221a\u03c0/3 + e/\u03c0",
+      "computed": 1.4560739297341037,
+      "published": 1.456075,
+      "rel_pct": 7.350348686382198e-05,
+      "solves": "Backhouse",
+      "kind": "pin-wave"
+    },
+    {
+      "name": "Viswanath",
+      "wave": "wave6",
+      "formula": "\u03c0\u03b3/\u03c6\u00b3 + G\u2074",
+      "computed": 1.131989324238136,
+      "published": 1.131988,
+      "rel_pct": 0.00011698340760111065,
+      "solves": "Viswanath",
+      "kind": "pin-wave"
+    },
+    {
+      "name": "Kepler_Bouwkamp",
+      "wave": "wave6",
+      "formula": "\u2212\u03b3ln(2) + \u03c6/\u03c0",
+      "computed": 0.11494080409895219,
+      "published": 0.114942,
+      "rel_pct": 0.001040438697617229,
+      "solves": "Kepler Bouwkamp",
+      "kind": "pin-wave"
+    },
+    {
+      "name": "Sphere_packing_3D",
+      "wave": "wave6",
+      "formula": "\u221a2\u03c6/e \u2212 1/\u03c0\u00b2",
+      "computed": 0.7404773330949465,
+      "published": 0.74048,
+      "rel_pct": 0.0003601589581855207,
+      "solves": "Sphere packing 3D",
+      "kind": "pin-wave"
+    },
+    {
+      "name": "Gauss_AGM",
+      "wave": "wave6",
+      "formula": "A_bleed \u2212 P_base",
+      "computed": 0.8346278543481727,
+      "published": 0.834627,
+      "rel_pct": 0.00010236287259481817,
+      "solves": "Gauss AGM",
+      "kind": "pin-wave"
+    },
+    {
+      "name": "Lemniscate",
+      "wave": "wave6",
+      "formula": "(e/\u03c6)/G + B_in",
+      "computed": 2.6220605143146716,
+      "published": 2.622058,
+      "rel_pct": 9.589088691308851e-05,
+      "solves": "Lemniscate",
+      "kind": "pin-wave"
+    },
+    {
+      "name": "Hashing_bound",
+      "wave": "wave6",
+      "formula": "\u2212G\u2077\u221a3 + A_bleed",
+      "computed": 0.11002721665641338,
+      "published": 0.110028,
+      "rel_pct": 0.0007119493098317588,
+      "solves": "Hashing bound",
+      "kind": "pin-wave"
+    },
+    {
+      "name": "von_Karman",
+      "wave": "wave6",
+      "formula": "A_bleed/\u03c6\u00b2",
+      "computed": 0.39990834155956795,
+      "published": 0.4,
+      "rel_pct": 0.02291461010801854,
+      "solves": "von Karman",
+      "kind": "pin-wave"
+    },
+    {
+      "name": "Madelung_NaCl",
+      "wave": "wave6",
+      "formula": "e/3 + sin(1)",
+      "computed": 1.7475649276275782,
+      "published": 1.747565,
+      "rel_pct": 4.14132932584609e-06,
+      "solves": "Madelung NaCl",
+      "kind": "pin-wave"
+    },
+    {
+      "name": "Madelung_CsCl",
+      "wave": "wave6",
+      "formula": "G\u2078C_cosm + \u221a3",
+      "computed": 1.7626736603545448,
+      "published": 1.762672,
+      "rel_pct": 9.419532078238822e-05,
+      "solves": "Madelung CsCl",
+      "kind": "pin-wave"
+    },
+    {
+      "name": "Methane_angle",
+      "wave": "wave6",
+      "formula": "e\u2074/G\u2077 + e\u03c0",
+      "computed": 109.4705542253899,
+      "published": 109.471,
+      "rel_pct": 0.000407207945574305,
+      "solves": "Methane angle",
+      "kind": "pin-wave"
+    },
+    {
+      "name": "O_N_electronegativity",
+      "wave": "wave6",
+      "formula": "e\u207b\u2074 + G\u2076",
+      "computed": 0.608890511720405,
+      "published": 0.6087,
+      "rel_pct": 0.031298130508454446,
+      "solves": "O N electronegativity",
+      "kind": "pin-wave"
+    },
+    {
+      "name": "Water_max_density_C",
+      "wave": "wave6",
+      "formula": "ln(\u03c0)/C",
+      "computed": 3.9802826201882504,
+      "published": 3.98,
+      "rel_pct": 0.00710100975503584,
+      "solves": "Water max density C",
+      "kind": "pin-wave"
+    },
+    {
+      "name": "Perc_sq_site",
+      "wave": "wave6",
+      "formula": "\u2212C_cosm\u00b7sin(1) + G\u2075",
+      "computed": 0.5927508446708531,
+      "published": 0.592746,
+      "rel_pct": 0.0008173266210408258,
+      "solves": "Perc sq site",
+      "kind": "pin-wave"
+    },
+    {
+      "name": "Polya_3D_return",
+      "wave": "wave6",
+      "formula": "\u221a\u03c0/2 \u2212 sin(\u03b3)",
+      "computed": 0.34053410224876524,
+      "published": 0.340537,
+      "rel_pct": 0.0008509357969156905,
+      "solves": "Polya 3D return",
+      "kind": "pin-wave"
+    },
+    {
+      "name": "Random_walk_CN",
+      "wave": "wave6",
+      "formula": "G\u2077/K \u2212 \u03b3\u2074",
+      "computed": 1.1762803727707378,
+      "published": 1.176281,
+      "rel_pct": 5.332308029157856e-05,
+      "solves": "Random walk CN",
+      "kind": "pin-wave"
+    },
+    {
+      "name": "Nats_per_bit",
+      "wave": "wave6",
+      "formula": "\u2212\u03b7_eff\u00b7cos(\u03c6) + G\u207b\u2074",
+      "computed": 1.4426868248704778,
+      "published": 1.442695,
+      "rel_pct": 0.00056665681396452,
+      "solves": "Nats per bit",
+      "kind": "pin-wave"
+    },
+    {
+      "name": "Apery_zeta3_w7",
+      "wave": "wave7",
+      "formula": "\u03b3\u00b3/\u03b8_S + G\u2077",
+      "computed": 1.2020593750320427,
+      "published": 1.20206,
+      "rel_pct": 5.19914111744415e-05,
+      "solves": "Apery zeta3 w7",
+      "kind": "pin-wave"
+    },
+    {
+      "name": "Soldner",
+      "wave": "wave7",
+      "formula": "\u221a5/2 + 1/3",
+      "computed": 1.4513673220832282,
+      "published": 1.45136,
+      "rel_pct": 0.0005044980727165142,
+      "solves": "Soldner",
+      "kind": "pin-wave"
+    },
+    {
+      "name": "Mills",
+      "wave": "wave7",
+      "formula": "\u03b3\u00b3\u03c6/e + G\u207b\u00b2",
+      "computed": 1.306379265718492,
+      "published": 1.30637,
+      "rel_pct": 0.0007092721428097841,
+      "solves": "Mills",
+      "kind": "pin-wave"
+    },
+    {
+      "name": "Sierpinski_const",
+      "wave": "wave7",
+      "formula": "\u03c6\u00b3/2 + \u03b7_eff",
+      "computed": 2.584976195674155,
+      "published": 2.5849,
+      "rel_pct": 0.002947722316322571,
+      "solves": "Sierpinski const",
+      "kind": "pin-wave"
+    },
+    {
+      "name": "Niven",
+      "wave": "wave7",
+      "formula": "1/(G\u00b3\u221ae) + G",
+      "computed": 1.7052168407275836,
+      "published": 1.7052,
+      "rel_pct": 0.0009876101092872926,
+      "solves": "Niven",
+      "kind": "pin-wave"
+    },
+    {
+      "name": "Artin",
+      "wave": "wave7",
+      "formula": "C_eff/\u03c6\u2075 + C",
+      "computed": 0.37395610555822756,
+      "published": 0.374,
+      "rel_pct": 0.011736481757337094,
+      "solves": "Artin",
+      "kind": "pin-wave"
+    },
+    {
+      "name": "Hafner_Sarnak",
+      "wave": "wave7",
+      "formula": "ln(2)/e\u2074 + \u03c6/e",
+      "computed": 0.6079368730335913,
+      "published": 0.608,
+      "rel_pct": 0.010382724738263856,
+      "solves": "Hafner Sarnak",
+      "kind": "pin-wave"
+    },
+    {
+      "name": "Porter",
+      "wave": "wave7",
+      "formula": "1/(\u03c0\u03c6\u2074) + G\u207b\u2074",
+      "computed": 1.4670785554317929,
+      "published": 1.467,
+      "rel_pct": 0.0053548351597003324,
+      "solves": "Porter",
+      "kind": "pin-wave"
+    },
+    {
+      "name": "Thue_Morse",
+      "wave": "wave7",
+      "formula": "C_eff/(e\u03c0) + P_new",
+      "computed": 0.41244888189817797,
+      "published": 0.4125,
+      "rel_pct": 0.012392267108366528,
+      "solves": "Thue Morse",
+      "kind": "pin-wave"
+    },
+    {
+      "name": "MRB",
+      "wave": "wave7",
+      "formula": "C/\u03c6\u2074 + \u03c6\u207b\u2074",
+      "computed": 0.1878583304070266,
+      "published": 0.1879,
+      "rel_pct": 0.022176473109853403,
+      "solves": "MRB",
+      "kind": "pin-wave"
+    },
+    {
+      "name": "Gauss_Kuzmin",
+      "wave": "wave7",
+      "formula": "\u03b3/(e\u03c0) + \u03c6\u207b\u00b3",
+      "computed": 0.3036597373661549,
+      "published": 0.3036,
+      "rel_pct": 0.019676339313222612,
+      "solves": "Gauss Kuzmin",
+      "kind": "pin-wave"
+    },
+    {
+      "name": "Universal_parabolic",
+      "wave": "wave7",
+      "formula": "B_in/G\u2077 + G\u00b2",
+      "computed": 2.295590129689312,
+      "published": 2.2956,
+      "rel_pct": 0.0004299664875364716,
+      "solves": "Universal parabolic",
+      "kind": "pin-wave"
+    },
+    {
+      "name": "Lieb_square_ice",
+      "wave": "wave7",
+      "formula": "B_in/G\u2074 + K",
+      "computed": 1.5396001133368624,
+      "published": 1.5396,
+      "rel_pct": 7.3614485801252296e-06,
+      "solves": "Lieb square ice",
+      "kind": "pin-wave"
+    },
+    {
+      "name": "Komornik_Loreti",
+      "wave": "wave7",
+      "formula": "(\u03c0/e)\u00b7A_bleed + \u03b3",
+      "computed": 1.7872317242814628,
+      "published": 1.7872,
+      "rel_pct": 0.0017750828929565397,
+      "solves": "Komornik Loreti",
+      "kind": "pin-wave"
+    },
+    {
+      "name": "Bloch_Landau",
+      "wave": "wave7",
+      "formula": "1/(G\u00b2\u221a5) + \u03c0\u207b\u2074",
+      "computed": 0.5433021478033816,
+      "published": 0.5433,
+      "rel_pct": 0.00039532548897319584,
+      "solves": "Bloch Landau",
+      "kind": "pin-wave"
+    },
+    {
+      "name": "Golden_angle_deg",
+      "wave": "wave7",
+      "formula": "(\u03c6/\u03c0)/cos(\u03c6) + e\u2075",
+      "computed": 137.50601880311288,
+      "published": 137.508,
+      "rel_pct": 0.0014407866357808267,
+      "solves": "Golden angle deg",
+      "kind": "pin-wave"
+    },
+    {
+      "name": "Ising3D_eta",
+      "wave": "wave7",
+      "formula": "\u221a\u03c6/\u03c0\u2075 + 1/\u03c0\u00b3",
+      "computed": 0.03640819399713107,
+      "published": 0.0363,
+      "rel_pct": 0.2980550885153489,
+      "solves": "Ising3D eta",
+      "kind": "pin-wave"
+    },
+    {
+      "name": "Ising3D_alpha",
+      "wave": "wave7",
+      "formula": "Suction \u2212 \u03b3\u2076",
+      "computed": 0.11004872741790349,
+      "published": 0.1101,
+      "rel_pct": 0.04656910272163021,
+      "solves": "Ising3D alpha",
+      "kind": "pin-wave"
+    },
+    {
+      "name": "Ising3D_delta",
+      "wave": "wave7",
+      "formula": "\u221a5/\u03b7_eff",
+      "computed": 4.788746753540937,
+      "published": 4.7898,
+      "rel_pct": 0.021989361957966604,
+      "solves": "Ising3D delta",
+      "kind": "pin-wave"
+    },
+    {
+      "name": "XY_nu",
+      "wave": "wave7",
+      "formula": "G\u2074 \u2212 1/\u03c0\u00b3",
+      "computed": 0.671657668800388,
+      "published": 0.672,
+      "rel_pct": 0.050942142799408126,
+      "solves": "XY nu",
+      "kind": "pin-wave"
+    },
+    {
+      "name": "XY_eta",
+      "wave": "wave7",
+      "formula": "\u03b3\u2075\u03c6/e",
+      "computed": 0.03814026465290003,
+      "published": 0.0381,
+      "rel_pct": 0.1056815036746216,
+      "solves": "XY eta",
+      "kind": "pin-wave"
+    },
+    {
+      "name": "Heisenberg_nu",
+      "wave": "wave7",
+      "formula": "cos(1)/\u221a\u03b3",
+      "computed": 0.7111607292512704,
+      "published": 0.7112,
+      "rel_pct": 0.005521758820257243,
+      "solves": "Heisenberg nu",
+      "kind": "pin-wave"
+    },
+    {
+      "name": "Heisenberg_eta",
+      "wave": "wave7",
+      "formula": "C_cosm/\u221ae",
+      "computed": 0.037485656292130395,
+      "published": 0.0375,
+      "rel_pct": 0.038249887652275216,
+      "solves": "Heisenberg eta",
+      "kind": "pin-wave"
+    },
+    {
+      "name": "Perc_honeycomb_site",
+      "wave": "wave7",
+      "formula": "\u03c0/(3\u03c6) + e\u207b\u00b3",
+      "computed": 0.6969907479430195,
+      "published": 0.697,
+      "rel_pct": 0.001327411331482858,
+      "solves": "Perc honeycomb site",
+      "kind": "pin-wave"
+    },
+    {
+      "name": "Perc_SC_bond",
+      "wave": "wave7",
+      "formula": "G\u2077/e + e\u207b\u00b3",
+      "computed": 0.2487900777821054,
+      "published": 0.2488,
+      "rel_pct": 0.003988029700396626,
+      "solves": "Perc SC bond",
+      "kind": "pin-wave"
+    },
+    {
+      "name": "Perc_SC_site",
+      "wave": "wave7",
+      "formula": "cos(\u03c6)/G\u00b2 + 1/e",
+      "computed": 0.31159756759350293,
+      "published": 0.3116,
+      "rel_pct": 0.0007806182596453451,
+      "solves": "Perc SC site",
+      "kind": "pin-wave"
+    },
+    {
+      "name": "m_u/m_d",
+      "wave": "wave7",
+      "formula": "\u221a3 \u2212 \u221a\u03c6",
+      "computed": 0.4600311580548083,
+      "published": 0.4596,
+      "rel_pct": 0.09381158720807475,
+      "solves": "m u/m d",
+      "kind": "pin-wave"
+    },
+    {
+      "name": "m_s/m_d",
+      "wave": "wave7",
+      "formula": "e\u00b3 + \u03b3\u2074",
+      "computed": 20.19654445210049,
+      "published": 20.196,
+      "rel_pct": 0.002695841258111791,
+      "solves": "m s/m d",
+      "kind": "pin-wave"
+    },
+    {
+      "name": "m_tau/m_mu",
+      "wave": "wave7",
+      "formula": "\u03c0\u00b2e/\u03c6 + \u03c6\u207b\u00b3",
+      "computed": 16.81691021202443,
+      "published": 16.817,
+      "rel_pct": 0.0005339119674847408,
+      "solves": "m tau/m mu",
+      "kind": "pin-wave"
+    },
+    {
+      "name": "|V_ud|",
+      "wave": "wave8",
+      "formula": "A_in \u2212 ln(2)",
+      "computed": 0.9737066644446277,
+      "published": 0.9737,
+      "rel_pct": 0.0006844453761644341,
+      "solves": "|V ud|",
+      "kind": "pin-wave"
+    },
+    {
+      "name": "|V_cd|",
+      "wave": "wave8",
+      "formula": "\u221a\u03b3\u00b7\u03b8_S",
+      "computed": 0.22100780479132598,
+      "published": 0.221,
+      "rel_pct": 0.003531579785510005,
+      "solves": "|V cd|",
+      "kind": "pin-wave"
+    },
+    {
+      "name": "|V_cs|",
+      "wave": "wave8",
+      "formula": "\u03c6\u03b3/P_var",
+      "computed": 0.9749134853131556,
+      "published": 0.9735,
+      "rel_pct": 0.14519623144895213,
+      "solves": "|V cs|",
+      "kind": "pin-wave"
+    },
+    {
+      "name": "delta_CP_PMNS",
+      "wave": "wave8",
+      "formula": "\u03c6\u00b3 \u2212 1/e",
+      "computed": 3.8681885363283475,
+      "published": 3.8685,
+      "rel_pct": 0.008051277540456992,
+      "solves": "delta CP PMNS",
+      "kind": "pin-wave"
+    },
+    {
+      "name": "m_t/m_b",
+      "wave": "wave8",
+      "formula": "\u03c0\u2074\u00b7K",
+      "computed": 40.933410338689306,
+      "published": 41.08,
+      "rel_pct": 0.35683948712437213,
+      "solves": "m t/m b",
+      "kind": "pin-wave"
+    },
+    {
+      "name": "BR_Z_ee",
+      "wave": "wave8",
+      "formula": "\u03b3\u2076/ln(3)",
+      "computed": 0.03366543264779789,
+      "published": 0.03363,
+      "rel_pct": 0.10536023728185157,
+      "solves": "BR Z ee",
+      "kind": "pin-wave"
+    },
+    {
+      "name": "BR_Z_had",
+      "wave": "wave8",
+      "formula": "sin(\u03b3) + Poof",
+      "computed": 0.6991750380984436,
+      "published": 0.6991,
+      "rel_pct": 0.010733528600137083,
+      "solves": "BR Z had",
+      "kind": "pin-wave"
+    },
+    {
+      "name": "BR_Z_inv",
+      "wave": "wave8",
+      "formula": "(1/3)/A_in",
+      "computed": 0.19997754112174054,
+      "published": 0.2,
+      "rel_pct": 0.011229439129734065,
+      "solves": "BR Z inv",
+      "kind": "pin-wave"
+    },
+    {
+      "name": "BR_H_ZZ",
+      "wave": "wave8",
+      "formula": "1/(e\u2074ln(2))",
+      "computed": 0.026423881395489845,
+      "published": 0.0264,
+      "rel_pct": 0.09045983140093045,
+      "solves": "BR H ZZ",
+      "kind": "pin-wave"
+    },
+    {
+      "name": "BR_H_gg",
+      "wave": "wave8",
+      "formula": "\u03c6\u207b\u2074 \u2212 \u03b3\u2075",
+      "computed": 0.08182274913982478,
+      "published": 0.0785,
+      "rel_pct": 4.232801452006084,
+      "solves": "BR H gg",
+      "kind": "pin-wave"
+    },
+    {
+      "name": "BR_H_cc",
+      "wave": "wave8",
+      "formula": "Suction/(\u03c0\u03c6)",
+      "computed": 0.028925456135151035,
+      "published": 0.0289,
+      "rel_pct": 0.08808351263334355,
+      "solves": "BR H cc",
+      "kind": "pin-wave"
+    },
+    {
+      "name": "BR_H_gamgam",
+      "wave": "wave8",
+      "formula": "\u03b3\u2076\u00b7C_cosm",
+      "computed": 0.0022858146532987495,
+      "published": 0.00228,
+      "rel_pct": 0.2550286534539278,
+      "solves": "BR H gamgam",
+      "kind": "pin-wave"
+    },
+    {
+      "name": "BR_H_Zgam",
+      "wave": "wave8",
+      "formula": "\u03b7_eff/\u03c0\u2075",
+      "computed": 0.0015258567671942072,
+      "published": 0.00153,
+      "rel_pct": 0.27079952979037436,
+      "solves": "BR H Zgam",
+      "kind": "pin-wave"
+    },
+    {
+      "name": "He4_binding_MeV",
+      "wave": "wave8",
+      "formula": "\u03c0\u03b3/\u03b3\u2075",
+      "computed": 28.30071693656917,
+      "published": 28.3,
+      "rel_pct": 0.002533344767383359,
+      "solves": "He4 binding MeV",
+      "kind": "pin-wave"
+    },
+    {
+      "name": "Triton_binding_MeV",
+      "wave": "wave8",
+      "formula": "e\u00b2 + G\u207b\u00b9",
+      "computed": 8.480800162634557,
+      "published": 8.482,
+      "rel_pct": 0.014145689288404753,
+      "solves": "Triton binding MeV",
+      "kind": "pin-wave"
+    },
+    {
+      "name": "Deuteron_mu_muN",
+      "wave": "wave8",
+      "formula": "G\u2074 + Poof",
+      "computed": 0.8573914181280383,
+      "published": 0.8574,
+      "rel_pct": 0.0010009181200994338,
+      "solves": "Deuteron mu muN",
+      "kind": "pin-wave"
+    },
+    {
+      "name": "S_8",
+      "wave": "wave8",
+      "formula": "\u03c8_con/\u221a\u03b3",
+      "computed": 0.8320144347134201,
+      "published": 0.832,
+      "rel_pct": 0.0017349415168399496,
+      "solves": "S 8",
+      "kind": "pin-wave"
+    },
+    {
+      "name": "z_reion",
+      "wave": "wave8",
+      "formula": "e\u00b3/\u03c6\u00b2",
+      "computed": 7.671992422366703,
+      "published": 7.68,
+      "rel_pct": 0.10426533376688604,
+      "solves": "z reion",
+      "kind": "pin-wave"
+    },
+    {
+      "name": "XY_beta",
+      "wave": "wave8",
+      "formula": "\u03c8_con/(\u03c0\u03b3)",
+      "computed": 0.3485875996963401,
+      "published": 0.3486,
+      "rel_pct": 0.003557172593200954,
+      "solves": "XY beta",
+      "kind": "pin-wave"
+    },
+    {
+      "name": "XY_gamma",
+      "wave": "wave8",
+      "formula": "\u03c6 \u2212 P_new",
+      "computed": 1.3177317120795233,
+      "published": 1.3177,
+      "rel_pct": 0.0024066236262607877,
+      "solves": "XY gamma",
+      "kind": "pin-wave"
+    },
+    {
+      "name": "Heisenberg_beta",
+      "wave": "wave8",
+      "formula": "\u03c6/\u03c0 \u2212 \u03c6\u207b\u2074",
+      "computed": 0.36913818105016843,
+      "published": 0.3689,
+      "rel_pct": 0.06456520741892896,
+      "solves": "Heisenberg beta",
+      "kind": "pin-wave"
+    },
+    {
+      "name": "Heisenberg_gamma",
+      "wave": "wave8",
+      "formula": "\u221a2 \u2212 e\u207b\u2074",
+      "computed": 1.395897923484361,
+      "published": 1.3962,
+      "rel_pct": 0.021635619226413296,
+      "solves": "Heisenberg gamma",
+      "kind": "pin-wave"
+    },
+    {
+      "name": "Perc_BCC_bond",
+      "wave": "wave8",
+      "formula": "G\u2077/3",
+      "computed": 0.18031542143313228,
+      "published": 0.1803,
+      "rel_pct": 0.008553207505432887,
+      "solves": "Perc BCC bond",
+      "kind": "pin-wave"
+    },
+    {
+      "name": "Perc_FCC_site",
+      "wave": "wave8",
+      "formula": "1/3 \u2212 e\u207b\u00b2",
+      "computed": 0.19799805009672064,
+      "published": 0.1982,
+      "rel_pct": 0.10189197945476643,
+      "solves": "Perc FCC site",
+      "kind": "pin-wave"
+    },
+    {
+      "name": "Perc3D_nu",
+      "wave": "wave8",
+      "formula": "sin(\u03b3) \u2212 Chaos",
+      "computed": 0.8767170058144746,
+      "published": 0.875,
+      "rel_pct": 0.19622923593995978,
+      "solves": "Perc3D nu",
+      "kind": "pin-wave"
+    },
+    {
+      "name": "Perc3D_beta",
+      "wave": "wave8",
+      "formula": "\u221a\u03c0/\u03c6\u00b3",
+      "computed": 0.41841959579497895,
+      "published": 0.4181,
+      "rel_pct": 0.07644003706742929,
+      "solves": "Perc3D beta",
+      "kind": "pin-wave"
+    },
+    {
+      "name": "Perc3D_gamma",
+      "wave": "wave8",
+      "formula": "\u03b3\u2077 + \u221a\u03c0",
+      "computed": 1.793802321199428,
+      "published": 1.8052,
+      "rel_pct": 0.6313803900161674,
+      "solves": "Perc3D gamma",
+      "kind": "pin-wave"
+    },
+    {
+      "name": "Brun_B2",
+      "wave": "wave8",
+      "formula": "\u03b3\u00b2 + e\u03b3",
+      "computed": 1.902212776811461,
+      "published": 1.9022,
+      "rel_pct": 0.0006716860194015948,
+      "solves": "Brun B2",
+      "kind": "pin-wave"
+    },
+    {
+      "name": "Copeland_Erdos",
+      "wave": "wave8",
+      "formula": "(1/3)/\u221a2",
+      "computed": 0.23570226039551584,
+      "published": 0.2357,
+      "rel_pct": 0.0009590137954375161,
+      "solves": "Copeland Erdos",
+      "kind": "pin-wave"
+    },
+    {
+      "name": "Erdos_Tenenbaum_Ford",
+      "wave": "wave8",
+      "formula": "\u03b3\u00b3/\u221a5",
+      "computed": 0.0860061137480346,
+      "published": 0.0862,
+      "rel_pct": 0.2249260463635699,
+      "solves": "Erdos Tenenbaum Ford",
+      "kind": "pin-wave"
+    },
+    {
+      "name": "Foias_alpha",
+      "wave": "wave8",
+      "formula": "e\u03b3 \u2212 \u03c6\u207b\u00b2",
+      "computed": 1.187068841753637,
+      "published": 1.1874,
+      "rel_pct": 0.027889358797623682,
+      "solves": "Foias alpha",
+      "kind": "pin-wave"
+    },
+    {
+      "name": "Madelung_ZnS",
+      "wave": "wave8",
+      "formula": "e\u03b3/C_eff",
+      "computed": 1.6383327183652612,
+      "published": 1.6381,
+      "rel_pct": 0.014206603092685816,
+      "solves": "Madelung ZnS",
+      "kind": "pin-wave"
+    },
+    {
+      "name": "Madelung_CaF2",
+      "wave": "wave8",
+      "formula": "G\u207b\u2074 + ln(3)",
+      "computed": 2.5192500575824006,
+      "published": 2.5194,
+      "rel_pct": 0.005951512963382909,
+      "solves": "Madelung CaF2",
+      "kind": "pin-wave"
+    },
+    {
+      "name": "Madelung_TiO2",
+      "wave": "wave8",
+      "formula": "G\u00b2 + e\u03b3",
+      "computed": 2.408027822720168,
+      "published": 2.408,
+      "rel_pct": 0.0011554285784141829,
+      "solves": "Madelung TiO2",
+      "kind": "pin-wave"
+    },
+    {
+      "name": "Ice_Ih_density",
+      "wave": "wave8",
+      "formula": "sin(\u03b3)\u00b7e/\u03c6",
+      "computed": 0.9167587921820931,
+      "published": 0.917,
+      "rel_pct": 0.026304015038923653,
+      "solves": "Ice Ih density",
+      "kind": "pin-wave"
+    },
+    {
+      "name": "H2O_bond_angle",
+      "wave": "wave8",
+      "formula": "e\u00b3/\u03b3\u00b3",
+      "computed": 104.4405425791162,
+      "published": 104.5,
+      "rel_pct": 0.05689705347732303,
+      "solves": "H2O bond angle",
+      "kind": "pin-wave"
+    },
+    {
+      "name": "Lorenz_dim",
+      "wave": "wave8",
+      "formula": "\u221a\u03c6 + B_in",
+      "computed": 2.0599604417905124,
+      "published": 2.06,
+      "rel_pct": 0.0019203014314390556,
+      "solves": "Lorenz dim",
+      "kind": "pin-wave"
+    },
+    {
+      "name": "Henon_dim",
+      "wave": "wave8",
+      "formula": "P_var/\u221a\u03b3",
+      "computed": 1.2609289528725578,
+      "published": 1.261,
+      "rel_pct": 0.005634189329270673,
+      "solves": "Henon dim",
+      "kind": "pin-wave"
+    },
+    {
+      "name": "Apollonian_dim",
+      "wave": "wave8",
+      "formula": "ln(3)/sin(1)",
+      "computed": 1.305585467000882,
+      "published": 1.3058,
+      "rel_pct": 0.01642923871328772,
+      "solves": "Apollonian dim",
+      "kind": "pin-wave"
+    },
+    {
+      "name": "SAW_mu_sq",
+      "wave": "wave8",
+      "formula": "\u221a\u03c0 + e/\u03c0",
+      "computed": 2.6377098303377813,
+      "published": 2.6382,
+      "rel_pct": 0.01857970063750277,
+      "solves": "SAW mu sq",
+      "kind": "pin-wave"
+    },
+    {
+      "name": "SAW_nu_3D",
+      "wave": "wave8",
+      "formula": "cos(1) \u2212 cos(\u03c6)",
+      "computed": 0.5875224021224995,
+      "published": 0.5877,
+      "rel_pct": 0.030219138591201376,
+      "solves": "SAW nu 3D",
+      "kind": "pin-wave"
+    },
+    {
+      "name": "SAW_gamma_3D",
+      "wave": "wave8",
+      "formula": "G\u207b\u00b2 \u2212 \u03c0\u207b\u00b3",
+      "computed": 1.159653566199519,
+      "published": 1.1575,
+      "rel_pct": 0.1860532353796215,
+      "solves": "SAW gamma 3D",
+      "kind": "pin-wave"
+    },
+    {
+      "name": "Potts3_beta",
+      "wave": "wave8",
+      "formula": "1/9",
+      "computed": 0.1111111111111111,
+      "published": 0.11111,
+      "rel_pct": 0.001000010000094062,
+      "solves": "Potts3 beta",
+      "kind": "pin-wave"
+    },
+    {
+      "name": "KT_T/J",
+      "wave": "wave8",
+      "formula": "A_bleed \u2212 Poof",
+      "computed": 0.8934914156931002,
+      "published": 0.8935,
+      "rel_pct": 0.0009607506323180223,
+      "solves": "KT T/J",
+      "kind": "pin-wave"
+    },
+    {
+      "name": "Quark_condensate",
+      "wave": "wave8",
+      "formula": "1/4",
+      "computed": 0.25,
+      "published": 0.25,
+      "rel_pct": 0.0,
+      "solves": "Quark condensate",
+      "kind": "pin-wave"
+    },
+    {
+      "name": "Figure8_knot_vol",
+      "wave": "wave8",
+      "formula": "G\u207b\u00b2 + cos(\u03b3)",
+      "computed": 2.029890388512915,
+      "published": 2.0299,
+      "rel_pct": 0.0004734955950979309,
+      "solves": "Figure8 knot vol",
+      "kind": "pin-wave"
+    },
+    {
+      "name": "Bessel_J0_zero1",
+      "wave": "wave8",
+      "formula": "A_in/ln(2)",
+      "computed": 2.4047617760747984,
+      "published": 2.405,
+      "rel_pct": 0.009905360715237125,
+      "solves": "Bessel J0 zero1",
+      "kind": "pin-wave"
+    },
+    {
+      "name": "Airy_Ai_zero1",
+      "wave": "wave8",
+      "formula": "(1/G)/\u03b7_eff",
+      "computed": 2.3380710664285527,
+      "published": 2.338,
+      "rel_pct": 0.0030396248311629947,
+      "solves": "Airy Ai zero1",
+      "kind": "pin-wave"
+    },
+    {
+      "name": "gamma_2_Stieltjes",
+      "wave": "wave8",
+      "formula": "\u03c0\u207b\u00b2 \u2212 \u03b3\u2074",
+      "computed": -0.009686345270484219,
+      "published": -0.00946,
+      "rel_pct": 2.3926561361968224,
+      "solves": "gamma 2 Stieltjes",
+      "kind": "pin-wave"
+    },
+    {
+      "name": "First_Riemann_zero",
+      "wave": "wave8",
+      "formula": "e/\u03b3\u00b3",
+      "computed": 14.1344904113302,
+      "published": 14.135,
+      "rel_pct": 0.0036051550746381998,
+      "solves": "First Riemann zero",
+      "kind": "pin-wave"
+    },
+    {
+      "name": "Spanning_tree_sq",
+      "wave": "wave8",
+      "formula": "\u03b3\u2077 + ln(\u03c0)",
+      "computed": 1.1660783561433121,
+      "published": 1.1663,
+      "rel_pct": 0.019004017550181763,
+      "solves": "Spanning tree sq",
+      "kind": "pin-wave"
+    },
+    {
+      "name": "Hard_sq_entropy",
+      "wave": "wave8",
+      "formula": "e\u03b3\u00b7P_var",
+      "computed": 1.5031151842015722,
+      "published": 1.5031,
+      "rel_pct": 0.0010101923739001908,
+      "solves": "Hard sq entropy",
+      "kind": "pin-wave"
+    },
+    {
+      "name": "|V_tb|",
+      "wave": "wave9",
+      "formula": "cos(1/e)/(\u03c6\u03b3)",
+      "computed": 0.9990765192612288,
+      "published": 0.9991,
+      "rel_pct": 0.0023501890472656414,
+      "solves": "|V tb|",
+      "kind": "pin-wave"
+    },
+    {
+      "name": "Omega_r",
+      "wave": "wave9",
+      "formula": "\u03b3\u2076/e\u2076",
+      "computed": 9.167728879734846e-05,
+      "published": 9.15e-05,
+      "rel_pct": 0.19375824846825943,
+      "solves": "Omega r",
+      "kind": "pin-wave"
+    },
+    {
+      "name": "O4_nu",
+      "wave": "wave9",
+      "formula": "(\u03b3/G)/sin(1)",
+      "computed": 0.7488930539619457,
+      "published": 0.749,
+      "rel_pct": 0.014278509753575246,
+      "solves": "O4 nu",
+      "kind": "pin-wave"
+    },
+    {
+      "name": "Gluon_condensate",
+      "wave": "wave9",
+      "formula": "C_cosm \u2212 e\u207b\u00b3",
+      "computed": 0.012016330507125542,
+      "published": 0.012,
+      "rel_pct": 0.13608755937951147,
+      "solves": "Gluon condensate",
+      "kind": "pin-wave"
+    },
+    {
+      "name": "Mandelbrot_boundary",
+      "wave": "wave9",
+      "formula": "\u03c6 + 1/\u03c6\u00b2",
+      "computed": 2.0,
+      "published": 2.0,
+      "rel_pct": 0.0,
+      "solves": "Mandelbrot boundary",
+      "kind": "pin-wave"
+    },
+    {
+      "name": "Sierpinski_dim",
+      "wave": "wave9",
+      "formula": "ln(3)/ln(2)",
+      "computed": 1.584962500721156,
+      "published": 1.584963,
+      "rel_pct": 3.150097786661633e-05,
+      "solves": "Sierpinski dim",
+      "kind": "pin-wave"
+    },
+    {
+      "name": "gamma1_Stieltjes",
+      "wave": "wave9",
+      "formula": "G\u00b2 + cos(e)",
+      "computed": -0.07274094507053921,
+      "published": -0.072816,
+      "rel_pct": 0.10307477678091498,
+      "solves": "gamma1 Stieltjes",
+      "kind": "pin-wave"
+    },
+    {
+      "name": "m_mu/m_e",
+      "wave": "wave10",
+      "formula": "(\u03c0\u00b3 \u2212 G\u00b2)\u00b7\u03c6\u2074",
+      "computed": 206.7696385971217,
+      "published": 206.768283,
+      "rel_pct": 0.0006556117321513212,
+      "solves": "m mu/m e",
+      "kind": "pin-wave"
+    },
+    {
+      "name": "(g-2)/2_electron",
+      "wave": "wave10",
+      "formula": "(e/\u03c0 \u2212 ln2)/e\u2075",
+      "computed": 0.0011596599648779514,
+      "published": 0.00115965,
+      "rel_pct": 0.0008593004744053731,
+      "solves": "(g-2)/2 electron",
+      "kind": "pin-wave"
+    },
+    {
+      "name": "Logistic_accum",
+      "wave": "wave10",
+      "formula": "e\u221ae + cos(e)",
+      "computed": 3.5699551555510998,
+      "published": 3.569946,
+      "rel_pct": 0.0002564618932590685,
+      "solves": "Logistic accum",
+      "kind": "pin-wave"
+    },
+    {
+      "name": "Cahen_constant",
+      "wave": "wave10",
+      "formula": "(C_eff + K)\u00b7\u03b7_eff",
+      "computed": 0.6434108113284505,
+      "published": 0.643411,
+      "rel_pct": 2.932364375100156e-05,
+      "solves": "Cahen constant",
+      "kind": "pin-wave"
+    },
+    {
+      "name": "Reciprocal_Fib",
+      "wave": "wave10",
+      "formula": "(Poof + C_cosm)/\u03b3\u2075",
+      "computed": 3.3598854078939637,
+      "published": 3.359886,
+      "rel_pct": 1.7622801374847268e-05,
+      "solves": "Reciprocal Fib",
+      "kind": "pin-wave"
+    },
+    {
+      "name": "Water_triple_K",
+      "wave": "wave10",
+      "formula": "\u03c0\u2075sin(\u03c0/\u03c6)\u00b7C_eff",
+      "computed": 273.1560794175609,
+      "published": 273.16,
+      "rel_pct": 0.0014352695999231826,
+      "solves": "Water triple K",
+      "kind": "pin-wave"
+    },
+    {
+      "name": "CO2_bond_angle",
+      "wave": "wave10",
+      "formula": "\u03c0\u2074/cos(1) \u2212 C",
+      "computed": 179.99867657892466,
+      "published": 180.0,
+      "rel_pct": 0.0007352339307450013,
+      "solves": "CO2 bond angle",
+      "kind": "pin-wave"
+    },
+    {
+      "name": "SAW_connective_hex",
+      "wave": "wave10",
+      "formula": "\u03c0/A_in \u2212 \u03b3\u2076",
+      "computed": 1.8477586642028332,
+      "published": 1.847759,
+      "rel_pct": 1.8173212347469673e-05,
+      "solves": "SAW connective hex",
+      "kind": "pin-wave"
+    },
+    {
+      "name": "Bessel_J1_zero1",
+      "wave": "wave10",
+      "formula": "\u03c8_con/G + \u03c0",
+      "computed": 3.831706521236067,
+      "published": 3.831706,
+      "rel_pct": 1.3603237480975994e-05,
+      "solves": "Bessel J1 zero1",
+      "kind": "pin-wave"
+    },
+    {
+      "name": "eta_baryon_photon",
+      "wave": "wave10",
+      "formula": "Poof\u00b9\u00b9/(\u03c0\u03b3)",
+      "computed": 6.139749535425554e-10,
+      "published": 6.14e-10,
+      "rel_pct": 0.004079227596853056,
+      "solves": "eta baryon photon",
+      "kind": "pin-wave"
+    },
+    {
+      "name": "m_tau/m_e_lepton",
+      "wave": "lepton_ratios",
+      "formula": "9\u03c0\u03c6\u00b9\u2070",
+      "computed": 3477.51317969453,
+      "published": 3477.48,
+      "rel_pct": 0.0009541304200222667,
+      "solves": "m tau/m e lepton",
+      "kind": "pin-wave"
+    },
+    {
+      "name": "m_tau/m_mu_lepton",
+      "wave": "lepton_ratios",
+      "formula": "(\u03c0\u00b3\u2212\u03c0)/(\u03c0^(1/3)+\u03b3\u00b3)",
+      "computed": 16.817284993122836,
+      "published": 16.817,
+      "rel_pct": 0.0016946727884648944,
+      "solves": "m tau/m mu lepton",
+      "kind": "pin-wave"
+    },
+    {
+      "name": "m_mu/m_e_lepton",
+      "wave": "lepton_ratios",
+      "formula": "(35\u03c6\u207b\u2075+145)\u00b7e^(1/3)",
+      "computed": 206.76828192272686,
+      "published": 206.768,
+      "rel_pct": 0.0001363473684786862,
+      "solves": "m mu/m e lepton",
+      "kind": "pin-wave"
+    }
+  ],
+  "wall_seconds": 0.03550979995634407
+}

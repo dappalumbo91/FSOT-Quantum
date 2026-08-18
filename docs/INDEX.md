@@ -48,6 +48,8 @@ Every living panel also writes a twin under `results/`.
 | [`H0_TENSION.md`](H0_TENSION.md) | Hubble tension via Lean BH→WH bubble-bleed |
 | [`CONTESTED_SECTORS.md`](CONTESTED_SECTORS.md) | Lean contested panel on this pin |
 | [`OPEN_REMAINING.md`](OPEN_REMAINING.md) | Leftovers: DE dual lane, α_s, V_cb, G17 |
+| [`FORMULA_LIST.md`](FORMULA_LIST.md) | Every formula and what it solves |
+| [`MULTIPROVER_VERIFICATION.md`](MULTIPROVER_VERIFICATION.md) | Lean · Coq · Isabelle · F\* · Python stamp |
 | [`QC_ACCURACY.md`](QC_ACCURACY.md) | Hired QC/QM jobs on ordinary hardware |
 
 ---

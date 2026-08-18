@@ -16,6 +16,7 @@ import FSOTQuantumFormal.Domains
 import FSOTQuantumFormal.Hilbert
 import FSOTQuantumFormal.Fold
 import FSOTQuantumFormal.Jobs
+import FSOTQuantumFormal.Formulas
 
 namespace FSOT.Quantum
 
@@ -26,8 +27,11 @@ theorem quantum_formal_surface_ok :
     ∧ Domain.QuantumComputing.D_eff = 11
     ∧ Hilbert.dim 12 = 4096
     ∧ Fold.foldBudget 8 < Fold.hilbertAmps 8
-    ∧ 7 ^ 4 % 15 = 1 := by
-  refine ⟨statesPerU64_eq, Domain.QM_D_eff, Domain.QC_D_eff, Hilbert.dim_twelve, Fold.fold_lt_hilbert_eight, ?_⟩
-  exact Jobs.seven_pow_four_mod_fifteen
+    ∧ 7 ^ 4 % 15 = 1
+    ∧ Formulas.kMicro = 420222
+    ∧ Formulas.bleedMilli = 15431 := by
+  refine ⟨statesPerU64_eq, Domain.QM_D_eff, Domain.QC_D_eff, Hilbert.dim_twelve,
+    Fold.fold_lt_hilbert_eight, Jobs.seven_pow_four_mod_fifteen,
+    Formulas.kMicro_eq, Formulas.bleedMilli_eq⟩
 
 end FSOT.Quantum

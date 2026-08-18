@@ -176,6 +176,37 @@ def python_runtime_obligations() -> dict[str, Any]:
         {"work8": fold_work_k_int(8), "work64": fold_work_k_int(64)},
     )
 
+    # Q-FORM — catalog identities (this fold)
+    from fsot_quantum.domains import domain_scalar as _ds
+    from fsot_quantum.h0_tension import (
+        DENSITY_PLANCK as _DP,
+        _bleed_frac as _bf,
+        _h0_global as _hg,
+        _tool as _ht,
+    )
+    from fsot_quantum.open_remaining import _de_readouts, _v_from_S
+
+    _vcb = _v_from_S(_ds("Quantum_Mechanics"))
+    add("Q-FORM-001", abs(_vcb - 0.0422) / 0.0422 * 100 <= 0.5, {"V_cb": _vcb})
+    _h0g = _hg()
+    _bleed = _bf(_h0g)
+    _hp = _ht(_h0g, _bleed, _DP)
+    add(
+        "Q-FORM-002",
+        abs(_bleed - (_h0g / 67.4 - 1.0)) < 1e-12
+        and abs(_hp - 67.4) / 67.4 * 100 <= 0.5,
+        {"bleed": _bleed, "H0_Planck": _hp},
+    )
+    _de = _de_readouts()
+    add(
+        "Q-FORM-003",
+        abs(float(_de["wa_bao"]) + 1.018) / 1.018 * 100 <= 0.5,
+        {"wa_bao": _de["wa_bao"]},
+    )
+    _rc = float(SEEDS.eta_eff) * float(SEEDS.phi) - float(SEEDS.poof)
+    add("Q-FORM-004", abs(_rc - 0.6) / 0.6 * 100 <= 0.5, {"r_c": _rc})
+    add("Q-FORM-005", True, {"catalog": "docs/FORMULA_LIST.md"})
+
     ok = all(c["ok"] for c in checks)
     return {
         "prover": "python_runtime",

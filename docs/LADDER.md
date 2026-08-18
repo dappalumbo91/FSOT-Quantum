@@ -46,6 +46,8 @@ It does **not** claim a cryogenic QPU, Hilbert-universal simulation, RSA-scale f
 | Hubble tension | `python -m fsot_quantum h0` | Lean BH→WH bubble-bleed (Planck / SH0ES) | required |
 | Contested sectors | `python -m fsot_quantum contested` | Lean open-science panel on this pin | required |
 | Leftovers | `python -m fsot_quantum leftovers` | DE dual lane, α_s, V_cb, G17 | required |
+| Formula list | `python -m fsot_quantum formulas` | every formula and what it solves | required |
+| Multiprover stamp | `python -m fsot_quantum stamp` | Lean · Coq · Isabelle · F\* · Python | required |
 | Organ export | `python -m fsot_quantum organ` | JSON for neuron-zig skill | required |
 
 Ledgers live in `docs/` and `results/` with the same names.
@@ -74,6 +76,8 @@ These are published values. Miss one and the pin is wrong.
 | Hubble tension | BH→WH bubble-bleed (Lean) | Planck CMB **0.024%** · SH0ES **1.00%** | `H0_TENSION.md` — one global rate, different outgassing sectors |
 | Contested sectors | Lean 13-way open-science panel | **14/14** on this pin | `CONTESTED_SECTORS.md` |
 | Leftovers | CMB vs BAO \(w_0/w_a\); α_s; exclusive \(V_{cb}\); G17 | BAO **0.28–0.37%** · G17 **still open** | `OPEN_REMAINING.md` |
+| Formula list | engine + tension + pin-wave | **18** solvers · **207/216** pin-wave @0.5% | `FORMULA_LIST.md` |
+| Multiprover stamp | Lean · Coq · Isabelle · F\* · Python | **FSOT_QUANTUM_MULTIPROVER_OK** | `MULTIPROVER_VERIFICATION.md` |
 | Chemistry pin set | — | 68/68 @ 0.5% | — |
 | QM/SM pin set | — | 14/14 @ 0.5% | — |
 | C_factor | \(C_{\mathrm{eff}}\cdot P_{\mathrm{new}}\) | identity | — |

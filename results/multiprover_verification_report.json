@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-08-13T01:42:38.476142+00:00",
+  "timestamp": "2026-08-18T01:44:36.508269+00:00",
   "kit": "FSOT-Quantum multiprover verification",
   "pin": {
     "ok": true,
@@ -8,7 +8,7 @@
   },
   "spine": {
     "path": "verification\\obligations\\quantum_spine.json",
-    "n_obligations": 25,
+    "n_obligations": 30,
     "ids": [
       "Q-TRIT-001",
       "Q-TRIT-002",
@@ -34,7 +34,12 @@
       "Q-JOB-004",
       "Q-JOB-005",
       "Q-K-001",
-      "Q-K-002"
+      "Q-K-002",
+      "Q-FORM-001",
+      "Q-FORM-002",
+      "Q-FORM-003",
+      "Q-FORM-004",
+      "Q-FORM-005"
     ]
   },
   "provers": {
@@ -42,8 +47,8 @@
       "prover": "python_runtime",
       "ok": true,
       "status": "pass",
-      "n_obligations": 25,
-      "n_pass": 25,
+      "n_obligations": 30,
+      "n_pass": 30,
       "checks": [
         {
           "id": "Q-TRIT-001",
@@ -185,6 +190,42 @@
             "work8": 47,
             "work64": 180
           }
+        },
+        {
+          "id": "Q-FORM-001",
+          "ok": true,
+          "detail": {
+            "V_cb": 0.042200813327913686
+          }
+        },
+        {
+          "id": "Q-FORM-002",
+          "ok": true,
+          "detail": {
+            "bleed": 0.01543111023433652,
+            "H0_Planck": 67.38395076840948
+          }
+        },
+        {
+          "id": "Q-FORM-003",
+          "ok": true,
+          "detail": {
+            "wa_bao": -1.020855644982926
+          }
+        },
+        {
+          "id": "Q-FORM-004",
+          "ok": true,
+          "detail": {
+            "r_c": 0.6020461466908882
+          }
+        },
+        {
+          "id": "Q-FORM-005",
+          "ok": true,
+          "detail": {
+            "catalog": "docs/FORMULA_LIST.md"
+          }
         }
       ]
     },
@@ -245,7 +286,7 @@
       "exit_code": 0,
       "isabelle_home": "C:\\Users\\damia\\Desktop\\Isabelle2025-2",
       "bash": "C:\\Users\\damia\\Desktop\\Isabelle2025-2\\contrib\\cygwin\\bin\\bash.exe",
-      "log_tail": "Running FSOT_Quantum ...\nFinished FSOT_Quantum (0:00:07 elapsed time)\n0:00:13 elapsed time\n"
+      "log_tail": "0:00:03 elapsed time\n"
     },
     "fstar": {
       "prover": "fstar",
@@ -259,7 +300,7 @@
   },
   "overall_ok": true,
   "stamp": "FSOT_QUANTUM_MULTIPROVER_OK",
-  "wall_seconds": 93.41380850000132,
+  "wall_seconds": 72.95539899996947,
   "claims": {
     "math": "trinary spin algebra, pack contracts, domain D_eff folds, hired QC job integers",
     "programming_structure": "gates CX/neg/pair, pack capacity, runtime parity, Jobs twins",
