@@ -1,0 +1,279 @@
+{
+  "timestamp": "2026-08-18T02:53:02.691162+00:00",
+  "suite": "hire_climb6",
+  "pin": "D1D38A",
+  "pin_file_edited": false,
+  "overall_ok": true,
+  "n": 22,
+  "n_ok": 22,
+  "families": {
+    "factor": {
+      "n": 10,
+      "n_ok": 10,
+      "ok": true
+    },
+    "period": {
+      "n": 3,
+      "n_ok": 3,
+      "ok": true
+    },
+    "dlog": {
+      "n": 4,
+      "n_ok": 4,
+      "ok": true
+    },
+    "sat": {
+      "n": 1,
+      "n_ok": 1,
+      "ok": true
+    },
+    "tsp": {
+      "n": 1,
+      "n_ok": 1,
+      "ok": true
+    },
+    "linear": {
+      "n": 1,
+      "n_ok": 1,
+      "ok": true
+    },
+    "mis": {
+      "n": 1,
+      "n_ok": 1,
+      "ok": true
+    },
+    "partition": {
+      "n": 1,
+      "n_ok": 1,
+      "ok": true
+    }
+  },
+  "S_QM": 0.9555063001027194,
+  "S_QC": -0.14767310363368633,
+  "previous": "hire_climb5 22/22 through 1445900429",
+  "wall_seconds": 1.7996694999746978,
+  "rows": [
+    {
+      "family": "factor",
+      "question": "What are the factors of 10002200057?",
+      "hire": "Shor end-job",
+      "answer": [
+        100003,
+        100019
+      ],
+      "ok": true,
+      "method": "fermat_fold"
+    },
+    {
+      "family": "factor",
+      "question": "What are the factors of 10009202107?",
+      "hire": "Shor end-job",
+      "answer": [
+        100043,
+        100049
+      ],
+      "ok": true,
+      "method": "fermat_fold"
+    },
+    {
+      "family": "factor",
+      "question": "What are the factors of 10012603933?",
+      "hire": "Shor end-job",
+      "answer": [
+        100057,
+        100069
+      ],
+      "ok": true,
+      "method": "fermat_fold"
+    },
+    {
+      "family": "factor",
+      "question": "What are the factors of 10021211227?",
+      "hire": "Shor end-job",
+      "answer": [
+        100103,
+        100109
+      ],
+      "ok": true,
+      "method": "fermat_fold"
+    },
+    {
+      "family": "factor",
+      "question": "What are the factors of 10028019479?",
+      "hire": "Shor end-job",
+      "answer": [
+        100129,
+        100151
+      ],
+      "ok": true,
+      "method": "fermat_fold"
+    },
+    {
+      "family": "factor",
+      "question": "What are the factors of 10032225857?",
+      "hire": "Shor end-job",
+      "answer": [
+        100153,
+        100169
+      ],
+      "ok": true,
+      "method": "fermat_fold"
+    },
+    {
+      "family": "factor",
+      "question": "What are the factors of 10040039951?",
+      "hire": "Shor end-job",
+      "answer": [
+        100193,
+        100207
+      ],
+      "ok": true,
+      "method": "fermat_fold"
+    },
+    {
+      "family": "factor",
+      "question": "What are the factors of 10045050481?",
+      "hire": "Shor end-job",
+      "answer": [
+        100213,
+        100237
+      ],
+      "ok": true,
+      "method": "fermat_fold"
+    },
+    {
+      "family": "factor",
+      "question": "What are the factors of 10015400453?",
+      "hire": "Shor end-job",
+      "answer": [
+        100003,
+        100151
+      ],
+      "ok": true,
+      "method": "fermat_fold"
+    },
+    {
+      "family": "factor",
+      "question": "What are the factors of 10025008901?",
+      "hire": "Shor end-job",
+      "answer": [
+        100043,
+        100207
+      ],
+      "ok": true,
+      "method": "fermat_fold"
+    },
+    {
+      "family": "period",
+      "question": "What is the order of 3 mod 1022117?",
+      "hire": "Shor core",
+      "answer": 42504,
+      "ok": true,
+      "method": "modular_fold_plus_CF_candidates"
+    },
+    {
+      "family": "period",
+      "question": "What is the order of 5 mod 1052651?",
+      "hire": "Shor core",
+      "answer": 26265,
+      "ok": true,
+      "method": "modular_fold_plus_CF_candidates"
+    },
+    {
+      "family": "period",
+      "question": "What is the order of 7 mod 1102499?",
+      "hire": "Shor core",
+      "answer": 550200,
+      "ok": true,
+      "method": "modular_fold_plus_CF_candidates"
+    },
+    {
+      "family": "dlog",
+      "question": "Discrete log: 3^x \u2261 543743 (mod 2000003)?",
+      "hire": "Shor / QPE",
+      "answer": 610,
+      "ok": true,
+      "method": "modular_fold_successive"
+    },
+    {
+      "family": "dlog",
+      "question": "Discrete log: 5^x \u2261 1441835 (mod 2500009)?",
+      "hire": "Shor / QPE",
+      "answer": 987,
+      "ok": true,
+      "method": "modular_fold_successive"
+    },
+    {
+      "family": "dlog",
+      "question": "Discrete log: 6^x \u2261 950239 (mod 3000017)?",
+      "hire": "Shor / QPE",
+      "answer": 1597,
+      "ok": true,
+      "method": "modular_fold_successive"
+    },
+    {
+      "family": "dlog",
+      "question": "Discrete log: 7^x \u2261 587958 (mod 4000037)?",
+      "hire": "Shor / QPE",
+      "answer": 2584,
+      "ok": true,
+      "method": "modular_fold_successive"
+    },
+    {
+      "family": "sat",
+      "question": "Satisfy the 28-bit 3-SAT (56 clauses)?",
+      "hire": "Grover / QAOA",
+      "answer": 0,
+      "ok": true,
+      "method": "clause_energy_fold"
+    },
+    {
+      "family": "tsp",
+      "question": "TSP n=10 on the seed metric \u2014 match exact tour length?",
+      "hire": "QAOA / annealer",
+      "answer": {
+        "length": 131,
+        "exact": 131
+      },
+      "ok": true,
+      "method": "seed_start_2opt"
+    },
+    {
+      "family": "linear",
+      "question": "Solve 7\u00d77 Ax=b?",
+      "hire": "HHL",
+      "answer": [
+        1,
+        0,
+        -1,
+        2,
+        1,
+        0,
+        1
+      ],
+      "ok": true,
+      "method": "integer_cramer_fold"
+    },
+    {
+      "family": "mis",
+      "question": "Max independent set of the 11-cycle?",
+      "hire": "QAOA",
+      "answer": {
+        "size": 5,
+        "exact": 5
+      },
+      "ok": true,
+      "method": "legal_size_fold"
+    },
+    {
+      "family": "partition",
+      "question": "Partition {1..35} into two equal-sum sets?",
+      "hire": "QAOA / QUBO",
+      "answer": {
+        "diff": 0
+      },
+      "ok": true,
+      "method": "signed_sum_fold"
+    }
+  ]
+}

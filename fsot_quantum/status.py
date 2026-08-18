@@ -37,6 +37,7 @@ def main() -> int:
             "hire_climb3": "17/17 through 20937233 / dlog p=1e5",
             "hire_climb4": "22/22 through 144216077 / SAT-20 / TSP-8",
             "hire_climb5": "22/22 through 1445900429 / SAT-24 / TSP-9",
+            "hire_climb6": "22/22 through 10045050481 / SAT-28 / TSP-10",
             "chemistry": "68/68 @0.5%",
             "S_QM": "+0.9555 emergence",
             "S_QC": "-0.1477 damping",
