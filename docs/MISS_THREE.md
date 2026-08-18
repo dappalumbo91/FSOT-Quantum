@@ -27,7 +27,7 @@ Pin formula (wave3): \(S_{\mathrm{quant}}/C_{\mathrm{eff}}-S_{\mathrm{quant}}=0.
 | Exclusive 0.0398 | 6.0% — **different measurement** |
 | Blend 0.0411 | 2.68% — **that was our mistake** |
 
-**Solve:** score inclusive. Exclusive stays a separate open flavor-physics question, not a reason to retune \(S/C_{\mathrm{eff}}\).
+**Solve:** score inclusive. Exclusive is the same algebra on High_Energy_Physics (\(D_{\mathrm{eff}}=7\)), 1.1σ from PDG exclusive — `docs/V_CB_PUZZLE.md`. Not a reason to retune \(S_{\mathrm{QM}}/C_{\mathrm{eff}}\).
 
 ---
 

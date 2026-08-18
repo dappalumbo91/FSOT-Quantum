@@ -42,6 +42,7 @@ It does **not** claim a cryogenic QPU, Hilbert-universal simulation, RSA-scale f
 | Physics + QI III | `python -m fsot_quantum push3` | leftover CKM/LEP/BBN/cosmo/perc | required |
 | Gset family | `python -m fsot_quantum family` | G1–G5 + G14–G17 + G22–G23 | required |
 | Open objects | `python -m fsot_quantum open` | exclusive \(V_{cb}\), \(H_0\) tension, \(\alpha_s\) | required |
+| \(V_{cb}\) puzzle | `python -m fsot_quantum vcb` | inclusive QM vs exclusive HEP | required |
 | Organ export | `python -m fsot_quantum organ` | JSON for neuron-zig skill | required |
 
 Ledgers live in `docs/` and `results/` with the same names.
@@ -66,6 +67,7 @@ These are published values. Miss one and the pin is wrong.
 | Physics + QI III | leftover CKM/LEP/BBN/cosmo + Lean | **41/41 and 212/212 @0.5%** | `PHYSICS_QI3.md` |
 | Gset family | G1–G5 + G14–G17 + G22–G23 | **10/11 under 1%** · G17 **1.017%** | `GSET_FAMILY.md` — G17 is 31 edges short; not crawled |
 | Open objects | exclusive \(V_{cb}\), \(H_0\), \(\alpha_s\) | **scored as different measurements** | `OPEN_OBJECTS.md` |
+| \(V_{cb}\) puzzle | inclusive QM vs exclusive HEP | inclusive **0.002%** · exclusive **1.1σ** | `V_CB_PUZZLE.md` — same algebra, \(D_{\mathrm{eff}}\) 6→7 |
 | Chemistry pin set | — | 68/68 @ 0.5% | — |
 | QM/SM pin set | — | 14/14 @ 0.5% | — |
 | C_factor | \(C_{\mathrm{eff}}\cdot P_{\mathrm{new}}\) | identity | — |

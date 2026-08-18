@@ -21,6 +21,7 @@ python -m fsot_quantum harder      # expect 20/20
 python -m fsot_quantum push3       # expect 41/41
 python -m fsot_quantum family      # 10/11 under 1%; G17 is 1.017%
 python -m fsot_quantum open        # exclusive V_cb / H0 / alpha_s
+python -m fsot_quantum vcb         # inclusive QM vs exclusive HEP
 ```
 
 ## Required (no extra provers)
@@ -37,6 +38,7 @@ python -m fsot_quantum.stale_targets
 python -m fsot_quantum.physics_qi3 # leftover CKM / LEP / BBN / cosmology
 python -m fsot_quantum.gset_family
 python -m fsot_quantum.open_objects
+python -m fsot_quantum.vcb_puzzle
 python -m fsot_quantum.organ_export
 # BR(H→gg) vs YR4 (not the stale 0.0785 in vendor wave8): docs/BR_H_GG.md
 # Three earlier audit misses were wrong objects: docs/MISS_THREE.md

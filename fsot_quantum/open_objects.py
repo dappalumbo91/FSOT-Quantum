@@ -82,9 +82,9 @@ def main() -> int:
             "fold": fold_vcb,
             "published": exclusive,
             "rel_pct": rel_exc,
-            "gate": "different extraction — not a 0.5% fail",
+            "gate": "different extraction — see docs/V_CB_PUZZLE.md (HEP domain)",
             "ok": True,
-            "role": "V_cb puzzle; do not blend with inclusive",
+            "role": "V_cb puzzle; same algebra on High_Energy_Physics, not a blend",
         },
         {
             "id": "H0_Planck",

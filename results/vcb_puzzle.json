@@ -1,0 +1,62 @@
+{
+  "timestamp": "2026-08-18T01:21:20.182771+00:00",
+  "suite": "vcb_puzzle",
+  "pin": "D1D38A",
+  "pin_file_edited": false,
+  "overall_ok": true,
+  "wall_seconds": 4.7600013203918934e-05,
+  "policy": "same algebra; change domain / D_eff; do not blend; do not invent a term",
+  "rows": [
+    {
+      "id": "inclusive",
+      "question": "What is inclusive |V_cb|?",
+      "domain": "Quantum_Mechanics",
+      "D_eff": 6,
+      "formula": "S(QM)\u00b7(1/C_eff \u2212 1)",
+      "fold": 0.042200813327913686,
+      "published": 0.0422,
+      "published_unc": 0.0005,
+      "rel_pct": 0.0019273173310061676,
+      "sigma": 0.0016266558273692056,
+      "ok": true,
+      "role": "OPE / B\u2192Xc\u2113\u03bd \u2014 the object wave3 was written against"
+    },
+    {
+      "id": "exclusive",
+      "question": "What is exclusive |V_cb|?",
+      "domain": "High_Energy_Physics",
+      "D_eff": 7,
+      "formula": "S(HEP)\u00b7(1/C_eff \u2212 1)",
+      "fold": 0.03914266605020426,
+      "published": 0.0398,
+      "published_unc": 0.0006,
+      "rel_pct": 1.6515928386827763,
+      "sigma": 1.0955565829929086,
+      "ok": true,
+      "role": "exclusive B\u2192D(*)\u2113\u03bd + lattice form factors \u2014 same algebra, D_eff +1"
+    }
+  ],
+  "not_scored": [
+    {
+      "domain": "Particle_Physics",
+      "D_eff": 5,
+      "fold": 0.041975882489444165,
+      "vs_inclusive_pct": 0.5310841482365795,
+      "use": "neighbor on the pin ladder; not the exclusive object"
+    },
+    {
+      "domain": "Nuclear_Physics",
+      "D_eff": 15,
+      "fold": 0.04069047728552792,
+      "vs_exclusive_pct": 2.237380114391762,
+      "use": "lattice-adjacent; worse than HEP; not scored"
+    },
+    {
+      "domain": "Astronomy",
+      "D_eff": 20,
+      "fold": 0.03968129201741308,
+      "vs_exclusive_pct": 0.29826126278121645,
+      "use": "numerically close \u2014 WRONG domain, not scored"
+    }
+  ]
+}

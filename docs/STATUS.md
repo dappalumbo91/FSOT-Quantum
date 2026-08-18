@@ -191,7 +191,7 @@ Not scored as one number, on purpose:
 ## What is still open (written, not dressed up)
 
 - Gset champions unmatched (30–114 edges). Family now **10/11 under 1%**; G17 is **1.017%** (31 edges). Do not advertise MaxCut as champion-matching.
-- Exclusive \(V_{cb}\), \(H_0\), \(\alpha_s(M_Z)\) scored as different measurements: [`OPEN_OBJECTS.md`](OPEN_OBJECTS.md).
+- Exclusive \(V_{cb}\) is the same algebra on High_Energy_Physics (\(D_{\mathrm{eff}}=7\)), **1.1σ** from PDG exclusive 0.0398. Inclusive stays QM at 0.002%. [`V_CB_PUZZLE.md`](V_CB_PUZZLE.md). \(H_0\) and \(\alpha_s(M_Z)\) remain different-measurement objects: [`OPEN_OBJECTS.md`](OPEN_OBJECTS.md).
 - Vendor wave8 `BR_H_gg` field still stale (0.0785). Fold already matches YR4. Pin not edited.
 - Hilbert fragments exist as **optional bridges**. They are not the scale path.
 - Tiny Shor is tiny. No RSA-scale claim.

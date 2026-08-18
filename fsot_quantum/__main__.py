@@ -17,6 +17,7 @@ Field entry: python -m fsot_quantum [cmd]
   audit      stale vendor targets vs PDG/YR4
   family     Gset G1–G5 + G14–G17 + G22–G23 (<1% aspiration)
   open       open objects: exclusive V_cb, H0 tension, alpha_s
+  vcb        |V_cb| puzzle: inclusive QM vs exclusive HEP
   organ      export S/κ/QI JSON for neuron-zig
   stamp      Lean · Coq · Isabelle · F* · Python multiprover
   atlas      full Lean solved atlas
@@ -92,6 +93,9 @@ def main() -> int:
         return m()
     if c in ("open", "objects"):
         from fsot_quantum.open_objects import main as m
+        return m()
+    if c == "vcb":
+        from fsot_quantum.vcb_puzzle import main as m
         return m()
     if c == "organ":
         from fsot_quantum.organ_export import main as m

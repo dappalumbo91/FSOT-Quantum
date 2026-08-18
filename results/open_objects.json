@@ -1,10 +1,10 @@
 {
-  "timestamp": "2026-08-18T01:15:20.276586+00:00",
+  "timestamp": "2026-08-18T01:21:34.878545+00:00",
   "suite": "open_objects",
   "pin": "D1D38A",
   "pin_file_edited": false,
   "overall_ok": true,
-  "wall_seconds": 0.02587900002254173,
+  "wall_seconds": 0.02494139998452738,
   "policy": "score the object the formula was written against; do not blend",
   "diagnosis": "docs/MISS_THREE.md",
   "rows": [
@@ -26,9 +26,9 @@
       "fold": 0.04220081332791359,
       "published": 0.0398,
       "rel_pct": 6.032194291240168,
-      "gate": "different extraction \u2014 not a 0.5% fail",
+      "gate": "different extraction \u2014 see docs/V_CB_PUZZLE.md (HEP domain)",
       "ok": true,
-      "role": "V_cb puzzle; do not blend with inclusive"
+      "role": "V_cb puzzle; same algebra on High_Energy_Physics, not a blend"
     },
     {
       "id": "H0_Planck",
