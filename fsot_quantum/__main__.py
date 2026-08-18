@@ -18,7 +18,7 @@ Field entry: python -m fsot_quantum [cmd]
   family     Gset G1–G5 + G14–G17 + G22–G23 (<1% aspiration)
   open       open objects: exclusive V_cb, H0 tension, alpha_s
   vcb        |V_cb| puzzle: inclusive QM vs exclusive HEP
-  h0         Hubble tension: Planck Cosmology vs SH0ES Particle_Astrophysics
+  h0         Hubble tension: Lean BH→WH bubble-bleed
   organ      export S/κ/QI JSON for neuron-zig
   stamp      Lean · Coq · Isabelle · F* · Python multiprover
   atlas      full Lean solved atlas

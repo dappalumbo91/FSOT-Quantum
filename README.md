@@ -18,7 +18,7 @@ Answers the jobs people hire quantum computers and precision-physics codes for, 
 
 **Wrap (2026-08-13):** competitor climb closed on this pin. Audit 20/20 vs YR4/PDG, leftover hired physics 41/41. Three earlier audit misses were wrong objects (`docs/MISS_THREE.md`), not a pin edit. GitHub About text is the repo one-liner; this README and `docs/STATUS.md` are the current record.
 
-**Picked up (2026-08-17):** open objects scored as different measurements (`docs/OPEN_OBJECTS.md`). Gset family extended to G14–G17 — **10/11 under 1%**, G17 **1.017%** written not crawled. Exclusive \(\lvert V_{cb}\rvert\) is the same algebra on High_Energy_Physics (1.1σ) — `docs/V_CB_PUZZLE.md`. SH0ES \(H_0\) is the same algebra on Particle_Astrophysics (**0.41%**) — `docs/H0_TENSION.md`.
+**Picked up (2026-08-17):** open objects scored as different measurements (`docs/OPEN_OBJECTS.md`). Gset family extended to G14–G17 — **10/11 under 1%**, G17 **1.017%** written not crawled. Exclusive \(\lvert V_{cb}\rvert\) is the same algebra on High_Energy_Physics (1.1σ) — `docs/V_CB_PUZZLE.md`. SH0ES \(H_0\) is Lean BH→WH bubble-bleed (Planck CMB **0.024%**, SH0ES **1.00%**) — `docs/H0_TENSION.md`.
 
 ---
 

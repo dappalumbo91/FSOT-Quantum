@@ -1,64 +1,60 @@
 {
-  "timestamp": "2026-08-18T01:26:00.628529+00:00",
+  "timestamp": "2026-08-18T01:30:00.407510+00:00",
   "suite": "h0_tension",
   "pin": "D1D38A",
   "pin_file_edited": false,
   "overall_ok": true,
-  "wall_seconds": 6.619998021051288e-05,
-  "policy": "same algebra; change domain / D_eff; do not blend; do not invent a term",
+  "wall_seconds": 3.950000973418355e-05,
+  "authority": "FSOT-2.1-Lean black_hole_white_hole_bubble_bleed",
+  "authority_urls": [
+    "https://github.com/dappalumbo91/FSOT-2.1-Lean/blob/main/scripts/bubble_bleed_physics.py",
+    "https://github.com/dappalumbo91/FSOT-2.1-Lean/blob/main/predictions/h0_multi_tool_predictions.json",
+    "https://github.com/dappalumbo91/FSOT-2.1-Lean/blob/main/README.md"
+  ],
+  "h0_global": 68.44005682979429,
+  "bubble_bleed_fraction": 0.01543111023433652,
+  "policy": "one global rate; tools differ by BH\u2192WH bubble-density sector",
   "rows": [
     {
-      "id": "Planck",
-      "question": "What is H0 (Planck / \u039bCDM)?",
-      "domain": "Cosmology",
-      "D_eff": 25,
-      "observed": false,
-      "formula": "100\u00b7(1 + S(Cosmology)\u00b7A_bleed/A_in)",
+      "id": "global",
+      "question": "What is the FSOT global H0 (wave1 Cosmology)?",
+      "mechanism": "S(Cosmology) wave1 \u2014 not a tool readout",
+      "density": 0.0,
       "fold": 68.44005682979429,
+      "published": 68.44005682979429,
+      "rel_pct": 0.0,
+      "ok": true,
+      "role": "single fluid rate; tools sit off this by bubble density"
+    },
+    {
+      "id": "Planck",
+      "question": "What is H0 (Planck CMB / depleted BH\u2192WH sector)?",
+      "mechanism": "H0_global\u00b7(1 + (\u22121)\u00b7bleed_frac)",
+      "density": -1.0,
+      "fold": 67.38395076840948,
       "published": 67.4,
       "published_unc": 0.5,
-      "rel_pct": 1.5431110234336516,
-      "sigma": 2.0801136595885623,
+      "rel_pct": 0.023811916306422452,
+      "sigma": 0.03209846318105747,
       "ok": true,
-      "role": "CMB / early universe \u2014 the object wave1 was written against"
+      "role": "early-universe acoustic scale; depleted outgassing sector"
     },
     {
       "id": "SH0ES",
-      "question": "What is H0 (SH0ES / local ladder)?",
-      "domain": "Particle_Astrophysics",
-      "D_eff": 24,
-      "observed": false,
-      "formula": "100\u00b7(1 + S(Particle_Astrophysics)\u00b7A_bleed/A_in)",
-      "fold": 73.34212110352536,
+      "question": "What is H0 (SH0ES / inflated local-bubble sector)?",
+      "mechanism": "H0_global\u00b7(1 + 5.05\u00b7bleed_frac)",
+      "density": 5.05,
+      "fold": 73.7733924397876,
       "published": 73.04,
       "published_unc": 1.04,
-      "rel_pct": 0.41363787448706385,
-      "sigma": 0.29050106108206875,
+      "rel_pct": 1.0040969876609984,
+      "sigma": 0.7051850382573012,
       "ok": true,
-      "role": "Cepheid + SN Ia local ladder \u2014 same algebra, D_eff \u22121"
+      "role": "Cepheid + SN Ia local ladder; inflated BH\u2192WH outgassing sector"
     }
   ],
-  "not_scored": [
-    {
-      "domain": "Quantum_Gravity",
-      "D_eff": 22,
-      "fold": 66.98648837538181,
-      "vs_Planck_pct": 0.6135187308875298,
-      "use": "neighbor; 0.61% from Planck \u2014 not the SH0ES object"
-    },
-    {
-      "domain": "Seismology",
-      "D_eff": 18,
-      "fold": 71.99231418902595,
-      "vs_SH0ES_pct": 1.4344000697892374,
-      "use": "numerically nearby \u2014 WRONG domain, not scored"
-    },
-    {
-      "domain": "Astronomy",
-      "D_eff": 20,
-      "observed": true,
-      "fold": 156.4334706871894,
-      "use": "looked sky; S>0 so this H0 form is not the local-ladder object"
-    }
-  ]
+  "neighbor_not_authority": {
+    "Particle_Astrophysics_H0": 73.34212110352536,
+    "note": "D_eff 24 neighbor of Cosmology; not the Lean BH\u2192WH tool formula"
+  }
 }

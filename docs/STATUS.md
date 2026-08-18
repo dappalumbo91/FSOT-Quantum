@@ -183,7 +183,7 @@ Not scored as one number, on purpose:
 | Object | Why it stays open |
 |--------|-------------------|
 | Exclusive \(\lvert V_{cb}\rvert=0.0398\) | Different PDG extraction |
-| \(H_0\) SH0ES | same algebra on Particle_Astrophysics — 0.41% · `H0_TENSION.md` |
+| \(H_0\) SH0ES | Lean BH→WH inflated sector — 1.00% · `H0_TENSION.md` |
 | \(\alpha_s(M_Z)\) | fold 0.1171 vs vendor 0.1179 (0.68%); PDG 0.1180±0.0009 is the 1σ edge |
 
 ---
@@ -192,7 +192,7 @@ Not scored as one number, on purpose:
 
 - Gset champions unmatched (30–114 edges). Family now **10/11 under 1%**; G17 is **1.017%** (31 edges). Do not advertise MaxCut as champion-matching.
 - Exclusive \(V_{cb}\) is the same algebra on High_Energy_Physics (\(D_{\mathrm{eff}}=7\)), **1.1σ** from PDG exclusive 0.0398. Inclusive stays QM at 0.002%. [`V_CB_PUZZLE.md`](V_CB_PUZZLE.md).
-- SH0ES \(H_0\) is the same algebra on Particle_Astrophysics (\(D_{\mathrm{eff}}=24\)), **0.41%** from 73.04. Planck stays Cosmology at 1.54%. [`H0_TENSION.md`](H0_TENSION.md). \(\alpha_s(M_Z)\) remains a 1σ-edge object: [`OPEN_OBJECTS.md`](OPEN_OBJECTS.md).
+- Hubble tension is Lean **BH→WH bubble-bleed**: one global rate 68.44; Planck depleted sector **0.024%**; SH0ES inflated sector **1.00%**. [`H0_TENSION.md`](H0_TENSION.md) · [FSOT-2.1-Lean §7.2](https://github.com/dappalumbo91/FSOT-2.1-Lean). \(\alpha_s(M_Z)\) remains a 1σ-edge object: [`OPEN_OBJECTS.md`](OPEN_OBJECTS.md).
 - Vendor wave8 `BR_H_gg` field still stale (0.0785). Fold already matches YR4. Pin not edited.
 - Hilbert fragments exist as **optional bridges**. They are not the scale path.
 - Tiny Shor is tiny. No RSA-scale claim.
