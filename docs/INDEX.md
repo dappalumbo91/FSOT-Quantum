@@ -45,6 +45,7 @@ Every living panel also writes a twin under `results/`.
 | [`GSET_FAMILY.md`](GSET_FAMILY.md) | G1–G5 + G14–G17 + G22–G23 (G17 1.017%) |
 | [`OPEN_OBJECTS.md`](OPEN_OBJECTS.md) | Exclusive \(V_{cb}\), \(H_0\) tension, \(\alpha_s(M_Z)\) |
 | [`V_CB_PUZZLE.md`](V_CB_PUZZLE.md) | Inclusive QM vs exclusive HEP — same algebra |
+| [`H0_TENSION.md`](H0_TENSION.md) | Planck Cosmology vs SH0ES Particle_Astrophysics |
 | [`QC_ACCURACY.md`](QC_ACCURACY.md) | Hired QC/QM jobs on ordinary hardware |
 
 ---

@@ -1,10 +1,10 @@
 {
-  "timestamp": "2026-08-18T01:21:34.878545+00:00",
+  "timestamp": "2026-08-18T01:26:00.848527+00:00",
   "suite": "open_objects",
   "pin": "D1D38A",
   "pin_file_edited": false,
   "overall_ok": true,
-  "wall_seconds": 0.02494139998452738,
+  "wall_seconds": 0.029128900030627847,
   "policy": "score the object the formula was written against; do not blend",
   "diagnosis": "docs/MISS_THREE.md",
   "rows": [
@@ -48,9 +48,9 @@
       "fold": 68.44005682979427,
       "published": 73.04,
       "rel_pct": 6.29784114212176,
-      "gate": "different extraction \u2014 not a 0.5% fail",
+      "gate": "different extraction \u2014 see docs/H0_TENSION.md (Particle_Astrophysics)",
       "ok": true,
-      "role": "Hubble tension; do not blend with Planck"
+      "role": "Hubble tension; same algebra on Particle_Astrophysics, not a blend"
     },
     {
       "id": "alpha_s_MZ",

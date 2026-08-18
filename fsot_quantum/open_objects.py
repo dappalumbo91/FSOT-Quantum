@@ -104,9 +104,9 @@ def main() -> int:
             "fold": fold_h0,
             "published": shoes_h0,
             "rel_pct": rel_shoes,
-            "gate": "different extraction — not a 0.5% fail",
+            "gate": "different extraction — see docs/H0_TENSION.md (Particle_Astrophysics)",
             "ok": True,
-            "role": "Hubble tension; do not blend with Planck",
+            "role": "Hubble tension; same algebra on Particle_Astrophysics, not a blend",
         },
         {
             "id": "alpha_s_MZ",
