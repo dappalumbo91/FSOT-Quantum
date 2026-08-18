@@ -21,6 +21,7 @@ Field entry: python -m fsot_quantum [cmd]
   h0         Hubble tension: Lean BH→WH bubble-bleed
   contested  Lean contested sectors (H0/S8/BBN/Higgs/σ8)
   leftovers  remaining opens: DE dual lane, alpha_s, V_cb, G17
+  hire       expand hired QC questions (factor / dlog / Simon / SAT / HHL)
   formulas   formula list — what each formula solves
   organ      export S/κ/QI JSON for neuron-zig
   stamp      Lean · Coq · Isabelle · F* · Python multiprover
@@ -109,6 +110,9 @@ def main() -> int:
         return m()
     if c in ("leftovers", "remaining"):
         from fsot_quantum.open_remaining import main as m
+        return m()
+    if c in ("hire", "hire_expand", "jobs"):
+        from fsot_quantum.hire_expand import main as m
         return m()
     if c in ("formulas", "catalog"):
         from fsot_quantum.formula_catalog import main as m

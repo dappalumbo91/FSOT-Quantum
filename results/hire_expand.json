@@ -1,0 +1,489 @@
+{
+  "timestamp": "2026-08-18T02:15:51.677555+00:00",
+  "suite": "hire_expand",
+  "pin": "D1D38A",
+  "pin_file_edited": false,
+  "overall_ok": true,
+  "n": 29,
+  "n_ok": 29,
+  "families": {
+    "factor": {
+      "n": 10,
+      "n_ok": 10,
+      "ok": true
+    },
+    "dlog": {
+      "n": 10,
+      "n_ok": 10,
+      "ok": true
+    },
+    "simon": {
+      "n": 1,
+      "n_ok": 1,
+      "ok": true
+    },
+    "sat": {
+      "n": 1,
+      "n_ok": 1,
+      "ok": true
+    },
+    "partition": {
+      "n": 1,
+      "n_ok": 1,
+      "ok": true
+    },
+    "linear": {
+      "n": 3,
+      "n_ok": 3,
+      "ok": true
+    },
+    "color": {
+      "n": 1,
+      "n_ok": 1,
+      "ok": true
+    },
+    "search": {
+      "n": 2,
+      "n_ok": 2,
+      "ok": true
+    }
+  },
+  "S_QM": 0.9555063001027194,
+  "S_QC": -0.14767310363368633,
+  "wall_seconds": 1.689080499985721,
+  "rows": [
+    {
+      "family": "factor",
+      "question": "What are the factors of 11413?",
+      "hire": "Shor end-job",
+      "answer": [
+        101,
+        113
+      ],
+      "ok": true,
+      "method": "gcd_fold",
+      "detail": {
+        "N": 11413,
+        "bases_tried": null
+      }
+    },
+    {
+      "family": "factor",
+      "question": "What are the factors of 16637?",
+      "hire": "Shor end-job",
+      "answer": [
+        127,
+        131
+      ],
+      "ok": true,
+      "method": "fermat_fold",
+      "detail": {
+        "N": 16637,
+        "bases_tried": null
+      }
+    },
+    {
+      "family": "factor",
+      "question": "What are the factors of 19043?",
+      "hire": "Shor end-job",
+      "answer": [
+        137,
+        139
+      ],
+      "ok": true,
+      "method": "fermat_fold",
+      "detail": {
+        "N": 19043,
+        "bases_tried": null
+      }
+    },
+    {
+      "family": "factor",
+      "question": "What are the factors of 25591?",
+      "hire": "Shor end-job",
+      "answer": [
+        157,
+        163
+      ],
+      "ok": true,
+      "method": "fermat_fold",
+      "detail": {
+        "N": 25591,
+        "bases_tried": null
+      }
+    },
+    {
+      "family": "factor",
+      "question": "What are the factors of 39203?",
+      "hire": "Shor end-job",
+      "answer": [
+        197,
+        199
+      ],
+      "ok": true,
+      "method": "gcd_fold",
+      "detail": {
+        "N": 39203,
+        "bases_tried": null
+      }
+    },
+    {
+      "family": "factor",
+      "question": "What are the factors of 50621?",
+      "hire": "Shor end-job",
+      "answer": [
+        223,
+        227
+      ],
+      "ok": true,
+      "method": "fermat_fold",
+      "detail": {
+        "N": 50621,
+        "bases_tried": null
+      }
+    },
+    {
+      "family": "factor",
+      "question": "What are the factors of 64507?",
+      "hire": "Shor end-job",
+      "answer": [
+        251,
+        257
+      ],
+      "ok": true,
+      "method": "gcd_fold",
+      "detail": {
+        "N": 64507,
+        "bases_tried": null
+      }
+    },
+    {
+      "family": "factor",
+      "question": "What are the factors of 103603?",
+      "hire": "Shor end-job",
+      "answer": [
+        313,
+        331
+      ],
+      "ok": true,
+      "method": "fermat_fold",
+      "detail": {
+        "N": 103603,
+        "bases_tried": null
+      }
+    },
+    {
+      "family": "factor",
+      "question": "What are the factors of 142763?",
+      "hire": "Shor end-job",
+      "answer": [
+        367,
+        389
+      ],
+      "ok": true,
+      "method": "fermat_fold",
+      "detail": {
+        "N": 142763,
+        "bases_tried": null
+      }
+    },
+    {
+      "family": "factor",
+      "question": "What are the factors of 172189?",
+      "hire": "Shor end-job",
+      "answer": [
+        409,
+        421
+      ],
+      "ok": true,
+      "method": "fermat_fold",
+      "detail": {
+        "N": 172189,
+        "bases_tried": null
+      }
+    },
+    {
+      "family": "dlog",
+      "question": "Discrete log: 3^x \u2261 13 (mod 17)?",
+      "hire": "Shor / QPE",
+      "answer": 4,
+      "ok": true,
+      "method": "modular_fold_successive",
+      "detail": {
+        "published_x": 4,
+        "steps": 4
+      }
+    },
+    {
+      "family": "dlog",
+      "question": "Discrete log: 5^x \u2261 8 (mod 23)?",
+      "hire": "Shor / QPE",
+      "answer": 6,
+      "ok": true,
+      "method": "modular_fold_successive",
+      "detail": {
+        "published_x": 6,
+        "steps": 6
+      }
+    },
+    {
+      "family": "dlog",
+      "question": "Discrete log: 2^x \u2261 3 (mod 29)?",
+      "hire": "Shor / QPE",
+      "answer": 5,
+      "ok": true,
+      "method": "modular_fold_successive",
+      "detail": {
+        "published_x": 5,
+        "steps": 5
+      }
+    },
+    {
+      "family": "dlog",
+      "question": "Discrete log: 7^x \u2261 4 (mod 71)?",
+      "hire": "Shor / QPE",
+      "answer": 12,
+      "ok": true,
+      "method": "modular_fold_successive",
+      "detail": {
+        "published_x": 12,
+        "steps": 12
+      }
+    },
+    {
+      "family": "dlog",
+      "question": "Discrete log: 3^x \u2261 73 (mod 101)?",
+      "hire": "Shor / QPE",
+      "answer": 69,
+      "ok": true,
+      "method": "modular_fold_successive",
+      "detail": {
+        "published_x": 69,
+        "steps": 69
+      }
+    },
+    {
+      "family": "dlog",
+      "question": "Discrete log: 6^x \u2261 82 (mod 107)?",
+      "hire": "Shor / QPE",
+      "answer": 17,
+      "ok": true,
+      "method": "modular_fold_successive",
+      "detail": {
+        "published_x": 17,
+        "steps": 17
+      }
+    },
+    {
+      "family": "dlog",
+      "question": "Discrete log: 10^x \u2261 94 (mod 251)?",
+      "hire": "Shor / QPE",
+      "answer": 8,
+      "ok": true,
+      "method": "modular_fold_successive",
+      "detail": {
+        "published_x": 8,
+        "steps": 8
+      }
+    },
+    {
+      "family": "dlog",
+      "question": "Discrete log: 3^x \u2261 52 (mod 503)?",
+      "hire": "Shor / QPE",
+      "answer": 42,
+      "ok": true,
+      "method": "modular_fold_successive",
+      "detail": {
+        "published_x": 42,
+        "steps": 42
+      }
+    },
+    {
+      "family": "dlog",
+      "question": "Discrete log: 5^x \u2261 338 (mod 1009)?",
+      "hire": "Shor / QPE",
+      "answer": 88,
+      "ok": true,
+      "method": "modular_fold_successive",
+      "detail": {
+        "published_x": 88,
+        "steps": 88
+      }
+    },
+    {
+      "family": "dlog",
+      "question": "Discrete log: 7^x \u2261 127 (mod 2053)?",
+      "hire": "Shor / QPE",
+      "answer": 119,
+      "ok": true,
+      "method": "modular_fold_successive",
+      "detail": {
+        "published_x": 119,
+        "steps": 119
+      }
+    },
+    {
+      "family": "simon",
+      "question": "Simon hidden string on 8 bits (s=113)?",
+      "hire": "Simon / HSP",
+      "answer": 113,
+      "ok": true,
+      "method": "collision_fold_gf2",
+      "detail": {
+        "secret": 113,
+        "n_collisions": 16
+      }
+    },
+    {
+      "family": "sat",
+      "question": "Satisfy the 8-bit 3-SAT (10 clauses)?",
+      "hire": "Grover / QAOA",
+      "answer": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "ok": true,
+      "method": "clause_energy_fold",
+      "detail": {
+        "unsat": 0
+      }
+    },
+    {
+      "family": "partition",
+      "question": "Partition {1..15} into two equal-sum sets?",
+      "hire": "QAOA / QUBO",
+      "answer": {
+        "diff": 0,
+        "spins": [
+          -1,
+          -1,
+          -1,
+          -1,
+          1,
+          -1,
+          1,
+          -1,
+          1,
+          -1,
+          1,
+          -1,
+          1,
+          -1,
+          1
+        ]
+      },
+      "ok": true,
+      "method": "signed_sum_fold",
+      "detail": {
+        "diff": 0,
+        "total": 120
+      }
+    },
+    {
+      "family": "linear",
+      "question": "Solve Ax=b for A=[[2, 1], [1, 3]] b=[5, 10]?",
+      "hire": "HHL",
+      "answer": [
+        1,
+        3
+      ],
+      "ok": true,
+      "method": "integer_cramer_fold",
+      "detail": {
+        "residual": 0,
+        "published_x": [
+          1,
+          3
+        ]
+      }
+    },
+    {
+      "family": "linear",
+      "question": "Solve Ax=b for A=[[3, 0, 1], [1, 2, 0], [0, 1, 4]] b=[9, 4, 13]?",
+      "hire": "HHL",
+      "answer": [
+        2,
+        1,
+        3
+      ],
+      "ok": true,
+      "method": "integer_cramer_fold",
+      "detail": {
+        "residual": 0,
+        "published_x": [
+          2,
+          1,
+          3
+        ]
+      }
+    },
+    {
+      "family": "linear",
+      "question": "Solve Ax=b for A=[[4, 1, 0], [1, 3, 1], [0, 1, 2]] b=[9, 8, 7]?",
+      "hire": "HHL",
+      "answer": [
+        2,
+        1,
+        3
+      ],
+      "ok": true,
+      "method": "integer_cramer_fold",
+      "detail": {
+        "residual": 0,
+        "published_x": [
+          2,
+          1,
+          3
+        ]
+      }
+    },
+    {
+      "family": "color",
+      "question": "3-color the 5-cycle?",
+      "hire": "QAOA",
+      "answer": [
+        1,
+        2,
+        1,
+        2,
+        0
+      ],
+      "ok": true,
+      "method": "mono_edge_fold",
+      "detail": {
+        "mono": 0
+      }
+    },
+    {
+      "family": "search",
+      "question": "Find marked index 42424 in 100000 items?",
+      "hire": "Grover",
+      "answer": 42424,
+      "ok": true,
+      "method": "oracle_field_fold_collapse",
+      "detail": {
+        "n_items": 100000,
+        "oracle_evals": 100000
+      }
+    },
+    {
+      "family": "search",
+      "question": "Find marked index 314159 in 1000000 items?",
+      "hire": "Grover",
+      "answer": 314159,
+      "ok": true,
+      "method": "oracle_field_fold_collapse",
+      "detail": {
+        "n_items": 1000000,
+        "oracle_evals": 1000000
+      }
+    }
+  ],
+  "doctrine": "Hired questions, not their circuits. Change domain / fold, not a coefficient. Pin D1D38A."
+}

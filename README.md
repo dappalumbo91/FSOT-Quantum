@@ -50,6 +50,7 @@ Living numbers. Miss one and the pin is wrong — except where we scored the wro
 | Physics + QI II | 22/22 + 126/126 Lean | [`docs/PHYSICS_QI2.md`](docs/PHYSICS_QI2.md) |
 | Physics + QI III (leftover hired physics) | **41/41 + 212/212 Lean** | [`docs/PHYSICS_QI3.md`](docs/PHYSICS_QI3.md) |
 | Gset family G1–G5 + G14–G17 + G22–G23 | **10/11 under 1%** · G17 1.017% | [`docs/GSET_FAMILY.md`](docs/GSET_FAMILY.md) |
+| Hired QC expand (factor / dlog / Simon / SAT / HHL) | **29/29** | [`docs/HIRE_EXPAND.md`](docs/HIRE_EXPAND.md) |
 | Exclusive \(B\to D\ell\nu\) | **0.15%** vs Belle II 2025 0.0392 | [`docs/V_CB_PUZZLE.md`](docs/V_CB_PUZZLE.md) |
 | \(H_0\) Planck / SH0ES | **0.024% / 1.00%** Lean BH→WH | [`docs/H0_TENSION.md`](docs/H0_TENSION.md) |
 | \(\alpha_s(M_Z)\) | 0.68% inside vendor **0.9%** band | [`docs/OPEN_REMAINING.md`](docs/OPEN_REMAINING.md) |
@@ -109,6 +110,7 @@ python -m fsot_quantum vcb        # inclusive QM vs exclusive B→D HEP
 python -m fsot_quantum h0         # Lean BH→WH Hubble
 python -m fsot_quantum contested  # Lean contested sectors
 python -m fsot_quantum leftovers  # remaining opens (G17)
+python -m fsot_quantum hire       # factor / dlog / Simon / SAT / HHL
 python -m fsot_quantum formulas   # formula list
 python -m fsot_quantum organ      # JSON for neuron-zig
 python -m fsot_quantum stamp      # Lean · Coq · Isabelle · F* · Python

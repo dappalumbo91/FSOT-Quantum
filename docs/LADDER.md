@@ -45,6 +45,7 @@ The comparison is the **hired question**, not a replay of a cryogenic QPU or a H
 | Hubble tension | `python -m fsot_quantum h0` | Lean BH→WH bubble-bleed (Planck / SH0ES) | required |
 | Contested sectors | `python -m fsot_quantum contested` | Lean open-science panel on this pin | required |
 | Leftovers | `python -m fsot_quantum leftovers` | DE dual lane, α_s, V_cb, G17 | required |
+| Hired QC expand | `python -m fsot_quantum hire` | factor / dlog / Simon / SAT / HHL / search | required |
 | Formula list | `python -m fsot_quantum formulas` | every formula and what it solves | required |
 | Multiprover stamp | `python -m fsot_quantum stamp` | Lean · Coq · Isabelle · F\* · Python | required |
 | Organ export | `python -m fsot_quantum organ` | JSON for neuron-zig skill | required |
@@ -70,6 +71,7 @@ These are published values. Miss one and the pin is wrong.
 | Stale-target audit | 20 cited vs YR4/PDG | **20/20 fold@0.5% vs lit** | `STALE_TARGETS.md` · `MISS_THREE.md` — three misses were wrong objects (inclusive \(V_{cb}\); \(H\to\gamma\gamma/Z\gamma\) at 125.00 GeV). BR_H_gg vendor field still stale; fold already matches YR4. |
 | Physics + QI III | leftover CKM/LEP/BBN/cosmo + Lean | **41/41 and 212/212 @0.5%** | `PHYSICS_QI3.md` |
 | Gset family | G1–G5 + G14–G17 + G22–G23 | **10/11 under 1%** · G17 **1.017%** | `GSET_FAMILY.md` — G17 is 31 edges short; not crawled |
+| Hired QC expand | factor / dlog / Simon / SAT / HHL / search | **29/29** | `HIRE_EXPAND.md` — factors through 172189; dlog 10/10 |
 | Open objects | wrong-object diagnosis | exclusive blend **6.03%** / SH0ES global **6.30%** if scored wrong | `OPEN_OBJECTS.md` — superseded by `vcb` / `h0` |
 | \(V_{cb}\) puzzle | inclusive QM vs exclusive B→D HEP | inclusive **0.002%** · exclusive **0.15%** | `V_CB_PUZZLE.md` — Belle II 2025 0.0392, not the D+D* blend |
 | Hubble tension | BH→WH bubble-bleed (Lean) | Planck CMB **0.024%** · SH0ES **1.00%** | `H0_TENSION.md` — one global rate, different outgassing sectors |

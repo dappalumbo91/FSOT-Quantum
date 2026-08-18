@@ -50,6 +50,7 @@ Every living panel also writes a twin under `results/`.
 | [`CONTESTED_SECTORS.md`](CONTESTED_SECTORS.md) | Lean contested panel on this pin |
 | [`OPEN_REMAINING.md`](OPEN_REMAINING.md) | Leftovers after vcb/h0: DE dual lane, α_s band, G17 |
 | [`FORMULA_LIST.md`](FORMULA_LIST.md) | Every formula and what it solves |
+| [`HIRE_EXPAND.md`](HIRE_EXPAND.md) | Hired QC questions on this fold (factor / dlog / Simon / SAT / HHL) |
 | [`MULTIPROVER_VERIFICATION.md`](MULTIPROVER_VERIFICATION.md) | Lean · Coq · Isabelle · F\* · Python stamp |
 | [`QC_ACCURACY.md`](QC_ACCURACY.md) | Hired QC/QM jobs on ordinary hardware |
 
