@@ -33,6 +33,7 @@ Field entry: python -m fsot_quantum [cmd]
   hire7      climb 7: 13-digit factor / SAT-32 / TSP-11 / HHL 8×8
   heights    G17 + far-prime (RSA-shaped) factoring — the written heights
   heights2   G17 close + p−1 log-N factor
+  heights3   log-N: p−1 + p+1 + kN Fermat
   formulas   formula list — what each formula solves
   organ      export S/κ/QI JSON for neuron-zig
   stamp      Lean · Coq · Isabelle · F* · Python multiprover
@@ -157,6 +158,9 @@ def main() -> int:
         return m()
     if c in ("heights2", "height2"):
         from fsot_quantum.heights_next import main as m
+        return m()
+    if c in ("heights3", "height3"):
+        from fsot_quantum.heights3 import main as m
         return m()
     if c in ("formulas", "catalog"):
         from fsot_quantum.formula_catalog import main as m

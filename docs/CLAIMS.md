@@ -55,6 +55,7 @@ Living ledgers. Re-run the command. Miss one and the pin is wrong — except whe
 | Hired QC climb 6 | **22/22** | `python -m fsot_quantum hire6` | `HIRE_CLIMB6.md` |
 | Hired QC climb 7 | **22/22** | `python -m fsot_quantum hire7` | `HIRE_CLIMB7.md` |
 | Heights (far factor / G17) | far **8/8** · G17 **0.427%** (13 edges) | `python -m fsot_quantum heights2` | `HEIGHTS_NEXT.md` |
+| Heights 3 log-N factor | **7/8** (p−1 + p+1 + kN Fermat) | `python -m fsot_quantum heights3` | `HEIGHTS3.md` |
 | Formula catalog | **18** solvers · **207/216** pin-wave @0.5% vs stored | `python -m fsot_quantum formulas` | `FORMULA_LIST.md` |
 | Multiprover stamp | **FSOT_QUANTUM_MULTIPROVER_OK** | `python -m fsot_quantum stamp` | `MULTIPROVER_VERIFICATION.md` |
 | \(1/\alpha\), Weinberg, proton radius, water angle | match | `python -m fsot_quantum forward` | `STATUS.md` |
@@ -75,7 +76,7 @@ We do **not** simulate their architecture. That would be agreeing their geometry
 |-----------|----------------|-----------|---------------|
 | Cryogenic QPU / NISQ box | usable answers without a fridge | GPU/CPU + pin | the living panels above |
 | Hilbert / statevector / FTQC | hold the job as scale grows | folds, not \(2^n\) amps | fold path is the scale law — `FOLD_NOT_HILBERT.md` |
-| Shor / RSA | period and factor | modular order + Pollard rho | hire7 Fermat twins through 13 digits; **heights far 8/8**. RSA-2048 is a √p wall (~2^512), not a twin-Fermat climb |
+| Shor / RSA | period and factor | modular + log-N (p−1/p+1/kN) + rho | far ρ **8/8**; log-N **7/8**. RSA-2048 is smoothness / √p, not a twin-Fermat climb |
 | Discrete log | \(g^x\equiv h\pmod p\) | modular fold | hire 10/10 · hire2 **6/6** through p=40009 |
 | Simon / HSP | hidden xor string | collision fold + GF(2) | hire 8-bit · hire2 **12 and 16 bit** |
 | SAT / QUBO / color / TSP | assignment / tour | energy folds | SAT-16 · partition \{1..23\} · Petersen · TSP n=7 exact |

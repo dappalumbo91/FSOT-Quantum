@@ -398,6 +398,9 @@ def fold_factor(N: int, a: int | None = None) -> dict[str, Any]:
             "hilbert_amps_if_sim": 1 << (2 * max(1, int(math.ceil(math.log2(N + 1))))),
         }
 
+    logn = fold_logN(N)
+    if logn.get("ok"):
+        return logn
     rho = fold_pollard_rho(N)
     if rho.get("ok"):
         return rho
@@ -526,6 +529,122 @@ def fold_pminus1(N: int) -> dict[str, Any]:
         "B": B,
         "steps": steps,
     }
+
+
+def _lucas_v(P: int, n: int, N: int) -> int:
+    """V_n(P, Q=1) mod N. V_0=2, V_1=P, V_{k+1}=P V_k − V_{k−1}."""
+    if n == 0:
+        return 2 % N
+    vd, vdp = 2 % N, P % N
+    for bit in bin(n)[2:]:
+        if bit == "0":
+            vdp = (vd * vdp - P) % N
+            vd = (vd * vd - 2) % N
+        else:
+            vd = (vd * vdp - P) % N
+            vdp = (vdp * vdp - 2) % N
+    return vd
+
+
+def fold_pplus1(N: int) -> dict[str, Any]:
+    """
+    Williams p+1 — same B as p−1 (bit-length locked). Hits when
+    p+1 is B-smooth. Complements p−1. Still poly(log N), not √p.
+    """
+    if N < 4 or N % 2 == 0:
+        return fold_factor(N)
+    bl = max(N.bit_length(), 8)
+    B = bl * max(2, int(math.floor(float(SEEDS.e) * float(SEEDS.pi)))) * max(
+        2, int(math.floor(float(SEEDS.pi)))
+    )
+    primes = _primes_upto(B)
+    P = max(3, int(math.floor(float(SEEDS.pi))))
+    x = P % N
+    steps = 0
+    for q in primes:
+        qe = q
+        while qe * q <= B:
+            qe *= q
+        x = _lucas_v(x, qe, N)
+        steps += 1
+        if qe > N:
+            break
+    g = math.gcd(x - 2, N)
+    if 1 < g < N:
+        return {
+            "job": "factor_Shor_end",
+            "N": N,
+            "ok": True,
+            "factors": sorted([g, N // g]),
+            "method": "pplus1_logN",
+            "B": B,
+            "steps": steps,
+        }
+    return {
+        "job": "factor_Shor_end",
+        "N": N,
+        "ok": False,
+        "factors": None,
+        "method": "pplus1_exhausted",
+        "B": B,
+        "steps": steps,
+    }
+
+
+def fold_fermat_multipliers(N: int) -> dict[str, Any]:
+    """
+    Fermat on k·N for seed k. Hits when p/q is near a small rational
+    k = a/b. Cost is poly(log N) when the ratio is close. Not twin-only.
+    """
+    if N < 4 or N % 2 == 0:
+        return fold_factor(N)
+    ks = (
+        1,
+        2,
+        max(2, int(math.floor(float(SEEDS.pi)))),
+        max(2, int(math.floor(float(SEEDS.e)))),
+        max(2, int(math.floor(float(SEEDS.phi)))),
+    )
+    cap = fold_probe_budget(max(N.bit_length(), 8), fold_depth_ladder()["deep"]) * max(
+        1, N.bit_length()
+    )
+    for k in ks:
+        M = k * N
+        a0 = int(math.isqrt(M)) + 1
+        for step in range(min(cap, M)):
+            aa = a0 + step
+            bb2 = aa * aa - M
+            bb = int(math.isqrt(bb2))
+            if bb * bb == bb2 and bb > 0:
+                g = math.gcd(aa - bb, N)
+                if 1 < g < N:
+                    return {
+                        "job": "factor_Shor_end",
+                        "N": N,
+                        "ok": True,
+                        "factors": sorted([g, N // g]),
+                        "method": "fermat_multiplier",
+                        "k": k,
+                        "steps": step,
+                    }
+    return {
+        "job": "factor_Shor_end",
+        "N": N,
+        "ok": False,
+        "factors": None,
+        "method": "fermat_multiplier_exhausted",
+    }
+
+
+def fold_logN(N: int) -> dict[str, Any]:
+    """p−1, then p+1, then multiplier Fermat. All poly(log N) budgets."""
+    for fn in (fold_pminus1, fold_pplus1, fold_fermat_multipliers):
+        got = fn(N)
+        if got.get("ok"):
+            return got
+    got = fold_pminus1(N)
+    got["method"] = "logN_exhausted"
+    return got
 
 
 # ---------------------------------------------------------------------------

@@ -56,6 +56,7 @@ The comparison is the **hired question**, not a replay of a cryogenic QPU or a H
 | Hired QC climb 6 | `python -m fsot_quantum hire6` | 11-digit factor / SAT-28 / TSP-10 | required |
 | Hired QC climb 7 | `python -m fsot_quantum hire7` | 13-digit factor / SAT-32 / TSP-11 | required |
 | Heights | `python -m fsot_quantum heights` | G17 + far primes (not Fermat twins) | required |
+| Heights 3 | `python -m fsot_quantum heights3` | log-N p−1/p+1/kN Fermat | required |
 | Formula list | `python -m fsot_quantum formulas` | every formula and what it solves | required |
 | Multiprover stamp | `python -m fsot_quantum stamp` | Lean · Coq · Isabelle · F\* · Python | required |
 | Organ export | `python -m fsot_quantum organ` | JSON for neuron-zig skill | required |
@@ -92,6 +93,7 @@ These are published values. Miss one and the pin is wrong.
 | Hired QC climb 6 | 11-digit factor / SAT-28 / TSP-10 | **22/22** | `HIRE_CLIMB6.md` — factors through 10045050481 |
 | Hired QC climb 7 | 13-digit factor / SAT-32 / TSP-11 | **22/22** | `HIRE_CLIMB7.md` — factors through 1000444049203 |
 | Heights | far-prime factor + G17 | far **8/8** · G17 **0.427%** | `HEIGHTS_NEXT.md` — G17 under 1%; p−1 3/8 |
+| Heights 3 | log-N factor (not √p) | **7/8** | `HEIGHTS3.md` — p+1 and kN Fermat close the p−1 misses |
 | Open objects | wrong-object diagnosis | exclusive blend **6.03%** / SH0ES global **6.30%** if scored wrong | `OPEN_OBJECTS.md` — superseded by `vcb` / `h0` |
 | \(V_{cb}\) puzzle | inclusive QM vs exclusive B→D HEP | inclusive **0.002%** · exclusive **0.15%** | `V_CB_PUZZLE.md` — Belle II 2025 0.0392, not the D+D* blend |
 | Hubble tension | BH→WH bubble-bleed (Lean) | Planck CMB **0.024%** · SH0ES **1.00%** | `H0_TENSION.md` — one global rate, different outgassing sectors |

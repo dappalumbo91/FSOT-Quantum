@@ -130,6 +130,7 @@ These are living ledgers. Re-run the command in the last column.
 | Hired QC climb 6 (11-digit factor / SAT-28 / TSP-10) | **22/22** | `python -m fsot_quantum hire6` | `HIRE_CLIMB6.md` |
 | Hired QC climb 7 (13-digit factor / SAT-32 / TSP-11) | **22/22** | `python -m fsot_quantum hire7` | `HIRE_CLIMB7.md` |
 | Heights — far factor (RSA-shaped) / G17 | far **8/8** · G17 **0.427%** | `python -m fsot_quantum heights2` | `HEIGHTS_NEXT.md` |
+| Heights 3 — log-N factor | **7/8** | `python -m fsot_quantum heights3` | `HEIGHTS3.md` |
 
 Headline constants (same pin):
 

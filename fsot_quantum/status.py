@@ -40,6 +40,7 @@ def main() -> int:
             "hire_climb6": "22/22 through 10045050481 / SAT-28 / TSP-10",
             "hire_climb7": "22/22 through 1000444049203 / SAT-32 / TSP-11",
             "heights": "far 8/8 Pollard; G17 0.427% (13 edges)",
+            "heights3": "log-N 7/8 (p-1 + p+1 + kN Fermat)",
             "chemistry": "68/68 @0.5%",
             "S_QM": "+0.9555 emergence",
             "S_QC": "-0.1477 damping",

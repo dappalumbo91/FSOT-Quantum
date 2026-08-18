@@ -1,0 +1,148 @@
+{
+  "timestamp": "2026-08-18T03:33:15.426594+00:00",
+  "suite": "heights3",
+  "pin": "D1D38A",
+  "pin_file_edited": false,
+  "overall_ok": false,
+  "logN_ok": 7,
+  "logN_n": 8,
+  "pminus1_ok": 3,
+  "pplus1_ok": 4,
+  "fermat_k_ok": 3,
+  "g17": {
+    "cut": 3034,
+    "published": 3047,
+    "short": 13
+  },
+  "rsa2048_B": 49152,
+  "S_QM": 0.9555063001027194,
+  "S_QC": -0.14767310363368633,
+  "wall_seconds": 0.14584780001314357,
+  "rows": [
+    {
+      "family": "logN",
+      "question": "log-N factor 10007\u00d71000003?",
+      "p": 10007,
+      "q": 1000003,
+      "N": 10007030021,
+      "pminus1": "pminus1_exhausted",
+      "pplus1": "pplus1_logN",
+      "fermat_k": "fermat_multiplier_exhausted",
+      "logN": "pplus1_logN",
+      "answer": [
+        10007,
+        1000003
+      ],
+      "ok": true
+    },
+    {
+      "family": "logN",
+      "question": "log-N factor 10007\u00d710000019?",
+      "p": 10007,
+      "q": 10000019,
+      "N": 100070190133,
+      "pminus1": "pminus1_exhausted",
+      "pplus1": "pplus1_logN",
+      "fermat_k": "fermat_multiplier_exhausted",
+      "logN": "pplus1_logN",
+      "answer": [
+        10007,
+        10000019
+      ],
+      "ok": true
+    },
+    {
+      "family": "logN",
+      "question": "log-N factor 7919\u00d7104729?",
+      "p": 7919,
+      "q": 104729,
+      "N": 829348951,
+      "pminus1": "pminus1_exhausted",
+      "pplus1": "pplus1_exhausted",
+      "fermat_k": "fermat_multiplier",
+      "logN": "fermat_multiplier",
+      "answer": [
+        7919,
+        104729
+      ],
+      "ok": true
+    },
+    {
+      "family": "logN",
+      "question": "log-N factor 65537\u00d7100003?",
+      "p": 65537,
+      "q": 100003,
+      "N": 6553896611,
+      "pminus1": "pminus1_exhausted",
+      "pplus1": "pplus1_logN",
+      "fermat_k": "fermat_multiplier",
+      "logN": "pplus1_logN",
+      "answer": [
+        65537,
+        100003
+      ],
+      "ok": true
+    },
+    {
+      "family": "logN",
+      "question": "log-N factor 100003\u00d71000003?",
+      "p": 100003,
+      "q": 1000003,
+      "N": 100003300009,
+      "pminus1": "pminus1_exhausted",
+      "pplus1": "pplus1_exhausted",
+      "fermat_k": "fermat_multiplier_exhausted",
+      "logN": "logN_exhausted",
+      "answer": null,
+      "ok": false
+    },
+    {
+      "family": "logN",
+      "question": "log-N factor 31627\u00d71000033?",
+      "p": 31627,
+      "q": 1000033,
+      "N": 31628043691,
+      "pminus1": "pminus1_logN",
+      "pplus1": "pplus1_exhausted",
+      "fermat_k": "fermat_multiplier_exhausted",
+      "logN": "pminus1_logN",
+      "answer": [
+        31627,
+        1000033
+      ],
+      "ok": true
+    },
+    {
+      "family": "logN",
+      "question": "log-N factor 104729\u00d71000003?",
+      "p": 104729,
+      "q": 1000003,
+      "N": 104729314187,
+      "pminus1": "pminus1_logN",
+      "pplus1": "pplus1_logN",
+      "fermat_k": "fermat_multiplier_exhausted",
+      "logN": "pminus1_logN",
+      "answer": [
+        104729,
+        1000003
+      ],
+      "ok": true
+    },
+    {
+      "family": "logN",
+      "question": "log-N factor 1000003\u00d71000033?",
+      "p": 1000003,
+      "q": 1000033,
+      "N": 1000036000099,
+      "pminus1": "pminus1_logN",
+      "pplus1": "pplus1_exhausted",
+      "fermat_k": "fermat_multiplier",
+      "logN": "pminus1_logN",
+      "answer": [
+        1000003,
+        1000033
+      ],
+      "ok": true
+    }
+  ]
+}

@@ -403,7 +403,12 @@ def _fast_maxcut(n: int, edges: list[tuple[int, int, int]]) -> tuple[int, list[i
     rounds = max(3, int(math.floor(float(SEEDS.e) * float(SEEDS.pi))))
     stride = max(2, int(math.floor(float(SEEDS.pi))))
     s = list(best)
-    strides = (2, stride, max(4, int(math.floor(float(SEEDS.e) * float(SEEDS.pi)))))
+    strides = (
+        2,
+        stride,
+        max(4, int(math.floor(float(SEEDS.e) * float(SEEDS.pi)))),
+        max(8, int(math.floor(float(SEEDS.pi) ** 3))),  # 31 — G17's leftover scale
+    )
     for stride_k in strides:
         for r in range(rounds):
             trial = list(s)
