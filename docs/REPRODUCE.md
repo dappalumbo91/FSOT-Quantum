@@ -28,6 +28,7 @@ python -m fsot_quantum leftovers   # remaining opens
 python -m fsot_quantum hire        # factor / dlog / Simon / SAT / HHL 29/29
 python -m fsot_quantum hire2       # 7-digit factor / Simon-16 / SAT-16 / TSP 32/32
 python -m fsot_quantum branch      # probability as \|S\| branching 19/19
+python -m fsot_quantum gencode     # codon / 7-trit Biology branching 15/15
 python -m fsot_quantum formulas    # formula list
 python -m fsot_quantum stamp       # Lean · Coq · Isabelle · F* · Python
 ```
@@ -53,6 +54,7 @@ python -m fsot_quantum.open_remaining
 python -m fsot_quantum.hire_expand
 python -m fsot_quantum.hire_climb
 python -m fsot_quantum.probability_branch
+python -m fsot_quantum.genetics_branch
 python -m fsot_quantum.formula_catalog
 python -m fsot_quantum stamp
 python -m fsot_quantum.organ_export

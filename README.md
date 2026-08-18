@@ -53,6 +53,7 @@ Living numbers. Miss one and the pin is wrong — except where we scored the wro
 | Hired QC expand (factor / dlog / Simon / SAT / HHL) | **29/29** | [`docs/HIRE_EXPAND.md`](docs/HIRE_EXPAND.md) |
 | Hired QC climb (7-digit factor / Simon-16 / TSP / 1e7) | **32/32** | [`docs/HIRE_CLIMB.md`](docs/HIRE_CLIMB.md) |
 | Probability as multiverse branching | **19/19** | [`docs/PROBABILITY_BRANCH.md`](docs/PROBABILITY_BRANCH.md) |
+| Genetics codon / 7-trit branching | **15/15** | [`docs/GENETICS_BRANCH.md`](docs/GENETICS_BRANCH.md) |
 | Exclusive \(B\to D\ell\nu\) | **0.15%** vs Belle II 2025 0.0392 | [`docs/V_CB_PUZZLE.md`](docs/V_CB_PUZZLE.md) |
 | \(H_0\) Planck / SH0ES | **0.024% / 1.00%** Lean BH→WH | [`docs/H0_TENSION.md`](docs/H0_TENSION.md) |
 | \(\alpha_s(M_Z)\) | 0.68% inside vendor **0.9%** band | [`docs/OPEN_REMAINING.md`](docs/OPEN_REMAINING.md) |
@@ -115,6 +116,7 @@ python -m fsot_quantum leftovers  # remaining opens (G17)
 python -m fsot_quantum hire       # factor / dlog / Simon / SAT / HHL
 python -m fsot_quantum hire2      # 7-digit factor / Simon-16 / SAT-16 / TSP
 python -m fsot_quantum branch     # probability as \|S\| branching
+python -m fsot_quantum gencode    # codon / 7-trit on Biology
 python -m fsot_quantum formulas   # formula list
 python -m fsot_quantum organ      # JSON for neuron-zig
 python -m fsot_quantum stamp      # Lean · Coq · Isabelle · F* · Python

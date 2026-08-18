@@ -48,6 +48,7 @@ The comparison is the **hired question**, not a replay of a cryogenic QPU or a H
 | Hired QC expand | `python -m fsot_quantum hire` | factor / dlog / Simon / SAT / HHL / search | required |
 | Hired QC climb | `python -m fsot_quantum hire2` | 7-digit factor / Simon-16 / SAT-16 / TSP / 1e7 | required |
 | Probability branch | `python -m fsot_quantum branch` | \(\|S\|\) fold densities; no Born | required |
+| Genetics branch | `python -m fsot_quantum gencode` | codon / 7-trit on Biology | required |
 | Formula list | `python -m fsot_quantum formulas` | every formula and what it solves | required |
 | Multiprover stamp | `python -m fsot_quantum stamp` | Lean · Coq · Isabelle · F\* · Python | required |
 | Organ export | `python -m fsot_quantum organ` | JSON for neuron-zig skill | required |
@@ -76,6 +77,7 @@ These are published values. Miss one and the pin is wrong.
 | Hired QC expand | factor / dlog / Simon / SAT / HHL / search | **29/29** | `HIRE_EXPAND.md` — factors through 172189; dlog 10/10 |
 | Hired QC climb | 7-digit factor / Simon-16 / SAT-16 / TSP / 1e7 | **32/32** | `HIRE_CLIMB.md` — factors through 2196323 |
 | Probability branch | \(\|S\|\) of \(+1/-1/0\) folds | **19/19** | `PROBABILITY_BRANCH.md` — QM collapsed 0.181/0.819, not a posted \(1/2\) |
+| Genetics branch | codon + 7-trit on Biology | **15/15** | `GENETICS_BRANCH.md` — CGG→TGG is secondary \(0\to-1\) |
 | Open objects | wrong-object diagnosis | exclusive blend **6.03%** / SH0ES global **6.30%** if scored wrong | `OPEN_OBJECTS.md` — superseded by `vcb` / `h0` |
 | \(V_{cb}\) puzzle | inclusive QM vs exclusive B→D HEP | inclusive **0.002%** · exclusive **0.15%** | `V_CB_PUZZLE.md` — Belle II 2025 0.0392, not the D+D* blend |
 | Hubble tension | BH→WH bubble-bleed (Lean) | Planck CMB **0.024%** · SH0ES **1.00%** | `H0_TENSION.md` — one global rate, different outgassing sectors |

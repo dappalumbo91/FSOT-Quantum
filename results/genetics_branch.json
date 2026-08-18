@@ -1,0 +1,263 @@
+{
+  "timestamp": "2026-08-18T02:31:50.687817+00:00",
+  "suite": "genetics_branch",
+  "pin": "D1D38A",
+  "pin_file_edited": false,
+  "genetics_repo_edited": false,
+  "domain": "Biology",
+  "overall_ok": true,
+  "n": 15,
+  "n_ok": 15,
+  "Biology_weights": {
+    "+1": 0.14759048309679568,
+    "-1": 0.7020780865837786,
+    "0": 0.1503314303194257
+  },
+  "QM_weights": {
+    "+1": 0.16130263230579872,
+    "-1": 0.7279519760279597,
+    "0": 0.11074539166624167
+  },
+  "CGG": [
+    -1,
+    1,
+    1,
+    0,
+    0,
+    0
+  ],
+  "TGG": [
+    -1,
+    1,
+    1,
+    -1,
+    0,
+    0
+  ],
+  "CGG_TGG_ratio": 4.670201601168806,
+  "P_stop": 0.0026791379479297003,
+  "P_ATG": 0.0008985067158201631,
+  "rows": [
+    {
+      "id": "codon_64",
+      "question": "Are there 64 DNA codons?",
+      "got": 64,
+      "expected": 64,
+      "ok": true
+    },
+    {
+      "id": "opcode_20_unique",
+      "question": "Do 20 AA 7-trit words match the published genetics table?",
+      "got": 20,
+      "expected": 20,
+      "ok": true
+    },
+    {
+      "id": "cgg_primary_secondary",
+      "question": "CGG primary/secondary = [\u22121,+1,+1] / [0,0,0]?",
+      "got": {
+        "primary": [
+          -1,
+          1,
+          1
+        ],
+        "secondary": [
+          0,
+          0,
+          0
+        ]
+      },
+      "expected": {
+        "primary": [
+          -1,
+          1,
+          1
+        ],
+        "secondary": [
+          0,
+          0,
+          0
+        ]
+      },
+      "ok": true
+    },
+    {
+      "id": "tgg_primary_secondary",
+      "question": "TGG primary/secondary = [\u22121,+1,+1] / [\u22121,0,0]?",
+      "got": {
+        "primary": [
+          -1,
+          1,
+          1
+        ],
+        "secondary": [
+          -1,
+          0,
+          0
+        ]
+      },
+      "expected": {
+        "primary": [
+          -1,
+          1,
+          1
+        ],
+        "secondary": [
+          -1,
+          0,
+          0
+        ]
+      },
+      "ok": true
+    },
+    {
+      "id": "cgg_tgg_is_secondary_collapse",
+      "question": "Is CGG\u2192TGG a secondary 0\u2192\u22121 on the first base (not a primary flip)?",
+      "got": {
+        "primary_same": true,
+        "sec0": [
+          0,
+          -1
+        ]
+      },
+      "expected": {
+        "primary_same": true,
+        "sec0": [
+          0,
+          -1
+        ]
+      },
+      "ok": true
+    },
+    {
+      "id": "translate_cgg_tgg",
+      "question": "Does CGG\u2192TGG translate R\u2192W?",
+      "got": [
+        "R",
+        "W"
+      ],
+      "expected": [
+        "R",
+        "W"
+      ],
+      "ok": true
+    },
+    {
+      "id": "cgg_tgg_density_ratio",
+      "question": "Is dens(TGG)/dens(CGG) = w(\u22121)/w(0) on Biology?",
+      "got": 4.670201601168806,
+      "expected": 4.670201601168805,
+      "ok": true
+    },
+    {
+      "id": "no_average_C",
+      "question": "Primary C=\u22121 and secondary C=0 are not averaged?",
+      "got": [
+        -1,
+        0
+      ],
+      "expected": [
+        -1,
+        0
+      ],
+      "ok": true
+    },
+    {
+      "id": "trit_not_atg_primary",
+      "question": "trit_not of ATG primary [+1,\u22121,+1] is [\u22121,+1,\u22121]?",
+      "got": [
+        -1,
+        1,
+        -1
+      ],
+      "expected": [
+        -1,
+        1,
+        -1
+      ],
+      "ok": true
+    },
+    {
+      "id": "start_stop",
+      "question": "ATG is start M; TAA/TAG/TGA are the three stops?",
+      "got": {
+        "ATG": "M",
+        "stops": [
+          "TAA",
+          "TAG",
+          "TGA"
+        ]
+      },
+      "expected": {
+        "ATG": "M",
+        "stops": [
+          "TAA",
+          "TAG",
+          "TGA"
+        ]
+      },
+      "ok": true
+    },
+    {
+      "id": "codon_measure_partition",
+      "question": "Do 64 codon |S|-word densities renormalize to 1?",
+      "got": 1.0000000000000002,
+      "expected": 1.0,
+      "ok": true
+    },
+    {
+      "id": "stop_vs_start_density",
+      "question": "Are stop and start codon densities computed (not fitted)?",
+      "got": {
+        "P_stop": 0.0026791379479297003,
+        "P_ATG": 0.0008985067158201631
+      },
+      "expected": "derived",
+      "ok": true
+    },
+    {
+      "id": "biology_unobserved_is_zero_fold",
+      "question": "Is living Biology table S the 0-trit (unobserved) fold?",
+      "got": 0.4447250077038459,
+      "expected": 0.4447250077038459,
+      "ok": true
+    },
+    {
+      "id": "R_W_opcode_distinct",
+      "question": "Are R and W 7-trit words distinct with positive densities?",
+      "got": {
+        "R": [
+          1,
+          1,
+          1,
+          0,
+          0,
+          0,
+          1
+        ],
+        "W": [
+          0,
+          -1,
+          1,
+          1,
+          0,
+          1,
+          0
+        ],
+        "dens_R": 1.6120658790716422e-06,
+        "dens_W": 7.668489892287559e-06
+      },
+      "expected": "distinct",
+      "ok": true
+    },
+    {
+      "id": "pin_untouched",
+      "question": "Genetics repo not edited; pin D1D38A only?",
+      "got": "D1D38A + copied law",
+      "expected": "D1D38A",
+      "ok": true
+    }
+  ],
+  "doctrine": "Codon and 7-trit words from FSOT-Genetics law, scored as |S| branch products on Biology. Do not average primary and secondary. Do not edit the genetics repo.",
+  "wall_seconds": 0.00027109996881335974
+}

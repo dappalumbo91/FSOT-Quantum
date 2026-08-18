@@ -24,6 +24,7 @@ Field entry: python -m fsot_quantum [cmd]
   hire       expand hired QC questions (factor / dlog / Simon / SAT / HHL)
   hire2      climb higher: 7-digit factor / Simon-16 / SAT-16 / TSP / 1e7 search
   branch     probability as multiverse branching (no Born, no free param)
+  gencode    genetics codon / 7-trit branching (law copied; genetics repo untouched)
   formulas   formula list — what each formula solves
   organ      export S/κ/QI JSON for neuron-zig
   stamp      Lean · Coq · Isabelle · F* · Python multiprover
@@ -121,6 +122,9 @@ def main() -> int:
         return m()
     if c in ("branch", "prob", "probability"):
         from fsot_quantum.probability_branch import main as m
+        return m()
+    if c in ("gencode", "genetics", "codon"):
+        from fsot_quantum.genetics_branch import main as m
         return m()
     if c in ("formulas", "catalog"):
         from fsot_quantum.formula_catalog import main as m

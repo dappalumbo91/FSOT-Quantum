@@ -32,6 +32,7 @@ def main() -> int:
             "hire_expand": "29/29 factor/dlog/Simon/SAT/HHL/search",
             "hire_climb": "32/32 through 2196323 / Simon-16 / 1e7",
             "probability_branch": "19/19 |S| folds, no Born",
+            "genetics_branch": "15/15 codon/7-trit on Biology",
             "chemistry": "68/68 @0.5%",
             "S_QM": "+0.9555 emergence",
             "S_QC": "-0.1477 damping",
