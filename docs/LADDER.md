@@ -51,6 +51,7 @@ The comparison is the **hired question**, not a replay of a cryogenic QPU or a H
 | Genetics branch | `python -m fsot_quantum gencode` | codon / 7-trit on Biology | required |
 | ORF climb | `python -m fsot_quantum orf` | start-to-stop product of codon folds | required |
 | Hired QC climb 3 | `python -m fsot_quantum hire3` | 8-digit factor / dlog \(p\sim10^5\) | required |
+| Hired QC climb 4 | `python -m fsot_quantum hire4` | 9-digit factor / SAT-20 / TSP-8 / MIS | required |
 | Formula list | `python -m fsot_quantum formulas` | every formula and what it solves | required |
 | Multiprover stamp | `python -m fsot_quantum stamp` | Lean · Coq · Isabelle · F\* · Python | required |
 | Organ export | `python -m fsot_quantum organ` | JSON for neuron-zig skill | required |
@@ -82,6 +83,7 @@ These are published values. Miss one and the pin is wrong.
 | Genetics branch | codon + 7-trit on Biology | **15/15** | `GENETICS_BRANCH.md` — CGG→TGG is secondary \(0\to-1\) |
 | ORF climb | start-to-stop codon product | **11/11** | `ORF_BRANCH.md` — missense flanks cancel |
 | Hired QC climb 3 | 8-digit factor / larger dlog | **17/17** | `HIRE_CLIMB3.md` — factors through 20937233 |
+| Hired QC climb 4 | 9-digit factor / SAT-20 / TSP-8 / MIS | **22/22** | `HIRE_CLIMB4.md` — factors through 144216077 |
 | Open objects | wrong-object diagnosis | exclusive blend **6.03%** / SH0ES global **6.30%** if scored wrong | `OPEN_OBJECTS.md` — superseded by `vcb` / `h0` |
 | \(V_{cb}\) puzzle | inclusive QM vs exclusive B→D HEP | inclusive **0.002%** · exclusive **0.15%** | `V_CB_PUZZLE.md` — Belle II 2025 0.0392, not the D+D* blend |
 | Hubble tension | BH→WH bubble-bleed (Lean) | Planck CMB **0.024%** · SH0ES **1.00%** | `H0_TENSION.md` — one global rate, different outgassing sectors |

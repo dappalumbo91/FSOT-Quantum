@@ -31,6 +31,7 @@ python -m fsot_quantum branch      # probability as \|S\| branching 19/19
 python -m fsot_quantum gencode     # codon / 7-trit Biology branching 15/15
 python -m fsot_quantum orf         # ORF product of codon folds 11/11
 python -m fsot_quantum hire3       # 8-digit factor / dlog 17/17
+python -m fsot_quantum hire4       # 9-digit factor / SAT-20 / TSP-8 22/22
 python -m fsot_quantum formulas    # formula list
 python -m fsot_quantum stamp       # Lean · Coq · Isabelle · F* · Python
 ```
@@ -59,6 +60,7 @@ python -m fsot_quantum.probability_branch
 python -m fsot_quantum.genetics_branch
 python -m fsot_quantum.orf_branch
 python -m fsot_quantum.hire_climb3
+python -m fsot_quantum.hire_climb4
 python -m fsot_quantum.formula_catalog
 python -m fsot_quantum stamp
 python -m fsot_quantum.organ_export

@@ -35,6 +35,7 @@ def main() -> int:
             "genetics_branch": "15/15 codon/7-trit on Biology",
             "orf_branch": "11/11 ORF product of codon folds",
             "hire_climb3": "17/17 through 20937233 / dlog p=1e5",
+            "hire_climb4": "22/22 through 144216077 / SAT-20 / TSP-8",
             "chemistry": "68/68 @0.5%",
             "S_QM": "+0.9555 emergence",
             "S_QC": "-0.1477 damping",

@@ -125,6 +125,7 @@ These are living ledgers. Re-run the command in the last column.
 | Genetics codon / 7-trit branching | **15/15** | `python -m fsot_quantum gencode` | `GENETICS_BRANCH.md` |
 | ORF start-to-stop | **11/11** | `python -m fsot_quantum orf` | `ORF_BRANCH.md` |
 | Hired QC climb 3 (8-digit factor) | **17/17** | `python -m fsot_quantum hire3` | `HIRE_CLIMB3.md` |
+| Hired QC climb 4 (9-digit factor / SAT-20 / TSP-8) | **22/22** | `python -m fsot_quantum hire4` | `HIRE_CLIMB4.md` |
 
 Headline constants (same pin):
 

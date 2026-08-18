@@ -56,6 +56,7 @@ Every living panel also writes a twin under `results/`.
 | [`GENETICS_BRANCH.md`](GENETICS_BRANCH.md) | Codon / 7-trit words scored as Biology \(\|S\|\) products |
 | [`ORF_BRANCH.md`](ORF_BRANCH.md) | Start-to-stop ORF as product of codon folds |
 | [`HIRE_CLIMB3.md`](HIRE_CLIMB3.md) | 8-digit factors / dlog \(p\sim 10^5\) |
+| [`HIRE_CLIMB4.md`](HIRE_CLIMB4.md) | 9-digit factor / SAT-20 / TSP-8 / HHL 5×5 / MIS |
 | [`MULTIPROVER_VERIFICATION.md`](MULTIPROVER_VERIFICATION.md) | Lean · Coq · Isabelle · F\* · Python stamp |
 | [`QC_ACCURACY.md`](QC_ACCURACY.md) | Hired QC/QM jobs on ordinary hardware |
 
