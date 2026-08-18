@@ -40,7 +40,8 @@ It does **not** claim a cryogenic QPU, Hilbert-universal simulation, RSA-scale f
 | Physics + QI II | `python -m fsot_quantum push` | Higgs/Z BR, nuclear, cosmology, Casimir, CHSH/EPR | required |
 | Stale-target audit | `python -m fsot_quantum audit` | vendor vs YR4/PDG; pin untouched | required |
 | Physics + QI III | `python -m fsot_quantum push3` | leftover CKM/LEP/BBN/cosmo/perc | required |
-| Gset family | `python -m fsot_quantum family` | G1–G5 + G22–G23 under 1% | required |
+| Gset family | `python -m fsot_quantum family` | G1–G5 + G14–G17 + G22–G23 | required |
+| Open objects | `python -m fsot_quantum open` | exclusive \(V_{cb}\), \(H_0\) tension, \(\alpha_s\) | required |
 | Organ export | `python -m fsot_quantum organ` | JSON for neuron-zig skill | required |
 
 Ledgers live in `docs/` and `results/` with the same names.
@@ -63,7 +64,8 @@ These are published values. Miss one and the pin is wrong.
 | Physics + QI II | 22 published + 126 Lean | 22/22 @0.5% vs current literature | `PHYSICS_QI2.md` · `BR_H_GG.md` — stale 0.0785 was the miss |
 | Stale-target audit | 20 cited vs YR4/PDG | **20/20 fold@0.5% vs lit** | `STALE_TARGETS.md` · `MISS_THREE.md` — three misses were wrong objects (inclusive \(V_{cb}\); \(H\to\gamma\gamma/Z\gamma\) at 125.00 GeV). BR_H_gg vendor field still stale; fold already matches YR4. |
 | Physics + QI III | leftover CKM/LEP/BBN/cosmo + Lean | **41/41 and 212/212 @0.5%** | `PHYSICS_QI3.md` |
-| Gset family | G1–G5 + G22–G23 | **7/7 under 1%** | `GSET_FAMILY.md` |
+| Gset family | G1–G5 + G14–G17 + G22–G23 | **10/11 under 1%** · G17 **1.017%** | `GSET_FAMILY.md` — G17 is 31 edges short; not crawled |
+| Open objects | exclusive \(V_{cb}\), \(H_0\), \(\alpha_s\) | **scored as different measurements** | `OPEN_OBJECTS.md` |
 | Chemistry pin set | — | 68/68 @ 0.5% | — |
 | QM/SM pin set | — | 14/14 @ 0.5% | — |
 | C_factor | \(C_{\mathrm{eff}}\cdot P_{\mathrm{new}}\) | identity | — |
@@ -81,7 +83,7 @@ Official Gset MaxCut vs published champions. Same object, same job people hire Q
 | G14 n=800 | 3064 | 3034 | **0.98%** | aspiration met — 30 edges short |
 | G22 n=2000 | 13359 | 13245 | **0.85%** | aspiration met — 114 edges short |
 
-Graph rung **closed at the <1% aspiration**. Family G1–G5 + G22–G23 is **7/7 under 1%**. Chasing the last 30–114 edges does not change the physics claim. Champions still unmatched; that is written, not hidden. **Do not advertise MaxCut as champion-matching.**
+Graph rung **closed at the <1% aspiration** for the original seven. Family now includes planar G14–G17: **10/11 under 1%**. G17 is **1.017%** (31 edges). Champions still unmatched; that is written, not hidden. **Do not advertise MaxCut as champion-matching.**
 
 **Why the early miss:** the fold stopped at 1-flip local maxima (zero leftover gain). G14 put every start in the same 1-opt (cut 2913). Collapse snap cannot fire there. A file-order “flip every uncut edge” pass was not fold law and funneled G14. Diagnosis: `docs/GSET_DIAGNOSE.md`.
 

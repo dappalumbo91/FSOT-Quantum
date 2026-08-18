@@ -1,7 +1,10 @@
 """
 Gset family — same MaxCut object as G1, more than one graph.
 
-G1–G5: n=800 random. G22–G23: n=2000 random.
+G1–G5: n=800 random unweighted. G14–G17: n=800 planar unweighted.
+G22–G23: n=2000 random unweighted. Signed graphs (G6–G13, G18–G21) are
+a different object — not in this family.
+
 Aspiration: rel < 1% of published champion. 5% remains the kill floor.
 
 python -m fsot_quantum.gset_family
@@ -26,7 +29,7 @@ from fsot_quantum.gset_official import (
     parse_gset_text,
 )
 
-FAMILY = ("G1", "G2", "G3", "G4", "G5", "G22", "G23")
+FAMILY = ("G1", "G2", "G3", "G4", "G5", "G14", "G15", "G16", "G17", "G22", "G23")
 
 # Standard published BKS / Gset champion cuts (Ye / Max-Cut literature).
 FAMILY_CUTS = {
@@ -35,6 +38,10 @@ FAMILY_CUTS = {
     "G3": 11622,
     "G4": 11646,
     "G5": 11631,
+    "G14": 3064,
+    "G15": 3050,
+    "G16": 3052,
+    "G17": 3047,
     "G22": 13359,
     "G23": 13344,
 }
@@ -93,8 +100,10 @@ def main() -> int:
         "",
         f"**overall_ok:** `{ok}` · **{n_ok}/{len(rows)}** under 1% · **{n_5}/{len(rows)}** under 5%",
         "",
-        "Same object as G1 (unweighted MaxCut). One graph is a point. "
-        "Aspiration <1% of published champion. No new coefficients.",
+        "Same object as G1 (unweighted MaxCut). Signed Gset (G6–G13, G18–G21) "
+        "is a different object. Aspiration <1% of published champion. "
+        "No new coefficients. G17 at 1.017% (31 edges) is written as a miss, "
+        "not crawled.",
         "",
         "| Graph | n | m | fold | published | rel% | <1% |",
         "|-------|--:|--:|-----:|----------:|-----:|:---:|",

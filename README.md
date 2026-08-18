@@ -16,7 +16,9 @@ Answers the jobs people hire quantum computers and precision-physics codes for, 
 **Read first:** [`docs/STATUS.md`](docs/STATUS.md) — current system, findings, capability, what is still open.  
 **Rungs:** [`docs/LADDER.md`](docs/LADDER.md) · **Reproduce:** [`docs/REPRODUCE.md`](docs/REPRODUCE.md) · **Doc map:** [`docs/INDEX.md`](docs/INDEX.md)
 
-**Wrap (2026-08-13):** competitor climb closed on this pin. Audit 20/20 vs YR4/PDG, leftover hired physics 41/41, Gset family 7/7 under 1%. Three earlier audit misses were wrong objects (`docs/MISS_THREE.md`), not a pin edit. GitHub About text is the repo one-liner; this README and `docs/STATUS.md` are the current record.
+**Wrap (2026-08-13):** competitor climb closed on this pin. Audit 20/20 vs YR4/PDG, leftover hired physics 41/41. Three earlier audit misses were wrong objects (`docs/MISS_THREE.md`), not a pin edit. GitHub About text is the repo one-liner; this README and `docs/STATUS.md` are the current record.
+
+**Picked up (2026-08-17):** open objects scored as different measurements (`docs/OPEN_OBJECTS.md`). Gset family extended to G14–G17 — **10/11 under 1%**, G17 **1.017%** written not crawled.
 
 ---
 
@@ -49,7 +51,8 @@ Living numbers. Miss one and the pin is wrong — except where we scored the wro
 | Physics + QI I | 16/16 + 326/326 Lean | [`docs/PHYSICS_QI.md`](docs/PHYSICS_QI.md) |
 | Physics + QI II | 22/22 + 126/126 Lean | [`docs/PHYSICS_QI2.md`](docs/PHYSICS_QI2.md) |
 | Physics + QI III (leftover hired physics) | **41/41 + 212/212 Lean** | [`docs/PHYSICS_QI3.md`](docs/PHYSICS_QI3.md) |
-| Gset family G1–G5 + G22–G23 | **7/7 under 1%** | [`docs/GSET_FAMILY.md`](docs/GSET_FAMILY.md) |
+| Gset family G1–G5 + G14–G17 + G22–G23 | **10/11 under 1%** · G17 1.017% | [`docs/GSET_FAMILY.md`](docs/GSET_FAMILY.md) |
+| Open objects (exclusive \(V_{cb}\), \(H_0\), \(\alpha_s\)) | different measurements, not a retune | [`docs/OPEN_OBJECTS.md`](docs/OPEN_OBJECTS.md) |
 | Chemistry pin set | 68/68 @ 0.5% | — |
 | \(1/\alpha\), Weinberg, proton radius, water angle | match | [`docs/STATUS.md`](docs/STATUS.md) |
 | Inclusive \(\lvert V_{cb}\rvert\) | 0.0422008 vs 0.0422 | inclusive PDG; exclusive is a different extraction |

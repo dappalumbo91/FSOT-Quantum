@@ -139,7 +139,8 @@ Aspiration **< 1%** of published champion. Kill floor **5%**. Champions still un
 | Graph | Published | Fold | rel | Status |
 |-------|----------:|-----:|----:|--------|
 | G1 n=800 | 11624 | 11563 | 0.53% | aspiration met, 61 edges short |
-| G2–G5, G22–G23 | BKS | family | all < 1% | **7/7** |
+| G2–G5, G14–G16, G22–G23 | BKS | family | all < 1% | with G1: **10/11** |
+| G17 n=800 planar | 3047 | 3016 | 1.017% | 31 edges short — written, not crawled |
 | G14 n=800 | 3064 | 3034 | 0.98% | aspiration met, 30 edges short |
 | G22 n=2000 | 13359 | 13245 | 0.85% | aspiration met, 114 edges short |
 
@@ -183,14 +184,14 @@ Not scored as one number, on purpose:
 |--------|-------------------|
 | Exclusive \(\lvert V_{cb}\rvert=0.0398\) | Different PDG extraction |
 | \(H_0\) | Planck vs SH0ES tension |
-| \(\alpha_s(M_Z)\) | fold 0.1171 vs PDG ~0.118 (0.68%) — not crawled by a new term |
+| \(\alpha_s(M_Z)\) | fold 0.1171 vs vendor 0.1179 (0.68%); PDG 0.1180±0.0009 is the 1σ edge |
 
 ---
 
 ## What is still open (written, not dressed up)
 
-- Gset champions unmatched (30–114 edges). Aspiration < 1% **landed**. Do not advertise MaxCut as champion-matching.
-- Exclusive \(V_{cb}\), \(H_0\), \(\alpha_s(M_Z)\) as above.
+- Gset champions unmatched (30–114 edges). Family now **10/11 under 1%**; G17 is **1.017%** (31 edges). Do not advertise MaxCut as champion-matching.
+- Exclusive \(V_{cb}\), \(H_0\), \(\alpha_s(M_Z)\) scored as different measurements: [`OPEN_OBJECTS.md`](OPEN_OBJECTS.md).
 - Vendor wave8 `BR_H_gg` field still stale (0.0785). Fold already matches YR4. Pin not edited.
 - Hilbert fragments exist as **optional bridges**. They are not the scale path.
 - Tiny Shor is tiny. No RSA-scale claim.
@@ -237,7 +238,8 @@ python -m fsot_quantum check
 python -m fsot_quantum audit      # 20/20 vs YR4/PDG
 python -m fsot_quantum harder     # 20/20
 python -m fsot_quantum push3      # 41/41 leftover hired physics
-python -m fsot_quantum family     # Gset 7/7 under 1%
+python -m fsot_quantum family     # Gset 10/11 under 1% (G17 1.017%)
+python -m fsot_quantum open       # exclusive V_cb / H0 / alpha_s
 python -m fsot_quantum organ      # neuron-zig organ JSON
 python -m fsot_quantum stamp      # five-prover OK if tools on PATH
 ```

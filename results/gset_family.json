@@ -1,14 +1,14 @@
 {
-  "timestamp": "2026-08-13T03:20:51.312445+00:00",
+  "timestamp": "2026-08-18T01:16:12.189300+00:00",
   "suite": "gset_family",
   "pin": "D1D38A",
   "aspiration": "<1% of published champion",
   "kill_floor": "5%",
-  "overall_ok": true,
-  "n": 7,
-  "n_under_1": 7,
-  "n_under_5": 7,
-  "wall_seconds": 231.61740909999935,
+  "overall_ok": false,
+  "n": 11,
+  "n_under_1": 10,
+  "n_under_5": 11,
+  "wall_seconds": 272.2938327000011,
   "instances": [
     {
       "name": "G1",
@@ -20,7 +20,7 @@
       "under_1pct": true,
       "under_5pct": true,
       "ok": true,
-      "seconds": 29.868232900000294
+      "seconds": 30.787061999959406
     },
     {
       "name": "G2",
@@ -32,7 +32,7 @@
       "under_1pct": true,
       "under_5pct": true,
       "ok": true,
-      "seconds": 35.23599159999867
+      "seconds": 29.88432750001084
     },
     {
       "name": "G3",
@@ -44,7 +44,7 @@
       "under_1pct": true,
       "under_5pct": true,
       "ok": true,
-      "seconds": 32.303590899988194
+      "seconds": 33.86167589999968
     },
     {
       "name": "G4",
@@ -56,7 +56,7 @@
       "under_1pct": true,
       "under_5pct": true,
       "ok": true,
-      "seconds": 30.27733470000385
+      "seconds": 35.50205830001505
     },
     {
       "name": "G5",
@@ -68,7 +68,55 @@
       "under_1pct": true,
       "under_5pct": true,
       "ok": true,
-      "seconds": 34.41453779999574
+      "seconds": 32.855813100002706
+    },
+    {
+      "name": "G14",
+      "n": 800,
+      "m": 4694,
+      "cut_fold": 3034,
+      "published": 3064,
+      "rel_err_pct": 0.97911227154047,
+      "under_1pct": true,
+      "under_5pct": true,
+      "ok": true,
+      "seconds": 14.112928099988494
+    },
+    {
+      "name": "G15",
+      "n": 800,
+      "m": 4661,
+      "cut_fold": 3023,
+      "published": 3050,
+      "rel_err_pct": 0.8852459016393442,
+      "under_1pct": true,
+      "under_5pct": true,
+      "ok": true,
+      "seconds": 14.91350500000408
+    },
+    {
+      "name": "G16",
+      "n": 800,
+      "m": 4672,
+      "cut_fold": 3026,
+      "published": 3052,
+      "rel_err_pct": 0.8519003931847969,
+      "under_1pct": true,
+      "under_5pct": true,
+      "ok": true,
+      "seconds": 13.943969700019807
+    },
+    {
+      "name": "G17",
+      "n": 800,
+      "m": 4667,
+      "cut_fold": 3016,
+      "published": 3047,
+      "rel_err_pct": 1.0173941581883819,
+      "under_1pct": false,
+      "under_5pct": true,
+      "ok": false,
+      "seconds": 17.04113949998282
     },
     {
       "name": "G22",
@@ -80,7 +128,7 @@
       "under_1pct": true,
       "under_5pct": true,
       "ok": true,
-      "seconds": 33.24419859999034
+      "seconds": 25.25492120004492
     },
     {
       "name": "G23",
@@ -92,7 +140,7 @@
       "under_1pct": true,
       "under_5pct": true,
       "ok": true,
-      "seconds": 30.633036999992328
+      "seconds": 21.53183039999567
     }
   ]
 }

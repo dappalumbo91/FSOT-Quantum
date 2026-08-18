@@ -47,6 +47,12 @@ PUBLISHED_CUTS = {
     "G5.TXT": 11631,
     "G23": 13344,
     "G23.TXT": 13344,
+    "G15": 3050,
+    "G15.TXT": 3050,
+    "G16": 3052,
+    "G16.TXT": 3052,
+    "G17": 3047,
+    "G17.TXT": 3047,
 }
 
 ROOT = Path(__file__).resolve().parents[1]

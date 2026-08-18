@@ -42,7 +42,8 @@ Every living panel also writes a twin under `results/`.
 | [`PHYSICS_QI.md`](PHYSICS_QI.md) | 3D Ising / XY / Heisenberg / g−2 / Lean QI |
 | [`PHYSICS_QI2.md`](PHYSICS_QI2.md) | Higgs/Z, nuclear, cosmology, Casimir, CHSH |
 | [`PHYSICS_QI3.md`](PHYSICS_QI3.md) | Leftover CKM / LEP / BBN / cosmo / perc |
-| [`GSET_FAMILY.md`](GSET_FAMILY.md) | G1–G5 + G22–G23 under 1% |
+| [`GSET_FAMILY.md`](GSET_FAMILY.md) | G1–G5 + G14–G17 + G22–G23 (G17 1.017%) |
+| [`OPEN_OBJECTS.md`](OPEN_OBJECTS.md) | Exclusive \(V_{cb}\), \(H_0\) tension, \(\alpha_s(M_Z)\) |
 | [`QC_ACCURACY.md`](QC_ACCURACY.md) | Hired QC/QM jobs on ordinary hardware |
 
 ---

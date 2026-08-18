@@ -80,7 +80,8 @@ Regenerate: `python -m fsot_quantum.capability_suite`
 | **Physics + QI II** | **22/22 + 126/126** | `python -m fsot_quantum push` |
 | **Stale-target audit** vs YR4/PDG | **20/20 @ 0.5%** | `python -m fsot_quantum audit` |
 | **Physics + QI III** leftover hired physics | **41/41 + 212/212** | `python -m fsot_quantum push3` |
-| **Gset family** G1–G5 + G22–G23 | **7/7 under 1%** | `python -m fsot_quantum family` |
+| **Gset family** G1–G5 + G14–G17 + G22–G23 | **10/11 under 1%** · G17 1.017% | `python -m fsot_quantum family` |
+| **Open objects** exclusive \(V_{cb}\) / \(H_0\) / \(\alpha_s\) | different measurements | `python -m fsot_quantum open` |
 | **Organ export** for neuron-zig | pin + \(S\) + \(\kappa\) | `python -m fsot_quantum organ` |
 
 ## Scaling law (important)

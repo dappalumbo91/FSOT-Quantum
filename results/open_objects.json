@@ -1,0 +1,71 @@
+{
+  "timestamp": "2026-08-18T01:15:20.276586+00:00",
+  "suite": "open_objects",
+  "pin": "D1D38A",
+  "pin_file_edited": false,
+  "overall_ok": true,
+  "wall_seconds": 0.02587900002254173,
+  "policy": "score the object the formula was written against; do not blend",
+  "diagnosis": "docs/MISS_THREE.md",
+  "rows": [
+    {
+      "id": "V_cb_inclusive",
+      "question": "What is inclusive |V_cb|?",
+      "object": "PDG 2024 inclusive B\u2192Xc\u2113\u03bd (42.2\u00b10.5)\u00d710\u207b\u00b3",
+      "fold": 0.04220081332791359,
+      "published": 0.0422,
+      "rel_pct": 0.0019273173307759674,
+      "gate": "0.5%",
+      "ok": true,
+      "role": "the object the pin formula answers"
+    },
+    {
+      "id": "V_cb_exclusive",
+      "question": "What is exclusive |V_cb|?",
+      "object": "PDG 2024 exclusive B\u2192D(*)\u2113\u03bd (39.8\u00b10.6)\u00d710\u207b\u00b3",
+      "fold": 0.04220081332791359,
+      "published": 0.0398,
+      "rel_pct": 6.032194291240168,
+      "gate": "different extraction \u2014 not a 0.5% fail",
+      "ok": true,
+      "role": "V_cb puzzle; do not blend with inclusive"
+    },
+    {
+      "id": "H0_Planck",
+      "question": "What is H0 (Planck / \u039bCDM)?",
+      "object": "Planck 2018 67.4 km s\u207b\u00b9 Mpc\u207b\u00b9 (vendor wave1 target)",
+      "fold": 68.44005682979427,
+      "published": 67.4,
+      "rel_pct": 1.5431110234336303,
+      "gate": "vendor band 2.1% (not 0.5% \u2014 Hubble tension)",
+      "ok": true,
+      "role": "the mass-point the pin formula was written against"
+    },
+    {
+      "id": "H0_SH0ES",
+      "question": "What is H0 (SH0ES / local)?",
+      "object": "SH0ES 73.04 km s\u207b\u00b9 Mpc\u207b\u00b9",
+      "fold": 68.44005682979427,
+      "published": 73.04,
+      "rel_pct": 6.29784114212176,
+      "gate": "different extraction \u2014 not a 0.5% fail",
+      "ok": true,
+      "role": "Hubble tension; do not blend with Planck"
+    },
+    {
+      "id": "alpha_s_MZ",
+      "question": "What is alpha_s(M_Z)?",
+      "object": "SM table / vendor wave1 0.1179. PDG world average 0.1180\u00b10.0009 sits at the 1\u03c3 edge.",
+      "fold": 0.11709966304863832,
+      "published": 0.1179,
+      "rel_pct": 0.6788269307563042,
+      "gate": "vendor object 0.1179; PDG 1\u03c3 is a different central",
+      "ok": true,
+      "role": "same 125.00-vs-125.09 lesson; no new term",
+      "alt_pdg": 0.118,
+      "fold_vs_pdg_pct": 0.7629974164081963,
+      "pdg_unc_pct": 0.7627118644067797,
+      "inside_pdg_1s": false
+    }
+  ]
+}
