@@ -50,9 +50,10 @@ Regenerate: `python -m fsot_quantum.capability_suite`
 
 ## Honesty (non-negotiable)
 
-- Not claiming full Hilbert-space equivalence to arbitrary unitaries
-- Claiming: same *jobs* (oracle class, secret recover, search, coupling, optimization) with seed-locked accuracy ledgers on GPU
-- Scale path: batch more instances / longer registers on same GPU
+- The comparison is the **hired question**, not a replay of their fridge or Hilbert stack. Those stacks are what this fold replaces.
+- Claiming: same *jobs* (oracle class, secret recover, search, coupling, optimization, chemistry, factor) with seed-locked accuracy ledgers on GPU
+- Scale path: folds / \(D_{\mathrm{eff}}\), then batch more instances on the same GPU — not \(2^n\) amplitudes
+- Hilbert fragments stay optional bridges. They are not the competitor path.
 
 ## Climb status (competitor path)
 

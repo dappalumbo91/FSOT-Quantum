@@ -21,7 +21,7 @@ S = K(T_1+T_2+T_3),\quad \Theta = C_{\mathrm{eff}}\cdot P_{\mathrm{var}},\quad
 
 Zero free parameters. Change **domain / \(D_{\mathrm{eff}}\) / observed**, not a fit.
 
-It does **not** claim a cryogenic QPU, Hilbert-universal simulation, RSA-scale factoring, or a second mind that is a chatbot.
+The comparison is the **hired question**, not a replay of a cryogenic QPU or a Hilbert simulator. Those stacks are what this fold replaces. Current scores: [`CLAIMS.md`](CLAIMS.md). Mind/body is neuron-zig, not a chatbot.
 
 ---
 

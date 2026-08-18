@@ -12,9 +12,9 @@
 | Claim | In scope? |
 |-------|-----------|
 | Seed-locked trinary ops replace free-parameter soft attention / free LR on GPU | Yes (FSOT-GPU lineage) |
-| Same *jobs* as textbook QC demos (DJ class, BV secret, search, Ising/MaxCut, correlation structure) without QPU hardware | Yes — ledgers in `results/` |
+| Same *jobs* as textbook QC demos (DJ class, BV secret, search, Ising/MaxCut, chemistry, period/factor) without QPU hardware | Yes — ledgers in `results/` · scores in `docs/CLAIMS.md` |
 | Multiprover stamp Lean·Coq·Isabelle·Python on spin/pack/gate/domain contracts | Yes — `FSOT_QUANTUM_MULTIPROVER_OK` |
-| Hilbert-space unitary equivalence / fault-tolerant universal QC | **No** |
+| Replay their Hilbert / fridge / FTQC stack as the product | **No** — that architecture is what this fold replaces |
 | Peer-reviewed acceptance | Process, not a code gate |
 
 ## Outline

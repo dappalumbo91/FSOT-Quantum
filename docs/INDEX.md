@@ -11,7 +11,7 @@ Every living panel also writes a twin under `results/`.
 | Doc | What it is |
 |-----|------------|
 | [`STATUS.md`](STATUS.md) | Wrap snapshot: system, findings, capability, honesty |
-| [`CLAIMS.md`](CLAIMS.md) | What we can claim, cannot claim, and what is still open |
+| [`CLAIMS.md`](CLAIMS.md) | Hired-question comparison, living scores, what is still open |
 | [`LADDER.md`](LADDER.md) | Rungs in order, hits, open residuals |
 | [`REPRODUCE.md`](REPRODUCE.md) | Commands a clone must run |
 | [`ARCHITECTURE.md`](ARCHITECTURE.md) | How the pieces sit |

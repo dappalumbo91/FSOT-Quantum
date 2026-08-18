@@ -34,7 +34,7 @@ Trinary spins: **−1** down · **0** superposed · **+1** up. Consensus, not so
 
 This repo is **not** a second GPU stack. It is the QM/QC fold on the same owned operators already in FSOT-GPU (`seeds`, `scalar`, `trinary`, `coherence`, `consensus`, `learn`, `backend`).
 
-It does **not** claim a cryogenic QPU, Hilbert-universal simulation, RSA-scale factoring, FTQC threshold, FCI, or a chatbot mind.
+The comparison is the **hired question** (Shor, QAOA/MaxCut, chemistry, constants, QI), not a replay of a fridge or a Hilbert simulator. Those stacks are what this fold is built to replace. Current scores: [`docs/CLAIMS.md`](docs/CLAIMS.md). Mind/body is [fsot-neuron-zig](https://github.com/dappalumbo91/fsot-neuron-zig).
 
 ---
 

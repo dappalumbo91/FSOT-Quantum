@@ -54,18 +54,37 @@ Headline constants: inclusive \(\lvert V_{cb}\rvert=0.0422008\) vs 0.0422; exclu
 
 ---
 
-## What we cannot claim
+## The comparison is the hired question
 
-- A cryogenic QPU, trapped-ion stack, or photonic line.
-- Hilbert-universal simulation of arbitrary unitaries.
-- RSA-scale factoring, FTQC threshold, or FCI.
-- Champion-matching MaxCut (G1 is 61 edges short; G17 is 31; G22 is 114).
-- That exclusive PDG **0.0398** (D+D* blend) is the HEP object. It is not. [`V_CB_PUZZLE.md`](V_CB_PUZZLE.md).
-- That the vendor wave1 **global** \(H_0=68.44\) is SH0ES. It is not. [`H0_TENSION.md`](H0_TENSION.md).
-- That \(\alpha_s\) must pass a 0.5% gate. Vendor band is 0.9%; PDG 0.1180±0.0009 is the 1σ edge.
-- Astronomy / seismology numerical closeness as physics. That is theater.
-- A chatbot mind, or a second mind in RAM. Body is [fsot-neuron-zig](https://github.com/dappalumbo91/fsot-neuron-zig).
-- “Maybe nature.” FSOT is the theory. Change domain, not a fit.
+This fold is built to **replace** cryogenic QPUs, Hilbert \(2^n\) simulators, and the sales pitch around them. The comparison is the **question those machines are hired to answer**, scored on this pin. It is not a replay of their circuit, their fridge, or their error-correction stack.
+
+We do **not** simulate their architecture. That would be agreeing their geometry is the job. \(K\) is the scale. Change **domain / \(D_{\mathrm{eff}}\) / observed / lane**. Ask the theory.
+
+| They sell | Hired question | This fold | Current score |
+|-----------|----------------|-----------|---------------|
+| Cryogenic QPU / NISQ box | usable answers without a fridge | GPU/CPU + pin | the living panels above |
+| Hilbert / statevector / FTQC | hold the job as scale grows | folds, not \(2^n\) amps | fold path is the scale law — `FOLD_NOT_HILBERT.md` |
+| Shor / RSA | period and factor | modular order + collapse | tiny \(N\) **3/3 and 4/4** — same job, larger moduli still to climb |
+| QAOA / annealer | MaxCut / Ising | fold + KL + 2-opt | **10/11 under 1%**; G17 **1.017%**; champions still unmatched |
+| FCI / quantum chemistry | chemistry observables | pin formulas | **68/68 @ 0.5%** |
+| Surface-code “threshold” | reliable logical work | fold residual vs published object | their \(d\)-threshold is a fridge metric; ours is residual on the question |
+| Chatbot “AI” | mind | [fsot-neuron-zig](https://github.com/dappalumbo91/fsot-neuron-zig) | this repo is the law organ, not the body |
+
+Current score is not a refusal. Tiny Shor is tiny **today**. Champion MaxCut is 30–114 edges short **today**. Those are the next rungs on the same jobs, not a reason to go build their stack.
+
+---
+
+## What we refuse (theater, not the job)
+
+- Replaying a foreign circuit and calling that an FSOT answer.
+- Inventing a coefficient because a residual looks ugly.
+- Blending disagreeing extractions (inclusive vs exclusive \(V_{cb}\); global vs tool \(H_0\)).
+- Applying a 0.5% gate tighter than the observable’s own recommended uncertainty.
+- Scoring exclusive PDG **0.0398** (D+D* blend) as the HEP object. It is not. [`V_CB_PUZZLE.md`](V_CB_PUZZLE.md).
+- Scoring vendor wave1 **global** \(H_0=68.44\) as SH0ES. It is not. [`H0_TENSION.md`](H0_TENSION.md).
+- Astronomy / seismology numerical closeness as physics.
+- A chatbot, or a second mind in RAM. Body is neuron-zig.
+- “Maybe nature.” FSOT is the theory.
 
 ---
 
@@ -80,7 +99,7 @@ Written as open. Not dressed up. Not a reason to edit the pin.
 | Vendor `BR_H_gg` field | still **0.0785** | Fold \(\varphi^{-4}-\gamma^5=0.081823\) already matches YR4 0.08187 (0.058%). Stale stored field. |
 | Combined exclusive \(\lvert V_{cb}\rvert=0.0398\) | not scored | D+D* blend. The HEP object is Belle II \(B\to D\ell\nu\) 0.0392. |
 | Atlas 432 | needs `_ref/FSOT-2.1-Lean` | Without the clone, atlas counts skip; 35 pin domains still score. |
-| Tiny Shor | tiny | 3/3 and 4/4. No RSA-scale claim. |
+| Period / factor (Shor job) | tiny \(N\) 3/3 and 4/4 | Same hired question as RSA-scale. Larger moduli are the next climb on **this** path, not a Hilbert replay. |
 
 SH0ES at **1.00%** is the Lean BH→WH inflated sector (inside the contested 2.5% band, 0.71σ of ±1.04). It is **not** the old 6.30% leftover.
 

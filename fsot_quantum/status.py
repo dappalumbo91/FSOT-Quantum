@@ -42,12 +42,20 @@ def main() -> int:
             ],
             "claims": "docs/CLAIMS.md",
         },
-        "not_claimed": [
-            "cryogenic QPU",
-            "Hilbert-universal simulation",
-            "RSA-scale factoring",
-            "FTQC threshold",
-            "chatbot mind",
+        "comparison": "hired question, not their stack",
+        "replaces": [
+            "cryogenic QPU / Hilbert 2^n / QAOA box / FCI sales pitch",
+        ],
+        "jobs_current": {
+            "factor_Shor": "tiny N 3/3 and 4/4 — same job, larger moduli still to climb",
+            "MaxCut": "10/11 under 1%; G17 1.017%",
+            "chemistry": "68/68 @0.5% (pin formulas, not Hilbert FCI)",
+        },
+        "refuse": [
+            "replay a foreign circuit as the answer",
+            "invent a coefficient",
+            "blend disagreeing extractions",
+            "chatbot as mind",
         ],
     }
     print(json.dumps(snap, indent=2))
