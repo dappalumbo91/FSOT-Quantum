@@ -121,6 +121,7 @@ These are living ledgers. Re-run the command in the last column.
 | QM / SM pin set | 14/14 @ 0.5% | field-of-use | `FIELD_OF_USE.md` |
 | Hired QC expand (factor / dlog / Simon / SAT / HHL / search) | **29/29** | `python -m fsot_quantum hire` | `HIRE_EXPAND.md` |
 | Hired QC climb (7-digit factor / Simon-16 / SAT-16 / TSP / 1e7) | **32/32** | `python -m fsot_quantum hire2` | `HIRE_CLIMB.md` |
+| Probability as multiverse branching | **19/19** | `python -m fsot_quantum branch` | `PROBABILITY_BRANCH.md` |
 
 Headline constants (same pin):
 

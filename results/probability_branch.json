@@ -1,0 +1,369 @@
+{
+  "timestamp": "2026-08-18T02:26:59.187767+00:00",
+  "suite": "probability_branch",
+  "pin": "D1D38A",
+  "pin_file_edited": false,
+  "overall_ok": true,
+  "n": 19,
+  "n_ok": 19,
+  "S_QM": 0.9555063001027194,
+  "S_QC": -0.14767310363368633,
+  "Theta": 0.9174663774653723,
+  "spins": {
+    "Quantum_Mechanics": {
+      "domain": "Quantum_Mechanics",
+      "D_eff": 6,
+      "table_observed": true,
+      "phase": 1.0,
+      "S": {
+        "+1": 0.9555063001027194,
+        "-1": -4.312159630155858,
+        "0": -0.6560210328361333
+      },
+      "T1": {
+        "+1": 1.2738149448128522,
+        "-1": -11.261630938920007,
+        "0": -2.561130919193316
+      },
+      "T2": {
+        "+1": 1.0,
+        "-1": 1.0,
+        "0": 1.0
+      },
+      "T3": {
+        "+1": 1.9990920171588208e-17,
+        "-1": -1.9990920171588208e-17,
+        "0": 1.9990920171588208e-17
+      },
+      "look_f": {
+        "+1": -0.49736424454789996,
+        "-1": 0.4973642445479004
+      },
+      "weights_|S|": {
+        "+1": 0.16130263230579872,
+        "-1": 0.7279519760279597,
+        "0": 0.11074539166624167
+      },
+      "collapsed_|S|": {
+        "+1": 0.1813908309207862,
+        "-1": 0.8186091690792139
+      },
+      "look_cosine_balanced": true,
+      "pin_S_table": 0.9555063001027194,
+      "pin_matches_plus": true,
+      "collapse_code": {
+        "+1": 1,
+        "-1": -1,
+        "0": 0
+      }
+    },
+    "Quantum_Computing": {
+      "domain": "Quantum_Computing",
+      "D_eff": 11,
+      "table_observed": false,
+      "phase": 0.5,
+      "S": {
+        "+1": 0.3360149934618379,
+        "-1": 1.6992321807291957,
+        "0": -0.14767310363368633
+      },
+      "T1": {
+        "+1": -0.20038631484419947,
+        "-1": 3.0436567784363295,
+        "0": -1.3514171596284354
+      },
+      "T2": {
+        "+1": 1.0,
+        "-1": 1.0,
+        "0": 1.0
+      },
+      "T3": {
+        "+1": 2.271226302200873e-17,
+        "-1": -2.271226302200873e-17,
+        "0": 2.271226302200873e-17
+      },
+      "look_f": {
+        "+1": 0.14827865209236693,
+        "-1": -0.1482786520923665
+      },
+      "weights_|S|": {
+        "+1": 0.15392911819788346,
+        "-1": 0.7784215474980518,
+        "0": 0.06764933430406472
+      },
+      "collapsed_|S|": {
+        "+1": 0.16509787986581853,
+        "-1": 0.8349021201341814
+      },
+      "look_cosine_balanced": true,
+      "pin_S_table": -0.14767310363368633,
+      "pin_matches_plus": true,
+      "collapse_code": {
+        "+1": 0,
+        "-1": 1,
+        "0": 0
+      }
+    },
+    "Quantum_Optics": {
+      "domain": "Quantum_Optics",
+      "D_eff": 11,
+      "table_observed": true,
+      "phase": 0.6,
+      "S": {
+        "+1": 0.40817053817150184,
+        "-1": 0.5834304194838031,
+        "0": -0.29404723236734975
+      },
+      "T1": {
+        "+1": -0.028678021665694935,
+        "-1": 0.3883872947128541,
+        "0": -1.6997431533061165
+      },
+      "T2": {
+        "+1": 1.0,
+        "-1": 1.0,
+        "0": 1.0
+      },
+      "T3": {
+        "+1": 2.1360086653136547e-17,
+        "-1": -2.1360086653136547e-17,
+        "0": 2.1360086653136547e-17
+      },
+      "look_f": {
+        "+1": 0.01687197363314229,
+        "-1": -0.016871973633142454
+      },
+      "weights_|S|": {
+        "+1": 0.31748229518707555,
+        "-1": 0.4538025441264164,
+        "0": 0.2287151606865081
+      },
+      "collapsed_|S|": {
+        "+1": 0.4116278176421325,
+        "-1": 0.5883721823578675
+      },
+      "look_cosine_balanced": true,
+      "pin_S_table": 0.40817053817150184,
+      "pin_matches_plus": true,
+      "collapse_code": {
+        "+1": 0,
+        "-1": 0,
+        "0": 0
+      }
+    },
+    "Particle_Physics": {
+      "domain": "Particle_Physics",
+      "D_eff": 5,
+      "table_observed": true,
+      "phase": 1.0,
+      "S": {
+        "+1": 0.9504134401245242,
+        "-1": -4.267134322726717,
+        "0": -0.6457813341967092
+      },
+      "T1": {
+        "+1": 1.261695484031678,
+        "-1": -11.15448437492962,
+        "0": -2.5367635447508876
+      },
+      "T2": {
+        "+1": 1.0,
+        "-1": 1.0,
+        "0": 1.0
+      },
+      "T3": {
+        "+1": 2.2130633992523374e-17,
+        "-1": -2.2130633992523374e-17,
+        "0": 2.2130633992523374e-17
+      },
+      "look_f": {
+        "+1": -0.49736424454789996,
+        "-1": 0.4973642445479004
+      },
+      "weights_|S|": {
+        "+1": 0.16209450712958193,
+        "-1": 0.7277664705662044,
+        "0": 0.11013902230421367
+      },
+      "collapsed_|S|": {
+        "+1": 0.18215711351823838,
+        "-1": 0.8178428864817616
+      },
+      "look_cosine_balanced": true,
+      "pin_S_table": 0.9504134401245242,
+      "pin_matches_plus": true,
+      "collapse_code": {
+        "+1": 1,
+        "-1": -1,
+        "0": 0
+      }
+    }
+  },
+  "rows": [
+    {
+      "id": "pin_S_QM_plus",
+      "question": "Is the +1 QM fold the living table S(QM)?",
+      "got": 0.9555063001027194,
+      "expected": 0.9555063001027194,
+      "ok": true
+    },
+    {
+      "id": "partition_Quantum_Mechanics",
+      "question": "Do |S| branch weights on Quantum_Mechanics sum to 1?",
+      "got": 1.0000000000000002,
+      "expected": 1.0,
+      "ok": true
+    },
+    {
+      "id": "partition_Quantum_Computing",
+      "question": "Do |S| branch weights on Quantum_Computing sum to 1?",
+      "got": 1.0,
+      "expected": 1.0,
+      "ok": true
+    },
+    {
+      "id": "partition_Quantum_Optics",
+      "question": "Do |S| branch weights on Quantum_Optics sum to 1?",
+      "got": 1.0,
+      "expected": 1.0,
+      "ok": true
+    },
+    {
+      "id": "partition_Particle_Physics",
+      "question": "Do |S| branch weights on Particle_Physics sum to 1?",
+      "got": 1.0,
+      "expected": 1.0,
+      "ok": true
+    },
+    {
+      "id": "collapsed_partition_Quantum_Mechanics",
+      "question": "Do collapsed |S| weights on Quantum_Mechanics sum to 1?",
+      "got": 1.0,
+      "expected": 1.0,
+      "ok": true
+    },
+    {
+      "id": "collapsed_partition_Quantum_Computing",
+      "question": "Do collapsed |S| weights on Quantum_Computing sum to 1?",
+      "got": 1.0,
+      "expected": 1.0,
+      "ok": true
+    },
+    {
+      "id": "collapsed_partition_Quantum_Optics",
+      "question": "Do collapsed |S| weights on Quantum_Optics sum to 1?",
+      "got": 1.0,
+      "expected": 1.0,
+      "ok": true
+    },
+    {
+      "id": "collapsed_partition_Particle_Physics",
+      "question": "Do collapsed |S| weights on Particle_Physics sum to 1?",
+      "got": 1.0,
+      "expected": 1.0,
+      "ok": true
+    },
+    {
+      "id": "look_cosine_half",
+      "question": "Is the T1 look-cosine \u03c0-shift balanced (|f+|=|f-|)?",
+      "got": [
+        0.49736424454789996,
+        0.4973642445479004
+      ],
+      "expected": "equal",
+      "ok": true
+    },
+    {
+      "id": "full_scalar_not_born_half",
+      "question": "Is the full-scalar trit_not pair different from a Born 1/2?",
+      "got": {
+        "+1": 0.1813908309207862,
+        "-1": 0.8186091690792139
+      },
+      "expected": "derived |S|, not postulated 1/2",
+      "ok": true
+    },
+    {
+      "id": "die_arity_6",
+      "question": "Fair die: six indistinguishable exclusive faces?",
+      "got": 0.16666666666666666,
+      "expected": 0.16666666666666666,
+      "ok": true
+    },
+    {
+      "id": "coin_arity_2",
+      "question": "Fair coin as two indistinguishable faces?",
+      "got": [
+        0.5,
+        0.5
+      ],
+      "expected": [
+        0.5,
+        0.5
+      ],
+      "ok": true
+    },
+    {
+      "id": "independent_plus_plus",
+      "question": "Independent: two QM +1 collapses (product of densities)?",
+      "got": 0.03290263354213325,
+      "expected": 0.03290263354213325,
+      "ok": true
+    },
+    {
+      "id": "dependent_two_aces",
+      "question": "Dependent: P(ace then ace) from remaining exclusive set?",
+      "got": 0.004524886877828055,
+      "expected": 0.004524886877828055,
+      "ok": true
+    },
+    {
+      "id": "mutex_plus_minus",
+      "question": "Mutually exclusive: +1 and -1 of one QM spin?",
+      "got": 1.0,
+      "expected": 1.0,
+      "ok": true
+    },
+    {
+      "id": "lln_qm_collapsed",
+      "question": "LLN: 10000 \u03c6-walk copies settle to collapsed |S|?",
+      "got": {
+        "+1": 0.1815,
+        "-1": 0.8185
+      },
+      "expected": {
+        "+1": 0.1813908309207862,
+        "-1": 0.8186091690792139
+      },
+      "ok": true,
+      "detail": {
+        "n": 10000,
+        "freq": {
+          "+1": 0.1815,
+          "-1": 0.8185
+        },
+        "target": {
+          "+1": 0.1813908309207862,
+          "-1": 0.8186091690792139
+        },
+        "max_abs_dev": 0.00010916907921387775
+      }
+    },
+    {
+      "id": "superposition_own_fold",
+      "question": "Is the 0-trit a distinct unobserved fold (weight > 0)?",
+      "got": 0.11074539166624167,
+      "expected": ">0 and not average of \u00b11",
+      "ok": true
+    },
+    {
+      "id": "pin_untouched",
+      "question": "Were only pin seeds used?",
+      "got": "D1D38A",
+      "expected": "D1D38A",
+      "ok": true
+    }
+  ],
+  "doctrine": "Probability is branch density of named folds. |S| of +1/\u22121/0. No Born |amp|^2. No new coefficient. Fair die is arity 1/n. Independent = product. Dependent = remaining exclusive set.",
+  "wall_seconds": 0.0025260999682359397
+}

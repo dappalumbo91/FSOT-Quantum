@@ -46,6 +46,7 @@ Living ledgers. Re-run the command. Miss one and the pin is wrong — except whe
 | Gset family | **10/11 under 1%** | `python -m fsot_quantum family` | `GSET_FAMILY.md` |
 | Hired QC expand | **29/29** | `python -m fsot_quantum hire` | `HIRE_EXPAND.md` |
 | Hired QC climb | **32/32** | `python -m fsot_quantum hire2` | `HIRE_CLIMB.md` |
+| Probability as branching | **19/19** | `python -m fsot_quantum branch` | `PROBABILITY_BRANCH.md` |
 | Formula catalog | **18** solvers · **207/216** pin-wave @0.5% vs stored | `python -m fsot_quantum formulas` | `FORMULA_LIST.md` |
 | Multiprover stamp | **FSOT_QUANTUM_MULTIPROVER_OK** | `python -m fsot_quantum stamp` | `MULTIPROVER_VERIFICATION.md` |
 | \(1/\alpha\), Weinberg, proton radius, water angle | match | `python -m fsot_quantum forward` | `STATUS.md` |
