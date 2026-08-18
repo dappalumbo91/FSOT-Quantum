@@ -48,6 +48,8 @@ Living ledgers. Re-run the command. Miss one and the pin is wrong — except whe
 | Hired QC climb | **32/32** | `python -m fsot_quantum hire2` | `HIRE_CLIMB.md` |
 | Probability as branching | **19/19** | `python -m fsot_quantum branch` | `PROBABILITY_BRANCH.md` |
 | Genetics codon / 7-trit branch | **15/15** | `python -m fsot_quantum gencode` | `GENETICS_BRANCH.md` |
+| ORF start-to-stop | **11/11** | `python -m fsot_quantum orf` | `ORF_BRANCH.md` |
+| Hired QC climb 3 | **17/17** | `python -m fsot_quantum hire3` | `HIRE_CLIMB3.md` |
 | Formula catalog | **18** solvers · **207/216** pin-wave @0.5% vs stored | `python -m fsot_quantum formulas` | `FORMULA_LIST.md` |
 | Multiprover stamp | **FSOT_QUANTUM_MULTIPROVER_OK** | `python -m fsot_quantum stamp` | `MULTIPROVER_VERIFICATION.md` |
 | \(1/\alpha\), Weinberg, proton radius, water angle | match | `python -m fsot_quantum forward` | `STATUS.md` |
@@ -68,7 +70,7 @@ We do **not** simulate their architecture. That would be agreeing their geometry
 |-----------|----------------|-----------|---------------|
 | Cryogenic QPU / NISQ box | usable answers without a fridge | GPU/CPU + pin | the living panels above |
 | Hilbert / statevector / FTQC | hold the job as scale grows | folds, not \(2^n\) amps | fold path is the scale law — `FOLD_NOT_HILBERT.md` |
-| Shor / RSA | period and factor | modular order + collapse | ask tiny \(N\); harder **6/6** through 10403; hire **10/10** through 172189; hire2 **10/10** through **2196323**. Same job, larger moduli still to climb |
+| Shor / RSA | period and factor | modular order + collapse | hire2 through 2196323; hire3 **10/10 through 20,937,233**. Same job, larger moduli still to climb |
 | Discrete log | \(g^x\equiv h\pmod p\) | modular fold | hire 10/10 · hire2 **6/6** through p=40009 |
 | Simon / HSP | hidden xor string | collision fold + GF(2) | hire 8-bit · hire2 **12 and 16 bit** |
 | SAT / QUBO / color / TSP | assignment / tour | energy folds | SAT-16 · partition \{1..23\} · Petersen · TSP n=7 exact |

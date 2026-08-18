@@ -1,0 +1,138 @@
+{
+  "timestamp": "2026-08-18T02:41:50.481800+00:00",
+  "suite": "orf_branch",
+  "pin": "D1D38A",
+  "pin_file_edited": false,
+  "genetics_repo_edited": false,
+  "domain": "Biology",
+  "overall_ok": true,
+  "n": 11,
+  "n_ok": 11,
+  "MR_star": 2.8950191214998226e-12,
+  "MW_star": 1.3520322936642779e-11,
+  "missense_ratio": 4.670201601168805,
+  "MQIFVK_star": 2.1100284799341414e-25,
+  "mini_sense": 61,
+  "rows": [
+    {
+      "id": "orf_shape",
+      "question": "Are ATG-CGG-TAA / ATG-TGG-TAA / ATG-TAA / MQIFVK* in-frame ORFs?",
+      "got": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "expected": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "ok": true
+    },
+    {
+      "id": "peptides",
+      "question": "Do those ORFs translate MR / MW / M / MQIFVK?",
+      "got": [
+        "MR",
+        "MW",
+        "M",
+        "MQIFVK"
+      ],
+      "expected": [
+        "MR",
+        "MW",
+        "M",
+        "MQIFVK"
+      ],
+      "ok": true
+    },
+    {
+      "id": "orf_product_law",
+      "question": "Is ORF density the product of codon densities?",
+      "got": 2.8950191214998226e-12,
+      "expected": 2.8950191214998226e-12,
+      "ok": true
+    },
+    {
+      "id": "missense_ratio_cancels_flanks",
+      "question": "Does dens(ATG-TGG-TAA)/dens(ATG-CGG-TAA) = dens(TGG)/dens(CGG)?",
+      "got": 4.670201601168805,
+      "expected": 4.670201601168806,
+      "ok": true
+    },
+    {
+      "id": "frameshift_rejected",
+      "question": "Is a length-not-mod-3 string rejected (different object)?",
+      "got": false,
+      "expected": false,
+      "ok": true
+    },
+    {
+      "id": "internal_stop_not_orf",
+      "question": "Is ATG-TAA-CGG-TAA rejected as an ORF (internal stop)?",
+      "got": false,
+      "expected": false,
+      "ok": true
+    },
+    {
+      "id": "mini_orf_61_sense",
+      "question": "Are there 61 in-frame ATG-XXX-TAA sense mini-ORFs?",
+      "got": {
+        "orf": 61,
+        "sense": 61
+      },
+      "expected": {
+        "orf": 61,
+        "sense": 61
+      },
+      "ok": true
+    },
+    {
+      "id": "atg_taa_is_met",
+      "question": "Is ATG-TAA an ORF that translates Met?",
+      "got": {
+        "orf": true,
+        "pep": "M"
+      },
+      "expected": {
+        "orf": true,
+        "pep": "M"
+      },
+      "ok": true
+    },
+    {
+      "id": "mqifvk_seven_codons",
+      "question": "Is MQIFVK* seven codon folds (6 AA + stop)?",
+      "got": {
+        "n": 7,
+        "dens": 2.1100284799341414e-25
+      },
+      "expected": 7,
+      "ok": true
+    },
+    {
+      "id": "mqifvk_q_to_r",
+      "question": "Does Q\u2192R in MQIFVK* change density by dens(CGG)/dens(CAG) only?",
+      "got": {
+        "pep": "MRIFVK",
+        "ratio": 1.0185713005684276
+      },
+      "expected": {
+        "pep": "MRIFVK",
+        "ratio": 1.0185713005684274
+      },
+      "ok": true
+    },
+    {
+      "id": "pin_untouched",
+      "question": "Genetics repo not edited; pin D1D38A only?",
+      "got": "D1D38A",
+      "expected": "D1D38A",
+      "ok": true
+    }
+  ],
+  "doctrine": "An ORF is a product of codon folds. Missense is one codon. Frameshift is a different object. No new coefficient.",
+  "wall_seconds": 0.0005608000210486352
+}

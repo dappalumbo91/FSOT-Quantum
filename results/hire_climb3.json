@@ -1,0 +1,198 @@
+{
+  "timestamp": "2026-08-18T02:41:52.010486+00:00",
+  "suite": "hire_climb3",
+  "pin": "D1D38A",
+  "pin_file_edited": false,
+  "overall_ok": true,
+  "n": 17,
+  "n_ok": 17,
+  "families": {
+    "factor": {
+      "n": 10,
+      "n_ok": 10,
+      "ok": true
+    },
+    "period": {
+      "n": 3,
+      "n_ok": 3,
+      "ok": true
+    },
+    "dlog": {
+      "n": 4,
+      "n_ok": 4,
+      "ok": true
+    }
+  },
+  "S_QM": 0.9555063001027194,
+  "S_QC": -0.14767310363368633,
+  "previous": "hire_climb 32/32 through 2196323",
+  "wall_seconds": 1.3291913999710232,
+  "rows": [
+    {
+      "family": "factor",
+      "question": "What are the factors of 10400609?",
+      "hire": "Shor end-job",
+      "answer": [
+        3221,
+        3229
+      ],
+      "ok": true,
+      "method": "fermat_fold"
+    },
+    {
+      "family": "factor",
+      "question": "What are the factors of 10575503?",
+      "hire": "Shor end-job",
+      "answer": [
+        3251,
+        3253
+      ],
+      "ok": true,
+      "method": "fermat_fold"
+    },
+    {
+      "family": "factor",
+      "question": "What are the factors of 10936213?",
+      "hire": "Shor end-job",
+      "answer": [
+        3301,
+        3313
+      ],
+      "ok": true,
+      "method": "fermat_fold"
+    },
+    {
+      "family": "factor",
+      "question": "What are the factors of 12006221?",
+      "hire": "Shor end-job",
+      "answer": [
+        3463,
+        3467
+      ],
+      "ok": true,
+      "method": "fermat_fold"
+    },
+    {
+      "family": "factor",
+      "question": "What are the factors of 12348187?",
+      "hire": "Shor end-job",
+      "answer": [
+        3511,
+        3517
+      ],
+      "ok": true,
+      "method": "fermat_fold"
+    },
+    {
+      "family": "factor",
+      "question": "What are the factors of 12787751?",
+      "hire": "Shor end-job",
+      "answer": [
+        3571,
+        3581
+      ],
+      "ok": true,
+      "method": "fermat_fold"
+    },
+    {
+      "family": "factor",
+      "question": "What are the factors of 16016003?",
+      "hire": "Shor end-job",
+      "answer": [
+        4001,
+        4003
+      ],
+      "ok": true,
+      "method": "fermat_fold"
+    },
+    {
+      "family": "factor",
+      "question": "What are the factors of 17040383?",
+      "hire": "Shor end-job",
+      "answer": [
+        4127,
+        4129
+      ],
+      "ok": true,
+      "method": "fermat_fold"
+    },
+    {
+      "family": "factor",
+      "question": "What are the factors of 16114663?",
+      "hire": "Shor end-job",
+      "answer": [
+        3221,
+        5003
+      ],
+      "ok": true,
+      "method": "fermat_fold"
+    },
+    {
+      "family": "factor",
+      "question": "What are the factors of 20937233?",
+      "hire": "Shor end-job",
+      "answer": [
+        4001,
+        5233
+      ],
+      "ok": true,
+      "method": "fermat_fold"
+    },
+    {
+      "family": "period",
+      "question": "What is the order of 3 mod 10403?",
+      "hire": "Shor core",
+      "answer": 1700,
+      "ok": true,
+      "method": "modular_fold_plus_CF_candidates"
+    },
+    {
+      "family": "period",
+      "question": "What is the order of 5 mod 6557?",
+      "hire": "Shor core",
+      "answer": 3198,
+      "ok": true,
+      "method": "modular_fold_plus_CF_candidates"
+    },
+    {
+      "family": "period",
+      "question": "What is the order of 10 mod 8633?",
+      "hire": "Shor core",
+      "answer": 1056,
+      "ok": true,
+      "method": "modular_fold_plus_CF_candidates"
+    },
+    {
+      "family": "dlog",
+      "question": "Discrete log: 3^x \u2261 47501 (mod 50021)?",
+      "hire": "Shor / QPE",
+      "answer": 144,
+      "ok": true,
+      "method": "modular_fold_successive"
+    },
+    {
+      "family": "dlog",
+      "question": "Discrete log: 5^x \u2261 35997 (mod 70001)?",
+      "hire": "Shor / QPE",
+      "answer": 233,
+      "ok": true,
+      "method": "modular_fold_successive"
+    },
+    {
+      "family": "dlog",
+      "question": "Discrete log: 6^x \u2261 87447 (mod 90001)?",
+      "hire": "Shor / QPE",
+      "answer": 377,
+      "ok": true,
+      "method": "modular_fold_successive"
+    },
+    {
+      "family": "dlog",
+      "question": "Discrete log: 7^x \u2261 72842 (mod 100003)?",
+      "hire": "Shor / QPE",
+      "answer": 610,
+      "ok": true,
+      "method": "modular_fold_successive"
+    }
+  ]
+}

@@ -54,6 +54,8 @@ Every living panel also writes a twin under `results/`.
 | [`HIRE_CLIMB.md`](HIRE_CLIMB.md) | Next climb: 7-digit factor, Simon-16, SAT-16, Petersen, TSP, 1e7 |
 | [`PROBABILITY_BRANCH.md`](PROBABILITY_BRANCH.md) | Probability as multiverse branching (\(\|S\|\) folds, no Born) |
 | [`GENETICS_BRANCH.md`](GENETICS_BRANCH.md) | Codon / 7-trit words scored as Biology \(\|S\|\) products |
+| [`ORF_BRANCH.md`](ORF_BRANCH.md) | Start-to-stop ORF as product of codon folds |
+| [`HIRE_CLIMB3.md`](HIRE_CLIMB3.md) | 8-digit factors / dlog \(p\sim 10^5\) |
 | [`MULTIPROVER_VERIFICATION.md`](MULTIPROVER_VERIFICATION.md) | Lean · Coq · Isabelle · F\* · Python stamp |
 | [`QC_ACCURACY.md`](QC_ACCURACY.md) | Hired QC/QM jobs on ordinary hardware |
 

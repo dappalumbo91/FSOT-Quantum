@@ -123,6 +123,8 @@ These are living ledgers. Re-run the command in the last column.
 | Hired QC climb (7-digit factor / Simon-16 / SAT-16 / TSP / 1e7) | **32/32** | `python -m fsot_quantum hire2` | `HIRE_CLIMB.md` |
 | Probability as multiverse branching | **19/19** | `python -m fsot_quantum branch` | `PROBABILITY_BRANCH.md` |
 | Genetics codon / 7-trit branching | **15/15** | `python -m fsot_quantum gencode` | `GENETICS_BRANCH.md` |
+| ORF start-to-stop | **11/11** | `python -m fsot_quantum orf` | `ORF_BRANCH.md` |
+| Hired QC climb 3 (8-digit factor) | **17/17** | `python -m fsot_quantum hire3` | `HIRE_CLIMB3.md` |
 
 Headline constants (same pin):
 
