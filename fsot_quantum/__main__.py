@@ -30,6 +30,7 @@ Field entry: python -m fsot_quantum [cmd]
   hire4      climb 4: 9-digit factor / SAT-20 / TSP-8 / HHL 5×5 / MIS
   hire5      climb 5: 10-digit factor / SAT-24 / TSP-9 / HHL 6×6
   hire6      climb 6: 11-digit factor / SAT-28 / TSP-10 / HHL 7×7
+  hire7      climb 7: 13-digit factor / SAT-32 / TSP-11 / HHL 8×8
   formulas   formula list — what each formula solves
   organ      export S/κ/QI JSON for neuron-zig
   stamp      Lean · Coq · Isabelle · F* · Python multiprover
@@ -145,6 +146,9 @@ def main() -> int:
         return m()
     if c in ("hire6", "hire_climb6"):
         from fsot_quantum.hire_climb6 import main as m
+        return m()
+    if c in ("hire7", "hire_climb7"):
+        from fsot_quantum.hire_climb7 import main as m
         return m()
     if c in ("formulas", "catalog"):
         from fsot_quantum.formula_catalog import main as m

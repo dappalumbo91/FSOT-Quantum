@@ -243,7 +243,7 @@ def fold_tsp(dist: Sequence[Sequence[int]]) -> dict[str, Any]:
 
     exact_l = None
     exact_tour = None
-    if n <= 10:
+    if n <= 11:
         for perm in permutations(range(1, n)):
             tour = [0] + list(perm)
             L = length(tour)

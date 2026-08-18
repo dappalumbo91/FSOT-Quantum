@@ -34,6 +34,7 @@ python -m fsot_quantum hire3       # 8-digit factor / dlog 17/17
 python -m fsot_quantum hire4       # 9-digit factor / SAT-20 / TSP-8 22/22
 python -m fsot_quantum hire5       # 10-digit factor / SAT-24 / TSP-9 22/22
 python -m fsot_quantum hire6       # 11-digit factor / SAT-28 / TSP-10 22/22
+python -m fsot_quantum hire7       # 13-digit factor / SAT-32 / TSP-11 22/22
 python -m fsot_quantum formulas    # formula list
 python -m fsot_quantum stamp       # Lean · Coq · Isabelle · F* · Python
 ```
@@ -65,6 +66,7 @@ python -m fsot_quantum.hire_climb3
 python -m fsot_quantum.hire_climb4
 python -m fsot_quantum.hire_climb5
 python -m fsot_quantum.hire_climb6
+python -m fsot_quantum.hire_climb7
 python -m fsot_quantum.formula_catalog
 python -m fsot_quantum stamp
 python -m fsot_quantum.organ_export

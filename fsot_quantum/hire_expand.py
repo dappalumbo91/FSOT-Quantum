@@ -313,9 +313,35 @@ def fold_partition(weights: Sequence[int]) -> dict[str, Any]:
                     improved = True
                     break
                 s[i] = -s[i]
+        cur = diff(s)
+        if cur:
+            for i in range(n):
+                for j in range(i + 1, n):
+                    s[i] = -s[i]
+                    s[j] = -s[j]
+                    if diff(s) < cur:
+                        cur = diff(s)
+                        if cur == 0:
+                            return s
+                    else:
+                        s[i] = -s[i]
+                        s[j] = -s[j]
         return s
 
+    # Greedy: put largest remaining on the lighter side (partition structure).
+    greedy = [-1] * n
+    order = sorted(range(n), key=lambda i: w[i], reverse=True)
+    run = 0
+    for i in order:
+        if run <= 0:
+            greedy[i] = 1
+            run += w[i]
+        else:
+            greedy[i] = -1
+            run -= w[i]
+
     starts = [
+        greedy,
         [1] * n,
         [-1] * n,
         [1 if i % 2 == 0 else -1 for i in range(n)],

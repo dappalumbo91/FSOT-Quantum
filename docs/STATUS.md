@@ -128,6 +128,7 @@ These are living ledgers. Re-run the command in the last column.
 | Hired QC climb 4 (9-digit factor / SAT-20 / TSP-8) | **22/22** | `python -m fsot_quantum hire4` | `HIRE_CLIMB4.md` |
 | Hired QC climb 5 (10-digit factor / SAT-24 / TSP-9) | **22/22** | `python -m fsot_quantum hire5` | `HIRE_CLIMB5.md` |
 | Hired QC climb 6 (11-digit factor / SAT-28 / TSP-10) | **22/22** | `python -m fsot_quantum hire6` | `HIRE_CLIMB6.md` |
+| Hired QC climb 7 (13-digit factor / SAT-32 / TSP-11) | **22/22** | `python -m fsot_quantum hire7` | `HIRE_CLIMB7.md` |
 
 Headline constants (same pin):
 
