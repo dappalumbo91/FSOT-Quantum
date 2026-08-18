@@ -30,6 +30,7 @@ def main() -> int:
             "physics_qi3": "41/41 + 212/212 Lean",
             "gset_family": "10/11 under 1%; G17 1.017%",
             "hire_expand": "29/29 factor/dlog/Simon/SAT/HHL/search",
+            "hire_climb": "32/32 through 2196323 / Simon-16 / 1e7",
             "chemistry": "68/68 @0.5%",
             "S_QM": "+0.9555 emergence",
             "S_QC": "-0.1477 damping",

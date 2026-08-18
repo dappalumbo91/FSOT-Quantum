@@ -45,6 +45,7 @@ Living ledgers. Re-run the command. Miss one and the pin is wrong — except whe
 | Contested Lean panel | **14/14** | `python -m fsot_quantum contested` | `CONTESTED_SECTORS.md` |
 | Gset family | **10/11 under 1%** | `python -m fsot_quantum family` | `GSET_FAMILY.md` |
 | Hired QC expand | **29/29** | `python -m fsot_quantum hire` | `HIRE_EXPAND.md` |
+| Hired QC climb | **32/32** | `python -m fsot_quantum hire2` | `HIRE_CLIMB.md` |
 | Formula catalog | **18** solvers · **207/216** pin-wave @0.5% vs stored | `python -m fsot_quantum formulas` | `FORMULA_LIST.md` |
 | Multiprover stamp | **FSOT_QUANTUM_MULTIPROVER_OK** | `python -m fsot_quantum stamp` | `MULTIPROVER_VERIFICATION.md` |
 | \(1/\alpha\), Weinberg, proton radius, water angle | match | `python -m fsot_quantum forward` | `STATUS.md` |
@@ -65,18 +66,18 @@ We do **not** simulate their architecture. That would be agreeing their geometry
 |-----------|----------------|-----------|---------------|
 | Cryogenic QPU / NISQ box | usable answers without a fridge | GPU/CPU + pin | the living panels above |
 | Hilbert / statevector / FTQC | hold the job as scale grows | folds, not \(2^n\) amps | fold path is the scale law — `FOLD_NOT_HILBERT.md` |
-| Shor / RSA | period and factor | modular order + collapse | ask tiny \(N\) **3/3**; harder **6/6** through 10403; hire **10/10** through **172189**. Same job, larger moduli still to climb |
-| Discrete log | \(g^x\equiv h\pmod p\) | modular fold | hire **10/10** |
-| Simon / HSP | hidden xor string | collision fold + GF(2) | hire **1/1** (8 bit) |
-| SAT / QUBO / 3-color | satisfying assignment | clause / signed-sum / mono-edge energy | hire SAT **1/1** · partition **1/1** · C5 **1/1** |
-| HHL | solve \(Ax=b\) | integer Cramer fold | hire **3/3** |
-| Grover | marked search | oracle-field collapse | 10k / 100k / **1e6** exact |
+| Shor / RSA | period and factor | modular order + collapse | ask tiny \(N\); harder **6/6** through 10403; hire **10/10** through 172189; hire2 **10/10** through **2196323**. Same job, larger moduli still to climb |
+| Discrete log | \(g^x\equiv h\pmod p\) | modular fold | hire 10/10 · hire2 **6/6** through p=40009 |
+| Simon / HSP | hidden xor string | collision fold + GF(2) | hire 8-bit · hire2 **12 and 16 bit** |
+| SAT / QUBO / color / TSP | assignment / tour | energy folds | SAT-16 · partition \{1..23\} · Petersen · TSP n=7 exact |
+| HHL | solve \(Ax=b\) | integer Cramer fold | hire 3/3 · hire2 **4×4** |
+| Grover | marked search | oracle-field collapse | through **1e7** exact |
 | QAOA / annealer | MaxCut / Ising | fold + KL + 2-opt | **10/11 under 1%**; G17 **1.017%**; champions still unmatched |
 | FCI / quantum chemistry | chemistry observables | pin formulas | **68/68 @ 0.5%** |
 | Surface-code “threshold” | reliable logical work | fold residual vs published object | their \(d\)-threshold is a fridge metric; ours is residual on the question |
 | Chatbot “AI” | mind | [fsot-neuron-zig](https://github.com/dappalumbo91/fsot-neuron-zig) | this repo is the law organ, not the body |
 
-Current score is not a refusal. Factoring is through **172189** today, not RSA-2048. Champion MaxCut is 30–114 edges short **today**. Those are the next rungs on the same jobs, not a reason to go build their stack.
+Current score is not a refusal. Factoring is through **2196323** today, not RSA-2048. Champion MaxCut is 30–114 edges short **today**. Those are the next rungs on the same jobs, not a reason to go build their stack.
 
 ---
 

@@ -22,6 +22,7 @@ Field entry: python -m fsot_quantum [cmd]
   contested  Lean contested sectors (H0/S8/BBN/Higgs/σ8)
   leftovers  remaining opens: DE dual lane, alpha_s, V_cb, G17
   hire       expand hired QC questions (factor / dlog / Simon / SAT / HHL)
+  hire2      climb higher: 7-digit factor / Simon-16 / SAT-16 / TSP / 1e7 search
   formulas   formula list — what each formula solves
   organ      export S/κ/QI JSON for neuron-zig
   stamp      Lean · Coq · Isabelle · F* · Python multiprover
@@ -113,6 +114,9 @@ def main() -> int:
         return m()
     if c in ("hire", "hire_expand", "jobs"):
         from fsot_quantum.hire_expand import main as m
+        return m()
+    if c in ("hire2", "climbhire", "hire_climb"):
+        from fsot_quantum.hire_climb import main as m
         return m()
     if c in ("formulas", "catalog"):
         from fsot_quantum.formula_catalog import main as m

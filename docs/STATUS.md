@@ -120,6 +120,7 @@ These are living ledgers. Re-run the command in the last column.
 | Chemistry pin set | 68/68 @ 0.5% | `python -m fsot_quantum.chemistry_fold` | — |
 | QM / SM pin set | 14/14 @ 0.5% | field-of-use | `FIELD_OF_USE.md` |
 | Hired QC expand (factor / dlog / Simon / SAT / HHL / search) | **29/29** | `python -m fsot_quantum hire` | `HIRE_EXPAND.md` |
+| Hired QC climb (7-digit factor / Simon-16 / SAT-16 / TSP / 1e7) | **32/32** | `python -m fsot_quantum hire2` | `HIRE_CLIMB.md` |
 
 Headline constants (same pin):
 
@@ -157,8 +158,8 @@ G11 is a **signed** ±1 torus — a different object, not scored with the unweig
 | Deutsch–Jozsa class | seed-locked oracle + domain route | in `ask` / capability |
 | Bernstein–Vazirani secret | parity probes | exact |
 | Grover-class search | collapse through \(\Theta\) | batched on GPU |
-| Period / factor (Shor job) | modular order + collapse | ask tiny \(N\); harder 6/6 through 10403; hire **10/10 through 172189** |
-| Discrete log / Simon / SAT / HHL / 1e6 search | modular + energy folds | **29/29** — `HIRE_EXPAND.md` |
+| Period / factor (Shor job) | modular order + collapse | hire 172189 · hire2 **10/10 through 2196323** |
+| Discrete log / Simon / SAT / HHL / search | modular + energy folds | hire **29/29** · hire2 **32/32** |
 | QAOA-style exact column | `qaoa_fsot` | 11/11 |
 | CHSH / EPR / Casimir | pin + Lean fabric | inside 0.5% |
 | FSOT-QC-OS (QEMU) | `.\run_qemu.ps1` | 13/13 hired jobs on metal |

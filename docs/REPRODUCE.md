@@ -26,6 +26,7 @@ python -m fsot_quantum h0          # Planck 0.024% · SH0ES 1.00%
 python -m fsot_quantum contested   # Lean contested sectors
 python -m fsot_quantum leftovers   # remaining opens
 python -m fsot_quantum hire        # factor / dlog / Simon / SAT / HHL 29/29
+python -m fsot_quantum hire2       # 7-digit factor / Simon-16 / SAT-16 / TSP 32/32
 python -m fsot_quantum formulas    # formula list
 python -m fsot_quantum stamp       # Lean · Coq · Isabelle · F* · Python
 ```
@@ -49,6 +50,7 @@ python -m fsot_quantum.h0_tension
 python -m fsot_quantum.contested_sectors
 python -m fsot_quantum.open_remaining
 python -m fsot_quantum.hire_expand
+python -m fsot_quantum.hire_climb
 python -m fsot_quantum.formula_catalog
 python -m fsot_quantum stamp
 python -m fsot_quantum.organ_export

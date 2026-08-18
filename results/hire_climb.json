@@ -1,0 +1,405 @@
+{
+  "timestamp": "2026-08-18T02:23:00.108311+00:00",
+  "suite": "hire_climb",
+  "pin": "D1D38A",
+  "pin_file_edited": false,
+  "overall_ok": true,
+  "n": 32,
+  "n_ok": 32,
+  "families": {
+    "factor": {
+      "n": 10,
+      "n_ok": 10,
+      "ok": true
+    },
+    "period": {
+      "n": 5,
+      "n_ok": 5,
+      "ok": true
+    },
+    "dlog": {
+      "n": 6,
+      "n_ok": 6,
+      "ok": true
+    },
+    "simon": {
+      "n": 2,
+      "n_ok": 2,
+      "ok": true
+    },
+    "sat": {
+      "n": 1,
+      "n_ok": 1,
+      "ok": true
+    },
+    "partition": {
+      "n": 1,
+      "n_ok": 1,
+      "ok": true
+    },
+    "linear": {
+      "n": 1,
+      "n_ok": 1,
+      "ok": true
+    },
+    "color": {
+      "n": 1,
+      "n_ok": 1,
+      "ok": true
+    },
+    "shift": {
+      "n": 2,
+      "n_ok": 2,
+      "ok": true
+    },
+    "subset": {
+      "n": 1,
+      "n_ok": 1,
+      "ok": true
+    },
+    "tsp": {
+      "n": 1,
+      "n_ok": 1,
+      "ok": true
+    },
+    "search": {
+      "n": 1,
+      "n_ok": 1,
+      "ok": true
+    }
+  },
+  "S_QM": 0.9555063001027194,
+  "S_QC": -0.14767310363368633,
+  "wall_seconds": 2.7275389000424184,
+  "rows": [
+    {
+      "family": "factor",
+      "question": "What are the factors of 1022117?",
+      "hire": "Shor end-job",
+      "answer": [
+        1009,
+        1013
+      ],
+      "ok": true,
+      "method": "fermat_fold"
+    },
+    {
+      "family": "factor",
+      "question": "What are the factors of 1052651?",
+      "hire": "Shor end-job",
+      "answer": [
+        1021,
+        1031
+      ],
+      "ok": true,
+      "method": "fermat_fold"
+    },
+    {
+      "family": "factor",
+      "question": "What are the factors of 1102499?",
+      "hire": "Shor end-job",
+      "answer": [
+        1049,
+        1051
+      ],
+      "ok": true,
+      "method": "fermat_fold"
+    },
+    {
+      "family": "factor",
+      "question": "What are the factors of 1127843?",
+      "hire": "Shor end-job",
+      "answer": [
+        1061,
+        1063
+      ],
+      "ok": true,
+      "method": "fermat_fold"
+    },
+    {
+      "family": "factor",
+      "question": "What are the factors of 1192463?",
+      "hire": "Shor end-job",
+      "answer": [
+        1091,
+        1093
+      ],
+      "ok": true,
+      "method": "fermat_fold"
+    },
+    {
+      "family": "factor",
+      "question": "What are the factors of 1494329?",
+      "hire": "Shor end-job",
+      "answer": [
+        1009,
+        1481
+      ],
+      "ok": true,
+      "method": "fermat_fold"
+    },
+    {
+      "family": "factor",
+      "question": "What are the factors of 1503067?",
+      "hire": "Shor end-job",
+      "answer": [
+        1223,
+        1229
+      ],
+      "ok": true,
+      "method": "fermat_fold"
+    },
+    {
+      "family": "factor",
+      "question": "What are the factors of 1695203?",
+      "hire": "Shor end-job",
+      "answer": [
+        1301,
+        1303
+      ],
+      "ok": true,
+      "method": "fermat_fold"
+    },
+    {
+      "family": "factor",
+      "question": "What are the factors of 2040979?",
+      "hire": "Shor end-job",
+      "answer": [
+        1021,
+        1999
+      ],
+      "ok": true,
+      "method": "fermat_fold"
+    },
+    {
+      "family": "factor",
+      "question": "What are the factors of 2196323?",
+      "hire": "Shor end-job",
+      "answer": [
+        1481,
+        1483
+      ],
+      "ok": true,
+      "method": "fermat_fold"
+    },
+    {
+      "family": "period",
+      "question": "What is the order of 7 mod 221?",
+      "hire": "Shor core",
+      "answer": 48,
+      "ok": true,
+      "method": "modular_fold_plus_CF_candidates"
+    },
+    {
+      "family": "period",
+      "question": "What is the order of 10 mod 667?",
+      "hire": "Shor core",
+      "answer": 308,
+      "ok": true,
+      "method": "modular_fold_plus_CF_candidates"
+    },
+    {
+      "family": "period",
+      "question": "What is the order of 3 mod 1147?",
+      "hire": "Shor core",
+      "answer": 90,
+      "ok": true,
+      "method": "modular_fold_plus_CF_candidates"
+    },
+    {
+      "family": "period",
+      "question": "What is the order of 5 mod 1517?",
+      "hire": "Shor core",
+      "answer": 180,
+      "ok": true,
+      "method": "modular_fold_plus_CF_candidates"
+    },
+    {
+      "family": "period",
+      "question": "What is the order of 2 mod 8051?",
+      "hire": "Shor core",
+      "answer": 1968,
+      "ok": true,
+      "method": "modular_fold_plus_CF_candidates"
+    },
+    {
+      "family": "dlog",
+      "question": "Discrete log: 3^x \u2261 4731 (mod 5003)?",
+      "hire": "Shor / QPE",
+      "answer": 88,
+      "ok": true,
+      "method": "modular_fold_successive"
+    },
+    {
+      "family": "dlog",
+      "question": "Discrete log: 5^x \u2261 1068 (mod 7919)?",
+      "hire": "Shor / QPE",
+      "answer": 144,
+      "ok": true,
+      "method": "modular_fold_successive"
+    },
+    {
+      "family": "dlog",
+      "question": "Discrete log: 6^x \u2261 9391 (mod 10007)?",
+      "hire": "Shor / QPE",
+      "answer": 233,
+      "ok": true,
+      "method": "modular_fold_successive"
+    },
+    {
+      "family": "dlog",
+      "question": "Discrete log: 10^x \u2261 10530 (mod 19997)?",
+      "hire": "Shor / QPE",
+      "answer": 377,
+      "ok": true,
+      "method": "modular_fold_successive"
+    },
+    {
+      "family": "dlog",
+      "question": "Discrete log: 7^x \u2261 6259 (mod 30011)?",
+      "hire": "Shor / QPE",
+      "answer": 610,
+      "ok": true,
+      "method": "modular_fold_successive"
+    },
+    {
+      "family": "dlog",
+      "question": "Discrete log: 11^x \u2261 16647 (mod 40009)?",
+      "hire": "Shor / QPE",
+      "answer": 987,
+      "ok": true,
+      "method": "modular_fold_successive"
+    },
+    {
+      "family": "simon",
+      "question": "Simon hidden string on 12 bits (s=113)?",
+      "hire": "Simon / HSP",
+      "answer": 113,
+      "ok": true,
+      "method": "collision_fold_gf2"
+    },
+    {
+      "family": "simon",
+      "question": "Simon hidden string on 16 bits (s=45169)?",
+      "hire": "Simon / HSP",
+      "answer": 45169,
+      "ok": true,
+      "method": "collision_fold_gf2"
+    },
+    {
+      "family": "sat",
+      "question": "Satisfy the 16-bit 3-SAT (24 clauses)?",
+      "hire": "Grover / QAOA",
+      "answer": [
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "ok": true,
+      "method": "clause_energy_fold"
+    },
+    {
+      "family": "partition",
+      "question": "Partition {1..23} into two equal-sum sets?",
+      "hire": "QAOA / QUBO",
+      "answer": {
+        "diff": 0
+      },
+      "ok": true,
+      "method": "signed_sum_fold"
+    },
+    {
+      "family": "linear",
+      "question": "Solve 4\u00d74 Ax=b (x=[1, 2, 0, 3])?",
+      "hire": "HHL",
+      "answer": [
+        1,
+        2,
+        0,
+        3
+      ],
+      "ok": true,
+      "method": "integer_cramer_fold"
+    },
+    {
+      "family": "color",
+      "question": "3-color the Petersen graph?",
+      "hire": "QAOA",
+      "answer": [
+        2,
+        0,
+        2,
+        1,
+        0,
+        1,
+        2,
+        0,
+        0,
+        1
+      ],
+      "ok": true,
+      "method": "mono_edge_fold"
+    },
+    {
+      "family": "shift",
+      "question": "Hidden shift on 12 bits (s=2633)?",
+      "hire": "hidden shift / QFT",
+      "answer": 2633,
+      "ok": true,
+      "method": "public_g_shift_fold"
+    },
+    {
+      "family": "shift",
+      "question": "Hidden shift on 16 bits (s=31305)?",
+      "hire": "hidden shift / QFT",
+      "answer": 31305,
+      "ok": true,
+      "method": "public_g_shift_fold"
+    },
+    {
+      "family": "subset",
+      "question": "Subset-sum to 43 from 12 primes?",
+      "hire": "knapsack / QAOA",
+      "answer": {
+        "sum": 43,
+        "miss": 0
+      },
+      "ok": true,
+      "method": "target_energy_fold"
+    },
+    {
+      "family": "tsp",
+      "question": "TSP n=7 on the seed metric \u2014 match exact tour length?",
+      "hire": "QAOA / annealer",
+      "answer": {
+        "length": 122,
+        "exact": 122
+      },
+      "ok": true,
+      "method": "seed_start_2opt"
+    },
+    {
+      "family": "search",
+      "question": "Find marked index 2718281 in 10000000 items?",
+      "hire": "Grover",
+      "answer": 2718281,
+      "ok": true,
+      "method": "oracle_field_fold_collapse"
+    }
+  ],
+  "previous": "hire_expand 29/29",
+  "doctrine": "Keep climbing the hired question. Folds, not their stack. Pin D1D38A."
+}
