@@ -47,6 +47,7 @@ Every living panel also writes a twin under `results/`.
 | [`V_CB_PUZZLE.md`](V_CB_PUZZLE.md) | Inclusive QM vs exclusive HEP — same algebra |
 | [`H0_TENSION.md`](H0_TENSION.md) | Hubble tension via Lean BH→WH bubble-bleed |
 | [`CONTESTED_SECTORS.md`](CONTESTED_SECTORS.md) | Lean contested panel on this pin |
+| [`OPEN_REMAINING.md`](OPEN_REMAINING.md) | Leftovers: DE dual lane, α_s, V_cb, G17 |
 | [`QC_ACCURACY.md`](QC_ACCURACY.md) | Hired QC/QM jobs on ordinary hardware |
 
 ---

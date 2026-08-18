@@ -20,6 +20,7 @@ Field entry: python -m fsot_quantum [cmd]
   vcb        |V_cb| puzzle: inclusive QM vs exclusive HEP
   h0         Hubble tension: Lean BH→WH bubble-bleed
   contested  Lean contested sectors (H0/S8/BBN/Higgs/σ8)
+  leftovers  remaining opens: DE dual lane, alpha_s, V_cb, G17
   organ      export S/κ/QI JSON for neuron-zig
   stamp      Lean · Coq · Isabelle · F* · Python multiprover
   atlas      full Lean solved atlas
@@ -104,6 +105,9 @@ def main() -> int:
         return m()
     if c in ("contested", "sectors"):
         from fsot_quantum.contested_sectors import main as m
+        return m()
+    if c in ("leftovers", "remaining"):
+        from fsot_quantum.open_remaining import main as m
         return m()
     if c == "organ":
         from fsot_quantum.organ_export import main as m

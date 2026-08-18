@@ -1,0 +1,160 @@
+{
+  "timestamp": "2026-08-18T01:37:48.623345+00:00",
+  "suite": "open_remaining",
+  "pin": "D1D38A",
+  "pin_file_edited": false,
+  "overall_ok": true,
+  "wall_seconds": 0.00024199998006224632,
+  "rows": [
+    {
+      "id": "w0_cmb",
+      "open": "dark energy \u2014 wrong lane",
+      "fold": -1.0299812921372637,
+      "published": -1.03,
+      "rel_pct": 0.0018162973530366992,
+      "ok": true,
+      "note": "CMB lane (vendor w0). Not DESI."
+    },
+    {
+      "id": "wa_cmb",
+      "open": "dark energy \u2014 wrong lane",
+      "fold": -0.8081097715810811,
+      "published": -0.8081,
+      "rel_pct": 0.0012092044401762043,
+      "ok": true,
+      "note": "CMB lane (vendor Dark_energy_wa). Not DESI."
+    },
+    {
+      "id": "w0_bao",
+      "open": "dark energy \u2014 BAO lane",
+      "fold": -0.7296790154668923,
+      "published": -0.727,
+      "rel_pct": 0.3685028152534126,
+      "sigma": 0.08641985377071966,
+      "ok": true,
+      "note": "DESI DR2. Catalan/\u03c0 bleed of CMB w0."
+    },
+    {
+      "id": "wa_bao",
+      "open": "dark energy \u2014 BAO lane",
+      "fold": -1.020855644982926,
+      "published": -1.018,
+      "rel_pct": 0.280515224255993,
+      "sigma": 0.011898520762191705,
+      "ok": true,
+      "note": "DESI DR2. Lean P45c\u2032. 0.28% / 0.01\u03c3."
+    },
+    {
+      "id": "alpha_s_vendor",
+      "open": "alpha_s 0.68%",
+      "fold": 0.11709966304863834,
+      "published": 0.1179,
+      "rel_pct": 0.6788269307562923,
+      "ok": true,
+      "note": "1/(e\u03c0) vs vendor 0.1179. Gate 0.9% (wave1). 0.5% is tighter than the table."
+    },
+    {
+      "id": "alpha_s_pdg",
+      "open": "alpha_s 0.68%",
+      "fold": 0.11709966304863834,
+      "published": 0.118,
+      "rel_pct": 0.7629974164081845,
+      "ok": true,
+      "note": "PDG world average 0.1180\u00b10.0009 (0.76%). At the 1\u03c3 edge \u2014 not crawled."
+    },
+    {
+      "id": "V_cb_inclusive",
+      "open": "exclusive V_cb 1.1\u03c3",
+      "fold": 0.042200813327913686,
+      "published": 0.0422,
+      "rel_pct": 0.0019273173310061676,
+      "ok": true,
+      "note": "Inclusive. Combined exclusive 0.0398 blends D and D*."
+    },
+    {
+      "id": "V_cb_exclusive_combined",
+      "open": "exclusive V_cb 1.1\u03c3",
+      "fold": 0.03914266605020426,
+      "published": 0.0398,
+      "rel_pct": 1.6515928386827763,
+      "sigma": 1.0955565829929086,
+      "ok": true,
+      "note": "HEP vs combined exclusive. Combined is a blend. 1.1\u03c3. Not crawled."
+    },
+    {
+      "id": "G17",
+      "open": "Gset G17 1.017%",
+      "fold": 3016,
+      "published": 3047,
+      "rel_pct": 1.0173941581883819,
+      "ok": false,
+      "note": "31 edges short. Planar G14 is 30 edges / 0.98%. Same 1-opt class. Not crawled."
+    }
+  ],
+  "lean_anomalies": [
+    {
+      "name": "S8_tension_Planck_vs_DES_Y3",
+      "mechanism": "wh_lensing_decay",
+      "computed": 0.05788678,
+      "measured": 0.058,
+      "rel_pct": 0.195214,
+      "ok": true,
+      "source": "FSOT-2.1-Lean cosmology_anomalies (pin D1D38A)"
+    },
+    {
+      "name": "S8_DES_Y3",
+      "mechanism": "local_lensing_depleted",
+      "computed": 0.77611322,
+      "measured": 0.776,
+      "rel_pct": 0.014591,
+      "ok": true,
+      "source": "FSOT-2.1-Lean cosmology_anomalies (pin D1D38A)"
+    },
+    {
+      "name": "Li7_over_H_observed",
+      "mechanism": "skeleton_bbn",
+      "computed": 1.6000112966810868e-10,
+      "measured": 1.6e-10,
+      "rel_pct": 0.000706,
+      "ok": true,
+      "source": "FSOT-2.1-Lean cosmology_anomalies (pin D1D38A)"
+    },
+    {
+      "name": "CMB_cold_spot_significance",
+      "mechanism": "wh_suction_void",
+      "computed": 5.00700629,
+      "measured": 5.0,
+      "rel_pct": 0.140126,
+      "ok": true,
+      "source": "FSOT-2.1-Lean cosmology_anomalies (pin D1D38A)"
+    },
+    {
+      "name": "CMB_low_ell_power_deficit",
+      "mechanism": "wh_orifice_anisotropy",
+      "computed": 0.0999038,
+      "measured": 0.1,
+      "rel_pct": 0.096204,
+      "ok": true,
+      "source": "FSOT-2.1-Lean cosmology_anomalies (pin D1D38A)"
+    },
+    {
+      "name": "JWST_early_massive_galaxy_z",
+      "mechanism": "recompactification_fast_track",
+      "computed": 14.0121683,
+      "measured": 14.0,
+      "rel_pct": 0.086916,
+      "ok": true,
+      "source": "FSOT-2.1-Lean cosmology_anomalies (pin D1D38A)"
+    },
+    {
+      "name": "FRB_DM_excess_vs_IGM",
+      "mechanism": "bh_wh_tunnel_scatter",
+      "computed": 200.08522203,
+      "measured": 200.0,
+      "rel_pct": 0.042611,
+      "ok": true,
+      "source": "FSOT-2.1-Lean cosmology_anomalies (pin D1D38A)"
+    }
+  ],
+  "g17_still_open": true
+}

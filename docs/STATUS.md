@@ -193,7 +193,8 @@ Not scored as one number, on purpose:
 - Gset champions unmatched (30–114 edges). Family now **10/11 under 1%**; G17 is **1.017%** (31 edges). Do not advertise MaxCut as champion-matching.
 - Exclusive \(V_{cb}\) is the same algebra on High_Energy_Physics (\(D_{\mathrm{eff}}=7\)), **1.1σ** from PDG exclusive 0.0398. Inclusive stays QM at 0.002%. [`V_CB_PUZZLE.md`](V_CB_PUZZLE.md).
 - Hubble tension is Lean **BH→WH bubble-bleed**: one global rate 68.44; Planck depleted sector **0.024%**; SH0ES inflated sector **1.00%**. [`H0_TENSION.md`](H0_TENSION.md) · [FSOT-2.1-Lean §7.2](https://github.com/dappalumbo91/FSOT-2.1-Lean).
-- Contested open-science panel (H0 tools, Fornax \(r_c\), lithium, \(m_H\), \(S_8\), \(N_{\mathrm{eff}}\), \(\sigma_8\), …) is **14/14** on this pin: [`CONTESTED_SECTORS.md`](CONTESTED_SECTORS.md). \(\alpha_s(M_Z)\) stays inside the vendor 0.9% band.
+- Contested open-science panel is **14/14**: [`CONTESTED_SECTORS.md`](CONTESTED_SECTORS.md).
+- Leftovers diagnosed: [`OPEN_REMAINING.md`](OPEN_REMAINING.md). DESI \(w_0/w_a\) is the **BAO** lane (0.37% / 0.28%). \(\alpha_s\) is inside the 0.9% vendor band. Exclusive \(V_{cb}\) combined is a blend (1.1σ). **G17 still open** (31 edges).
 - Vendor wave8 `BR_H_gg` field still stale (0.0785). Fold already matches YR4. Pin not edited.
 - Hilbert fragments exist as **optional bridges**. They are not the scale path.
 - Tiny Shor is tiny. No RSA-scale claim.
