@@ -44,6 +44,7 @@ It does **not** claim a cryogenic QPU, Hilbert-universal simulation, RSA-scale f
 | Open objects | `python -m fsot_quantum open` | exclusive \(V_{cb}\), \(H_0\) tension, \(\alpha_s\) | required |
 | \(V_{cb}\) puzzle | `python -m fsot_quantum vcb` | inclusive QM vs exclusive HEP | required |
 | Hubble tension | `python -m fsot_quantum h0` | Lean BH→WH bubble-bleed (Planck / SH0ES) | required |
+| Contested sectors | `python -m fsot_quantum contested` | Lean open-science panel on this pin | required |
 | Organ export | `python -m fsot_quantum organ` | JSON for neuron-zig skill | required |
 
 Ledgers live in `docs/` and `results/` with the same names.
@@ -70,6 +71,7 @@ These are published values. Miss one and the pin is wrong.
 | Open objects | exclusive \(V_{cb}\), \(H_0\), \(\alpha_s\) | **scored as different measurements** | `OPEN_OBJECTS.md` |
 | \(V_{cb}\) puzzle | inclusive QM vs exclusive HEP | inclusive **0.002%** · exclusive **1.1σ** | `V_CB_PUZZLE.md` — same algebra, \(D_{\mathrm{eff}}\) 6→7 |
 | Hubble tension | BH→WH bubble-bleed (Lean) | Planck CMB **0.024%** · SH0ES **1.00%** | `H0_TENSION.md` — one global rate, different outgassing sectors |
+| Contested sectors | Lean 13-way open-science panel | **14/14** on this pin | `CONTESTED_SECTORS.md` |
 | Chemistry pin set | — | 68/68 @ 0.5% | — |
 | QM/SM pin set | — | 14/14 @ 0.5% | — |
 | C_factor | \(C_{\mathrm{eff}}\cdot P_{\mathrm{new}}\) | identity | — |

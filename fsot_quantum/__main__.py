@@ -19,6 +19,7 @@ Field entry: python -m fsot_quantum [cmd]
   open       open objects: exclusive V_cb, H0 tension, alpha_s
   vcb        |V_cb| puzzle: inclusive QM vs exclusive HEP
   h0         Hubble tension: Lean BH→WH bubble-bleed
+  contested  Lean contested sectors (H0/S8/BBN/Higgs/σ8)
   organ      export S/κ/QI JSON for neuron-zig
   stamp      Lean · Coq · Isabelle · F* · Python multiprover
   atlas      full Lean solved atlas
@@ -100,6 +101,9 @@ def main() -> int:
         return m()
     if c == "h0":
         from fsot_quantum.h0_tension import main as m
+        return m()
+    if c in ("contested", "sectors"):
+        from fsot_quantum.contested_sectors import main as m
         return m()
     if c == "organ":
         from fsot_quantum.organ_export import main as m
