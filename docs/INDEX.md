@@ -43,7 +43,7 @@ Every living panel also writes a twin under `results/`.
 | [`PHYSICS_QI.md`](PHYSICS_QI.md) | 3D Ising / XY / Heisenberg / g−2 / Lean QI |
 | [`PHYSICS_QI2.md`](PHYSICS_QI2.md) | Higgs/Z, nuclear, cosmology, Casimir, CHSH |
 | [`PHYSICS_QI3.md`](PHYSICS_QI3.md) | Leftover CKM / LEP / BBN / cosmo / perc |
-| [`GSET_FAMILY.md`](GSET_FAMILY.md) | G1–G5 + G14–G17 + G22–G23 (G17 1.017%) |
+| [`GSET_FAMILY.md`](GSET_FAMILY.md) | G1–G5 + G14–G17 + G22–G23 (**11/11** under 1%) |
 | [`OPEN_OBJECTS.md`](OPEN_OBJECTS.md) | Diagnosis: what 6% looks like if you score the wrong object |
 | [`V_CB_PUZZLE.md`](V_CB_PUZZLE.md) | Inclusive QM vs exclusive HEP — same algebra |
 | [`H0_TENSION.md`](H0_TENSION.md) | Hubble tension via Lean BH→WH bubble-bleed |
@@ -61,6 +61,7 @@ Every living panel also writes a twin under `results/`.
 | [`HIRE_CLIMB6.md`](HIRE_CLIMB6.md) | 11-digit factor / SAT-28 / TSP-10 / HHL 7×7 |
 | [`HIRE_CLIMB7.md`](HIRE_CLIMB7.md) | 13-digit factor / SAT-32 / TSP-11 / HHL 8×8 |
 | [`HEIGHTS.md`](HEIGHTS.md) | G17 + far-prime (RSA-shaped) factoring |
+| [`HEIGHTS_NEXT.md`](HEIGHTS_NEXT.md) | G17 closed under 1%; p−1 log-N factor |
 | [`MULTIPROVER_VERIFICATION.md`](MULTIPROVER_VERIFICATION.md) | Lean · Coq · Isabelle · F\* · Python stamp |
 | [`QC_ACCURACY.md`](QC_ACCURACY.md) | Hired QC/QM jobs on ordinary hardware |
 

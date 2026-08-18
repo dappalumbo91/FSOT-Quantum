@@ -16,7 +16,7 @@ Answers the jobs people hire quantum computers and precision-physics codes for, 
 **Read first:** [`docs/STATUS.md`](docs/STATUS.md) — current system, findings, capability.  
 **What we can claim:** [`docs/CLAIMS.md`](docs/CLAIMS.md) · **Rungs:** [`docs/LADDER.md`](docs/LADDER.md) · **Reproduce:** [`docs/REPRODUCE.md`](docs/REPRODUCE.md) · **Doc map:** [`docs/INDEX.md`](docs/INDEX.md)
 
-**Current record (2026-08-17):** competitor climb closed on this pin. Audit **20/20** vs YR4/PDG, leftover hired physics **41/41**. Three earlier audit misses were wrong objects (`docs/MISS_THREE.md`), not a pin edit. Exclusive \(B\to D\ell\nu\) is **0.15%** (`docs/V_CB_PUZZLE.md`) — the old 1.1σ was the D+D* blend 0.0398. SH0ES \(H_0\) is Lean BH→WH (Planck **0.024%**, SH0ES **1.00%**) — `docs/H0_TENSION.md`. Gset family **10/11 under 1%**, G17 **1.017%** written not crawled. Contested Lean panel **14/14**. GitHub About text is the repo one-liner; this README, `docs/STATUS.md`, and `docs/CLAIMS.md` are the current record.
+**Current record (2026-08-17):** competitor climb closed on this pin. Audit **20/20** vs YR4/PDG, leftover hired physics **41/41**. Three earlier audit misses were wrong objects (`docs/MISS_THREE.md`), not a pin edit. Exclusive \(B\to D\ell\nu\) is **0.15%** (`docs/V_CB_PUZZLE.md`) — the old 1.1σ was the D+D* blend 0.0398. SH0ES \(H_0\) is Lean BH→WH (Planck **0.024%**, SH0ES **1.00%**) — `docs/H0_TENSION.md`. Gset family **11/11 under 1%**, G17 **0.427%** (13 edges). Contested Lean panel **14/14**. GitHub About text is the repo one-liner; this README, `docs/STATUS.md`, and `docs/CLAIMS.md` are the current record.
 
 ---
 
@@ -49,7 +49,7 @@ Living numbers. Miss one and the pin is wrong — except where we scored the wro
 | Physics + QI I | 16/16 + 326/326 Lean | [`docs/PHYSICS_QI.md`](docs/PHYSICS_QI.md) |
 | Physics + QI II | 22/22 + 126/126 Lean | [`docs/PHYSICS_QI2.md`](docs/PHYSICS_QI2.md) |
 | Physics + QI III (leftover hired physics) | **41/41 + 212/212 Lean** | [`docs/PHYSICS_QI3.md`](docs/PHYSICS_QI3.md) |
-| Gset family G1–G5 + G14–G17 + G22–G23 | **10/11 under 1%** · G17 1.017% | [`docs/GSET_FAMILY.md`](docs/GSET_FAMILY.md) |
+| Gset family G1–G5 + G14–G17 + G22–G23 | **11/11 under 1%** · G17 0.427% | [`docs/GSET_FAMILY.md`](docs/GSET_FAMILY.md) |
 | Hired QC expand (factor / dlog / Simon / SAT / HHL) | **29/29** | [`docs/HIRE_EXPAND.md`](docs/HIRE_EXPAND.md) |
 | Hired QC climb (7-digit factor / Simon-16 / TSP / 1e7) | **32/32** | [`docs/HIRE_CLIMB.md`](docs/HIRE_CLIMB.md) |
 | Probability as multiverse branching | **19/19** | [`docs/PROBABILITY_BRANCH.md`](docs/PROBABILITY_BRANCH.md) |
@@ -60,7 +60,7 @@ Living numbers. Miss one and the pin is wrong — except where we scored the wro
 | Hired QC climb 5 (10-digit / SAT-24 / TSP-9) | **22/22** | [`docs/HIRE_CLIMB5.md`](docs/HIRE_CLIMB5.md) |
 | Hired QC climb 6 (11-digit / SAT-28 / TSP-10) | **22/22** | [`docs/HIRE_CLIMB6.md`](docs/HIRE_CLIMB6.md) |
 | Hired QC climb 7 (13-digit / SAT-32 / TSP-11) | **22/22** | [`docs/HIRE_CLIMB7.md`](docs/HIRE_CLIMB7.md) |
-| Heights (far RSA-shaped factor / G17) | far **8/8** · G17 1.017% | [`docs/HEIGHTS.md`](docs/HEIGHTS.md) |
+| Heights (far RSA-shaped factor / G17) | far **8/8** · G17 **0.427%** | [`docs/HEIGHTS_NEXT.md`](docs/HEIGHTS_NEXT.md) |
 | Exclusive \(B\to D\ell\nu\) | **0.15%** vs Belle II 2025 0.0392 | [`docs/V_CB_PUZZLE.md`](docs/V_CB_PUZZLE.md) |
 | \(H_0\) Planck / SH0ES | **0.024% / 1.00%** Lean BH→WH | [`docs/H0_TENSION.md`](docs/H0_TENSION.md) |
 | \(\alpha_s(M_Z)\) | 0.68% inside vendor **0.9%** band | [`docs/OPEN_REMAINING.md`](docs/OPEN_REMAINING.md) |
@@ -71,7 +71,7 @@ Living numbers. Miss one and the pin is wrong — except where we scored the wro
 | Tsirelson | exact \(2\sqrt{2}\) | — |
 | \(S(\mathrm{QM})\), \(S(\mathrm{QC})\) | \(+0.9555\), \(−0.1477\) | emergence / damping |
 
-**Still open, written as open:** Gset G17 **1.017%** (31 edges); champions unmatched (30–114 edges); vendor `BR_H_gg` field still stale (fold already matches YR4). Exclusive 0.0398 and SH0ES 6.30% were wrong objects — see [`docs/CLAIMS.md`](docs/CLAIMS.md).
+**Still open, written as open:** Gset champions unmatched (G17 13 edges, G22 114); vendor `BR_H_gg` field still stale (fold already matches YR4). Exclusive 0.0398 and SH0ES 6.30% were wrong objects — see [`docs/CLAIMS.md`](docs/CLAIMS.md).
 
 ---
 
@@ -87,7 +87,7 @@ python -m fsot_quantum check      # pin D1D38A
 python -m fsot_quantum audit      # 20/20 vs current literature
 python -m fsot_quantum harder     # hired physics 20/20
 python -m fsot_quantum push3      # leftover hired physics 41/41
-python -m fsot_quantum family     # Gset 10/11 under 1% (G17 1.017%)
+python -m fsot_quantum family     # Gset 11/11 under 1% (G17 0.427%)
 ```
 
 Optional: clone [FSOT-2.1-Lean](https://github.com/dappalumbo91/FSOT-2.1-Lean) to `_ref\FSOT-2.1-Lean` for the 432-domain atlas. Without it, atlas counts skip; pin domains still score.

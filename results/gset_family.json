@@ -1,62 +1,62 @@
 {
-  "timestamp": "2026-08-18T01:16:12.189300+00:00",
+  "timestamp": "2026-08-18T03:29:07.150151+00:00",
   "suite": "gset_family",
   "pin": "D1D38A",
   "aspiration": "<1% of published champion",
   "kill_floor": "5%",
-  "overall_ok": false,
+  "overall_ok": true,
   "n": 11,
-  "n_under_1": 10,
+  "n_under_1": 11,
   "n_under_5": 11,
-  "wall_seconds": 272.2938327000011,
+  "wall_seconds": 579.5987024999922,
   "instances": [
     {
       "name": "G1",
       "n": 800,
       "m": 19176,
-      "cut_fold": 11563,
+      "cut_fold": 11585,
       "published": 11624,
-      "rel_err_pct": 0.524776324845148,
+      "rel_err_pct": 0.3355127322780454,
       "under_1pct": true,
       "under_5pct": true,
       "ok": true,
-      "seconds": 30.787061999959406
+      "seconds": 84.77598950004904
     },
     {
       "name": "G2",
       "n": 800,
       "m": 19176,
-      "cut_fold": 11579,
+      "cut_fold": 11582,
       "published": 11620,
-      "rel_err_pct": 0.3528399311531842,
+      "rel_err_pct": 0.3270223752151463,
       "under_1pct": true,
       "under_5pct": true,
       "ok": true,
-      "seconds": 29.88432750001084
+      "seconds": 80.08849599998211
     },
     {
       "name": "G3",
       "n": 800,
       "m": 19176,
-      "cut_fold": 11589,
+      "cut_fold": 11583,
       "published": 11622,
-      "rel_err_pct": 0.2839442436757873,
+      "rel_err_pct": 0.33557046979865773,
       "under_1pct": true,
       "under_5pct": true,
       "ok": true,
-      "seconds": 33.86167589999968
+      "seconds": 87.10109489999013
     },
     {
       "name": "G4",
       "n": 800,
       "m": 19176,
-      "cut_fold": 11615,
+      "cut_fold": 11614,
       "published": 11646,
-      "rel_err_pct": 0.26618581487205906,
+      "rel_err_pct": 0.2747724540614803,
       "under_1pct": true,
       "under_5pct": true,
       "ok": true,
-      "seconds": 35.50205830001505
+      "seconds": 80.93855810002424
     },
     {
       "name": "G5",
@@ -68,55 +68,55 @@
       "under_1pct": true,
       "under_5pct": true,
       "ok": true,
-      "seconds": 32.855813100002706
+      "seconds": 85.70012779999524
     },
     {
       "name": "G14",
       "n": 800,
       "m": 4694,
-      "cut_fold": 3034,
+      "cut_fold": 3042,
       "published": 3064,
-      "rel_err_pct": 0.97911227154047,
+      "rel_err_pct": 0.7180156657963447,
       "under_1pct": true,
       "under_5pct": true,
       "ok": true,
-      "seconds": 14.112928099988494
+      "seconds": 28.023805500008166
     },
     {
       "name": "G15",
       "n": 800,
       "m": 4661,
-      "cut_fold": 3023,
+      "cut_fold": 3027,
       "published": 3050,
-      "rel_err_pct": 0.8852459016393442,
+      "rel_err_pct": 0.7540983606557378,
       "under_1pct": true,
       "under_5pct": true,
       "ok": true,
-      "seconds": 14.91350500000408
+      "seconds": 29.682692700007465
     },
     {
       "name": "G16",
       "n": 800,
       "m": 4672,
-      "cut_fold": 3026,
+      "cut_fold": 3027,
       "published": 3052,
-      "rel_err_pct": 0.8519003931847969,
+      "rel_err_pct": 0.8191349934469201,
       "under_1pct": true,
       "under_5pct": true,
       "ok": true,
-      "seconds": 13.943969700019807
+      "seconds": 28.88806810003007
     },
     {
       "name": "G17",
       "n": 800,
       "m": 4667,
-      "cut_fold": 3016,
+      "cut_fold": 3034,
       "published": 3047,
-      "rel_err_pct": 1.0173941581883819,
-      "under_1pct": false,
+      "rel_err_pct": 0.426649163111257,
+      "under_1pct": true,
       "under_5pct": true,
-      "ok": false,
-      "seconds": 17.04113949998282
+      "ok": true,
+      "seconds": 29.339892600022722
     },
     {
       "name": "G22",
@@ -128,19 +128,19 @@
       "under_1pct": true,
       "under_5pct": true,
       "ok": true,
-      "seconds": 25.25492120004492
+      "seconds": 22.489708300039638
     },
     {
       "name": "G23",
       "n": 2000,
       "m": 19990,
-      "cut_fold": 13257,
+      "cut_fold": 13258,
       "published": 13344,
-      "rel_err_pct": 0.6519784172661871,
+      "rel_err_pct": 0.644484412470024,
       "under_1pct": true,
       "under_5pct": true,
       "ok": true,
-      "seconds": 21.53183039999567
+      "seconds": 22.4413082000101
     }
   ]
 }

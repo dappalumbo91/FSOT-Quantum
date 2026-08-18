@@ -81,7 +81,7 @@ Regenerate: `python -m fsot_quantum.capability_suite`
 | **Physics + QI II** | **22/22 + 126/126** | `python -m fsot_quantum push` |
 | **Stale-target audit** vs YR4/PDG | **20/20 @ 0.5%** | `python -m fsot_quantum audit` |
 | **Physics + QI III** leftover hired physics | **41/41 + 212/212** | `python -m fsot_quantum push3` |
-| **Gset family** G1–G5 + G14–G17 + G22–G23 | **10/11 under 1%** · G17 1.017% | `python -m fsot_quantum family` |
+| **Gset family** G1–G5 + G14–G17 + G22–G23 | **11/11 under 1%** · G17 0.427% | `python -m fsot_quantum family` |
 | **Open objects** diagnosis (wrong-object scoring) | not the living exclusive / SH0ES | `python -m fsot_quantum open` |
 | **\(V_{cb}\) puzzle** inclusive + exclusive \(B\to D\) | **0.002% / 0.15%** | `python -m fsot_quantum vcb` |
 | **Hubble tension** Lean BH→WH | Planck **0.024%** · SH0ES **1.00%** | `python -m fsot_quantum h0` |
@@ -103,7 +103,7 @@ See `docs/FOLD_NOT_HILBERT.md`.
 
 The competitor climb through physics + QI III and the stale-target audit is closed. Living snapshot: `docs/STATUS.md`. Honesty cut: `docs/CLAIMS.md`.
 
-What stayed open (not a retune): Gset G17 **1.017%** (31 edges); champions unmatched after the <1% aspiration landed except G17; vendor `BR_H_gg` field still stale. Exclusive \(B\to D\ell\nu\) is **0.15%**. SH0ES is Lean BH→WH at **1.00%**. \(\alpha_s(M_Z)\) is inside the vendor 0.9% band.
+What stayed open (not a retune): Gset champions unmatched after the <1% aspiration landed for all 11 (G17 **0.427%**, 13 edges); vendor `BR_H_gg` field still stale. Exclusive \(B\to D\ell\nu\) is **0.15%**. SH0ES is Lean BH→WH at **1.00%**. \(\alpha_s(M_Z)\) is inside the vendor 0.9% band.
 
 ## Next builds (only if the wrap is reopened)
 

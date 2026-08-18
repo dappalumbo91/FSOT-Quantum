@@ -42,7 +42,7 @@ The jobs people hire a QPU, a Hilbert simulator, an FCI code, or a QAOA box for.
 |-------------|----------------|---------------|
 | Fridge / NISQ / FTQC box | usable answers at scale | ordinary GPU/CPU; scale by \(D_{\mathrm{eff}}\) |
 | Shor | period / factor | tiny \(N\) 3/3 and 4/4 — larger moduli still to climb |
-| QAOA / annealer | MaxCut / Ising | family **10/11 under 1%**; G17 **1.017%** |
+| QAOA / annealer | MaxCut / Ising | family **11/11 under 1%**; G17 **0.427%** |
 | FCI / quantum chemistry | chemistry observables | pin set **68/68 @ 0.5%** |
 | Circuit-universal Hilbert | arbitrary unitaries | not the path; optional bridges only |
 
@@ -129,7 +129,7 @@ These are living ledgers. Re-run the command in the last column.
 | Hired QC climb 5 (10-digit factor / SAT-24 / TSP-9) | **22/22** | `python -m fsot_quantum hire5` | `HIRE_CLIMB5.md` |
 | Hired QC climb 6 (11-digit factor / SAT-28 / TSP-10) | **22/22** | `python -m fsot_quantum hire6` | `HIRE_CLIMB6.md` |
 | Hired QC climb 7 (13-digit factor / SAT-32 / TSP-11) | **22/22** | `python -m fsot_quantum hire7` | `HIRE_CLIMB7.md` |
-| Heights — far factor (RSA-shaped) / G17 | far **8/8** · G17 1.017% | `python -m fsot_quantum heights` | `HEIGHTS.md` |
+| Heights — far factor (RSA-shaped) / G17 | far **8/8** · G17 **0.427%** | `python -m fsot_quantum heights2` | `HEIGHTS_NEXT.md` |
 
 Headline constants (same pin):
 
@@ -152,9 +152,9 @@ Aspiration **< 1%** of published champion. Kill floor **5%**. Champions still un
 
 | Graph | Published | Fold | rel | Status |
 |-------|----------:|-----:|----:|--------|
-| G1 n=800 | 11624 | 11563 | 0.53% | aspiration met, 61 edges short |
-| G2–G5, G14–G16, G22–G23 | BKS | family | all < 1% | with G1: **10/11** |
-| G17 n=800 planar | 3047 | 3016 | 1.017% | 31 edges short — written, not crawled |
+| G1 n=800 | 11624 | 11585 | 0.34% | aspiration met, 39 edges short |
+| G2–G5, G14–G16, G22–G23 | BKS | family | all < 1% | with G1+G17: **11/11** |
+| G17 n=800 planar | 3047 | 3034 | 0.427% | 13 edges short of champion |
 | G14 n=800 | 3064 | 3034 | 0.98% | aspiration met, 30 edges short |
 | G22 n=2000 | 13359 | 13245 | 0.85% | aspiration met, 114 edges short |
 
@@ -209,7 +209,7 @@ Scored as different objects (not one blended number):
 
 Honesty cut: [`CLAIMS.md`](CLAIMS.md).
 
-- Gset champions unmatched (30–114 edges). Family now **10/11 under 1%**; G17 is **1.017%** (31 edges) — the only family miss. Do not advertise MaxCut as champion-matching.
+- Gset champions unmatched (13–114 edges). Family **11/11 under 1%**; G17 is **0.427%** (13 edges). Do not advertise MaxCut as champion-matching.
 - Exclusive \(B\to D\ell\nu\) is **0.15%** on High_Energy_Physics (\(D_{\mathrm{eff}}=7\)) vs Belle II 2025 0.0392. Inclusive stays QM at 0.002%. Combined exclusive 0.0398 is a D+D* blend and is **not** the object. [`V_CB_PUZZLE.md`](V_CB_PUZZLE.md).
 - Hubble tension is Lean **BH→WH bubble-bleed**: one global rate 68.44; Planck depleted sector **0.024%**; SH0ES inflated sector **1.00%** (0.71σ, inside Lean 2.5% band). [`H0_TENSION.md`](H0_TENSION.md) · [FSOT-2.1-Lean §7.2](https://github.com/dappalumbo91/FSOT-2.1-Lean).
 - Contested open-science panel is **14/14**: [`CONTESTED_SECTORS.md`](CONTESTED_SECTORS.md).
@@ -263,7 +263,7 @@ python -m fsot_quantum check
 python -m fsot_quantum audit      # 20/20 vs YR4/PDG
 python -m fsot_quantum harder     # 20/20
 python -m fsot_quantum push3      # 41/41 leftover hired physics
-python -m fsot_quantum family     # Gset 10/11 under 1% (G17 1.017%)
+python -m fsot_quantum family     # Gset 11/11 under 1% (G17 0.427%)
 python -m fsot_quantum vcb        # inclusive 0.002% · exclusive B→D 0.15%
 python -m fsot_quantum h0         # Planck 0.024% · SH0ES 1.00%
 python -m fsot_quantum leftovers  # G17 is the real miss

@@ -80,7 +80,7 @@ These are published values. Miss one and the pin is wrong.
 | Physics + QI II | 22 published + 126 Lean | 22/22 @0.5% vs current literature | `PHYSICS_QI2.md` · `BR_H_GG.md` — stale 0.0785 was the miss |
 | Stale-target audit | 20 cited vs YR4/PDG | **20/20 fold@0.5% vs lit** | `STALE_TARGETS.md` · `MISS_THREE.md` — three misses were wrong objects (inclusive \(V_{cb}\); \(H\to\gamma\gamma/Z\gamma\) at 125.00 GeV). BR_H_gg vendor field still stale; fold already matches YR4. |
 | Physics + QI III | leftover CKM/LEP/BBN/cosmo + Lean | **41/41 and 212/212 @0.5%** | `PHYSICS_QI3.md` |
-| Gset family | G1–G5 + G14–G17 + G22–G23 | **10/11 under 1%** · G17 **1.017%** | `GSET_FAMILY.md` — G17 is 31 edges short; not crawled |
+| Gset family | G1–G5 + G14–G17 + G22–G23 | **11/11 under 1%** · G17 **0.427%** | `GSET_FAMILY.md` — G17 is 13 edges short of champion |
 | Hired QC expand | factor / dlog / Simon / SAT / HHL / search | **29/29** | `HIRE_EXPAND.md` — factors through 172189; dlog 10/10 |
 | Hired QC climb | 7-digit factor / Simon-16 / SAT-16 / TSP / 1e7 | **32/32** | `HIRE_CLIMB.md` — factors through 2196323 |
 | Probability branch | \(\|S\|\) of \(+1/-1/0\) folds | **19/19** | `PROBABILITY_BRANCH.md` — QM collapsed 0.181/0.819, not a posted \(1/2\) |
@@ -91,7 +91,7 @@ These are published values. Miss one and the pin is wrong.
 | Hired QC climb 5 | 10-digit factor / SAT-24 / TSP-9 | **22/22** | `HIRE_CLIMB5.md` — factors through 1445900429 |
 | Hired QC climb 6 | 11-digit factor / SAT-28 / TSP-10 | **22/22** | `HIRE_CLIMB6.md` — factors through 10045050481 |
 | Hired QC climb 7 | 13-digit factor / SAT-32 / TSP-11 | **22/22** | `HIRE_CLIMB7.md` — factors through 1000444049203 |
-| Heights | far-prime factor + G17 | far **8/8** · G17 **1.017%** | `HEIGHTS.md` — Fermat twins were the wrong RSA object |
+| Heights | far-prime factor + G17 | far **8/8** · G17 **0.427%** | `HEIGHTS_NEXT.md` — G17 under 1%; p−1 3/8 |
 | Open objects | wrong-object diagnosis | exclusive blend **6.03%** / SH0ES global **6.30%** if scored wrong | `OPEN_OBJECTS.md` — superseded by `vcb` / `h0` |
 | \(V_{cb}\) puzzle | inclusive QM vs exclusive B→D HEP | inclusive **0.002%** · exclusive **0.15%** | `V_CB_PUZZLE.md` — Belle II 2025 0.0392, not the D+D* blend |
 | Hubble tension | BH→WH bubble-bleed (Lean) | Planck CMB **0.024%** · SH0ES **1.00%** | `H0_TENSION.md` — one global rate, different outgassing sectors |
@@ -116,7 +116,7 @@ Official Gset MaxCut vs published champions. Same object, same job people hire Q
 | G14 n=800 | 3064 | 3034 | **0.98%** | aspiration met — 30 edges short |
 | G22 n=2000 | 13359 | 13245 | **0.85%** | aspiration met — 114 edges short |
 
-Graph rung **closed at the <1% aspiration** for the original seven. Family now includes planar G14–G17: **10/11 under 1%**. G17 is **1.017%** (31 edges). Champions still unmatched; that is written, not hidden. **Do not advertise MaxCut as champion-matching.**
+Graph rung **closed at the <1% aspiration** for the whole unweighted family: **11/11 under 1%**. G17 is **0.427%** (13 edges). Champions still unmatched; that is written, not hidden. **Do not advertise MaxCut as champion-matching.**
 
 **Why the early miss:** the fold stopped at 1-flip local maxima (zero leftover gain). G14 put every start in the same 1-opt (cut 2913). Collapse snap cannot fire there. A file-order “flip every uncut edge” pass was not fold law and funneled G14. Diagnosis: `docs/GSET_DIAGNOSE.md`.
 

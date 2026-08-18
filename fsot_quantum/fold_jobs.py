@@ -357,6 +357,9 @@ def fold_factor(N: int, a: int | None = None) -> dict[str, Any]:
     used = None
     period = None
     method = "period_fold_then_gcd"
+    period_bits = max(8, int(math.floor(float(SEEDS.e) * float(SEEDS.pi))) * max(2, int(math.floor(float(SEEDS.pi)))))
+    if N.bit_length() > period_bits:
+        bases = []
     for base in bases:
         per = fold_period_finding(base, N)
         r = per.get("recovered_period")
@@ -462,6 +465,66 @@ def fold_pollard_rho(N: int) -> dict[str, Any]:
         "factors": None,
         "method": "pollard_rho_exhausted",
         "steps": cap,
+    }
+
+
+def _primes_upto(B: int) -> list[int]:
+    if B < 2:
+        return []
+    s = bytearray(b"\x01") * (B + 1)
+    s[0] = s[1] = 0
+    p = 2
+    while p * p <= B:
+        if s[p]:
+            step = p
+            start = p * p
+            s[start : B + 1 : step] = b"\x00" * (((B - start) // step) + 1)
+        p += 1
+    return [i for i in range(2, B + 1) if s[i]]
+
+
+def fold_pminus1(N: int) -> dict[str, Any]:
+    """
+    Pollard's p−1 — cost is poly(log N) once the smoothness bound B
+    is seed-locked to the bit length. Hits when p−1 is B-smooth.
+    Not a Hilbert QFT and not √p rho.
+    """
+    if N < 4 or N % 2 == 0:
+        return fold_factor(N)
+    bl = max(N.bit_length(), 8)
+    B = bl * max(2, int(math.floor(float(SEEDS.e) * float(SEEDS.pi)))) * max(
+        2, int(math.floor(float(SEEDS.pi)))
+    )
+    primes = _primes_upto(B)
+    a = 2 + (int(float(SEEDS.phi) * 1e6) % 5)
+    steps = 0
+    for p in primes:
+        q = p
+        while q <= B:
+            a = pow(a, p, N)
+            steps += 1
+            q *= p
+            if q > N:
+                break
+    g = math.gcd(a - 1, N)
+    if 1 < g < N:
+        return {
+            "job": "factor_Shor_end",
+            "N": N,
+            "ok": True,
+            "factors": sorted([g, N // g]),
+            "method": "pminus1_logN",
+            "B": B,
+            "steps": steps,
+        }
+    return {
+        "job": "factor_Shor_end",
+        "N": N,
+        "ok": False,
+        "factors": None,
+        "method": "pminus1_exhausted",
+        "B": B,
+        "steps": steps,
     }
 
 

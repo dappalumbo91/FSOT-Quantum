@@ -17,7 +17,7 @@ The competitor climb on this pin is closed for hired physics and QI. After the w
 | Exclusive \(\lvert V_{cb}\rvert\) 6.03% / 1.1σ | Inclusive fold scored on the D+D* blend 0.0398 | Belle II \(B\to D\ell\nu\) **0.15%** |
 | \(H_0\) SH0ES 6.30% | Global rate 68.44 scored as a local tool | Lean BH→WH: Planck **0.024%**, SH0ES **1.00%** |
 | \(\alpha_s(M_Z)\) 0.68% | 0.5% gate tighter than vendor 0.9% / PDG 1σ | Inside vendor **0.9%** band |
-| Gset family 7/7 | Family grew to G14–G17 | **10/11 under 1%**; G17 **1.017%** |
+| Gset family 7/7 | Family grew to G14–G17 | **11/11 under 1%**; G17 **0.427%** |
 
 Pin file not edited. No new coefficient.
 
@@ -43,7 +43,7 @@ Living ledgers. Re-run the command. Miss one and the pin is wrong — except whe
 | DESI \(w_0/w_a\) BAO | **0.37% / 0.28%** | `python -m fsot_quantum leftovers` | `OPEN_REMAINING.md` |
 | \(\alpha_s(M_Z)\) | **0.68%** vs vendor 0.1179 (band **0.9%**) | `python -m fsot_quantum leftovers` | `OPEN_REMAINING.md` |
 | Contested Lean panel | **14/14** | `python -m fsot_quantum contested` | `CONTESTED_SECTORS.md` |
-| Gset family | **10/11 under 1%** | `python -m fsot_quantum family` | `GSET_FAMILY.md` |
+| Gset family | **11/11 under 1%** | `python -m fsot_quantum family` | `GSET_FAMILY.md` |
 | Hired QC expand | **29/29** | `python -m fsot_quantum hire` | `HIRE_EXPAND.md` |
 | Hired QC climb | **32/32** | `python -m fsot_quantum hire2` | `HIRE_CLIMB.md` |
 | Probability as branching | **19/19** | `python -m fsot_quantum branch` | `PROBABILITY_BRANCH.md` |
@@ -54,7 +54,7 @@ Living ledgers. Re-run the command. Miss one and the pin is wrong — except whe
 | Hired QC climb 5 | **22/22** | `python -m fsot_quantum hire5` | `HIRE_CLIMB5.md` |
 | Hired QC climb 6 | **22/22** | `python -m fsot_quantum hire6` | `HIRE_CLIMB6.md` |
 | Hired QC climb 7 | **22/22** | `python -m fsot_quantum hire7` | `HIRE_CLIMB7.md` |
-| Heights (far factor / G17) | far **8/8** · G17 still 1.017% | `python -m fsot_quantum heights` | `HEIGHTS.md` |
+| Heights (far factor / G17) | far **8/8** · G17 **0.427%** (13 edges) | `python -m fsot_quantum heights2` | `HEIGHTS_NEXT.md` |
 | Formula catalog | **18** solvers · **207/216** pin-wave @0.5% vs stored | `python -m fsot_quantum formulas` | `FORMULA_LIST.md` |
 | Multiprover stamp | **FSOT_QUANTUM_MULTIPROVER_OK** | `python -m fsot_quantum stamp` | `MULTIPROVER_VERIFICATION.md` |
 | \(1/\alpha\), Weinberg, proton radius, water angle | match | `python -m fsot_quantum forward` | `STATUS.md` |
@@ -81,7 +81,7 @@ We do **not** simulate their architecture. That would be agreeing their geometry
 | SAT / QUBO / color / TSP | assignment / tour | energy folds | SAT-16 · partition \{1..23\} · Petersen · TSP n=7 exact |
 | HHL | solve \(Ax=b\) | integer Cramer fold | hire 3/3 · hire2 **4×4** |
 | Grover | marked search | oracle-field collapse | through **1e7** exact |
-| QAOA / annealer | MaxCut / Ising | fold + KL + 2-opt | **10/11 under 1%**; G17 **1.017%**; champions still unmatched |
+| QAOA / annealer | MaxCut / Ising | fold + KL + 2-opt + BFS-layer / spectral | **11/11 under 1%**; G17 **0.427%** (13 edges); champions still unmatched |
 | FCI / quantum chemistry | chemistry observables | pin formulas | **68/68 @ 0.5%** |
 | Surface-code “threshold” | reliable logical work | fold residual vs published object | their \(d\)-threshold is a fridge metric; ours is residual on the question |
 | Chatbot “AI” | mind | [fsot-neuron-zig](https://github.com/dappalumbo91/fsot-neuron-zig) | this repo is the law organ, not the body |
@@ -110,7 +110,7 @@ Written as open. Not dressed up. Not a reason to edit the pin.
 
 | Object | Status | Why it stays |
 |--------|--------|--------------|
-| Gset G17 planar | **1.017%** (3016 vs 3047, 31 edges) | Only family miss under the <1% aspiration. Same 1-opt class as G14. Not crawled. |
+| Gset G17 planar | **0.427%** (3034 vs 3047, 13 edges) | Aspiration met. Champion still unmatched. |
 | Gset champions | 30–114 edges short | Aspiration <1% landed except G17. Do not advertise champion-matching. |
 | Vendor `BR_H_gg` field | still **0.0785** | Fold \(\varphi^{-4}-\gamma^5=0.081823\) already matches YR4 0.08187 (0.058%). Stale stored field. |
 | Combined exclusive \(\lvert V_{cb}\rvert=0.0398\) | not scored | D+D* blend. The HEP object is Belle II \(B\to D\ell\nu\) 0.0392. |

@@ -18,11 +18,18 @@ from __future__ import annotations
 
 import math
 import os
+from collections import deque
 from pathlib import Path
 from typing import Any
 
 from fsot_lib.seeds import SEEDS
-from fsot_quantum.fold_complexity import cost_contrast, fold_budget_formal
+from fsot_quantum.fold_complexity import (
+    cost_contrast,
+    fold_budget_formal,
+    fold_depth_ladder,
+    fold_probe_budget,
+    phi_walk_indices,
+)
 from fsot_quantum.large_maxcut import RATIO_FLOOR
 from fsot_quantum.optimization import cut_value, fsot_local_spins
 
@@ -163,6 +170,43 @@ def _fast_maxcut(n: int, edges: list[tuple[int, int, int]]) -> tuple[int, list[i
             x = (e_m * (k + 1) * (i + 3) + (k + 1) * 2246822519 + i * 17) & 0xFFFFFFFF
             row.append(1 if (x >> 15) & 1 else -1)
         starts.append(row)
+
+    # Laplacian spectral start: sign of v_max of L = D−A.
+    # x^T L x = 4·cut for x=±1. Power iteration, seed vector, no coefficient.
+    if n <= 800:
+        v = [
+            float(((phi_m * (i + 1)) & 0xFFFF) / 65536.0) - 0.5
+            for i in range(n)
+        ]
+        n_iter = max(n, int(math.floor(float(SEEDS.e) * float(SEEDS.pi))) * int(math.floor(float(SEEDS.pi))))
+        deg = [len(adj[i]) for i in range(n)]
+        for _ in range(n_iter):
+            w = [0.0] * n
+            for i, nbr in enumerate(adj):
+                acc = deg[i] * v[i]
+                for j in nbr:
+                    acc -= v[j]
+                w[i] = acc
+            nrm = math.sqrt(sum(x * x for x in w)) or 1.0
+            v = [x / nrm for x in w]
+        starts.append([1 if v[i] >= 0.0 else -1 for i in range(n)])
+
+        # Graph-distance layers from φ-picked sources (planar / BFS fold).
+        n_src = max(
+            int(math.isqrt(n)),
+            int(math.floor(float(SEEDS.e) * float(SEEDS.pi))) * int(math.floor(float(SEEDS.pi))),
+        )
+        for src in phi_walk_indices(n, n_src, seed_k=n + 17):
+            dist = [-1] * n
+            dist[src] = 0
+            dq = deque([src])
+            while dq:
+                u = dq.popleft()
+                for v2 in adj[u]:
+                    if dist[v2] < 0:
+                        dist[v2] = dist[u] + 1
+                        dq.append(v2)
+            starts.append([1 if (d if d >= 0 else 0) % 2 == 0 else -1 for d in dist])
 
     def cut_of(s: list[int]) -> int:
         return cut_value(s, edges)
@@ -401,6 +445,78 @@ def _fast_maxcut(n: int, edges: list[tuple[int, int, int]]) -> tuple[int, list[i
             best, best_c = trial, tc
             zeros = [i for i, g in enumerate(_gains(best)) if g == 0]
             zeros.sort(key=lambda i: (phi_m * (i + 1) + 2654435761) & 0xFFFFFFFF)
+
+    # 3-flip on a φ-walk of triples (n≤800). One improving triple
+    # then refine — the 31-edge G17 gap is larger than 1-opt/2-opt.
+    if n <= 800:
+        budget = fold_probe_budget(n, fold_depth_ladder()["deep"])
+        span = n * n * n
+        s3 = list(best)
+        c3 = best_c
+        for idx in phi_walk_indices(span, budget, seed_k=n + best_c):
+            i = idx % n
+            j = (idx // n) % n
+            k = (idx // n // n) % n
+            if i == j or j == k or i == k:
+                continue
+            s3[i] = -s3[i]
+            s3[j] = -s3[j]
+            s3[k] = -s3[k]
+            tc = cut_of(s3)
+            if tc > c3:
+                s3 = refine(s3)
+                c3 = cut_of(s3)
+                if c3 > best_c:
+                    best, best_c = list(s3), c3
+            else:
+                s3[i] = -s3[i]
+                s3[j] = -s3[j]
+                s3[k] = -s3[k]
+        if c3 > best_c:
+            best, best_c = s3, c3
+
+    # Split monochromatic uncut blobs. Extra uncut edges sit inside
+    # same-sign components; flipping a φ-subset of a blob is the
+    # planar/cluster move 1-opt cannot make.
+    if n <= 800:
+        seen_v = [False] * n
+        comps: list[list[int]] = []
+        for src in range(n):
+            if seen_v[src]:
+                continue
+            stack = [src]
+            seen_v[src] = True
+            comp = [src]
+            while stack:
+                u = stack.pop()
+                su = best[u]
+                for v in adj[u]:
+                    if not seen_v[v] and best[v] == su:
+                        seen_v[v] = True
+                        stack.append(v)
+                        comp.append(v)
+            if len(comp) >= 3:
+                comps.append(comp)
+        for ci, comp in enumerate(comps):
+            trial = list(best)
+            for i in comp:
+                x = (phi_m * (i + 1) * (ci + 3) + 40503) & 0xFFFFFFFF
+                if (x >> 16) & 1:
+                    trial[i] = -trial[i]
+            trial = refine(trial)
+            tc = cut_of(trial)
+            if tc > best_c:
+                best, best_c = trial, tc
+            # second split: every other vertex in φ-order along the blob
+            trial = list(best)
+            ordered = sorted(comp, key=lambda i: (phi_m * (i + 1)) & 0xFFFFFFFF)
+            for k, i in enumerate(ordered):
+                if k % 2 == 0:
+                    trial[i] = -trial[i]
+            trial = refine(trial)
+            tc = cut_of(trial)
+            if tc > best_c:
+                best, best_c = trial, tc
     return best_c, best
 
 

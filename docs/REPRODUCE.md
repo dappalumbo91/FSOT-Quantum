@@ -19,7 +19,7 @@ python -m fsot_quantum check
 python -m fsot_quantum audit       # expect 20/20
 python -m fsot_quantum harder      # expect 20/20
 python -m fsot_quantum push3       # expect 41/41
-python -m fsot_quantum family      # 10/11 under 1%; G17 is 1.017%
+python -m fsot_quantum family      # 11/11 under 1%; G17 is 0.427%
 python -m fsot_quantum open        # diagnosis only (wrong-object 6% scores)
 python -m fsot_quantum vcb         # inclusive 0.002% · exclusive B→D 0.15%
 python -m fsot_quantum h0          # Planck 0.024% · SH0ES 1.00%
@@ -36,6 +36,7 @@ python -m fsot_quantum hire5       # 10-digit factor / SAT-24 / TSP-9 22/22
 python -m fsot_quantum hire6       # 11-digit factor / SAT-28 / TSP-10 22/22
 python -m fsot_quantum hire7       # 13-digit factor / SAT-32 / TSP-11 22/22
 python -m fsot_quantum heights     # G17 + far-prime (RSA-shaped) factoring
+python -m fsot_quantum heights2    # G17 under 1% + p−1 log-N
 python -m fsot_quantum formulas    # formula list
 python -m fsot_quantum stamp       # Lean · Coq · Isabelle · F* · Python
 ```

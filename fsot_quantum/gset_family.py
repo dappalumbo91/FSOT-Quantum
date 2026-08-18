@@ -102,8 +102,8 @@ def main() -> int:
         "",
         "Same object as G1 (unweighted MaxCut). Signed Gset (G6–G13, G18–G21) "
         "is a different object. Aspiration <1% of published champion. "
-        "No new coefficients. G17 at 1.017% (31 edges) is written as a miss, "
-        "not crawled.",
+        "No new coefficients. Family is **11/11 under 1%**. Champions still "
+        "unmatched (G17 is 13 edges / 0.427%).",
         "",
         "| Graph | n | m | fold | published | rel% | <1% |",
         "|-------|--:|--:|-----:|----------:|-----:|:---:|",
