@@ -371,6 +371,36 @@ def _fast_maxcut(n: int, edges: list[tuple[int, int, int]]) -> tuple[int, list[i
             tc = cut_of(trial)
             if tc > best_c:
                 best, best_c, s = trial, tc, trial
+
+    def _gains(s0: list[int]) -> list[int]:
+        g = [0] * n
+        for i, nbr in enumerate(adj):
+            same = 0
+            for j in nbr:
+                if s0[j] == s0[i]:
+                    same += 1
+            g[i] = 2 * same - len(nbr)
+        return g
+
+    # Plateau ridge: at 1-opt the flip-gain field is ≤ 0 and Θ cannot
+    # fire. Walk the zero-gain ridge in φ-order, then refine. Seed
+    # bounded — not a crawl and not a new coefficient.
+    zeros = [i for i, g in enumerate(_gains(best)) if g == 0]
+    zeros.sort(key=lambda i: (phi_m * (i + 1) + 2654435761) & 0xFFFFFFFF)
+    kick_n = max(1, int(math.floor(float(SEEDS.e) * float(SEEDS.pi))))
+    for r in range(rounds):
+        trial = list(best)
+        take = zeros[r * kick_n : (r + 1) * kick_n]
+        if not take:
+            take = zeros[:kick_n]
+        for i in take:
+            trial[i] = -trial[i]
+        trial = refine(trial)
+        tc = cut_of(trial)
+        if tc > best_c:
+            best, best_c = trial, tc
+            zeros = [i for i, g in enumerate(_gains(best)) if g == 0]
+            zeros.sort(key=lambda i: (phi_m * (i + 1) + 2654435761) & 0xFFFFFFFF)
     return best_c, best
 
 

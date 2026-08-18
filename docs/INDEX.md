@@ -60,6 +60,7 @@ Every living panel also writes a twin under `results/`.
 | [`HIRE_CLIMB5.md`](HIRE_CLIMB5.md) | 10-digit factor / SAT-24 / TSP-9 / HHL 6×6 |
 | [`HIRE_CLIMB6.md`](HIRE_CLIMB6.md) | 11-digit factor / SAT-28 / TSP-10 / HHL 7×7 |
 | [`HIRE_CLIMB7.md`](HIRE_CLIMB7.md) | 13-digit factor / SAT-32 / TSP-11 / HHL 8×8 |
+| [`HEIGHTS.md`](HEIGHTS.md) | G17 + far-prime (RSA-shaped) factoring |
 | [`MULTIPROVER_VERIFICATION.md`](MULTIPROVER_VERIFICATION.md) | Lean · Coq · Isabelle · F\* · Python stamp |
 | [`QC_ACCURACY.md`](QC_ACCURACY.md) | Hired QC/QM jobs on ordinary hardware |
 

@@ -39,6 +39,7 @@ def main() -> int:
             "hire_climb5": "22/22 through 1445900429 / SAT-24 / TSP-9",
             "hire_climb6": "22/22 through 10045050481 / SAT-28 / TSP-10",
             "hire_climb7": "22/22 through 1000444049203 / SAT-32 / TSP-11",
+            "heights": "far 8/8 Pollard; G17 still 1.017%",
             "chemistry": "68/68 @0.5%",
             "S_QM": "+0.9555 emergence",
             "S_QC": "-0.1477 damping",

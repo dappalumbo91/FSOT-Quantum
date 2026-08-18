@@ -1,0 +1,181 @@
+{
+  "timestamp": "2026-08-18T03:04:34.206554+00:00",
+  "suite": "heights",
+  "pin": "D1D38A",
+  "pin_file_edited": false,
+  "overall_ok": true,
+  "n": 10,
+  "n_ok": 8,
+  "n_scored": 8,
+  "g17": {
+    "n": 800,
+    "m": 4667,
+    "cut_fold": 3016,
+    "published": 3047,
+    "rel_err_pct": 1.0173941581883819,
+    "edges_short": 31,
+    "under_1pct": false,
+    "seconds": 15.45768059999682
+  },
+  "S_QM": 0.9555063001027194,
+  "S_QC": -0.14767310363368633,
+  "K": 0.4202216641606967,
+  "wall_seconds": 15.462418799987063,
+  "rows": [
+    {
+      "family": "g17",
+      "question": "G17 planar MaxCut vs published 3047?",
+      "hire": "QAOA / MaxCut",
+      "answer": {
+        "cut": 3016,
+        "short": 31,
+        "rel": 1.0173941581883819
+      },
+      "ok": false,
+      "method": "kl_2opt_plateau_ridge"
+    },
+    {
+      "family": "far_factor",
+      "question": "Factor far semiprime 10007\u00d71000003 = 10007030021?",
+      "hire": "Shor / RSA-shaped",
+      "answer": [
+        10007,
+        1000003
+      ],
+      "ok": true,
+      "method": "pollard_rho_seed",
+      "p": 10007,
+      "q": 1000003,
+      "N": 10007030021,
+      "fermat_gap": 404970,
+      "seconds": 9.569997200742364e-05
+    },
+    {
+      "family": "far_factor",
+      "question": "Factor far semiprime 10007\u00d710000019 = 100070190133?",
+      "hire": "Shor / RSA-shaped",
+      "answer": [
+        10007,
+        10000019
+      ],
+      "ok": true,
+      "method": "pollard_rho_seed",
+      "p": 10007,
+      "q": 10000019,
+      "N": 100070190133,
+      "fermat_gap": 4688675,
+      "seconds": 8.310005068778992e-05
+    },
+    {
+      "family": "far_factor",
+      "question": "Factor far semiprime 7919\u00d7104729 = 829348951?",
+      "hire": "Shor / RSA-shaped",
+      "answer": [
+        7919,
+        104729
+      ],
+      "ok": true,
+      "method": "pollard_rho_seed",
+      "p": 7919,
+      "q": 104729,
+      "N": 829348951,
+      "fermat_gap": 27526,
+      "seconds": 2.9799994081258774e-05
+    },
+    {
+      "family": "far_factor",
+      "question": "Factor far semiprime 65537\u00d7100003 = 6553896611?",
+      "hire": "Shor / RSA-shaped",
+      "answer": [
+        65537,
+        100003
+      ],
+      "ok": true,
+      "method": "pollard_rho_seed",
+      "p": 65537,
+      "q": 100003,
+      "N": 6553896611,
+      "fermat_gap": 1814,
+      "seconds": 6.779999239370227e-05
+    },
+    {
+      "family": "far_factor",
+      "question": "Factor far semiprime 100003\u00d71000003 = 100003300009?",
+      "hire": "Shor / RSA-shaped",
+      "answer": [
+        100003,
+        1000003
+      ],
+      "ok": true,
+      "method": "pollard_rho_seed",
+      "p": 100003,
+      "q": 1000003,
+      "N": 100003300009,
+      "fermat_gap": 233771,
+      "seconds": 6.509997183457017e-05
+    },
+    {
+      "family": "far_factor",
+      "question": "Factor far semiprime 31627\u00d71000033 = 31628043691?",
+      "hire": "Shor / RSA-shaped",
+      "answer": [
+        31627,
+        1000033
+      ],
+      "ok": true,
+      "method": "pollard_rho_seed",
+      "p": 31627,
+      "q": 1000033,
+      "N": 31628043691,
+      "fermat_gap": 337988,
+      "seconds": 6.700004450976849e-05
+    },
+    {
+      "family": "far_factor",
+      "question": "Factor far semiprime 104729\u00d71000003 = 104729314187?",
+      "hire": "Shor / RSA-shaped",
+      "answer": [
+        104729,
+        1000003
+      ],
+      "ok": true,
+      "method": "pollard_rho_seed",
+      "p": 104729,
+      "q": 1000003,
+      "N": 104729314187,
+      "fermat_gap": 228747,
+      "seconds": 0.00016489997506141663
+    },
+    {
+      "family": "far_factor",
+      "question": "Factor far semiprime 1000003\u00d71000033 = 1000036000099?",
+      "hire": "Shor / RSA-shaped",
+      "answer": [
+        1000003,
+        1000033
+      ],
+      "ok": true,
+      "method": "pollard_rho_seed",
+      "p": 1000003,
+      "q": 1000033,
+      "N": 1000036000099,
+      "fermat_gap": 1,
+      "seconds": 0.0006890999502502382
+    },
+    {
+      "family": "rsa2048",
+      "question": "RSA-2048: can this fold method close it today?",
+      "hire": "Shor / RSA",
+      "answer": {
+        "bits": 2048,
+        "pollard_steps_bits": 512,
+        "hilbert_qubits_if_QFT": 4096,
+        "ran": false
+      },
+      "ok": true,
+      "method": "cost_not_run",
+      "note": "Pollard/period cost tracks \u221ap, not log N. 2048-bit N \u21d2 ~2^512 rho steps. That is the height. Fermat twins were the wrong object."
+    }
+  ],
+  "doctrine": "G17 and far-prime factoring are the heights. Fermat twins are not RSA. RSA-2048 is a \u221ap wall, not a refusal."
+}

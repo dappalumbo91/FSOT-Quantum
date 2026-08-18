@@ -331,9 +331,13 @@ def fold_factor(N: int, a: int | None = None) -> dict[str, Any]:
         if g == 1 and x not in bases:
             bases.append(x)
 
-    # Fermat fold for odd composites near squares (seed-bounded steps)
+    # Fermat fold for odd composites near squares.
+    # Cap by bit-length budget, not N — walking N steps on a far
+    # 13-digit modulus is not the RSA job and never returns.
     a0 = int(math.isqrt(N)) + 1
-    fermat_cap = max(N, fold_probe_budget(N, fold_depth_ladder()["mid"]))
+    fermat_cap = fold_probe_budget(
+        max(N.bit_length(), 8), fold_depth_ladder()["deep"]
+    ) * max(1, N.bit_length())
     for step in range(min(fermat_cap, N)):
         aa = a0 + step
         bb2 = aa * aa - N
@@ -378,16 +382,86 @@ def fold_factor(N: int, a: int | None = None) -> dict[str, Any]:
             break
 
     ok = factors is not None and factors[0] * factors[1] == N
+    if ok:
+        return {
+            "job": "factor_Shor_end",
+            "N": N,
+            "ok": True,
+            "factors": factors,
+            "a": used,
+            "period": period,
+            "method": method,
+            "bases_tried": len(bases),
+            "hilbert_amps_if_sim": 1 << (2 * max(1, int(math.ceil(math.log2(N + 1))))),
+        }
+
+    rho = fold_pollard_rho(N)
+    if rho.get("ok"):
+        return rho
+
     return {
         "job": "factor_Shor_end",
         "N": N,
-        "ok": ok,
-        "factors": factors,
+        "ok": False,
+        "factors": None,
         "a": used,
         "period": period,
-        "method": method if ok else "period_fold_exhausted",
+        "method": "period_fold_exhausted",
         "bases_tried": len(bases),
         "hilbert_amps_if_sim": 1 << (2 * max(1, int(math.ceil(math.log2(N + 1))))),
+    }
+
+
+def fold_pollard_rho(N: int) -> dict[str, Any]:
+    """
+    Shor end-job on *far* primes — the RSA-shaped object.
+
+    Fermat only hits when p≈q. RSA moduli are balanced in bits but not
+    twin-close. Pollard's rho is modular iteration x → x²+c (mod N) with
+    c, x0 from seeds, then gcd. Not a Hilbert QFT. Cost ~ √p of the
+    smaller factor — that is why RSA-2048 is still the next height.
+    """
+    if N < 4 or N % 2 == 0:
+        return fold_factor(N)
+
+    cs = (
+        max(1, int(math.floor(float(SEEDS.pi)))),
+        max(1, int(math.floor(float(SEEDS.e)))),
+        max(1, int(math.floor(float(SEEDS.phi)))),
+    )
+    x0 = 2 + (int(float(SEEDS.phi) * 1e6) % max(2, N - 2))
+    cap = int(math.isqrt(N)) * max(2, int(math.floor(float(SEEDS.pi))))
+    cap = max(cap, fold_probe_budget(max(N.bit_length(), 4), fold_depth_ladder()["deep"]))
+
+    for c in cs:
+        x = x0
+        y = x0
+        d = 1
+        steps = 0
+        while d == 1 and steps < cap:
+            x = (x * x + c) % N
+            y = (y * y + c) % N
+            y = (y * y + c) % N
+            d = math.gcd(abs(x - y), N)
+            steps += 1
+        if 1 < d < N:
+            return {
+                "job": "factor_Shor_end",
+                "N": N,
+                "ok": True,
+                "factors": sorted([d, N // d]),
+                "method": "pollard_rho_seed",
+                "c": c,
+                "steps": steps,
+                "hilbert_amps_if_sim": 1 << (2 * max(1, int(math.ceil(math.log2(N + 1))))),
+            }
+    return {
+        "job": "factor_Shor_end",
+        "N": N,
+        "ok": False,
+        "factors": None,
+        "method": "pollard_rho_exhausted",
+        "steps": cap,
     }
 
 

@@ -60,6 +60,7 @@ Living numbers. Miss one and the pin is wrong — except where we scored the wro
 | Hired QC climb 5 (10-digit / SAT-24 / TSP-9) | **22/22** | [`docs/HIRE_CLIMB5.md`](docs/HIRE_CLIMB5.md) |
 | Hired QC climb 6 (11-digit / SAT-28 / TSP-10) | **22/22** | [`docs/HIRE_CLIMB6.md`](docs/HIRE_CLIMB6.md) |
 | Hired QC climb 7 (13-digit / SAT-32 / TSP-11) | **22/22** | [`docs/HIRE_CLIMB7.md`](docs/HIRE_CLIMB7.md) |
+| Heights (far RSA-shaped factor / G17) | far **8/8** · G17 1.017% | [`docs/HEIGHTS.md`](docs/HEIGHTS.md) |
 | Exclusive \(B\to D\ell\nu\) | **0.15%** vs Belle II 2025 0.0392 | [`docs/V_CB_PUZZLE.md`](docs/V_CB_PUZZLE.md) |
 | \(H_0\) Planck / SH0ES | **0.024% / 1.00%** Lean BH→WH | [`docs/H0_TENSION.md`](docs/H0_TENSION.md) |
 | \(\alpha_s(M_Z)\) | 0.68% inside vendor **0.9%** band | [`docs/OPEN_REMAINING.md`](docs/OPEN_REMAINING.md) |
@@ -129,6 +130,7 @@ python -m fsot_quantum hire4      # 9-digit factor / SAT-20 / TSP-8
 python -m fsot_quantum hire5      # 10-digit factor / SAT-24 / TSP-9
 python -m fsot_quantum hire6      # 11-digit factor / SAT-28 / TSP-10
 python -m fsot_quantum hire7      # 13-digit factor / SAT-32 / TSP-11
+python -m fsot_quantum heights    # G17 + far-prime factoring
 python -m fsot_quantum formulas   # formula list
 python -m fsot_quantum organ      # JSON for neuron-zig
 python -m fsot_quantum stamp      # Lean · Coq · Isabelle · F* · Python
