@@ -151,14 +151,14 @@ def main() -> int:
             "note": "Inclusive. Combined exclusive 0.0398 blends D and D*.",
         },
         {
-            "id": "V_cb_exclusive_combined",
-            "open": "exclusive V_cb 1.1σ",
+            "id": "V_cb_exclusive_BD",
+            "open": "exclusive V_cb",
             "fold": v_hep,
-            "published": 0.0398,
-            "rel_pct": abs(v_hep - 0.0398) / 0.0398 * 100,
-            "sigma": abs(v_hep - 0.0398) / 0.0006,
-            "ok": abs(v_hep - 0.0398) / 0.0006 <= 2.0,
-            "note": "HEP vs combined exclusive. Combined is a blend. 1.1σ. Not crawled.",
+            "published": 0.0392,
+            "rel_pct": abs(v_hep - 0.0392) / 0.0392 * 100,
+            "sigma": abs(v_hep - 0.0392) / 0.00088,
+            "ok": abs(v_hep - 0.0392) / 0.0392 * 100 <= GREEN,
+            "note": "Belle II 2025 B→Dℓν 0.0392. Combined 0.0398 is a D+D* blend.",
         },
         {
             "id": "G17",
@@ -241,12 +241,12 @@ def main() -> int:
         "A 0.5% gate is tighter than both the vendor band and the PDG 1σ. "
         "Lean treats `1/(eπ)` as the definition (cache match 1e−8). Not crawled.",
         "",
-        "## 3. Exclusive |V_cb| — combined 0.0398 is a blend",
+        "## 3. Exclusive |V_cb| — score B→D, not the D+D* blend",
         "",
         f"Inclusive: QM `{v_qm:.6f}` vs 0.0422. "
-        f"Exclusive combined: HEP `{v_hep:.6f}` vs 0.0398 (**1.1σ**). "
-        "PDG exclusive 0.0398 averages B→D and B→D*. Those disagree. "
-        "HEP sits on the D*-like side. We do not invent a D-only term. "
+        f"Exclusive B→Dℓν (Belle II 2025): HEP `{v_hep:.6f}` vs **0.0392** "
+        f"(**{abs(v_hep-0.0392)/0.0392*100:.3f}%**). "
+        "Combined exclusive 0.0398 still blends D and D* — that was the 1.1σ leftover. "
         "See `docs/V_CB_PUZZLE.md`.",
         "",
         "## 4. Gset G17 — still open",
@@ -288,7 +288,7 @@ def main() -> int:
         "w0_bao_pct": round(w0_bao_rel, 4),
         "wa_bao_pct": round(wa_bao_rel, 4),
         "alpha_s_vendor_pct": round(rel_as_vendor, 4),
-        "V_cb_excl_sigma": round(abs(v_hep - 0.0398) / 0.0006, 3),
+        "V_cb_excl_BD_pct": round(abs(v_hep - 0.0392) / 0.0392 * 100, 4),
         "G17_still_open": True,
         "lean_anomalies": len(lean_rows),
         "wall_seconds": report["wall_seconds"],

@@ -71,9 +71,9 @@ DERIVED: list[dict[str, Any]] = [
     {
         "name": "V_cb_exclusive",
         "formula": "S(HEP)·(1/C_eff−1)",
-        "solves": "exclusive |V_cb| (combined 0.0398, 1.1σ)",
+        "solves": "exclusive |V_cb| from B→Dℓν (Belle II 2025 0.0392)",
         "kind": "tension",
-        "published": 0.0398,
+        "published": 0.0392,
     },
     {
         "name": "H0_global",

@@ -1,10 +1,10 @@
 {
-  "timestamp": "2026-08-18T01:37:48.623345+00:00",
+  "timestamp": "2026-08-18T01:48:38.206920+00:00",
   "suite": "open_remaining",
   "pin": "D1D38A",
   "pin_file_edited": false,
   "overall_ok": true,
-  "wall_seconds": 0.00024199998006224632,
+  "wall_seconds": 0.00022799998987466097,
   "rows": [
     {
       "id": "w0_cmb",
@@ -72,14 +72,14 @@
       "note": "Inclusive. Combined exclusive 0.0398 blends D and D*."
     },
     {
-      "id": "V_cb_exclusive_combined",
-      "open": "exclusive V_cb 1.1\u03c3",
+      "id": "V_cb_exclusive_BD",
+      "open": "exclusive V_cb",
       "fold": 0.03914266605020426,
-      "published": 0.0398,
-      "rel_pct": 1.6515928386827763,
-      "sigma": 1.0955565829929086,
+      "published": 0.0392,
+      "rel_pct": 0.14626007600954527,
+      "sigma": 0.06515221567697925,
       "ok": true,
-      "note": "HEP vs combined exclusive. Combined is a blend. 1.1\u03c3. Not crawled."
+      "note": "Belle II 2025 B\u2192D\u2113\u03bd 0.0392. Combined 0.0398 is a D+D* blend."
     },
     {
       "id": "G17",

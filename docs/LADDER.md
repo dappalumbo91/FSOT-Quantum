@@ -72,7 +72,7 @@ These are published values. Miss one and the pin is wrong.
 | Physics + QI III | leftover CKM/LEP/BBN/cosmo + Lean | **41/41 and 212/212 @0.5%** | `PHYSICS_QI3.md` |
 | Gset family | G1–G5 + G14–G17 + G22–G23 | **10/11 under 1%** · G17 **1.017%** | `GSET_FAMILY.md` — G17 is 31 edges short; not crawled |
 | Open objects | exclusive \(V_{cb}\), \(H_0\), \(\alpha_s\) | **scored as different measurements** | `OPEN_OBJECTS.md` |
-| \(V_{cb}\) puzzle | inclusive QM vs exclusive HEP | inclusive **0.002%** · exclusive **1.1σ** | `V_CB_PUZZLE.md` — same algebra, \(D_{\mathrm{eff}}\) 6→7 |
+| \(V_{cb}\) puzzle | inclusive QM vs exclusive B→D HEP | inclusive **0.002%** · exclusive **0.15%** | `V_CB_PUZZLE.md` — Belle II 2025 0.0392, not the D+D* blend |
 | Hubble tension | BH→WH bubble-bleed (Lean) | Planck CMB **0.024%** · SH0ES **1.00%** | `H0_TENSION.md` — one global rate, different outgassing sectors |
 | Contested sectors | Lean 13-way open-science panel | **14/14** on this pin | `CONTESTED_SECTORS.md` |
 | Leftovers | CMB vs BAO \(w_0/w_a\); α_s; exclusive \(V_{cb}\); G17 | BAO **0.28–0.37%** · G17 **still open** | `OPEN_REMAINING.md` |

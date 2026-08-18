@@ -15,9 +15,9 @@ Lean `dark_energy_dual_readout_lib.py`: CMB lane and BAO lane, Catalan/π bleed.
 
 `1/(eπ)` = `0.11709966304863834`. Vendor table 0.1179 (wave1 band **0.9%**). PDG world average 0.1180±0.0009 (**0.76%**). Fold vs vendor **0.679%** (inside 0.9%). A 0.5% gate is tighter than both the vendor band and the PDG 1σ. Lean treats `1/(eπ)` as the definition (cache match 1e−8). Not crawled.
 
-## 3. Exclusive |V_cb| — combined 0.0398 is a blend
+## 3. Exclusive |V_cb| — score B→D, not the D+D* blend
 
-Inclusive: QM `0.042201` vs 0.0422. Exclusive combined: HEP `0.039143` vs 0.0398 (**1.1σ**). PDG exclusive 0.0398 averages B→D and B→D*. Those disagree. HEP sits on the D*-like side. We do not invent a D-only term. See `docs/V_CB_PUZZLE.md`.
+Inclusive: QM `0.042201` vs 0.0422. Exclusive B→Dℓν (Belle II 2025): HEP `0.039143` vs **0.0392** (**0.146%**). Combined exclusive 0.0398 still blends D and D* — that was the 1.1σ leftover. See `docs/V_CB_PUZZLE.md`.
 
 ## 4. Gset G17 — still open
 

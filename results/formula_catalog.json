@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-08-18T01:43:08.710631+00:00",
+  "timestamp": "2026-08-18T01:48:38.019406+00:00",
   "suite": "formula_catalog",
   "pin": "D1D38A",
   "n_engine_and_tension": 18,
@@ -53,11 +53,11 @@
     {
       "name": "V_cb_exclusive",
       "formula": "S(HEP)\u00b7(1/C_eff\u22121)",
-      "solves": "exclusive |V_cb| (combined 0.0398, 1.1\u03c3)",
+      "solves": "exclusive |V_cb| from B\u2192D\u2113\u03bd (Belle II 2025 0.0392)",
       "kind": "tension",
-      "published": 0.0398,
+      "published": 0.0392,
       "computed": 0.03914266605020426,
-      "rel_pct": 1.6515928386827763
+      "rel_pct": 0.14626007600954527
     },
     {
       "name": "H0_global",
@@ -2317,5 +2317,5 @@
       "kind": "pin-wave"
     }
   ],
-  "wall_seconds": 0.03550979995634407
+  "wall_seconds": 0.03083679999690503
 }

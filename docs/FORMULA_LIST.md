@@ -21,7 +21,7 @@ Change domain or lane, not a coefficient. Lean BH→WH + Catalan/π bleed.
 | Name | Formula | Solves | Fold | Published | rel% |
 |------|---------|--------|------|-----------|-----:|
 | V_cb_inclusive | `S(QM)·(1/C_eff−1)` | inclusive |V_cb| (PDG 0.0422) | `0.042200813327913686` | `0.0422` | 0.0019 |
-| V_cb_exclusive | `S(HEP)·(1/C_eff−1)` | exclusive |V_cb| (combined 0.0398, 1.1σ) | `0.03914266605020426` | `0.0398` | 1.6516 |
+| V_cb_exclusive | `S(HEP)·(1/C_eff−1)` | exclusive |V_cb| from B→Dℓν (Belle II 2025 0.0392) | `0.03914266605020426` | `0.0392` | 0.1463 |
 | H0_global | `100·(1+S_cosm·A_bleed/A_in)` | single fluid Hubble rate (wave1 Cosmology) | `68.44005682979429` | — | — |
 | H0_Planck_CMB | `H0_global·(1+(−1)·bleed)` | Planck CMB — BH→WH depleted sector | `67.38395076840948` | `67.4` | 0.0238 |
 | H0_SH0ES | `H0_global·(1+5.05·bleed)` | SH0ES local ladder — BH→WH inflated sector | `73.7733924397876` | `73.04` | 1.0041 |

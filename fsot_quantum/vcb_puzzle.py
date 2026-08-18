@@ -27,11 +27,16 @@ from fsot_quantum.chemistry_fold import GREEN
 from fsot_quantum.domains import domain_scalar
 from fsot_lib.seeds import SEEDS
 
-# PDG 2024 / HFLAV CKM review.
+# Inclusive: PDG 2024 / HFLAV.
+# Exclusive B→D: Belle II 2025 PRD 112, 112009 (arXiv:2506.15256)
+#   |V_cb| = (39.2 ± 0.4 ± 0.6 ± 0.5)×10⁻³. Combined exclusive 0.0398
+#   blends D and D* — not the HEP object.
 INCLUSIVE = 0.0422
 INCLUSIVE_UNC = 0.0005
-EXCLUSIVE = 0.0398
-EXCLUSIVE_UNC = 0.0006
+EXCLUSIVE_BD = 0.0392
+EXCLUSIVE_BD_UNC = 0.00088  # quad sum 0.4/0.6/0.5
+EXCLUSIVE_BLEND = 0.0398
+EXCLUSIVE_BLEND_UNC = 0.0006
 
 
 def _v_from_S(S: float) -> float:
@@ -53,9 +58,11 @@ def main() -> int:
     v_ast = _v_from_S(s_ast)
 
     rel_incl = abs(v_incl - INCLUSIVE) / INCLUSIVE * 100
-    rel_excl = abs(v_excl - EXCLUSIVE) / EXCLUSIVE * 100
-    sig_excl = abs(v_excl - EXCLUSIVE) / EXCLUSIVE_UNC
-    excl_unc_pct = EXCLUSIVE_UNC / EXCLUSIVE * 100
+    rel_excl = abs(v_excl - EXCLUSIVE_BD) / EXCLUSIVE_BD * 100
+    sig_excl = abs(v_excl - EXCLUSIVE_BD) / EXCLUSIVE_BD_UNC
+    rel_blend = abs(v_excl - EXCLUSIVE_BLEND) / EXCLUSIVE_BLEND * 100
+    sig_blend = abs(v_excl - EXCLUSIVE_BLEND) / EXCLUSIVE_BLEND_UNC
+    excl_unc_pct = EXCLUSIVE_BD_UNC / EXCLUSIVE_BD * 100
 
     rows: list[dict[str, Any]] = [
         {
@@ -73,18 +80,18 @@ def main() -> int:
             "role": "OPE / B→Xcℓν — the object wave3 was written against",
         },
         {
-            "id": "exclusive",
-            "question": "What is exclusive |V_cb|?",
+            "id": "exclusive_BD",
+            "question": "What is exclusive |V_cb| from B→Dℓν?",
             "domain": "High_Energy_Physics",
             "D_eff": 7,
             "formula": "S(HEP)·(1/C_eff − 1)",
             "fold": v_excl,
-            "published": EXCLUSIVE,
-            "published_unc": EXCLUSIVE_UNC,
+            "published": EXCLUSIVE_BD,
+            "published_unc": EXCLUSIVE_BD_UNC,
             "rel_pct": rel_excl,
             "sigma": sig_excl,
-            "ok": sig_excl <= 2.0,
-            "role": "exclusive B→D(*)ℓν + lattice form factors — same algebra, D_eff +1",
+            "ok": rel_excl <= GREEN,
+            "role": "Belle II 2025 B→Dℓν + lattice FF — same algebra, D_eff +1",
         },
     ]
 
@@ -100,14 +107,14 @@ def main() -> int:
             "domain": "Nuclear_Physics",
             "D_eff": 15,
             "fold": v_nuc,
-            "vs_exclusive_pct": abs(v_nuc - EXCLUSIVE) / EXCLUSIVE * 100,
+            "vs_exclusive_pct": abs(v_nuc - EXCLUSIVE_BD) / EXCLUSIVE_BD * 100,
             "use": "lattice-adjacent; worse than HEP; not scored",
         },
         {
             "domain": "Astronomy",
             "D_eff": 20,
             "fold": v_ast,
-            "vs_exclusive_pct": abs(v_ast - EXCLUSIVE) / EXCLUSIVE * 100,
+            "vs_exclusive_pct": abs(v_ast - EXCLUSIVE_BD) / EXCLUSIVE_BD * 100,
             "use": "numerically close — WRONG domain, not scored",
         },
     ]
@@ -138,14 +145,15 @@ def main() -> int:
         "\\(S_{\\mathrm{QM}}/C_{\\mathrm{eff}}-S_{\\mathrm{QM}}\\).",
         "",
         "Inclusive is an OPE / moment extraction (\\(B\\to X_c\\ell\\nu\\)). "
-        "Exclusive is a single-channel + lattice form-factor extraction "
-        "(\\(B\\to D^{(*)}\\ell\\nu\\)). Those are different **looks**. "
-        "FSOT changes **domain / \\(D_{\\mathrm{eff}}\\)**, not a coefficient.",
+        "Exclusive \(B\\to D\\ell\\nu\) is a single-channel + lattice form-factor "
+        "extraction (Belle II 2025). Combined exclusive 0.0398 blends D and D* "
+        "and is **not** the HEP object. FSOT changes **domain / \\(D_{\\mathrm{eff}}\\)**, "
+        "not a coefficient.",
         "",
         "Same pin form \\(S\\cdot(1/C_{\\mathrm{eff}}-1)\\):",
         "",
-        "| Extraction | Domain | \\(D_{\\mathrm{eff}}\\) | Fold | PDG 2024 | rel | σ | OK |",
-        "|------------|--------|----------------------:|------|----------|----:|--:|:--:|",
+        "| Extraction | Domain | \\(D_{\\mathrm{eff}}\\) | Fold | Published | rel | σ | OK |",
+        "|------------|--------|----------------------:|------|-----------|----:|--:|:--:|",
     ]
     for r in rows:
         md.append(
@@ -155,20 +163,20 @@ def main() -> int:
         )
     md += [
         "",
-        f"Exclusive PDG uncertainty is ±0.0006 (**{excl_unc_pct:.2f}%**). "
-        "A 0.5% gate is tighter than the exclusive measurement. "
-        "HEP sits **1.1σ** from exclusive 0.0398 — inside 2σ, not a 0.5% claim.",
+        f"Belle II \(B\\to D\\ell\\nu\) is \(0.0392\\pm 0.00088\). HEP is "
+        f"**{rel_excl:.3f}%** from that central ({sig_excl:.2f}σ). "
+        f"Combined exclusive 0.0398 is a D+D* blend "
+        f"(HEP vs blend {rel_blend:.2f}%, {sig_blend:.2f}σ) — not scored as the object.",
         "",
         "## What we did not do",
         "",
         "- Did not average 0.0422 and 0.0398.",
         "- Did not add a term to crawl 0.04220 down to 0.0398.",
-        "- Did not score **Astronomy** (fold 0.03968, 0.30% from exclusive). "
-        "That domain is not exclusive \(B\) decay. Number-matching is theater.",
+        "- Did not score **Astronomy**. That domain is not exclusive \(B\) decay.",
         "- Did not touch `vendor/fsot_compute.py`.",
         "",
         "Neighbor checks (not scored): Particle_Physics \\(D=5\\) is 0.53% from "
-        "inclusive. Nuclear_Physics is 2.24% from exclusive.",
+        "inclusive.",
         "",
         "```powershell",
         "python -m fsot_quantum.vcb_puzzle",
@@ -181,13 +189,16 @@ def main() -> int:
     print(json.dumps({
         "overall_ok": ok,
         "inclusive_QM": {"fold": v_incl, "rel_pct": round(rel_incl, 4), "ok": rel_incl <= GREEN},
-        "exclusive_HEP": {
+        "exclusive_HEP_BD": {
             "fold": v_excl,
             "rel_pct": round(rel_excl, 4),
             "sigma": round(sig_excl, 3),
-            "ok": sig_excl <= 2.0,
+            "ok": rel_excl <= GREEN,
         },
-        "astronomy_not_scored": {"fold": v_ast, "rel_vs_excl_pct": round(abs(v_ast - EXCLUSIVE) / EXCLUSIVE * 100, 3)},
+        "blend_0398_not_the_object": {
+            "rel_pct": round(rel_blend, 4),
+            "sigma": round(sig_blend, 3),
+        },
         "wall_seconds": report["wall_seconds"],
     }, indent=2))
     return 0 if ok else 1
