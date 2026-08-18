@@ -6,7 +6,7 @@ Lean particle/neutrino/Higgs/cosmo/CM/NIST **212/212** @0.5%
 
 After the three audit misses were scored as the **right objects** (`docs/MISS_THREE.md`, audit 20/20). This rung asks leftover hired physics still sitting on the pin and not already on harder / qi / qi2.
 
-Not scored here: exclusive \(|V_{cb}|\) (different extraction), \(H_0\) (Planck vs SH0ES), \(\alpha_s(M_Z)\) (0.68% vs PDG ~0.118). No new coefficient.
+Not scored on this rung (later panels): exclusive \(|V_{cb}|\) is `docs/V_CB_PUZZLE.md` (B→D **0.15%**); \(H_0\) is `docs/H0_TENSION.md` (Planck **0.024%**, SH0ES **1.00%**); \(\alpha_s(M_Z)\) is inside the vendor 0.9% band (`docs/OPEN_REMAINING.md`). No new coefficient.
 
 ## Pin-wave questions
 

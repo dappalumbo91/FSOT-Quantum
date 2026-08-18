@@ -4,7 +4,7 @@
 **Pin:** `D1D38A` (`vendor/fsot_compute.py`)  
 **License:** Apache-2.0  
 **Reproduce every rung:** `docs/REPRODUCE.md`  
-**Wrap snapshot (read this first):** `docs/STATUS.md` · **Doc map:** `docs/INDEX.md`
+**Wrap snapshot (read this first):** `docs/STATUS.md` · **Claims:** `docs/CLAIMS.md` · **Doc map:** `docs/INDEX.md`
 
 Someone cloning this repo should be able to rerun each rung and get the same numbers. If a number is still ugly, it is written here as **open**, not dressed up.
 
@@ -30,7 +30,6 @@ It does **not** claim a cryogenic QPU, Hilbert-universal simulation, RSA-scale f
 | Rung | Command | What you should see | Status |
 |------|---------|---------------------|--------|
 | Pin | `python -m fsot_quantum check` | pin D1D38A, vendor match | required |
-| Stamp | `python -m fsot_quantum stamp` | Lean · Coq · Isabelle · F\* · Python `FSOT_QUANTUM_MULTIPROVER_OK` | required |
 | Fold architecture | `python -m fsot_quantum fold` | 35 pin domains on CUDA, 432 Lean atlas folds | required |
 | Observe path | `python -m fsot_quantum observe` | QC dark → QO look → QM; typical questions | required |
 | Mind | `python -m fsot_quantum mind` | C_factor on Neuroscience; Bio/QC dark | required |
@@ -41,7 +40,7 @@ It does **not** claim a cryogenic QPU, Hilbert-universal simulation, RSA-scale f
 | Stale-target audit | `python -m fsot_quantum audit` | vendor vs YR4/PDG; pin untouched | required |
 | Physics + QI III | `python -m fsot_quantum push3` | leftover CKM/LEP/BBN/cosmo/perc | required |
 | Gset family | `python -m fsot_quantum family` | G1–G5 + G14–G17 + G22–G23 | required |
-| Open objects | `python -m fsot_quantum open` | exclusive \(V_{cb}\), \(H_0\) tension, \(\alpha_s\) | required |
+| Open objects | `python -m fsot_quantum open` | diagnosis: wrong-object scoring (not living exclusive / SH0ES) | required |
 | \(V_{cb}\) puzzle | `python -m fsot_quantum vcb` | inclusive QM vs exclusive HEP | required |
 | Hubble tension | `python -m fsot_quantum h0` | Lean BH→WH bubble-bleed (Planck / SH0ES) | required |
 | Contested sectors | `python -m fsot_quantum contested` | Lean open-science panel on this pin | required |
@@ -71,11 +70,11 @@ These are published values. Miss one and the pin is wrong.
 | Stale-target audit | 20 cited vs YR4/PDG | **20/20 fold@0.5% vs lit** | `STALE_TARGETS.md` · `MISS_THREE.md` — three misses were wrong objects (inclusive \(V_{cb}\); \(H\to\gamma\gamma/Z\gamma\) at 125.00 GeV). BR_H_gg vendor field still stale; fold already matches YR4. |
 | Physics + QI III | leftover CKM/LEP/BBN/cosmo + Lean | **41/41 and 212/212 @0.5%** | `PHYSICS_QI3.md` |
 | Gset family | G1–G5 + G14–G17 + G22–G23 | **10/11 under 1%** · G17 **1.017%** | `GSET_FAMILY.md` — G17 is 31 edges short; not crawled |
-| Open objects | exclusive \(V_{cb}\), \(H_0\), \(\alpha_s\) | **scored as different measurements** | `OPEN_OBJECTS.md` |
+| Open objects | wrong-object diagnosis | exclusive blend **6.03%** / SH0ES global **6.30%** if scored wrong | `OPEN_OBJECTS.md` — superseded by `vcb` / `h0` |
 | \(V_{cb}\) puzzle | inclusive QM vs exclusive B→D HEP | inclusive **0.002%** · exclusive **0.15%** | `V_CB_PUZZLE.md` — Belle II 2025 0.0392, not the D+D* blend |
 | Hubble tension | BH→WH bubble-bleed (Lean) | Planck CMB **0.024%** · SH0ES **1.00%** | `H0_TENSION.md` — one global rate, different outgassing sectors |
 | Contested sectors | Lean 13-way open-science panel | **14/14** on this pin | `CONTESTED_SECTORS.md` |
-| Leftovers | CMB vs BAO \(w_0/w_a\); α_s; exclusive \(V_{cb}\); G17 | BAO **0.28–0.37%** · G17 **still open** | `OPEN_REMAINING.md` |
+| Leftovers | CMB vs BAO \(w_0/w_a\); α_s band; G17 | BAO **0.28–0.37%** · G17 **still open** | `OPEN_REMAINING.md` |
 | Formula list | engine + tension + pin-wave | **18** solvers · **207/216** pin-wave @0.5% | `FORMULA_LIST.md` |
 | Multiprover stamp | Lean · Coq · Isabelle · F\* · Python | **FSOT_QUANTUM_MULTIPROVER_OK** | `MULTIPROVER_VERIFICATION.md` |
 | Chemistry pin set | — | 68/68 @ 0.5% | — |
@@ -105,7 +104,7 @@ G11 (signed ±1 torus) is a **different object** — not scored here.
 
 Kill criterion (`predictions/qc_preregistered.json`): G1 relative error **> 5%** fails the band. Aspiration **< 1%** has landed.
 
-Also open (not a graph problem): exclusive \(\lvert V_{cb}\rvert\), Planck vs SH0ES \(H_0\), \(\alpha_s(M_Z)\) at 0.68%. See `docs/STATUS.md`.
+Also written, not a graph problem and **not** the old leftovers: exclusive \(B\to D\ell\nu\) is **0.15%**; SH0ES is Lean BH→WH at **1.00%**; \(\alpha_s(M_Z)\) is inside the vendor 0.9% band. See `docs/CLAIMS.md`.
 
 ---
 

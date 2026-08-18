@@ -4,7 +4,7 @@
 **Python:** 3.11+  
 **Optional:** CUDA (torch), lake, coqc, Isabelle, fstar, Zig, QEMU
 
-What the numbers mean: [`STATUS.md`](STATUS.md) · rung order: [`LADDER.md`](LADDER.md) · doc map: [`INDEX.md`](INDEX.md)
+What the numbers mean: [`STATUS.md`](STATUS.md) · what we can claim: [`CLAIMS.md`](CLAIMS.md) · rung order: [`LADDER.md`](LADDER.md) · doc map: [`INDEX.md`](INDEX.md)
 
 ```powershell
 cd <clone>
@@ -20,9 +20,9 @@ python -m fsot_quantum audit       # expect 20/20
 python -m fsot_quantum harder      # expect 20/20
 python -m fsot_quantum push3       # expect 41/41
 python -m fsot_quantum family      # 10/11 under 1%; G17 is 1.017%
-python -m fsot_quantum open        # exclusive V_cb / H0 / alpha_s
-python -m fsot_quantum vcb         # inclusive QM vs exclusive HEP
-python -m fsot_quantum h0          # Planck vs SH0ES
+python -m fsot_quantum open        # diagnosis only (wrong-object 6% scores)
+python -m fsot_quantum vcb         # inclusive 0.002% · exclusive B→D 0.15%
+python -m fsot_quantum h0          # Planck 0.024% · SH0ES 1.00%
 python -m fsot_quantum contested   # Lean contested sectors
 python -m fsot_quantum leftovers   # remaining opens
 python -m fsot_quantum formulas    # formula list

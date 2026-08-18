@@ -1,6 +1,6 @@
 # Document map
 
-Start here if you are new: [`STATUS.md`](STATUS.md) (what the system is now) → [`LADDER.md`](LADDER.md) (what hit / what is open) → [`REPRODUCE.md`](REPRODUCE.md) (how to rerun).
+Start here if you are new: [`STATUS.md`](STATUS.md) (what the system is now) → [`CLAIMS.md`](CLAIMS.md) (what we can claim / what is open) → [`LADDER.md`](LADDER.md) (what hit) → [`REPRODUCE.md`](REPRODUCE.md) (how to rerun).
 
 Every living panel also writes a twin under `results/`.
 
@@ -11,6 +11,7 @@ Every living panel also writes a twin under `results/`.
 | Doc | What it is |
 |-----|------------|
 | [`STATUS.md`](STATUS.md) | Wrap snapshot: system, findings, capability, honesty |
+| [`CLAIMS.md`](CLAIMS.md) | What we can claim, cannot claim, and what is still open |
 | [`LADDER.md`](LADDER.md) | Rungs in order, hits, open residuals |
 | [`REPRODUCE.md`](REPRODUCE.md) | Commands a clone must run |
 | [`ARCHITECTURE.md`](ARCHITECTURE.md) | How the pieces sit |
@@ -43,11 +44,11 @@ Every living panel also writes a twin under `results/`.
 | [`PHYSICS_QI2.md`](PHYSICS_QI2.md) | Higgs/Z, nuclear, cosmology, Casimir, CHSH |
 | [`PHYSICS_QI3.md`](PHYSICS_QI3.md) | Leftover CKM / LEP / BBN / cosmo / perc |
 | [`GSET_FAMILY.md`](GSET_FAMILY.md) | G1–G5 + G14–G17 + G22–G23 (G17 1.017%) |
-| [`OPEN_OBJECTS.md`](OPEN_OBJECTS.md) | Exclusive \(V_{cb}\), \(H_0\) tension, \(\alpha_s(M_Z)\) |
+| [`OPEN_OBJECTS.md`](OPEN_OBJECTS.md) | Diagnosis: what 6% looks like if you score the wrong object |
 | [`V_CB_PUZZLE.md`](V_CB_PUZZLE.md) | Inclusive QM vs exclusive HEP — same algebra |
 | [`H0_TENSION.md`](H0_TENSION.md) | Hubble tension via Lean BH→WH bubble-bleed |
 | [`CONTESTED_SECTORS.md`](CONTESTED_SECTORS.md) | Lean contested panel on this pin |
-| [`OPEN_REMAINING.md`](OPEN_REMAINING.md) | Leftovers: DE dual lane, α_s, V_cb, G17 |
+| [`OPEN_REMAINING.md`](OPEN_REMAINING.md) | Leftovers after vcb/h0: DE dual lane, α_s band, G17 |
 | [`FORMULA_LIST.md`](FORMULA_LIST.md) | Every formula and what it solves |
 | [`MULTIPROVER_VERIFICATION.md`](MULTIPROVER_VERIFICATION.md) | Lean · Coq · Isabelle · F\* · Python stamp |
 | [`QC_ACCURACY.md`](QC_ACCURACY.md) | Hired QC/QM jobs on ordinary hardware |
@@ -71,7 +72,7 @@ Mind-side copy of the architecture answer lives in [fsot-neuron-zig `FSOT_NATIVE
 
 ## Climb history (older rungs, still green)
 
-These are the competitor-climb panels that got us here. They still run. They are not the first thing a stranger should read.
+These are the competitor-climb panels that got us here. They still run. They are not the first thing a stranger should read. Several still report G1 cut **11397 / 1.95%** (5% kill band). The living family cut is **11563 / 0.53%** — `GSET_FAMILY.md`.
 
 `CLIMB.md` · `CLIMB_V2.md` · `FOLD_V2.md`–`FOLD_V6.md` · `CAPABILITY_AND_PATH_FORWARD.md` · `MARGIN_VS_QPU.md` · `KEEP_GOING.md` · `MEDIUM_NEXT.md` · `EXPAND_SIM.md` · `LEAN_FULL_ATLAS.md` · `ASK_QC.md` · `HARD_QUESTIONS.md` · `CROSSCHECK.md` · `TEXTBOOK_CIRCUIT_MAP.md` · `MULTIPROVER_VERIFICATION.md`
 

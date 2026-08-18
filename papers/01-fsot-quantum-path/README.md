@@ -50,6 +50,7 @@ python scripts\run_multiprover_verification.py
 | Ledger | Path |
 |--------|------|
 | Wrap snapshot | `docs/STATUS.md` |
+| Claims / honesty cut | `docs/CLAIMS.md` |
 | Stale-target audit | `docs/STALE_TARGETS.md` |
 | Physics + QI III | `docs/PHYSICS_QI3.md` |
 | Gset family | `docs/GSET_FAMILY.md` |

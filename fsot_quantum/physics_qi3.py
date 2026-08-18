@@ -158,9 +158,9 @@ def main() -> int:
         "S_QM": domain_scalar("Quantum_Mechanics"),
         "S_QC": domain_scalar("Quantum_Computing"),
         "open_objects": {
-            "exclusive_V_cb": "0.0398 is a different PDG extraction; fold answers inclusive 0.0422. docs/MISS_THREE.md",
-            "H0": "Planck vs SH0ES tension — not scored as one number",
-            "alpha_s(M_Z)": "fold 0.1171 vs PDG ~0.118; not forced through 0.5% by retune",
+            "exclusive_V_cb": "not scored here; living exclusive B→D is 0.15% in docs/V_CB_PUZZLE.md",
+            "H0": "not scored here; living Hubble is Lean BH→WH in docs/H0_TENSION.md",
+            "alpha_s(M_Z)": "not scored here; 0.68% is inside vendor 0.9% — docs/OPEN_REMAINING.md",
         },
         "waves": {
             "n": n_w,
@@ -191,9 +191,11 @@ def main() -> int:
         "(`docs/MISS_THREE.md`, audit 20/20). This rung asks leftover hired "
         "physics still sitting on the pin and not already on harder / qi / qi2.",
         "",
-        "Not scored here: exclusive \\(|V_{cb}|\\) (different extraction), "
-        "\\(H_0\\) (Planck vs SH0ES), \\(\\alpha_s(M_Z)\\) (0.68% vs PDG ~0.118). "
-        "No new coefficient.",
+        "Not scored on this rung (later panels): exclusive "
+        "\\(|V_{cb}|\\) is `docs/V_CB_PUZZLE.md` (B→D **0.15%**); "
+        "\\(H_0\\) is `docs/H0_TENSION.md` (Planck **0.024%**, SH0ES **1.00%**); "
+        "\\(\\alpha_s(M_Z)\\) is inside the vendor 0.9% band "
+        "(`docs/OPEN_REMAINING.md`). No new coefficient.",
         "",
         "## Pin-wave questions",
         "",

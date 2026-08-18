@@ -16,7 +16,7 @@ Field entry: python -m fsot_quantum [cmd]
   push3      physics + QI push III (leftover CKM/LEP/BBN/cosmo)
   audit      stale vendor targets vs PDG/YR4
   family     Gset G1–G5 + G14–G17 + G22–G23 (<1% aspiration)
-  open       open objects: exclusive V_cb, H0 tension, alpha_s
+  open       diagnosis: wrong-object scoring (not living exclusive / SH0ES)
   vcb        |V_cb| puzzle: inclusive QM vs exclusive HEP
   h0         Hubble tension: Lean BH→WH bubble-bleed
   contested  Lean contested sectors (H0/S8/BBN/Higgs/σ8)

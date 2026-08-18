@@ -89,7 +89,9 @@ def build_organ() -> dict[str, Any]:
             "quantum_status": "https://github.com/dappalumbo91/FSOT-Quantum/blob/main/docs/STATUS.md",
             "audit": "20/20 vs YR4/PDG @0.5%",
             "physics_qi3": "41/41 + 212/212 Lean",
-            "gset_family": "7/7 under 1%",
+            "gset_family": "10/11 under 1%; G17 1.017%",
+            "vcb": "inclusive 0.002%; exclusive B→D 0.15%",
+            "h0": "Planck 0.024%; SH0ES 1.00% Lean BH→WH",
         },
     }
 

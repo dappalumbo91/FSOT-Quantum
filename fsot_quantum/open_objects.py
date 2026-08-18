@@ -1,9 +1,9 @@
 """
-Open objects — leftover questions that are *different measurements*,
-not pin misses.
+Open objects — diagnosis panel.
 
-Exclusive |V_cb|, Planck vs SH0ES H0, and alpha_s(M_Z) vs the PDG
-world average. Same pin. No new coefficient. Do not blend.
+Shows what the residuals look like if you score the *wrong* object
+(inclusive fold vs exclusive 0.0398 blend; global H0 vs SH0ES).
+Living scores live in vcb_puzzle / h0_tension / open_remaining.
 
 python -m fsot_quantum.open_objects
 python -m fsot_quantum open
@@ -146,13 +146,17 @@ def main() -> int:
     (out / "open_objects.json").write_text(json.dumps(report, indent=2), encoding="utf-8")
 
     md = [
-        "# Open objects — different measurements, not pin misses",
+        "# Open objects — diagnosis (wrong-object scoring)",
         "",
         f"**overall_ok:** `{ok}` · pin D1D38A **not edited**",
         "",
-        "These three were left open on the wrap on purpose. They are "
-        "**different extractions**, the same class of mistake as the three "
-        "audit misses (`docs/MISS_THREE.md`). No new coefficient.",
+        "**Diagnosis panel, not the living wrap.** This table is what 6% "
+        "looks like if you score the wrong object — the same class of "
+        "mistake as the three audit misses (`docs/MISS_THREE.md`). "
+        "Living exclusive \(B\\to D\\ell\\nu\) is `docs/V_CB_PUZZLE.md` "
+        "(**0.15%**). Living Hubble is `docs/H0_TENSION.md` "
+        "(Planck **0.024%**, SH0ES **1.00%**). "
+        "Honesty cut: `docs/CLAIMS.md`. No new coefficient.",
         "",
         "| Question | Object | Fold | Published | rel% | Gate | OK |",
         "|----------|--------|------|-----------|-----:|------|:--:|",
@@ -171,8 +175,9 @@ def main() -> int:
         "- Did not add a term to crawl \\(\\alpha_s(M_Z)\\) from 0.1171 to 0.1180.",
         "- Did not touch `vendor/fsot_compute.py`.",
         "",
-        "The fold answers inclusive \\(|V_{cb}|\\) and Planck-side \\(H_0\\). "
-        "Exclusive \\(V_{cb}\\) and SH0ES stay separate flavor / cosmology questions.",
+        "The pin-wave fold answers inclusive \\(|V_{cb}|\\) and the **global** "
+        "\\(H_0\\). Do not cite the exclusive 6.03% or SH0ES 6.30% rows as "
+        "current residuals. Those objects are scored on `vcb` / `h0`.",
         "",
         "```powershell",
         "python -m fsot_quantum.open_objects",

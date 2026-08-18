@@ -13,12 +13,10 @@ Answers the jobs people hire quantum computers and precision-physics codes for, 
 | **Runtime** | [FSOT-GPU](https://github.com/dappalumbo91/FSOT-GPU) `fsot_lib` (vendored) |
 | **Mind / body** | [fsot-neuron-zig](https://github.com/dappalumbo91/fsot-neuron-zig) |
 
-**Read first:** [`docs/STATUS.md`](docs/STATUS.md) — current system, findings, capability, what is still open.  
-**Rungs:** [`docs/LADDER.md`](docs/LADDER.md) · **Reproduce:** [`docs/REPRODUCE.md`](docs/REPRODUCE.md) · **Doc map:** [`docs/INDEX.md`](docs/INDEX.md)
+**Read first:** [`docs/STATUS.md`](docs/STATUS.md) — current system, findings, capability.  
+**What we can claim:** [`docs/CLAIMS.md`](docs/CLAIMS.md) · **Rungs:** [`docs/LADDER.md`](docs/LADDER.md) · **Reproduce:** [`docs/REPRODUCE.md`](docs/REPRODUCE.md) · **Doc map:** [`docs/INDEX.md`](docs/INDEX.md)
 
-**Wrap (2026-08-13):** competitor climb closed on this pin. Audit 20/20 vs YR4/PDG, leftover hired physics 41/41. Three earlier audit misses were wrong objects (`docs/MISS_THREE.md`), not a pin edit. GitHub About text is the repo one-liner; this README and `docs/STATUS.md` are the current record.
-
-**Picked up (2026-08-17):** open objects scored as different measurements (`docs/OPEN_OBJECTS.md`). Gset family extended to G14–G17 — **10/11 under 1%**, G17 **1.017%** written not crawled. Exclusive \(\lvert V_{cb}\rvert\) is the same algebra on High_Energy_Physics (1.1σ) — `docs/V_CB_PUZZLE.md`. SH0ES \(H_0\) is Lean BH→WH bubble-bleed (Planck CMB **0.024%**, SH0ES **1.00%**) — `docs/H0_TENSION.md`. Contested Lean panel **14/14** — `docs/CONTESTED_SECTORS.md`.
+**Current record (2026-08-17):** competitor climb closed on this pin. Audit **20/20** vs YR4/PDG, leftover hired physics **41/41**. Three earlier audit misses were wrong objects (`docs/MISS_THREE.md`), not a pin edit. Exclusive \(B\to D\ell\nu\) is **0.15%** (`docs/V_CB_PUZZLE.md`) — the old 1.1σ was the D+D* blend 0.0398. SH0ES \(H_0\) is Lean BH→WH (Planck **0.024%**, SH0ES **1.00%**) — `docs/H0_TENSION.md`. Gset family **10/11 under 1%**, G17 **1.017%** written not crawled. Contested Lean panel **14/14**. GitHub About text is the repo one-liner; this README, `docs/STATUS.md`, and `docs/CLAIMS.md` are the current record.
 
 ---
 
@@ -52,14 +50,17 @@ Living numbers. Miss one and the pin is wrong — except where we scored the wro
 | Physics + QI II | 22/22 + 126/126 Lean | [`docs/PHYSICS_QI2.md`](docs/PHYSICS_QI2.md) |
 | Physics + QI III (leftover hired physics) | **41/41 + 212/212 Lean** | [`docs/PHYSICS_QI3.md`](docs/PHYSICS_QI3.md) |
 | Gset family G1–G5 + G14–G17 + G22–G23 | **10/11 under 1%** · G17 1.017% | [`docs/GSET_FAMILY.md`](docs/GSET_FAMILY.md) |
-| Open objects (exclusive \(V_{cb}\), \(H_0\), \(\alpha_s\)) | different measurements, not a retune | [`docs/OPEN_OBJECTS.md`](docs/OPEN_OBJECTS.md) |
+| Exclusive \(B\to D\ell\nu\) | **0.15%** vs Belle II 2025 0.0392 | [`docs/V_CB_PUZZLE.md`](docs/V_CB_PUZZLE.md) |
+| \(H_0\) Planck / SH0ES | **0.024% / 1.00%** Lean BH→WH | [`docs/H0_TENSION.md`](docs/H0_TENSION.md) |
+| \(\alpha_s(M_Z)\) | 0.68% inside vendor **0.9%** band | [`docs/OPEN_REMAINING.md`](docs/OPEN_REMAINING.md) |
+| Contested Lean panel | **14/14** | [`docs/CONTESTED_SECTORS.md`](docs/CONTESTED_SECTORS.md) |
 | Chemistry pin set | 68/68 @ 0.5% | — |
 | \(1/\alpha\), Weinberg, proton radius, water angle | match | [`docs/STATUS.md`](docs/STATUS.md) |
-| Inclusive \(\lvert V_{cb}\rvert\) | 0.0422008 vs 0.0422 | inclusive PDG; exclusive is a different extraction |
+| Inclusive \(\lvert V_{cb}\rvert\) | 0.0422008 vs 0.0422 | inclusive PDG |
 | Tsirelson | exact \(2\sqrt{2}\) | — |
 | \(S(\mathrm{QM})\), \(S(\mathrm{QC})\) | \(+0.9555\), \(−0.1477\) | emergence / damping |
 
-**Still open, written as open:** Gset champions unmatched (30–114 edges); exclusive \(V_{cb}\); Planck vs SH0ES \(H_0\); \(\alpha_s(M_Z)\) 0.68%; vendor `BR_H_gg` field still stale (fold already matches YR4).
+**Still open, written as open:** Gset G17 **1.017%** (31 edges); champions unmatched (30–114 edges); vendor `BR_H_gg` field still stale (fold already matches YR4). Exclusive 0.0398 and SH0ES 6.30% were wrong objects — see [`docs/CLAIMS.md`](docs/CLAIMS.md).
 
 ---
 
@@ -75,7 +76,7 @@ python -m fsot_quantum check      # pin D1D38A
 python -m fsot_quantum audit      # 20/20 vs current literature
 python -m fsot_quantum harder     # hired physics 20/20
 python -m fsot_quantum push3      # leftover hired physics 41/41
-python -m fsot_quantum family     # Gset 7/7 under 1%
+python -m fsot_quantum family     # Gset 10/11 under 1% (G17 1.017%)
 ```
 
 Optional: clone [FSOT-2.1-Lean](https://github.com/dappalumbo91/FSOT-2.1-Lean) to `_ref\FSOT-2.1-Lean` for the 432-domain atlas. Without it, atlas counts skip; pin domains still score.
@@ -102,7 +103,13 @@ python -m fsot_quantum qi         # physics + QI I
 python -m fsot_quantum push       # physics + QI II
 python -m fsot_quantum push3      # physics + QI III
 python -m fsot_quantum audit      # vendor vs YR4/PDG
-python -m fsot_quantum family     # Gset G1–G5 + G22–G23
+python -m fsot_quantum family     # Gset G1–G5 + G14–G17 + G22–G23
+python -m fsot_quantum open       # diagnosis: wrong-object scoring
+python -m fsot_quantum vcb        # inclusive QM vs exclusive B→D HEP
+python -m fsot_quantum h0         # Lean BH→WH Hubble
+python -m fsot_quantum contested  # Lean contested sectors
+python -m fsot_quantum leftovers  # remaining opens (G17)
+python -m fsot_quantum formulas   # formula list
 python -m fsot_quantum organ      # JSON for neuron-zig
 python -m fsot_quantum stamp      # Lean · Coq · Isabelle · F* · Python
 python -m fsot_quantum atlas      # full Lean solved atlas

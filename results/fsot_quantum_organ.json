@@ -115,8 +115,10 @@
     "quantum_status": "https://github.com/dappalumbo91/FSOT-Quantum/blob/main/docs/STATUS.md",
     "audit": "20/20 vs YR4/PDG @0.5%",
     "physics_qi3": "41/41 + 212/212 Lean",
-    "gset_family": "7/7 under 1%"
+    "gset_family": "10/11 under 1%; G17 1.017%",
+    "vcb": "inclusive 0.002%; exclusive B\u2192D 0.15%",
+    "h0": "Planck 0.024%; SH0ES 1.00% Lean BH\u2192WH"
   },
-  "timestamp": "2026-08-13T03:48:36.574783+00:00",
-  "wall_seconds": 0.00030390000029001385
+  "timestamp": "2026-08-18T01:59:10.598287+00:00",
+  "wall_seconds": 0.0002919000107795
 }
