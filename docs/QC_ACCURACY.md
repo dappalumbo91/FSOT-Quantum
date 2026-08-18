@@ -1,6 +1,6 @@
 # QC / QM accuracy — math path, not a fridge
 
-G1 on this older 5% kill-band path is cut **11397 / 1.95%**. The living family cut is **11563 / 0.53%** (`docs/GSET_FAMILY.md`). Cite the family for MaxCut.
+G1 on this older 5% kill-band path is cut **11397 / 1.95%**. The living family cut is **11585 / 0.336%** (`docs/GSET_FAMILY.md`). Cite the family for MaxCut.
 
 **overall_ok:** `True`
 **wall_s:** `1.53`

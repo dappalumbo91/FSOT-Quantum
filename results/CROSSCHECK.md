@@ -1,7 +1,7 @@
 # Cross-check vs FSOT-2.1-Lean
 
 **overall_ok:** `True`
-**pass:** `43/43`
+**pass:** `87/87`
 
 Same pin, same seeds, same overlapping D_eff, same S(QM)/S(QC).
 

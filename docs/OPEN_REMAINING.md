@@ -1,6 +1,6 @@
 # The leftovers — what is still open, and what was a wrong object
 
-**overall_ok:** `True` · pin D1D38A **not edited** · G17 remains **open**
+**overall_ok:** `True` · pin D1D38A **not edited** · G17 champion unmatched (13 edges, under 1%)
 
 ## 1. Dark energy — CMB vs BAO (this was the hidden split)
 
@@ -19,9 +19,9 @@ Lean `dark_energy_dual_readout_lib.py`: CMB lane and BAO lane, Catalan/π bleed.
 
 Inclusive: QM `0.042201` vs 0.0422. Exclusive B→Dℓν (Belle II 2025): HEP `0.039143` vs **0.0392** (**0.146%**). Combined exclusive 0.0398 still blends D and D* — that was the 1.1σ leftover. See `docs/V_CB_PUZZLE.md`.
 
-## 4. Gset G17 — still open
+## 4. Gset G17 — aspiration met, champion unmatched
 
-Cut 3016 vs champion 3047 (**1.017%**, 31 edges). Planar G14 is 30 edges / 0.98%. Same 1-opt / KL residual on planar topology. Not a stale target and not a new coefficient. **Written as a miss.** Family 10/11 under 1%.
+Cut 3034 vs champion 3047 (**0.427%**, 13 edges). Family **11/11 under 1%**. Planar G14 is 22 edges / 0.72%. Not a stale target and not a new coefficient. Champion still unmatched — written, not hidden.
 
 ## Lean anomalies (same pin, already solved there)
 

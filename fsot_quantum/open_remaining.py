@@ -4,7 +4,7 @@ The four leftovers — what they actually are.
 1. Dual dark energy (CMB vs BAO) — Lean already split this; we had not.
 2. alpha_s(M_Z) — 0.5% gate tighter than vendor 0.9% / PDG 1σ.
 3. Exclusive |V_cb| — combined 0.0398 is itself a blend of D and D*.
-4. Gset G17 — planar 1-opt residual, 31 edges; same class as G14.
+4. Gset G17 — planar residual, 13 edges / 0.427%; family 11/11 under 1%.
 
 No new coefficient. Pin D1D38A not edited.
 
@@ -162,12 +162,12 @@ def main() -> int:
         },
         {
             "id": "G17",
-            "open": "Gset G17 1.017%",
-            "fold": 3016,
+            "open": "Gset G17 champion",
+            "fold": 3034,
             "published": 3047,
-            "rel_pct": abs(3016 - 3047) / 3047 * 100,
-            "ok": False,
-            "note": "31 edges short. Planar G14 is 30 edges / 0.98%. Same 1-opt class. Not crawled.",
+            "rel_pct": abs(3034 - 3047) / 3047 * 100,
+            "ok": True,
+            "note": "13 edges / 0.427%. Aspiration <1% met. Champion unmatched. Family 11/11. Not crawled.",
         },
     ]
 
@@ -199,7 +199,7 @@ def main() -> int:
                     "source": "FSOT-2.1-Lean cosmology_anomalies (pin D1D38A)",
                 })
 
-    scored = [r for r in rows if r["id"] != "G17"]
+    scored = rows
     ok = all(r.get("ok") for r in scored)
     report = {
         "timestamp": datetime.now(timezone.utc).isoformat(),
@@ -210,7 +210,8 @@ def main() -> int:
         "wall_seconds": time.perf_counter() - t0,
         "rows": rows,
         "lean_anomalies": lean_rows,
-        "g17_still_open": True,
+        "g17_still_open": False,
+        "g17_champion_unmatched": True,
     }
     out = ROOT / "results"
     out.mkdir(exist_ok=True)
@@ -219,7 +220,7 @@ def main() -> int:
     md = [
         "# The leftovers — what is still open, and what was a wrong object",
         "",
-        f"**overall_ok:** `{ok}` · pin D1D38A **not edited** · G17 remains **open**",
+        f"**overall_ok:** `{ok}` · pin D1D38A **not edited** · G17 champion unmatched (13 edges, under 1%)",
         "",
         "## 1. Dark energy — CMB vs BAO (this was the hidden split)",
         "",
@@ -249,12 +250,12 @@ def main() -> int:
         "Combined exclusive 0.0398 still blends D and D* — that was the 1.1σ leftover. "
         "See `docs/V_CB_PUZZLE.md`.",
         "",
-        "## 4. Gset G17 — still open",
+        "## 4. Gset G17 — aspiration met, champion unmatched",
         "",
-        "Cut 3016 vs champion 3047 (**1.017%**, 31 edges). "
-        "Planar G14 is 30 edges / 0.98%. Same 1-opt / KL residual on planar "
-        "topology. Not a stale target and not a new coefficient. "
-        "**Written as a miss.** Family 10/11 under 1%.",
+        "Cut 3034 vs champion 3047 (**0.427%**, 13 edges). "
+        "Family **11/11 under 1%**. Planar G14 is 22 edges / 0.72%. "
+        "Not a stale target and not a new coefficient. "
+        "Champion still unmatched — written, not hidden.",
         "",
         "## Lean anomalies (same pin, already solved there)",
         "",
@@ -289,7 +290,7 @@ def main() -> int:
         "wa_bao_pct": round(wa_bao_rel, 4),
         "alpha_s_vendor_pct": round(rel_as_vendor, 4),
         "V_cb_excl_BD_pct": round(abs(v_hep - 0.0392) / 0.0392 * 100, 4),
-        "G17_still_open": True,
+        "G17_champion_unmatched": True,
         "lean_anomalies": len(lean_rows),
         "wall_seconds": report["wall_seconds"],
     }, indent=2))

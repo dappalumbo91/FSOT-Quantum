@@ -214,14 +214,14 @@ Honesty cut: [`CLAIMS.md`](CLAIMS.md).
 - Exclusive \(B\to D\ell\nu\) is **0.15%** on High_Energy_Physics (\(D_{\mathrm{eff}}=7\)) vs Belle II 2025 0.0392. Inclusive stays QM at 0.002%. Combined exclusive 0.0398 is a D+D* blend and is **not** the object. [`V_CB_PUZZLE.md`](V_CB_PUZZLE.md).
 - Hubble tension is Lean **BH→WH bubble-bleed**: one global rate 68.44; Planck depleted sector **0.024%**; SH0ES inflated sector **1.00%** (0.71σ, inside Lean 2.5% band). [`H0_TENSION.md`](H0_TENSION.md) · [FSOT-2.1-Lean §7.2](https://github.com/dappalumbo91/FSOT-2.1-Lean).
 - Contested open-science panel is **14/14**: [`CONTESTED_SECTORS.md`](CONTESTED_SECTORS.md).
-- Leftovers: [`OPEN_REMAINING.md`](OPEN_REMAINING.md). DESI \(w_0/w_a\) BAO lane 0.37%/0.28%. \(\alpha_s\) inside vendor 0.9%. **G17 still open** (31 edges).
-- Formula catalog: [`FORMULA_LIST.md`](FORMULA_LIST.md) — engine, tension solvers, and 216 pin-wave formulas.
+- Leftovers: [`OPEN_REMAINING.md`](OPEN_REMAINING.md). DESI \(w_0/w_a\) BAO lane 0.37%/0.28%. \(\alpha_s\) inside vendor 0.9%. G17 **0.427%** (13 edges, champion unmatched). Accuracy reclass: [`ACCURACY_REFINE.md`](ACCURACY_REFINE.md).
+- Formula catalog: [`FORMULA_LIST.md`](FORMULA_LIST.md) — 207/216 vs stored @0.5%; living **9/9** of those misses are stale / wrong-object / in-band.
 - Multiprover stamp **FSOT_QUANTUM_MULTIPROVER_OK** (Lean · Coq · Isabelle · F\* · Python): [`MULTIPROVER_VERIFICATION.md`](MULTIPROVER_VERIFICATION.md).
 - Vendor wave8 `BR_H_gg` field still stale (0.0785). Fold already matches YR4. Pin not edited.
 - Hilbert fragments exist as **optional bridges**. They are not the scale path.
-- Period / factor is tiny \(N\) today (3/3, 4/4). Same hired question as RSA-scale — larger moduli climb on this path.
+- Period / factor is far ρ **8/8** and log-N **8/8** (p±1 stage-2). RSA-2048 is the smoothness / √p wall on this path.
 - Atlas 432 needs the Lean clone. Without `_ref`, that count skips.
-- Older climb panels still report G1 cut **11397 / 1.95%** (5% kill band). Living family cut is **11563 / 0.53%**. Not a contradiction — see [`CLAIMS.md`](CLAIMS.md).
+- Older climb panels still report G1 cut **11397 / 1.95%** (5% kill band). Living family cut is **11585 / 0.336%**. Not a contradiction — see [`CLAIMS.md`](CLAIMS.md).
 
 ---
 

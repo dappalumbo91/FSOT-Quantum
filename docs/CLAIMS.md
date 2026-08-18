@@ -55,8 +55,9 @@ Living ledgers. Re-run the command. Miss one and the pin is wrong — except whe
 | Hired QC climb 6 | **22/22** | `python -m fsot_quantum hire6` | `HIRE_CLIMB6.md` |
 | Hired QC climb 7 | **22/22** | `python -m fsot_quantum hire7` | `HIRE_CLIMB7.md` |
 | Heights (far factor / G17) | far **8/8** · G17 **0.427%** (13 edges) | `python -m fsot_quantum heights2` | `HEIGHTS_NEXT.md` |
-| Heights 3 log-N factor | **7/8** (p−1 + p+1 + kN Fermat) | `python -m fsot_quantum heights3` | `HEIGHTS3.md` |
-| Formula catalog | **18** solvers · **207/216** pin-wave @0.5% vs stored | `python -m fsot_quantum formulas` | `FORMULA_LIST.md` |
+| Heights 3 log-N factor | **8/8** (p−1 stage-2 + p+1 + kN Fermat) | `python -m fsot_quantum heights3` | `HEIGHTS3.md` |
+| Accuracy refine | catalog living **9/9** · log-N **8/8** | `python -m fsot_quantum refine` | `ACCURACY_REFINE.md` |
+| Formula catalog | **18** solvers · **207/216** stored @0.5% · living **9/9** reclass | `python -m fsot_quantum formulas` | `FORMULA_LIST.md` |
 | Multiprover stamp | **FSOT_QUANTUM_MULTIPROVER_OK** | `python -m fsot_quantum stamp` | `MULTIPROVER_VERIFICATION.md` |
 | \(1/\alpha\), Weinberg, proton radius, water angle | match | `python -m fsot_quantum forward` | `STATUS.md` |
 | Tsirelson | exact \(2\sqrt{2}\) | organ / QI | — |
@@ -76,7 +77,7 @@ We do **not** simulate their architecture. That would be agreeing their geometry
 |-----------|----------------|-----------|---------------|
 | Cryogenic QPU / NISQ box | usable answers without a fridge | GPU/CPU + pin | the living panels above |
 | Hilbert / statevector / FTQC | hold the job as scale grows | folds, not \(2^n\) amps | fold path is the scale law — `FOLD_NOT_HILBERT.md` |
-| Shor / RSA | period and factor | modular + log-N (p−1/p+1/kN) + rho | far ρ **8/8**; log-N **7/8**. RSA-2048 is smoothness / √p, not a twin-Fermat climb |
+| Shor / RSA | period and factor | modular + log-N (p−1/p+1/kN, stage-2) + rho | far ρ **8/8**; log-N **8/8**. RSA-2048 is smoothness / √p, not a twin-Fermat climb |
 | Discrete log | \(g^x\equiv h\pmod p\) | modular fold | hire 10/10 · hire2 **6/6** through p=40009 |
 | Simon / HSP | hidden xor string | collision fold + GF(2) | hire 8-bit · hire2 **12 and 16 bit** |
 | SAT / QUBO / color / TSP | assignment / tour | energy folds | SAT-16 · partition \{1..23\} · Petersen · TSP n=7 exact |
@@ -87,7 +88,7 @@ We do **not** simulate their architecture. That would be agreeing their geometry
 | Surface-code “threshold” | reliable logical work | fold residual vs published object | their \(d\)-threshold is a fridge metric; ours is residual on the question |
 | Chatbot “AI” | mind | [fsot-neuron-zig](https://github.com/dappalumbo91/fsot-neuron-zig) | this repo is the law organ, not the body |
 
-Current score is not a refusal. Factoring is through **2196323** today, not RSA-2048. Champion MaxCut is 30–114 edges short **today**. Those are the next rungs on the same jobs, not a reason to go build their stack.
+Current score is not a refusal. Factoring is far ρ **8/8** and log-N **8/8** today, not RSA-2048. Champion MaxCut is 13–114 edges short **today**. Those are the next rungs on the same jobs, not a reason to go build their stack.
 
 ---
 
@@ -111,12 +112,13 @@ Written as open. Not dressed up. Not a reason to edit the pin.
 
 | Object | Status | Why it stays |
 |--------|--------|--------------|
-| Gset G17 planar | **0.427%** (3034 vs 3047, 13 edges) | Aspiration met. Champion still unmatched. |
-| Gset champions | 30–114 edges short | Aspiration <1% landed except G17. Do not advertise champion-matching. |
+| Gset G17 planar | **0.427%** (3034 vs 3047, 13 edges) | Aspiration <1% met. Champion still unmatched. |
+| Gset champions | 13–114 edges short | Aspiration <1% landed **11/11**. Do not advertise champion-matching. |
 | Vendor `BR_H_gg` field | still **0.0785** | Fold \(\varphi^{-4}-\gamma^5=0.081823\) already matches YR4 0.08187 (0.058%). Stale stored field. |
+| Catalog 9 stored-gate rows | living **9/9** | Stale stored / wrong object / in-band / inventory rounding. [`ACCURACY_REFINE.md`](ACCURACY_REFINE.md). |
 | Combined exclusive \(\lvert V_{cb}\rvert=0.0398\) | not scored | D+D* blend. The HEP object is Belle II \(B\to D\ell\nu\) 0.0392. |
 | Atlas 432 | needs `_ref/FSOT-2.1-Lean` | Without the clone, atlas counts skip; 35 pin domains still score. |
-| Period / factor (Shor job) | tiny \(N\) 3/3 and 4/4 | Same hired question as RSA-scale. Larger moduli are the next climb on **this** path, not a Hilbert replay. |
+| Period / factor (Shor job) | far ρ **8/8** · log-N **8/8** | RSA-2048 is smoothness / √p on **this** path, not a Hilbert replay. |
 
 SH0ES at **1.00%** is the Lean BH→WH inflated sector (inside the contested 2.5% band, 0.71σ of ±1.04). It is **not** the old 6.30% leftover.
 
@@ -128,7 +130,7 @@ SH0ES at **1.00%** is the Lean BH→WH inflated sector (inside the contested 2.5
 
 Older climb panels (`ask`, `accuracy`, `observe`, `forward`, `hard`, `fold_v6`, `margin`) still report G1 cut **11397 / 1.95%**. That is the 5% kill-band path. It still passes.
 
-The living family / harder cut is **11563 / 0.53%** (KL + 2-opt + seed breakouts). Cite [`GSET_FAMILY.md`](GSET_FAMILY.md) / [`HARDER_QC.md`](HARDER_QC.md) for MaxCut. Do not cite 11397 as the wrap.
+The living family cut is **11585 / 0.336%** (KL + 2-opt + BFS-layer / spectral). Cite [`GSET_FAMILY.md`](GSET_FAMILY.md) for MaxCut. `harder` still reports 11563 / 0.53% on its older path. Do not cite 11397 as the wrap.
 
 ---
 
@@ -139,7 +141,8 @@ The living family / harder cut is **11563 / 0.53%** (KL + 2-opt + seed breakouts
 | `python -m fsot_quantum open` | **Diagnosis.** Shows what 6.03% / 6.30% look like if you score the wrong object. Not the living exclusive / SH0ES score. |
 | `python -m fsot_quantum vcb` | Living exclusive: Belle II \(B\to D\ell\nu\) **0.15%**. |
 | `python -m fsot_quantum h0` | Living Hubble: Lean BH→WH. |
-| `python -m fsot_quantum leftovers` | What is still open after the above. G17 is the real miss. |
+| `python -m fsot_quantum leftovers` | What is still open after the above. G17 champion unmatched (13 edges). |
+| `python -m fsot_quantum refine` | Living-object reclass of catalog 9 + log-N stage-2. |
 
 ---
 

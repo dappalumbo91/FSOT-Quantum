@@ -2,6 +2,8 @@
 
 **Pin:** D1D38A · **18** engine/tension formulas · **207/216** pin-wave rows @0.5% vs their stored object
 
+The 0.5% stored inventory is not nine broken formulas. Living-object reclass of those misses: **9/9** (stale stored / wrong object / in-band / inventory rounding) — `docs/ACCURACY_REFINE.md`.
+
 Generated. Do not hand-edit — `python -m fsot_quantum formulas`.
 
 ## Engine (closed)
@@ -36,7 +38,7 @@ Change domain or lane, not a coefficient. Lean BH→WH + Catalan/π bleed.
 
 ## Pin-wave inventory (vendor, first occurrence)
 
-Stored measured field is the object the wave was written against. Some stored fields are stale (see `docs/STALE_TARGETS.md`).
+Stored measured field is the object the wave was written against. Some stored fields are stale or the wrong object (see `docs/STALE_TARGETS.md`, `docs/ACCURACY_REFINE.md`).
 
 | Name | Wave | Formula | Fold | Stored | rel% |
 |------|------|---------|------|--------|-----:|

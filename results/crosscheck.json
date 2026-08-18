@@ -1,8 +1,8 @@
 {
   "panel": "crosscheck_lean",
   "pin": "D1D38A",
-  "n_checks": 43,
-  "n_pass": 43,
+  "n_checks": 87,
+  "n_pass": 87,
   "overall_ok": true,
   "checks": [
     {
@@ -85,42 +85,6 @@
       "vendor": 0.9174663774653723
     },
     {
-      "id": "dom_Quantum_Mechanics_Deff",
-      "ok": true,
-      "ours": 6,
-      "vendor": 6
-    },
-    {
-      "id": "dom_Quantum_Mechanics_obs",
-      "ok": true,
-      "ours": true,
-      "vendor": true
-    },
-    {
-      "id": "dom_Quantum_Computing_Deff",
-      "ok": true,
-      "ours": 11,
-      "vendor": 11
-    },
-    {
-      "id": "dom_Quantum_Computing_obs",
-      "ok": true,
-      "ours": false,
-      "vendor": false
-    },
-    {
-      "id": "dom_Quantum_Optics_Deff",
-      "ok": true,
-      "ours": 11,
-      "vendor": 11
-    },
-    {
-      "id": "dom_Quantum_Optics_obs",
-      "ok": true,
-      "ours": true,
-      "vendor": true
-    },
-    {
       "id": "dom_Particle_Physics_Deff",
       "ok": true,
       "ours": 5,
@@ -133,16 +97,16 @@
       "vendor": true
     },
     {
-      "id": "dom_Quantum_Gravity_Deff",
+      "id": "dom_Quantum_Mechanics_Deff",
       "ok": true,
-      "ours": 22,
-      "vendor": 22
+      "ours": 6,
+      "vendor": 6
     },
     {
-      "id": "dom_Quantum_Gravity_obs",
+      "id": "dom_Quantum_Mechanics_obs",
       "ok": true,
-      "ours": false,
-      "vendor": false
+      "ours": true,
+      "vendor": true
     },
     {
       "id": "dom_Atomic_Physics_Deff",
@@ -205,25 +169,97 @@
       "vendor": true
     },
     {
-      "id": "dom_High_Energy_Physics_Deff",
+      "id": "dom_Optics_Deff",
       "ok": true,
-      "ours": 7,
-      "vendor": 7
+      "ours": 10,
+      "vendor": 10
     },
     {
-      "id": "dom_High_Energy_Physics_obs",
+      "id": "dom_Optics_obs",
       "ok": true,
       "ours": true,
       "vendor": true
     },
     {
-      "id": "dom_Nuclear_Physics_Deff",
+      "id": "dom_Acoustics_Deff",
+      "ok": true,
+      "ours": 10,
+      "vendor": 10
+    },
+    {
+      "id": "dom_Acoustics_obs",
+      "ok": true,
+      "ours": true,
+      "vendor": true
+    },
+    {
+      "id": "dom_Quantum_Computing_Deff",
+      "ok": true,
+      "ours": 11,
+      "vendor": 11
+    },
+    {
+      "id": "dom_Quantum_Computing_obs",
+      "ok": true,
+      "ours": false,
+      "vendor": false
+    },
+    {
+      "id": "dom_Quantum_Optics_Deff",
+      "ok": true,
+      "ours": 11,
+      "vendor": 11
+    },
+    {
+      "id": "dom_Quantum_Optics_obs",
+      "ok": true,
+      "ours": true,
+      "vendor": true
+    },
+    {
+      "id": "dom_Biology_Deff",
+      "ok": true,
+      "ours": 12,
+      "vendor": 12
+    },
+    {
+      "id": "dom_Biology_obs",
+      "ok": true,
+      "ours": false,
+      "vendor": false
+    },
+    {
+      "id": "dom_Thermodynamics_Deff",
       "ok": true,
       "ours": 15,
       "vendor": 15
     },
     {
-      "id": "dom_Nuclear_Physics_obs",
+      "id": "dom_Thermodynamics_obs",
+      "ok": true,
+      "ours": true,
+      "vendor": true
+    },
+    {
+      "id": "dom_Biochemistry_Deff",
+      "ok": true,
+      "ours": 13,
+      "vendor": 13
+    },
+    {
+      "id": "dom_Biochemistry_obs",
+      "ok": true,
+      "ours": true,
+      "vendor": true
+    },
+    {
+      "id": "dom_Neuroscience_Deff",
+      "ok": true,
+      "ours": 14,
+      "vendor": 14
+    },
+    {
+      "id": "dom_Neuroscience_obs",
       "ok": true,
       "ours": true,
       "vendor": true
@@ -239,6 +275,234 @@
       "ok": true,
       "ours": true,
       "vendor": true
+    },
+    {
+      "id": "dom_Fluid_Dynamics_Deff",
+      "ok": true,
+      "ours": 15,
+      "vendor": 15
+    },
+    {
+      "id": "dom_Fluid_Dynamics_obs",
+      "ok": true,
+      "ours": false,
+      "vendor": false
+    },
+    {
+      "id": "dom_Nuclear_Physics_Deff",
+      "ok": true,
+      "ours": 15,
+      "vendor": 15
+    },
+    {
+      "id": "dom_Nuclear_Physics_obs",
+      "ok": true,
+      "ours": true,
+      "vendor": true
+    },
+    {
+      "id": "dom_Ecology_Deff",
+      "ok": true,
+      "ours": 15,
+      "vendor": 15
+    },
+    {
+      "id": "dom_Ecology_obs",
+      "ok": true,
+      "ours": false,
+      "vendor": false
+    },
+    {
+      "id": "dom_Meteorology_Deff",
+      "ok": true,
+      "ours": 16,
+      "vendor": 16
+    },
+    {
+      "id": "dom_Meteorology_obs",
+      "ok": true,
+      "ours": false,
+      "vendor": false
+    },
+    {
+      "id": "dom_Materials_Science_Deff",
+      "ok": true,
+      "ours": 10,
+      "vendor": 10
+    },
+    {
+      "id": "dom_Materials_Science_obs",
+      "ok": true,
+      "ours": true,
+      "vendor": true
+    },
+    {
+      "id": "dom_Psychology_Deff",
+      "ok": true,
+      "ours": 16,
+      "vendor": 16
+    },
+    {
+      "id": "dom_Psychology_obs",
+      "ok": true,
+      "ours": true,
+      "vendor": true
+    },
+    {
+      "id": "dom_Atmospheric_Physics_Deff",
+      "ok": true,
+      "ours": 17,
+      "vendor": 17
+    },
+    {
+      "id": "dom_Atmospheric_Physics_obs",
+      "ok": true,
+      "ours": false,
+      "vendor": false
+    },
+    {
+      "id": "dom_Oceanography_Deff",
+      "ok": true,
+      "ours": 17,
+      "vendor": 17
+    },
+    {
+      "id": "dom_Oceanography_obs",
+      "ok": true,
+      "ours": false,
+      "vendor": false
+    },
+    {
+      "id": "dom_Seismology_Deff",
+      "ok": true,
+      "ours": 18,
+      "vendor": 18
+    },
+    {
+      "id": "dom_Seismology_obs",
+      "ok": true,
+      "ours": false,
+      "vendor": false
+    },
+    {
+      "id": "dom_Sociology_Deff",
+      "ok": true,
+      "ours": 18,
+      "vendor": 18
+    },
+    {
+      "id": "dom_Sociology_obs",
+      "ok": true,
+      "ours": true,
+      "vendor": true
+    },
+    {
+      "id": "dom_High_Energy_Physics_Deff",
+      "ok": true,
+      "ours": 7,
+      "vendor": 7
+    },
+    {
+      "id": "dom_High_Energy_Physics_obs",
+      "ok": true,
+      "ours": true,
+      "vendor": true
+    },
+    {
+      "id": "dom_Geophysics_Deff",
+      "ok": true,
+      "ours": 19,
+      "vendor": 19
+    },
+    {
+      "id": "dom_Geophysics_obs",
+      "ok": true,
+      "ours": false,
+      "vendor": false
+    },
+    {
+      "id": "dom_Astronomy_Deff",
+      "ok": true,
+      "ours": 20,
+      "vendor": 20
+    },
+    {
+      "id": "dom_Astronomy_obs",
+      "ok": true,
+      "ours": true,
+      "vendor": true
+    },
+    {
+      "id": "dom_Economics_Deff",
+      "ok": true,
+      "ours": 20,
+      "vendor": 20
+    },
+    {
+      "id": "dom_Economics_obs",
+      "ok": true,
+      "ours": true,
+      "vendor": true
+    },
+    {
+      "id": "dom_Planetary_Science_Deff",
+      "ok": true,
+      "ours": 21,
+      "vendor": 21
+    },
+    {
+      "id": "dom_Planetary_Science_obs",
+      "ok": true,
+      "ours": true,
+      "vendor": true
+    },
+    {
+      "id": "dom_Quantum_Gravity_Deff",
+      "ok": true,
+      "ours": 22,
+      "vendor": 22
+    },
+    {
+      "id": "dom_Quantum_Gravity_obs",
+      "ok": true,
+      "ours": false,
+      "vendor": false
+    },
+    {
+      "id": "dom_Particle_Astrophysics_Deff",
+      "ok": true,
+      "ours": 24,
+      "vendor": 24
+    },
+    {
+      "id": "dom_Particle_Astrophysics_obs",
+      "ok": true,
+      "ours": false,
+      "vendor": false
+    },
+    {
+      "id": "dom_Astrophysics_Deff",
+      "ok": true,
+      "ours": 24,
+      "vendor": 24
+    },
+    {
+      "id": "dom_Astrophysics_obs",
+      "ok": true,
+      "ours": true,
+      "vendor": true
+    },
+    {
+      "id": "dom_Cosmology_Deff",
+      "ok": true,
+      "ours": 25,
+      "vendor": 25
+    },
+    {
+      "id": "dom_Cosmology_obs",
+      "ok": true,
+      "ours": false,
+      "vendor": false
     },
     {
       "id": "S_QM_match",
@@ -263,5 +527,5 @@
       "got": -0.14767310363368633
     }
   ],
-  "timestamp": "2026-08-13T00:41:41.931483+00:00"
+  "timestamp": "2026-08-13T01:58:19.215835+00:00"
 }

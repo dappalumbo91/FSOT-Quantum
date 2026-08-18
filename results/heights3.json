@@ -1,13 +1,13 @@
 {
-  "timestamp": "2026-08-18T03:33:15.426594+00:00",
+  "timestamp": "2026-08-18T03:43:57.045285+00:00",
   "suite": "heights3",
   "pin": "D1D38A",
   "pin_file_edited": false,
-  "overall_ok": false,
-  "logN_ok": 7,
+  "overall_ok": true,
+  "logN_ok": 8,
   "logN_n": 8,
-  "pminus1_ok": 3,
-  "pplus1_ok": 4,
+  "pminus1_ok": 7,
+  "pplus1_ok": 7,
   "fermat_k_ok": 3,
   "g17": {
     "cut": 3034,
@@ -17,7 +17,7 @@
   "rsa2048_B": 49152,
   "S_QM": 0.9555063001027194,
   "S_QC": -0.14767310363368633,
-  "wall_seconds": 0.14584780001314357,
+  "wall_seconds": 0.14165820000926033,
   "rows": [
     {
       "family": "logN",
@@ -25,10 +25,10 @@
       "p": 10007,
       "q": 1000003,
       "N": 10007030021,
-      "pminus1": "pminus1_exhausted",
+      "pminus1": "pminus1_stage2",
       "pplus1": "pplus1_logN",
       "fermat_k": "fermat_multiplier_exhausted",
-      "logN": "pplus1_logN",
+      "logN": "pminus1_stage2",
       "answer": [
         10007,
         1000003
@@ -41,10 +41,10 @@
       "p": 10007,
       "q": 10000019,
       "N": 100070190133,
-      "pminus1": "pminus1_exhausted",
+      "pminus1": "pminus1_stage2",
       "pplus1": "pplus1_logN",
       "fermat_k": "fermat_multiplier_exhausted",
-      "logN": "pplus1_logN",
+      "logN": "pminus1_stage2",
       "answer": [
         10007,
         10000019
@@ -73,10 +73,10 @@
       "p": 65537,
       "q": 100003,
       "N": 6553896611,
-      "pminus1": "pminus1_exhausted",
+      "pminus1": "pminus1_stage2",
       "pplus1": "pplus1_logN",
       "fermat_k": "fermat_multiplier",
-      "logN": "pplus1_logN",
+      "logN": "pminus1_stage2",
       "answer": [
         65537,
         100003
@@ -89,12 +89,15 @@
       "p": 100003,
       "q": 1000003,
       "N": 100003300009,
-      "pminus1": "pminus1_exhausted",
-      "pplus1": "pplus1_exhausted",
+      "pminus1": "pminus1_stage2",
+      "pplus1": "pplus1_stage2",
       "fermat_k": "fermat_multiplier_exhausted",
-      "logN": "logN_exhausted",
-      "answer": null,
-      "ok": false
+      "logN": "pminus1_stage2",
+      "answer": [
+        100003,
+        1000003
+      ],
+      "ok": true
     },
     {
       "family": "logN",
@@ -103,7 +106,7 @@
       "q": 1000033,
       "N": 31628043691,
       "pminus1": "pminus1_logN",
-      "pplus1": "pplus1_exhausted",
+      "pplus1": "pplus1_stage2",
       "fermat_k": "fermat_multiplier_exhausted",
       "logN": "pminus1_logN",
       "answer": [
@@ -135,7 +138,7 @@
       "q": 1000033,
       "N": 1000036000099,
       "pminus1": "pminus1_logN",
-      "pplus1": "pplus1_exhausted",
+      "pplus1": "pplus1_stage2",
       "fermat_k": "fermat_multiplier",
       "logN": "pminus1_logN",
       "answer": [

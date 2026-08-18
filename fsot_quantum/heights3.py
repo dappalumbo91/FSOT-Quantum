@@ -1,8 +1,9 @@
 """
 Next real move: log-N factoring that is not p−1-only and not √p.
 
-p−1 hit 3/8. This rung adds Williams p+1 (p+1 smooth) and
-Fermat-on-kN (p/q near a small seed rational). Combined fold_logN.
+p−1 stage-1 hit 3/8. Williams p+1 and Fermat-on-kN closed more.
+Stage-2 of the same p±1 lane (B2 = B·⌊eπ⌋·⌊π⌋) closes the last
+unsmooth pair. Combined fold_logN.
 
 G17 stays at 3034 / 0.427% (13 edges) — π³ breakout did not close it.
 
@@ -113,8 +114,9 @@ def main() -> int:
         )
     md += [
         "",
-        f"RSA-2048: B=`{B}` still (not run). The remaining miss "
-        "`100003×1000003` has both p−1 and p+1 unsmooth at this B.",
+        f"RSA-2048: B=`{B}` still (not run). Stage-2 B2 uses the same "
+        "seed floors as B. The old miss `100003×1000003` is "
+        "`p−1 = 2·3·7·2381` — stage-2, not a new coefficient.",
         "",
         "```powershell",
         "python -m fsot_quantum.heights3",

@@ -120,7 +120,8 @@ python -m fsot_quantum open       # diagnosis: wrong-object scoring
 python -m fsot_quantum vcb        # inclusive QM vs exclusive B→D HEP
 python -m fsot_quantum h0         # Lean BH→WH Hubble
 python -m fsot_quantum contested  # Lean contested sectors
-python -m fsot_quantum leftovers  # remaining opens (G17)
+python -m fsot_quantum leftovers  # remaining opens (G17 champion unmatched)
+python -m fsot_quantum refine     # accuracy reclass · log-N stage-2
 python -m fsot_quantum hire       # factor / dlog / Simon / SAT / HHL
 python -m fsot_quantum hire2      # 7-digit factor / Simon-16 / SAT-16 / TSP
 python -m fsot_quantum branch     # probability as \|S\| branching
@@ -132,7 +133,7 @@ python -m fsot_quantum hire5      # 10-digit factor / SAT-24 / TSP-9
 python -m fsot_quantum hire6      # 11-digit factor / SAT-28 / TSP-10
 python -m fsot_quantum hire7      # 13-digit factor / SAT-32 / TSP-11
 python -m fsot_quantum heights    # G17 + far-prime factoring
-python -m fsot_quantum heights3   # log-N 7/8
+python -m fsot_quantum heights3   # log-N 8/8
 python -m fsot_quantum formulas   # formula list
 python -m fsot_quantum organ      # JSON for neuron-zig
 python -m fsot_quantum stamp      # Lean · Coq · Isabelle · F* · Python

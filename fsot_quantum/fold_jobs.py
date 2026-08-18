@@ -486,6 +486,17 @@ def _primes_upto(B: int) -> list[int]:
     return [i for i in range(2, B + 1) if s[i]]
 
 
+def _stage2_bound(B: int) -> int:
+    """
+    p−1 / p+1 stage-2 ceiling. Same two seed floors that already
+    build B from the bit length — no new constant.
+    Hits when p±1 = (B-smooth) × (one prime in (B, B2]).
+    """
+    return B * max(2, int(math.floor(float(SEEDS.e) * float(SEEDS.pi)))) * max(
+        2, int(math.floor(float(SEEDS.pi)))
+    )
+
+
 def fold_pminus1(N: int) -> dict[str, Any]:
     """
     Pollard's p−1 — cost is poly(log N) once the smoothness bound B
@@ -520,6 +531,25 @@ def fold_pminus1(N: int) -> dict[str, Any]:
             "B": B,
             "steps": steps,
         }
+    # Stage 2: one extra prime in (B, B2]. Same seeds as B.
+    B2 = _stage2_bound(B)
+    for q in _primes_upto(B2):
+        if q <= B:
+            continue
+        g = math.gcd(pow(a, q, N) - 1, N)
+        steps += 1
+        if 1 < g < N:
+            return {
+                "job": "factor_Shor_end",
+                "N": N,
+                "ok": True,
+                "factors": sorted([g, N // g]),
+                "method": "pminus1_stage2",
+                "B": B,
+                "B2": B2,
+                "q": q,
+                "steps": steps,
+            }
     return {
         "job": "factor_Shor_end",
         "N": N,
@@ -527,6 +557,7 @@ def fold_pminus1(N: int) -> dict[str, Any]:
         "factors": None,
         "method": "pminus1_exhausted",
         "B": B,
+        "B2": B2,
         "steps": steps,
     }
 
@@ -580,6 +611,25 @@ def fold_pplus1(N: int) -> dict[str, Any]:
             "B": B,
             "steps": steps,
         }
+    B2 = _stage2_bound(B)
+    for q in _primes_upto(B2):
+        if q <= B:
+            continue
+        vq = _lucas_v(x, q, N)
+        steps += 1
+        g = math.gcd(vq - 2, N)
+        if 1 < g < N:
+            return {
+                "job": "factor_Shor_end",
+                "N": N,
+                "ok": True,
+                "factors": sorted([g, N // g]),
+                "method": "pplus1_stage2",
+                "B": B,
+                "B2": B2,
+                "q": q,
+                "steps": steps,
+            }
     return {
         "job": "factor_Shor_end",
         "N": N,
@@ -587,6 +637,7 @@ def fold_pplus1(N: int) -> dict[str, Any]:
         "factors": None,
         "method": "pplus1_exhausted",
         "B": B,
+        "B2": B2,
         "steps": steps,
     }
 
@@ -637,7 +688,7 @@ def fold_fermat_multipliers(N: int) -> dict[str, Any]:
 
 
 def fold_logN(N: int) -> dict[str, Any]:
-    """p−1, then p+1, then multiplier Fermat. All poly(log N) budgets."""
+    """p−1 (incl. stage-2), then p+1 (incl. stage-2), then kN Fermat."""
     for fn in (fold_pminus1, fold_pplus1, fold_fermat_multipliers):
         got = fn(N)
         if got.get("ok"):

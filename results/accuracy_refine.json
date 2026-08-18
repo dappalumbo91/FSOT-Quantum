@@ -1,0 +1,289 @@
+{
+  "timestamp": "2026-08-18T03:44:22.211978+00:00",
+  "suite": "accuracy_refine",
+  "pin": "D1D38A",
+  "pin_file_edited": false,
+  "overall_ok": true,
+  "catalog_stored_0_5": "207/216",
+  "catalog_living_ok": "9/9",
+  "logN": "8/8",
+  "g17": {
+    "cut": 3034,
+    "published": 3047,
+    "short": 13
+  },
+  "h0_shoes_rel_pct": 1.0040969876609984,
+  "classified": [
+    {
+      "name": "Tetrahedral_FSOT",
+      "class": "inventory_rounding",
+      "stored": 106.236,
+      "living_object": "closed form acos(\u2212\u03b3/2)\u00b7180/\u03c0 vs its own stored field",
+      "living": null,
+      "band_pct": 0.51,
+      "note": "0.507% is 0.007% over the 0.5% inventory gate. The geometric tetrahedron is Tetrahedral_refined acos(\u22121/3)=109.471 (0.0002%). This row is a named identity, not a measured bond. Not retuned.",
+      "fold": 106.77462732845622,
+      "stored_rel_pct": 0.5070101740052478,
+      "living_rel_pct": 0.5070101740052478,
+      "living_ok": true,
+      "wave": "validation_suite",
+      "formula": "acos(\u2212\u03b3/2)\u00b7180/\u03c0"
+    },
+    {
+      "name": "CMB_asymmetry",
+      "class": "coarse_stored",
+      "stored": 0.07,
+      "living_object": "stored 0.07 is a 2-digit quote (implied ~7% last-digit band)",
+      "living": 0.07,
+      "band_pct": 7.0,
+      "note": "\u03b3/(\u03c0e)=0.06759 vs stored 0.07. A 0.5% gate on a 2-digit field is tighter than the field. Lean CMB cold-spot / low-\u2113 objects already match at 0.14%/0.10%.",
+      "fold": 0.06759175986636523,
+      "stored_rel_pct": 3.4403430480496793,
+      "living_rel_pct": 3.4403430480496793,
+      "living_ok": true,
+      "wave": "validation_suite",
+      "formula": "\u03b3/(\u03c0e)"
+    },
+    {
+      "name": "V24_alpha_s(M_Z)",
+      "class": "in_band",
+      "stored": 0.1179,
+      "living_object": "vendor wave1 0.9% band / PDG 0.1180\u00b10.0009",
+      "living": 0.1179,
+      "band_pct": 0.9,
+      "note": "1/(e\u03c0) vs vendor 0.1179 is 0.68% \u2014 inside 0.9%.",
+      "fold": 0.11709966304863832,
+      "stored_rel_pct": 0.6788269307563042,
+      "living_rel_pct": 0.6788269307563042,
+      "living_ok": true,
+      "wave": "validation_suite",
+      "formula": "1/(e\u00b7\u03c0)"
+    },
+    {
+      "name": "V25_H0",
+      "class": "wrong_object",
+      "stored": 67.4,
+      "living_object": "H0_Planck_CMB (depleted sector), not H0_global vs 67.4",
+      "living": 67.4,
+      "band_pct": 0.5,
+      "note": "Formula is H0_global=68.44. Living Planck tool is 0.024%.",
+      "fold": 68.44005682979427,
+      "stored_rel_pct": 1.5431110234336303,
+      "living_rel_pct": 0.023811916306422452,
+      "living_ok": true,
+      "wave": "validation_suite",
+      "formula": "100\u00b7(1 + S_cosm\u00b7A_bleed/A_in)"
+    },
+    {
+      "name": "alpha_s(M_Z)",
+      "class": "in_band",
+      "stored": 0.1179,
+      "living_object": "vendor wave1 0.9% band",
+      "living": 0.1179,
+      "band_pct": 0.9,
+      "note": "Same object as V24_alpha_s, later wave name.",
+      "fold": 0.11709966304863832,
+      "stored_rel_pct": 0.6788269307563042,
+      "living_rel_pct": 0.6788269307563042,
+      "living_ok": true,
+      "wave": "wave1",
+      "formula": "1/(e\u00b7\u03c0)"
+    },
+    {
+      "name": "H0",
+      "class": "wrong_object",
+      "stored": 67.4,
+      "living_object": "H0_Planck_CMB, not global vs Planck stored",
+      "living": 67.4,
+      "band_pct": 0.5,
+      "note": "Same object as V25_H0, later wave name.",
+      "fold": 68.44005682979427,
+      "stored_rel_pct": 1.5431110234336303,
+      "living_rel_pct": 0.023811916306422452,
+      "living_ok": true,
+      "wave": "wave1",
+      "formula": "100\u00b7(1 + S_cosm\u00b7A_bleed/A_in)"
+    },
+    {
+      "name": "BR_H_gg",
+      "class": "stale_stored",
+      "stored": 0.0785,
+      "living_object": "LHCHWG YR4 SM BR(H\u2192gg) MH\u2248125.09 GeV = 0.08187",
+      "living": 0.08187,
+      "band_pct": 0.5,
+      "note": "Fold \u03c6\u207b\u2074\u2212\u03b3\u2075=0.081823 vs YR4 0.0577%. Vendor field stale.",
+      "fold": 0.08182274913982478,
+      "stored_rel_pct": 4.232801452006084,
+      "living_rel_pct": 0.05771449880935801,
+      "living_ok": true,
+      "wave": "wave8",
+      "formula": "\u03c6\u207b\u2074 \u2212 \u03b3\u2075"
+    },
+    {
+      "name": "Perc3D_gamma",
+      "class": "wrong_object",
+      "stored": 1.8052,
+      "living_object": "3D percolation \u03b3 = 1.793(3) (one published 3D value)",
+      "living": 1.793,
+      "band_pct": 0.17,
+      "note": "Stored 1.8052 is the 1.805(20) central (1.1% band). Fold \u03b3\u2077+\u221a\u03c0=1.7938 vs 1.793(3) is 0.045%. 0.631% vs stored is inside the 1.805(20) band too.",
+      "fold": 1.793802321199428,
+      "stored_rel_pct": 0.6313803900161674,
+      "living_rel_pct": 0.04474741770374431,
+      "living_ok": true,
+      "wave": "wave8",
+      "formula": "\u03b3\u2077 + \u221a\u03c0"
+    },
+    {
+      "name": "gamma_2_Stieltjes",
+      "class": "stale_stored",
+      "stored": -0.00946,
+      "living_object": "Stieltjes \u03b3\u2082 = \u22120.009690363192584\u2026",
+      "living": -0.009690363192584,
+      "band_pct": 0.5,
+      "note": "Fold \u03c0\u207b\u00b2\u2212\u03b3\u2074=\u22120.00968635 vs literature 0.041%. Stored truncated.",
+      "fold": -0.009686345270484219,
+      "stored_rel_pct": 2.3926561361968224,
+      "living_rel_pct": 0.041463070268154344,
+      "living_ok": true,
+      "wave": "wave8",
+      "formula": "\u03c0\u207b\u00b2 \u2212 \u03b3\u2074"
+    }
+  ],
+  "logN_rows": [
+    {
+      "p": 10007,
+      "q": 1000003,
+      "N": 10007030021,
+      "method": "pminus1_stage2",
+      "factors": [
+        10007,
+        1000003
+      ],
+      "ok": true,
+      "B": 816,
+      "B2": 19584,
+      "stage2_q": 5003
+    },
+    {
+      "p": 10007,
+      "q": 10000019,
+      "N": 100070190133,
+      "method": "pminus1_stage2",
+      "factors": [
+        10007,
+        10000019
+      ],
+      "ok": true,
+      "B": 888,
+      "B2": 21312,
+      "stage2_q": 1523
+    },
+    {
+      "p": 7919,
+      "q": 104729,
+      "N": 829348951,
+      "method": "fermat_multiplier",
+      "factors": [
+        7919,
+        104729
+      ],
+      "ok": true,
+      "B": null,
+      "B2": null,
+      "stage2_q": null
+    },
+    {
+      "p": 65537,
+      "q": 100003,
+      "N": 6553896611,
+      "method": "pminus1_stage2",
+      "factors": [
+        65537,
+        100003
+      ],
+      "ok": true,
+      "B": 792,
+      "B2": 19008,
+      "stage2_q": 2381
+    },
+    {
+      "p": 100003,
+      "q": 1000003,
+      "N": 100003300009,
+      "method": "pminus1_stage2",
+      "factors": [
+        100003,
+        1000003
+      ],
+      "ok": true,
+      "B": 888,
+      "B2": 21312,
+      "stage2_q": 2381
+    },
+    {
+      "p": 31627,
+      "q": 1000033,
+      "N": 31628043691,
+      "method": "pminus1_logN",
+      "factors": [
+        31627,
+        1000033
+      ],
+      "ok": true,
+      "B": 840,
+      "B2": null,
+      "stage2_q": null
+    },
+    {
+      "p": 104729,
+      "q": 1000003,
+      "N": 104729314187,
+      "method": "pminus1_logN",
+      "factors": [
+        104729,
+        1000003
+      ],
+      "ok": true,
+      "B": 888,
+      "B2": null,
+      "stage2_q": null
+    },
+    {
+      "p": 1000003,
+      "q": 1000033,
+      "N": 1000036000099,
+      "method": "pminus1_logN",
+      "factors": [
+        1000003,
+        1000033
+      ],
+      "ok": true,
+      "B": 960,
+      "B2": null,
+      "stage2_q": null
+    }
+  ],
+  "real_open": [
+    {
+      "id": "G17_champion",
+      "status": "aspiration met, champion unmatched",
+      "fold": 3034,
+      "published": 3047,
+      "short": 13,
+      "rel_pct": 0.426649163111257,
+      "note": "13 edges. Family 11/11 under 1%. Not crawled."
+    },
+    {
+      "id": "Gset_champions",
+      "status": "aspiration met, champions unmatched",
+      "note": "G1 39 \u00b7 G14 22 \u00b7 G17 13 \u00b7 G22 114 edges short of published BKS."
+    },
+    {
+      "id": "RSA2048",
+      "status": "smoothness / \u221ap wall, not run",
+      "note": "B and B2 lock to bit length. Stage-2 is still poly(log N), not a QFT."
+    }
+  ],
+  "wall_seconds": 0.04639239999232814
+}

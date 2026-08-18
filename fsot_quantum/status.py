@@ -48,9 +48,9 @@ def main() -> int:
             "H0": "Planck 0.024%; SH0ES 1.00% Lean BH→WH",
             "alpha_s": "0.68% inside vendor 0.9% band",
             "open": [
-                "Gset champions unmatched (G17 13 edges)",
-                "Gset champions unmatched (aspiration <1% landed except G17)",
+                "Gset champions unmatched (G17 13 edges; family 11/11 under 1%)",
                 "vendor BR_H_gg field still stale; fold matches YR4",
+                "catalog 9 stored-gate rows are stale/wrong-object/in-band — ACCURACY_REFINE.md",
             ],
             "claims": "docs/CLAIMS.md",
         },
@@ -59,7 +59,7 @@ def main() -> int:
             "cryogenic QPU / Hilbert 2^n / QAOA box / FCI sales pitch",
         ],
         "jobs_current": {
-            "factor_Shor": "tiny N 3/3 and 4/4 — same job, larger moduli still to climb",
+            "factor_Shor": "far ρ 8/8 · log-N 8/8 (p±1 stage-2). RSA-2048 is smoothness / √p",
             "MaxCut": "11/11 under 1%; G17 0.427%",
             "chemistry": "68/68 @0.5% (pin formulas, not Hilbert FCI)",
         },

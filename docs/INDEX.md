@@ -48,7 +48,8 @@ Every living panel also writes a twin under `results/`.
 | [`V_CB_PUZZLE.md`](V_CB_PUZZLE.md) | Inclusive QM vs exclusive HEP — same algebra |
 | [`H0_TENSION.md`](H0_TENSION.md) | Hubble tension via Lean BH→WH bubble-bleed |
 | [`CONTESTED_SECTORS.md`](CONTESTED_SECTORS.md) | Lean contested panel on this pin |
-| [`OPEN_REMAINING.md`](OPEN_REMAINING.md) | Leftovers after vcb/h0: DE dual lane, α_s band, G17 |
+| [`OPEN_REMAINING.md`](OPEN_REMAINING.md) | Leftovers after vcb/h0: DE dual lane, α_s band, G17 13 edges |
+| [`ACCURACY_REFINE.md`](ACCURACY_REFINE.md) | Classify residuals: stale / wrong-object / in-band / real |
 | [`FORMULA_LIST.md`](FORMULA_LIST.md) | Every formula and what it solves |
 | [`HIRE_EXPAND.md`](HIRE_EXPAND.md) | Hired QC questions on this fold (factor / dlog / Simon / SAT / HHL) |
 | [`HIRE_CLIMB.md`](HIRE_CLIMB.md) | Next climb: 7-digit factor, Simon-16, SAT-16, Petersen, TSP, 1e7 |
@@ -85,7 +86,7 @@ Mind-side copy of the architecture answer lives in [fsot-neuron-zig `FSOT_NATIVE
 
 ## Climb history (older rungs, still green)
 
-These are the competitor-climb panels that got us here. They still run. They are not the first thing a stranger should read. Several still report G1 cut **11397 / 1.95%** (5% kill band). The living family cut is **11563 / 0.53%** — `GSET_FAMILY.md`.
+These are the competitor-climb panels that got us here. They still run. They are not the first thing a stranger should read. Several still report G1 cut **11397 / 1.95%** (5% kill band). The living family cut is **11585 / 0.336%** — `GSET_FAMILY.md`. Accuracy reclass: [`ACCURACY_REFINE.md`](ACCURACY_REFINE.md).
 
 `CLIMB.md` · `CLIMB_V2.md` · `FOLD_V2.md`–`FOLD_V6.md` · `CAPABILITY_AND_PATH_FORWARD.md` · `MARGIN_VS_QPU.md` · `KEEP_GOING.md` · `MEDIUM_NEXT.md` · `EXPAND_SIM.md` · `LEAN_FULL_ATLAS.md` · `ASK_QC.md` · `HARD_QUESTIONS.md` · `CROSSCHECK.md` · `TEXTBOOK_CIRCUIT_MAP.md` · `MULTIPROVER_VERIFICATION.md`
 

@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-08-18T01:48:38.019406+00:00",
+  "timestamp": "2026-08-18T03:43:57.460446+00:00",
   "suite": "formula_catalog",
   "pin": "D1D38A",
   "n_engine_and_tension": 18,
@@ -2317,5 +2317,5 @@
       "kind": "pin-wave"
     }
   ],
-  "wall_seconds": 0.03083679999690503
+  "wall_seconds": 0.02883209998253733
 }

@@ -1,5 +1,5 @@
 """
-Close the named heights: G17's 31 edges, and a log-N factor path.
+Close the named heights: G17 under 1% (13 edges), and a log-N factor path.
 
 G17: Laplacian spectral start (x^T L x = 4·cut) plus a φ-walk 3-flip.
 That is the quadratic form of MaxCut, not another 1-opt plateau.

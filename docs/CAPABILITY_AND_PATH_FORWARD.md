@@ -107,7 +107,7 @@ What stayed open (not a retune): Gset champions unmatched after the <1% aspirati
 
 ## Next builds (only if the wrap is reopened)
 
-1. More official Gset only with cited champion cuts (G11 is a signed object — do not mix). G17 stays written as a miss unless a lawful fold move (not a crawl) closes 31 edges.
+1. More official Gset only with cited champion cuts (G11 is a signed object — do not mix). G17 is under 1% (13 edges). A crawl is not a refine.
 2. Port further Lean atlas rows only as named domain folds, never as fitted coefficients.
 
 ## How to run

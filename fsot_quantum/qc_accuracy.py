@@ -130,7 +130,7 @@ def main() -> int:
         "",
         f"- G1 cut `{report['detail']['g1_cut']}` · rel vs 11624 "
         f"`{report['detail']['g1_rel_pct_vs_bks']}%` "
-        "(this 5% kill-band path; living family cut is 11563 / 0.53% — "
+        "(this 5% kill-band path; living family cut is 11585 / 0.336% — "
         "`docs/GSET_FAMILY.md`)",
         "",
         "## Reproduce",

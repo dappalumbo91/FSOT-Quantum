@@ -179,7 +179,7 @@ def main() -> int:
         "",
         "hire3–hire7 factored Fermat-close twins. That is **not** the RSA job. "
         "RSA moduli are two similar-bit primes that are not twin-close. "
-        "G17 was written as 31 edges and then left. This rung works those two.",
+        "G17 was written as 31 edges (now 13 / 0.427%). This rung works far primes.",
         "",
     ]
     if g17.get("cut_fold") is not None:

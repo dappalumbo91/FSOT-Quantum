@@ -1,10 +1,10 @@
 {
-  "timestamp": "2026-08-18T01:48:38.206920+00:00",
+  "timestamp": "2026-08-18T03:44:22.412072+00:00",
   "suite": "open_remaining",
   "pin": "D1D38A",
   "pin_file_edited": false,
   "overall_ok": true,
-  "wall_seconds": 0.00022799998987466097,
+  "wall_seconds": 0.000264400034211576,
   "rows": [
     {
       "id": "w0_cmb",
@@ -83,12 +83,12 @@
     },
     {
       "id": "G17",
-      "open": "Gset G17 1.017%",
-      "fold": 3016,
+      "open": "Gset G17 champion",
+      "fold": 3034,
       "published": 3047,
-      "rel_pct": 1.0173941581883819,
-      "ok": false,
-      "note": "31 edges short. Planar G14 is 30 edges / 0.98%. Same 1-opt class. Not crawled."
+      "rel_pct": 0.426649163111257,
+      "ok": true,
+      "note": "13 edges / 0.427%. Aspiration <1% met. Champion unmatched. Family 11/11. Not crawled."
     }
   ],
   "lean_anomalies": [
@@ -156,5 +156,6 @@
       "source": "FSOT-2.1-Lean cosmology_anomalies (pin D1D38A)"
     }
   ],
-  "g17_still_open": true
+  "g17_still_open": false,
+  "g17_champion_unmatched": true
 }
