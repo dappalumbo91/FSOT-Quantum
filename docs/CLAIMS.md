@@ -56,6 +56,7 @@ Living ledgers. Re-run the command. Miss one and the pin is wrong — except whe
 | Hired QC climb 7 | **22/22** | `python -m fsot_quantum hire7` | `HIRE_CLIMB7.md` |
 | Heights (far factor / G17) | far **8/8** · G17 **0.427%** (13 edges) | `python -m fsot_quantum heights2` | `HEIGHTS_NEXT.md` |
 | Heights 3 log-N factor | **8/8** (p−1 stage-2 + p+1 + kN Fermat) | `python -m fsot_quantum heights3` | `HEIGHTS3.md` |
+| Heights 4 ECM | **8/8** p±1-unsmooth far moduli | `python -m fsot_quantum heights4` | `HEIGHTS4.md` |
 | Accuracy refine | catalog living **9/9** · log-N **8/8** | `python -m fsot_quantum refine` | `ACCURACY_REFINE.md` |
 | Formula catalog | **18** solvers · **207/216** stored @0.5% · living **9/9** reclass | `python -m fsot_quantum formulas` | `FORMULA_LIST.md` |
 | Multiprover stamp | **FSOT_QUANTUM_MULTIPROVER_OK** | `python -m fsot_quantum stamp` | `MULTIPROVER_VERIFICATION.md` |
@@ -77,18 +78,18 @@ We do **not** simulate their architecture. That would be agreeing their geometry
 |-----------|----------------|-----------|---------------|
 | Cryogenic QPU / NISQ box | usable answers without a fridge | GPU/CPU + pin | the living panels above |
 | Hilbert / statevector / FTQC | hold the job as scale grows | folds, not \(2^n\) amps | fold path is the scale law — `FOLD_NOT_HILBERT.md` |
-| Shor / RSA | period and factor | modular + log-N (p−1/p+1/kN, stage-2) + rho | far ρ **8/8**; log-N **8/8**. RSA-2048 is smoothness / √p, not a twin-Fermat climb |
+| Shor / RSA | period and factor | modular + log-N (p−1/p+1/kN/ECM) + rho | far ρ **8/8**; log-N **8/8**; ECM **8/8** on p±1-unsmooth far moduli. RSA-2048 is smoothness / √p, not a twin-Fermat climb |
 | Discrete log | \(g^x\equiv h\pmod p\) | modular fold | hire 10/10 · hire2 **6/6** through p=40009 |
 | Simon / HSP | hidden xor string | collision fold + GF(2) | hire 8-bit · hire2 **12 and 16 bit** |
 | SAT / QUBO / color / TSP | assignment / tour | energy folds | SAT-16 · partition \{1..23\} · Petersen · TSP n=7 exact |
 | HHL | solve \(Ax=b\) | integer Cramer fold | hire 3/3 · hire2 **4×4** |
 | Grover | marked search | oracle-field collapse | through **1e7** exact |
-| QAOA / annealer | MaxCut / Ising | fold + KL + 2-opt + BFS-layer / spectral | **11/11 under 1%**; G17 **0.427%** (13 edges); champions still unmatched |
+| QAOA / annealer | MaxCut / Ising | fold + KL + 2-opt + BFS-layer / spectral | **11/11 under 1%**; G17 **0.427%** (13 edges); G22 **0.734%** (98 edges); champions unmatched |
 | FCI / quantum chemistry | chemistry observables | pin formulas | **68/68 @ 0.5%** |
 | Surface-code “threshold” | reliable logical work | fold residual vs published object | their \(d\)-threshold is a fridge metric; ours is residual on the question |
 | Chatbot “AI” | mind | [fsot-neuron-zig](https://github.com/dappalumbo91/fsot-neuron-zig) | this repo is the law organ, not the body |
 
-Current score is not a refusal. Factoring is far ρ **8/8** and log-N **8/8** today, not RSA-2048. Champion MaxCut is 13–114 edges short **today**. Those are the next rungs on the same jobs, not a reason to go build their stack.
+Current score is not a refusal. Factoring is far ρ **8/8**, log-N **8/8**, and ECM **8/8** today, not RSA-2048. Champion MaxCut is 13–98 edges short **today**. Those are the next rungs on the same jobs, not a reason to go build their stack.
 
 ---
 
@@ -112,13 +113,13 @@ Written as open. Not dressed up. Not a reason to edit the pin.
 
 | Object | Status | Why it stays |
 |--------|--------|--------------|
-| Gset G17 planar | **0.427%** (3034 vs 3047, 13 edges) | Aspiration <1% met. Champion still unmatched. |
-| Gset champions | 13–114 edges short | Aspiration <1% landed **11/11**. Do not advertise champion-matching. |
+| Gset G17 | **0.427%** (3034 vs 3047, 13 edges) | Aspiration <1% met. Full zero-ridge exact did not move it. Champion unmatched. |
+| Gset champions | 13–98 edges short | Aspiration <1% landed **11/11**. G22 114→98 via n=2000 spectral/BFS. Do not advertise champion-matching. |
 | Vendor `BR_H_gg` field | still **0.0785** | Fold \(\varphi^{-4}-\gamma^5=0.081823\) already matches YR4 0.08187 (0.058%). Stale stored field. |
 | Catalog 9 stored-gate rows | living **9/9** | Stale stored / wrong object / in-band / inventory rounding. [`ACCURACY_REFINE.md`](ACCURACY_REFINE.md). |
 | Combined exclusive \(\lvert V_{cb}\rvert=0.0398\) | not scored | D+D* blend. The HEP object is Belle II \(B\to D\ell\nu\) 0.0392. |
 | Atlas 432 | needs `_ref/FSOT-2.1-Lean` | Without the clone, atlas counts skip; 35 pin domains still score. |
-| Period / factor (Shor job) | far ρ **8/8** · log-N **8/8** | RSA-2048 is smoothness / √p on **this** path, not a Hilbert replay. |
+| Period / factor (Shor job) | far ρ **8/8** · log-N **8/8** · ECM **8/8** | RSA-2048 is smoothness / √p on **this** path, not a Hilbert replay. |
 
 SH0ES at **1.00%** is the Lean BH→WH inflated sector (inside the contested 2.5% band, 0.71σ of ±1.04). It is **not** the old 6.30% leftover.
 

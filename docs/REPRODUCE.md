@@ -38,6 +38,7 @@ python -m fsot_quantum hire7       # 13-digit factor / SAT-32 / TSP-11 22/22
 python -m fsot_quantum heights     # G17 + far-prime (RSA-shaped) factoring
 python -m fsot_quantum heights2    # G17 under 1% + p−1 log-N
 python -m fsot_quantum heights3    # log-N 8/8 (p−1 stage-2 + p+1 + kN)
+python -m fsot_quantum heights4    # ECM 8/8 on p±1-unsmooth far moduli
 python -m fsot_quantum refine      # accuracy reclass 9/9 · log-N 8/8
 python -m fsot_quantum formulas    # formula list
 python -m fsot_quantum stamp       # Lean · Coq · Isabelle · F* · Python
@@ -73,6 +74,7 @@ python -m fsot_quantum.hire_climb6
 python -m fsot_quantum.hire_climb7
 python -m fsot_quantum.heights
 python -m fsot_quantum.heights3
+python -m fsot_quantum.heights4
 python -m fsot_quantum.accuracy_refine
 python -m fsot_quantum.formula_catalog
 python -m fsot_quantum stamp

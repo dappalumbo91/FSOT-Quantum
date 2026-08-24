@@ -134,6 +134,7 @@ python -m fsot_quantum hire6      # 11-digit factor / SAT-28 / TSP-10
 python -m fsot_quantum hire7      # 13-digit factor / SAT-32 / TSP-11
 python -m fsot_quantum heights    # G17 + far-prime factoring
 python -m fsot_quantum heights3   # log-N 8/8
+python -m fsot_quantum heights4   # ECM 8/8
 python -m fsot_quantum formulas   # formula list
 python -m fsot_quantum organ      # JSON for neuron-zig
 python -m fsot_quantum stamp      # Lean · Coq · Isabelle · F* · Python

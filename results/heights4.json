@@ -1,0 +1,149 @@
+{
+  "timestamp": "2026-08-18T04:06:08.903405+00:00",
+  "suite": "heights4",
+  "pin": "D1D38A",
+  "pin_file_edited": false,
+  "overall_ok": true,
+  "ecm_ok": 8,
+  "ecm_n": 8,
+  "logN_ok": 8,
+  "g17": {
+    "cut": 3034,
+    "published": 3047,
+    "short": 13
+  },
+  "rsa2048_B": 49152,
+  "S_QM": 0.9555063001027194,
+  "S_QC": -0.14767310363368633,
+  "wall_seconds": 0.6196781999897212,
+  "rows": [
+    {
+      "p": 140683,
+      "q": 1000289,
+      "N": 140723657387,
+      "bits": 38,
+      "pminus1": "pminus1_exhausted",
+      "pplus1": "pplus1_exhausted",
+      "fermat_k": "fermat_multiplier_exhausted",
+      "ecm": "ecm_stage2",
+      "logN": "ecm_stage2",
+      "factors": [
+        140683,
+        1000289
+      ],
+      "ok": true
+    },
+    {
+      "p": 140683,
+      "q": 1000291,
+      "N": 140723938753,
+      "bits": 38,
+      "pminus1": "pminus1_exhausted",
+      "pplus1": "pplus1_exhausted",
+      "fermat_k": "fermat_multiplier_exhausted",
+      "ecm": "ecm_stage1",
+      "logN": "ecm_stage1",
+      "factors": [
+        140683,
+        1000291
+      ],
+      "ok": true
+    },
+    {
+      "p": 140683,
+      "q": 1000423,
+      "N": 140742508909,
+      "bits": 38,
+      "pminus1": "pminus1_exhausted",
+      "pplus1": "pplus1_exhausted",
+      "fermat_k": "fermat_multiplier_exhausted",
+      "ecm": "ecm_stage1",
+      "logN": "ecm_stage1",
+      "factors": [
+        140683,
+        1000423
+      ],
+      "ok": true
+    },
+    {
+      "p": 142123,
+      "q": 1000289,
+      "N": 142164073547,
+      "bits": 38,
+      "pminus1": "pminus1_exhausted",
+      "pplus1": "pplus1_exhausted",
+      "fermat_k": "fermat_multiplier_exhausted",
+      "ecm": "ecm_stage2",
+      "logN": "ecm_stage2",
+      "factors": [
+        142123,
+        1000289
+      ],
+      "ok": true
+    },
+    {
+      "p": 143357,
+      "q": 1000289,
+      "N": 143398430173,
+      "bits": 38,
+      "pminus1": "pminus1_exhausted",
+      "pplus1": "pplus1_exhausted",
+      "fermat_k": "fermat_multiplier_exhausted",
+      "ecm": "ecm_stage1",
+      "logN": "ecm_stage1",
+      "factors": [
+        143357,
+        1000289
+      ],
+      "ok": true
+    },
+    {
+      "p": 144427,
+      "q": 1000289,
+      "N": 144468739403,
+      "bits": 38,
+      "pminus1": "pminus1_exhausted",
+      "pplus1": "pplus1_exhausted",
+      "fermat_k": "fermat_multiplier_exhausted",
+      "ecm": "ecm_stage1",
+      "logN": "ecm_stage1",
+      "factors": [
+        144427,
+        1000289
+      ],
+      "ok": true
+    },
+    {
+      "p": 146347,
+      "q": 1000289,
+      "N": 146389294283,
+      "bits": 38,
+      "pminus1": "pminus1_exhausted",
+      "pplus1": "pplus1_exhausted",
+      "fermat_k": "fermat_multiplier_exhausted",
+      "ecm": "ecm_stage2",
+      "logN": "ecm_stage2",
+      "factors": [
+        146347,
+        1000289
+      ],
+      "ok": true
+    },
+    {
+      "p": 146837,
+      "q": 1000289,
+      "N": 146879435893,
+      "bits": 38,
+      "pminus1": "pminus1_exhausted",
+      "pplus1": "pplus1_exhausted",
+      "fermat_k": "fermat_multiplier_exhausted",
+      "ecm": "ecm_stage1",
+      "logN": "ecm_stage1",
+      "factors": [
+        146837,
+        1000289
+      ],
+      "ok": true
+    }
+  ]
+}

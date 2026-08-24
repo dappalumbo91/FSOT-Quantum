@@ -103,7 +103,8 @@ def main() -> int:
         "Same object as G1 (unweighted MaxCut). Signed Gset (G6–G13, G18–G21) "
         "is a different object. Aspiration <1% of published champion. "
         "No new coefficients. Family is **11/11 under 1%**. Champions still "
-        "unmatched (G17 is 13 edges / 0.427%).",
+        "unmatched (G17 13 edges / 0.427%; G22 98 edges after the n=2000 "
+        "spectral/BFS lane).",
         "",
         "| Graph | n | m | fold | published | rel% | <1% |",
         "|-------|--:|--:|-----:|----------:|-----:|:---:|",

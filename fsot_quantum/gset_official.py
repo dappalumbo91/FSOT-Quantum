@@ -171,27 +171,68 @@ def _fast_maxcut(n: int, edges: list[tuple[int, int, int]]) -> tuple[int, list[i
             row.append(1 if (x >> 15) & 1 else -1)
         starts.append(row)
 
-    # Laplacian spectral start: sign of v_max of L = D−A.
-    # x^T L x = 4·cut for x=±1. Power iteration, seed vector, no coefficient.
-    if n <= 800:
-        v = [
-            float(((phi_m * (i + 1)) & 0xFFFF) / 65536.0) - 0.5
-            for i in range(n)
-        ]
-        n_iter = max(n, int(math.floor(float(SEEDS.e) * float(SEEDS.pi))) * int(math.floor(float(SEEDS.pi))))
+    # Laplacian of L = D−A. x^T L x = 4·cut for x=±1.
+    # n≤800 keeps the single power-iter start (G1–G17 living cuts).
+    # n=2000 had no spectral/BFS; extra deflated modes + hyperplanes
+    # are that scale's lane, not a coefficient.
+    if n <= 2000:
+        n_iter = max(
+            n,
+            int(math.floor(float(SEEDS.e) * float(SEEDS.pi)))
+            * int(math.floor(float(SEEDS.pi))),
+        )
+        n_modes = 1 if n <= 800 else max(2, int(math.floor(float(SEEDS.pi))))
         deg = [len(adj[i]) for i in range(n)]
-        for _ in range(n_iter):
-            w = [0.0] * n
-            for i, nbr in enumerate(adj):
-                acc = deg[i] * v[i]
-                for j in nbr:
-                    acc -= v[j]
-                w[i] = acc
-            nrm = math.sqrt(sum(x * x for x in w)) or 1.0
-            v = [x / nrm for x in w]
-        starts.append([1 if v[i] >= 0.0 else -1 for i in range(n)])
+        modes: list[list[float]] = []
+        for r in range(n_modes):
+            if r == 0:
+                v = [
+                    float(((phi_m * (i + 1)) & 0xFFFF) / 65536.0) - 0.5
+                    for i in range(n)
+                ]
+            else:
+                v = [
+                    float(((phi_m * (i + 1) * (r + 3)) & 0xFFFF) / 65536.0) - 0.5
+                    for i in range(n)
+                ]
+            for u in modes:
+                dot = sum(v[i] * u[i] for i in range(n))
+                v = [v[i] - dot * u[i] for i in range(n)]
+            nrm = math.sqrt(sum(x * x for x in v)) or 1.0
+            v = [x / nrm for x in v]
+            for _ in range(n_iter):
+                w = [0.0] * n
+                for i, nbr in enumerate(adj):
+                    acc = deg[i] * v[i]
+                    for j in nbr:
+                        acc -= v[j]
+                    w[i] = acc
+                for u in modes:
+                    dot = sum(w[i] * u[i] for i in range(n))
+                    w = [w[i] - dot * u[i] for i in range(n)]
+                nrm = math.sqrt(sum(x * x for x in w)) or 1.0
+                v = [x / nrm for x in w]
+            modes.append(v)
+            starts.append([1 if v[i] >= 0.0 else -1 for i in range(n)])
+        if n > 800:
+            thetas = (
+                0.0,
+                1.0 / float(SEEDS.phi),
+                1.0 / float(SEEDS.e),
+                1.0 / float(SEEDS.pi),
+            )
+            for i in range(len(modes)):
+                for j in range(i + 1, len(modes)):
+                    for th in thetas:
+                        cth = math.cos(2.0 * math.pi * th)
+                        sth = math.sin(2.0 * math.pi * th)
+                        starts.append(
+                            [
+                                1 if modes[i][t] * cth + modes[j][t] * sth >= 0.0 else -1
+                                for t in range(n)
+                            ]
+                        )
 
-        # Graph-distance layers from φ-picked sources (planar / BFS fold).
         n_src = max(
             int(math.isqrt(n)),
             int(math.floor(float(SEEDS.e) * float(SEEDS.pi))) * int(math.floor(float(SEEDS.pi))),
@@ -388,12 +429,35 @@ def _fast_maxcut(n: int, edges: list[tuple[int, int, int]]) -> tuple[int, list[i
 
     # KL + 2-opt on the top floor(e·π) distinct 1-opt basins
     pool.sort(key=lambda t: -t[0])
-    n_kl = len(pool) if n <= 800 else max(1, int(math.floor(float(SEEDS.e) * float(SEEDS.pi))))
-    seen_c = set()
-    for c0, s0 in pool[:n_kl]:
-        if c0 in seen_c:
-            continue
-        seen_c.add(c0)
+    # n>800 used to KL only ⌊eπ⌋ basins. Extra spectral/BFS starts
+    # would then displace the old winners. Same seed product as BFS
+    # source count keeps the old basins in the pool.
+    n_kl = len(pool) if n <= 800 else min(
+        len(pool),
+        max(
+            int(math.floor(float(SEEDS.e) * float(SEEDS.pi)))
+            * int(math.floor(float(SEEDS.pi))),
+            int(math.floor(float(SEEDS.e) * float(SEEDS.pi))),
+        ),
+    )
+    if n <= 800:
+        seen_c: set[int] = set()
+        refine_iter = []
+        for c0, s0 in pool[:n_kl]:
+            if c0 in seen_c:
+                continue
+            seen_c.add(c0)
+            refine_iter.append(s0)
+    else:
+        seen_s: set[tuple[int, ...]] = set()
+        refine_iter = []
+        for c0, s0 in pool[:n_kl]:
+            sig = tuple(s0)
+            if sig in seen_s:
+                continue
+            seen_s.add(sig)
+            refine_iter.append(s0)
+    for s0 in refine_iter:
         s = refine(s0)
         c = cut_of(s)
         if c > best_c:
@@ -482,8 +546,9 @@ def _fast_maxcut(n: int, edges: list[tuple[int, int, int]]) -> tuple[int, list[i
 
     # Split monochromatic uncut blobs. Extra uncut edges sit inside
     # same-sign components; flipping a φ-subset of a blob is the
-    # planar/cluster move 1-opt cannot make.
-    if n <= 800:
+    # cluster move 1-opt cannot make. n=2000 also gets the adjacency
+    # spectral split of each blob.
+    if n <= 2000:
         seen_v = [False] * n
         comps: list[list[int]] = []
         for src in range(n):
@@ -502,6 +567,11 @@ def _fast_maxcut(n: int, edges: list[tuple[int, int, int]]) -> tuple[int, list[i
                         comp.append(v)
             if len(comp) >= 3:
                 comps.append(comp)
+        blob_iter = max(
+            int(math.floor(float(SEEDS.e) * float(SEEDS.pi)))
+            * int(math.floor(float(SEEDS.pi))),
+            8,
+        )
         for ci, comp in enumerate(comps):
             trial = list(best)
             for i in comp:
@@ -522,6 +592,35 @@ def _fast_maxcut(n: int, edges: list[tuple[int, int, int]]) -> tuple[int, list[i
             tc = cut_of(trial)
             if tc > best_c:
                 best, best_c = trial, tc
+            if n > 800 and len(comp) >= 4:
+                loc = {v: i for i, v in enumerate(comp)}
+                sblob = len(comp)
+                av = [
+                    float(((phi_m * (comp[i] + 1) * (ci + 5)) & 0xFFFF) / 65536.0) - 0.5
+                    for i in range(sblob)
+                ]
+                nrm = math.sqrt(sum(x * x for x in av)) or 1.0
+                av = [x / nrm for x in av]
+                for _ in range(min(blob_iter, sblob)):
+                    w = [0.0] * sblob
+                    for i, v in enumerate(comp):
+                        acc = 0.0
+                        for nb in adj[v]:
+                            j = loc.get(nb)
+                            if j is not None:
+                                acc += av[j]
+                        w[i] = acc
+                    nrm = math.sqrt(sum(x * x for x in w)) or 1.0
+                    av = [x / nrm for x in w]
+                trial = list(best)
+                for i, v in enumerate(comp):
+                    if av[i] >= 0.0:
+                        trial[v] = -trial[v]
+                trial = refine(trial)
+                tc = cut_of(trial)
+                if tc > best_c:
+                    best, best_c = trial, tc
+
     return best_c, best
 
 

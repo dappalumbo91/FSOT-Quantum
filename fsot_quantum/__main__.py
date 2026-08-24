@@ -34,6 +34,7 @@ Field entry: python -m fsot_quantum [cmd]
   heights    G17 + far-prime (RSA-shaped) factoring — the written heights
   heights2   G17 close + p−1 log-N factor
   heights3   log-N: p−1 + p+1 + kN Fermat (stage-2 closes the last pair)
+  heights4   ECM on p±1-unsmooth far moduli (next RSA-wall lane)
   refine     accuracy: classify residuals, living catalog, log-N stage-2
   formulas   formula list — what each formula solves
   organ      export S/κ/QI JSON for neuron-zig
@@ -162,6 +163,9 @@ def main() -> int:
         return m()
     if c in ("heights3", "height3"):
         from fsot_quantum.heights3 import main as m
+        return m()
+    if c in ("heights4", "height4"):
+        from fsot_quantum.heights4 import main as m
         return m()
     if c in ("refine", "accuracy_refine"):
         from fsot_quantum.accuracy_refine import main as m

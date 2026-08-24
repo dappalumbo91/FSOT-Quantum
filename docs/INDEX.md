@@ -63,7 +63,8 @@ Every living panel also writes a twin under `results/`.
 | [`HIRE_CLIMB7.md`](HIRE_CLIMB7.md) | 13-digit factor / SAT-32 / TSP-11 / HHL 8×8 |
 | [`HEIGHTS.md`](HEIGHTS.md) | G17 + far-prime (RSA-shaped) factoring |
 | [`HEIGHTS_NEXT.md`](HEIGHTS_NEXT.md) | G17 closed under 1%; p−1 log-N factor |
-| [`HEIGHTS3.md`](HEIGHTS3.md) | log-N: p−1 + Williams p+1 + kN Fermat **7/8** |
+| [`HEIGHTS3.md`](HEIGHTS3.md) | log-N: p−1 + Williams p+1 + kN Fermat **8/8** |
+| [`HEIGHTS4.md`](HEIGHTS4.md) | ECM on p±1-unsmooth far moduli **8/8** |
 | [`MULTIPROVER_VERIFICATION.md`](MULTIPROVER_VERIFICATION.md) | Lean · Coq · Isabelle · F\* · Python stamp |
 | [`QC_ACCURACY.md`](QC_ACCURACY.md) | Hired QC/QM jobs on ordinary hardware |
 

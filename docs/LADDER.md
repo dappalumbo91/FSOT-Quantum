@@ -94,6 +94,7 @@ These are published values. Miss one and the pin is wrong.
 | Hired QC climb 7 | 13-digit factor / SAT-32 / TSP-11 | **22/22** | `HIRE_CLIMB7.md` — factors through 1000444049203 |
 | Heights | far-prime factor + G17 | far **8/8** · G17 **0.427%** | `HEIGHTS_NEXT.md` — G17 under 1%; p−1 3/8 |
 | Heights 3 | log-N factor (not √p) | **8/8** | `HEIGHTS3.md` — p±1 stage-2 closes `100003×1000003` |
+| Heights 4 | ECM after p±1 + Fermat miss | **8/8** | `HEIGHTS4.md` — same B/B2, seed curves |
 | Accuracy refine | right-object catalog + log-N stage-2 | living **9/9** · log-N **8/8** | `ACCURACY_REFINE.md` |
 | Open objects | wrong-object diagnosis | exclusive blend **6.03%** / SH0ES global **6.30%** if scored wrong | `OPEN_OBJECTS.md` — superseded by `vcb` / `h0` |
 | \(V_{cb}\) puzzle | inclusive QM vs exclusive B→D HEP | inclusive **0.002%** · exclusive **0.15%** | `V_CB_PUZZLE.md` — Belle II 2025 0.0392, not the D+D* blend |
@@ -117,7 +118,8 @@ Official Gset MaxCut vs published champions. Same object, same job people hire Q
 |-------|-----------|---------------------|-----|---------|
 | G1 n=800 | 11624 | 11585 | **0.336%** | aspiration met — 39 edges short of champion |
 | G14 n=800 | 3064 | 3042 | **0.718%** | aspiration met — 22 edges short |
-| G22 n=2000 | 13359 | 13245 | **0.85%** | aspiration met — 114 edges short |
+| G22 n=2000 | 13359 | 13261 | **0.73%** | aspiration met — 98 edges short |
+| G23 n=2000 | 13344 | 13271 | **0.55%** | aspiration met — 73 edges short |
 
 Graph rung **closed at the <1% aspiration** for the whole unweighted family: **11/11 under 1%**. G17 is **0.427%** (13 edges). Champions still unmatched; that is written, not hidden. **Do not advertise MaxCut as champion-matching.**
 

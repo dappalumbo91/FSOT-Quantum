@@ -642,6 +642,160 @@ def fold_pplus1(N: int) -> dict[str, Any]:
     }
 
 
+def _modinv_or_split(x: int, N: int) -> tuple[int | None, int | None]:
+    """Inverse of x mod N, or a proper factor if gcd fires."""
+    x %= N
+    if x == 0:
+        return None, None
+    g = math.gcd(x, N)
+    if 1 < g < N:
+        return None, g
+    if g != 1:
+        return None, None
+    return pow(x, -1, N), None
+
+
+def _ec_add(
+    p: tuple[int, int] | None,
+    q: tuple[int, int] | None,
+    a: int,
+    N: int,
+) -> tuple[tuple[int, int] | None, int | None]:
+    if p is None:
+        return q, None
+    if q is None:
+        return p, None
+    x1, y1 = p
+    x2, y2 = q
+    if x1 == x2:
+        if (y1 + y2) % N == 0:
+            return None, None
+        num = (3 * x1 * x1 + a) % N
+        den = (2 * y1) % N
+    else:
+        num = (y2 - y1) % N
+        den = (x2 - x1) % N
+    inv, fac = _modinv_or_split(den, N)
+    if fac is not None:
+        return None, fac
+    if inv is None:
+        return None, None
+    lam = (num * inv) % N
+    x3 = (lam * lam - x1 - x2) % N
+    y3 = (lam * (x1 - x3) - y1) % N
+    return (x3, y3), None
+
+
+def _ec_mul(
+    k: int,
+    p0: tuple[int, int],
+    a: int,
+    N: int,
+) -> tuple[tuple[int, int] | None, int | None]:
+    acc: tuple[int, int] | None = None
+    base: tuple[int, int] | None = p0
+    while k > 0:
+        if k & 1:
+            acc, fac = _ec_add(acc, base, a, N)
+            if fac is not None:
+                return None, fac
+        base, fac = _ec_add(base, base, a, N)
+        if fac is not None:
+            return None, fac
+        k >>= 1
+    return acc, None
+
+
+def fold_ecm(N: int) -> dict[str, Any]:
+    """
+    Lenstra ECM — next log-N lane after p±1.
+
+    Same B / B2 as Pollard p−1. Curve parameters and the point come
+    from seeds (no RNG, no new constant). Hits when a group order on
+    E(F_p) is B-smooth even if p±1 are not.
+    """
+    if N < 4 or N % 2 == 0:
+        return fold_factor(N)
+    bl = max(N.bit_length(), 8)
+    B = bl * max(2, int(math.floor(float(SEEDS.e) * float(SEEDS.pi)))) * max(
+        2, int(math.floor(float(SEEDS.pi)))
+    )
+    B2 = _stage2_bound(B)
+    primes = _primes_upto(B2)
+    # Point (x,1) on y² = x³ + a x + b, a and x from seeds.
+    seeds_a = (
+        max(1, int(math.floor(float(SEEDS.pi)))),
+        max(1, int(math.floor(float(SEEDS.e)))),
+        max(1, int(math.floor(float(SEEDS.phi)))),
+    )
+    n_extra = max(1, int(math.floor(float(SEEDS.e) * float(SEEDS.pi))))
+    curves: list[tuple[int, int]] = [(a, 2 + t) for t, a in enumerate(seeds_a)]
+    phi_m = int(float(SEEDS.phi) * 1e6)
+    for t in range(n_extra):
+        a = 1 + (phi_m * (t + 3) % 97)
+        x0 = 3 + t
+        if (a, x0) not in curves:
+            curves.append((a, x0))
+    steps = 0
+    for a, x0 in curves:
+        y0 = 1
+        pt: tuple[int, int] | None = (x0 % N, y0 % N)
+        # Stage 1: [lcm(1..B)] P
+        for q in primes:
+            if q > B:
+                break
+            qe = q
+            while qe * q <= B:
+                qe *= q
+            if pt is None:
+                break
+            pt, fac = _ec_mul(qe, pt, a, N)
+            steps += 1
+            if fac is not None:
+                return {
+                    "job": "factor_Shor_end",
+                    "N": N,
+                    "ok": True,
+                    "factors": sorted([fac, N // fac]),
+                    "method": "ecm_stage1",
+                    "B": B,
+                    "B2": B2,
+                    "a": a,
+                    "steps": steps,
+                }
+        if pt is None:
+            continue
+        # Stage 2: one extra prime in (B, B2]
+        for q in primes:
+            if q <= B:
+                continue
+            _, fac = _ec_mul(q, pt, a, N)
+            steps += 1
+            if fac is not None:
+                return {
+                    "job": "factor_Shor_end",
+                    "N": N,
+                    "ok": True,
+                    "factors": sorted([fac, N // fac]),
+                    "method": "ecm_stage2",
+                    "B": B,
+                    "B2": B2,
+                    "q": q,
+                    "a": a,
+                    "steps": steps,
+                }
+    return {
+        "job": "factor_Shor_end",
+        "N": N,
+        "ok": False,
+        "factors": None,
+        "method": "ecm_exhausted",
+        "B": B,
+        "B2": B2,
+        "steps": steps,
+    }
+
+
 def fold_fermat_multipliers(N: int) -> dict[str, Any]:
     """
     Fermat on k·N for seed k. Hits when p/q is near a small rational
@@ -688,12 +842,12 @@ def fold_fermat_multipliers(N: int) -> dict[str, Any]:
 
 
 def fold_logN(N: int) -> dict[str, Any]:
-    """p−1 (incl. stage-2), then p+1 (incl. stage-2), then kN Fermat."""
-    for fn in (fold_pminus1, fold_pplus1, fold_fermat_multipliers):
+    """p−1 / p+1 (stage-2), kN Fermat, then ECM. Same B / B2."""
+    for fn in (fold_pminus1, fold_pplus1, fold_fermat_multipliers, fold_ecm):
         got = fn(N)
         if got.get("ok"):
             return got
-    got = fold_pminus1(N)
+    got = fold_ecm(N)
     got["method"] = "logN_exhausted"
     return got
 

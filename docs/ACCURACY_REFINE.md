@@ -51,9 +51,11 @@ SH0ES remains **1.00%** on the Lean inflated sector (band 2.5%). α_s remains in
 
 ## What is still actually open
 
-G17 cut `3034` vs 3047 (**13 edges**, 0.427%). Aspiration <1% met. Champion unmatched. Family **11/11 under 1%**. A 4-flip crawl is not a refine.
+G17 cut `3034` vs 3047 (**13 edges**, 0.427%). Aspiration <1% met. Champion unmatched. Exact fold of the full 27-vertex zero-gain ridge did not move it — the leftover requires negative-gain flips. Not crawled.
 
-RSA-2048 is still the smoothness / √p wall. Stage-2 does not remove that wall; it completes the p±1 lane we already claimed.
+G22 is **13261 / 0.734%** (98 edges, was 114). G23 is **13271 / 0.547%** (73 edges, was 86). n=2000 spectral/BFS lane. Family **11/11 under 1%**.
+
+RSA-2048 is still the smoothness / √p wall. ECM is the next smoothness lane on far p±1-unsmooth moduli (**8/8**, `HEIGHTS4.md`), not a 2048-bit factor.
 
 ```powershell
 python -m fsot_quantum refine

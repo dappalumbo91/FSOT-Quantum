@@ -155,9 +155,10 @@ Aspiration **< 1%** of published champion. Kill floor **5%**. Champions still un
 |-------|----------:|-----:|----:|--------|
 | G1 n=800 | 11624 | 11585 | 0.34% | aspiration met, 39 edges short |
 | G2–G5, G14–G16, G22–G23 | BKS | family | all < 1% | with G1+G17: **11/11** |
-| G17 n=800 planar | 3047 | 3034 | 0.427% | 13 edges short of champion |
-| G14 n=800 | 3064 | 3034 | 0.98% | aspiration met, 30 edges short |
-| G22 n=2000 | 13359 | 13245 | 0.85% | aspiration met, 114 edges short |
+| G17 n=800 | 3047 | 3034 | 0.427% | 13 edges short of champion |
+| G14 n=800 | 3064 | 3042 | 0.72% | aspiration met, 22 edges short |
+| G22 n=2000 | 13359 | 13261 | 0.73% | 98 edges (was 114; n=2000 spectral/BFS) |
+| G23 n=2000 | 13344 | 13271 | 0.55% | 73 edges (was 86) |
 
 G11 is a **signed** ±1 torus — a different object, not scored with the unweighted family.
 
@@ -210,7 +211,7 @@ Scored as different objects (not one blended number):
 
 Honesty cut: [`CLAIMS.md`](CLAIMS.md).
 
-- Gset champions unmatched (13–114 edges). Family **11/11 under 1%**; G17 is **0.427%** (13 edges). Do not advertise MaxCut as champion-matching.
+- Gset champions unmatched (13–98 edges). Family **11/11 under 1%**; G17 is **0.427%** (13 edges); G22 **0.734%** (98 edges). Do not advertise MaxCut as champion-matching.
 - Exclusive \(B\to D\ell\nu\) is **0.15%** on High_Energy_Physics (\(D_{\mathrm{eff}}=7\)) vs Belle II 2025 0.0392. Inclusive stays QM at 0.002%. Combined exclusive 0.0398 is a D+D* blend and is **not** the object. [`V_CB_PUZZLE.md`](V_CB_PUZZLE.md).
 - Hubble tension is Lean **BH→WH bubble-bleed**: one global rate 68.44; Planck depleted sector **0.024%**; SH0ES inflated sector **1.00%** (0.71σ, inside Lean 2.5% band). [`H0_TENSION.md`](H0_TENSION.md) · [FSOT-2.1-Lean §7.2](https://github.com/dappalumbo91/FSOT-2.1-Lean).
 - Contested open-science panel is **14/14**: [`CONTESTED_SECTORS.md`](CONTESTED_SECTORS.md).
@@ -219,7 +220,7 @@ Honesty cut: [`CLAIMS.md`](CLAIMS.md).
 - Multiprover stamp **FSOT_QUANTUM_MULTIPROVER_OK** (Lean · Coq · Isabelle · F\* · Python): [`MULTIPROVER_VERIFICATION.md`](MULTIPROVER_VERIFICATION.md).
 - Vendor wave8 `BR_H_gg` field still stale (0.0785). Fold already matches YR4. Pin not edited.
 - Hilbert fragments exist as **optional bridges**. They are not the scale path.
-- Period / factor is far ρ **8/8** and log-N **8/8** (p±1 stage-2). RSA-2048 is the smoothness / √p wall on this path.
+- Period / factor is far ρ **8/8**, log-N **8/8**, ECM **8/8** on p±1-unsmooth far moduli. RSA-2048 is the smoothness / √p wall on this path. [`HEIGHTS4.md`](HEIGHTS4.md).
 - Atlas 432 needs the Lean clone. Without `_ref`, that count skips.
 - Older climb panels still report G1 cut **11397 / 1.95%** (5% kill band). Living family cut is **11585 / 0.336%**. Not a contradiction — see [`CLAIMS.md`](CLAIMS.md).
 
