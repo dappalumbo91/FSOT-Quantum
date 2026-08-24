@@ -38,7 +38,9 @@ Field entry: python -m fsot_quantum [cmd]
   heights5   ECM at 41-bit far p±1-unsmooth
   heights6   ECM at 46-bit far p±1-unsmooth
   heights7   ECM at 48-bit far p±1-unsmooth
+  heights8   ECM at 52-bit far p±1-unsmooth
   known      known-answer QC jobs vs published objects
+  vqe        H2/LiH objects + amplitude estimation (not blended)
   refine     accuracy: classify residuals, living catalog, log-N stage-2
   formulas   formula list — what each formula solves
   organ      export S/κ/QI JSON for neuron-zig
@@ -182,6 +184,12 @@ def main() -> int:
         return m()
     if c in ("known", "known_qc", "crossref"):
         from fsot_quantum.known_qc import main as m
+        return m()
+    if c in ("vqe", "vqe_object", "h2"):
+        from fsot_quantum.vqe_object import main as m
+        return m()
+    if c in ("heights8", "height8"):
+        from fsot_quantum.heights8 import main as m
         return m()
     if c in ("refine", "accuracy_refine"):
         from fsot_quantum.accuracy_refine import main as m

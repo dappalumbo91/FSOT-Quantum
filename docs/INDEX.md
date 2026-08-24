@@ -14,6 +14,7 @@ Every living panel also writes a twin under `results/`.
 | [`CLAIMS.md`](CLAIMS.md) | Hired-question comparison, living scores, what is still open |
 | [`HIRED_JOBS.md`](HIRED_JOBS.md) | What QC is hired for vs this fold, one page |
 | [`KNOWN_QC.md`](KNOWN_QC.md) | Textbook/demo known answers vs fold **44/44** |
+| [`VQE_OBJECT.md`](VQE_OBJECT.md) | H2/LiH objects split; amplitude estimation |
 | [`LADDER.md`](LADDER.md) | Rungs in order, hits, open residuals |
 | [`REPRODUCE.md`](REPRODUCE.md) | Commands a clone must run |
 | [`ARCHITECTURE.md`](ARCHITECTURE.md) | How the pieces sit |
@@ -70,6 +71,7 @@ Every living panel also writes a twin under `results/`.
 | [`HEIGHTS5.md`](HEIGHTS5.md) | ECM at 41-bit far p±1-unsmooth **8/8** |
 | [`HEIGHTS6.md`](HEIGHTS6.md) | ECM at 46-bit far p±1-unsmooth **8/8** |
 | [`HEIGHTS7.md`](HEIGHTS7.md) | ECM at 48-bit far p±1-unsmooth **8/8** |
+| [`HEIGHTS8.md`](HEIGHTS8.md) | ECM at 52-bit far p±1-unsmooth **8/8** |
 | [`MULTIPROVER_VERIFICATION.md`](MULTIPROVER_VERIFICATION.md) | Lean · Coq · Isabelle · F\* · Python stamp |
 | [`QC_ACCURACY.md`](QC_ACCURACY.md) | Hired QC/QM jobs on ordinary hardware |
 

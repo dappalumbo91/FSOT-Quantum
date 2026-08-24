@@ -8,7 +8,7 @@ A cryogenic QPU is sold as a machine that answers a list of questions. This fold
 
 | They hire a QPU for | The question | This fold | Living score | Vs them, today |
 |---------------------|--------------|-----------|--------------|----------------|
-| Shor | Factor \(N = pq\) | modular + p−1/p+1/kN + ECM + ρ | far ρ **8/8**; log-N **8/8**; ECM through **48-bit 8/8**; textbook factors **18/18** | They demo \(N=15\). We factor RSA-**shaped** moduli through 48-bit. **RSA-2048 not run** (smoothness / √p wall). |
+| Shor | Factor \(N = pq\) | modular + p−1/p+1/kN + ECM + ρ | far ρ **8/8**; log-N **8/8**; ECM through **52-bit 8/8**; textbook factors **18/18** | They demo \(N=15\). We factor RSA-**shaped** moduli through 52-bit. **RSA-2048 not run** (smoothness / √p wall). |
 | Knapsack / counting / hidden period | 0/1 knapsack, how-many-marked, period of \(x \bmod r\) | energy fold / field count / collision gcd | in `known` **44/44** | Same QUBO / counting / HSP questions, published objects. |
 | Period finding | order of \(a \bmod N\) | modular fold + CF | hire climbs; period skip above ~24 bits, then log-N/ECM | Their QFT is \(2^n\) amps. Ours is modular algebra. |
 | Discrete log | \(g^x \equiv h \pmod p\) | successive modular fold | hire **10/10**; hire2 **6/6** through \(p=40009\); hire3 through \(p=100003\) | Same question, not a QFT. |
@@ -18,6 +18,7 @@ A cryogenic QPU is sold as a machine that answers a list of questions. This fold
 | SAT / QUBO / coloring / TSP | assignment / tour | energy folds | SAT-32; TSP n=11; Petersen; partition \(\{1..23\}\) | Exact on those sizes. Not a general NP claim. |
 | QAOA / annealer | MaxCut / Ising | fold + KL + 2-opt + BFS / spectral | **11/11 Gset under 1%** of published champion | Aspiration met. **Champions unmatched** (G17 13 edges, G22 98, G1 39). |
 | Quantum chemistry / FCI | chemistry observables | pin formulas | **68/68 @ 0.5%** | Not Hilbert FCI. The observables. |
+| VQE H2/LiH | electronic energy | pin De + 2 E(H); refuse STO-3G blend | H−H De **0.25%**; Kolos derived **0.75%**; LiH **no formula** | Three objects. [`VQE_OBJECT.md`](VQE_OBJECT.md). |
 | Physics / SM / QI | CKM, Higgs, \(g{-}2\), CHSH, Ising | pin + Lean atlas | audit **20/20**; QI **16/16 + 22/22 + 41/41**; Tsirelson exact | Inclusive \(\lvert V_{cb}\rvert\) **0.002%**; exclusive \(B\to D\) **0.15%**; Planck \(H_0\) **0.024%**. |
 | “Fault-tolerant threshold” | reliable logical work | residual on the question | fridge \(d\)-threshold is their metric | We score the answer, not a surface-code \(p_{\mathrm{th}}\). |
 | Chatbot “AI” | mind | [fsot-neuron-zig](https://github.com/dappalumbo91/fsot-neuron-zig) | this repo is the law organ | Not an LLM in RAM. |
@@ -30,7 +31,7 @@ A cryogenic QPU is sold as a machine that answers a list of questions. This fold
 
 ## What we are climbing right now
 
-1. **Shor’s end-job** — factor RSA-shaped far primes when p±1 are unsmooth. ECM 38 → 41 → 46 → **48-bit**. Next is more bits, then RSA-2048’s smoothness wall (not a pretend factor).
+1. **Shor’s end-job** — factor RSA-shaped far primes when p±1 are unsmooth. ECM through **52-bit**. RSA-2048 still the smoothness / √p wall (not a pretend factor).
 2. **QAOA’s end-job** — Gset MaxCut vs published champions. Family 11/11 under 1%. G17 **13 edges** and G22 **98 edges** are the leftovers. Not crawled.
 3. **Known-answer bank** — textbook / demo objects they already know: `python -m fsot_quantum known` (**44/44**).
 

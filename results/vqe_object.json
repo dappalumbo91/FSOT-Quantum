@@ -1,0 +1,74 @@
+{
+  "timestamp": "2026-08-24T23:47:17.912745+00:00",
+  "suite": "vqe_object",
+  "pin": "D1D38A",
+  "pin_file_edited": false,
+  "overall_ok": true,
+  "S_Chemistry": 0.4078840642307453,
+  "S_QM": 0.9555063001027194,
+  "kolos_rel_pct": 0.751338148486669,
+  "kolos_delta_ha": 0.008824278719438805,
+  "wall_seconds": 5.2499992307275534e-05,
+  "rows": [
+    {
+      "id": "BE_H-H",
+      "object": "H\u2212H dissociation (kJ/mol) \u2014 pin chemistry",
+      "formula": "e\u2078/\u03c6\u2074",
+      "fold": 434.91590900168626,
+      "published": 436.0,
+      "rel_pct": 0.24864472438388552,
+      "ok": true,
+      "note": "Textbook De. Already in chemistry 68/68."
+    },
+    {
+      "id": "BL_H-H",
+      "object": "H\u2212H bond length (\u00c5) \u2014 geometry VQE scans",
+      "formula": "sin(1) \u2212 \u03c0\u207b\u00b2",
+      "fold": 0.7401498011655587,
+      "published": 0.74,
+      "rel_pct": 0.02024340075118086,
+      "ok": true,
+      "note": "STO-3G VQE plots vs R; eq ~0.74 \u00c5."
+    },
+    {
+      "id": "E_H2_kolos",
+      "object": "H2 total energy (Ha) from 2 E(H) \u2212 De vs Kolos\u2013Wolniewicz",
+      "formula": "2(\u22121/2) \u2212 (e\u2078/\u03c6\u2074)/Eh",
+      "fold": -1.1656507212805611,
+      "published": -1.174475,
+      "rel_pct": 0.751338148486669,
+      "delta_ha": 0.008824278719438805,
+      "ok": false,
+      "note": "Derived from the pin De, not a new coefficient. 0.0088 Ha vs chemical accuracy 0.0016 Ha. Not crawled. Kolos is the spectroscopic electronic object."
+    },
+    {
+      "id": "E_H2_sto3g",
+      "object": "STO-3G FCI H2 (NISQ VQE demo) \u2014 not scored",
+      "formula": "\u2014",
+      "fold": -1.1656507212805611,
+      "published": -1.137,
+      "rel_pct": 2.519852355370371,
+      "ok": true,
+      "note": "Wrong object if scored as Kolos or as pin De. Tiny-basis FCI is what Kandala-class VQE matches. We refuse to blend it with (1) or (3)."
+    },
+    {
+      "id": "LiH_FCI",
+      "object": "LiH electronic FCI \u2014 no pin formula",
+      "formula": "\u2014",
+      "fold": null,
+      "published": null,
+      "ok": true,
+      "note": "No Li\u2212H seed formula. Not invented. Not scored."
+    },
+    {
+      "id": "amp_est",
+      "object": "Amplitude estimation a = |S|/2^n (k=5, n=5)",
+      "formula": "k / 2^n",
+      "fold": 0.15625,
+      "published": 0.15625,
+      "rel_pct": 0.0,
+      "ok": true,
+      "note": "Quantum counting end-job. Exact on the marked set."
+    }
+  ]
+}

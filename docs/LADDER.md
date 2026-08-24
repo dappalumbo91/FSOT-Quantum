@@ -98,7 +98,9 @@ These are published values. Miss one and the pin is wrong.
 | Heights 5 | ECM next bit length | **8/8** | `HEIGHTS5.md` — 41-bit `400k × 4e6` |
 | Heights 6 | ECM next bit length | **8/8** | `HEIGHTS6.md` — 46-bit `1.2e6 × 4e7` |
 | Heights 7 | ECM next bit length | **8/8** | `HEIGHTS7.md` — 48-bit `3e6 × 8e7` |
+| Heights 8 | ECM next bit length | **8/8** | `HEIGHTS8.md` — 52-bit `1.2e7 × 2e8` |
 | Known-answer QC | textbook / demo objects | **44/44** | `KNOWN_QC.md` |
+| VQE objects | H2 De / Kolos / STO-3G split | pin De **0.25%** · Kolos **0.75%** written | `VQE_OBJECT.md` |
 | Accuracy refine | right-object catalog + log-N stage-2 | living **9/9** · log-N **8/8** | `ACCURACY_REFINE.md` |
 | Open objects | wrong-object diagnosis | exclusive blend **6.03%** / SH0ES global **6.30%** if scored wrong | `OPEN_OBJECTS.md` — superseded by `vcb` / `h0` |
 | \(V_{cb}\) puzzle | inclusive QM vs exclusive B→D HEP | inclusive **0.002%** · exclusive **0.15%** | `V_CB_PUZZLE.md` — Belle II 2025 0.0392, not the D+D* blend |

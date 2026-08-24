@@ -60,7 +60,9 @@ Living ledgers. Re-run the command. Miss one and the pin is wrong — except whe
 | Heights 5 ECM | **8/8** p±1-unsmooth far moduli (41-bit) | `python -m fsot_quantum heights5` | `HEIGHTS5.md` |
 | Heights 6 ECM | **8/8** p±1-unsmooth far moduli (46-bit) | `python -m fsot_quantum heights6` | `HEIGHTS6.md` |
 | Heights 7 ECM | **8/8** p±1-unsmooth far moduli (48-bit) | `python -m fsot_quantum heights7` | `HEIGHTS7.md` |
+| Heights 8 ECM | **8/8** p±1-unsmooth far moduli (52-bit) | `python -m fsot_quantum heights8` | `HEIGHTS8.md` |
 | Known-answer QC jobs | **44/44** vs published objects | `python -m fsot_quantum known` | `KNOWN_QC.md` |
+| VQE objects | pin H2 De/R **ok** · Kolos **0.75%** written · LiH not invented | `python -m fsot_quantum vqe` | `VQE_OBJECT.md` |
 | Accuracy refine | catalog living **9/9** · log-N **8/8** | `python -m fsot_quantum refine` | `ACCURACY_REFINE.md` |
 | Formula catalog | **18** solvers · **207/216** stored @0.5% · living **9/9** reclass | `python -m fsot_quantum formulas` | `FORMULA_LIST.md` |
 | Multiprover stamp | **FSOT_QUANTUM_MULTIPROVER_OK** | `python -m fsot_quantum stamp` | `MULTIPROVER_VERIFICATION.md` |
@@ -82,7 +84,7 @@ We do **not** simulate their architecture. That would be agreeing their geometry
 |-----------|----------------|-----------|---------------|
 | Cryogenic QPU / NISQ box | usable answers without a fridge | GPU/CPU + pin | the living panels above |
 | Hilbert / statevector / FTQC | hold the job as scale grows | folds, not \(2^n\) amps | fold path is the scale law — `FOLD_NOT_HILBERT.md` |
-| Shor / RSA | period and factor | modular + log-N (p−1/p+1/kN/ECM) + rho | far ρ **8/8**; log-N **8/8**; ECM through **48-bit 8/8**. RSA-2048 is smoothness / √p, not a twin-Fermat climb |
+| Shor / RSA | period and factor | modular + log-N (p−1/p+1/kN/ECM) + rho | far ρ **8/8**; log-N **8/8**; ECM through **52-bit 8/8**. RSA-2048 is smoothness / √p, not a twin-Fermat climb |
 | Discrete log | \(g^x\equiv h\pmod p\) | modular fold | hire 10/10 · hire2 **6/6** through p=40009 |
 | Simon / HSP | hidden xor string | collision fold + GF(2) | hire 8-bit · hire2 **12 and 16 bit** |
 | SAT / QUBO / color / TSP | assignment / tour | energy folds | SAT-16 · partition \{1..23\} · Petersen · TSP n=7 exact |
@@ -93,7 +95,7 @@ We do **not** simulate their architecture. That would be agreeing their geometry
 | Surface-code “threshold” | reliable logical work | fold residual vs published object | their \(d\)-threshold is a fridge metric; ours is residual on the question |
 | Chatbot “AI” | mind | [fsot-neuron-zig](https://github.com/dappalumbo91/fsot-neuron-zig) | this repo is the law organ, not the body |
 
-Current score is not a refusal. Factoring is far ρ **8/8**, log-N **8/8**, and ECM through **48-bit** today, not RSA-2048. Champion MaxCut is 13–98 edges short **today**. Known-answer cross-check **44/44**. The job list: [`HIRED_JOBS.md`](HIRED_JOBS.md) · [`KNOWN_QC.md`](KNOWN_QC.md).
+Current score is not a refusal. Factoring is far ρ **8/8**, log-N **8/8**, and ECM through **52-bit** today, not RSA-2048. Champion MaxCut is 13–98 edges short **today**. H2 Kolos energy is a **derived** object at 0.75% (not crawled). LiH FCI has no pin formula. Known-answer bank **44/44**. [`HIRED_JOBS.md`](HIRED_JOBS.md) · [`VQE_OBJECT.md`](VQE_OBJECT.md).
 
 ---
 
@@ -123,7 +125,8 @@ Written as open. Not dressed up. Not a reason to edit the pin.
 | Catalog 9 stored-gate rows | living **9/9** | Stale stored / wrong object / in-band / inventory rounding. [`ACCURACY_REFINE.md`](ACCURACY_REFINE.md). |
 | Combined exclusive \(\lvert V_{cb}\rvert=0.0398\) | not scored | D+D* blend. The HEP object is Belle II \(B\to D\ell\nu\) 0.0392. |
 | Atlas 432 | needs `_ref/FSOT-2.1-Lean` | Without the clone, atlas counts skip; 35 pin domains still score. |
-| Period / factor (Shor job) | far ρ **8/8** · log-N **8/8** · ECM through **48-bit 8/8** | RSA-2048 is smoothness / √p on **this** path, not a Hilbert replay. |
+| Period / factor (Shor job) | far ρ **8/8** · log-N **8/8** · ECM through **52-bit 8/8** | RSA-2048 is smoothness / √p on **this** path, not a Hilbert replay. |
+| H2 / LiH VQE | pin De/R vs Kolos vs STO-3G | Three objects. Pin De **0.25%**. Kolos derived **0.75%** written. STO-3G not scored. LiH not invented. |
 
 SH0ES at **1.00%** is the Lean BH→WH inflated sector (inside the contested 2.5% band, 0.71σ of ±1.04). It is **not** the old 6.30% leftover.
 

@@ -138,7 +138,9 @@ python -m fsot_quantum heights4   # ECM 8/8 (38-bit)
 python -m fsot_quantum heights5   # ECM 8/8 (41-bit)
 python -m fsot_quantum heights6   # ECM 8/8 (46-bit)
 python -m fsot_quantum heights7   # ECM 8/8 (48-bit)
+python -m fsot_quantum heights8   # ECM 8/8 (52-bit)
 python -m fsot_quantum known      # known-answer QC 44/44
+python -m fsot_quantum vqe        # H2 objects + amplitude estimation
 python -m fsot_quantum formulas   # formula list
 python -m fsot_quantum organ      # JSON for neuron-zig
 python -m fsot_quantum stamp      # Lean · Coq · Isabelle · F* · Python
