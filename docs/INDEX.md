@@ -12,6 +12,7 @@ Every living panel also writes a twin under `results/`.
 |-----|------------|
 | [`STATUS.md`](STATUS.md) | Wrap snapshot: system, findings, capability, honesty |
 | [`CLAIMS.md`](CLAIMS.md) | Hired-question comparison, living scores, what is still open |
+| [`HIRED_JOBS.md`](HIRED_JOBS.md) | What QC is hired for vs this fold, one page |
 | [`LADDER.md`](LADDER.md) | Rungs in order, hits, open residuals |
 | [`REPRODUCE.md`](REPRODUCE.md) | Commands a clone must run |
 | [`ARCHITECTURE.md`](ARCHITECTURE.md) | How the pieces sit |
@@ -66,6 +67,7 @@ Every living panel also writes a twin under `results/`.
 | [`HEIGHTS3.md`](HEIGHTS3.md) | log-N: p−1 + Williams p+1 + kN Fermat **8/8** |
 | [`HEIGHTS4.md`](HEIGHTS4.md) | ECM on p±1-unsmooth far moduli **8/8** (38-bit) |
 | [`HEIGHTS5.md`](HEIGHTS5.md) | ECM at 41-bit far p±1-unsmooth **8/8** |
+| [`HEIGHTS6.md`](HEIGHTS6.md) | ECM at 46-bit far p±1-unsmooth **8/8** |
 | [`MULTIPROVER_VERIFICATION.md`](MULTIPROVER_VERIFICATION.md) | Lean · Coq · Isabelle · F\* · Python stamp |
 | [`QC_ACCURACY.md`](QC_ACCURACY.md) | Hired QC/QM jobs on ordinary hardware |
 

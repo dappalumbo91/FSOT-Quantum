@@ -55,7 +55,7 @@ G17 cut `3034` vs 3047 (**13 edges**, 0.427%). Aspiration <1% met. Champion unma
 
 G22 is **13261 / 0.734%** (98 edges, was 114). G23 is **13271 / 0.547%** (73 edges, was 86). n=2000 spectral/BFS lane. Family **11/11 under 1%**.
 
-RSA-2048 is still the smoothness / √p wall. ECM is the next smoothness lane: **8/8** at 38-bit (`HEIGHTS4.md`) and **8/8** at 41-bit (`HEIGHTS5.md`), not a 2048-bit factor.
+RSA-2048 is still the smoothness / √p wall. ECM is the next smoothness lane: **8/8** at 38-bit, **8/8** at 41-bit, **8/8** at 46-bit (`HEIGHTS6.md`), not a 2048-bit factor.
 
 ```powershell
 python -m fsot_quantum refine

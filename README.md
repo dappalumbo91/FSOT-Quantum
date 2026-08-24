@@ -136,6 +136,7 @@ python -m fsot_quantum heights    # G17 + far-prime factoring
 python -m fsot_quantum heights3   # log-N 8/8
 python -m fsot_quantum heights4   # ECM 8/8 (38-bit)
 python -m fsot_quantum heights5   # ECM 8/8 (41-bit)
+python -m fsot_quantum heights6   # ECM 8/8 (46-bit)
 python -m fsot_quantum formulas   # formula list
 python -m fsot_quantum organ      # JSON for neuron-zig
 python -m fsot_quantum stamp      # Lean · Coq · Isabelle · F* · Python
