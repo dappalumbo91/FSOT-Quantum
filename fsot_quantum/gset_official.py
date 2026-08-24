@@ -515,8 +515,8 @@ def _fast_maxcut(n: int, edges: list[tuple[int, int, int]]) -> tuple[int, list[i
             zeros = [i for i, g in enumerate(_gains(best)) if g == 0]
             zeros.sort(key=lambda i: (phi_m * (i + 1) + 2654435761) & 0xFFFFFFFF)
 
-    # 3-flip on a φ-walk of triples (n≤800). One improving triple
-    # then refine — the 31-edge G17 gap is larger than 1-opt/2-opt.
+    # 3-flip on a φ-walk of triples (n≤800). Budget is poly in n, not n³.
+    # n=2000 3-flip did not move G22 (13261) and tripled wall time.
     if n <= 800:
         budget = fold_probe_budget(n, fold_depth_ladder()["deep"])
         span = n * n * n

@@ -94,7 +94,8 @@ These are published values. Miss one and the pin is wrong.
 | Hired QC climb 7 | 13-digit factor / SAT-32 / TSP-11 | **22/22** | `HIRE_CLIMB7.md` — factors through 1000444049203 |
 | Heights | far-prime factor + G17 | far **8/8** · G17 **0.427%** | `HEIGHTS_NEXT.md` — G17 under 1%; p−1 3/8 |
 | Heights 3 | log-N factor (not √p) | **8/8** | `HEIGHTS3.md` — p±1 stage-2 closes `100003×1000003` |
-| Heights 4 | ECM after p±1 + Fermat miss | **8/8** | `HEIGHTS4.md` — same B/B2, seed curves |
+| Heights 4 | ECM after p±1 + Fermat miss | **8/8** | `HEIGHTS4.md` — 38-bit, same B/B2, seed curves |
+| Heights 5 | ECM next bit length | **8/8** | `HEIGHTS5.md` — 41-bit `400k × 4e6` |
 | Accuracy refine | right-object catalog + log-N stage-2 | living **9/9** · log-N **8/8** | `ACCURACY_REFINE.md` |
 | Open objects | wrong-object diagnosis | exclusive blend **6.03%** / SH0ES global **6.30%** if scored wrong | `OPEN_OBJECTS.md` — superseded by `vcb` / `h0` |
 | \(V_{cb}\) puzzle | inclusive QM vs exclusive B→D HEP | inclusive **0.002%** · exclusive **0.15%** | `V_CB_PUZZLE.md` — Belle II 2025 0.0392, not the D+D* blend |
