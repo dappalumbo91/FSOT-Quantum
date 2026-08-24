@@ -103,7 +103,7 @@ See `docs/FOLD_NOT_HILBERT.md`.
 
 The competitor climb through physics + QI III and the stale-target audit is closed. Living snapshot: `docs/STATUS.md`. Honesty cut: `docs/CLAIMS.md`.
 
-What stayed open (not a retune): Gset champions unmatched after the <1% aspiration landed for all 11 (G17 **0.427%**, 13 edges; G22 **0.734%**, 98 edges). ECM through **46-bit 8/8**; RSA-2048 not run. Job list: `docs/HIRED_JOBS.md`. Vendor `BR_H_gg` field still stale. Exclusive \(B\to D\ell\nu\) is **0.15%**. SH0ES is Lean BH→WH at **1.00%**. \(\alpha_s(M_Z)\) is inside the vendor 0.9% band.
+What stayed open (not a retune): Gset champions unmatched after the <1% aspiration landed for all 11 (G17 **0.427%**, 13 edges; G22 **0.734%**, 98 edges). ECM through **48-bit 8/8**; RSA-2048 not run. Known-answer bank **44/44**: `docs/KNOWN_QC.md`. Job list: `docs/HIRED_JOBS.md`. Vendor `BR_H_gg` field still stale. Exclusive \(B\to D\ell\nu\) is **0.15%**. SH0ES is Lean BH→WH at **1.00%**. \(\alpha_s(M_Z)\) is inside the vendor 0.9% band.
 
 ## Next builds (only if the wrap is reopened)
 

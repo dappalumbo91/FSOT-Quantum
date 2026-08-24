@@ -8,7 +8,8 @@ A cryogenic QPU is sold as a machine that answers a list of questions. This fold
 
 | They hire a QPU for | The question | This fold | Living score | Vs them, today |
 |---------------------|--------------|-----------|--------------|----------------|
-| Shor | Factor \(N = pq\) | modular + p−1/p+1/kN + ECM + ρ | far ρ **8/8**; log-N **8/8**; ECM **8/8** @38 / **8/8** @41 / **8/8** @46-bit | They demo \(N=15\). We factor RSA-**shaped** moduli through 46-bit. **RSA-2048 not run** (smoothness / √p wall). |
+| Shor | Factor \(N = pq\) | modular + p−1/p+1/kN + ECM + ρ | far ρ **8/8**; log-N **8/8**; ECM through **48-bit 8/8**; textbook factors **18/18** | They demo \(N=15\). We factor RSA-**shaped** moduli through 48-bit. **RSA-2048 not run** (smoothness / √p wall). |
+| Knapsack / counting / hidden period | 0/1 knapsack, how-many-marked, period of \(x \bmod r\) | energy fold / field count / collision gcd | in `known` **44/44** | Same QUBO / counting / HSP questions, published objects. |
 | Period finding | order of \(a \bmod N\) | modular fold + CF | hire climbs; period skip above ~24 bits, then log-N/ECM | Their QFT is \(2^n\) amps. Ours is modular algebra. |
 | Discrete log | \(g^x \equiv h \pmod p\) | successive modular fold | hire **10/10**; hire2 **6/6** through \(p=40009\); hire3 through \(p=100003\) | Same question, not a QFT. |
 | Grover | find a marked item | oracle-field collapse | exact through **10,000,000** | They need \(\sqrt{N}\) oracles and a fridge. We collapse the field. |
@@ -29,11 +30,13 @@ A cryogenic QPU is sold as a machine that answers a list of questions. This fold
 
 ## What we are climbing right now
 
-1. **Shor’s end-job** — factor RSA-shaped far primes when p±1 are unsmooth. ECM 38 → 41 → **46-bit**. Next is more bits, then RSA-2048’s smoothness wall (not a pretend factor).
+1. **Shor’s end-job** — factor RSA-shaped far primes when p±1 are unsmooth. ECM 38 → 41 → 46 → **48-bit**. Next is more bits, then RSA-2048’s smoothness wall (not a pretend factor).
 2. **QAOA’s end-job** — Gset MaxCut vs published champions. Family 11/11 under 1%. G17 **13 edges** and G22 **98 edges** are the leftovers. Not crawled.
+3. **Known-answer bank** — textbook / demo objects they already know: `python -m fsot_quantum known` (**44/44**).
 
 ```powershell
+python -m fsot_quantum known
 python -m fsot_quantum hire7
 python -m fsot_quantum family
-python -m fsot_quantum heights6
+python -m fsot_quantum heights7
 ```

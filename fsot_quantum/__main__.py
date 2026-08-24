@@ -37,6 +37,8 @@ Field entry: python -m fsot_quantum [cmd]
   heights4   ECM on p±1-unsmooth far moduli (next RSA-wall lane)
   heights5   ECM at 41-bit far p±1-unsmooth
   heights6   ECM at 46-bit far p±1-unsmooth
+  heights7   ECM at 48-bit far p±1-unsmooth
+  known      known-answer QC jobs vs published objects
   refine     accuracy: classify residuals, living catalog, log-N stage-2
   formulas   formula list — what each formula solves
   organ      export S/κ/QI JSON for neuron-zig
@@ -174,6 +176,12 @@ def main() -> int:
         return m()
     if c in ("heights6", "height6"):
         from fsot_quantum.heights6 import main as m
+        return m()
+    if c in ("heights7", "height7"):
+        from fsot_quantum.heights7 import main as m
+        return m()
+    if c in ("known", "known_qc", "crossref"):
+        from fsot_quantum.known_qc import main as m
         return m()
     if c in ("refine", "accuracy_refine"):
         from fsot_quantum.accuracy_refine import main as m
