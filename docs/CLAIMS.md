@@ -65,6 +65,7 @@ Living ledgers. Re-run the command. Miss one and the pin is wrong — except whe
 | Heights 10 ECM | **8/8** p±1-unsmooth far moduli (64-bit) | `python -m fsot_quantum heights10` | `HEIGHTS10.md` |
 | Heights 11 ECM | **8/8** p±1-unsmooth far moduli (80-bit) | `python -m fsot_quantum heights11` | `HEIGHTS11.md` |
 | Heights 12 RSA-shaped | **12/12** 81-bit balanced + 90-bit ρ | `python -m fsot_quantum heights12` | `HEIGHTS12.md` |
+| Heights 13 RSA-shaped | **8/8** 48-bit × 48-bit (95-bit N) | `python -m fsot_quantum heights13` | `HEIGHTS13.md` |
 | Known-answer QC jobs | **44/44** vs published objects | `python -m fsot_quantum known` | `KNOWN_QC.md` |
 | VQE objects | pin H2 De/R **ok** · Kolos **0.75%** written · LiH not invented | `python -m fsot_quantum vqe` | `VQE_OBJECT.md` |
 | Accuracy refine | catalog living **9/9** · log-N **8/8** | `python -m fsot_quantum refine` | `ACCURACY_REFINE.md` |
@@ -88,7 +89,7 @@ We do **not** simulate their architecture. That would be agreeing their geometry
 |-----------|----------------|-----------|---------------|
 | Cryogenic QPU / NISQ box | usable answers without a fridge | GPU/CPU + pin | the living panels above |
 | Hilbert / statevector / FTQC | hold the job as scale grows | folds, not \(2^n\) amps | fold path is the scale law — `FOLD_NOT_HILBERT.md` |
-| Shor / RSA | period and factor | modular + log-N (p−1/p+1/kN/ECM) + rho | ECM **80-bit 8/8**; 90-bit ECM miss closed by ρ; **81-bit balanced 12/12**. RSA-2048 not run. |
+| Shor / RSA | period and factor | modular + log-N (p−1/p+1/kN/ECM) + rho | ECM **80-bit**; RSA-shaped **81-bit 12/12** and **95-bit 8/8**. RSA-2048 not run. |
 | Discrete log | \(g^x\equiv h\pmod p\) | modular fold | hire 10/10 · hire2 **6/6** through p=40009 |
 | Simon / HSP | hidden xor string | collision fold + GF(2) | hire 8-bit · hire2 **12 and 16 bit** |
 | SAT / QUBO / color / TSP | assignment / tour | energy folds | SAT-16 · partition \{1..23\} · Petersen · TSP n=7 exact |
