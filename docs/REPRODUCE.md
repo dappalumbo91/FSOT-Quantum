@@ -43,6 +43,8 @@ python -m fsot_quantum heights5    # ECM 8/8 at 41-bit
 python -m fsot_quantum heights6    # ECM 8/8 at 46-bit
 python -m fsot_quantum heights7    # ECM 8/8 at 48-bit
 python -m fsot_quantum heights8    # ECM 8/8 at 52-bit
+python -m fsot_quantum heights9    # ECM 8/8 at 56-bit
+python -m fsot_quantum heights10   # ECM 8/8 at 64-bit
 python -m fsot_quantum known       # known-answer QC jobs 44/44
 python -m fsot_quantum vqe         # H2 objects + amplitude estimation
 python -m fsot_quantum refine      # accuracy reclass 9/9 · log-N 8/8
@@ -85,6 +87,8 @@ python -m fsot_quantum.heights5
 python -m fsot_quantum.heights6
 python -m fsot_quantum.heights7
 python -m fsot_quantum.heights8
+python -m fsot_quantum.heights9
+python -m fsot_quantum.heights10
 python -m fsot_quantum.known_qc
 python -m fsot_quantum.vqe_object
 python -m fsot_quantum.accuracy_refine
