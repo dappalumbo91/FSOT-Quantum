@@ -42,6 +42,7 @@ Field entry: python -m fsot_quantum [cmd]
   heights9   ECM at 56-bit far p±1-unsmooth
   heights10  ECM at 64-bit far p±1-unsmooth
   heights11  ECM at 80-bit far p±1-unsmooth
+  heights12  RSA-shaped 81-bit balanced + 90-bit ρ
   known      known-answer QC jobs vs published objects
   vqe        H2/LiH objects + amplitude estimation (not blended)
   refine     accuracy: classify residuals, living catalog, log-N stage-2
@@ -202,6 +203,9 @@ def main() -> int:
         return m()
     if c in ("heights11", "height11"):
         from fsot_quantum.heights11 import main as m
+        return m()
+    if c in ("heights12", "height12"):
+        from fsot_quantum.heights12 import main as m
         return m()
     if c in ("refine", "accuracy_refine"):
         from fsot_quantum.accuracy_refine import main as m

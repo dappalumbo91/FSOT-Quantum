@@ -13,6 +13,7 @@ Every living panel also writes a twin under `results/`.
 | [`STATUS.md`](STATUS.md) | Wrap snapshot: system, findings, capability, honesty |
 | [`CLAIMS.md`](CLAIMS.md) | Hired-question comparison, living scores, what is still open |
 | [`HIRED_JOBS.md`](HIRED_JOBS.md) | What QC is hired for vs this fold, one page |
+| [`CONSUMER_VS_QPU.md`](CONSUMER_VS_QPU.md) | Laptop vs QPU vs classical FLOPS — three comparisons |
 | [`KNOWN_QC.md`](KNOWN_QC.md) | Textbook/demo known answers vs fold **44/44** |
 | [`VQE_OBJECT.md`](VQE_OBJECT.md) | H2/LiH objects split; amplitude estimation |
 | [`LADDER.md`](LADDER.md) | Rungs in order, hits, open residuals |
@@ -75,6 +76,7 @@ Every living panel also writes a twin under `results/`.
 | [`HEIGHTS9.md`](HEIGHTS9.md) | ECM at 56-bit far p±1-unsmooth **8/8** |
 | [`HEIGHTS10.md`](HEIGHTS10.md) | ECM at 64-bit far p±1-unsmooth **8/8** |
 | [`HEIGHTS11.md`](HEIGHTS11.md) | ECM at 80-bit **8/8**; 90-bit exhausted |
+| [`HEIGHTS12.md`](HEIGHTS12.md) | 81-bit RSA-shaped + 90-bit ρ **12/12** |
 | [`MULTIPROVER_VERIFICATION.md`](MULTIPROVER_VERIFICATION.md) | Lean · Coq · Isabelle · F\* · Python stamp |
 | [`QC_ACCURACY.md`](QC_ACCURACY.md) | Hired QC/QM jobs on ordinary hardware |
 

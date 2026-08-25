@@ -220,7 +220,7 @@ Honesty cut: [`CLAIMS.md`](CLAIMS.md).
 - Multiprover stamp **FSOT_QUANTUM_MULTIPROVER_OK** (Lean · Coq · Isabelle · F\* · Python): [`MULTIPROVER_VERIFICATION.md`](MULTIPROVER_VERIFICATION.md).
 - Vendor wave8 `BR_H_gg` field still stale (0.0785). Fold already matches YR4. Pin not edited.
 - Hilbert fragments exist as **optional bridges**. They are not the scale path.
-- Period / factor is far ρ **8/8**, log-N **8/8**, ECM through **80-bit 8/8**. A 90-bit far pair exhausts the same B. RSA-2048 not run. H2 Kolos derived 0.75% written; LiH FCI not invented: [`VQE_OBJECT.md`](VQE_OBJECT.md). Known-answer bank **44/44**.
+- Period / factor: ECM **80-bit 8/8**; 90-bit ECM miss closed by ρ; RSA-shaped **81-bit 12/12**. RSA-2048 not run. Hardware honesty: [`CONSUMER_VS_QPU.md`](CONSUMER_VS_QPU.md). H2 Kolos derived 0.75% written; LiH FCI not invented: [`VQE_OBJECT.md`](VQE_OBJECT.md). Known-answer bank **44/44**.
 - Atlas 432 needs the Lean clone. Without `_ref`, that count skips.
 - Older climb panels still report G1 cut **11397 / 1.95%** (5% kill band). Living family cut is **11585 / 0.336%**. Not a contradiction — see [`CLAIMS.md`](CLAIMS.md).
 

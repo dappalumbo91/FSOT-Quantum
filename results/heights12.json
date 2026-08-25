@@ -1,0 +1,248 @@
+{
+  "timestamp": "2026-08-25T00:29:37.864281+00:00",
+  "suite": "heights12",
+  "pin": "D1D38A",
+  "pin_file_edited": false,
+  "overall_ok": true,
+  "n_ok": 12,
+  "n": 12,
+  "g17": {
+    "cut": 3034,
+    "published": 3047,
+    "short": 13
+  },
+  "rsa2048_B": 49152,
+  "S_QM": 0.9555063001027194,
+  "S_QC": -0.14767310363368633,
+  "wall_seconds": 90.95592330000363,
+  "rows": [
+    {
+      "kind": "unbal_90",
+      "p": 8000000081,
+      "q": 100000000000000003,
+      "N": 800000008100000024000000243,
+      "bits": 90,
+      "p_bits": 33,
+      "q_bits": 57,
+      "pminus1": "pminus1_exhausted",
+      "pplus1": "pplus1_exhausted",
+      "fermat_k": "fermat_multiplier_exhausted",
+      "ecm": "ecm_exhausted",
+      "end": "pollard_rho_seed",
+      "factors": [
+        8000000081,
+        100000000000000003
+      ],
+      "ok": true
+    },
+    {
+      "kind": "unbal_90",
+      "p": 8000000081,
+      "q": 100000000000000013,
+      "N": 800000008100000104000001053,
+      "bits": 90,
+      "p_bits": 33,
+      "q_bits": 57,
+      "pminus1": "pminus1_exhausted",
+      "pplus1": "pplus1_exhausted",
+      "fermat_k": "fermat_multiplier_exhausted",
+      "ecm": "ecm_exhausted",
+      "end": "pollard_rho_seed",
+      "factors": [
+        8000000081,
+        100000000000000013
+      ],
+      "ok": true
+    },
+    {
+      "kind": "unbal_90",
+      "p": 8000000087,
+      "q": 100000000000000003,
+      "N": 800000008700000024000000261,
+      "bits": 90,
+      "p_bits": 33,
+      "q_bits": 57,
+      "pminus1": "pminus1_exhausted",
+      "pplus1": "pplus1_exhausted",
+      "fermat_k": "fermat_multiplier_exhausted",
+      "ecm": "ecm_stage2",
+      "end": "ecm_stage2",
+      "factors": [
+        8000000087,
+        100000000000000003
+      ],
+      "ok": true
+    },
+    {
+      "kind": "unbal_90",
+      "p": 8000000111,
+      "q": 100000000000000003,
+      "N": 800000011100000024000000333,
+      "bits": 90,
+      "p_bits": 33,
+      "q_bits": 57,
+      "pminus1": "pminus1_exhausted",
+      "pplus1": "pplus1_exhausted",
+      "fermat_k": "fermat_multiplier_exhausted",
+      "ecm": "ecm_stage2",
+      "end": "ecm_stage2",
+      "factors": [
+        8000000111,
+        100000000000000003
+      ],
+      "ok": true
+    },
+    {
+      "kind": "bal_81",
+      "p": 1100000000003,
+      "q": 1800000000047,
+      "N": 1980000000057100000000141,
+      "bits": 81,
+      "p_bits": 41,
+      "q_bits": 41,
+      "pminus1": "pminus1_exhausted",
+      "pplus1": "pplus1_exhausted",
+      "fermat_k": "fermat_multiplier_exhausted",
+      "ecm": "ecm_stage2",
+      "end": "ecm_stage2",
+      "factors": [
+        1100000000003,
+        1800000000047
+      ],
+      "ok": true
+    },
+    {
+      "kind": "bal_81",
+      "p": 1100000000003,
+      "q": 1800000000083,
+      "N": 1980000000096700000000249,
+      "bits": 81,
+      "p_bits": 41,
+      "q_bits": 41,
+      "pminus1": "pminus1_exhausted",
+      "pplus1": "pplus1_exhausted",
+      "fermat_k": "fermat_multiplier_exhausted",
+      "ecm": "ecm_stage2",
+      "end": "ecm_stage2",
+      "factors": [
+        1100000000003,
+        1800000000083
+      ],
+      "ok": true
+    },
+    {
+      "kind": "bal_81",
+      "p": 1100000000003,
+      "q": 1800000000101,
+      "N": 1980000000116500000000303,
+      "bits": 81,
+      "p_bits": 41,
+      "q_bits": 41,
+      "pminus1": "pminus1_exhausted",
+      "pplus1": "pplus1_exhausted",
+      "fermat_k": "fermat_multiplier_exhausted",
+      "ecm": "ecm_stage2",
+      "end": "ecm_stage2",
+      "factors": [
+        1100000000003,
+        1800000000101
+      ],
+      "ok": true
+    },
+    {
+      "kind": "bal_81",
+      "p": 1100000000003,
+      "q": 1800000000119,
+      "N": 1980000000136300000000357,
+      "bits": 81,
+      "p_bits": 41,
+      "q_bits": 41,
+      "pminus1": "pminus1_exhausted",
+      "pplus1": "pplus1_exhausted",
+      "fermat_k": "fermat_multiplier_exhausted",
+      "ecm": "ecm_stage2",
+      "end": "ecm_stage2",
+      "factors": [
+        1100000000003,
+        1800000000119
+      ],
+      "ok": true
+    },
+    {
+      "kind": "bal_81",
+      "p": 1100000000027,
+      "q": 1800000000047,
+      "N": 1980000000100300000001269,
+      "bits": 81,
+      "p_bits": 41,
+      "q_bits": 41,
+      "pminus1": "pminus1_exhausted",
+      "pplus1": "pplus1_exhausted",
+      "fermat_k": "fermat_multiplier_exhausted",
+      "ecm": "ecm_exhausted",
+      "end": "pollard_rho_seed",
+      "factors": [
+        1100000000027,
+        1800000000047
+      ],
+      "ok": true
+    },
+    {
+      "kind": "bal_81",
+      "p": 1100000000027,
+      "q": 1800000000083,
+      "N": 1980000000139900000002241,
+      "bits": 81,
+      "p_bits": 41,
+      "q_bits": 41,
+      "pminus1": "pminus1_exhausted",
+      "pplus1": "pplus1_exhausted",
+      "fermat_k": "fermat_multiplier_exhausted",
+      "ecm": "ecm_stage2",
+      "end": "ecm_stage2",
+      "factors": [
+        1100000000027,
+        1800000000083
+      ],
+      "ok": true
+    },
+    {
+      "kind": "bal_81",
+      "p": 1100000000041,
+      "q": 1800000000047,
+      "N": 1980000000125500000001927,
+      "bits": 81,
+      "p_bits": 41,
+      "q_bits": 41,
+      "pminus1": "pminus1_exhausted",
+      "pplus1": "pplus1_exhausted",
+      "fermat_k": "fermat_multiplier_exhausted",
+      "ecm": "ecm_stage2",
+      "end": "ecm_stage2",
+      "factors": [
+        1100000000041,
+        1800000000047
+      ],
+      "ok": true
+    },
+    {
+      "kind": "bal_81",
+      "p": 1100000000081,
+      "q": 1800000000047,
+      "N": 1980000000197500000003807,
+      "bits": 81,
+      "p_bits": 41,
+      "q_bits": 41,
+      "pminus1": "pminus1_exhausted",
+      "pplus1": "pplus1_exhausted",
+      "fermat_k": "fermat_multiplier_exhausted",
+      "ecm": "ecm_exhausted",
+      "end": "pollard_rho_seed",
+      "factors": [
+        1100000000081,
+        1800000000047
+      ],
+      "ok": true
+    }
+  ]
+}

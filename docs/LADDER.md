@@ -102,6 +102,7 @@ These are published values. Miss one and the pin is wrong.
 | Heights 9 | ECM next bit length | **8/8** | `HEIGHTS9.md` — 56-bit `4e7 × 1.5e9` |
 | Heights 10 | ECM next bit length | **8/8** | `HEIGHTS10.md` — **64-bit** `9e8 × 2e10` |
 | Heights 11 | ECM next bit length | **8/8** | `HEIGHTS11.md` — **80-bit**; 90-bit exhausts same B |
+| Heights 12 | RSA-shaped balanced + ρ | **12/12** | `HEIGHTS12.md` — 81-bit 41×41; 90-bit ρ |
 | Known-answer QC | textbook / demo objects | **44/44** | `KNOWN_QC.md` |
 | VQE objects | H2 De / Kolos / STO-3G split | pin De **0.25%** · Kolos **0.75%** written | `VQE_OBJECT.md` |
 | Accuracy refine | right-object catalog + log-N stage-2 | living **9/9** · log-N **8/8** | `ACCURACY_REFINE.md` |
