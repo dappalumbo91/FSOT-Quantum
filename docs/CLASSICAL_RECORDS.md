@@ -31,6 +31,7 @@ Published BKS champions on Gset are the record, not QAOA.
 | Graph | Champion | This fold | Short |
 |-------|----------|-----------|------:|
 | G1 n=800 | 11624 | 11585 | 39 |
+| G16 n=800 | 3052 | 3031 | 21 |
 | G17 n=800 | 3047 | 3034 | 13 |
 | G22 n=2000 | 13359 | 13261 | 98 |
 | Family | — | **11/11 under 1%** | aspiration met, champions unmatched |

@@ -515,6 +515,34 @@ def _fast_maxcut(n: int, edges: list[tuple[int, int, int]]) -> tuple[int, list[i
             zeros = [i for i, g in enumerate(_gains(best)) if g == 0]
             zeros.sort(key=lambda i: (phi_m * (i + 1) + 2654435761) & 0xFFFFFFFF)
 
+    # Negative-gain ridge. G17's leftover is not on gain=0 (2^27 of
+    # the zeros did not move 13 edges). Kick the least-negative
+    # vertices in φ-order, then refine. Seed-bounded. Sparse n≤800
+    # (G14–G17) and n=2000; not dense G1 (m too large).
+    sparse = n <= 800 and len(edges) <= n * max(
+        2, int(math.floor(float(SEEDS.e) * float(SEEDS.pi)))
+    )
+    if sparse or n > 800:
+        gneg = _gains(best)
+        negs = [i for i, g in enumerate(gneg) if g < 0]
+        negs.sort(key=lambda i: (-gneg[i], (phi_m * (i + 1)) & 0xFFFFFFFF))
+        for r in range(rounds):
+            trial = list(best)
+            take = negs[r * kick_n : (r + 1) * kick_n]
+            if not take:
+                take = negs[:kick_n]
+            for i in take:
+                trial[i] = -trial[i]
+            trial = refine(trial)
+            tc = cut_of(trial)
+            if tc > best_c:
+                best, best_c = trial, tc
+                gneg = _gains(best)
+                negs = [i for i, g in enumerate(gneg) if g < 0]
+                negs.sort(
+                    key=lambda i: (-gneg[i], (phi_m * (i + 1)) & 0xFFFFFFFF)
+                )
+
     # 3-flip on a φ-walk of triples (n≤800). Budget is poly in n, not n³.
     # n=2000 3-flip did not move G22 (13261) and tripled wall time.
     if n <= 800:

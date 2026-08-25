@@ -124,7 +124,7 @@ Written as open. Not dressed up. Not a reason to edit the pin.
 
 | Object | Status | Why it stays |
 |--------|--------|--------------|
-| Gset G17 | **0.427%** (3034 vs 3047, 13 edges) | Aspiration <1% met. Full zero-ridge exact did not move it. Champion unmatched. |
+| Gset G17 | **0.427%** (3034 vs 3047, 13 edges) | Negative-gain ridge moved G16, not G17. Champion unmatched. |
 | Gset champions | 13–98 edges short | Aspiration <1% landed **11/11**. G22 114→98 via n=2000 spectral/BFS. Do not advertise champion-matching. |
 | Vendor `BR_H_gg` field | still **0.0785** | Fold \(\varphi^{-4}-\gamma^5=0.081823\) already matches YR4 0.08187 (0.058%). Stale stored field. |
 | Catalog 9 stored-gate rows | living **9/9** | Stale stored / wrong object / in-band / inventory rounding. [`ACCURACY_REFINE.md`](ACCURACY_REFINE.md). |

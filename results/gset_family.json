@@ -90,9 +90,9 @@
       "name": "G16",
       "n": 800,
       "m": 4672,
-      "cut_fold": 3027,
+      "cut_fold": 3031,
       "published": 3052,
-      "rel_err_pct": 0.8191349934469201,
+      "rel_err_pct": 0.6880733944954129,
       "under_1pct": true,
       "under_5pct": true,
       "ok": true
