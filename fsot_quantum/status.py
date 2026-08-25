@@ -59,7 +59,7 @@ def main() -> int:
             "cryogenic QPU / Hilbert 2^n / QAOA box / FCI sales pitch",
         ],
         "jobs_current": {
-            "factor_Shor": "far ρ 8/8 · log-N 8/8 · ECM through 64-bit 8/8. RSA-2048 is smoothness / √p",
+            "factor_Shor": "far ρ 8/8 · log-N 8/8 · ECM through 80-bit 8/8; 90-bit exhausted same B. RSA-2048 not run",
             "MaxCut": "11/11 under 1%; G17 0.427% (13); G22 0.734% (98)",
             "chemistry": "68/68 @0.5% (pin formulas, not Hilbert FCI)",
         },

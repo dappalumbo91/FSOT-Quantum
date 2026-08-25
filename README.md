@@ -141,6 +141,7 @@ python -m fsot_quantum heights7   # ECM 8/8 (48-bit)
 python -m fsot_quantum heights8   # ECM 8/8 (52-bit)
 python -m fsot_quantum heights9   # ECM 8/8 (56-bit)
 python -m fsot_quantum heights10  # ECM 8/8 (64-bit)
+python -m fsot_quantum heights11  # ECM 8/8 (80-bit)
 python -m fsot_quantum known      # known-answer QC 44/44
 python -m fsot_quantum vqe        # H2 objects + amplitude estimation
 python -m fsot_quantum formulas   # formula list

@@ -74,6 +74,7 @@ Every living panel also writes a twin under `results/`.
 | [`HEIGHTS8.md`](HEIGHTS8.md) | ECM at 52-bit far p±1-unsmooth **8/8** |
 | [`HEIGHTS9.md`](HEIGHTS9.md) | ECM at 56-bit far p±1-unsmooth **8/8** |
 | [`HEIGHTS10.md`](HEIGHTS10.md) | ECM at 64-bit far p±1-unsmooth **8/8** |
+| [`HEIGHTS11.md`](HEIGHTS11.md) | ECM at 80-bit **8/8**; 90-bit exhausted |
 | [`MULTIPROVER_VERIFICATION.md`](MULTIPROVER_VERIFICATION.md) | Lean · Coq · Isabelle · F\* · Python stamp |
 | [`QC_ACCURACY.md`](QC_ACCURACY.md) | Hired QC/QM jobs on ordinary hardware |
 
