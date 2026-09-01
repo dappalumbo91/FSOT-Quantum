@@ -16,7 +16,7 @@ Answers the jobs people hire quantum computers and precision-physics codes for, 
 **Read first:** [`docs/STATUS.md`](docs/STATUS.md) — current system, findings, capability.  
 **What we can claim:** [`docs/CLAIMS.md`](docs/CLAIMS.md) · **Rungs:** [`docs/LADDER.md`](docs/LADDER.md) · **Reproduce:** [`docs/REPRODUCE.md`](docs/REPRODUCE.md) · **Doc map:** [`docs/INDEX.md`](docs/INDEX.md)
 
-**Current record (2026-08-17):** competitor climb closed on this pin. Audit **20/20** vs YR4/PDG, leftover hired physics **41/41**. Three earlier audit misses were wrong objects (`docs/MISS_THREE.md`), not a pin edit. Exclusive \(B\to D\ell\nu\) is **0.15%** (`docs/V_CB_PUZZLE.md`) — the old 1.1σ was the D+D* blend 0.0398. SH0ES \(H_0\) is Lean BH→WH (Planck **0.024%**, SH0ES **1.00%**) — `docs/H0_TENSION.md`. Gset family **11/11 under 1%**, G17 **0.427%** (13 edges). Contested Lean panel **14/14**. GitHub About text is the repo one-liner; this README, `docs/STATUS.md`, and `docs/CLAIMS.md` are the current record.
+**Current record (2026-08-31):** competitor climb closed on this pin. Audit **20/20** vs YR4/PDG, leftover hired physics **41/41**. Three earlier audit misses were wrong objects (`docs/MISS_THREE.md`), not a pin edit. Exclusive \(B\to D\ell\nu\) is **0.15%** (`docs/V_CB_PUZZLE.md`) — the old 1.1σ was the D+D* blend 0.0398. SH0ES \(H_0\) is Lean BH→WH (Planck **0.024%**, SH0ES **1.00%**) — `docs/H0_TENSION.md`. Gset family **11/11 under 1%**, G17 **0.427%** (13 edges), G22 **0.734%** (98 edges). RSA-shaped **81-bit 12/12**, **95-bit 8/8**, and **103-bit 8/8**; ECM through **80-bit**. Known-answer QC **44/44**. Contested Lean panel **14/14**. GitHub About text is the repo one-liner; this README, `docs/STATUS.md`, and `docs/CLAIMS.md` are the current record.
 
 ---
 
@@ -61,7 +61,14 @@ Living numbers. Miss one and the pin is wrong — except where we scored the wro
 | Hired QC climb 6 (11-digit / SAT-28 / TSP-10) | **22/22** | [`docs/HIRE_CLIMB6.md`](docs/HIRE_CLIMB6.md) |
 | Hired QC climb 7 (13-digit / SAT-32 / TSP-11) | **22/22** | [`docs/HIRE_CLIMB7.md`](docs/HIRE_CLIMB7.md) |
 | Heights (far RSA-shaped factor / G17) | far **8/8** · G17 **0.427%** | [`docs/HEIGHTS_NEXT.md`](docs/HEIGHTS_NEXT.md) |
-| Heights 3 (log-N factor) | **7/8** | [`docs/HEIGHTS3.md`](docs/HEIGHTS3.md) |
+| Heights 3 (log-N factor) | **8/8** | [`docs/HEIGHTS3.md`](docs/HEIGHTS3.md) |
+| Heights 4–11 (ECM) | **8/8** each through **80-bit** | [`docs/HEIGHTS4.md`](docs/HEIGHTS4.md)–[`HEIGHTS11.md`](docs/HEIGHTS11.md) |
+| Heights 12 (81-bit RSA-shaped) | **12/12** | [`docs/HEIGHTS12.md`](docs/HEIGHTS12.md) |
+| Heights 13 (95-bit RSA-shaped) | **8/8** | [`docs/HEIGHTS13.md`](docs/HEIGHTS13.md) |
+| Heights 14 (103-bit RSA-shaped) | **8/8** | [`docs/HEIGHTS14.md`](docs/HEIGHTS14.md) |
+| Known-answer QC jobs | **44/44** | [`docs/KNOWN_QC.md`](docs/KNOWN_QC.md) |
+| VQE objects | pin H2 De **0.25%** · Kolos **0.75%** written | [`docs/VQE_OBJECT.md`](docs/VQE_OBJECT.md) |
+| Accuracy refine | catalog living **9/9** · log-N **8/8** | [`docs/ACCURACY_REFINE.md`](docs/ACCURACY_REFINE.md) |
 | Exclusive \(B\to D\ell\nu\) | **0.15%** vs Belle II 2025 0.0392 | [`docs/V_CB_PUZZLE.md`](docs/V_CB_PUZZLE.md) |
 | \(H_0\) Planck / SH0ES | **0.024% / 1.00%** Lean BH→WH | [`docs/H0_TENSION.md`](docs/H0_TENSION.md) |
 | \(\alpha_s(M_Z)\) | 0.68% inside vendor **0.9%** band | [`docs/OPEN_REMAINING.md`](docs/OPEN_REMAINING.md) |
@@ -72,7 +79,7 @@ Living numbers. Miss one and the pin is wrong — except where we scored the wro
 | Tsirelson | exact \(2\sqrt{2}\) | — |
 | \(S(\mathrm{QM})\), \(S(\mathrm{QC})\) | \(+0.9555\), \(−0.1477\) | emergence / damping |
 
-**Still open, written as open:** Gset champions unmatched (G17 13 edges, G22 114); vendor `BR_H_gg` field still stale (fold already matches YR4). Exclusive 0.0398 and SH0ES 6.30% were wrong objects — see [`docs/CLAIMS.md`](docs/CLAIMS.md).
+**Still open, written as open:** Gset champions unmatched (G17 13 edges, G22 98); vendor `BR_H_gg` field still stale (fold already matches YR4). RSA-2048 not run. Exclusive 0.0398 and SH0ES 6.30% were wrong objects — see [`docs/CLAIMS.md`](docs/CLAIMS.md).
 
 ---
 
@@ -144,6 +151,7 @@ python -m fsot_quantum heights10  # ECM 8/8 (64-bit)
 python -m fsot_quantum heights11  # ECM 8/8 (80-bit)
 python -m fsot_quantum heights12  # 81-bit RSA-shaped 12/12
 python -m fsot_quantum heights13  # 95-bit RSA-shaped 8/8
+python -m fsot_quantum heights14  # 103-bit RSA-shaped 8/8
 python -m fsot_quantum known      # known-answer QC 44/44
 python -m fsot_quantum vqe        # H2 objects + amplitude estimation
 python -m fsot_quantum formulas   # formula list

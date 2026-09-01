@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-08-24T22:47:01.663990+00:00",
+  "timestamp": "2026-09-01T00:13:38.692965+00:00",
   "suite": "gset_family",
   "pin": "D1D38A",
   "aspiration": "<1% of published champion",
@@ -8,6 +8,7 @@
   "n": 11,
   "n_under_1": 11,
   "n_under_5": 11,
+  "wall_seconds": 733.337070700014,
   "instances": [
     {
       "name": "G1",
@@ -18,7 +19,8 @@
       "rel_err_pct": 0.3355127322780454,
       "under_1pct": true,
       "under_5pct": true,
-      "ok": true
+      "ok": true,
+      "seconds": 93.69394619995728
     },
     {
       "name": "G2",
@@ -29,7 +31,8 @@
       "rel_err_pct": 0.3270223752151463,
       "under_1pct": true,
       "under_5pct": true,
-      "ok": true
+      "ok": true,
+      "seconds": 81.98169030004647
     },
     {
       "name": "G3",
@@ -40,7 +43,8 @@
       "rel_err_pct": 0.33557046979865773,
       "under_1pct": true,
       "under_5pct": true,
-      "ok": true
+      "ok": true,
+      "seconds": 94.76619340002071
     },
     {
       "name": "G4",
@@ -51,7 +55,8 @@
       "rel_err_pct": 0.2747724540614803,
       "under_1pct": true,
       "under_5pct": true,
-      "ok": true
+      "ok": true,
+      "seconds": 86.67930519999936
     },
     {
       "name": "G5",
@@ -62,29 +67,32 @@
       "rel_err_pct": 0.4212879374086493,
       "under_1pct": true,
       "under_5pct": true,
-      "ok": true
+      "ok": true,
+      "seconds": 89.34328650007956
     },
     {
       "name": "G14",
       "n": 800,
       "m": 4694,
-      "cut_fold": 3042,
+      "cut_fold": 3043,
       "published": 3064,
-      "rel_err_pct": 0.7180156657963447,
+      "rel_err_pct": 0.685378590078329,
       "under_1pct": true,
       "under_5pct": true,
-      "ok": true
+      "ok": true,
+      "seconds": 31.432306400034577
     },
     {
       "name": "G15",
       "n": 800,
       "m": 4661,
-      "cut_fold": 3027,
+      "cut_fold": 3028,
       "published": 3050,
-      "rel_err_pct": 0.7540983606557378,
+      "rel_err_pct": 0.7213114754098361,
       "under_1pct": true,
       "under_5pct": true,
-      "ok": true
+      "ok": true,
+      "seconds": 32.94559300004039
     },
     {
       "name": "G16",
@@ -95,7 +103,8 @@
       "rel_err_pct": 0.6880733944954129,
       "under_1pct": true,
       "under_5pct": true,
-      "ok": true
+      "ok": true,
+      "seconds": 32.8093068000162
     },
     {
       "name": "G17",
@@ -106,7 +115,8 @@
       "rel_err_pct": 0.426649163111257,
       "under_1pct": true,
       "under_5pct": true,
-      "ok": true
+      "ok": true,
+      "seconds": 32.34092009998858
     },
     {
       "name": "G22",
@@ -117,7 +127,8 @@
       "rel_err_pct": 0.7335878434014522,
       "under_1pct": true,
       "under_5pct": true,
-      "ok": true
+      "ok": true,
+      "seconds": 64.57410099997651
     },
     {
       "name": "G23",
@@ -128,8 +139,8 @@
       "rel_err_pct": 0.547062350119904,
       "under_1pct": true,
       "under_5pct": true,
-      "ok": true
+      "ok": true,
+      "seconds": 92.58599019993562
     }
-  ],
-  "note": "G1-G17 n=800 path unchanged; G22/G23 n=2000 spectral/BFS lane"
+  ]
 }

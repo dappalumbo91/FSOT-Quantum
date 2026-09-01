@@ -1,6 +1,6 @@
 # Current system — wrap snapshot
 
-**Date:** 2026-08-17  
+**Date:** 2026-08-31  
 **Author:** Damian Arthur Palumbo  
 **Repo:** [FSOT-Quantum](https://github.com/dappalumbo91/FSOT-Quantum)  
 **Pin:** `D1D38A` (`vendor/fsot_compute.py` SHA-256 prefix)  
@@ -41,7 +41,7 @@ The jobs people hire a QPU, a Hilbert simulator, an FCI code, or a QAOA box for.
 | Their pitch | Hired question | This fold now |
 |-------------|----------------|---------------|
 | Fridge / NISQ / FTQC box | usable answers at scale | ordinary GPU/CPU; scale by \(D_{\mathrm{eff}}\) |
-| Shor | period / factor | tiny \(N\) 3/3 and 4/4 — larger moduli still to climb |
+| Shor | period / factor | RSA-shaped **81-bit 12/12**, **95-bit 8/8**, and **103-bit 8/8**; ECM **80-bit**. RSA-2048 not run |
 | QAOA / annealer | MaxCut / Ising | family **11/11 under 1%**; G17 **0.427%** |
 | FCI / quantum chemistry | chemistry observables | pin set **68/68 @ 0.5%** |
 | Circuit-universal Hilbert | arbitrary unitaries | not the path; optional bridges only |
@@ -130,7 +130,14 @@ These are living ledgers. Re-run the command in the last column.
 | Hired QC climb 6 (11-digit factor / SAT-28 / TSP-10) | **22/22** | `python -m fsot_quantum hire6` | `HIRE_CLIMB6.md` |
 | Hired QC climb 7 (13-digit factor / SAT-32 / TSP-11) | **22/22** | `python -m fsot_quantum hire7` | `HIRE_CLIMB7.md` |
 | Heights — far factor (RSA-shaped) / G17 | far **8/8** · G17 **0.427%** | `python -m fsot_quantum heights2` | `HEIGHTS_NEXT.md` |
-| Heights 3 — log-N factor | **7/8** | `python -m fsot_quantum heights3` | `HEIGHTS3.md` |
+| Heights 3 — log-N factor | **8/8** | `python -m fsot_quantum heights3` | `HEIGHTS3.md` |
+| Heights 4–11 — ECM | **8/8** each through **80-bit** | `python -m fsot_quantum heights4` … `heights11` | `HEIGHTS4.md`–`HEIGHTS11.md` |
+| Heights 12 — 81-bit RSA-shaped | **12/12** | `python -m fsot_quantum heights12` | `HEIGHTS12.md` |
+| Heights 13 — 95-bit RSA-shaped | **8/8** | `python -m fsot_quantum heights13` | `HEIGHTS13.md` |
+| Heights 14 — 103-bit RSA-shaped | **8/8** | `python -m fsot_quantum heights14` | `HEIGHTS14.md` |
+| Known-answer QC jobs | **44/44** | `python -m fsot_quantum known` | `KNOWN_QC.md` |
+| VQE objects | pin H2 De **0.25%** · Kolos **0.75%** written | `python -m fsot_quantum vqe` | `VQE_OBJECT.md` |
+| Accuracy refine | catalog living **9/9** · log-N **8/8** | `python -m fsot_quantum refine` | `ACCURACY_REFINE.md` |
 
 Headline constants (same pin):
 
@@ -154,9 +161,11 @@ Aspiration **< 1%** of published champion. Kill floor **5%**. Champions still un
 | Graph | Published | Fold | rel | Status |
 |-------|----------:|-----:|----:|--------|
 | G1 n=800 | 11624 | 11585 | 0.34% | aspiration met, 39 edges short |
-| G2–G5, G14–G16, G22–G23 | BKS | family | all < 1% | with G1+G17: **11/11** |
+| G2–G5 | BKS | family | all < 1% | with G1+G14–G17+G22–G23: **11/11** |
+| G14 n=800 | 3064 | 3043 | 0.69% | 21 edges (was 3042; extra ridge kicks) |
+| G15 n=800 | 3050 | 3028 | 0.72% | 22 edges (was 3027; extra ridge kicks) |
+| G16 n=800 | 3052 | 3031 | 0.69% | 21 edges (was 3027; negative-gain ridge) |
 | G17 n=800 | 3047 | 3034 | 0.427% | 13 edges short of champion |
-| G14 n=800 | 3064 | 3042 | 0.72% | aspiration met, 22 edges short |
 | G22 n=2000 | 13359 | 13261 | 0.73% | 98 edges (was 114; n=2000 spectral/BFS) |
 | G23 n=2000 | 13344 | 13271 | 0.55% | 73 edges (was 86) |
 
@@ -169,7 +178,7 @@ G11 is a **signed** ±1 torus — a different object, not scored with the unweig
 | Deutsch–Jozsa class | seed-locked oracle + domain route | in `ask` / capability |
 | Bernstein–Vazirani secret | parity probes | exact |
 | Grover-class search | collapse through \(\Theta\) | batched on GPU |
-| Period / factor (Shor job) | modular order + collapse | hire 172189 · hire2 **10/10 through 2196323** |
+| Period / factor (Shor job) | modular + log-N + ECM + ρ | RSA-shaped **81-bit 12/12** · **95-bit 8/8** · **103-bit 8/8**; hire2 **10/10 through 2196323** |
 | Discrete log / Simon / SAT / HHL / search | modular + energy folds | hire **29/29** · hire2 **32/32** |
 | QAOA-style exact column | `qaoa_fsot` | 11/11 |
 | CHSH / EPR / Casimir | pin + Lean fabric | inside 0.5% |
@@ -220,7 +229,7 @@ Honesty cut: [`CLAIMS.md`](CLAIMS.md).
 - Multiprover stamp **FSOT_QUANTUM_MULTIPROVER_OK** (Lean · Coq · Isabelle · F\* · Python): [`MULTIPROVER_VERIFICATION.md`](MULTIPROVER_VERIFICATION.md).
 - Vendor wave8 `BR_H_gg` field still stale (0.0785). Fold already matches YR4. Pin not edited.
 - Hilbert fragments exist as **optional bridges**. They are not the scale path.
-- Period / factor: ECM **80-bit**; RSA-shaped **81-bit 12/12** and **95-bit 8/8**. RSA-2048 not run. Classical ladder: [`CLASSICAL_RECORDS.md`](CLASSICAL_RECORDS.md). H2 Kolos derived 0.75% written; LiH FCI not invented: [`VQE_OBJECT.md`](VQE_OBJECT.md). Known-answer bank **44/44**.
+- Period / factor: ECM **80-bit**; RSA-shaped **81-bit 12/12**, **95-bit 8/8**, and **103-bit 8/8**. RSA-2048 not run. Classical ladder: [`CLASSICAL_RECORDS.md`](CLASSICAL_RECORDS.md). H2 Kolos derived 0.75% written; LiH FCI not invented: [`VQE_OBJECT.md`](VQE_OBJECT.md). Known-answer bank **44/44**.
 - Atlas 432 needs the Lean clone. Without `_ref`, that count skips.
 - Older climb panels still report G1 cut **11397 / 1.95%** (5% kill band). Living family cut is **11585 / 0.336%**. Not a contradiction — see [`CLAIMS.md`](CLAIMS.md).
 
@@ -268,7 +277,11 @@ python -m fsot_quantum push3      # 41/41 leftover hired physics
 python -m fsot_quantum family     # Gset 11/11 under 1% (G17 0.427%)
 python -m fsot_quantum vcb        # inclusive 0.002% · exclusive B→D 0.15%
 python -m fsot_quantum h0         # Planck 0.024% · SH0ES 1.00%
-python -m fsot_quantum leftovers  # G17 is the real miss
+python -m fsot_quantum leftovers  # G17 13 edges; G22 98
+python -m fsot_quantum heights13  # 95-bit RSA-shaped 8/8
+python -m fsot_quantum heights14  # 103-bit RSA-shaped 8/8
+python -m fsot_quantum known      # 44/44
+python -m fsot_quantum refine     # catalog 9/9 · log-N 8/8
 python -m fsot_quantum organ      # neuron-zig organ JSON
 python -m fsot_quantum stamp      # five-prover OK if tools on PATH
 ```

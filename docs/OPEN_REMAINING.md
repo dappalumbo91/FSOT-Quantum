@@ -1,6 +1,6 @@
 # The leftovers — what is still open, and what was a wrong object
 
-**overall_ok:** `True` · pin D1D38A **not edited** · G17 champion unmatched (13 edges, under 1%)
+**overall_ok:** `True` · pin D1D38A **not edited** · G17 13 edges · G22 98 edges (champions unmatched)
 
 ## 1. Dark energy — CMB vs BAO (this was the hidden split)
 
@@ -21,7 +21,7 @@ Inclusive: QM `0.042201` vs 0.0422. Exclusive B→Dℓν (Belle II 2025): HEP `0
 
 ## 4. Gset G17 — aspiration met, champion unmatched
 
-Cut 3034 vs champion 3047 (**0.427%**, 13 edges). Family **11/11 under 1%**. Planar G14 is 22 edges / 0.72%. Not a stale target and not a new coefficient. Champion still unmatched — written, not hidden.
+Cut 3034 vs champion 3047 (**0.427%**, 13 edges). Family **11/11 under 1%**. Planar G14 is 21 edges / 0.69%. G15 is 22 edges / 0.72%. G22 is 98 edges / 0.734%. G16 is 21 edges / 0.688%. Not a stale target and not a new coefficient. Champions still unmatched — written, not hidden.
 
 ## Lean anomalies (same pin, already solved there)
 

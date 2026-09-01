@@ -8,7 +8,7 @@ A cryogenic QPU is sold as a machine that answers a list of questions. This fold
 
 | They hire a QPU for | The question | This fold | Living score | Vs them, today |
 |---------------------|--------------|-----------|--------------|----------------|
-| Shor | Factor \(N = pq\) | modular + p−1/p+1/kN + ECM + ρ | RSA-shaped **81-bit 12/12** and **95-bit 8/8** | Vs QPU: ahead. Vs GNFS: climbing. [`CLASSICAL_RECORDS.md`](CLASSICAL_RECORDS.md). |
+| Shor | Factor \(N = pq\) | modular + p−1/p+1/kN + ECM + ρ | RSA-shaped **81-bit 12/12**, **95-bit 8/8**, and **103-bit 8/8** | Vs QPU: ahead. Vs GNFS: climbing. [`CLASSICAL_RECORDS.md`](CLASSICAL_RECORDS.md). |
 | Knapsack / counting / hidden period | 0/1 knapsack, how-many-marked, period of \(x \bmod r\) | energy fold / field count / collision gcd | in `known` **44/44** | Same QUBO / counting / HSP questions, published objects. |
 | Period finding | order of \(a \bmod N\) | modular fold + CF | hire climbs; period skip above ~24 bits, then log-N/ECM | Their QFT is \(2^n\) amps. Ours is modular algebra. |
 | Discrete log | \(g^x \equiv h \pmod p\) | successive modular fold | hire **10/10**; hire2 **6/6** through \(p=40009\); hire3 through \(p=100003\) | Same question, not a QFT. |
@@ -31,7 +31,7 @@ A cryogenic QPU is sold as a machine that answers a list of questions. This fold
 
 ## What we are climbing right now
 
-1. **Shor’s end-job** — RSA-shaped similar-bit primes through **95-bit**. Next classical rungs: 52-bit \(p\), then RSA-100 (330-bit). RSA-2048 still not run.
+1. **Shor’s end-job** — RSA-shaped similar-bit primes through **103-bit**. Next classical rungs: 56-bit \(p\), then RSA-100 (330-bit). RSA-2048 still not run.
 2. **QAOA’s end-job** — Gset MaxCut vs published champions. Family 11/11 under 1%. G17 **13 edges** and G22 **98 edges** are the leftovers. Not crawled.
 3. **Known-answer bank** — textbook / demo objects they already know: `python -m fsot_quantum known` (**44/44**).
 
@@ -39,5 +39,6 @@ A cryogenic QPU is sold as a machine that answers a list of questions. This fold
 python -m fsot_quantum known
 python -m fsot_quantum hire7
 python -m fsot_quantum family
-python -m fsot_quantum heights10
+python -m fsot_quantum heights14
+python -m fsot_quantum vqe
 ```

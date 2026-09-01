@@ -1,10 +1,10 @@
 {
-  "timestamp": "2026-08-18T03:44:22.412072+00:00",
+  "timestamp": "2026-09-01T00:13:47.875536+00:00",
   "suite": "open_remaining",
   "pin": "D1D38A",
   "pin_file_edited": false,
   "overall_ok": true,
-  "wall_seconds": 0.000264400034211576,
+  "wall_seconds": 0.01305890001822263,
   "rows": [
     {
       "id": "w0_cmb",
@@ -89,6 +89,15 @@
       "rel_pct": 0.426649163111257,
       "ok": true,
       "note": "13 edges / 0.427%. Aspiration <1% met. Champion unmatched. Family 11/11. Not crawled."
+    },
+    {
+      "id": "G22",
+      "open": "Gset G22 champion",
+      "fold": 13261,
+      "published": 13359,
+      "rel_pct": 0.7335878434014522,
+      "ok": true,
+      "note": "98 edges / 0.734%. n=2000 spectral/BFS. Aspiration <1% met. Champion unmatched."
     }
   ],
   "lean_anomalies": [

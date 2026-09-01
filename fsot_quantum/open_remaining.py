@@ -169,6 +169,15 @@ def main() -> int:
             "ok": True,
             "note": "13 edges / 0.427%. Aspiration <1% met. Champion unmatched. Family 11/11. Not crawled.",
         },
+        {
+            "id": "G22",
+            "open": "Gset G22 champion",
+            "fold": 13261,
+            "published": 13359,
+            "rel_pct": abs(13261 - 13359) / 13359 * 100,
+            "ok": True,
+            "note": "98 edges / 0.734%. n=2000 spectral/BFS. Aspiration <1% met. Champion unmatched.",
+        },
     ]
 
     # Lean anomaly ledger (same pin) when the clone is present.
@@ -220,7 +229,7 @@ def main() -> int:
     md = [
         "# The leftovers — what is still open, and what was a wrong object",
         "",
-        f"**overall_ok:** `{ok}` · pin D1D38A **not edited** · G17 champion unmatched (13 edges, under 1%)",
+        f"**overall_ok:** `{ok}` · pin D1D38A **not edited** · G17 13 edges · G22 98 edges (champions unmatched)",
         "",
         "## 1. Dark energy — CMB vs BAO (this was the hidden split)",
         "",
@@ -253,9 +262,10 @@ def main() -> int:
         "## 4. Gset G17 — aspiration met, champion unmatched",
         "",
         "Cut 3034 vs champion 3047 (**0.427%**, 13 edges). "
-        "Family **11/11 under 1%**. Planar G14 is 22 edges / 0.72%. "
+        "Family **11/11 under 1%**. Planar G14 is 21 edges / 0.69%. "
+        "G15 is 22 edges / 0.72%. G22 is 98 edges / 0.734%. G16 is 21 edges / 0.688%. "
         "Not a stale target and not a new coefficient. "
-        "Champion still unmatched — written, not hidden.",
+        "Champions still unmatched — written, not hidden.",
         "",
         "## Lean anomalies (same pin, already solved there)",
         "",

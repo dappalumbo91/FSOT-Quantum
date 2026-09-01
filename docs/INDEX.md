@@ -66,7 +66,7 @@ Every living panel also writes a twin under `results/`.
 | [`HIRE_CLIMB5.md`](HIRE_CLIMB5.md) | 10-digit factor / SAT-24 / TSP-9 / HHL 6×6 |
 | [`HIRE_CLIMB6.md`](HIRE_CLIMB6.md) | 11-digit factor / SAT-28 / TSP-10 / HHL 7×7 |
 | [`HIRE_CLIMB7.md`](HIRE_CLIMB7.md) | 13-digit factor / SAT-32 / TSP-11 / HHL 8×8 |
-| [`HEIGHTS.md`](HEIGHTS.md) | G17 + far-prime (RSA-shaped) factoring |
+| [`HEIGHTS.md`](HEIGHTS.md) | First heights run (G17 was 3016). Living G17 is **3034** — `GSET_FAMILY.md` |
 | [`HEIGHTS_NEXT.md`](HEIGHTS_NEXT.md) | G17 closed under 1%; p−1 log-N factor |
 | [`HEIGHTS3.md`](HEIGHTS3.md) | log-N: p−1 + Williams p+1 + kN Fermat **8/8** |
 | [`HEIGHTS4.md`](HEIGHTS4.md) | ECM on p±1-unsmooth far moduli **8/8** (38-bit) |
@@ -79,6 +79,7 @@ Every living panel also writes a twin under `results/`.
 | [`HEIGHTS11.md`](HEIGHTS11.md) | ECM at 80-bit **8/8**; 90-bit exhausted |
 | [`HEIGHTS12.md`](HEIGHTS12.md) | 81-bit RSA-shaped + 90-bit ρ **12/12** |
 | [`HEIGHTS13.md`](HEIGHTS13.md) | 48-bit × 48-bit RSA-shaped **95-bit 8/8** |
+| [`HEIGHTS14.md`](HEIGHTS14.md) | 52-bit × 52-bit RSA-shaped **103-bit 8/8** |
 | [`MULTIPROVER_VERIFICATION.md`](MULTIPROVER_VERIFICATION.md) | Lean · Coq · Isabelle · F\* · Python stamp |
 | [`QC_ACCURACY.md`](QC_ACCURACY.md) | Hired QC/QM jobs on ordinary hardware |
 

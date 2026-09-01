@@ -1,5 +1,7 @@
 # The next heights — G17 and the RSA-shaped job
 
+**First-rung ledger.** Living G17 is **3034 / 0.427%** (13 edges) — [`GSET_FAMILY.md`](GSET_FAMILY.md). Living factoring is log-N **8/8**, ECM through **80-bit**, RSA-shaped through **103-bit 8/8**. This file is the first heights run (G17 then 3016 / 31 edges).
+
 **overall_ok:** `True` · **8/8** scored · pin D1D38A **not edited**
 
 hire3–hire7 factored Fermat-close twins. That is **not** the RSA job. RSA moduli are two similar-bit primes that are not twin-close. G17 was written as 31 edges and then left. This rung works those two.

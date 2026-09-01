@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-08-18T03:44:22.211978+00:00",
+  "timestamp": "2026-09-01T00:13:47.370035+00:00",
   "suite": "accuracy_refine",
   "pin": "D1D38A",
   "pin_file_edited": false,
@@ -277,7 +277,7 @@
     {
       "id": "Gset_champions",
       "status": "aspiration met, champions unmatched",
-      "note": "G1 39 \u00b7 G14 22 \u00b7 G17 13 \u00b7 G22 114 edges short of published BKS."
+      "note": "G1 39 \u00b7 G14 21 \u00b7 G15 22 \u00b7 G16 21 \u00b7 G17 13 \u00b7 G22 98 \u00b7 G23 73 edges short of published BKS."
     },
     {
       "id": "RSA2048",
@@ -285,5 +285,5 @@
       "note": "B and B2 lock to bit length. Stage-2 is still poly(log N), not a QFT."
     }
   ],
-  "wall_seconds": 0.04639239999232814
+  "wall_seconds": 0.09009289997629821
 }

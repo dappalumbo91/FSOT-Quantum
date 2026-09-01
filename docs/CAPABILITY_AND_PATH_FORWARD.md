@@ -99,11 +99,11 @@ Hilbert fragments remain optional bridges; **fold path is the scaling law**.
 
 See `docs/FOLD_NOT_HILBERT.md`.
 
-## Wrap (2026-08-17)
+## Wrap (2026-08-31)
 
 The competitor climb through physics + QI III and the stale-target audit is closed. Living snapshot: `docs/STATUS.md`. Honesty cut: `docs/CLAIMS.md`.
 
-What stayed open (not a retune): Gset champions unmatched (G17 **13** edges, G22 **98**; G16 now 21 short). RSA-shaped **95-bit 8/8**; RSA-2048 not run. Classical ladder: `docs/CLASSICAL_RECORDS.md`. H2 Kolos derived 0.75% written; LiH FCI not invented (`docs/VQE_OBJECT.md`). Known-answer bank **44/44**. Vendor `BR_H_gg` field still stale. Exclusive \(B\to D\ell\nu\) is **0.15%**. SH0ES is Lean BH→WH at **1.00%**. \(\alpha_s(M_Z)\) is inside the vendor 0.9% band.
+What stayed open (not a retune): Gset champions unmatched (G17 **13** edges, G22 **98**; G14/G16 21 short, G15 22). RSA-shaped **103-bit 8/8**; RSA-2048 not run. Classical ladder: `docs/CLASSICAL_RECORDS.md`. H2 Kolos derived 0.75% written; LiH FCI not invented (`docs/VQE_OBJECT.md`). Known-answer bank **44/44**. Vendor `BR_H_gg` field still stale. Exclusive \(B\to D\ell\nu\) is **0.15%**. SH0ES is Lean BH→WH at **1.00%**. \(\alpha_s(M_Z)\) is inside the vendor 0.9% band.
 
 ## Next builds (only if the wrap is reopened)
 

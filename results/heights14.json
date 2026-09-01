@@ -1,0 +1,164 @@
+{
+  "timestamp": "2026-08-31T23:57:33.705449+00:00",
+  "suite": "heights14",
+  "pin": "D1D38A",
+  "pin_file_edited": false,
+  "overall_ok": true,
+  "n_ok": 8,
+  "n": 8,
+  "g17": {
+    "cut": 3034,
+    "published": 3047,
+    "short": 13
+  },
+  "rsa2048_B": 49152,
+  "S_QM": 0.9555063001027194,
+  "S_QC": -0.14767310363368633,
+  "wall_seconds": 371.507605999941,
+  "rows": [
+    {
+      "p": 2300000000000453,
+      "q": 3000000000000463,
+      "N": 6900000000002423900000000209739,
+      "bits": 103,
+      "p_bits": 52,
+      "q_bits": 52,
+      "pminus1": "pminus1_exhausted",
+      "pplus1": "pplus1_exhausted",
+      "fermat_k": "fermat_multiplier_exhausted",
+      "ecm": "ecm_exhausted",
+      "end": "pollard_rho_seed",
+      "factors": [
+        2300000000000453,
+        3000000000000463
+      ],
+      "ok": true
+    },
+    {
+      "p": 2300000000000453,
+      "q": 3200000000000567,
+      "N": 7360000000002753700000000256851,
+      "bits": 103,
+      "p_bits": 52,
+      "q_bits": 52,
+      "pminus1": "pminus1_exhausted",
+      "pplus1": "pplus1_exhausted",
+      "fermat_k": "fermat_multiplier_exhausted",
+      "ecm": "ecm_exhausted",
+      "end": "pollard_rho_seed",
+      "factors": [
+        2300000000000453,
+        3200000000000567
+      ],
+      "ok": true
+    },
+    {
+      "p": 2400000000000151,
+      "q": 3000000000000463,
+      "N": 7200000000001564200000000069913,
+      "bits": 103,
+      "p_bits": 52,
+      "q_bits": 52,
+      "pminus1": "pminus1_exhausted",
+      "pplus1": "pplus1_exhausted",
+      "fermat_k": "fermat_multiplier_exhausted",
+      "ecm": "ecm_exhausted",
+      "end": "pollard_rho_seed",
+      "factors": [
+        2400000000000151,
+        3000000000000463
+      ],
+      "ok": true
+    },
+    {
+      "p": 2400000000000151,
+      "q": 3400000000000679,
+      "N": 8160000000002143000000000102529,
+      "bits": 103,
+      "p_bits": 52,
+      "q_bits": 52,
+      "pminus1": "pminus1_exhausted",
+      "pplus1": "pplus1_exhausted",
+      "fermat_k": "fermat_multiplier_exhausted",
+      "ecm": "ecm_exhausted",
+      "end": "pollard_rho_seed",
+      "factors": [
+        2400000000000151,
+        3400000000000679
+      ],
+      "ok": true
+    },
+    {
+      "p": 2500000000000163,
+      "q": 3200000000000567,
+      "N": 8000000000001939100000000092421,
+      "bits": 103,
+      "p_bits": 52,
+      "q_bits": 52,
+      "pminus1": "pminus1_exhausted",
+      "pplus1": "pplus1_exhausted",
+      "fermat_k": "fermat_multiplier_exhausted",
+      "ecm": "ecm_exhausted",
+      "end": "pollard_rho_seed",
+      "factors": [
+        2500000000000163,
+        3200000000000567
+      ],
+      "ok": true
+    },
+    {
+      "p": 2500000000000163,
+      "q": 3600000000000799,
+      "N": 9000000000002584300000000130237,
+      "bits": 103,
+      "p_bits": 52,
+      "q_bits": 52,
+      "pminus1": "pminus1_exhausted",
+      "pplus1": "pplus1_exhausted",
+      "fermat_k": "fermat_multiplier_exhausted",
+      "ecm": "ecm_exhausted",
+      "end": "pollard_rho_seed",
+      "factors": [
+        2500000000000163,
+        3600000000000799
+      ],
+      "ok": true
+    },
+    {
+      "p": 2600000000000203,
+      "q": 3400000000000679,
+      "N": 8840000000002455600000000137837,
+      "bits": 103,
+      "p_bits": 52,
+      "q_bits": 52,
+      "pminus1": "pminus1_exhausted",
+      "pplus1": "pplus1_exhausted",
+      "fermat_k": "fermat_multiplier_exhausted",
+      "ecm": "ecm_stage2",
+      "end": "ecm_stage2",
+      "factors": [
+        2600000000000203,
+        3400000000000679
+      ],
+      "ok": true
+    },
+    {
+      "p": 2700000000000217,
+      "q": 3600000000000799,
+      "N": 9720000000002938500000000173383,
+      "bits": 103,
+      "p_bits": 52,
+      "q_bits": 52,
+      "pminus1": "pminus1_exhausted",
+      "pplus1": "pplus1_exhausted",
+      "fermat_k": "fermat_multiplier_exhausted",
+      "ecm": "ecm_exhausted",
+      "end": "pollard_rho_seed",
+      "factors": [
+        2700000000000217,
+        3600000000000799
+      ],
+      "ok": true
+    }
+  ]
+}

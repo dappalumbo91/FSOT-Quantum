@@ -542,6 +542,28 @@ def _fast_maxcut(n: int, edges: list[tuple[int, int, int]]) -> tuple[int, list[i
                 negs.sort(
                     key=lambda i: (-gneg[i], (phi_m * (i + 1)) & 0xFFFFFFFF)
                 )
+        # Same ridge, other seed-locked kick sizes already in this
+        # function (2, ⌊π⌋, ⌊π³⌋). Keep only if cut improves — cannot
+        # regress the living basin. Not a crawl.
+        for ksz in strides:
+            if ksz == kick_n:
+                continue
+            for r in range(rounds):
+                trial = list(best)
+                take = negs[r * ksz : (r + 1) * ksz]
+                if not take:
+                    take = negs[:ksz]
+                for i in take:
+                    trial[i] = -trial[i]
+                trial = refine(trial)
+                tc = cut_of(trial)
+                if tc > best_c:
+                    best, best_c = trial, tc
+                    gneg = _gains(best)
+                    negs = [i for i, g in enumerate(gneg) if g < 0]
+                    negs.sort(
+                        key=lambda i: (-gneg[i], (phi_m * (i + 1)) & 0xFFFFFFFF)
+                    )
 
     # 3-flip on a φ-walk of triples (n≤800). Budget is poly in n, not n³.
     # n=2000 3-flip did not move G22 (13261) and tripled wall time.

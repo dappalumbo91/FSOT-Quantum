@@ -53,12 +53,14 @@ SH0ES remains **1.00%** on the Lean inflated sector (band 2.5%). α_s remains in
 
 G17 cut `3034` vs 3047 (**13 edges**, 0.427%). Aspiration <1% met. Champion unmatched. Exact fold of the full 27-vertex zero-gain ridge did not move it — the leftover requires negative-gain flips. Not crawled.
 
-G22 is **13261 / 0.734%** (98 edges, was 114). G23 is **13271 / 0.547%** (73 edges, was 86). n=2000 spectral/BFS lane. Family **11/11 under 1%**.
+G22 is **13261 / 0.734%** (98 edges, was 114). G23 is **13271 / 0.547%** (73 edges, was 86). n=2000 spectral/BFS lane. G14 is **3043 / 0.685%** (21 edges, was 3042). G15 is **3028 / 0.721%** (22 edges, was 3027). G16 is **3031 / 0.688%** (21 edges, was 3027). Family **11/11 under 1%**.
 
-RSA-2048 is still the smoothness / √p wall. ECM is the next smoothness lane: **8/8** at 38-bit, **8/8** at 41-bit, **8/8** at 46-bit (`HEIGHTS6.md`), not a 2048-bit factor.
+RSA-2048 is still the smoothness / √p wall. ECM is the next smoothness lane: **8/8** through 38/41/46/48/52/56/64/**80-bit**. RSA-shaped **81-bit 12/12**, **95-bit 8/8**, and **103-bit 8/8**. A 90-bit unbalanced pair exhausts the same B; ρ closed it. Not a 2048-bit factor.
 
 ```powershell
 python -m fsot_quantum refine
 python -m fsot_quantum formulas
 python -m fsot_quantum heights3
+python -m fsot_quantum heights13
+python -m fsot_quantum heights14
 ```
