@@ -29,9 +29,13 @@ theorem quantum_formal_surface_ok :
     ∧ Fold.foldBudget 8 < Fold.hilbertAmps 8
     ∧ 7 ^ 4 % 15 = 1
     ∧ Formulas.kMicro = 420222
-    ∧ Formulas.bleedMilli = 15431 := by
+    ∧ Formulas.bleedMilli = 15431
+    ∧ 10007 * 1000003 = 10007030021
+    ∧ 2048 * 24 = 49152
+    ∧ 100 * (3047 - 3034) < 3047 := by
   refine ⟨statesPerU64_eq, Domain.QM_D_eff, Domain.QC_D_eff, Hilbert.dim_twelve,
     Fold.fold_lt_hilbert_eight, Jobs.seven_pow_four_mod_fifteen,
-    Formulas.kMicro_eq, Formulas.bleedMilli_eq⟩
+    Formulas.kMicro_eq, Formulas.bleedMilli_eq,
+    Jobs.factor_far_rsa_shaped, Jobs.b_lock_2048, Jobs.g17_under_one_pct⟩
 
 end FSOT.Quantum

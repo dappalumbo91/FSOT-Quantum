@@ -67,11 +67,12 @@ Living ledgers. Re-run the command. Miss one and the pin is wrong — except whe
 | Heights 12 RSA-shaped | **12/12** 81-bit balanced + 90-bit ρ | `python -m fsot_quantum heights12` | `HEIGHTS12.md` |
 | Heights 13 RSA-shaped | **8/8** 48-bit × 48-bit (95-bit N) | `python -m fsot_quantum heights13` | `HEIGHTS13.md` |
 | Heights 14 RSA-shaped | **8/8** 52-bit × 52-bit (103-bit N) | `python -m fsot_quantum heights14` | `HEIGHTS14.md` |
+| Heights 15 RSA-shaped | **8/8** 56-bit × 56-bit (111-bit N) | `python -m fsot_quantum heights15` | `HEIGHTS15.md` |
 | Known-answer QC jobs | **44/44** vs published objects | `python -m fsot_quantum known` | `KNOWN_QC.md` |
 | VQE objects | pin H2 De/R **ok** · Kolos **0.75%** written · LiH not invented | `python -m fsot_quantum vqe` | `VQE_OBJECT.md` |
 | Accuracy refine | catalog living **9/9** · log-N **8/8** | `python -m fsot_quantum refine` | `ACCURACY_REFINE.md` |
 | Formula catalog | **18** solvers · **207/216** stored @0.5% · living **9/9** reclass | `python -m fsot_quantum formulas` | `FORMULA_LIST.md` |
-| Multiprover stamp | **FSOT_QUANTUM_MULTIPROVER_OK** | `python -m fsot_quantum stamp` | `MULTIPROVER_VERIFICATION.md` |
+| Multiprover stamp | **FSOT_QUANTUM_MULTIPROVER_OK** · 35 obligations | `python -m fsot_quantum stamp` | `MULTIPROVER_VERIFICATION.md` |
 | \(1/\alpha\), Weinberg, proton radius, water angle | match | `python -m fsot_quantum forward` | `STATUS.md` |
 | Tsirelson | exact \(2\sqrt{2}\) | organ / QI | — |
 | \(S(\mathrm{QM})\), \(S(\mathrm{QC})\) | \(+0.9555\), \(−0.1477\) | `python -m fsot_quantum check` | — |
@@ -90,7 +91,7 @@ We do **not** simulate their architecture. That would be agreeing their geometry
 |-----------|----------------|-----------|---------------|
 | Cryogenic QPU / NISQ box | usable answers without a fridge | GPU/CPU + pin | the living panels above |
 | Hilbert / statevector / FTQC | hold the job as scale grows | folds, not \(2^n\) amps | fold path is the scale law — `FOLD_NOT_HILBERT.md` |
-| Shor / RSA | period and factor | modular + log-N (p−1/p+1/kN/ECM) + rho | ECM **80-bit**; RSA-shaped **81-bit 12/12**, **95-bit 8/8**, and **103-bit 8/8**. RSA-2048 not run. |
+| Shor / RSA | period and factor | modular + log-N (p−1/p+1/kN/ECM) + rho | ECM **80-bit**; RSA-shaped **81 / 95 / 103 / 111-bit**. RSA-2048 not run. |
 | Discrete log | \(g^x\equiv h\pmod p\) | modular fold | hire 10/10 · hire2 **6/6** through p=40009 |
 | Simon / HSP | hidden xor string | collision fold + GF(2) | hire 8-bit · hire2 **12 and 16 bit** |
 | SAT / QUBO / color / TSP | assignment / tour | energy folds | SAT-32 · partition \{1..23\} · Petersen · TSP n=11 exact |
@@ -101,7 +102,7 @@ We do **not** simulate their architecture. That would be agreeing their geometry
 | Surface-code “threshold” | reliable logical work | fold residual vs published object | their \(d\)-threshold is a fridge metric; ours is residual on the question |
 | Chatbot “AI” | mind | [fsot-neuron-zig](https://github.com/dappalumbo91/fsot-neuron-zig) | this repo is the law organ, not the body |
 
-Current score is not a refusal. Factoring is far ρ **8/8**, log-N **8/8**, ECM through **80-bit**, and RSA-shaped through **103-bit 8/8** today. A 90-bit far pair **exhausts** the same B/B2 (not retuned). RSA-2048 not run. Champion MaxCut is 13–98 edges short **today**. [`HIRED_JOBS.md`](HIRED_JOBS.md).
+Current score is not a refusal. Factoring is far ρ **8/8**, log-N **8/8**, ECM through **80-bit**, and RSA-shaped through **111-bit 8/8** today. A 90-bit far pair **exhausts** the same B/B2 (not retuned). RSA-2048 not run. Champion MaxCut is 13–98 edges short **today**. [`HIRED_JOBS.md`](HIRED_JOBS.md).
 
 ---
 
@@ -131,7 +132,7 @@ Written as open. Not dressed up. Not a reason to edit the pin.
 | Catalog 9 stored-gate rows | living **9/9** | Stale stored / wrong object / in-band / inventory rounding. [`ACCURACY_REFINE.md`](ACCURACY_REFINE.md). |
 | Combined exclusive \(\lvert V_{cb}\rvert=0.0398\) | not scored | D+D* blend. The HEP object is Belle II \(B\to D\ell\nu\) 0.0392. |
 | Atlas 432 | needs `_ref/FSOT-2.1-Lean` | Without the clone, atlas counts skip; 35 pin domains still score. |
-| Period / factor (Shor job) | far ρ **8/8** · log-N **8/8** · ECM through **80-bit 8/8** · RSA-shaped **103-bit 8/8** | 90-bit ECM exhausted at the same B. RSA-2048 not run. |
+| Period / factor (Shor job) | far ρ **8/8** · log-N **8/8** · ECM through **80-bit 8/8** · RSA-shaped **111-bit 8/8** | 90-bit ECM exhausted at the same B. RSA-2048 not run. |
 | H2 / LiH VQE | pin De/R vs Kolos vs STO-3G | Three objects. Pin De **0.25%**. Kolos derived **0.75%** written. STO-3G not scored. LiH not invented. |
 
 SH0ES at **1.00%** is the Lean BH→WH inflated sector (inside the contested 2.5% band, 0.71σ of ±1.04). It is **not** the old 6.30% leftover.

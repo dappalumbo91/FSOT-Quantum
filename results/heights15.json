@@ -1,0 +1,164 @@
+{
+  "timestamp": "2026-09-01T00:33:38.141454+00:00",
+  "suite": "heights15",
+  "pin": "D1D38A",
+  "pin_file_edited": false,
+  "overall_ok": true,
+  "n_ok": 8,
+  "n": 8,
+  "g17": {
+    "cut": 3034,
+    "published": 3047,
+    "short": 13
+  },
+  "rsa2048_B": 49152,
+  "S_QM": 0.9555063001027194,
+  "S_QC": -0.14767310363368633,
+  "wall_seconds": 552.1453232000349,
+  "rows": [
+    {
+      "p": 40000000000000063,
+      "q": 50000000000000051,
+      "N": 2000000000000005190000000000003213,
+      "bits": 111,
+      "p_bits": 56,
+      "q_bits": 56,
+      "pminus1": "pminus1_stage2",
+      "pplus1": "pplus1_stage2",
+      "fermat_k": "fermat_multiplier_exhausted",
+      "ecm": "ecm_exhausted",
+      "end": "pminus1_stage2",
+      "factors": [
+        40000000000000063,
+        50000000000000051
+      ],
+      "ok": true
+    },
+    {
+      "p": 40000000000000063,
+      "q": 52000000000000123,
+      "N": 2080000000000008196000000000007749,
+      "bits": 111,
+      "p_bits": 56,
+      "q_bits": 56,
+      "pminus1": "pminus1_exhausted",
+      "pplus1": "pplus1_exhausted",
+      "fermat_k": "fermat_multiplier_exhausted",
+      "ecm": "ecm_stage1",
+      "end": "ecm_stage1",
+      "factors": [
+        40000000000000063,
+        52000000000000123
+      ],
+      "ok": true
+    },
+    {
+      "p": 42000000000000109,
+      "q": 50000000000000051,
+      "N": 2100000000000007592000000000005559,
+      "bits": 111,
+      "p_bits": 56,
+      "q_bits": 56,
+      "pminus1": "pminus1_stage2",
+      "pplus1": "pplus1_stage2",
+      "fermat_k": "fermat_multiplier_exhausted",
+      "ecm": "ecm_exhausted",
+      "end": "pminus1_stage2",
+      "factors": [
+        42000000000000109,
+        50000000000000051
+      ],
+      "ok": true
+    },
+    {
+      "p": 42000000000000109,
+      "q": 55000000000000051,
+      "N": 2310000000000008137000000000005559,
+      "bits": 111,
+      "p_bits": 56,
+      "q_bits": 56,
+      "pminus1": "pminus1_exhausted",
+      "pplus1": "pplus1_exhausted",
+      "fermat_k": "fermat_multiplier_exhausted",
+      "ecm": "ecm_exhausted",
+      "end": "pollard_rho_seed",
+      "factors": [
+        42000000000000109,
+        55000000000000051
+      ],
+      "ok": true
+    },
+    {
+      "p": 44000000000000041,
+      "q": 52000000000000123,
+      "N": 2288000000000007544000000000005043,
+      "bits": 111,
+      "p_bits": 56,
+      "q_bits": 56,
+      "pminus1": "pminus1_exhausted",
+      "pplus1": "pplus1_exhausted",
+      "fermat_k": "fermat_multiplier_exhausted",
+      "ecm": "ecm_stage1",
+      "end": "ecm_stage1",
+      "factors": [
+        44000000000000041,
+        52000000000000123
+      ],
+      "ok": true
+    },
+    {
+      "p": 44000000000000041,
+      "q": 58000000000000033,
+      "N": 2552000000000003830000000000001353,
+      "bits": 111,
+      "p_bits": 56,
+      "q_bits": 56,
+      "pminus1": "pminus1_exhausted",
+      "pplus1": "pplus1_exhausted",
+      "fermat_k": "fermat_multiplier_exhausted",
+      "ecm": "ecm_exhausted",
+      "end": "pollard_rho_seed",
+      "factors": [
+        44000000000000041,
+        58000000000000033
+      ],
+      "ok": true
+    },
+    {
+      "p": 46000000000000103,
+      "q": 55000000000000051,
+      "N": 2530000000000008011000000000005253,
+      "bits": 111,
+      "p_bits": 56,
+      "q_bits": 56,
+      "pminus1": "pminus1_exhausted",
+      "pplus1": "pplus1_exhausted",
+      "fermat_k": "fermat_multiplier_exhausted",
+      "ecm": "ecm_exhausted",
+      "end": "pollard_rho_seed",
+      "factors": [
+        46000000000000103,
+        55000000000000051
+      ],
+      "ok": true
+    },
+    {
+      "p": 46000000000000103,
+      "q": 58000000000000033,
+      "N": 2668000000000007492000000000003399,
+      "bits": 112,
+      "p_bits": 56,
+      "q_bits": 56,
+      "pminus1": "pminus1_exhausted",
+      "pplus1": "pplus1_exhausted",
+      "fermat_k": "fermat_multiplier_exhausted",
+      "ecm": "ecm_exhausted",
+      "end": "pollard_rho_seed",
+      "factors": [
+        46000000000000103,
+        58000000000000033
+      ],
+      "ok": true
+    }
+  ]
+}

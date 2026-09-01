@@ -41,7 +41,7 @@ The jobs people hire a QPU, a Hilbert simulator, an FCI code, or a QAOA box for.
 | Their pitch | Hired question | This fold now |
 |-------------|----------------|---------------|
 | Fridge / NISQ / FTQC box | usable answers at scale | ordinary GPU/CPU; scale by \(D_{\mathrm{eff}}\) |
-| Shor | period / factor | RSA-shaped **81-bit 12/12**, **95-bit 8/8**, and **103-bit 8/8**; ECM **80-bit**. RSA-2048 not run |
+| Shor | period / factor | RSA-shaped **81 / 95 / 103 / 111-bit**; ECM **80-bit**. RSA-2048 not run |
 | QAOA / annealer | MaxCut / Ising | family **11/11 under 1%**; G17 **0.427%** |
 | FCI / quantum chemistry | chemistry observables | pin set **68/68 @ 0.5%** |
 | Circuit-universal Hilbert | arbitrary unitaries | not the path; optional bridges only |
@@ -135,6 +135,7 @@ These are living ledgers. Re-run the command in the last column.
 | Heights 12 — 81-bit RSA-shaped | **12/12** | `python -m fsot_quantum heights12` | `HEIGHTS12.md` |
 | Heights 13 — 95-bit RSA-shaped | **8/8** | `python -m fsot_quantum heights13` | `HEIGHTS13.md` |
 | Heights 14 — 103-bit RSA-shaped | **8/8** | `python -m fsot_quantum heights14` | `HEIGHTS14.md` |
+| Heights 15 — 111-bit RSA-shaped | **8/8** | `python -m fsot_quantum heights15` | `HEIGHTS15.md` |
 | Known-answer QC jobs | **44/44** | `python -m fsot_quantum known` | `KNOWN_QC.md` |
 | VQE objects | pin H2 De **0.25%** · Kolos **0.75%** written | `python -m fsot_quantum vqe` | `VQE_OBJECT.md` |
 | Accuracy refine | catalog living **9/9** · log-N **8/8** | `python -m fsot_quantum refine` | `ACCURACY_REFINE.md` |
@@ -178,7 +179,7 @@ G11 is a **signed** ±1 torus — a different object, not scored with the unweig
 | Deutsch–Jozsa class | seed-locked oracle + domain route | in `ask` / capability |
 | Bernstein–Vazirani secret | parity probes | exact |
 | Grover-class search | collapse through \(\Theta\) | batched on GPU |
-| Period / factor (Shor job) | modular + log-N + ECM + ρ | RSA-shaped **81-bit 12/12** · **95-bit 8/8** · **103-bit 8/8**; hire2 **10/10 through 2196323** |
+| Period / factor (Shor job) | modular + log-N + ECM + ρ | RSA-shaped **81 / 95 / 103 / 111-bit**; hire2 **10/10 through 2196323** |
 | Discrete log / Simon / SAT / HHL / search | modular + energy folds | hire **29/29** · hire2 **32/32** |
 | QAOA-style exact column | `qaoa_fsot` | 11/11 |
 | CHSH / EPR / Casimir | pin + Lean fabric | inside 0.5% |
@@ -188,7 +189,7 @@ G11 is a **signed** ±1 torus — a different object, not scored with the unweig
 
 | Gate | Status |
 |------|--------|
-| Multiprover stamp Lean · Coq · Isabelle · F\* · Python | `FSOT_QUANTUM_MULTIPROVER_OK` |
+| Multiprover stamp Lean · Coq · Isabelle · F\* · Python | `FSOT_QUANTUM_MULTIPROVER_OK` · 35 obligations |
 | Organ export for neuron-zig | pin D1D38A, \(S\), \(\kappa\), Tsirelson |
 | Skeptic kit (pin + smoke + zero free params) | `overall_ok: True` |
 
@@ -226,10 +227,10 @@ Honesty cut: [`CLAIMS.md`](CLAIMS.md).
 - Contested open-science panel is **14/14**: [`CONTESTED_SECTORS.md`](CONTESTED_SECTORS.md).
 - Leftovers: [`OPEN_REMAINING.md`](OPEN_REMAINING.md). DESI \(w_0/w_a\) BAO lane 0.37%/0.28%. \(\alpha_s\) inside vendor 0.9%. G17 **0.427%** (13 edges, champion unmatched). Accuracy reclass: [`ACCURACY_REFINE.md`](ACCURACY_REFINE.md).
 - Formula catalog: [`FORMULA_LIST.md`](FORMULA_LIST.md) — 207/216 vs stored @0.5%; living **9/9** of those misses are stale / wrong-object / in-band.
-- Multiprover stamp **FSOT_QUANTUM_MULTIPROVER_OK** (Lean · Coq · Isabelle · F\* · Python): [`MULTIPROVER_VERIFICATION.md`](MULTIPROVER_VERIFICATION.md).
+- Multiprover stamp **FSOT_QUANTUM_MULTIPROVER_OK** (Lean · Coq · Isabelle · F\* · Python, 35 obligations): [`MULTIPROVER_VERIFICATION.md`](MULTIPROVER_VERIFICATION.md). Living job integers Q-JOB-006–010 (far factor, p−1 stage-2, B-lock, G17/G22 under 1%).
 - Vendor wave8 `BR_H_gg` field still stale (0.0785). Fold already matches YR4. Pin not edited.
 - Hilbert fragments exist as **optional bridges**. They are not the scale path.
-- Period / factor: ECM **80-bit**; RSA-shaped **81-bit 12/12**, **95-bit 8/8**, and **103-bit 8/8**. RSA-2048 not run. Classical ladder: [`CLASSICAL_RECORDS.md`](CLASSICAL_RECORDS.md). H2 Kolos derived 0.75% written; LiH FCI not invented: [`VQE_OBJECT.md`](VQE_OBJECT.md). Known-answer bank **44/44**.
+- Period / factor: ECM **80-bit**; RSA-shaped **81 / 95 / 103 / 111-bit**. RSA-2048 not run. Classical ladder: [`CLASSICAL_RECORDS.md`](CLASSICAL_RECORDS.md). H2 Kolos derived 0.75% written; LiH FCI not invented: [`VQE_OBJECT.md`](VQE_OBJECT.md). Known-answer bank **44/44**.
 - Atlas 432 needs the Lean clone. Without `_ref`, that count skips.
 - Older climb panels still report G1 cut **11397 / 1.95%** (5% kill band). Living family cut is **11585 / 0.336%**. Not a contradiction — see [`CLAIMS.md`](CLAIMS.md).
 
@@ -280,6 +281,7 @@ python -m fsot_quantum h0         # Planck 0.024% · SH0ES 1.00%
 python -m fsot_quantum leftovers  # G17 13 edges; G22 98
 python -m fsot_quantum heights13  # 95-bit RSA-shaped 8/8
 python -m fsot_quantum heights14  # 103-bit RSA-shaped 8/8
+python -m fsot_quantum heights15  # 111-bit RSA-shaped 8/8
 python -m fsot_quantum known      # 44/44
 python -m fsot_quantum refine     # catalog 9/9 · log-N 8/8
 python -m fsot_quantum organ      # neuron-zig organ JSON

@@ -12,7 +12,7 @@ This is the comparison we are built for. Today’s QPUs do **not** answer the qu
 
 | Hired question | QPU today | This fold on a PC | Who answers the question? |
 |----------------|-----------|-------------------|---------------------------|
-| Factor | Compiled Shor on \(N=15\) (2001-class demos) | RSA-**shaped** moduli through **80-bit ECM** and balanced **81 / 95 / 103-bit** | This fold, by a wide margin |
+| Factor | Compiled Shor on \(N=15\) (2001-class demos) | RSA-**shaped** moduli through **80-bit ECM** and balanced **81 / 95 / 103 / 111-bit** | This fold, by a wide margin |
 | Grover | toy oracles, few qubits | exact marked search through **10⁷** | This fold |
 | MaxCut / QAOA | ~10–20 noisy qubits, ratio often 0.7–0.9 | Gset **n=800–2000**, **11/11 under 1%** of published champion | This fold on size; champions still unmatched |
 | HHL | tiny circuits | integer \(Ax=b\) through **8×8** | This fold on the linear system |
@@ -51,5 +51,5 @@ We are **in the innovative state vs QPUs**. We are **not** in the innovative sta
 3. Right object for VQE / Kolos / STO-3G — already split.
 
 ```powershell
-python -m fsot_quantum heights14
+python -m fsot_quantum heights15
 ```

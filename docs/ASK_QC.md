@@ -34,47 +34,9 @@
 | Isabelle/HOL | `formal/isabelle/Jobs.thy` |
 | F* | `formal/fstar/Jobs.fst` |
 
-Shared surface: `7^4 ≡ 1 (mod 15)`, `5^6 ≡ 1 (mod 21)`, `2^10 ≡ 1 (mod 33)`,
-`8^8 ≡ 1 (mod 51)`, `15=3·5`, `21=3·7`, `33=3·11`, `foldBudget(8)=195<256`.
+Shared surface: tiny-N periods plus living integers (far RSA-shaped `10007×1000003`, p−1 stage-2, B-lock 24, G17/G22 under 1%). Full stamp: [`MULTIPROVER_VERIFICATION.md`](MULTIPROVER_VERIFICATION.md).
 
 Cross-stamp: `python scripts/run_multiprover_verification.py`
-
-## Last multiprover stamp
-
-# FSOT-Quantum multiprover verification stamp
-
-**stamp:** `FSOT_QUANTUM_MULTIPROVER_OK`
-**overall_ok:** `True`
-**pin:** `D1D38A` (expect D1D38A)
-**wall_s:** `59.91`
-
-## Provers
-
-| Prover | Status | OK |
-|--------|--------|----|
-| python_runtime | pass | True |
-| lean4 | pass | True |
-| coq | pass | True |
-| isabelle | pass | True |
-| fstar | pass | True |
-
-## Obligations: 23
-
-Spine: `verification/obligations/quantum_spine.json`
-
-## Reproduce
-
-```powershell
-cd "C:\Users\damia\Desktop\fsot quantum"
-$env:PYTHONPATH = (Get-Location).Path
-python scripts\run_multiprover_verification.py
-```
-
-Lean: `cd formal\lean; lake build`
-Coq: `cd formal\coq; coqc Trinary.v Gates.v Pack.v Domains.v Hilbert.v Fold.v Jobs.v`
-Isabelle: `isabelle build -d formal/isabelle FSOT_Quantum`
-F*: `fstar --cache_off formal\fstar\Jobs.fst`
-
 
 ```powershell
 python -m fsot_quantum.ask_qc

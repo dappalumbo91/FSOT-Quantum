@@ -1,5 +1,5 @@
 (* Hired QC job facts — Coq twin of Lean/Isabelle/F* Jobs. Pin D1D38A. *)
-From Stdlib Require Import Arith Lia.
+From Stdlib Require Import Arith Lia NArith.
 Require Import Fold.
 
 (* Shor-role periods *)
@@ -60,4 +60,46 @@ Proof.
   split; [exact factor_fifteen|].
   split; [exact fold8_lt_job|].
   exact gcd_three_fifteen.
+Qed.
+
+(* Living Shor / QAOA integers (not tiny-N demos).
+   Large products use binary N — unary nat OOMs Coq. *)
+Lemma factor_far_rsa_shaped : (10007 * 1000003 = 10007030021)%N.
+Proof. vm_compute. reflexivity. Qed.
+
+Lemma far_not_twin : (1000003 <> 10007 + 2)%N.
+Proof. vm_compute. discriminate. Qed.
+
+Lemma pminus1_stage2_smooth : (100003 - 1 = 2 * 3 * 7 * 2381)%N.
+Proof. vm_compute. reflexivity. Qed.
+
+Lemma b_lock_unit : (8 * 3 = 24)%N.
+Proof. vm_compute. reflexivity. Qed.
+
+Lemma b_lock_103 : (103 * 24 = 2472)%N.
+Proof. vm_compute. reflexivity. Qed.
+
+Lemma b_lock_2048 : (2048 * 24 = 49152)%N.
+Proof. vm_compute. reflexivity. Qed.
+
+Lemma g17_under_one_pct : (100 * (3047 - 3034) <? 3047 = true)%N.
+Proof. vm_compute. reflexivity. Qed.
+
+Lemma g22_under_one_pct : (100 * (13359 - 13261) <? 13359 = true)%N.
+Proof. vm_compute. reflexivity. Qed.
+
+Lemma living_jobs_surface :
+  (10007 * 1000003 = 10007030021)%N
+  /\ (100003 - 1 = 2 * 3 * 7 * 2381)%N
+  /\ (8 * 3 = 24)%N
+  /\ (2048 * 24 = 49152)%N
+  /\ (100 * (3047 - 3034) <? 3047 = true)%N
+  /\ (100 * (13359 - 13261) <? 13359 = true)%N.
+Proof.
+  split; [exact factor_far_rsa_shaped|].
+  split; [exact pminus1_stage2_smooth|].
+  split; [exact b_lock_unit|].
+  split; [exact b_lock_2048|].
+  split; [exact g17_under_one_pct|].
+  exact g22_under_one_pct.
 Qed.

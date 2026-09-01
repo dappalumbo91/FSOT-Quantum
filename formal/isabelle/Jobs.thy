@@ -56,4 +56,38 @@ lemma jobs_surface:
    \<and> gcd (3::nat) 15 = 3"
   by (simp add: fold8_lt_job)
 
+(* Living Shor / QAOA integers (not tiny-N demos). *)
+lemma factor_far_rsa_shaped: "(10007::nat) * 1000003 = 10007030021"
+  by simp
+
+lemma far_not_twin: "(1000003::nat) \<noteq> 10007 + 2"
+  by simp
+
+lemma pminus1_stage2_smooth: "(100003::nat) - 1 = 2 * 3 * 7 * 2381"
+  by simp
+
+lemma b_lock_unit: "(8::nat) * 3 = 24"
+  by simp
+
+lemma b_lock_103: "(103::nat) * 24 = 2472"
+  by simp
+
+lemma b_lock_2048: "(2048::nat) * 24 = 49152"
+  by simp
+
+lemma g17_under_one_pct: "100 * ((3047::nat) - 3034) < 3047"
+  by simp
+
+lemma g22_under_one_pct: "100 * ((13359::nat) - 13261) < 13359"
+  by simp
+
+lemma living_jobs_surface:
+  "(10007::nat) * 1000003 = 10007030021
+   \<and> (100003::nat) - 1 = 2 * 3 * 7 * 2381
+   \<and> (8::nat) * 3 = 24
+   \<and> (2048::nat) * 24 = 49152
+   \<and> 100 * ((3047::nat) - 3034) < 3047
+   \<and> 100 * ((13359::nat) - 13261) < 13359"
+  by simp
+
 end

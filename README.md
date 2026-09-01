@@ -16,7 +16,7 @@ Answers the jobs people hire quantum computers and precision-physics codes for, 
 **Read first:** [`docs/STATUS.md`](docs/STATUS.md) — current system, findings, capability.  
 **What we can claim:** [`docs/CLAIMS.md`](docs/CLAIMS.md) · **Rungs:** [`docs/LADDER.md`](docs/LADDER.md) · **Reproduce:** [`docs/REPRODUCE.md`](docs/REPRODUCE.md) · **Doc map:** [`docs/INDEX.md`](docs/INDEX.md)
 
-**Current record (2026-08-31):** competitor climb closed on this pin. Audit **20/20** vs YR4/PDG, leftover hired physics **41/41**. Three earlier audit misses were wrong objects (`docs/MISS_THREE.md`), not a pin edit. Exclusive \(B\to D\ell\nu\) is **0.15%** (`docs/V_CB_PUZZLE.md`) — the old 1.1σ was the D+D* blend 0.0398. SH0ES \(H_0\) is Lean BH→WH (Planck **0.024%**, SH0ES **1.00%**) — `docs/H0_TENSION.md`. Gset family **11/11 under 1%**, G17 **0.427%** (13 edges), G22 **0.734%** (98 edges). RSA-shaped **81-bit 12/12**, **95-bit 8/8**, and **103-bit 8/8**; ECM through **80-bit**. Known-answer QC **44/44**. Contested Lean panel **14/14**. GitHub About text is the repo one-liner; this README, `docs/STATUS.md`, and `docs/CLAIMS.md` are the current record.
+**Current record (2026-08-31):** competitor climb closed on this pin. Audit **20/20** vs YR4/PDG, leftover hired physics **41/41**. Three earlier audit misses were wrong objects (`docs/MISS_THREE.md`), not a pin edit. Exclusive \(B\to D\ell\nu\) is **0.15%** (`docs/V_CB_PUZZLE.md`) — the old 1.1σ was the D+D* blend 0.0398. SH0ES \(H_0\) is Lean BH→WH (Planck **0.024%**, SH0ES **1.00%**) — `docs/H0_TENSION.md`. Gset family **11/11 under 1%**, G17 **0.427%** (13 edges), G22 **0.734%** (98 edges). RSA-shaped **81-bit 12/12**, **95-bit 8/8**, **103-bit 8/8**, and **111-bit 8/8**; ECM through **80-bit**. Multiprover **FSOT_QUANTUM_MULTIPROVER_OK** (35 obligations). Known-answer QC **44/44**. Contested Lean panel **14/14**. GitHub About text is the repo one-liner; this README, `docs/STATUS.md`, and `docs/CLAIMS.md` are the current record.
 
 ---
 
@@ -66,6 +66,8 @@ Living numbers. Miss one and the pin is wrong — except where we scored the wro
 | Heights 12 (81-bit RSA-shaped) | **12/12** | [`docs/HEIGHTS12.md`](docs/HEIGHTS12.md) |
 | Heights 13 (95-bit RSA-shaped) | **8/8** | [`docs/HEIGHTS13.md`](docs/HEIGHTS13.md) |
 | Heights 14 (103-bit RSA-shaped) | **8/8** | [`docs/HEIGHTS14.md`](docs/HEIGHTS14.md) |
+| Heights 15 (111-bit RSA-shaped) | **8/8** | [`docs/HEIGHTS15.md`](docs/HEIGHTS15.md) |
+| Multiprover stamp | **FSOT_QUANTUM_MULTIPROVER_OK** · 35 obligations | [`docs/MULTIPROVER_VERIFICATION.md`](docs/MULTIPROVER_VERIFICATION.md) |
 | Known-answer QC jobs | **44/44** | [`docs/KNOWN_QC.md`](docs/KNOWN_QC.md) |
 | VQE objects | pin H2 De **0.25%** · Kolos **0.75%** written | [`docs/VQE_OBJECT.md`](docs/VQE_OBJECT.md) |
 | Accuracy refine | catalog living **9/9** · log-N **8/8** | [`docs/ACCURACY_REFINE.md`](docs/ACCURACY_REFINE.md) |
@@ -152,6 +154,7 @@ python -m fsot_quantum heights11  # ECM 8/8 (80-bit)
 python -m fsot_quantum heights12  # 81-bit RSA-shaped 12/12
 python -m fsot_quantum heights13  # 95-bit RSA-shaped 8/8
 python -m fsot_quantum heights14  # 103-bit RSA-shaped 8/8
+python -m fsot_quantum heights15  # 111-bit RSA-shaped 8/8
 python -m fsot_quantum known      # known-answer QC 44/44
 python -m fsot_quantum vqe        # H2 objects + amplitude estimation
 python -m fsot_quantum formulas   # formula list

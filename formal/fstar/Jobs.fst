@@ -67,6 +67,41 @@ val jobs_surface: unit -> Lemma (
 )
 let jobs_surface () = ()
 
+/// Living Shor / QAOA integers (not tiny-N demos).
+val factor_far_rsa_shaped: unit -> Lemma (10007 * 1000003 == 10007030021)
+let factor_far_rsa_shaped () = ()
+
+val far_not_twin: unit -> Lemma (1000003 <> 10007 + 2)
+let far_not_twin () = ()
+
+val pminus1_stage2_smooth: unit -> Lemma (100003 - 1 == 2 * 3 * 7 * 2381)
+let pminus1_stage2_smooth () = ()
+
+val b_lock_unit: unit -> Lemma (8 * 3 == 24)
+let b_lock_unit () = ()
+
+val b_lock_103: unit -> Lemma (103 * 24 == 2472)
+let b_lock_103 () = ()
+
+val b_lock_2048: unit -> Lemma (2048 * 24 == 49152)
+let b_lock_2048 () = ()
+
+val g17_under_one_pct: unit -> Lemma (100 * (3047 - 3034) < 3047)
+let g17_under_one_pct () = ()
+
+val g22_under_one_pct: unit -> Lemma (100 * (13359 - 13261) < 13359)
+let g22_under_one_pct () = ()
+
+val living_jobs_surface: unit -> Lemma (
+  10007 * 1000003 == 10007030021 /\
+  100003 - 1 == 2 * 3 * 7 * 2381 /\
+  8 * 3 == 24 /\
+  2048 * 24 == 49152 /\
+  100 * (3047 - 3034) < 3047 /\
+  100 * (13359 - 13261) < 13359
+)
+let living_jobs_surface () = ()
+
 /// Universal scale K ≈ 0.420222. Work = ceil(n/K)+27.
 let k_micro: nat = 420222
 let fold_work_k (n: nat) : nat = (n * 1000000 + 420221) / k_micro + 27

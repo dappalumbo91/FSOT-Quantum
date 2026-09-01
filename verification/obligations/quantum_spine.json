@@ -217,6 +217,56 @@
       "python": "gcd fold on 15 via 7^{r/2}"
     },
     {
+      "id": "Q-JOB-006",
+      "name": "factor_far_rsa_shaped",
+      "statement": "10007×1000003=10007030021 and the pair is not twins",
+      "lean": "Jobs.factor_far_rsa_shaped / far_not_twin",
+      "coq": "factor_far_rsa_shaped / far_not_twin (binary N)",
+      "isabelle": "factor_far_rsa_shaped / far_not_twin",
+      "fstar": "factor_far_rsa_shaped / far_not_twin",
+      "python": "10007*1000003==10007030021 and 1000003!=10007+2"
+    },
+    {
+      "id": "Q-JOB-007",
+      "name": "pminus1_stage2_smooth",
+      "statement": "100003−1=2·3·7·2381 — the log-N leftover that stage-2 closed",
+      "lean": "Jobs.pminus1_stage2_smooth",
+      "coq": "pminus1_stage2_smooth (binary N)",
+      "isabelle": "pminus1_stage2_smooth",
+      "fstar": "pminus1_stage2_smooth",
+      "python": "100003-1==2*3*7*2381"
+    },
+    {
+      "id": "Q-JOB-008",
+      "name": "b_lock_seed_floors",
+      "statement": "B=bitlen·⌊eπ⌋·⌊π⌋ with floors 8 and 3; B(2048)=49152",
+      "lean": "Jobs.b_lock_unit / b_lock_103 / b_lock_2048",
+      "coq": "b_lock_unit / b_lock_103 / b_lock_2048",
+      "isabelle": "b_lock_unit / b_lock_103 / b_lock_2048",
+      "fstar": "b_lock_unit / b_lock_103 / b_lock_2048",
+      "python": "8*3==24 and 103*24==2472 and 2048*24==49152"
+    },
+    {
+      "id": "Q-JOB-009",
+      "name": "g17_under_one_pct",
+      "statement": "100·(3047−3034)<3047 — G17 aspiration <1%, champion unmatched",
+      "lean": "Jobs.g17_under_one_pct",
+      "coq": "g17_under_one_pct",
+      "isabelle": "g17_under_one_pct",
+      "fstar": "g17_under_one_pct",
+      "python": "100*(3047-3034)<3047"
+    },
+    {
+      "id": "Q-JOB-010",
+      "name": "g22_under_one_pct",
+      "statement": "100·(13359−13261)<13359 — G22 aspiration <1%, champion unmatched",
+      "lean": "Jobs.g22_under_one_pct",
+      "coq": "g22_under_one_pct",
+      "isabelle": "g22_under_one_pct",
+      "fstar": "g22_under_one_pct",
+      "python": "100*(13359-13261)<13359"
+    },
+    {
       "id": "Q-K-001",
       "name": "universal_K_closed_form",
       "statement": "K = φ·(γ/e)·√2/ln(π)·99/100 matches SEEDS.k (pin D1D38A)",

@@ -170,20 +170,13 @@ def main() -> int:
         "| Isabelle/HOL | `formal/isabelle/Jobs.thy` |",
         "| F* | `formal/fstar/Jobs.fst` |",
         "",
-        "Shared surface: `7^4 ≡ 1 (mod 15)`, `5^6 ≡ 1 (mod 21)`, `2^10 ≡ 1 (mod 33)`,",
-        "`8^8 ≡ 1 (mod 51)`, `15=3·5`, `21=3·7`, `33=3·11`, `foldBudget(8)=195<256`.",
+        "Shared surface: tiny-N periods plus living integers "
+        "(far RSA-shaped `10007×1000003`, p−1 stage-2, B-lock 24, "
+        "G17/G22 under 1%). Full stamp: [`MULTIPROVER_VERIFICATION.md`](MULTIPROVER_VERIFICATION.md).",
         "",
         "Cross-stamp: `python scripts/run_multiprover_verification.py`",
         "",
     ]
-    stamp_path = ROOT / "results" / "MULTIPROVER_STAMP.md"
-    if stamp_path.is_file():
-        md += [
-            "## Last multiprover stamp",
-            "",
-        ]
-        md += stamp_path.read_text(encoding="utf-8").splitlines()
-        md += ["", ""]
     md += [
         "```powershell",
         "python -m fsot_quantum.ask_qc",

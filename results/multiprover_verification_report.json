@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-08-18T01:44:36.508269+00:00",
+  "timestamp": "2026-09-01T00:30:34.364112+00:00",
   "kit": "FSOT-Quantum multiprover verification",
   "pin": {
     "ok": true,
@@ -8,7 +8,7 @@
   },
   "spine": {
     "path": "verification\\obligations\\quantum_spine.json",
-    "n_obligations": 30,
+    "n_obligations": 35,
     "ids": [
       "Q-TRIT-001",
       "Q-TRIT-002",
@@ -33,6 +33,11 @@
       "Q-JOB-003",
       "Q-JOB-004",
       "Q-JOB-005",
+      "Q-JOB-006",
+      "Q-JOB-007",
+      "Q-JOB-008",
+      "Q-JOB-009",
+      "Q-JOB-010",
       "Q-K-001",
       "Q-K-002",
       "Q-FORM-001",
@@ -47,8 +52,8 @@
       "prover": "python_runtime",
       "ok": true,
       "status": "pass",
-      "n_obligations": 30,
-      "n_pass": 30,
+      "n_obligations": 35,
+      "n_pass": 35,
       "checks": [
         {
           "id": "Q-TRIT-001",
@@ -177,6 +182,31 @@
           "detail": null
         },
         {
+          "id": "Q-JOB-006",
+          "ok": true,
+          "detail": null
+        },
+        {
+          "id": "Q-JOB-007",
+          "ok": true,
+          "detail": null
+        },
+        {
+          "id": "Q-JOB-008",
+          "ok": true,
+          "detail": null
+        },
+        {
+          "id": "Q-JOB-009",
+          "ok": true,
+          "detail": null
+        },
+        {
+          "id": "Q-JOB-010",
+          "ok": true,
+          "detail": null
+        },
+        {
           "id": "Q-K-001",
           "ok": true,
           "detail": {
@@ -300,7 +330,7 @@
   },
   "overall_ok": true,
   "stamp": "FSOT_QUANTUM_MULTIPROVER_OK",
-  "wall_seconds": 72.95539899996947,
+  "wall_seconds": 74.89804240001831,
   "claims": {
     "math": "trinary spin algebra, pack contracts, domain D_eff folds, hired QC job integers",
     "programming_structure": "gates CX/neg/pair, pack capacity, runtime parity, Jobs twins",
