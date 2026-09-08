@@ -38,14 +38,15 @@ Published BKS champions on Gset are the record, not QAOA.
 | G15 n=800 | 3050 | 3028 | 22 |
 | G16 n=800 | 3052 | 3031 | 21 |
 | G17 n=800 | 3047 | 3034 | 13 |
-| G22 n=2000 | 13359 | 13261 | 98 |
+| G22 n=2000 | 13359 | 13270 | 89 |
+| G23 n=2000 | 13344 | 13280 | 64 |
 | Family | — | **11/11 under 1%** | aspiration met, champions unmatched |
 
 ## What “beat classical” means next
 
 1. 64-bit balanced is the ρ wall on this PC (\(\sim 2^{32}\) steps). Do not raise B. Next named challenge is RSA-100 (330-bit).
 2. Do not call 111-bit factoring a crypto record.
-3. Gset: close G17’s 13 edges / G22’s 98 without a crawl. Extra n=2000 modes moved G22 98→89 but displaced G23 73→85 — reverted.
+3. Gset: close G17’s 13 edges / G22’s 89 without a crawl. Extra n=2000 modes as add-on refine moved G22 98→89 and G23 73→64.
 4. RSA-2048 remains the shared unsolved poster — QPU and GNFS-on-a-PC both unsolved.
 
 ```powershell

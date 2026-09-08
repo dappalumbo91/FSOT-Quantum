@@ -47,7 +47,7 @@ We are **in the innovative state vs QPUs**. We are **not** in the innovative sta
 ## What we keep climbing on this PC
 
 1. RSA-**shaped** (two similar-bit primes, not twins) at rising bit length, still seed-locked, still not RSA-2048.
-2. Gset champions (G17 13 edges, G22 98) — QAOA’s job, laptop-sized graphs.
+2. Gset champions (G17 13 edges, G22 89) — QAOA’s job, laptop-sized graphs.
 3. Right object for VQE / Kolos / STO-3G — already split.
 
 ```powershell

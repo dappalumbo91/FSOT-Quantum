@@ -168,8 +168,8 @@ Aspiration **< 1%** of published champion. Kill floor **5%**. Champions still un
 | G15 n=800 | 3050 | 3028 | 0.72% | 22 edges (was 3027; extra ridge kicks) |
 | G16 n=800 | 3052 | 3031 | 0.69% | 21 edges (was 3027; negative-gain ridge) |
 | G17 n=800 | 3047 | 3034 | 0.427% | 13 edges short of champion |
-| G22 n=2000 | 13359 | 13261 | 0.73% | 98 edges (was 114; n=2000 spectral/BFS) |
-| G23 n=2000 | 13344 | 13271 | 0.55% | 73 edges (was 86) |
+| G22 n=2000 | 13359 | 13270 | 0.67% | 89 edges (was 98; extra modes as add-on refine) |
+| G23 n=2000 | 13344 | 13280 | 0.48% | 64 edges (was 73; extra modes as add-on refine) |
 
 G11 is a **signed** ±1 torus — a different object, not scored with the unweighted family.
 
@@ -222,7 +222,7 @@ Scored as different objects (not one blended number):
 
 Honesty cut: [`CLAIMS.md`](CLAIMS.md).
 
-- Gset champions unmatched (13–98 edges). Family **11/11 under 1%**; G17 is **0.427%** (13 edges); G22 **0.734%** (98 edges). Do not advertise MaxCut as champion-matching.
+- Gset champions unmatched (13–89 edges). Family **11/11 under 1%**; G17 is **0.427%** (13 edges); G22 **0.666%** (89 edges); G23 **0.480%** (64 edges). Do not advertise MaxCut as champion-matching.
 - Exclusive \(B\to D\ell\nu\) is **0.15%** on High_Energy_Physics (\(D_{\mathrm{eff}}=7\)) vs Belle II 2025 0.0392. Inclusive stays QM at 0.002%. Combined exclusive 0.0398 is a D+D* blend and is **not** the object. [`V_CB_PUZZLE.md`](V_CB_PUZZLE.md).
 - Hubble tension is Lean **BH→WH bubble-bleed**: one global rate 68.44; Planck depleted sector **0.024%**; SH0ES inflated sector **1.00%** (0.71σ, inside Lean 2.5% band). [`H0_TENSION.md`](H0_TENSION.md) · [FSOT-2.1-Lean §7.2](https://github.com/dappalumbo91/FSOT-2.1-Lean).
 - Contested open-science panel is **14/14**: [`CONTESTED_SECTORS.md`](CONTESTED_SECTORS.md).
@@ -279,7 +279,7 @@ python -m fsot_quantum push3      # 41/41 leftover hired physics
 python -m fsot_quantum family     # Gset 11/11 under 1% (G17 0.427%)
 python -m fsot_quantum vcb        # inclusive 0.002% · exclusive B→D 0.15%
 python -m fsot_quantum h0         # Planck 0.024% · SH0ES 1.00%
-python -m fsot_quantum leftovers  # G17 13 edges; G22 98
+python -m fsot_quantum leftovers  # G17 13 edges; G22 89
 python -m fsot_quantum heights13  # 95-bit RSA-shaped 8/8
 python -m fsot_quantum heights14  # 103-bit RSA-shaped 8/8
 python -m fsot_quantum heights15  # 111-bit RSA-shaped 8/8

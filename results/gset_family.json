@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-09-01T00:13:38.692965+00:00",
+  "timestamp": "2026-09-08T01:00:39.537650+00:00",
   "suite": "gset_family",
   "pin": "D1D38A",
   "aspiration": "<1% of published champion",
@@ -8,7 +8,7 @@
   "n": 11,
   "n_under_1": 11,
   "n_under_5": 11,
-  "wall_seconds": 733.337070700014,
+  "wall_seconds": 1074.760733800009,
   "instances": [
     {
       "name": "G1",
@@ -20,7 +20,7 @@
       "under_1pct": true,
       "under_5pct": true,
       "ok": true,
-      "seconds": 93.69394619995728
+      "seconds": 109.01925270003267
     },
     {
       "name": "G2",
@@ -32,7 +32,7 @@
       "under_1pct": true,
       "under_5pct": true,
       "ok": true,
-      "seconds": 81.98169030004647
+      "seconds": 103.78435740002897
     },
     {
       "name": "G3",
@@ -44,7 +44,7 @@
       "under_1pct": true,
       "under_5pct": true,
       "ok": true,
-      "seconds": 94.76619340002071
+      "seconds": 113.77110519999405
     },
     {
       "name": "G4",
@@ -56,7 +56,7 @@
       "under_1pct": true,
       "under_5pct": true,
       "ok": true,
-      "seconds": 86.67930519999936
+      "seconds": 104.81240280001657
     },
     {
       "name": "G5",
@@ -68,7 +68,7 @@
       "under_1pct": true,
       "under_5pct": true,
       "ok": true,
-      "seconds": 89.34328650007956
+      "seconds": 96.6544692000025
     },
     {
       "name": "G14",
@@ -80,7 +80,7 @@
       "under_1pct": true,
       "under_5pct": true,
       "ok": true,
-      "seconds": 31.432306400034577
+      "seconds": 31.545927800005302
     },
     {
       "name": "G15",
@@ -92,7 +92,7 @@
       "under_1pct": true,
       "under_5pct": true,
       "ok": true,
-      "seconds": 32.94559300004039
+      "seconds": 36.45481139997719
     },
     {
       "name": "G16",
@@ -104,7 +104,7 @@
       "under_1pct": true,
       "under_5pct": true,
       "ok": true,
-      "seconds": 32.8093068000162
+      "seconds": 40.99344099999871
     },
     {
       "name": "G17",
@@ -116,31 +116,31 @@
       "under_1pct": true,
       "under_5pct": true,
       "ok": true,
-      "seconds": 32.34092009998858
+      "seconds": 42.44323149998672
     },
     {
       "name": "G22",
       "n": 2000,
       "m": 19990,
-      "cut_fold": 13261,
+      "cut_fold": 13270,
       "published": 13359,
-      "rel_err_pct": 0.7335878434014522,
+      "rel_err_pct": 0.6662175312523393,
       "under_1pct": true,
       "under_5pct": true,
       "ok": true,
-      "seconds": 64.57410099997651
+      "seconds": 210.05621169996448
     },
     {
       "name": "G23",
       "n": 2000,
       "m": 19990,
-      "cut_fold": 13271,
+      "cut_fold": 13280,
       "published": 13344,
-      "rel_err_pct": 0.547062350119904,
+      "rel_err_pct": 0.4796163069544364,
       "under_1pct": true,
       "under_5pct": true,
       "ok": true,
-      "seconds": 92.58599019993562
+      "seconds": 185.05364629998803
     }
   ]
 }

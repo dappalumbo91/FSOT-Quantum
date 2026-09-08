@@ -98,7 +98,7 @@ We do **not** simulate their architecture. That would be agreeing their geometry
 | SAT / QUBO / color / TSP | assignment / tour | energy folds | SAT-32 · partition \{1..23\} · Petersen · TSP n=11 exact |
 | HHL | solve \(Ax=b\) | integer Cramer fold | hire 3/3 · hire2 **4×4** · hire7 **8×8** |
 | Grover | marked search | oracle-field collapse | through **1e7** exact |
-| QAOA / annealer | MaxCut / Ising | fold + KL + 2-opt + BFS-layer / spectral | **11/11 under 1%**; G17 **0.427%** (13 edges); G22 **0.734%** (98 edges); champions unmatched |
+| QAOA / annealer | MaxCut / Ising | fold + KL + 2-opt + BFS-layer / spectral | **11/11 under 1%**; G17 **0.427%** (13 edges); G22 **0.666%** (89 edges); champions unmatched |
 | FCI / quantum chemistry | chemistry observables | pin formulas | **68/68 @ 0.5%** |
 | Surface-code “threshold” | reliable logical work | fold residual vs published object | their \(d\)-threshold is a fridge metric; ours is residual on the question |
 | Chatbot “AI” | mind | [fsot-neuron-zig](https://github.com/dappalumbo91/fsot-neuron-zig) | this repo is the law organ, not the body |
@@ -128,7 +128,7 @@ Written as open. Not dressed up. Not a reason to edit the pin.
 | Object | Status | Why it stays |
 |--------|--------|--------------|
 | Gset G17 | **0.427%** (3034 vs 3047, 13 edges) | Negative-gain ridge moved G16, not G17. Champion unmatched. |
-| Gset champions | 13–98 edges short | Aspiration <1% landed **11/11**. Extra n=2000 modes moved G22 98→89 but displaced G23 73→85 — reverted. Do not advertise champion-matching. |
+| Gset champions | 13–89 edges short | Aspiration <1% landed **11/11**. Extra n=2000 modes as add-on refine moved G22 98→89 and G23 73→64 (original n_kl held). Do not advertise champion-matching. |
 | Vendor `BR_H_gg` field | still **0.0785** | Fold \(\varphi^{-4}-\gamma^5=0.081823\) already matches YR4 0.08187 (0.058%). Stale stored field. |
 | Catalog 9 stored-gate rows | living **9/9** | Stale stored / wrong object / in-band / inventory rounding. [`ACCURACY_REFINE.md`](ACCURACY_REFINE.md). |
 | Combined exclusive \(\lvert V_{cb}\rvert=0.0398\) | not scored | D+D* blend. The HEP object is Belle II \(B\to D\ell\nu\) 0.0392. |

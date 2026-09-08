@@ -103,9 +103,9 @@ def main() -> int:
         "Same object as G1 (unweighted MaxCut). Signed Gset (G6–G13, G18–G21) "
         "is a different object. Aspiration <1% of published champion. "
         "No new coefficients. Family is **11/11 under 1%**. Champions still "
-        "unmatched (G17 13 edges / 0.427%; G22 98 edges). Extra seed-locked "
-        "ridge kick sizes moved G14 and G15 one edge; G16 moved earlier on "
-        "the negative-gain ridge.",
+        "unmatched (G17 13 edges / 0.427%; G22 89 edges). Extra n=2000 "
+        "modes as add-on refine moved G22 98→89 and G23 73→64 without "
+        "displacing the original n_kl basins.",
         "",
         "| Graph | n | m | fold | published | rel% | <1% |",
         "|-------|--:|--:|-----:|----------:|-----:|:---:|",

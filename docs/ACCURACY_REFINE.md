@@ -53,7 +53,7 @@ SH0ES remains **1.00%** on the Lean inflated sector (band 2.5%). α_s remains in
 
 G17 cut `3034` vs 3047 (**13 edges**, 0.427%). Aspiration <1% met. Champion unmatched. Exact fold of the full 27-vertex zero-gain ridge did not move it — the leftover requires negative-gain flips. Not crawled.
 
-G22 is **13261 / 0.734%** (98 edges, was 114). G23 is **13271 / 0.547%** (73 edges, was 86). n=2000 spectral/BFS lane. G14 is **3043 / 0.685%** (21 edges, was 3042). G15 is **3028 / 0.721%** (22 edges, was 3027). G16 is **3031 / 0.688%** (21 edges, was 3027). Family **11/11 under 1%**.
+G22 is **13270 / 0.666%** (89 edges, was 98). G23 is **13280 / 0.480%** (64 edges, was 73). Extra n=2000 modes as add-on refine. G14 is **3043 / 0.685%** (21 edges, was 3042). G15 is **3028 / 0.721%** (22 edges, was 3027). G16 is **3031 / 0.688%** (21 edges, was 3027). Family **11/11 under 1%**.
 
 RSA-2048 is still the smoothness / √p wall. ECM is the next smoothness lane: **8/8** through 38/41/46/48/52/56/64/**80-bit**. RSA-shaped **81-bit 12/12**, **95-bit 8/8**, **103-bit 8/8**, and **111-bit 8/8**. 64-bit balanced is **0/8** at the locked ECM B (ρ \(\sim 2^{32}\) wall). A 90-bit unbalanced pair exhausts the same B; ρ closed it. Not a 2048-bit factor.
 

@@ -175,6 +175,8 @@ def _fast_maxcut(n: int, edges: list[tuple[int, int, int]]) -> tuple[int, list[i
     # n≤800 keeps the single power-iter start (G1–G17 living cuts).
     # n=2000 had no spectral/BFS; extra deflated modes + hyperplanes
     # are that scale's lane, not a coefficient.
+    modes: list[list[float]] = []
+    deg_spec: list[int] = []
     if n <= 2000:
         n_iter = max(
             n,
@@ -182,8 +184,7 @@ def _fast_maxcut(n: int, edges: list[tuple[int, int, int]]) -> tuple[int, list[i
             * int(math.floor(float(SEEDS.pi))),
         )
         n_modes = 1 if n <= 800 else max(2, int(math.floor(float(SEEDS.pi))))
-        deg = [len(adj[i]) for i in range(n)]
-        modes: list[list[float]] = []
+        deg_spec = [len(adj[i]) for i in range(n)]
         for r in range(n_modes):
             if r == 0:
                 v = [
@@ -203,7 +204,7 @@ def _fast_maxcut(n: int, edges: list[tuple[int, int, int]]) -> tuple[int, list[i
             for _ in range(n_iter):
                 w = [0.0] * n
                 for i, nbr in enumerate(adj):
-                    acc = deg[i] * v[i]
+                    acc = deg_spec[i] * v[i]
                     for j in nbr:
                         acc -= v[j]
                     w[i] = acc
@@ -462,6 +463,66 @@ def _fast_maxcut(n: int, edges: list[tuple[int, int, int]]) -> tuple[int, list[i
         c = cut_of(s)
         if c > best_c:
             best, best_c = s, c
+    # Extra deflated modes AFTER the original n_kl refine. Putting them
+    # in the pool displaced G23 13271. As add-ons they can only improve.
+    if n > 800 and modes and deg_spec:
+        n_iter = max(
+            n,
+            int(math.floor(float(SEEDS.e) * float(SEEDS.pi)))
+            * int(math.floor(float(SEEDS.pi))),
+        )
+        n_more = max(2, int(math.floor(float(SEEDS.e) * float(SEEDS.pi))))
+        n_old = len(modes)
+        extra: list[list[int]] = []
+        for r in range(n_old, n_more):
+            v = [
+                float(((phi_m * (i + 1) * (r + 3)) & 0xFFFF) / 65536.0) - 0.5
+                for i in range(n)
+            ]
+            for u in modes:
+                dot = sum(v[i] * u[i] for i in range(n))
+                v = [v[i] - dot * u[i] for i in range(n)]
+            nrm = math.sqrt(sum(x * x for x in v)) or 1.0
+            v = [x / nrm for x in v]
+            for _ in range(n_iter):
+                w = [0.0] * n
+                for i, nbr in enumerate(adj):
+                    acc = deg_spec[i] * v[i]
+                    for j in nbr:
+                        acc -= v[j]
+                    w[i] = acc
+                for u in modes:
+                    dot = sum(w[i] * u[i] for i in range(n))
+                    w = [w[i] - dot * u[i] for i in range(n)]
+                nrm = math.sqrt(sum(x * x for x in w)) or 1.0
+                v = [x / nrm for x in w]
+            modes.append(v)
+            extra.append([1 if v[i] >= 0.0 else -1 for i in range(n)])
+        thetas = (
+            0.0,
+            1.0 / float(SEEDS.phi),
+            1.0 / float(SEEDS.e),
+            1.0 / float(SEEDS.pi),
+        )
+        for i in range(len(modes)):
+            for j in range(i + 1, len(modes)):
+                if i < n_old and j < n_old:
+                    continue
+                for th in thetas:
+                    cth = math.cos(2.0 * math.pi * th)
+                    sth = math.sin(2.0 * math.pi * th)
+                    extra.append(
+                        [
+                            1 if modes[i][t] * cth + modes[j][t] * sth >= 0.0 else -1
+                            for t in range(n)
+                        ]
+                    )
+        for st in extra:
+            cand = polish(st)
+            s = refine(cand)
+            c = cut_of(s)
+            if c > best_c:
+                best, best_c = s, c
     # seed-locked breakout from the winner, then refine again
     phi_m = int(float(SEEDS.phi) * 1e6)
     rounds = max(3, int(math.floor(float(SEEDS.e) * float(SEEDS.pi))))
@@ -543,9 +604,10 @@ def _fast_maxcut(n: int, edges: list[tuple[int, int, int]]) -> tuple[int, list[i
                     key=lambda i: (-gneg[i], (phi_m * (i + 1)) & 0xFFFFFFFF)
                 )
         # Same ridge, other seed-locked kick sizes already in this
-        # function (2, ⌊π⌋, ⌊π³⌋). Keep only if cut improves — cannot
-        # regress the living basin. Not a crawl.
-        for ksz in strides:
+        # function (⌊φ⌋=1, 2, ⌊π⌋, ⌊π³⌋). Keep only if cut improves.
+        # Do not put 1 in the φ-breakout strides — (x % 1)==0 flips all.
+        ridge_k = (max(1, int(math.floor(float(SEEDS.phi)))),) + strides
+        for ksz in ridge_k:
             if ksz == kick_n:
                 continue
             for r in range(rounds):

@@ -1,10 +1,10 @@
 {
-  "timestamp": "2026-09-01T00:13:47.875536+00:00",
+  "timestamp": "2026-09-08T01:00:47.795817+00:00",
   "suite": "open_remaining",
   "pin": "D1D38A",
   "pin_file_edited": false,
   "overall_ok": true,
-  "wall_seconds": 0.01305890001822263,
+  "wall_seconds": 0.003104600007645786,
   "rows": [
     {
       "id": "w0_cmb",
@@ -93,11 +93,11 @@
     {
       "id": "G22",
       "open": "Gset G22 champion",
-      "fold": 13261,
+      "fold": 13270,
       "published": 13359,
-      "rel_pct": 0.7335878434014522,
+      "rel_pct": 0.6662175312523393,
       "ok": true,
-      "note": "98 edges / 0.734%. n=2000 spectral/BFS. Aspiration <1% met. Champion unmatched."
+      "note": "89 edges / 0.666%. Extra n=2000 modes as add-on refine. Aspiration <1% met. Champion unmatched."
     }
   ],
   "lean_anomalies": [

@@ -223,7 +223,7 @@ def main() -> int:
         {
             "id": "Gset_champions",
             "status": "aspiration met, champions unmatched",
-            "note": "G1 39 · G14 21 · G15 22 · G16 21 · G17 13 · G22 98 · G23 73 edges short of published BKS.",
+            "note": "G1 39 · G14 21 · G15 22 · G16 21 · G17 13 · G22 89 · G23 64 edges short of published BKS.",
         },
         {
             "id": "RSA2048",
@@ -319,8 +319,8 @@ def main() -> int:
         "Exact fold of the full 27-vertex zero-gain ridge did not move it — "
         "the leftover requires negative-gain flips. Not crawled.",
         "",
-        "G22 is **13261 / 0.734%** (98 edges, was 114). G23 is **13271 / 0.547%** "
-        "(73 edges, was 86). n=2000 spectral/BFS lane. G14 is **3043 / 0.685%** "
+        "G22 is **13270 / 0.666%** (89 edges, was 98). G23 is **13280 / 0.480%** "
+        "(64 edges, was 73). Extra n=2000 modes as add-on refine. G14 is **3043 / 0.685%** "
         "(21 edges, was 3042). G15 is **3028 / 0.721%** (22 edges, was 3027). "
         "G16 is **3031 / 0.688%** (21 edges, was 3027). Family **11/11 under 1%**.",
         "",
