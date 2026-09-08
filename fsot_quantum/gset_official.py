@@ -463,8 +463,13 @@ def _fast_maxcut(n: int, edges: list[tuple[int, int, int]]) -> tuple[int, list[i
         c = cut_of(s)
         if c > best_c:
             best, best_c = s, c
+    sparse = n <= 800 and len(edges) <= n * max(
+        2, int(math.floor(float(SEEDS.e) * float(SEEDS.pi)))
+    )
     # Extra deflated modes AFTER the original n_kl refine. Putting them
     # in the pool displaced G23 13271. As add-ons they can only improve.
+    # Sparse n≤800 extra modes in this slot pulled G17/G14 off the
+    # later blob basin — leave G14–G17 on the original path.
     if n > 800 and modes and deg_spec:
         n_iter = max(
             n,
@@ -523,6 +528,24 @@ def _fast_maxcut(n: int, edges: list[tuple[int, int, int]]) -> tuple[int, list[i
             c = cut_of(s)
             if c > best_c:
                 best, best_c = s, c
+        if n > 800:
+            n_src2 = max(1, int(math.floor(float(SEEDS.pi) ** 3)))
+            for src in phi_walk_indices(n, n_src2, seed_k=n + 31):
+                dist = [-1] * n
+                dist[src] = 0
+                dq = deque([src])
+                while dq:
+                    u = dq.popleft()
+                    for v2 in adj[u]:
+                        if dist[v2] < 0:
+                            dist[v2] = dist[u] + 1
+                            dq.append(v2)
+                st = [1 if (d if d >= 0 else 0) % 2 == 0 else -1 for d in dist]
+                cand = polish(st)
+                s = refine(cand)
+                c = cut_of(s)
+                if c > best_c:
+                    best, best_c = s, c
     # seed-locked breakout from the winner, then refine again
     phi_m = int(float(SEEDS.phi) * 1e6)
     rounds = max(3, int(math.floor(float(SEEDS.e) * float(SEEDS.pi))))
@@ -580,9 +603,6 @@ def _fast_maxcut(n: int, edges: list[tuple[int, int, int]]) -> tuple[int, list[i
     # the zeros did not move 13 edges). Kick the least-negative
     # vertices in φ-order, then refine. Seed-bounded. Sparse n≤800
     # (G14–G17) and n=2000; not dense G1 (m too large).
-    sparse = n <= 800 and len(edges) <= n * max(
-        2, int(math.floor(float(SEEDS.e) * float(SEEDS.pi)))
-    )
     if sparse or n > 800:
         gneg = _gains(best)
         negs = [i for i, g in enumerate(gneg) if g < 0]

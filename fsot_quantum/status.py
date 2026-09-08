@@ -72,7 +72,7 @@ def main() -> int:
         ],
         "jobs_current": {
             "factor_Shor": "RSA-shaped 81/95/103/111-bit. RSA-2048 not run",
-            "MaxCut": "11/11 under 1%; G17 0.427% (13); G22 0.666% (89); G23 0.480% (64)",
+            "MaxCut": "11/11 under 1%; G17 0.427% (13); G22 0.666% (89); G23 0.375% (50)",
             "chemistry": "68/68 @0.5% (pin formulas, not Hilbert FCI)",
         },
         "refuse": [

@@ -140,7 +140,7 @@ Official Gset MaxCut vs published champions. Same object, same job people hire Q
 | G14 n=800 | 3064 | 3043 | **0.685%** | aspiration met — 21 edges short |
 | G15 n=800 | 3050 | 3028 | **0.721%** | aspiration met — 22 edges short |
 | G22 n=2000 | 13359 | 13270 | **0.666%** | aspiration met — 89 edges short |
-| G23 n=2000 | 13344 | 13280 | **0.480%** | aspiration met — 64 edges short |
+| G23 n=2000 | 13344 | 13294 | **0.375%** | aspiration met — 50 edges short |
 
 Graph rung **closed at the <1% aspiration** for the whole unweighted family: **11/11 under 1%**. G17 is **0.427%** (13 edges). Champions still unmatched; that is written, not hidden. **Do not advertise MaxCut as champion-matching.**
 

@@ -104,8 +104,8 @@ def main() -> int:
         "is a different object. Aspiration <1% of published champion. "
         "No new coefficients. Family is **11/11 under 1%**. Champions still "
         "unmatched (G17 13 edges / 0.427%; G22 89 edges). Extra n=2000 "
-        "modes as add-on refine moved G22 98→89 and G23 73→64 without "
-        "displacing the original n_kl basins.",
+        "modes then extra BFS as add-on refine moved G22 98→89 and G23 "
+        "73→50 without displacing the original n_kl basins.",
         "",
         "| Graph | n | m | fold | published | rel% | <1% |",
         "|-------|--:|--:|-----:|----------:|-----:|:---:|",

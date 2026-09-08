@@ -2,7 +2,7 @@
 
 **overall_ok:** `True` · **11/11** under 1% · **11/11** under 5%
 
-Same object as G1 (unweighted MaxCut). Signed Gset (G6–G13, G18–G21) is a different object. Aspiration <1% of published champion. No new coefficients. Family is **11/11 under 1%**. Champions still unmatched (G17 13 edges / 0.427%; G22 89 edges). Extra n=2000 modes as add-on refine moved G22 98→89 and G23 73→64 without displacing the original n_kl basins.
+Same object as G1 (unweighted MaxCut). Signed Gset (G6–G13, G18–G21) is a different object. Aspiration <1% of published champion. No new coefficients. Family is **11/11 under 1%**. Champions still unmatched (G17 13 edges / 0.427%; G22 89 edges). Extra n=2000 modes then extra BFS as add-on refine moved G22 98→89 and G23 73→50 without displacing the original n_kl basins.
 
 | Graph | n | m | fold | published | rel% | <1% |
 |-------|--:|--:|-----:|----------:|-----:|:---:|
@@ -16,7 +16,7 @@ Same object as G1 (unweighted MaxCut). Signed Gset (G6–G13, G18–G21) is a di
 | G16 | 800 | 4672 | 3031 | 3052 | 0.688 | True |
 | G17 | 800 | 4667 | 3034 | 3047 | 0.427 | True |
 | G22 | 2000 | 19990 | 13270 | 13359 | 0.666 | True |
-| G23 | 2000 | 19990 | 13280 | 13344 | 0.480 | True |
+| G23 | 2000 | 19990 | 13294 | 13344 | 0.375 | True |
 
 ```powershell
 python -m fsot_quantum.gset_family
