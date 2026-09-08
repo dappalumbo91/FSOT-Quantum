@@ -50,6 +50,7 @@ python -m fsot_quantum heights12   # 81-bit RSA-shaped + 90-bit ρ 12/12
 python -m fsot_quantum heights13   # 95-bit RSA-shaped 8/8
 python -m fsot_quantum heights14   # 103-bit RSA-shaped 8/8
 python -m fsot_quantum heights15   # 111-bit RSA-shaped 8/8
+python -m fsot_quantum heights16   # 64-bit RSA-shaped 0/8 ECM (ρ wall)
 python -m fsot_quantum known       # known-answer QC jobs 44/44
 python -m fsot_quantum vqe         # H2 objects + amplitude estimation
 python -m fsot_quantum refine      # accuracy reclass 9/9 · log-N 8/8
@@ -99,6 +100,7 @@ python -m fsot_quantum.heights12
 python -m fsot_quantum.heights13
 python -m fsot_quantum.heights14
 python -m fsot_quantum.heights15
+python -m fsot_quantum.heights16
 python -m fsot_quantum.known_qc
 python -m fsot_quantum.vqe_object
 python -m fsot_quantum.accuracy_refine

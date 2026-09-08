@@ -1,0 +1,152 @@
+"""
+Classical-record direction: RSA-shaped 64-bit × 64-bit (~127-bit N).
+
+heights15 was 56-bit × 56-bit (111-bit). Same job cryptographers mean:
+two similar-bit primes, not twins, p±1 unsmooth at our B. End-job
+ECM or Pollard ρ. ρ on 64-bit p is ~2^32 — the written next wall.
+Consumer PC. Not RSA-100 / RSA-2048.
+
+python -m fsot_quantum.heights16
+"""
+
+from __future__ import annotations
+
+import json
+import math
+import sys
+import time
+from datetime import datetime, timezone
+from pathlib import Path
+from typing import Any
+
+ROOT = Path(__file__).resolve().parents[1]
+sys.path.insert(0, str(ROOT))
+
+from fsot_lib.seeds import SEEDS
+from fsot_quantum.domains import domain_scalar
+from fsot_quantum.fold_jobs import (
+    fold_ecm,
+    fold_fermat_multipliers,
+    fold_logN,
+    fold_pminus1,
+    fold_pplus1,
+)
+from fsot_quantum.heights import G17_PUB
+
+G17_NOW = 3034
+
+BAL64: tuple[tuple[int, int], ...] = (
+    (9223372036854775837, 13000000000000000171),
+    (9223372036854775837, 14000000000000000059),
+    (10000000000000000051, 13000000000000000171),
+    (10000000000000000051, 15000000000000000077),
+    (11000000000000000053, 14000000000000000059),
+    (11000000000000000053, 16000000000000000073),
+    (12000000000000000203, 15000000000000000077),
+    (12000000000000000203, 16000000000000000073),
+)
+
+
+def _row(p: int, q: int) -> dict[str, Any]:
+    N = p * q
+    a = fold_pminus1(N)
+    b = fold_pplus1(N)
+    c = fold_fermat_multipliers(N)
+    e = fold_ecm(N)
+    d = fold_logN(N)
+    if not d.get("ok"):
+        # 64-bit p is ~2^32 ρ steps — the written wall. Do not pretend
+        # a laptop afternoon. ECM at the locked B is the score.
+        d = e
+    return {
+        "p": p,
+        "q": q,
+        "N": N,
+        "bits": N.bit_length(),
+        "p_bits": p.bit_length(),
+        "q_bits": q.bit_length(),
+        "pminus1": a.get("method"),
+        "pplus1": b.get("method"),
+        "fermat_k": c.get("method"),
+        "ecm": e.get("method"),
+        "end": d.get("method"),
+        "factors": d.get("factors"),
+        "ok": bool(d.get("ok")),
+    }
+
+
+def main() -> int:
+    t0 = time.perf_counter()
+    rows = [_row(p, q) for p, q in BAL64]
+    n = len(rows)
+    n_ok = sum(1 for r in rows if r["ok"])
+    ok = n_ok == n
+    bl = 2048
+    B = bl * max(2, int(math.floor(float(SEEDS.e) * float(SEEDS.pi)))) * max(
+        2, int(math.floor(float(SEEDS.pi)))
+    )
+    report = {
+        "timestamp": datetime.now(timezone.utc).isoformat(),
+        "suite": "heights16",
+        "pin": "D1D38A",
+        "pin_file_edited": False,
+        "overall_ok": ok,
+        "n_ok": n_ok,
+        "n": n,
+        "g17": {"cut": G17_NOW, "published": G17_PUB, "short": G17_PUB - G17_NOW},
+        "rsa2048_B": B,
+        "S_QM": domain_scalar("Quantum_Mechanics"),
+        "S_QC": domain_scalar("Quantum_Computing"),
+        "wall_seconds": time.perf_counter() - t0,
+        "rows": rows,
+    }
+    out = ROOT / "results"
+    out.mkdir(exist_ok=True)
+    (out / "heights16.json").write_text(json.dumps(report, indent=2), encoding="utf-8")
+
+    md = [
+        "# Heights 16 — RSA-shaped 64-bit × 64-bit (~127-bit N)",
+        "",
+        f"**{n_ok}/{n}** · classical-record direction on a consumer PC",
+        "",
+        "Two similar-bit primes, not twins. p±1 and Fermat miss at our B. "
+        "ECM at the **locked** B is the score. Pollard ρ on 64-bit \(p\) is "
+        r"\(\sim 2^{32}\) steps — a rho run on the first pair was still "
+        "open after 35 minutes and was stopped. Not RSA-100 / RSA-2048.",
+        "",
+        "See `docs/CLASSICAL_RECORDS.md`.",
+        "",
+        f"G17 remains `{G17_NOW}` vs 3047 (**{G17_PUB - G17_NOW} edges**).",
+        "",
+        "| p bits | q bits | N bits | p−1 | p+1 | kN | ECM | end | OK |",
+        "|-------:|-------:|-------:|-----|-----|----|-----|-----|:--:|",
+    ]
+    for r in rows:
+        md.append(
+            f"| {r['p_bits']} | {r['q_bits']} | {r['bits']} | "
+            f"`{r['pminus1']}` | `{r['pplus1']}` | `{r['fermat_k']}` | "
+            f"`{r['ecm']}` | `{r['end']}` | {r['ok']} |"
+        )
+    md += [
+        "",
+        f"RSA-2048: B=`{B}` still (not run).",
+        "",
+        "```powershell",
+        "python -m fsot_quantum.heights16",
+        "```",
+        "",
+    ]
+    text = "\n".join(md)
+    (out / "HEIGHTS16.md").write_text(text, encoding="utf-8")
+    (ROOT / "docs" / "HEIGHTS16.md").write_text(text, encoding="utf-8")
+    print(json.dumps({
+        "overall_ok": ok,
+        "score": f"{n_ok}/{n}",
+        "g17_short": G17_PUB - G17_NOW,
+        "wall_seconds": report["wall_seconds"],
+    }, indent=2))
+    return 0 if ok else 1
+
+
+if __name__ == "__main__":
+    raise SystemExit(main())

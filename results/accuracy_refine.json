@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-09-01T00:35:21.700953+00:00",
+  "timestamp": "2026-09-08T00:17:04.268609+00:00",
   "suite": "accuracy_refine",
   "pin": "D1D38A",
   "pin_file_edited": false,
@@ -285,5 +285,5 @@
       "note": "B and B2 lock to bit length. Stage-2 is still poly(log N), not a QFT."
     }
   ],
-  "wall_seconds": 0.04255949996877462
+  "wall_seconds": 0.04307499999413267
 }
