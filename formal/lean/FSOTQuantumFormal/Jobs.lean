@@ -52,7 +52,7 @@ theorem b_lock_unit : 8 * 3 = 24 := by native_decide
 theorem b_lock_103 : 103 * 24 = 2472 := by native_decide
 theorem b_lock_2048 : 2048 * 24 = 49152 := by native_decide
 -- Gset aspiration <1% as an integer inequality (champions unmatched).
-theorem g17_under_one_pct : 100 * (3047 - 3037) < 3047 := by native_decide
+theorem g17_under_one_pct : 100 * (3047 - 3047) < 3047 := by native_decide
 theorem g22_under_one_pct : 100 * (13359 - 13270) < 13359 := by native_decide
 theorem g23_under_one_pct : 100 * (13344 - 13294) < 13344 := by native_decide
 theorem b_lock_119 : 119 * 24 = 2856 := by native_decide
@@ -63,7 +63,7 @@ theorem living_jobs_surface :
     ∧ 8 * 3 = 24
     ∧ 2048 * 24 = 49152
     ∧ 119 * 24 = 2856
-    ∧ 100 * (3047 - 3037) < 3047
+    ∧ 100 * (3047 - 3047) < 3047
     ∧ 100 * (13359 - 13270) < 13359
     ∧ 100 * (13344 - 13294) < 13344 := by
   refine ⟨factor_far_rsa_shaped, pminus1_stage2_smooth, b_lock_unit,

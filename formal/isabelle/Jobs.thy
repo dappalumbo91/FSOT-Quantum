@@ -75,7 +75,7 @@ lemma b_lock_103: "(103::nat) * 24 = 2472"
 lemma b_lock_2048: "(2048::nat) * 24 = 49152"
   by simp
 
-lemma g17_under_one_pct: "100 * ((3047::nat) - 3037) < 3047"
+lemma g17_under_one_pct: "100 * ((3047::nat) - 3047) < 3047"
   by simp
 
 lemma g22_under_one_pct: "100 * ((13359::nat) - 13270) < 13359"

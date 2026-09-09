@@ -17,7 +17,7 @@ The competitor climb on this pin is closed for hired physics and QI. After the w
 | Exclusive \(\lvert V_{cb}\rvert\) 6.03% / 1.1σ | Inclusive fold scored on the D+D* blend 0.0398 | Belle II \(B\to D\ell\nu\) **0.15%** |
 | \(H_0\) SH0ES 6.30% | Global rate 68.44 scored as a local tool | Lean BH→WH: Planck **0.024%**, SH0ES **1.00%** |
 | \(\alpha_s(M_Z)\) 0.68% | 0.5% gate tighter than vendor 0.9% / PDG 1σ | Inside vendor **0.9%** band |
-| Gset family 7/7 | Family grew to G14–G17 | **11/11 under 1%**; G17 **0.328%** (10 edges) |
+| Gset family 7/7 | Family grew to G14–G17 | **11/11 under 1%**; G17 champion **3047** |
 
 Pin file not edited. No new coefficient.
 
@@ -54,7 +54,7 @@ Living ledgers. Re-run the command. Miss one and the pin is wrong — except whe
 | Hired QC climb 5 | **22/22** | `python -m fsot_quantum hire5` | `HIRE_CLIMB5.md` |
 | Hired QC climb 6 | **22/22** | `python -m fsot_quantum hire6` | `HIRE_CLIMB6.md` |
 | Hired QC climb 7 | **22/22** | `python -m fsot_quantum hire7` | `HIRE_CLIMB7.md` |
-| Heights (far factor / G17) | far **8/8** · G17 **0.328%** (10 edges) | `python -m fsot_quantum heights2` | `HEIGHTS_NEXT.md` |
+| Heights (far factor / G17) | far **8/8** · G17 champion **3047** | `python -m fsot_quantum heights2` | `HEIGHTS_NEXT.md` |
 | Heights 3 log-N factor | **8/8** (p−1 stage-2 + p+1 + kN Fermat) | `python -m fsot_quantum heights3` | `HEIGHTS3.md` |
 | Heights 4 ECM | **8/8** p±1-unsmooth far moduli (38-bit) | `python -m fsot_quantum heights4` | `HEIGHTS4.md` |
 | Heights 5 ECM | **8/8** p±1-unsmooth far moduli (41-bit) | `python -m fsot_quantum heights5` | `HEIGHTS5.md` |
@@ -99,12 +99,12 @@ We do **not** simulate their architecture. That would be agreeing their geometry
 | SAT / QUBO / color / TSP | assignment / tour | energy folds | SAT-32 · partition \{1..23\} · Petersen · TSP n=11 exact |
 | HHL | solve \(Ax=b\) | integer Cramer fold | hire 3/3 · hire2 **4×4** · hire7 **8×8** |
 | Grover | marked search | oracle-field collapse | through **1e7** exact |
-| QAOA / annealer | MaxCut / Ising | fold + KL + 2-opt + BFS-layer / spectral + BLS | **11/11 under 1%**; G17 **0.328%** (10 edges); G14 **0.196%** (6); G22 **0.666%** (89); champions unmatched |
+| QAOA / annealer | MaxCut / Ising | fold + KL + 2-opt + BFS-layer / spectral + BLS | **11/11 under 1%**; G14/G15/G17 champions; G16 2 short; G22 **0.666%** (89) |
 | FCI / quantum chemistry | chemistry observables | pin formulas | **68/68 @ 0.5%** |
 | Surface-code “threshold” | reliable logical work | fold residual vs published object | their \(d\)-threshold is a fridge metric; ours is residual on the question |
 | Chatbot “AI” | mind | [fsot-neuron-zig](https://github.com/dappalumbo91/fsot-neuron-zig) | this repo is the law organ, not the body |
 
-Current score is not a refusal. Factoring is far ρ **8/8**, log-N **8/8**, ECM through **80-bit**, RSA-shaped through **119-bit 8/8** (60-bit ρ), and **64-bit 8/8** (CFRAC + Brent ρ) today. RSA-2048 not run. Champion MaxCut is 13–89 edges short **today**. [`HIRED_JOBS.md`](HIRED_JOBS.md).
+Current score is not a refusal. Factoring is far ρ **8/8**, log-N **8/8**, ECM through **80-bit**, RSA-shaped through **119-bit 8/8** (60-bit ρ), and **64-bit 8/8** (CFRAC + Brent ρ) today. RSA-2048 not run. G17 MaxCut champion **3047**. G22 still 89 short. [`HIRED_JOBS.md`](HIRED_JOBS.md).
 
 ---
 
@@ -128,8 +128,8 @@ Written as open. Not dressed up. Not a reason to edit the pin.
 
 | Object | Status | Why it stays |
 |--------|--------|--------------|
-| Gset G17 | **0.328%** (3037 vs 3047, 10 edges) | Seed-locked BLS moved 13→10. Champion unmatched. |
-| Gset champions | 6–89 edges short | Aspiration <1% landed **11/11**. BLS moved G14 21→6, G16 21→6, G17 13→10. Extra n=2000 modes + BFS moved G22 98→89 and G23 73→50. Do not advertise champion-matching. |
+| Gset G17 | **3047** (champion) | φ-start BLS panel + strong T-jump. |
+| Gset champions | G14/G15/G17 matched; G16 2; G22 89 | Aspiration <1% landed **11/11**. Extra n=2000 modes + BFS moved G22 98→89 and G23 73→50. Do not advertise family-wide champion-matching. |
 | Vendor `BR_H_gg` field | still **0.0785** | Fold \(\varphi^{-4}-\gamma^5=0.081823\) already matches YR4 0.08187 (0.058%). Stale stored field. |
 | Catalog 9 stored-gate rows | living **9/9** | Stale stored / wrong object / in-band / inventory rounding. [`ACCURACY_REFINE.md`](ACCURACY_REFINE.md). |
 | Combined exclusive \(\lvert V_{cb}\rvert=0.0398\) | not scored | D+D* blend. The HEP object is Belle II \(B\to D\ell\nu\) 0.0392. |
@@ -158,7 +158,7 @@ The living family cut is **11585 / 0.336%** (KL + 2-opt + BFS-layer / spectral).
 | `python -m fsot_quantum open` | **Diagnosis.** Shows what 6.03% / 6.30% look like if you score the wrong object. Not the living exclusive / SH0ES score. |
 | `python -m fsot_quantum vcb` | Living exclusive: Belle II \(B\to D\ell\nu\) **0.15%**. |
 | `python -m fsot_quantum h0` | Living Hubble: Lean BH→WH. |
-| `python -m fsot_quantum leftovers` | What is still open after the above. G17 champion unmatched (10 edges). |
+| `python -m fsot_quantum leftovers` | What is still open after the above. G17 champion 3047. G22 89 unmatched. |
 | `python -m fsot_quantum refine` | Living-object reclass of catalog 9 + log-N stage-2. |
 
 ---

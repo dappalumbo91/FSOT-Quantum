@@ -37,7 +37,7 @@ from fsot_quantum.fold_jobs import (
 )
 from fsot_quantum.heights import G17_PUB
 
-G17_NOW = 3037
+G17_NOW = 3047
 
 # 90-bit ECM-exhausted pair (33-bit × 57-bit).
 UNBAL: tuple[tuple[int, int], ...] = (

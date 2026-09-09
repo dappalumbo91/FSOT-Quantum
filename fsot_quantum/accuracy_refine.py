@@ -37,7 +37,7 @@ from fsot_quantum.h0_tension import (
     _tool,
 )
 
-G17_NOW = 3037
+G17_NOW = 3047
 
 # Literature / living objects for the nine stored-gate misses.
 # No new coefficient. Right object or the observable's own band.
@@ -213,12 +213,12 @@ def main() -> int:
     real_open = [
         {
             "id": "G17_champion",
-            "status": "aspiration met, champion unmatched",
+            "status": "champion matched",
             "fold": G17_NOW,
             "published": G17_PUB,
             "short": G17_PUB - G17_NOW,
             "rel_pct": g17_rel,
-            "note": "10 edges. Family 11/11 under 1%. BLS. Not crawled.",
+            "note": "3047. φ-start BLS panel + strong T-jump. Family 11/11 under 1%.",
         },
         {
             "id": "Gset_champions",
@@ -315,9 +315,7 @@ def main() -> int:
         "## What is still actually open",
         "",
         f"G17 cut `{G17_NOW}` vs 3047 (**{G17_PUB - G17_NOW} edges**, "
-        f"{g17_rel:.3f}%). Aspiration <1% met. Champion unmatched. "
-        "Exact fold of the full 27-vertex zero-gain ridge did not move it — "
-        "the leftover requires negative-gain flips. Not crawled.",
+        f"{g17_rel:.3f}%). Champion matched. φ-start BLS panel + strong T-jump.",
         "",
         "G22 is **13270 / 0.666%** (89 edges, was 98). G23 is **13294 / 0.375%** "
         "(50 edges, was 73). Extra n=2000 modes + BFS as add-on refine. G14 is **3043 / 0.685%** "

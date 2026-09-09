@@ -27,7 +27,7 @@ from fsot_quantum.domains import domain_scalar
 from fsot_quantum.fold_jobs import fold_fermat_multipliers, fold_logN, fold_pminus1, fold_pplus1
 from fsot_quantum.heights import FAR_N, G17_PUB
 
-G17_NOW = 3037
+G17_NOW = 3047
 
 
 def main() -> int:

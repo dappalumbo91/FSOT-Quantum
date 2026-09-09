@@ -16,7 +16,7 @@ Answers the jobs people hire quantum computers and precision-physics codes for, 
 **Read first:** [`docs/STATUS.md`](docs/STATUS.md) — current system, findings, capability.  
 **What we can claim:** [`docs/CLAIMS.md`](docs/CLAIMS.md) · **Rungs:** [`docs/LADDER.md`](docs/LADDER.md) · **Reproduce:** [`docs/REPRODUCE.md`](docs/REPRODUCE.md) · **Doc map:** [`docs/INDEX.md`](docs/INDEX.md)
 
-**Current record (2026-09-07):** competitor climb closed on this pin. Audit **20/20** vs YR4/PDG, leftover hired physics **41/41**. Three earlier audit misses were wrong objects (`docs/MISS_THREE.md`), not a pin edit. Exclusive \(B\to D\ell\nu\) is **0.15%** (`docs/V_CB_PUZZLE.md`) — the old 1.1σ was the D+D* blend 0.0398. SH0ES \(H_0\) is Lean BH→WH (Planck **0.024%**, SH0ES **1.00%**) — `docs/H0_TENSION.md`. Gset family **11/11 under 1%**, G17 **0.328%** (10 edges), G22 **0.666%** (89 edges). RSA-shaped through **119-bit 8/8** (60-bit ρ); **64-bit 8/8** (CFRAC + Brent ρ). Multiprover **FSOT_QUANTUM_MULTIPROVER_OK** (35 obligations). Known-answer QC **44/44**. Contested Lean panel **14/14**. GitHub About text is the repo one-liner; this README, `docs/STATUS.md`, and `docs/CLAIMS.md` are the current record.
+**Current record (2026-09-07):** competitor climb closed on this pin. Audit **20/20** vs YR4/PDG, leftover hired physics **41/41**. Three earlier audit misses were wrong objects (`docs/MISS_THREE.md`), not a pin edit. Exclusive \(B\to D\ell\nu\) is **0.15%** (`docs/V_CB_PUZZLE.md`) — the old 1.1σ was the D+D* blend 0.0398. SH0ES \(H_0\) is Lean BH→WH (Planck **0.024%**, SH0ES **1.00%**) — `docs/H0_TENSION.md`. Gset family **11/11 under 1%**, G17 champion **3047**, G22 **0.666%** (89 edges). RSA-shaped through **119-bit 8/8** (60-bit ρ); **64-bit 8/8** (CFRAC + Brent ρ). Multiprover **FSOT_QUANTUM_MULTIPROVER_OK** (35 obligations). Known-answer QC **44/44**. Contested Lean panel **14/14**. GitHub About text is the repo one-liner; this README, `docs/STATUS.md`, and `docs/CLAIMS.md` are the current record.
 
 ---
 
@@ -83,7 +83,7 @@ Living numbers. Miss one and the pin is wrong — except where we scored the wro
 | Tsirelson | exact \(2\sqrt{2}\) | — |
 | \(S(\mathrm{QM})\), \(S(\mathrm{QC})\) | \(+0.9555\), \(−0.1477\) | emergence / damping |
 
-**Still open, written as open:** Gset champions unmatched (G17 10 edges, G22 89); vendor `BR_H_gg` field still stale (fold already matches YR4). RSA-2048 not run. Exclusive 0.0398 and SH0ES 6.30% were wrong objects — see [`docs/CLAIMS.md`](docs/CLAIMS.md). 64-bit RSA-shaped is **8/8**.
+**Still open, written as open:** G22 89 unmatched; vendor `BR_H_gg` field still stale (fold already matches YR4). RSA-2048 not run. G17 champion **3047**. Exclusive 0.0398 and SH0ES 6.30% were wrong objects — see [`docs/CLAIMS.md`](docs/CLAIMS.md). 64-bit RSA-shaped is **8/8**.
 
 ---
 

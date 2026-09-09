@@ -33,7 +33,7 @@ from fsot_quantum.fold_jobs import (
 )
 from fsot_quantum.heights import G17_PUB
 
-G17_NOW = 3037
+G17_NOW = 3047
 
 BAL48: tuple[tuple[int, int], ...] = (
     (150000000000121, 250000000000043),

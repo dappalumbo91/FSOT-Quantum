@@ -153,11 +153,13 @@ def _fast_maxcut(n: int, edges: list[tuple[int, int, int]]) -> tuple[int, list[i
     # Per-vertex φ bits. A 30-bit stripe repeating across n=800 was a broken start.
     phi_m = int(float(SEEDS.phi) * 1e6)
     n_phi = int(math.floor(float(SEEDS.e) * float(SEEDS.pi))) * int(math.floor(float(SEEDS.pi)))
+    phi_rows: list[list[int]] = []
     for k in range(n_phi):
         row = []
         for i in range(n):
             x = (phi_m * (k + 1) * (i + 1) + (k + 3) * 2654435761 + i * 40503) & 0xFFFFFFFF
             row.append(1 if (x >> 16) & 1 else -1)
+        phi_rows.append(row)
         starts.append(row)
     # golden partition (seed φ) and e-walk (second seed, not a free RNG)
     half = n // 2
@@ -756,14 +758,46 @@ def _fast_maxcut(n: int, edges: list[tuple[int, int, int]]) -> tuple[int, list[i
     # Seed-locked BLS. 1-flip descent + adaptive perturbation.
     # Keep-if-better — cannot regress living G14–G17. Sparse n≤800
     # only (G22-scale is a different basin / time).
+    # Independent φ-start panel is the paper's 20 random analog
+    # (n_phi = ⌊eπ⌋⌊π⌋). Paper-scale budget, then default BLS on
+    # the winner (3044 → 3047 on G17 at n²⌊eπ⌋).
     if sparse:
-        from fsot_quantum.gset_bls import fold_bls
+        from fsot_quantum.gset_bls import fold_bls, paper_budget
+        import os
+        from concurrent.futures import ProcessPoolExecutor
 
+        bc, bs = fold_bls(n, adj, best, best_c)
+        if bc > best_c:
+            best, best_c = bs, bc
+        budget = paper_budget(n)
+        payloads = [
+            (n, adj, row, cut_of(row), budget) for row in phi_rows
+        ]
+        n_workers = min(16, os.cpu_count() or 1, len(payloads))
+        if n_workers <= 1:
+            panel = [_phi_bls_worker(p) for p in payloads]
+        else:
+            with ProcessPoolExecutor(max_workers=n_workers) as pool:
+                panel = list(pool.map(_phi_bls_worker, payloads, chunksize=1))
+        for bc, bs in panel:
+            if bc > best_c:
+                best, best_c = bs, bc
         bc, bs = fold_bls(n, adj, best, best_c)
         if bc > best_c:
             best, best_c = bs, bc
 
     return best_c, best
+
+
+def _phi_bls_worker(
+    payload: tuple[int, list[list[int]], list[int], int, int],
+) -> tuple[int, list[int]]:
+    n, adj, row, cut0, budget = payload
+    from fsot_quantum.gset_bls import fold_bls
+
+    return fold_bls(
+        n, adj, row, cut0, budget=budget, strong_stagnation=False
+    )
 
 
 def _try_fetch_gset(dest_dir: Path, name: str = "G1") -> Path | None:

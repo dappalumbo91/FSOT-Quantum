@@ -82,7 +82,7 @@ Proof. vm_compute. reflexivity. Qed.
 Lemma b_lock_2048 : (2048 * 24 = 49152)%N.
 Proof. vm_compute. reflexivity. Qed.
 
-Lemma g17_under_one_pct : (100 * (3047 - 3037) <? 3047 = true)%N.
+Lemma g17_under_one_pct : (100 * (3047 - 3047) <? 3047 = true)%N.
 Proof. vm_compute. reflexivity. Qed.
 
 Lemma g22_under_one_pct : (100 * (13359 - 13270) <? 13359 = true)%N.
@@ -100,7 +100,7 @@ Lemma living_jobs_surface :
   /\ (8 * 3 = 24)%N
   /\ (2048 * 24 = 49152)%N
   /\ (119 * 24 = 2856)%N
-  /\ (100 * (3047 - 3037) <? 3047 = true)%N
+  /\ (100 * (3047 - 3047) <? 3047 = true)%N
   /\ (100 * (13359 - 13270) <? 13359 = true)%N
   /\ (100 * (13344 - 13294) <? 13344 = true)%N.
 Proof.

@@ -31,7 +31,7 @@ from fsot_quantum.fold_jobs import (
 )
 from fsot_quantum.heights import G17_PUB
 
-G17_NOW = 3037
+G17_NOW = 3047
 
 ECM10_N: tuple[tuple[int, int], ...] = (
     (900000053, 20000000089),

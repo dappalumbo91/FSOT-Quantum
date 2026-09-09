@@ -163,11 +163,11 @@ def main() -> int:
         {
             "id": "G17",
             "open": "Gset G17 champion",
-            "fold": 3034,
+            "fold": 3047,
             "published": 3047,
-            "rel_pct": abs(3034 - 3047) / 3047 * 100,
+            "rel_pct": 0.0,
             "ok": True,
-            "note": "13 edges / 0.427%. Aspiration <1% met. Champion unmatched. Family 11/11. Not crawled.",
+            "note": "Champion 3047 matched. φ-start BLS panel + strong T-jump. Family 11/11. G22 still unmatched.",
         },
         {
             "id": "G22",
@@ -220,7 +220,7 @@ def main() -> int:
         "rows": rows,
         "lean_anomalies": lean_rows,
         "g17_still_open": False,
-        "g17_champion_unmatched": True,
+        "g17_champion_unmatched": False,
     }
     out = ROOT / "results"
     out.mkdir(exist_ok=True)

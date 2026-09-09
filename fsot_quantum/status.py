@@ -39,7 +39,7 @@ def main() -> int:
             "hire_climb5": "22/22 through 1445900429 / SAT-24 / TSP-9",
             "hire_climb6": "22/22 through 10045050481 / SAT-28 / TSP-10",
             "hire_climb7": "22/22 through 1000444049203 / SAT-32 / TSP-11",
-            "heights": "far 8/8 Pollard; G17 0.328% (10 edges)",
+            "heights": "far 8/8 Pollard; G17 champion 3047",
             "heights3": "log-N 8/8 (p-1 stage-2 + p+1 + kN Fermat)",
             "heights4_11": "ECM 8/8 each through 80-bit",
             "heights12": "81-bit RSA-shaped 12/12",
@@ -59,7 +59,7 @@ def main() -> int:
             "H0": "Planck 0.024%; SH0ES 1.00% Lean BH→WH",
             "alpha_s": "0.68% inside vendor 0.9% band",
             "open": [
-                "Gset champions unmatched (G17 10 edges, G22 89; family 11/11 under 1%)",
+                "G17 champion 3047. G22 89 unmatched. Family 11/11 under 1%.",
                 "vendor BR_H_gg field still stale; fold matches YR4",
                 "catalog 9 stored-gate rows are stale/wrong-object/in-band — ACCURACY_REFINE.md",
                 "RSA-2048 not run (smoothness / sqrt(p) wall)",

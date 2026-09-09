@@ -35,10 +35,10 @@ Published BKS champions on Gset are the record, not QAOA.
 | Graph | Champion | This fold | Short |
 |-------|----------|-----------|------:|
 | G1 n=800 | 11624 | 11585 | 39 |
-| G14 n=800 | 3064 | 3058 | 6 |
-| G15 n=800 | 3050 | 3037 | 13 |
-| G16 n=800 | 3052 | 3046 | 6 |
-| G17 n=800 | 3047 | 3037 | 10 |
+| G14 n=800 | 3064 | 3064 | 0 |
+| G15 n=800 | 3050 | 3050 | 0 |
+| G16 n=800 | 3052 | 3050 | 2 |
+| G17 n=800 | 3047 | 3047 | 0 |
 | G22 n=2000 | 13359 | 13270 | 89 |
 | G23 n=2000 | 13344 | 13294 | 50 |
 | Family | — | **11/11 under 1%** | aspiration met, champions unmatched |
@@ -47,7 +47,7 @@ Published BKS champions on Gset are the record, not QAOA.
 
 1. 60-bit balanced closed **8/8** on ρ (~76 min). 64-bit closed **8/8** (CFRAC + Brent ρ, batched GCD). Do not raise B. Next named challenge is RSA-100 (330-bit).
 2. Do not call 119-bit factoring a crypto record.
-3. Gset: G17 is 10 edges (was 13); G14/G16 are 6. Seed-locked BLS. G22 still 89. Extra n=2000 modes + BFS moved G22 98→89 and G23 73→50.
+3. Gset: G14/G15/G17 champions matched. G16 is 2. G22 still 89. Extra n=2000 modes + BFS moved G22 98→89 and G23 73→50.
 4. RSA-2048 remains the shared unsolved poster — QPU and GNFS-on-a-PC both unsolved.
 
 ```powershell

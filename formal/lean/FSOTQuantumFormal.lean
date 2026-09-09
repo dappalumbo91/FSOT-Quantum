@@ -33,7 +33,7 @@ theorem quantum_formal_surface_ok :
     ∧ 10007 * 1000003 = 10007030021
     ∧ 2048 * 24 = 49152
     ∧ 119 * 24 = 2856
-    ∧ 100 * (3047 - 3037) < 3047
+    ∧ 100 * (3047 - 3047) < 3047
     ∧ 100 * (13359 - 13270) < 13359 := by
   refine ⟨statesPerU64_eq, Domain.QM_D_eff, Domain.QC_D_eff, Hilbert.dim_twelve,
     Fold.fold_lt_hilbert_eight, Jobs.seven_pow_four_mod_fifteen,
