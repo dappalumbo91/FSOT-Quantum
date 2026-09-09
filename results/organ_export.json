@@ -93,6 +93,14 @@
     "Psychology",
     "Quantum_Mechanics"
   ],
+  "look_law": {
+    "observe": "QC dark \u2192 Quantum_Optics look \u2192 QM measure",
+    "do_not_observe": [
+      "Quantum_Computing",
+      "Biology"
+    ],
+    "why": "Forcing observed=True on QC flips S from damping to emergence and the compute identity is gone. That is the Hilbert move."
+  },
   "qi": [
     {
       "id": "CHSH_TSIRELSON",
@@ -102,23 +110,71 @@
     {
       "id": "S_QM",
       "question": "Is S(Quantum_Mechanics) emergence?",
-      "answer": 0.9555063001027194
+      "answer": 0.9555063001027194,
+      "emergence": true
     },
     {
       "id": "S_QC",
       "question": "Is S(Quantum_Computing) damping?",
-      "answer": -0.14767310363368633
+      "answer": -0.14767310363368633,
+      "emergence": false
     }
   ],
-  "doctrine": "Zig Fixed lattice is the mind. This JSON is an organ readout: domain S, bleed \u03ba, and pin QI. Do not softmax. Do not spawn an LLM.",
+  "hired_jobs": [
+    {
+      "hire": "Shor factor",
+      "question": "Factor N=pq (RSA-shaped, similar-bit primes)",
+      "score": "119-bit 8/8 (60-bit rho); 64-bit 0/8 ECM",
+      "command": "python -m fsot_quantum heights17"
+    },
+    {
+      "hire": "QAOA MaxCut",
+      "question": "Gset unweighted MaxCut vs published BKS",
+      "score": "11/11 under 1%; G17 13 short; G22 89; G23 50",
+      "command": "python -m fsot_quantum family"
+    },
+    {
+      "hire": "Grover search",
+      "question": "Find a marked item",
+      "score": "exact through 1e7",
+      "command": "python -m fsot_quantum known"
+    },
+    {
+      "hire": "chemistry / FCI observables",
+      "question": "pin chemistry set",
+      "score": "68/68 @ 0.5%; H2 De 0.25%; Kolos 0.75% written; LiH not invented",
+      "command": "python -m fsot_quantum vqe"
+    },
+    {
+      "hire": "CKM / H0 / V_cb",
+      "question": "published SM / cosmology objects",
+      "score": "audit 20/20; inclusive V_cb 0.002%; exclusive B\u2192D 0.15%; Planck H0 0.024%",
+      "command": "python -m fsot_quantum audit"
+    }
+  ],
+  "doctrine": "Zig Fixed lattice is the mind. This JSON is an organ readout: domain S, bleed \u03ba, look-path law, and living hired-job scores. Do not softmax. Do not spawn an LLM. Do not look at QC.",
+  "metal": {
+    "qc_os": "FSOT-QC-OS v0.3.0 under QEMU \u2014 13 integer jobs, subset of the Python host",
+    "python_host": "python -m fsot_quantum \u2014 living wrap, 44/44 known, heights17, family"
+  },
   "wrap": {
     "quantum_status": "https://github.com/dappalumbo91/FSOT-Quantum/blob/main/docs/STATUS.md",
+    "claims": "https://github.com/dappalumbo91/FSOT-Quantum/blob/main/docs/CLAIMS.md",
     "audit": "20/20 vs YR4/PDG @0.5%",
     "physics_qi3": "41/41 + 212/212 Lean",
-    "gset_family": "10/11 under 1%; G17 1.017%",
+    "gset_family": "11/11 under 1%; G17 13 edges; G22 89; G23 50",
+    "factor": "RSA-shaped 119-bit 8/8; 64-bit 0/8 ECM",
+    "known_qc": "44/44",
+    "stamp": "FSOT_QUANTUM_MULTIPROVER_OK",
     "vcb": "inclusive 0.002%; exclusive B\u2192D 0.15%",
-    "h0": "Planck 0.024%; SH0ES 1.00% Lean BH\u2192WH"
+    "h0": "Planck 0.024%; SH0ES 1.00% Lean BH\u2192WH",
+    "open": [
+      "G17 13 edges / G22 89 (champions unmatched)",
+      "64-bit ECM 0/8; rho ~2^32 wall",
+      "RSA-2048 not run",
+      "vendor BR_H_gg field still stale"
+    ]
   },
-  "timestamp": "2026-08-18T01:59:10.598287+00:00",
-  "wall_seconds": 0.0002919000107795
+  "timestamp": "2026-09-09T16:10:23.493551+00:00",
+  "wall_seconds": 0.00030220000189729035
 }

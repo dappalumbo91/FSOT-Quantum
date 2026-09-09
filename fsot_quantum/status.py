@@ -48,7 +48,7 @@ def main() -> int:
             "heights15": "111-bit RSA-shaped 8/8",
             "heights16": "127-bit RSA-shaped 0/8 ECM; rho ~2^32 wall",
             "heights17": "119-bit RSA-shaped 8/8 (60-bit rho)",
-            "stamp": "FSOT_QUANTUM_MULTIPROVER_OK 35 obligations",
+            "stamp": "FSOT_QUANTUM_MULTIPROVER_OK 37 obligations",
             "known_qc": "44/44",
             "vqe": "H2 De 0.25%; Kolos 0.75% written; LiH not invented",
             "accuracy_refine": "catalog living 9/9; log-N 8/8",

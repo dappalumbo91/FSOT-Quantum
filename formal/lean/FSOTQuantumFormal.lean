@@ -32,10 +32,13 @@ theorem quantum_formal_surface_ok :
     ∧ Formulas.bleedMilli = 15431
     ∧ 10007 * 1000003 = 10007030021
     ∧ 2048 * 24 = 49152
-    ∧ 100 * (3047 - 3034) < 3047 := by
+    ∧ 119 * 24 = 2856
+    ∧ 100 * (3047 - 3034) < 3047
+    ∧ 100 * (13359 - 13270) < 13359 := by
   refine ⟨statesPerU64_eq, Domain.QM_D_eff, Domain.QC_D_eff, Hilbert.dim_twelve,
     Fold.fold_lt_hilbert_eight, Jobs.seven_pow_four_mod_fifteen,
     Formulas.kMicro_eq, Formulas.bleedMilli_eq,
-    Jobs.factor_far_rsa_shaped, Jobs.b_lock_2048, Jobs.g17_under_one_pct⟩
+    Jobs.factor_far_rsa_shaped, Jobs.b_lock_2048, Jobs.b_lock_119,
+    Jobs.g17_under_one_pct, Jobs.g22_under_one_pct⟩
 
 end FSOT.Quantum

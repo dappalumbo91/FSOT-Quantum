@@ -19,6 +19,7 @@ Every living panel also writes a twin under `results/`.
 | [`VQE_OBJECT.md`](VQE_OBJECT.md) | H2/LiH objects split; amplitude estimation |
 | [`LADDER.md`](LADDER.md) | Rungs in order, hits, open residuals |
 | [`REPRODUCE.md`](REPRODUCE.md) | Commands a clone must run |
+| [`ORGAN.md`](ORGAN.md) | Law organ JSON for neuron-zig — living wrap |
 | [`ARCHITECTURE.md`](ARCHITECTURE.md) | How the pieces sit |
 | [`CONCEPTS.md`](CONCEPTS.md) | Author pictures → engine (engine wins) |
 
@@ -83,7 +84,7 @@ Every living panel also writes a twin under `results/`.
 | [`HEIGHTS15.md`](HEIGHTS15.md) | 56-bit × 56-bit RSA-shaped **111-bit 8/8** |
 | [`HEIGHTS16.md`](HEIGHTS16.md) | 64-bit × 64-bit RSA-shaped **127-bit 0/8** ECM · ρ wall |
 | [`HEIGHTS17.md`](HEIGHTS17.md) | 60-bit × 60-bit RSA-shaped **119-bit 8/8** ρ |
-| [`MULTIPROVER_VERIFICATION.md`](MULTIPROVER_VERIFICATION.md) | Lean · Coq · Isabelle · F\* · Python stamp **OK** · 35 obligations |
+| [`MULTIPROVER_VERIFICATION.md`](MULTIPROVER_VERIFICATION.md) | Lean · Coq · Isabelle · F\* · Python stamp **OK** · 37 obligations |
 | [`QC_ACCURACY.md`](QC_ACCURACY.md) | Hired QC/QM jobs on ordinary hardware |
 
 ---
@@ -97,7 +98,7 @@ Every living panel also writes a twin under `results/`.
 | [`EMERGE_MIND.md`](EMERGE_MIND.md) | C_factor; Neuro/Psych look; QC dark |
 | [`BLEED_REFINE.md`](BLEED_REFINE.md) | \(\kappa\) coupling + atlas ingest |
 | [`BARE_METAL.md`](BARE_METAL.md) | Zig / QEMU |
-| [`QC_OS.md`](QC_OS.md) | FSOT-QC-OS as its own job OS |
+| [`QC_OS.md`](QC_OS.md) | Metal 13-job subset vs Python living wrap |
 
 Mind-side copy of the architecture answer lives in [fsot-neuron-zig `FSOT_NATIVE_MIND_FROM_QUANTUM_FOLD.md`](https://github.com/dappalumbo91/fsot-neuron-zig/blob/main/docs/FSOT_NATIVE_MIND_FROM_QUANTUM_FOLD.md). Organ readout: that repo `docs/FSOT_QUANTUM_ORGAN.md`.
 

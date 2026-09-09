@@ -1,19 +1,2616 @@
 {
-  "timestamp": "2026-08-13T00:36:53.003423+00:00",
+  "timestamp": "2026-09-09T16:10:24.888908+00:00",
   "suite": "lean_full_atlas",
   "pin": "D1D38A",
   "overall_ok": true,
-  "wall_seconds": 1.3299247000031755,
+  "wall_seconds": 1.298750399997516,
   "panel": "lean_full_atlas",
   "status": "scanned",
   "n_files": 473,
   "n_parsed": 473,
   "n_domains_named": 432,
+  "n_named_folds": 432,
+  "n_folds_in_pin_35": 14,
+  "n_folds_lean_only": 418,
   "total_headline_records": 2346836,
   "total_replayed": 13228,
   "n_replay_fail_files": 0,
   "cap_per_file": 40,
   "fail_files": [],
+  "named_folds": [
+    {
+      "domain": "Higgs_Branching",
+      "D_eff": 5,
+      "n_files": 1,
+      "in_pin_35": false
+    },
+    {
+      "domain": "Matter_Antimatter",
+      "D_eff": 5,
+      "n_files": 1,
+      "in_pin_35": false
+    },
+    {
+      "domain": "Quantum_Mechanics",
+      "D_eff": 6,
+      "n_files": 1,
+      "in_pin_35": true
+    },
+    {
+      "domain": "Quantum_Optics",
+      "D_eff": 6,
+      "n_files": 1,
+      "in_pin_35": true
+    },
+    {
+      "domain": "Atomic_Physics",
+      "D_eff": 7,
+      "n_files": 1,
+      "in_pin_35": true
+    },
+    {
+      "domain": "NIST_CODATA_Constants",
+      "D_eff": 7,
+      "n_files": 1,
+      "in_pin_35": false
+    },
+    {
+      "domain": "Neutrino_Physics_Panel",
+      "D_eff": 7,
+      "n_files": 1,
+      "in_pin_35": false
+    },
+    {
+      "domain": "Open_Science_Seed_Constants",
+      "D_eff": 7,
+      "n_files": 1,
+      "in_pin_35": false
+    },
+    {
+      "domain": "Particle_Physics",
+      "D_eff": 7,
+      "n_files": 1,
+      "in_pin_35": true
+    },
+    {
+      "domain": "Founding_Quantum_Vacuum_Panel",
+      "D_eff": 8,
+      "n_files": 1,
+      "in_pin_35": false
+    },
+    {
+      "domain": "Information_Theory_Public_Panel",
+      "D_eff": 8,
+      "n_files": 1,
+      "in_pin_35": false
+    },
+    {
+      "domain": "Proton_Lean_Route_Credibility",
+      "D_eff": 8,
+      "n_files": 1,
+      "in_pin_35": false
+    },
+    {
+      "domain": "PubChem_Compound_Properties",
+      "D_eff": 8,
+      "n_files": 1,
+      "in_pin_35": false
+    },
+    {
+      "domain": "Electrical_Power_Systems",
+      "D_eff": 9,
+      "n_files": 1,
+      "in_pin_35": false
+    },
+    {
+      "domain": "PDG_Particle_Properties",
+      "D_eff": 9,
+      "n_files": 1,
+      "in_pin_35": false
+    },
+    {
+      "domain": "Periodic_Table_Public_Panel",
+      "D_eff": 9,
+      "n_files": 1,
+      "in_pin_35": false
+    },
+    {
+      "domain": "Circuit_Component_Emergence_Panel",
+      "D_eff": 10,
+      "n_files": 1,
+      "in_pin_35": false
+    },
+    {
+      "domain": "FSOT_C_Pack_Parity_Panel",
+      "D_eff": 10,
+      "n_files": 1,
+      "in_pin_35": false
+    },
+    {
+      "domain": "Founding_Cosmic_Ray_Panel",
+      "D_eff": 10,
+      "n_files": 1,
+      "in_pin_35": false
+    },
+    {
+      "domain": "Music_Harmonics_Public_Panel",
+      "D_eff": 10,
+      "n_files": 1,
+      "in_pin_35": false
+    },
+    {
+      "domain": "Schematic_Netlist_Intrinsic_Panel",
+      "D_eff": 10,
+      "n_files": 1,
+      "in_pin_35": false
+    },
+    {
+      "domain": "Superheavy_Element_Stability_Panel",
+      "D_eff": 10,
+      "n_files": 1,
+      "in_pin_35": false
+    },
+    {
+      "domain": "Tier_96_Circuit_Spine",
+      "D_eff": 10,
+      "n_files": 1,
+      "in_pin_35": false
+    },
+    {
+      "domain": "Undiscovered_Element_Candidate_Prereg_Scaffold",
+      "D_eff": 10,
+      "n_files": 1,
+      "in_pin_35": false
+    },
+    {
+      "domain": "CRC_Handbook_Properties",
+      "D_eff": 11,
+      "n_files": 1,
+      "in_pin_35": false
+    },
+    {
+      "domain": "Early_Lean_MC_Panel",
+      "D_eff": 11,
+      "n_files": 1,
+      "in_pin_35": false
+    },
+    {
+      "domain": "FSOT_Cache_Hierarchy_Panel",
+      "D_eff": 11,
+      "n_files": 1,
+      "in_pin_35": false
+    },
+    {
+      "domain": "FSOT_GPU_Parity_Verify_Panel",
+      "D_eff": 11,
+      "n_files": 1,
+      "in_pin_35": false
+    },
+    {
+      "domain": "FSOT_Interconnect_Coherence_Panel",
+      "D_eff": 11,
+      "n_files": 1,
+      "in_pin_35": false
+    },
+    {
+      "domain": "FSOT_RAM_Function_Panel",
+      "D_eff": 11,
+      "n_files": 1,
+      "in_pin_35": false
+    },
+    {
+      "domain": "Natural_Formation_Element_Simulation",
+      "D_eff": 11,
+      "n_files": 1,
+      "in_pin_35": false
+    },
+    {
+      "domain": "Quantum_Computing",
+      "D_eff": 11,
+      "n_files": 1,
+      "in_pin_35": true
+    },
+    {
+      "domain": "Quantum_Information",
+      "D_eff": 11,
+      "n_files": 1,
+      "in_pin_35": false
+    },
+    {
+      "domain": "Quantum_Trinary_Syntax",
+      "D_eff": 11,
+      "n_files": 1,
+      "in_pin_35": false
+    },
+    {
+      "domain": "Semiconductor_Physics_Public_Panel",
+      "D_eff": 11,
+      "n_files": 1,
+      "in_pin_35": false
+    },
+    {
+      "domain": "Arxiv_Primitives_V14",
+      "D_eff": 12,
+      "n_files": 1,
+      "in_pin_35": false
+    },
+    {
+      "domain": "Bibliography_Corpus_Panel",
+      "D_eff": 12,
+      "n_files": 1,
+      "in_pin_35": false
+    },
+    {
+      "domain": "Binary_Decoder_Rendlesham",
+      "D_eff": 12,
+      "n_files": 1,
+      "in_pin_35": false
+    },
+    {
+      "domain": "Biophysics_Public_Panel",
+      "D_eff": 12,
+      "n_files": 1,
+      "in_pin_35": false
+    },
+    {
+      "domain": "CODATA_Full_Table_Open",
+      "D_eff": 12,
+      "n_files": 1,
+      "in_pin_35": false
+    },
+    {
+      "domain": "Certified_Agent_Qwen",
+      "D_eff": 12,
+      "n_files": 1,
+      "in_pin_35": false
+    },
+    {
+      "domain": "Dzhanibekov_Intermediate_Axis_FSOT_Panel",
+      "D_eff": 12,
+      "n_files": 1,
+      "in_pin_35": false
+    },
+    {
+      "domain": "ESP32_Platform_Engineering_Panel",
+      "D_eff": 12,
+      "n_files": 1,
+      "in_pin_35": false
+    },
+    {
+      "domain": "Evolution_Operon",
+      "D_eff": 12,
+      "n_files": 1,
+      "in_pin_35": false
+    },
+    {
+      "domain": "FSOT_GPU_CUDA_Competitive_Panel",
+      "D_eff": 12,
+      "n_files": 1,
+      "in_pin_35": false
+    },
+    {
+      "domain": "FSOT_Physics_All_Solved",
+      "D_eff": 12,
+      "n_files": 1,
+      "in_pin_35": false
+    },
+    {
+      "domain": "FSOT_Processor_Function_Panel",
+      "D_eff": 12,
+      "n_files": 1,
+      "in_pin_35": false
+    },
+    {
+      "domain": "Founding_Atmospheric_Ozone_Panel",
+      "D_eff": 12,
+      "n_files": 1,
+      "in_pin_35": false
+    },
+    {
+      "domain": "Genomic_Sciences",
+      "D_eff": 12,
+      "n_files": 1,
+      "in_pin_35": false
+    },
+    {
+      "domain": "Intelligence_Compression",
+      "D_eff": 12,
+      "n_files": 1,
+      "in_pin_35": false
+    },
+    {
+      "domain": "Intrinsic_LLM_Validators",
+      "D_eff": 12,
+      "n_files": 1,
+      "in_pin_35": false
+    },
+    {
+      "domain": "Linguistics_Formal",
+      "D_eff": 12,
+      "n_files": 1,
+      "in_pin_35": false
+    },
+    {
+      "domain": "NCBI_Gene_Public_Panel",
+      "D_eff": 12,
+      "n_files": 1,
+      "in_pin_35": false
+    },
+    {
+      "domain": "NIST_ASD_Multi_Species_Open",
+      "D_eff": 12,
+      "n_files": 1,
+      "in_pin_35": false
+    },
+    {
+      "domain": "NIST_ASD_Spectroscopy_Open",
+      "D_eff": 12,
+      "n_files": 1,
+      "in_pin_35": false
+    },
+    {
+      "domain": "Neuron_Zig_OS_Path_Panel",
+      "D_eff": 12,
+      "n_files": 1,
+      "in_pin_35": false
+    },
+    {
+      "domain": "OpenAlex_Citation_Depth_Open",
+      "D_eff": 12,
+      "n_files": 1,
+      "in_pin_35": false
+    },
+    {
+      "domain": "Open_Science_Live_Concordance",
+      "D_eff": 12,
+      "n_files": 1,
+      "in_pin_35": false
+    },
+    {
+      "domain": "Perceived_Lean_Route_Credibility",
+      "D_eff": 12,
+      "n_files": 1,
+      "in_pin_35": false
+    },
+    {
+      "domain": "Periodic_Table_Completion_Spine",
+      "D_eff": 12,
+      "n_files": 1,
+      "in_pin_35": false
+    },
+    {
+      "domain": "Statistical_Mechanics_Public_Panel",
+      "D_eff": 12,
+      "n_files": 1,
+      "in_pin_35": false
+    },
+    {
+      "domain": "Tokenization_Smoke",
+      "D_eff": 12,
+      "n_files": 1,
+      "in_pin_35": false
+    },
+    {
+      "domain": "Trinary_Hardware_Motif",
+      "D_eff": 12,
+      "n_files": 1,
+      "in_pin_35": false
+    },
+    {
+      "domain": "Trinary_OS_Portable",
+      "D_eff": 12,
+      "n_files": 1,
+      "in_pin_35": false
+    },
+    {
+      "domain": "Trinary_OS_Tier_E",
+      "D_eff": 12,
+      "n_files": 1,
+      "in_pin_35": false
+    },
+    {
+      "domain": "UniProt_Protein_Annotations",
+      "D_eff": 12,
+      "n_files": 1,
+      "in_pin_35": false
+    },
+    {
+      "domain": "VL_Distill_Atlas",
+      "D_eff": 12,
+      "n_files": 1,
+      "in_pin_35": false
+    },
+    {
+      "domain": "Zenodo_Records_Depth_Open",
+      "D_eff": 12,
+      "n_files": 1,
+      "in_pin_35": false
+    },
+    {
+      "domain": "climate_observed_benchmark",
+      "D_eff": 12,
+      "n_files": 1,
+      "in_pin_35": false
+    },
+    {
+      "domain": "Bibliography_Lean_Corpus",
+      "D_eff": 13,
+      "n_files": 1,
+      "in_pin_35": false
+    },
+    {
+      "domain": "Binary_Decoder_Panel",
+      "D_eff": 13,
+      "n_files": 1,
+      "in_pin_35": false
+    },
+    {
+      "domain": "ClinicalTrials_Medical_Panel",
+      "D_eff": 13,
+      "n_files": 1,
+      "in_pin_35": false
+    },
+    {
+      "domain": "Engineering_Hardware_Code_Spine",
+      "D_eff": 13,
+      "n_files": 1,
+      "in_pin_35": false
+    },
+    {
+      "domain": "FSOT_GPU_Engineering_Spine",
+      "D_eff": 13,
+      "n_files": 1,
+      "in_pin_35": false
+    },
+    {
+      "domain": "FSOT_Hardware_Depth_Spine",
+      "D_eff": 13,
+      "n_files": 1,
+      "in_pin_35": false
+    },
+    {
+      "domain": "Founding_Cosmic_Dust_Panel",
+      "D_eff": 13,
+      "n_files": 1,
+      "in_pin_35": false
+    },
+    {
+      "domain": "HVAC_Thermal_Systems",
+      "D_eff": 13,
+      "n_files": 1,
+      "in_pin_35": false
+    },
+    {
+      "domain": "Heavy_Ion_Lab_Synthesis_Panel",
+      "D_eff": 13,
+      "n_files": 1,
+      "in_pin_35": false
+    },
+    {
+      "domain": "Immunology_Panel",
+      "D_eff": 13,
+      "n_files": 1,
+      "in_pin_35": false
+    },
+    {
+      "domain": "Neuron_Zig_Mind_Panel",
+      "D_eff": 13,
+      "n_files": 1,
+      "in_pin_35": false
+    },
+    {
+      "domain": "RCSB_PDB_Structures",
+      "D_eff": 13,
+      "n_files": 1,
+      "in_pin_35": false
+    },
+    {
+      "domain": "Recent_Breakthroughs_Expansion_Panel",
+      "D_eff": 13,
+      "n_files": 1,
+      "in_pin_35": false
+    },
+    {
+      "domain": "Rust_Lean_Bridge_Panel",
+      "D_eff": 13,
+      "n_files": 1,
+      "in_pin_35": false
+    },
+    {
+      "domain": "Tokenization_Live_Panel",
+      "D_eff": 13,
+      "n_files": 1,
+      "in_pin_35": false
+    },
+    {
+      "domain": "Toxicology_Panel",
+      "D_eff": 13,
+      "n_files": 1,
+      "in_pin_35": false
+    },
+    {
+      "domain": "UniProt_Structure_Annotations_Deep",
+      "D_eff": 13,
+      "n_files": 1,
+      "in_pin_35": false
+    },
+    {
+      "domain": "AlphaFold_Batch_Meta_Open",
+      "D_eff": 14,
+      "n_files": 1,
+      "in_pin_35": false
+    },
+    {
+      "domain": "Botany",
+      "D_eff": 14,
+      "n_files": 1,
+      "in_pin_35": false
+    },
+    {
+      "domain": "Breakthrough_Fusion_Spine",
+      "D_eff": 14,
+      "n_files": 1,
+      "in_pin_35": false
+    },
+    {
+      "domain": "COD_OPTIMADE_Structures",
+      "D_eff": 14,
+      "n_files": 1,
+      "in_pin_35": false
+    },
+    {
+      "domain": "Cardiology_Panel",
+      "D_eff": 14,
+      "n_files": 1,
+      "in_pin_35": false
+    },
+    {
+      "domain": "Certified_Agent_Formal_Panel",
+      "D_eff": 14,
+      "n_files": 1,
+      "in_pin_35": false
+    },
+    {
+      "domain": "ChEMBL_Deep_Open",
+      "D_eff": 14,
+      "n_files": 1,
+      "in_pin_35": false
+    },
+    {
+      "domain": "Chemical_Structure_Stability_Panel",
+      "D_eff": 14,
+      "n_files": 1,
+      "in_pin_35": false
+    },
+    {
+      "domain": "Coding_Structure_Verifier_Panel",
+      "D_eff": 14,
+      "n_files": 1,
+      "in_pin_35": false
+    },
+    {
+      "domain": "Cold_Fusion_Candidate_Prereg_Scaffold",
+      "D_eff": 14,
+      "n_files": 1,
+      "in_pin_35": false
+    },
+    {
+      "domain": "Desktop_Observer_Loop_Panel",
+      "D_eff": 14,
+      "n_files": 1,
+      "in_pin_35": false
+    },
+    {
+      "domain": "Element_Synthesis_Condition_Scaffold",
+      "D_eff": 14,
+      "n_files": 1,
+      "in_pin_35": false
+    },
+    {
+      "domain": "Entomology",
+      "D_eff": 14,
+      "n_files": 1,
+      "in_pin_35": false
+    },
+    {
+      "domain": "Food_Microbiology",
+      "D_eff": 14,
+      "n_files": 1,
+      "in_pin_35": false
+    },
+    {
+      "domain": "Founding_Galactic_Halo_Rotation_Panel",
+      "D_eff": 14,
+      "n_files": 1,
+      "in_pin_35": false
+    },
+    {
+      "domain": "GBIF_Taxon_Depth_Open",
+      "D_eff": 14,
+      "n_files": 1,
+      "in_pin_35": false
+    },
+    {
+      "domain": "GWAS_Catalog_Depth_Open",
+      "D_eff": 14,
+      "n_files": 1,
+      "in_pin_35": false
+    },
+    {
+      "domain": "IGEM_Parts_Expanded",
+      "D_eff": 14,
+      "n_files": 1,
+      "in_pin_35": false
+    },
+    {
+      "domain": "Interactive_Media_Prereg_Scaffold",
+      "D_eff": 14,
+      "n_files": 1,
+      "in_pin_35": false
+    },
+    {
+      "domain": "Intrinsic_LLM_Validators_Panel",
+      "D_eff": 14,
+      "n_files": 1,
+      "in_pin_35": false
+    },
+    {
+      "domain": "LMFDB_Elliptic_Curves_Open",
+      "D_eff": 14,
+      "n_files": 1,
+      "in_pin_35": false
+    },
+    {
+      "domain": "LMFDB_OEIS_Math_Open",
+      "D_eff": 14,
+      "n_files": 1,
+      "in_pin_35": false
+    },
+    {
+      "domain": "Magnetosphere_Extended",
+      "D_eff": 14,
+      "n_files": 1,
+      "in_pin_35": false
+    },
+    {
+      "domain": "Materials_Species_Bridge_Live_Panel",
+      "D_eff": 14,
+      "n_files": 1,
+      "in_pin_35": false
+    },
+    {
+      "domain": "Mycology",
+      "D_eff": 14,
+      "n_files": 1,
+      "in_pin_35": false
+    },
+    {
+      "domain": "NASA_DONKI_Solar_Panel",
+      "D_eff": 14,
+      "n_files": 1,
+      "in_pin_35": false
+    },
+    {
+      "domain": "NCEI_Climate_Open",
+      "D_eff": 14,
+      "n_files": 2,
+      "in_pin_35": false
+    },
+    {
+      "domain": "NIST_DLMF_Special_Functions",
+      "D_eff": 14,
+      "n_files": 1,
+      "in_pin_35": false
+    },
+    {
+      "domain": "NuFIT_Neutrino_Open",
+      "D_eff": 14,
+      "n_files": 1,
+      "in_pin_35": false
+    },
+    {
+      "domain": "OEIS_Family_Sweep_Open",
+      "D_eff": 14,
+      "n_files": 1,
+      "in_pin_35": false
+    },
+    {
+      "domain": "Observer_Lean_Route_Credibility",
+      "D_eff": 14,
+      "n_files": 1,
+      "in_pin_35": false
+    },
+    {
+      "domain": "OpenNeuro_Depth_Open",
+      "D_eff": 14,
+      "n_files": 1,
+      "in_pin_35": false
+    },
+    {
+      "domain": "OpenNeuro_Full_Panel",
+      "D_eff": 14,
+      "n_files": 1,
+      "in_pin_35": false
+    },
+    {
+      "domain": "PDG_Live_Depth_Open",
+      "D_eff": 14,
+      "n_files": 1,
+      "in_pin_35": false
+    },
+    {
+      "domain": "Petrology_Geochemistry_Panel",
+      "D_eff": 14,
+      "n_files": 1,
+      "in_pin_35": false
+    },
+    {
+      "domain": "Pharmacokinetics",
+      "D_eff": 14,
+      "n_files": 1,
+      "in_pin_35": false
+    },
+    {
+      "domain": "Portable_Clone_Verify",
+      "D_eff": 14,
+      "n_files": 1,
+      "in_pin_35": false
+    },
+    {
+      "domain": "Prediction_Rederivation",
+      "D_eff": 14,
+      "n_files": 1,
+      "in_pin_35": false
+    },
+    {
+      "domain": "PubChem_Depth_Open",
+      "D_eff": 14,
+      "n_files": 1,
+      "in_pin_35": false
+    },
+    {
+      "domain": "PubChem_Stability_Panel",
+      "D_eff": 14,
+      "n_files": 1,
+      "in_pin_35": false
+    },
+    {
+      "domain": "QCE_ELM_Fusion_Edge_Panel",
+      "D_eff": 14,
+      "n_files": 1,
+      "in_pin_35": false
+    },
+    {
+      "domain": "RCSB_Structure_Batch_Open",
+      "D_eff": 14,
+      "n_files": 1,
+      "in_pin_35": false
+    },
+    {
+      "domain": "Robotics_Control_Systems",
+      "D_eff": 14,
+      "n_files": 1,
+      "in_pin_35": false
+    },
+    {
+      "domain": "Scalar_Solver_35_Panel",
+      "D_eff": 14,
+      "n_files": 1,
+      "in_pin_35": false
+    },
+    {
+      "domain": "Secure_Software_Engineering",
+      "D_eff": 14,
+      "n_files": 1,
+      "in_pin_35": false
+    },
+    {
+      "domain": "Space_Propulsion_Systems",
+      "D_eff": 14,
+      "n_files": 1,
+      "in_pin_35": false
+    },
+    {
+      "domain": "Sports_Biomechanics",
+      "D_eff": 14,
+      "n_files": 1,
+      "in_pin_35": false
+    },
+    {
+      "domain": "Trinary_Hardware_Live_Panel",
+      "D_eff": 14,
+      "n_files": 1,
+      "in_pin_35": false
+    },
+    {
+      "domain": "UniProt_Proteome_Slice_Open",
+      "D_eff": 14,
+      "n_files": 1,
+      "in_pin_35": false
+    },
+    {
+      "domain": "VL_Agent_Distill_Panel",
+      "D_eff": 14,
+      "n_files": 1,
+      "in_pin_35": false
+    },
+    {
+      "domain": "Virology",
+      "D_eff": 14,
+      "n_files": 1,
+      "in_pin_35": false
+    },
+    {
+      "domain": "Virology_Panel",
+      "D_eff": 14,
+      "n_files": 1,
+      "in_pin_35": false
+    },
+    {
+      "domain": "XR_Interactive_Media_Math_Scaffold",
+      "D_eff": 14,
+      "n_files": 1,
+      "in_pin_35": false
+    },
+    {
+      "domain": "Zoology",
+      "D_eff": 14,
+      "n_files": 1,
+      "in_pin_35": false
+    },
+    {
+      "domain": "synthetic_biology_benchmark",
+      "D_eff": 14,
+      "n_files": 1,
+      "in_pin_35": false
+    },
+    {
+      "domain": "Acoustic_Resonance_Materials",
+      "D_eff": 15,
+      "n_files": 1,
+      "in_pin_35": false
+    },
+    {
+      "domain": "Arxiv_Primitives_Panel",
+      "D_eff": 15,
+      "n_files": 1,
+      "in_pin_35": false
+    },
+    {
+      "domain": "Atmospheric_Physics",
+      "D_eff": 15,
+      "n_files": 1,
+      "in_pin_35": true
+    },
+    {
+      "domain": "Cardiology",
+      "D_eff": 15,
+      "n_files": 1,
+      "in_pin_35": false
+    },
+    {
+      "domain": "Clinical_Medicine",
+      "D_eff": 15,
+      "n_files": 1,
+      "in_pin_35": false
+    },
+    {
+      "domain": "Cold_Fusion_Lab_Synthesis_Crosswalk",
+      "D_eff": 15,
+      "n_files": 1,
+      "in_pin_35": false
+    },
+    {
+      "domain": "Culinary_Fermentation_Maillard_Panel",
+      "D_eff": 15,
+      "n_files": 1,
+      "in_pin_35": false
+    },
+    {
+      "domain": "Ecology",
+      "D_eff": 15,
+      "n_files": 2,
+      "in_pin_35": true
+    },
+    {
+      "domain": "Energy_Lean_Route_Credibility",
+      "D_eff": 15,
+      "n_files": 1,
+      "in_pin_35": false
+    },
+    {
+      "domain": "Epidemiology",
+      "D_eff": 15,
+      "n_files": 1,
+      "in_pin_35": false
+    },
+    {
+      "domain": "Epidemiology_Panel",
+      "D_eff": 15,
+      "n_files": 1,
+      "in_pin_35": false
+    },
+    {
+      "domain": "Ethology_Panel",
+      "D_eff": 15,
+      "n_files": 1,
+      "in_pin_35": false
+    },
+    {
+      "domain": "Fluid_Dynamics",
+      "D_eff": 15,
+      "n_files": 1,
+      "in_pin_35": true
+    },
+    {
+      "domain": "Founding_White_Dwarf_Cooling_Panel",
+      "D_eff": 15,
+      "n_files": 1,
+      "in_pin_35": false
+    },
+    {
+      "domain": "GBIF_Species_Occurrence",
+      "D_eff": 15,
+      "n_files": 1,
+      "in_pin_35": false
+    },
+    {
+      "domain": "History",
+      "D_eff": 15,
+      "n_files": 1,
+      "in_pin_35": false
+    },
+    {
+      "domain": "History_Panel",
+      "D_eff": 15,
+      "n_files": 1,
+      "in_pin_35": false
+    },
+    {
+      "domain": "Ionospheric_Chemistry_Coupling",
+      "D_eff": 15,
+      "n_files": 1,
+      "in_pin_35": false
+    },
+    {
+      "domain": "Living_FSOT_Hardware_Panel",
+      "D_eff": 15,
+      "n_files": 1,
+      "in_pin_35": false
+    },
+    {
+      "domain": "Machine_And_Molecule_Live_Panel",
+      "D_eff": 15,
+      "n_files": 1,
+      "in_pin_35": false
+    },
+    {
+      "domain": "Maillard_Chemistry",
+      "D_eff": 15,
+      "n_files": 1,
+      "in_pin_35": false
+    },
+    {
+      "domain": "Malware_Threat_Intelligence",
+      "D_eff": 15,
+      "n_files": 1,
+      "in_pin_35": false
+    },
+    {
+      "domain": "Marine_Biology",
+      "D_eff": 15,
+      "n_files": 1,
+      "in_pin_35": false
+    },
+    {
+      "domain": "Material_In_Silico_Screening_Scaffold",
+      "D_eff": 15,
+      "n_files": 1,
+      "in_pin_35": false
+    },
+    {
+      "domain": "Material_Property_Verification_Scaffold",
+      "D_eff": 15,
+      "n_files": 1,
+      "in_pin_35": false
+    },
+    {
+      "domain": "Materials_Genome_Crosswalk",
+      "D_eff": 15,
+      "n_files": 1,
+      "in_pin_35": false
+    },
+    {
+      "domain": "Meteorology",
+      "D_eff": 15,
+      "n_files": 1,
+      "in_pin_35": true
+    },
+    {
+      "domain": "Mycology_Panel",
+      "D_eff": 15,
+      "n_files": 1,
+      "in_pin_35": false
+    },
+    {
+      "domain": "Network_Internet_Protocols",
+      "D_eff": 15,
+      "n_files": 1,
+      "in_pin_35": false
+    },
+    {
+      "domain": "Nuclear_Lean_Route_Credibility",
+      "D_eff": 15,
+      "n_files": 1,
+      "in_pin_35": false
+    },
+    {
+      "domain": "OPH_FSOT_Challenge_Panel",
+      "D_eff": 15,
+      "n_files": 1,
+      "in_pin_35": false
+    },
+    {
+      "domain": "Physarum_Biological_CUDA_Panel",
+      "D_eff": 15,
+      "n_files": 1,
+      "in_pin_35": false
+    },
+    {
+      "domain": "Programming_Language_Laws",
+      "D_eff": 15,
+      "n_files": 1,
+      "in_pin_35": false
+    },
+    {
+      "domain": "Psychology_Psychometrics_Depth_Panel",
+      "D_eff": 15,
+      "n_files": 1,
+      "in_pin_35": false
+    },
+    {
+      "domain": "Robotics_Control_Systems_Panel",
+      "D_eff": 15,
+      "n_files": 1,
+      "in_pin_35": false
+    },
+    {
+      "domain": "Soil_Science_Panel",
+      "D_eff": 15,
+      "n_files": 1,
+      "in_pin_35": false
+    },
+    {
+      "domain": "TOE_Dynamics",
+      "D_eff": 15,
+      "n_files": 1,
+      "in_pin_35": false
+    },
+    {
+      "domain": "Term3_Acoustic_Bleed_Depth",
+      "D_eff": 15,
+      "n_files": 1,
+      "in_pin_35": false
+    },
+    {
+      "domain": "hydrology_benchmark",
+      "D_eff": 15,
+      "n_files": 1,
+      "in_pin_35": false
+    },
+    {
+      "domain": "iNaturalist_Observation_Panel",
+      "D_eff": 15,
+      "n_files": 1,
+      "in_pin_35": false
+    },
+    {
+      "domain": "AI_Galactic_Orbital_Bridge",
+      "D_eff": 16,
+      "n_files": 1,
+      "in_pin_35": false
+    },
+    {
+      "domain": "Agriculture_Agroecology",
+      "D_eff": 16,
+      "n_files": 1,
+      "in_pin_35": false
+    },
+    {
+      "domain": "Architecture_Building_Science",
+      "D_eff": 16,
+      "n_files": 1,
+      "in_pin_35": false
+    },
+    {
+      "domain": "Arxiv_Brain_Knowledge_Panel",
+      "D_eff": 16,
+      "n_files": 1,
+      "in_pin_35": false
+    },
+    {
+      "domain": "Chemical_Engineering",
+      "D_eff": 16,
+      "n_files": 1,
+      "in_pin_35": false
+    },
+    {
+      "domain": "Civil_Engineering",
+      "D_eff": 16,
+      "n_files": 1,
+      "in_pin_35": false
+    },
+    {
+      "domain": "Civil_Engineering_Panel",
+      "D_eff": 16,
+      "n_files": 1,
+      "in_pin_35": false
+    },
+    {
+      "domain": "Condensed_Matter_Superconductivity_Depth_Panel",
+      "D_eff": 16,
+      "n_files": 1,
+      "in_pin_35": false
+    },
+    {
+      "domain": "Consciousness_Lean_Route_Credibility",
+      "D_eff": 16,
+      "n_files": 1,
+      "in_pin_35": false
+    },
+    {
+      "domain": "Creative_Arts_Math_Spine",
+      "D_eff": 16,
+      "n_files": 1,
+      "in_pin_35": false
+    },
+    {
+      "domain": "Cryptography_Technology",
+      "D_eff": 16,
+      "n_files": 1,
+      "in_pin_35": false
+    },
+    {
+      "domain": "Desktop_Application_Wiring_Spine",
+      "D_eff": 16,
+      "n_files": 1,
+      "in_pin_35": false
+    },
+    {
+      "domain": "ENDF_IAEA_Nuclear_Open",
+      "D_eff": 16,
+      "n_files": 1,
+      "in_pin_35": false
+    },
+    {
+      "domain": "Energy_AI_Orbital_Bridge",
+      "D_eff": 16,
+      "n_files": 1,
+      "in_pin_35": false
+    },
+    {
+      "domain": "Energy_Neural_Orbital_Bridge",
+      "D_eff": 16,
+      "n_files": 1,
+      "in_pin_35": false
+    },
+    {
+      "domain": "Entomology_Panel",
+      "D_eff": 16,
+      "n_files": 1,
+      "in_pin_35": false
+    },
+    {
+      "domain": "Existence_Simulation_Gap_Fill_Panel",
+      "D_eff": 16,
+      "n_files": 1,
+      "in_pin_35": false
+    },
+    {
+      "domain": "Exoplanet_Archive_Depth_Open",
+      "D_eff": 16,
+      "n_files": 1,
+      "in_pin_35": false
+    },
+    {
+      "domain": "External_OSS_Code_Genome",
+      "D_eff": 16,
+      "n_files": 1,
+      "in_pin_35": false
+    },
+    {
+      "domain": "Founding_Pulsar_Glitch_Panel",
+      "D_eff": 16,
+      "n_files": 1,
+      "in_pin_35": false
+    },
+    {
+      "domain": "Fuel_Candidate_Prereg_Scaffold",
+      "D_eff": 16,
+      "n_files": 1,
+      "in_pin_35": false
+    },
+    {
+      "domain": "Fuel_Lab_Live_Panel",
+      "D_eff": 16,
+      "n_files": 1,
+      "in_pin_35": false
+    },
+    {
+      "domain": "Fuel_Thermochemistry_Public_Anchors",
+      "D_eff": 16,
+      "n_files": 1,
+      "in_pin_35": false
+    },
+    {
+      "domain": "Fusion_Lean_Route_Credibility",
+      "D_eff": 16,
+      "n_files": 1,
+      "in_pin_35": false
+    },
+    {
+      "domain": "JARVIS_DFT_Open_Panel",
+      "D_eff": 16,
+      "n_files": 1,
+      "in_pin_35": false
+    },
+    {
+      "domain": "Limnology_Panel",
+      "D_eff": 16,
+      "n_files": 1,
+      "in_pin_35": false
+    },
+    {
+      "domain": "Magnetic_Confinement_Fusion_Panel",
+      "D_eff": 16,
+      "n_files": 1,
+      "in_pin_35": false
+    },
+    {
+      "domain": "Materials_Creep_Fracture_Depth_Panel",
+      "D_eff": 16,
+      "n_files": 1,
+      "in_pin_35": false
+    },
+    {
+      "domain": "Materials_Project_Live_Panel",
+      "D_eff": 16,
+      "n_files": 1,
+      "in_pin_35": false
+    },
+    {
+      "domain": "Mechanical_Engineering",
+      "D_eff": 16,
+      "n_files": 1,
+      "in_pin_35": false
+    },
+    {
+      "domain": "Mechanical_Engineering_Panel",
+      "D_eff": 16,
+      "n_files": 1,
+      "in_pin_35": false
+    },
+    {
+      "domain": "Metamaterial_Fluid_Design_Prereg_Scaffold",
+      "D_eff": 16,
+      "n_files": 1,
+      "in_pin_35": false
+    },
+    {
+      "domain": "NOAA_Tides_Multi_Station_Open",
+      "D_eff": 16,
+      "n_files": 1,
+      "in_pin_35": false
+    },
+    {
+      "domain": "Neuroeconomics",
+      "D_eff": 16,
+      "n_files": 1,
+      "in_pin_35": false
+    },
+    {
+      "domain": "Neuroeconomics_Panel",
+      "D_eff": 16,
+      "n_files": 1,
+      "in_pin_35": false
+    },
+    {
+      "domain": "Nuclear_IAEA_Open",
+      "D_eff": 16,
+      "n_files": 1,
+      "in_pin_35": false
+    },
+    {
+      "domain": "OWID_Epidemiology_Open",
+      "D_eff": 16,
+      "n_files": 1,
+      "in_pin_35": false
+    },
+    {
+      "domain": "Observer_Channel_Derivation",
+      "D_eff": 16,
+      "n_files": 1,
+      "in_pin_35": false
+    },
+    {
+      "domain": "Observer_Effect_Cross_Species_Panel",
+      "D_eff": 16,
+      "n_files": 1,
+      "in_pin_35": false
+    },
+    {
+      "domain": "Open_Meteo_Live_Panel",
+      "D_eff": 16,
+      "n_files": 1,
+      "in_pin_35": false
+    },
+    {
+      "domain": "Phi_Morphogenetic_Scaling",
+      "D_eff": 16,
+      "n_files": 1,
+      "in_pin_35": false
+    },
+    {
+      "domain": "Proof_Carrying_Code_Genome",
+      "D_eff": 16,
+      "n_files": 1,
+      "in_pin_35": false
+    },
+    {
+      "domain": "Psychology",
+      "D_eff": 16,
+      "n_files": 1,
+      "in_pin_35": true
+    },
+    {
+      "domain": "Public_Verifiable_Spine",
+      "D_eff": 16,
+      "n_files": 1,
+      "in_pin_35": false
+    },
+    {
+      "domain": "Published_Fuel_Property_Panel",
+      "D_eff": 16,
+      "n_files": 1,
+      "in_pin_35": false
+    },
+    {
+      "domain": "Quantum_Mechanics_Entanglement_Depth_Panel",
+      "D_eff": 16,
+      "n_files": 1,
+      "in_pin_35": false
+    },
+    {
+      "domain": "SIMBAD_Identity_Depth_Open",
+      "D_eff": 16,
+      "n_files": 1,
+      "in_pin_35": false
+    },
+    {
+      "domain": "Speleology",
+      "D_eff": 16,
+      "n_files": 1,
+      "in_pin_35": false
+    },
+    {
+      "domain": "Speleology_Panel",
+      "D_eff": 16,
+      "n_files": 1,
+      "in_pin_35": false
+    },
+    {
+      "domain": "USGS_Seismic_History_Open",
+      "D_eff": 16,
+      "n_files": 1,
+      "in_pin_35": false
+    },
+    {
+      "domain": "Adjacent_Rung_Coupling",
+      "D_eff": 17,
+      "n_files": 1,
+      "in_pin_35": false
+    },
+    {
+      "domain": "Adversarial_Fractal_Break_Tests",
+      "D_eff": 17,
+      "n_files": 1,
+      "in_pin_35": false
+    },
+    {
+      "domain": "Alternate_Base_Mathematics_Explorer_Panel",
+      "D_eff": 17,
+      "n_files": 1,
+      "in_pin_35": false
+    },
+    {
+      "domain": "Anthropology",
+      "D_eff": 17,
+      "n_files": 1,
+      "in_pin_35": false
+    },
+    {
+      "domain": "Biology_Developmental_Structural_Depth_Panel",
+      "D_eff": 17,
+      "n_files": 1,
+      "in_pin_35": false
+    },
+    {
+      "domain": "Boundary_Partition_Tightening",
+      "D_eff": 17,
+      "n_files": 1,
+      "in_pin_35": false
+    },
+    {
+      "domain": "CVE_Codon_Hole_Falsification",
+      "D_eff": 17,
+      "n_files": 1,
+      "in_pin_35": false
+    },
+    {
+      "domain": "Chaos_Mediated_Phase_Transitions",
+      "D_eff": 17,
+      "n_files": 1,
+      "in_pin_35": false
+    },
+    {
+      "domain": "Code_Genome_Structure",
+      "D_eff": 17,
+      "n_files": 1,
+      "in_pin_35": false
+    },
+    {
+      "domain": "Consciousness_Econ",
+      "D_eff": 17,
+      "n_files": 1,
+      "in_pin_35": false
+    },
+    {
+      "domain": "Consciousness_Galactic_Orbital_Bridge",
+      "D_eff": 17,
+      "n_files": 1,
+      "in_pin_35": false
+    },
+    {
+      "domain": "Consciousness_Genetics_Coupling_Panel",
+      "D_eff": 17,
+      "n_files": 1,
+      "in_pin_35": false
+    },
+    {
+      "domain": "Consciousness_Soul_Bridge",
+      "D_eff": 17,
+      "n_files": 1,
+      "in_pin_35": false
+    },
+    {
+      "domain": "Domain_Coupling_Simulation",
+      "D_eff": 17,
+      "n_files": 1,
+      "in_pin_35": false
+    },
+    {
+      "domain": "Environmental_Engineering",
+      "D_eff": 17,
+      "n_files": 1,
+      "in_pin_35": false
+    },
+    {
+      "domain": "Existence_Simulation_Refinement_Panel",
+      "D_eff": 17,
+      "n_files": 1,
+      "in_pin_35": false
+    },
+    {
+      "domain": "Experimental_Base_Mathematics_Panel",
+      "D_eff": 17,
+      "n_files": 1,
+      "in_pin_35": false
+    },
+    {
+      "domain": "FSOT_Aggregate_Organized_Panel",
+      "D_eff": 17,
+      "n_files": 1,
+      "in_pin_35": false
+    },
+    {
+      "domain": "FSOT_Aggregate_Unified_DB",
+      "D_eff": 17,
+      "n_files": 1,
+      "in_pin_35": false
+    },
+    {
+      "domain": "Federal_Science_Registry_Panel",
+      "D_eff": 17,
+      "n_files": 1,
+      "in_pin_35": false
+    },
+    {
+      "domain": "Formula_Corpus_CNC",
+      "D_eff": 17,
+      "n_files": 1,
+      "in_pin_35": false
+    },
+    {
+      "domain": "Formula_Corpus_Closure",
+      "D_eff": 17,
+      "n_files": 1,
+      "in_pin_35": false
+    },
+    {
+      "domain": "Formula_Precision_Spine",
+      "D_eff": 17,
+      "n_files": 1,
+      "in_pin_35": false
+    },
+    {
+      "domain": "Fusion_Decay_Chain_Prereg_Scaffold",
+      "D_eff": 17,
+      "n_files": 1,
+      "in_pin_35": false
+    },
+    {
+      "domain": "Inertial_Confinement_Fusion_Panel",
+      "D_eff": 17,
+      "n_files": 1,
+      "in_pin_35": false
+    },
+    {
+      "domain": "Initiation_Transformation_Archetype",
+      "D_eff": 17,
+      "n_files": 1,
+      "in_pin_35": false
+    },
+    {
+      "domain": "Interdisciplinary_Spine_Crosswalk",
+      "D_eff": 17,
+      "n_files": 1,
+      "in_pin_35": false
+    },
+    {
+      "domain": "Law_Policy",
+      "D_eff": 17,
+      "n_files": 1,
+      "in_pin_35": false
+    },
+    {
+      "domain": "Law_Policy_Panel",
+      "D_eff": 17,
+      "n_files": 1,
+      "in_pin_35": false
+    },
+    {
+      "domain": "Live_Ingest_Spine",
+      "D_eff": 17,
+      "n_files": 1,
+      "in_pin_35": false
+    },
+    {
+      "domain": "Marine_Biology_Panel",
+      "D_eff": 17,
+      "n_files": 1,
+      "in_pin_35": false
+    },
+    {
+      "domain": "Math_Generator_Airfoil_RMSE",
+      "D_eff": 17,
+      "n_files": 1,
+      "in_pin_35": false
+    },
+    {
+      "domain": "Math_Generator_Benchmark_Formula_Eval",
+      "D_eff": 17,
+      "n_files": 1,
+      "in_pin_35": false
+    },
+    {
+      "domain": "Mechanistic_Coupling",
+      "D_eff": 17,
+      "n_files": 1,
+      "in_pin_35": false
+    },
+    {
+      "domain": "Medical_Galactic_Orbital_Bridge",
+      "D_eff": 17,
+      "n_files": 1,
+      "in_pin_35": false
+    },
+    {
+      "domain": "Microtubule_Quantum_Consciousness_Panel",
+      "D_eff": 17,
+      "n_files": 1,
+      "in_pin_35": false
+    },
+    {
+      "domain": "NOAA_Coastal_Tides",
+      "D_eff": 17,
+      "n_files": 1,
+      "in_pin_35": false
+    },
+    {
+      "domain": "NOAA_NDBC_Buoy_Panel",
+      "D_eff": 17,
+      "n_files": 1,
+      "in_pin_35": false
+    },
+    {
+      "domain": "Network_Science_Public_Panel",
+      "D_eff": 17,
+      "n_files": 1,
+      "in_pin_35": false
+    },
+    {
+      "domain": "Neural_Galactic_Orbital_Bridge",
+      "D_eff": 17,
+      "n_files": 1,
+      "in_pin_35": false
+    },
+    {
+      "domain": "Neurolab_Gaps_Math_Spine",
+      "D_eff": 17,
+      "n_files": 1,
+      "in_pin_35": false
+    },
+    {
+      "domain": "Neurolab_Residual_Math_Spine",
+      "D_eff": 17,
+      "n_files": 1,
+      "in_pin_35": false
+    },
+    {
+      "domain": "Oceanography",
+      "D_eff": 17,
+      "n_files": 1,
+      "in_pin_35": true
+    },
+    {
+      "domain": "Omni_Theory_Humanities_Panel",
+      "D_eff": 17,
+      "n_files": 1,
+      "in_pin_35": false
+    },
+    {
+      "domain": "Optics_Interferometry_Depth_Panel",
+      "D_eff": 17,
+      "n_files": 1,
+      "in_pin_35": false
+    },
+    {
+      "domain": "Paleoclimate",
+      "D_eff": 17,
+      "n_files": 1,
+      "in_pin_35": false
+    },
+    {
+      "domain": "Paleoclimate_Panel",
+      "D_eff": 17,
+      "n_files": 1,
+      "in_pin_35": false
+    },
+    {
+      "domain": "Particle_Neural_Orbital_Bridge",
+      "D_eff": 17,
+      "n_files": 1,
+      "in_pin_35": false
+    },
+    {
+      "domain": "Preregistered_Outcome_Tracking",
+      "D_eff": 17,
+      "n_files": 1,
+      "in_pin_35": false
+    },
+    {
+      "domain": "Preregistered_Predictions",
+      "D_eff": 17,
+      "n_files": 1,
+      "in_pin_35": false
+    },
+    {
+      "domain": "Preregistered_Predictions_Verification_Scaffold",
+      "D_eff": 17,
+      "n_files": 1,
+      "in_pin_35": false
+    },
+    {
+      "domain": "Scientific_Expansion_Depth_Spine",
+      "D_eff": 17,
+      "n_files": 1,
+      "in_pin_35": false
+    },
+    {
+      "domain": "Scientific_Expansion_Wave2_Spine",
+      "D_eff": 17,
+      "n_files": 1,
+      "in_pin_35": false
+    },
+    {
+      "domain": "Scientific_Expansion_Wave3_Spine",
+      "D_eff": 17,
+      "n_files": 1,
+      "in_pin_35": false
+    },
+    {
+      "domain": "Star_Trek_Transporter_Live_Panel",
+      "D_eff": 17,
+      "n_files": 1,
+      "in_pin_35": false
+    },
+    {
+      "domain": "Symbolic_Archetype_Panel",
+      "D_eff": 17,
+      "n_files": 1,
+      "in_pin_35": false
+    },
+    {
+      "domain": "Unified_DB_Candidate_Crosswalk",
+      "D_eff": 17,
+      "n_files": 1,
+      "in_pin_35": false
+    },
+    {
+      "domain": "Unified_DB_Crosswalk_Spine",
+      "D_eff": 17,
+      "n_files": 1,
+      "in_pin_35": false
+    },
+    {
+      "domain": "Alternate_Base_Mathematics_Spine",
+      "D_eff": 18,
+      "n_files": 1,
+      "in_pin_35": false
+    },
+    {
+      "domain": "Astrophysical_Structure_Crosswalk",
+      "D_eff": 18,
+      "n_files": 1,
+      "in_pin_35": false
+    },
+    {
+      "domain": "BlackHole_WhiteHole_Cycle_Live_Panel",
+      "D_eff": 18,
+      "n_files": 1,
+      "in_pin_35": false
+    },
+    {
+      "domain": "Canonical_Oracle_Panel",
+      "D_eff": 18,
+      "n_files": 1,
+      "in_pin_35": false
+    },
+    {
+      "domain": "Cartography_GIS_Panel",
+      "D_eff": 18,
+      "n_files": 1,
+      "in_pin_35": false
+    },
+    {
+      "domain": "Compactification_Ladder",
+      "D_eff": 18,
+      "n_files": 1,
+      "in_pin_35": false
+    },
+    {
+      "domain": "Consciousness_Genetics_Species_Panel",
+      "D_eff": 18,
+      "n_files": 1,
+      "in_pin_35": false
+    },
+    {
+      "domain": "Consciousness_Species_Multi_Panel",
+      "D_eff": 18,
+      "n_files": 1,
+      "in_pin_35": false
+    },
+    {
+      "domain": "Crossref_Scholarly_Panel",
+      "D_eff": 18,
+      "n_files": 1,
+      "in_pin_35": false
+    },
+    {
+      "domain": "DESI_EDR_FITS_Residual",
+      "D_eff": 18,
+      "n_files": 1,
+      "in_pin_35": false
+    },
+    {
+      "domain": "DESI_EDR_Table_Slice_Open",
+      "D_eff": 18,
+      "n_files": 1,
+      "in_pin_35": false
+    },
+    {
+      "domain": "DESI_Public_Depth_Open",
+      "D_eff": 18,
+      "n_files": 1,
+      "in_pin_35": false
+    },
+    {
+      "domain": "FPC_Temporal_Coupling",
+      "D_eff": 18,
+      "n_files": 1,
+      "in_pin_35": false
+    },
+    {
+      "domain": "Formula_Branching_Fractal",
+      "D_eff": 18,
+      "n_files": 1,
+      "in_pin_35": false
+    },
+    {
+      "domain": "Fractal_Constant_Recursion",
+      "D_eff": 18,
+      "n_files": 1,
+      "in_pin_35": false
+    },
+    {
+      "domain": "Fusion_Physics_Public_Panel",
+      "D_eff": 18,
+      "n_files": 1,
+      "in_pin_35": false
+    },
+    {
+      "domain": "GWOSC_Strain_Metadata_Open",
+      "D_eff": 18,
+      "n_files": 1,
+      "in_pin_35": false
+    },
+    {
+      "domain": "GWTC_Catalog_Open",
+      "D_eff": 18,
+      "n_files": 1,
+      "in_pin_35": false
+    },
+    {
+      "domain": "Gaia_DR3_Source_Sample_Open",
+      "D_eff": 18,
+      "n_files": 1,
+      "in_pin_35": false
+    },
+    {
+      "domain": "Geology_Stratigraphy",
+      "D_eff": 18,
+      "n_files": 1,
+      "in_pin_35": false
+    },
+    {
+      "domain": "Government_Open_Data_Spine",
+      "D_eff": 18,
+      "n_files": 1,
+      "in_pin_35": false
+    },
+    {
+      "domain": "Hybrid_FI_Sim_Multi_Hero_Panel",
+      "D_eff": 18,
+      "n_files": 1,
+      "in_pin_35": false
+    },
+    {
+      "domain": "Hybrid_FI_Sim_Stratum_Deep_Panel",
+      "D_eff": 18,
+      "n_files": 1,
+      "in_pin_35": false
+    },
+    {
+      "domain": "Lab_Synthesis_Metamaterial_Spine",
+      "D_eff": 18,
+      "n_files": 1,
+      "in_pin_35": false
+    },
+    {
+      "domain": "NASA_NEO_Feed_Panel",
+      "D_eff": 18,
+      "n_files": 1,
+      "in_pin_35": false
+    },
+    {
+      "domain": "Neuroscience_Connectomics_Depth_Panel",
+      "D_eff": 18,
+      "n_files": 1,
+      "in_pin_35": false
+    },
+    {
+      "domain": "OSTI_DOE_Science_Panel",
+      "D_eff": 18,
+      "n_files": 1,
+      "in_pin_35": false
+    },
+    {
+      "domain": "OpenAlex_Citation_Graph",
+      "D_eff": 18,
+      "n_files": 1,
+      "in_pin_35": false
+    },
+    {
+      "domain": "Paleontology",
+      "D_eff": 18,
+      "n_files": 1,
+      "in_pin_35": false
+    },
+    {
+      "domain": "Paleontology_Panel",
+      "D_eff": 18,
+      "n_files": 1,
+      "in_pin_35": false
+    },
+    {
+      "domain": "Pure_Mathematics",
+      "D_eff": 18,
+      "n_files": 1,
+      "in_pin_35": false
+    },
+    {
+      "domain": "Pure_Mathematics_Panel",
+      "D_eff": 18,
+      "n_files": 1,
+      "in_pin_35": false
+    },
+    {
+      "domain": "Scientific_Expansion_Depth_Wave2_Spine",
+      "D_eff": 18,
+      "n_files": 1,
+      "in_pin_35": false
+    },
+    {
+      "domain": "Scientific_Expansion_Spine",
+      "D_eff": 18,
+      "n_files": 1,
+      "in_pin_35": false
+    },
+    {
+      "domain": "Small_Body_Orbits",
+      "D_eff": 18,
+      "n_files": 1,
+      "in_pin_35": false
+    },
+    {
+      "domain": "Sociology",
+      "D_eff": 18,
+      "n_files": 1,
+      "in_pin_35": true
+    },
+    {
+      "domain": "Solar_System_Structure_Deep",
+      "D_eff": 18,
+      "n_files": 1,
+      "in_pin_35": false
+    },
+    {
+      "domain": "Supply_Chain_Logistics",
+      "D_eff": 18,
+      "n_files": 1,
+      "in_pin_35": false
+    },
+    {
+      "domain": "Supply_Chain_Logistics_Panel",
+      "D_eff": 18,
+      "n_files": 1,
+      "in_pin_35": false
+    },
+    {
+      "domain": "The_Well_Spot_Check_Panel",
+      "D_eff": 18,
+      "n_files": 1,
+      "in_pin_35": false
+    },
+    {
+      "domain": "Time_Emergence_Simulation",
+      "D_eff": 18,
+      "n_files": 1,
+      "in_pin_35": false
+    },
+    {
+      "domain": "World_Bank_Macro_Open",
+      "D_eff": 18,
+      "n_files": 1,
+      "in_pin_35": false
+    },
+    {
+      "domain": "Zero_Boundary_Not_Entity_Panel",
+      "D_eff": 18,
+      "n_files": 1,
+      "in_pin_35": false
+    },
+    {
+      "domain": "Zero_Day_Risk_Evaluator",
+      "D_eff": 18,
+      "n_files": 1,
+      "in_pin_35": false
+    },
+    {
+      "domain": "CERN_Open_Data_LHC",
+      "D_eff": 19,
+      "n_files": 1,
+      "in_pin_35": false
+    },
+    {
+      "domain": "Consciousness_Expansion_Spine",
+      "D_eff": 19,
+      "n_files": 1,
+      "in_pin_35": false
+    },
+    {
+      "domain": "Domain_Orbital_Predictions",
+      "D_eff": 19,
+      "n_files": 1,
+      "in_pin_35": false
+    },
+    {
+      "domain": "Econometrics",
+      "D_eff": 19,
+      "n_files": 1,
+      "in_pin_35": false
+    },
+    {
+      "domain": "Finance_Markets",
+      "D_eff": 19,
+      "n_files": 1,
+      "in_pin_35": false
+    },
+    {
+      "domain": "Finance_Markets_Panel",
+      "D_eff": 19,
+      "n_files": 1,
+      "in_pin_35": false
+    },
+    {
+      "domain": "Island_Of_Stability_Deep_Panel",
+      "D_eff": 19,
+      "n_files": 1,
+      "in_pin_35": false
+    },
+    {
+      "domain": "Knowledge_Base_Portable_Bundle_Panel",
+      "D_eff": 19,
+      "n_files": 1,
+      "in_pin_35": false
+    },
+    {
+      "domain": "Longevity_Genetic_Mechanics_Panel",
+      "D_eff": 19,
+      "n_files": 1,
+      "in_pin_35": false
+    },
+    {
+      "domain": "Overflow_Carry_Emergence_Panel",
+      "D_eff": 19,
+      "n_files": 1,
+      "in_pin_35": false
+    },
+    {
+      "domain": "Quantum_Computing_Math_Depth_Panel",
+      "D_eff": 19,
+      "n_files": 1,
+      "in_pin_35": false
+    },
+    {
+      "domain": "Stellar_Multiplicity_Catalog",
+      "D_eff": 19,
+      "n_files": 1,
+      "in_pin_35": false
+    },
+    {
+      "domain": "Stellar_Multiplicity_Live_Deep",
+      "D_eff": 19,
+      "n_files": 1,
+      "in_pin_35": false
+    },
+    {
+      "domain": "The_Well_Verification_Spine",
+      "D_eff": 19,
+      "n_files": 1,
+      "in_pin_35": false
+    },
+    {
+      "domain": "Theory_Completeness_Spine",
+      "D_eff": 19,
+      "n_files": 1,
+      "in_pin_35": false
+    },
+    {
+      "domain": "Tier_93_Dual_Wave_Spine",
+      "D_eff": 19,
+      "n_files": 1,
+      "in_pin_35": false
+    },
+    {
+      "domain": "Time_Domain_Crosswalk",
+      "D_eff": 19,
+      "n_files": 1,
+      "in_pin_35": false
+    },
+    {
+      "domain": "Time_Emergence_Deep_Panel",
+      "D_eff": 19,
+      "n_files": 1,
+      "in_pin_35": false
+    },
+    {
+      "domain": "ToE_Gap_Closure_Spine",
+      "D_eff": 19,
+      "n_files": 1,
+      "in_pin_35": false
+    },
+    {
+      "domain": "Volcanology_Panel",
+      "D_eff": 19,
+      "n_files": 1,
+      "in_pin_35": false
+    },
+    {
+      "domain": "WDS_Live_Multiplicity_Deep",
+      "D_eff": 19,
+      "n_files": 1,
+      "in_pin_35": false
+    },
+    {
+      "domain": "Actuarial_Science_Panel",
+      "D_eff": 20,
+      "n_files": 1,
+      "in_pin_35": false
+    },
+    {
+      "domain": "Compact_Object_Binary_Events",
+      "D_eff": 20,
+      "n_files": 1,
+      "in_pin_35": false
+    },
+    {
+      "domain": "Economics",
+      "D_eff": 20,
+      "n_files": 1,
+      "in_pin_35": true
+    },
+    {
+      "domain": "Econophysics",
+      "D_eff": 20,
+      "n_files": 1,
+      "in_pin_35": false
+    },
+    {
+      "domain": "Exogeology",
+      "D_eff": 20,
+      "n_files": 1,
+      "in_pin_35": false
+    },
+    {
+      "domain": "Exogeology_Panel",
+      "D_eff": 20,
+      "n_files": 1,
+      "in_pin_35": false
+    },
+    {
+      "domain": "FPC_Fluidlink_Timing_Deep_Panel",
+      "D_eff": 20,
+      "n_files": 1,
+      "in_pin_35": false
+    },
+    {
+      "domain": "Fluid_Phase_Current_Spine",
+      "D_eff": 20,
+      "n_files": 1,
+      "in_pin_35": false
+    },
+    {
+      "domain": "Fold_Depth_Metrics",
+      "D_eff": 20,
+      "n_files": 1,
+      "in_pin_35": false
+    },
+    {
+      "domain": "Fusion_Lab_Certificate_Spine",
+      "D_eff": 20,
+      "n_files": 1,
+      "in_pin_35": false
+    },
+    {
+      "domain": "GWOSC_Live_Event_Deep",
+      "D_eff": 20,
+      "n_files": 1,
+      "in_pin_35": false
+    },
+    {
+      "domain": "Gaia_Astrometry_Panel_Deep",
+      "D_eff": 20,
+      "n_files": 1,
+      "in_pin_35": false
+    },
+    {
+      "domain": "Gaia_DR3_TAP_Deep",
+      "D_eff": 20,
+      "n_files": 1,
+      "in_pin_35": false
+    },
+    {
+      "domain": "Galactic_Structure_Sample",
+      "D_eff": 20,
+      "n_files": 1,
+      "in_pin_35": false
+    },
+    {
+      "domain": "Longevity_AnAge_Catalog_Panel",
+      "D_eff": 20,
+      "n_files": 1,
+      "in_pin_35": false
+    },
+    {
+      "domain": "Longevity_Telomere_Repair_Panel",
+      "D_eff": 20,
+      "n_files": 1,
+      "in_pin_35": false
+    },
+    {
+      "domain": "PubChem_Live_Deep",
+      "D_eff": 20,
+      "n_files": 1,
+      "in_pin_35": false
+    },
+    {
+      "domain": "Radio_Astronomy_Panel",
+      "D_eff": 20,
+      "n_files": 1,
+      "in_pin_35": false
+    },
+    {
+      "domain": "SIMBAD_Stellar_Identity_Deep",
+      "D_eff": 20,
+      "n_files": 1,
+      "in_pin_35": false
+    },
+    {
+      "domain": "TOE_CKM_PMNS_Flavor",
+      "D_eff": 20,
+      "n_files": 1,
+      "in_pin_35": false
+    },
+    {
+      "domain": "The_Well_Outcomes_Verification_Panel",
+      "D_eff": 20,
+      "n_files": 1,
+      "in_pin_35": false
+    },
+    {
+      "domain": "ToE_Unification_Spine",
+      "D_eff": 20,
+      "n_files": 1,
+      "in_pin_35": false
+    },
+    {
+      "domain": "UAP_War_Gov_Release_Panel",
+      "D_eff": 20,
+      "n_files": 1,
+      "in_pin_35": false
+    },
+    {
+      "domain": "World_Bank_Development",
+      "D_eff": 20,
+      "n_files": 1,
+      "in_pin_35": false
+    },
+    {
+      "domain": "Z120_Z126_Beam_Synthesis_Panel",
+      "D_eff": 20,
+      "n_files": 1,
+      "in_pin_35": false
+    },
+    {
+      "domain": "Zebrafish_Cell_Tracking_Panel",
+      "D_eff": 20,
+      "n_files": 1,
+      "in_pin_35": false
+    },
+    {
+      "domain": "Arxiv_Gravitational_Waves_Panel",
+      "D_eff": 21,
+      "n_files": 1,
+      "in_pin_35": false
+    },
+    {
+      "domain": "Complexity_Folding_Emergence_Panel",
+      "D_eff": 21,
+      "n_files": 1,
+      "in_pin_35": false
+    },
+    {
+      "domain": "Exoplanet_System_Architecture",
+      "D_eff": 21,
+      "n_files": 1,
+      "in_pin_35": false
+    },
+    {
+      "domain": "Longevity_Extreme_Species_Panel",
+      "D_eff": 21,
+      "n_files": 1,
+      "in_pin_35": false
+    },
+    {
+      "domain": "MPCORB_Minor_Planet_Catalog",
+      "D_eff": 21,
+      "n_files": 1,
+      "in_pin_35": false
+    },
+    {
+      "domain": "NASA_Exoplanet_Archive",
+      "D_eff": 21,
+      "n_files": 1,
+      "in_pin_35": false
+    },
+    {
+      "domain": "Reality_Folding_Spine",
+      "D_eff": 21,
+      "n_files": 1,
+      "in_pin_35": false
+    },
+    {
+      "domain": "STScI_MAST_Telescope_Panel",
+      "D_eff": 21,
+      "n_files": 1,
+      "in_pin_35": false
+    },
+    {
+      "domain": "Superheavy_Island_Emergence_Simulation",
+      "D_eff": 21,
+      "n_files": 1,
+      "in_pin_35": false
+    },
+    {
+      "domain": "VizieR_WDS_TAP_Live_Deep",
+      "D_eff": 21,
+      "n_files": 1,
+      "in_pin_35": false
+    },
+    {
+      "domain": "Zebrafish_Developmental_Mechanics_Panel",
+      "D_eff": 21,
+      "n_files": 1,
+      "in_pin_35": false
+    },
+    {
+      "domain": "Breakthrough_Discoveries_2024_2026",
+      "D_eff": 22,
+      "n_files": 1,
+      "in_pin_35": false
+    },
+    {
+      "domain": "Foundational_Ontology_Spine",
+      "D_eff": 22,
+      "n_files": 1,
+      "in_pin_35": false
+    },
+    {
+      "domain": "Nothing_Perfection_Friction_Origin_Panel",
+      "D_eff": 22,
+      "n_files": 1,
+      "in_pin_35": false
+    },
+    {
+      "domain": "Periodic_Extension_Decay_Topology_Scaffold",
+      "D_eff": 22,
+      "n_files": 1,
+      "in_pin_35": false
+    },
+    {
+      "domain": "RD_Interval_Tightening_Panel",
+      "D_eff": 22,
+      "n_files": 1,
+      "in_pin_35": false
+    },
+    {
+      "domain": "Stumped_Observables_Panel",
+      "D_eff": 22,
+      "n_files": 1,
+      "in_pin_35": false
+    },
+    {
+      "domain": "Superheavy_Island_Completion_Spine",
+      "D_eff": 22,
+      "n_files": 1,
+      "in_pin_35": false
+    },
+    {
+      "domain": "TOE_GR_SM_Deep",
+      "D_eff": 22,
+      "n_files": 1,
+      "in_pin_35": false
+    },
+    {
+      "domain": "TOE_Limit_Recovery",
+      "D_eff": 22,
+      "n_files": 1,
+      "in_pin_35": false
+    },
+    {
+      "domain": "Zebrafish_Longevity_Genetics_Coupling_Panel",
+      "D_eff": 22,
+      "n_files": 1,
+      "in_pin_35": false
+    },
+    {
+      "domain": "biological_cuda_physarum_benchmark",
+      "D_eff": 22,
+      "n_files": 1,
+      "in_pin_35": false
+    },
+    {
+      "domain": "Distant_Island_Z128_Z132_Deep_Panel",
+      "D_eff": 23,
+      "n_files": 1,
+      "in_pin_35": false
+    },
+    {
+      "domain": "Longevity_MegaDeep_NCBI_Panel",
+      "D_eff": 23,
+      "n_files": 1,
+      "in_pin_35": false
+    },
+    {
+      "domain": "Tier_95_Zebrafish_Spine",
+      "D_eff": 23,
+      "n_files": 1,
+      "in_pin_35": false
+    },
+    {
+      "domain": "Cosmology_Anomaly_Deep_Panel",
+      "D_eff": 24,
+      "n_files": 1,
+      "in_pin_35": false
+    },
+    {
+      "domain": "DESI_wa_Constraint",
+      "D_eff": 24,
+      "n_files": 1,
+      "in_pin_35": false
+    },
+    {
+      "domain": "Dark_Energy_CPL",
+      "D_eff": 24,
+      "n_files": 1,
+      "in_pin_35": false
+    },
+    {
+      "domain": "Dark_Sector_Open_Problems",
+      "D_eff": 24,
+      "n_files": 1,
+      "in_pin_35": false
+    },
+    {
+      "domain": "Domain_Coupling_Simulation_Refresh_Panel",
+      "D_eff": 24,
+      "n_files": 1,
+      "in_pin_35": false
+    },
+    {
+      "domain": "Longevity_Consciousness_Coupling_Panel",
+      "D_eff": 24,
+      "n_files": 1,
+      "in_pin_35": false
+    },
+    {
+      "domain": "Z164_Distant_Island_Prereg_Scaffold",
+      "D_eff": 24,
+      "n_files": 1,
+      "in_pin_35": false
+    },
+    {
+      "domain": "Zebrafish_Predictive_Validation_Panel",
+      "D_eff": 24,
+      "n_files": 1,
+      "in_pin_35": false
+    },
+    {
+      "domain": "Cosmology_Extended",
+      "D_eff": 25,
+      "n_files": 1,
+      "in_pin_35": false
+    },
+    {
+      "domain": "Distant_Island_Emergence_Simulation",
+      "D_eff": 25,
+      "n_files": 1,
+      "in_pin_35": false
+    },
+    {
+      "domain": "Fluid_Spacetime_Prereg_Validation_Panel",
+      "D_eff": 25,
+      "n_files": 1,
+      "in_pin_35": false
+    },
+    {
+      "domain": "Hubble_Bubble_Tension",
+      "D_eff": 25,
+      "n_files": 1,
+      "in_pin_35": false
+    },
+    {
+      "domain": "Hubble_Dark_Sector_Crosswalk",
+      "D_eff": 25,
+      "n_files": 1,
+      "in_pin_35": false
+    },
+    {
+      "domain": "Proof_Ledger_Closure_Spine",
+      "D_eff": 25,
+      "n_files": 1,
+      "in_pin_35": false
+    },
+    {
+      "domain": "SH0ES_Refined",
+      "D_eff": 25,
+      "n_files": 1,
+      "in_pin_35": false
+    },
+    {
+      "domain": "Stumped_Observables_Spine",
+      "D_eff": 25,
+      "n_files": 1,
+      "in_pin_35": false
+    },
+    {
+      "domain": "Tier_94_Longevity_Spine",
+      "D_eff": 25,
+      "n_files": 1,
+      "in_pin_35": false
+    },
+    {
+      "domain": "ToE_Claim_Certificate_Bundle",
+      "D_eff": 25,
+      "n_files": 1,
+      "in_pin_35": false
+    },
+    {
+      "domain": "cosmology_bubble_bleed_benchmark",
+      "D_eff": 25,
+      "n_files": 1,
+      "in_pin_35": false
+    },
+    {
+      "domain": "omni_theory_genesis_benchmark",
+      "D_eff": 25,
+      "n_files": 1,
+      "in_pin_35": false
+    },
+    {
+      "domain": "Fluid_Spacetime_Observable_Spine",
+      "D_eff": 26,
+      "n_files": 1,
+      "in_pin_35": false
+    },
+    {
+      "domain": "Periodic_Table_Extension_Closure_Spine",
+      "D_eff": 26,
+      "n_files": 1,
+      "in_pin_35": false
+    },
+    {
+      "domain": "Warp_BH_WH_Portal_Panel",
+      "D_eff": 29,
+      "n_files": 1,
+      "in_pin_35": false
+    },
+    {
+      "domain": "Cross_Proof_Verification_Spine",
+      "D_eff": null,
+      "n_files": 1,
+      "in_pin_35": false
+    },
+    {
+      "domain": "H0_Planck_CMB_Sector",
+      "D_eff": null,
+      "n_files": 1,
+      "in_pin_35": false
+    },
+    {
+      "domain": "Living_FSOT_Hardware",
+      "D_eff": null,
+      "n_files": 1,
+      "in_pin_35": false
+    },
+    {
+      "domain": "Neuroscience",
+      "D_eff": null,
+      "n_files": 1,
+      "in_pin_35": true
+    }
+  ],
   "sample": [
     {
       "domain": "Acoustic_Resonance_Materials",
@@ -106,5 +2703,5 @@
       "median_pct": 5.5479e-05
     }
   ],
-  "note": "Full Lean solved atlas ingest. Headlines from every benchmark file. Residuals replayed on material_records (cap per file). Coarse/zero-computed source rows skipped, not faked."
+  "note": "Full Lean solved atlas ingest as named domain folds. No new coefficients. Pin 35 always score; Lean-only names are extra D_eff routes from the mother fabric. Coarse/zero-computed source rows skipped, not faked."
 }

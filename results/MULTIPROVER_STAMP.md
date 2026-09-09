@@ -3,7 +3,7 @@
 **stamp:** `FSOT_QUANTUM_MULTIPROVER_OK`
 **overall_ok:** `True`
 **pin:** `D1D38A` (expect D1D38A)
-**wall_s:** `74.90`
+**wall_s:** `81.81`
 
 ## Provers
 
@@ -15,11 +15,11 @@
 | isabelle | pass | True |
 | fstar | pass | True |
 
-## Obligations: 35
+## Obligations: 37
 
 Spine: `verification/obligations/quantum_spine.json`
 
-Living Shor/QAOA integers (Q-JOB-006–010) sit next to the tiny-N demos: far RSA-shaped `10007×1000003`, p−1 stage-2 smoothness `100003−1=2·3·7·2381`, B-lock `⌊eπ⌋·⌊π⌋=24` with RSA-2048 `B=49152`, G17/G22 under 1% as integer inequalities (champions unmatched). Coq uses binary `N` for those products (unary `nat` OOMs).
+Living Shor/QAOA integers (Q-JOB-006–012) sit next to the tiny-N demos: far RSA-shaped `10007×1000003`, p−1 stage-2 smoothness `100003−1=2·3·7·2381`, B-lock `⌊eπ⌋·⌊π⌋=24` with RSA-2048 `B=49152` and B(119)=2856, G17/G22/G23 under 1% as integer inequalities (champions unmatched). Coq uses binary `N` for those products (unary `nat` OOMs).
 
 ## Reproduce
 

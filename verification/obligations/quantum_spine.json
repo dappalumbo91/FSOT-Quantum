@@ -259,12 +259,32 @@
     {
       "id": "Q-JOB-010",
       "name": "g22_under_one_pct",
-      "statement": "100·(13359−13261)<13359 — G22 aspiration <1%, champion unmatched",
+      "statement": "100·(13359−13270)<13359 — G22 89 edges / 0.666%, champion unmatched",
       "lean": "Jobs.g22_under_one_pct",
       "coq": "g22_under_one_pct",
       "isabelle": "g22_under_one_pct",
       "fstar": "g22_under_one_pct",
-      "python": "100*(13359-13261)<13359"
+      "python": "100*(13359-13270)<13359"
+    },
+    {
+      "id": "Q-JOB-011",
+      "name": "g23_under_one_pct",
+      "statement": "100·(13344−13294)<13344 — G23 50 edges / 0.375%, champion unmatched",
+      "lean": "Jobs.g23_under_one_pct",
+      "coq": "g23_under_one_pct",
+      "isabelle": "g23_under_one_pct",
+      "fstar": "g23_under_one_pct",
+      "python": "100*(13344-13294)<13344"
+    },
+    {
+      "id": "Q-JOB-012",
+      "name": "b_lock_119",
+      "statement": "B(119-bit N)=119·24=2856 — heights17 bitlen lock, same floors as RSA-2048 B=49152",
+      "lean": "Jobs.b_lock_119",
+      "coq": "b_lock_119",
+      "isabelle": "b_lock_119",
+      "fstar": "b_lock_119",
+      "python": "119*24==2856"
     },
     {
       "id": "Q-K-001",

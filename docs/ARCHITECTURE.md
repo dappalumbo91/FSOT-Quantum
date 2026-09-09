@@ -56,10 +56,10 @@ Bleed that matters for the mind path:
 
 | Out | In | What moves |
 |-----|----|------------|
-| `python -m fsot_quantum organ` | fsot-neuron-zig `data/organs/fsot_quantum_organ.json` | pin, \(S\), \(\kappa\), Tsirelson, look path |
+| `python -m fsot_quantum organ` | fsot-neuron-zig `data/organs/fsot_quantum_organ.json` | pin, \(S\), \(\kappa\), look-path law, living hired-job scores |
 | `_ref/FSOT-2.1-Lean` | `check` / `fold` / `atlas` | pin parity + 432-domain count |
 | `formal/` | `python -m fsot_quantum stamp` | five-prover OK |
-| `zig/` + QEMU | `.\run_qemu.ps1` | 13 hired jobs on metal |
+| `zig/` + QEMU | `.\run_qemu.ps1` | QC-OS v0.3.0 — 13/13 integer jobs, subset of the Python host |
 
 Zig remains **mind authority**. This fold does not speak.
 

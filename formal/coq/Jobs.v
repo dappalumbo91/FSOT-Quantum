@@ -85,7 +85,13 @@ Proof. vm_compute. reflexivity. Qed.
 Lemma g17_under_one_pct : (100 * (3047 - 3034) <? 3047 = true)%N.
 Proof. vm_compute. reflexivity. Qed.
 
-Lemma g22_under_one_pct : (100 * (13359 - 13261) <? 13359 = true)%N.
+Lemma g22_under_one_pct : (100 * (13359 - 13270) <? 13359 = true)%N.
+Proof. vm_compute. reflexivity. Qed.
+
+Lemma g23_under_one_pct : (100 * (13344 - 13294) <? 13344 = true)%N.
+Proof. vm_compute. reflexivity. Qed.
+
+Lemma b_lock_119 : (119 * 24 = 2856)%N.
 Proof. vm_compute. reflexivity. Qed.
 
 Lemma living_jobs_surface :
@@ -93,13 +99,17 @@ Lemma living_jobs_surface :
   /\ (100003 - 1 = 2 * 3 * 7 * 2381)%N
   /\ (8 * 3 = 24)%N
   /\ (2048 * 24 = 49152)%N
+  /\ (119 * 24 = 2856)%N
   /\ (100 * (3047 - 3034) <? 3047 = true)%N
-  /\ (100 * (13359 - 13261) <? 13359 = true)%N.
+  /\ (100 * (13359 - 13270) <? 13359 = true)%N
+  /\ (100 * (13344 - 13294) <? 13344 = true)%N.
 Proof.
   split; [exact factor_far_rsa_shaped|].
   split; [exact pminus1_stage2_smooth|].
   split; [exact b_lock_unit|].
   split; [exact b_lock_2048|].
+  split; [exact b_lock_119|].
   split; [exact g17_under_one_pct|].
-  exact g22_under_one_pct.
+  split; [exact g22_under_one_pct|].
+  exact g23_under_one_pct.
 Qed.

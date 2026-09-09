@@ -185,14 +185,14 @@ G11 is a **signed** ±1 torus — a different object, not scored with the unweig
 | Discrete log / Simon / SAT / HHL / search | modular + energy folds | hire **29/29** · hire2 **32/32** |
 | QAOA-style exact column | `qaoa_fsot` | 11/11 |
 | CHSH / EPR / Casimir | pin + Lean fabric | inside 0.5% |
-| FSOT-QC-OS (QEMU) | `.\run_qemu.ps1` | 13/13 hired jobs on metal |
+| FSOT-QC-OS (QEMU) | `.\run_qemu.ps1` | **13/13** integer subset of the Python host |
 
 ### Formal / organ
 
 | Gate | Status |
 |------|--------|
-| Multiprover stamp Lean · Coq · Isabelle · F\* · Python | `FSOT_QUANTUM_MULTIPROVER_OK` · 35 obligations |
-| Organ export for neuron-zig | pin D1D38A, \(S\), \(\kappa\), Tsirelson |
+| Multiprover stamp Lean · Coq · Isabelle · F\* · Python | `FSOT_QUANTUM_MULTIPROVER_OK` · 37 obligations |
+| Organ export for neuron-zig | living wrap: \(S\), \(\kappa\), look-path law, hired-job scores |
 | Skeptic kit (pin + smoke + zero free params) | `overall_ok: True` |
 
 ---
@@ -229,7 +229,7 @@ Honesty cut: [`CLAIMS.md`](CLAIMS.md).
 - Contested open-science panel is **14/14**: [`CONTESTED_SECTORS.md`](CONTESTED_SECTORS.md).
 - Leftovers: [`OPEN_REMAINING.md`](OPEN_REMAINING.md). DESI \(w_0/w_a\) BAO lane 0.37%/0.28%. \(\alpha_s\) inside vendor 0.9%. G17 **0.427%** (13 edges, champion unmatched). Accuracy reclass: [`ACCURACY_REFINE.md`](ACCURACY_REFINE.md).
 - Formula catalog: [`FORMULA_LIST.md`](FORMULA_LIST.md) — 207/216 vs stored @0.5%; living **9/9** of those misses are stale / wrong-object / in-band.
-- Multiprover stamp **FSOT_QUANTUM_MULTIPROVER_OK** (Lean · Coq · Isabelle · F\* · Python, 35 obligations): [`MULTIPROVER_VERIFICATION.md`](MULTIPROVER_VERIFICATION.md). Living job integers Q-JOB-006–010 (far factor, p−1 stage-2, B-lock, G17/G22 under 1%).
+- Multiprover stamp **FSOT_QUANTUM_MULTIPROVER_OK** (Lean · Coq · Isabelle · F\* · Python, 37 obligations): [`MULTIPROVER_VERIFICATION.md`](MULTIPROVER_VERIFICATION.md). Living job integers Q-JOB-006–012 (far factor, p−1 stage-2, B-lock, G17/G22/G23 under 1%, B(119)=2856).
 - Vendor wave8 `BR_H_gg` field still stale (0.0785). Fold already matches YR4. Pin not edited.
 - Hilbert fragments exist as **optional bridges**. They are not the scale path.
 - Period / factor: ECM **80-bit**; RSA-shaped **81 / 95 / 103 / 111 / 119-bit**. **64-bit 0/8** at locked ECM (ρ \(\sim 2^{32}\) wall). RSA-2048 not run. Classical ladder: [`CLASSICAL_RECORDS.md`](CLASSICAL_RECORDS.md). H2 Kolos derived 0.75% written; LiH FCI not invented: [`VQE_OBJECT.md`](VQE_OBJECT.md). Known-answer bank **44/44**.

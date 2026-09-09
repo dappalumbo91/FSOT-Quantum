@@ -162,7 +162,7 @@ python -m fsot_quantum heights17  # 119-bit RSA-shaped 8/8
 python -m fsot_quantum known      # known-answer QC 44/44
 python -m fsot_quantum vqe        # H2 objects + amplitude estimation
 python -m fsot_quantum formulas   # formula list
-python -m fsot_quantum organ      # JSON for neuron-zig
+python -m fsot_quantum organ      # living wrap JSON for neuron-zig
 python -m fsot_quantum stamp      # Lean · Coq · Isabelle · F* · Python
 python -m fsot_quantum atlas      # full Lean solved atlas
 python -m fsot_quantum predict    # preregistered predictions (killable)

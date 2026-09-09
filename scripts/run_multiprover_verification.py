@@ -173,7 +173,9 @@ def python_runtime_obligations() -> dict[str, Any]:
         8 * 3 == 24 and 103 * 24 == 2472 and 2048 * 24 == 49152,
     )
     add("Q-JOB-009", 100 * (3047 - 3034) < 3047)
-    add("Q-JOB-010", 100 * (13359 - 13261) < 13359)
+    add("Q-JOB-010", 100 * (13359 - 13270) < 13359)
+    add("Q-JOB-011", 100 * (13344 - 13294) < 13344)
+    add("Q-JOB-012", 119 * 24 == 2856)
 
     # Q-K universal scaling — S = K(T1+T2+T3)
     add("Q-K-001", k_matches_pin(), {"K": float(SEEDS.k)})
@@ -499,12 +501,12 @@ def main() -> int:
         "",
         "Spine: `verification/obligations/quantum_spine.json`",
         "",
-        "Living Shor/QAOA integers (Q-JOB-006–010) sit next to the tiny-N "
+        "Living Shor/QAOA integers (Q-JOB-006–012) sit next to the tiny-N "
         "demos: far RSA-shaped `10007×1000003`, p−1 stage-2 smoothness "
         "`100003−1=2·3·7·2381`, B-lock `⌊eπ⌋·⌊π⌋=24` with RSA-2048 "
-        "`B=49152`, G17/G22 under 1% as integer inequalities "
-        "(champions unmatched). Coq uses binary `N` for those products "
-        "(unary `nat` OOMs).",
+        "`B=49152` and B(119)=2856, G17/G22/G23 under 1% as integer "
+        "inequalities (champions unmatched). Coq uses binary `N` for "
+        "those products (unary `nat` OOMs).",
         "",
         "## Reproduce",
         "",

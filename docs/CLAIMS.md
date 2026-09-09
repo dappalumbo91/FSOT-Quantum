@@ -74,7 +74,7 @@ Living ledgers. Re-run the command. Miss one and the pin is wrong — except whe
 | VQE objects | pin H2 De/R **ok** · Kolos **0.75%** written · LiH not invented | `python -m fsot_quantum vqe` | `VQE_OBJECT.md` |
 | Accuracy refine | catalog living **9/9** · log-N **8/8** | `python -m fsot_quantum refine` | `ACCURACY_REFINE.md` |
 | Formula catalog | **18** solvers · **207/216** stored @0.5% · living **9/9** reclass | `python -m fsot_quantum formulas` | `FORMULA_LIST.md` |
-| Multiprover stamp | **FSOT_QUANTUM_MULTIPROVER_OK** · 35 obligations | `python -m fsot_quantum stamp` | `MULTIPROVER_VERIFICATION.md` |
+| Multiprover stamp | **FSOT_QUANTUM_MULTIPROVER_OK** · 37 obligations | `python -m fsot_quantum stamp` | `MULTIPROVER_VERIFICATION.md` |
 | \(1/\alpha\), Weinberg, proton radius, water angle | match | `python -m fsot_quantum forward` | `STATUS.md` |
 | Tsirelson | exact \(2\sqrt{2}\) | organ / QI | — |
 | \(S(\mathrm{QM})\), \(S(\mathrm{QC})\) | \(+0.9555\), \(−0.1477\) | `python -m fsot_quantum check` | — |

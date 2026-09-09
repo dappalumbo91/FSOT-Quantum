@@ -23,6 +23,7 @@ ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT))
 
 from fsot_quantum.chemistry_fold import BAND_5, GREEN
+from fsot_quantum.domains import DOMAINS
 from fsot_quantum.lean_replay import LEAN_DATA, _rel
 
 CAP = 40
@@ -127,18 +128,43 @@ def run_full_atlas() -> dict[str, Any]:
                 n_replay_fail += 1
 
     fails = [r for r in rows if r.get("ok") and not r.get("replay_ok")]
+    pin_names = set(DOMAINS.keys())
+    fold_map: dict[str, dict[str, Any]] = {}
+    for r in rows:
+        if not r.get("ok") or not r.get("domain"):
+            continue
+        d = str(r["domain"])
+        rec = fold_map.setdefault(
+            d,
+            {
+                "domain": d,
+                "D_eff": r.get("D_eff"),
+                "n_files": 0,
+                "in_pin_35": d in pin_names,
+            },
+        )
+        rec["n_files"] += 1
+        if rec.get("D_eff") is None:
+            rec["D_eff"] = r.get("D_eff")
+    named_folds = sorted(fold_map.values(), key=lambda x: (x.get("D_eff") is None, x.get("D_eff") or 0, x["domain"]))
+    n_pin = sum(1 for f in named_folds if f["in_pin_35"])
+    n_lean_only = len(named_folds) - n_pin
     return {
         "panel": "lean_full_atlas",
         "status": "scanned",
         "n_files": len(files),
         "n_parsed": n_ok,
         "n_domains_named": len(domains),
+        "n_named_folds": len(named_folds),
+        "n_folds_in_pin_35": n_pin,
+        "n_folds_lean_only": n_lean_only,
         "total_headline_records": total_headline_n,
         "total_replayed": total_replayed,
         "n_replay_fail_files": n_replay_fail,
         "cap_per_file": CAP,
         "overall_ok": n_ok > 100 and n_replay_fail == 0,
         "fail_files": [f["file"] for f in fails[:20]],
+        "named_folds": named_folds,
         "sample": [
             {
                 "domain": r.get("domain"),
@@ -150,8 +176,9 @@ def run_full_atlas() -> dict[str, Any]:
             if r.get("ok") and r.get("headline_median_pct") is not None
         ][:15],
         "note": (
-            "Full Lean solved atlas ingest. Headlines from every benchmark file. "
-            "Residuals replayed on material_records (cap per file). "
+            "Full Lean solved atlas ingest as named domain folds. "
+            "No new coefficients. Pin 35 always score; Lean-only names "
+            "are extra D_eff routes from the mother fabric. "
             "Coarse/zero-computed source rows skipped, not faked."
         ),
     }
@@ -180,11 +207,33 @@ def main() -> int:
         "",
         f"- files parsed: **{report.get('n_parsed')}/{report.get('n_files')}**",
         f"- named domains: **{report.get('n_domains_named')}**",
+        f"- named folds: **{report.get('n_named_folds')}** "
+        f"(pin 35 overlap **{report.get('n_folds_in_pin_35')}**; "
+        f"Lean-only **{report.get('n_folds_lean_only')}**)",
         f"- headline records (sum): **{report.get('total_headline_records')}**",
         f"- material rows replayed (capped): **{report.get('total_replayed')}**",
         f"- replay-fail files: **{report.get('n_replay_fail_files')}**",
         "",
-        "This is the mother fabric (FSOT-2.1-Lean) pulled into the QC fold as a ledger.",
+        "Each Lean `domain` name is a **named fold** (a \(D_{\mathrm{eff}}\) route), "
+        "not a fitted coefficient. The 35 pin domains always score. Lean-only "
+        "names are extra atlas routes when `_ref/FSOT-2.1-Lean` is present.",
+        "",
+        "## Named folds (domain / \(D_{\mathrm{eff}}\) / in pin 35)",
+        "",
+        "| Domain | \(D_{\mathrm{eff}}\) | files | pin 35 |",
+        "|--------|---------------------:|------:|:------:|",
+    ]
+    for f in (report.get("named_folds") or [])[:80]:
+        md.append(
+            f"| {f['domain']} | {f.get('D_eff') if f.get('D_eff') is not None else '—'} | "
+            f"{f['n_files']} | {f['in_pin_35']} |"
+        )
+    n_folds = int(report.get("n_named_folds") or 0)
+    if n_folds > 80:
+        md.append(f"| … | … | {n_folds - 80} more | … |")
+    md += [
+        "",
+        "This is the mother fabric (FSOT-2.1-Lean) pulled into the QC fold as named domain folds.",
         "",
         "## Reproduce",
         "",
@@ -204,6 +253,9 @@ def main() -> int:
         "n_files": report.get("n_files"),
         "n_parsed": report.get("n_parsed"),
         "n_domains_named": report.get("n_domains_named"),
+        "n_named_folds": report.get("n_named_folds"),
+        "n_folds_in_pin_35": report.get("n_folds_in_pin_35"),
+        "n_folds_lean_only": report.get("n_folds_lean_only"),
         "total_headline_records": report.get("total_headline_records"),
         "total_replayed": report.get("total_replayed"),
         "n_replay_fail_files": report.get("n_replay_fail_files"),

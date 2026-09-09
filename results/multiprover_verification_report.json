@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-09-01T00:30:34.364112+00:00",
+  "timestamp": "2026-09-09T16:11:45.342305+00:00",
   "kit": "FSOT-Quantum multiprover verification",
   "pin": {
     "ok": true,
@@ -8,7 +8,7 @@
   },
   "spine": {
     "path": "verification\\obligations\\quantum_spine.json",
-    "n_obligations": 35,
+    "n_obligations": 37,
     "ids": [
       "Q-TRIT-001",
       "Q-TRIT-002",
@@ -38,6 +38,8 @@
       "Q-JOB-008",
       "Q-JOB-009",
       "Q-JOB-010",
+      "Q-JOB-011",
+      "Q-JOB-012",
       "Q-K-001",
       "Q-K-002",
       "Q-FORM-001",
@@ -52,8 +54,8 @@
       "prover": "python_runtime",
       "ok": true,
       "status": "pass",
-      "n_obligations": 35,
-      "n_pass": 35,
+      "n_obligations": 37,
+      "n_pass": 37,
       "checks": [
         {
           "id": "Q-TRIT-001",
@@ -207,6 +209,16 @@
           "detail": null
         },
         {
+          "id": "Q-JOB-011",
+          "ok": true,
+          "detail": null
+        },
+        {
+          "id": "Q-JOB-012",
+          "ok": true,
+          "detail": null
+        },
+        {
           "id": "Q-K-001",
           "ok": true,
           "detail": {
@@ -264,7 +276,7 @@
       "ok": true,
       "status": "pass",
       "exit_code": 0,
-      "log_tail": "Build completed successfully.\n",
+      "log_tail": "\u2714 [9/11] Built FSOTQuantumFormal.Jobs\n\u2714 [10/11] Built FSOTQuantumFormal\nBuild completed successfully.\n",
       "cwd": "C:\\Users\\damia\\Desktop\\fsot quantum\\formal\\lean"
     },
     "coq": {
@@ -316,7 +328,7 @@
       "exit_code": 0,
       "isabelle_home": "C:\\Users\\damia\\Desktop\\Isabelle2025-2",
       "bash": "C:\\Users\\damia\\Desktop\\Isabelle2025-2\\contrib\\cygwin\\bin\\bash.exe",
-      "log_tail": "0:00:03 elapsed time\n"
+      "log_tail": "Running FSOT_Quantum ...\nFinished FSOT_Quantum (0:00:07 elapsed time)\n0:00:12 elapsed time\n"
     },
     "fstar": {
       "prover": "fstar",
@@ -330,7 +342,7 @@
   },
   "overall_ok": true,
   "stamp": "FSOT_QUANTUM_MULTIPROVER_OK",
-  "wall_seconds": 74.89804240001831,
+  "wall_seconds": 81.8100370999964,
   "claims": {
     "math": "trinary spin algebra, pack contracts, domain D_eff folds, hired QC job integers",
     "programming_structure": "gates CX/neg/pair, pack capacity, runtime parity, Jobs twins",
