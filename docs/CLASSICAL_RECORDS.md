@@ -15,6 +15,7 @@ RSA moduli are two primes of **similar bit length**, not twins and not 32-bit ×
 | RSA-shaped 48×48 | **95** | laptop, this pin | **8/8** ECM/ρ (`heights13`) |
 | RSA-shaped 52×52 | **103** | laptop, this pin | **8/8** ECM/ρ (`heights14`) |
 | RSA-shaped 56×56 | **111** | laptop, this pin | **8/8** p−1/ECM/ρ (`heights15`) |
+| RSA-shaped 60×60 | **119** | laptop, this pin | **8/8** ρ after ECM miss (`heights17`) |
 | RSA-shaped 64×64 | **127** | laptop, this pin | **0/8** ECM at locked B (`heights16`); ρ \(\sim 2^{32}\) wall |
 | RSA-100 | 330 | 1991, distributed QS | not run |
 | RSA-129 | 426 | 1994, QS | not run |
@@ -44,8 +45,8 @@ Published BKS champions on Gset are the record, not QAOA.
 
 ## What “beat classical” means next
 
-1. 64-bit balanced is the ρ wall on this PC (\(\sim 2^{32}\) steps). Do not raise B. Next named challenge is RSA-100 (330-bit).
-2. Do not call 111-bit factoring a crypto record.
+1. 60-bit balanced closed **8/8** on ρ (~76 min). 64-bit ECM is **0/8**; ρ \(\sim 2^{32}\) is the wall. Do not raise B. Next named challenge is RSA-100 (330-bit).
+2. Do not call 119-bit factoring a crypto record.
 3. Gset: close G17’s 13 edges / G22’s 89 without a crawl. Extra n=2000 modes + BFS as add-on refine moved G22 98→89 and G23 73→50.
 4. RSA-2048 remains the shared unsolved poster — QPU and GNFS-on-a-PC both unsolved.
 

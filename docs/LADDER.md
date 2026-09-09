@@ -60,6 +60,7 @@ The comparison is the **hired question**, not a replay of a cryogenic QPU or a H
 | Heights 4–11 | `python -m fsot_quantum heights4` … `heights11` | ECM 38–80-bit | required |
 | Heights 12–15 | `python -m fsot_quantum heights12` … `heights15` | RSA-shaped 81 / 95 / 103 / 111-bit | required |
 | Heights 16 | `python -m fsot_quantum heights16` | 64-bit RSA-shaped ECM / ρ wall | required |
+| Heights 17 | `python -m fsot_quantum heights17` | 60-bit RSA-shaped 119-bit ρ | required |
 | Known-answer QC | `python -m fsot_quantum known` | textbook / demo objects 44/44 | required |
 | VQE objects | `python -m fsot_quantum vqe` | H2 De / Kolos / STO-3G split | required |
 | Accuracy refine | `python -m fsot_quantum refine` | catalog living 9/9 · log-N 8/8 | required |
@@ -113,6 +114,7 @@ These are published values. Miss one and the pin is wrong.
 | Heights 14 | RSA-shaped 52×52 | **8/8** | `HEIGHTS14.md` — **103-bit N**, mostly ρ after ECM miss |
 | Heights 15 | RSA-shaped 56×56 | **8/8** | `HEIGHTS15.md` — **111-bit N**, mix of p−1 stage-2 / ECM / ρ |
 | Heights 16 | RSA-shaped 64×64 | **0/8** | `HEIGHTS16.md` — **127-bit N**, ECM locked B; ρ \(\sim 2^{32}\) wall |
+| Heights 17 | RSA-shaped 60×60 | **8/8** | `HEIGHTS17.md` — **119-bit N**, all ρ after ECM miss |
 | Known-answer QC | textbook / demo objects | **44/44** | `KNOWN_QC.md` |
 | VQE objects | H2 De / Kolos / STO-3G split | pin De **0.25%** · Kolos **0.75%** written | `VQE_OBJECT.md` |
 | Accuracy refine | right-object catalog + log-N stage-2 | living **9/9** · log-N **8/8** | `ACCURACY_REFINE.md` |

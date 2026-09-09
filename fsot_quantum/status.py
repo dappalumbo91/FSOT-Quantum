@@ -47,6 +47,7 @@ def main() -> int:
             "heights14": "103-bit RSA-shaped 8/8",
             "heights15": "111-bit RSA-shaped 8/8",
             "heights16": "127-bit RSA-shaped 0/8 ECM; rho ~2^32 wall",
+            "heights17": "119-bit RSA-shaped 8/8 (60-bit rho)",
             "stamp": "FSOT_QUANTUM_MULTIPROVER_OK 35 obligations",
             "known_qc": "44/44",
             "vqe": "H2 De 0.25%; Kolos 0.75% written; LiH not invented",
@@ -71,7 +72,7 @@ def main() -> int:
             "cryogenic QPU / Hilbert 2^n / QAOA box / FCI sales pitch",
         ],
         "jobs_current": {
-            "factor_Shor": "RSA-shaped 81/95/103/111-bit. RSA-2048 not run",
+            "factor_Shor": "RSA-shaped 81/95/103/111/119-bit. 64-bit 0/8 ECM. RSA-2048 not run",
             "MaxCut": "11/11 under 1%; G17 0.427% (13); G22 0.666% (89); G23 0.375% (50)",
             "chemistry": "68/68 @0.5% (pin formulas, not Hilbert FCI)",
         },
