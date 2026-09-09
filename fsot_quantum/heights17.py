@@ -1,8 +1,8 @@
 """
 Classical-record direction: RSA-shaped 60-bit × 60-bit (~119-bit N).
 
-heights15 was 56-bit 8/8. heights16 was 64-bit 0/8 at locked ECM
-(ρ ~2^32 wall). This board is the bit length in between: two
+heights15 was 56-bit 8/8. heights16 is 64-bit 5/8 CFRAC at locked B
+(3 exhausted). This board is the bit length in between: two
 similar-bit primes, not twins. End-job ECM or Pollard ρ.
 Consumer PC. Not RSA-100 / RSA-2048.
 
@@ -106,7 +106,7 @@ def main() -> int:
     md = [
         "# Heights 17 — RSA-shaped 60-bit × 60-bit (~119-bit N)",
         "",
-        f"**{n_ok}/{n}** · between 56-bit 8/8 and the 64-bit ρ wall",
+        f"**{n_ok}/{n}** · between 56-bit 8/8 and 64-bit 5/8 CFRAC",
         "",
         "Two similar-bit primes, not twins. p±1 and Fermat miss at our B. "
         "End-job ECM or Pollard ρ. Not RSA-100 / RSA-2048.",

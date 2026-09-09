@@ -16,7 +16,7 @@ Answers the jobs people hire quantum computers and precision-physics codes for, 
 **Read first:** [`docs/STATUS.md`](docs/STATUS.md) — current system, findings, capability.  
 **What we can claim:** [`docs/CLAIMS.md`](docs/CLAIMS.md) · **Rungs:** [`docs/LADDER.md`](docs/LADDER.md) · **Reproduce:** [`docs/REPRODUCE.md`](docs/REPRODUCE.md) · **Doc map:** [`docs/INDEX.md`](docs/INDEX.md)
 
-**Current record (2026-09-07):** competitor climb closed on this pin. Audit **20/20** vs YR4/PDG, leftover hired physics **41/41**. Three earlier audit misses were wrong objects (`docs/MISS_THREE.md`), not a pin edit. Exclusive \(B\to D\ell\nu\) is **0.15%** (`docs/V_CB_PUZZLE.md`) — the old 1.1σ was the D+D* blend 0.0398. SH0ES \(H_0\) is Lean BH→WH (Planck **0.024%**, SH0ES **1.00%**) — `docs/H0_TENSION.md`. Gset family **11/11 under 1%**, G17 **0.427%** (13 edges), G22 **0.666%** (89 edges). RSA-shaped through **119-bit 8/8** (60-bit ρ); **64-bit 0/8** at locked ECM (ρ \(\sim 2^{32}\) wall). Multiprover **FSOT_QUANTUM_MULTIPROVER_OK** (35 obligations). Known-answer QC **44/44**. Contested Lean panel **14/14**. GitHub About text is the repo one-liner; this README, `docs/STATUS.md`, and `docs/CLAIMS.md` are the current record.
+**Current record (2026-09-07):** competitor climb closed on this pin. Audit **20/20** vs YR4/PDG, leftover hired physics **41/41**. Three earlier audit misses were wrong objects (`docs/MISS_THREE.md`), not a pin edit. Exclusive \(B\to D\ell\nu\) is **0.15%** (`docs/V_CB_PUZZLE.md`) — the old 1.1σ was the D+D* blend 0.0398. SH0ES \(H_0\) is Lean BH→WH (Planck **0.024%**, SH0ES **1.00%**) — `docs/H0_TENSION.md`. Gset family **11/11 under 1%**, G17 **0.427%** (13 edges), G22 **0.666%** (89 edges). RSA-shaped through **119-bit 8/8** (60-bit ρ); **64-bit 5/8** CFRAC at locked B (3 exhausted). Multiprover **FSOT_QUANTUM_MULTIPROVER_OK** (35 obligations). Known-answer QC **44/44**. Contested Lean panel **14/14**. GitHub About text is the repo one-liner; this README, `docs/STATUS.md`, and `docs/CLAIMS.md` are the current record.
 
 ---
 
@@ -67,9 +67,9 @@ Living numbers. Miss one and the pin is wrong — except where we scored the wro
 | Heights 13 (95-bit RSA-shaped) | **8/8** | [`docs/HEIGHTS13.md`](docs/HEIGHTS13.md) |
 | Heights 14 (103-bit RSA-shaped) | **8/8** | [`docs/HEIGHTS14.md`](docs/HEIGHTS14.md) |
 | Heights 15 (111-bit RSA-shaped) | **8/8** | [`docs/HEIGHTS15.md`](docs/HEIGHTS15.md) |
-| Heights 16 (127-bit RSA-shaped) | **0/8** ECM at locked B · ρ wall | [`docs/HEIGHTS16.md`](docs/HEIGHTS16.md) |
+| Heights 16 (127-bit RSA-shaped) | **5/8** CFRAC at locked B; 3 exhausted | [`docs/HEIGHTS16.md`](docs/HEIGHTS16.md) |
 | Heights 17 (119-bit RSA-shaped) | **8/8** 60-bit ρ | [`docs/HEIGHTS17.md`](docs/HEIGHTS17.md) |
-| Multiprover stamp | **FSOT_QUANTUM_MULTIPROVER_OK** · 35 obligations | [`docs/MULTIPROVER_VERIFICATION.md`](docs/MULTIPROVER_VERIFICATION.md) |
+| Multiprover stamp | **FSOT_QUANTUM_MULTIPROVER_OK** · 37 obligations | [`docs/MULTIPROVER_VERIFICATION.md`](docs/MULTIPROVER_VERIFICATION.md) |
 | Known-answer QC jobs | **44/44** | [`docs/KNOWN_QC.md`](docs/KNOWN_QC.md) |
 | VQE objects | pin H2 De **0.25%** · Kolos **0.75%** written | [`docs/VQE_OBJECT.md`](docs/VQE_OBJECT.md) |
 | Accuracy refine | catalog living **9/9** · log-N **8/8** | [`docs/ACCURACY_REFINE.md`](docs/ACCURACY_REFINE.md) |
@@ -83,7 +83,7 @@ Living numbers. Miss one and the pin is wrong — except where we scored the wro
 | Tsirelson | exact \(2\sqrt{2}\) | — |
 | \(S(\mathrm{QM})\), \(S(\mathrm{QC})\) | \(+0.9555\), \(−0.1477\) | emergence / damping |
 
-**Still open, written as open:** Gset champions unmatched (G17 13 edges, G22 89); RSA-shaped **64-bit 0/8** at locked ECM (ρ \(\sim 2^{32}\) wall); vendor `BR_H_gg` field still stale (fold already matches YR4). RSA-2048 not run. Exclusive 0.0398 and SH0ES 6.30% were wrong objects — see [`docs/CLAIMS.md`](docs/CLAIMS.md). 60-bit ρ is **8/8**.
+**Still open, written as open:** Gset champions unmatched (G17 13 edges, G22 89); RSA-shaped **64-bit 5/8** CFRAC (3 exhausted at locked B); vendor `BR_H_gg` field still stale (fold already matches YR4). RSA-2048 not run. Exclusive 0.0398 and SH0ES 6.30% were wrong objects — see [`docs/CLAIMS.md`](docs/CLAIMS.md). 60-bit ρ is **8/8**.
 
 ---
 
@@ -157,7 +157,7 @@ python -m fsot_quantum heights12  # 81-bit RSA-shaped 12/12
 python -m fsot_quantum heights13  # 95-bit RSA-shaped 8/8
 python -m fsot_quantum heights14  # 103-bit RSA-shaped 8/8
 python -m fsot_quantum heights15  # 111-bit RSA-shaped 8/8
-python -m fsot_quantum heights16  # 64-bit RSA-shaped 0/8 ECM (ρ wall)
+python -m fsot_quantum heights16  # 64-bit RSA-shaped 5/8 CFRAC (3 exhausted)
 python -m fsot_quantum heights17  # 119-bit RSA-shaped 8/8
 python -m fsot_quantum known      # known-answer QC 44/44
 python -m fsot_quantum vqe        # H2 objects + amplitude estimation

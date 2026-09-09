@@ -1,10 +1,10 @@
 {
-  "timestamp": "2026-09-08T00:15:11.358096+00:00",
+  "timestamp": "2026-09-09T17:08:26.658981+00:00",
   "suite": "heights16",
   "pin": "D1D38A",
   "pin_file_edited": false,
   "overall_ok": false,
-  "n_ok": 0,
+  "n_ok": 5,
   "n": 8,
   "g17": {
     "cut": 3034,
@@ -14,7 +14,7 @@
   "rsa2048_B": 49152,
   "S_QM": 0.9555063001027194,
   "S_QC": -0.14767310363368633,
-  "wall_seconds": 265.5159825999872,
+  "wall_seconds": 633.2102117999966,
   "rows": [
     {
       "p": 9223372036854775837,
@@ -27,9 +27,12 @@
       "pplus1": "pplus1_exhausted",
       "fermat_k": "fermat_multiplier_exhausted",
       "ecm": "ecm_exhausted",
-      "end": "ecm_exhausted",
-      "factors": null,
-      "ok": false
+      "end": "cfrac_smooth",
+      "factors": [
+        9223372036854775837,
+        13000000000000000171
+      ],
+      "ok": true
     },
     {
       "p": 9223372036854775837,
@@ -42,9 +45,12 @@
       "pplus1": "pplus1_exhausted",
       "fermat_k": "fermat_multiplier_exhausted",
       "ecm": "ecm_exhausted",
-      "end": "ecm_exhausted",
-      "factors": null,
-      "ok": false
+      "end": "cfrac_smooth",
+      "factors": [
+        9223372036854775837,
+        14000000000000000059
+      ],
+      "ok": true
     },
     {
       "p": 10000000000000000051,
@@ -57,9 +63,12 @@
       "pplus1": "pplus1_exhausted",
       "fermat_k": "fermat_multiplier_exhausted",
       "ecm": "ecm_exhausted",
-      "end": "ecm_exhausted",
-      "factors": null,
-      "ok": false
+      "end": "cfrac_smooth",
+      "factors": [
+        10000000000000000051,
+        13000000000000000171
+      ],
+      "ok": true
     },
     {
       "p": 10000000000000000051,
@@ -72,7 +81,7 @@
       "pplus1": "pplus1_exhausted",
       "fermat_k": "fermat_multiplier_exhausted",
       "ecm": "ecm_exhausted",
-      "end": "ecm_exhausted",
+      "end": "cfrac_exhausted",
       "factors": null,
       "ok": false
     },
@@ -87,7 +96,7 @@
       "pplus1": "pplus1_exhausted",
       "fermat_k": "fermat_multiplier_exhausted",
       "ecm": "ecm_exhausted",
-      "end": "ecm_exhausted",
+      "end": "cfrac_exhausted",
       "factors": null,
       "ok": false
     },
@@ -102,7 +111,7 @@
       "pplus1": "pplus1_exhausted",
       "fermat_k": "fermat_multiplier_exhausted",
       "ecm": "ecm_exhausted",
-      "end": "ecm_exhausted",
+      "end": "cfrac_exhausted",
       "factors": null,
       "ok": false
     },
@@ -117,9 +126,12 @@
       "pplus1": "pplus1_exhausted",
       "fermat_k": "fermat_multiplier_exhausted",
       "ecm": "ecm_exhausted",
-      "end": "ecm_exhausted",
-      "factors": null,
-      "ok": false
+      "end": "cfrac_smooth",
+      "factors": [
+        12000000000000000203,
+        15000000000000000077
+      ],
+      "ok": true
     },
     {
       "p": 12000000000000000203,
@@ -132,9 +144,12 @@
       "pplus1": "pplus1_exhausted",
       "fermat_k": "fermat_multiplier_exhausted",
       "ecm": "ecm_exhausted",
-      "end": "ecm_exhausted",
-      "factors": null,
-      "ok": false
+      "end": "cfrac_smooth",
+      "factors": [
+        12000000000000000203,
+        16000000000000000073
+      ],
+      "ok": true
     }
   ]
 }

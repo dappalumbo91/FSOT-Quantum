@@ -82,7 +82,7 @@ Every living panel also writes a twin under `results/`.
 | [`HEIGHTS13.md`](HEIGHTS13.md) | 48-bit × 48-bit RSA-shaped **95-bit 8/8** |
 | [`HEIGHTS14.md`](HEIGHTS14.md) | 52-bit × 52-bit RSA-shaped **103-bit 8/8** |
 | [`HEIGHTS15.md`](HEIGHTS15.md) | 56-bit × 56-bit RSA-shaped **111-bit 8/8** |
-| [`HEIGHTS16.md`](HEIGHTS16.md) | 64-bit × 64-bit RSA-shaped **127-bit 0/8** ECM · ρ wall |
+| [`HEIGHTS16.md`](HEIGHTS16.md) | 64-bit × 64-bit RSA-shaped **127-bit 5/8** CFRAC (3 exhausted) |
 | [`HEIGHTS17.md`](HEIGHTS17.md) | 60-bit × 60-bit RSA-shaped **119-bit 8/8** ρ |
 | [`MULTIPROVER_VERIFICATION.md`](MULTIPROVER_VERIFICATION.md) | Lean · Coq · Isabelle · F\* · Python stamp **OK** · 37 obligations |
 | [`QC_ACCURACY.md`](QC_ACCURACY.md) | Hired QC/QM jobs on ordinary hardware |

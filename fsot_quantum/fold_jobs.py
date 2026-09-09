@@ -796,6 +796,267 @@ def fold_ecm(N: int) -> dict[str, Any]:
     }
 
 
+def _legendre(a: int, p: int) -> int:
+    if a % p == 0:
+        return 0
+    return pow(a % p, (p - 1) // 2, p)
+
+
+def _gf2_dependencies(rows: list[int], n_cols: int) -> list[list[int]]:
+    """
+    Nullspace of a GF(2) matrix whose rows are bit-packed ints
+    (bit j = column j). Returns index-lists of dependent rows.
+    """
+    m = len(rows)
+    if m == 0:
+        return []
+    data = list(rows)
+    ident = [1 << i for i in range(m)]
+    wh = [-1] * n_cols
+    deps: list[list[int]] = []
+    for r in range(m):
+        x = data[r]
+        col = -1
+        while x:
+            b = x & -x
+            c = b.bit_length() - 1
+            if wh[c] < 0:
+                col = c
+                break
+            data[r] ^= data[wh[c]]
+            ident[r] ^= ident[wh[c]]
+            x = data[r]
+        if col < 0:
+            vec = ident[r]
+            idxs = [i for i in range(m) if (vec >> i) & 1]
+            if idxs:
+                deps.append(idxs)
+            continue
+        wh[col] = r
+        for i in range(m):
+            if i != r and (data[i] >> col) & 1:
+                data[i] ^= data[r]
+                ident[i] ^= ident[r]
+    return deps
+
+
+def fold_cfrac(N: int) -> dict[str, Any]:
+    """
+    Continued-fraction factor (CFRAC) — B-locked, Q ~ √N.
+
+    Same B as p−1 / ECM. Each convergent gives |Q| < 2√N, so the
+    smoothness ask is on a √N-sized integer, not on a growing QS
+    polynomial. Cap is B2 of B2 (same two seed floors). Not a raised B.
+    """
+    if N < 4 or N % 2 == 0:
+        return fold_factor(N)
+    bl = max(N.bit_length(), 8)
+    B = bl * max(2, int(math.floor(float(SEEDS.e) * float(SEEDS.pi)))) * max(
+        2, int(math.floor(float(SEEDS.pi)))
+    )
+    B2 = _stage2_bound(B)
+    cap = _stage2_bound(B2)
+    a0 = int(math.isqrt(N))
+    if a0 * a0 == N and 1 < a0 < N:
+        return {
+            "job": "factor_Shor_end",
+            "N": N,
+            "ok": True,
+            "factors": sorted([a0, N // a0]),
+            "method": "cfrac_square",
+            "B": B,
+            "steps": 0,
+        }
+    primes = _primes_upto(B)
+    fb: list[int] = [-1]
+    for p in primes:
+        if p == 2:
+            fb.append(2)
+            continue
+        g = math.gcd(N, p)
+        if 1 < g < N:
+            return {
+                "job": "factor_Shor_end",
+                "N": N,
+                "ok": True,
+                "factors": sorted([g, N // g]),
+                "method": "cfrac_trial",
+                "B": B,
+                "steps": 0,
+            }
+        if _legendre(N, p) == 1:
+            fb.append(p)
+    need = len(fb) + max(2, int(math.floor(float(SEEDS.pi))))
+    is_p2 = set(_primes_upto(B2))
+    # Same k set as Fermat multipliers. CF of √(kN), relations mod N.
+    ks = (
+        1,
+        2,
+        max(2, int(math.floor(float(SEEDS.pi)))),
+        max(2, int(math.floor(float(SEEDS.e)))),
+        max(2, int(math.floor(float(SEEDS.phi)))),
+    )
+
+    def _sign_exp(n: int, Q: int) -> int:
+        s = 1 if n & 1 else 0
+        if Q < 0:
+            s ^= 1
+        return s
+
+    last: dict[str, Any] | None = None
+    seen_k: set[int] = set()
+    for k in ks:
+        if k in seen_k:
+            continue
+        seen_k.add(k)
+        M = k * N
+        a0k = int(math.isqrt(M))
+        P_prev, Q_prev = 0, 1
+        a = a0k
+        A_prev2, A_prev1 = 1, a0k % N
+        rels: list[tuple[int, int, list[int], dict[int, int]]] = []
+        partials: dict[int, tuple[int, int, list[int]]] = {}
+        steps = 0
+        seen_q: set[int] = set()
+        for n in range(1, cap + 1):
+            P = a * Q_prev - P_prev
+            if Q_prev == 0:
+                break
+            Q = (M - P * P) // Q_prev
+            if Q == 0:
+                break
+            a = (a0k + P) // Q
+            A = (a * A_prev1 + A_prev2) % N
+            steps += 1
+            Q_abs = abs(Q)
+            if Q_abs > 1 and Q_abs not in seen_q:
+                seen_q.add(Q_abs)
+                qq = Q_abs
+                exps = [0] * len(fb)
+                exps[0] = _sign_exp(n, Q)
+                mask = 1 if exps[0] & 1 else 0
+                for i, p in enumerate(fb):
+                    if i == 0:
+                        continue
+                    c = 0
+                    while qq % p == 0:
+                        qq //= p
+                        c += 1
+                    exps[i] = c
+                    if c & 1:
+                        mask |= 1 << i
+                if qq == 1:
+                    rels.append((A_prev1, mask, exps, {}))
+                elif qq in is_p2 and qq > B:
+                    prev = partials.get(qq)
+                    if prev is None:
+                        partials[qq] = (A_prev1, mask, exps)
+                    else:
+                        x2, m2, e2 = prev
+                        x = (A_prev1 * x2) % N
+                        e = [exps[j] + e2[j] for j in range(len(fb))]
+                        m = 0
+                        for j, c in enumerate(e):
+                            if c & 1:
+                                m |= 1 << j
+                        rels.append((x, m, e, {qq: 2}))
+                        del partials[qq]
+            A_prev2, A_prev1 = A_prev1, A
+            P_prev, Q_prev = P, Q
+        if len(rels) < need:
+            last = {
+                "job": "factor_Shor_end",
+                "N": N,
+                "ok": False,
+                "factors": None,
+                "method": "cfrac_exhausted",
+                "B": B,
+                "B2": B2,
+                "k": k,
+                "n_rels": len(rels),
+                "n_fb": len(fb),
+                "steps": steps,
+            }
+            continue
+        deps = _gf2_dependencies([m for _x, m, _e, _q in rels], len(fb))
+        hit: dict[str, Any] | None = None
+        for idxs in deps:
+            prod_x = 1
+            y = 1
+            tot = [0] * len(fb)
+            extra: dict[int, int] = {}
+            for i in idxs:
+                x, _m, exps, exq = rels[i]
+                prod_x = (prod_x * x) % N
+                for j, e in enumerate(exps):
+                    tot[j] += e
+                for q, c in exq.items():
+                    extra[q] = extra.get(q, 0) + c
+            for j, p in enumerate(fb):
+                if j == 0:
+                    continue
+                y = (y * pow(p, tot[j] // 2, N)) % N
+            for q, c in extra.items():
+                y = (y * pow(q, c // 2, N)) % N
+            g = math.gcd(prod_x - y, N)
+            if 1 < g < N:
+                hit = {
+                    "job": "factor_Shor_end",
+                    "N": N,
+                    "ok": True,
+                    "factors": sorted([g, N // g]),
+                    "method": "cfrac_smooth",
+                    "B": B,
+                    "B2": B2,
+                    "k": k,
+                    "n_rels": len(rels),
+                    "n_fb": len(fb),
+                    "steps": steps,
+                }
+                break
+            g = math.gcd(prod_x + y, N)
+            if 1 < g < N:
+                hit = {
+                    "job": "factor_Shor_end",
+                    "N": N,
+                    "ok": True,
+                    "factors": sorted([g, N // g]),
+                    "method": "cfrac_smooth",
+                    "B": B,
+                    "B2": B2,
+                    "k": k,
+                    "n_rels": len(rels),
+                    "n_fb": len(fb),
+                    "steps": steps,
+                }
+                break
+        if hit is not None:
+            return hit
+        last = {
+            "job": "factor_Shor_end",
+            "N": N,
+            "ok": False,
+            "factors": None,
+            "method": "cfrac_exhausted",
+            "B": B,
+            "B2": B2,
+            "k": k,
+            "n_rels": len(rels),
+            "n_fb": len(fb),
+            "steps": steps,
+        }
+    return last if last is not None else {
+        "job": "factor_Shor_end",
+        "N": N,
+        "ok": False,
+        "factors": None,
+        "method": "cfrac_exhausted",
+        "B": B,
+        "B2": B2,
+        "steps": 0,
+    }
+
+
 def fold_fermat_multipliers(N: int) -> dict[str, Any]:
     """
     Fermat on k·N for seed k. Hits when p/q is near a small rational

@@ -59,7 +59,7 @@ The comparison is the **hired question**, not a replay of a cryogenic QPU or a H
 | Heights 3 | `python -m fsot_quantum heights3` | log-N p−1/p+1/kN Fermat | required |
 | Heights 4–11 | `python -m fsot_quantum heights4` … `heights11` | ECM 38–80-bit | required |
 | Heights 12–15 | `python -m fsot_quantum heights12` … `heights15` | RSA-shaped 81 / 95 / 103 / 111-bit | required |
-| Heights 16 | `python -m fsot_quantum heights16` | 64-bit RSA-shaped ECM / ρ wall | required |
+| Heights 16 | `python -m fsot_quantum heights16` | 64-bit RSA-shaped 5/8 CFRAC | required |
 | Heights 17 | `python -m fsot_quantum heights17` | 60-bit RSA-shaped 119-bit ρ | required |
 | Known-answer QC | `python -m fsot_quantum known` | textbook / demo objects 44/44 | required |
 | VQE objects | `python -m fsot_quantum vqe` | H2 De / Kolos / STO-3G split | required |

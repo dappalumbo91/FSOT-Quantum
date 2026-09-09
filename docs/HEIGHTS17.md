@@ -1,6 +1,6 @@
 # Heights 17 — RSA-shaped 60-bit × 60-bit (~119-bit N)
 
-**8/8** · between 56-bit 8/8 and the 64-bit ρ wall
+**8/8** · between 56-bit 8/8 and 64-bit 5/8 CFRAC
 
 Two similar-bit primes, not twins. p±1 and Fermat miss at our B. End-job ECM or Pollard ρ. Not RSA-100 / RSA-2048.
 

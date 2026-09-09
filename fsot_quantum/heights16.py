@@ -2,9 +2,9 @@
 Classical-record direction: RSA-shaped 64-bit × 64-bit (~127-bit N).
 
 heights15 was 56-bit × 56-bit (111-bit). Same job cryptographers mean:
-two similar-bit primes, not twins, p±1 unsmooth at our B. End-job
-ECM or Pollard ρ. ρ on 64-bit p is ~2^32 — the written next wall.
-Consumer PC. Not RSA-100 / RSA-2048.
+two similar-bit primes, not twins, p±1 unsmooth at our B. ECM misses
+at the locked B. CFRAC (same B, large-prime pairs at B2) is the
+end-job. ρ on 64-bit p is ~2^32 — not run. Not RSA-100 / RSA-2048.
 
 python -m fsot_quantum.heights16
 """
@@ -25,6 +25,7 @@ sys.path.insert(0, str(ROOT))
 from fsot_lib.seeds import SEEDS
 from fsot_quantum.domains import domain_scalar
 from fsot_quantum.fold_jobs import (
+    fold_cfrac,
     fold_ecm,
     fold_fermat_multipliers,
     fold_logN,
@@ -55,9 +56,9 @@ def _row(p: int, q: int) -> dict[str, Any]:
     e = fold_ecm(N)
     d = fold_logN(N)
     if not d.get("ok"):
-        # 64-bit p is ~2^32 ρ steps — the written wall. Do not pretend
-        # a laptop afternoon. ECM at the locked B is the score.
-        d = e
+        # B-locked CFRAC: same B as ECM, Q ~ √N, large-prime pairs at B2.
+        # Not a raised smoothness bound. Not √p rho. Not RSA-2048.
+        d = fold_cfrac(N)
     return {
         "p": p,
         "q": q,
@@ -109,10 +110,9 @@ def main() -> int:
         "",
         f"**{n_ok}/{n}** · classical-record direction on a consumer PC",
         "",
-        "Two similar-bit primes, not twins. p±1 and Fermat miss at our B. "
-        "ECM at the **locked** B is the score. Pollard ρ on 64-bit \(p\) is "
-        r"\(\sim 2^{32}\) steps — a rho run on the first pair was still "
-        "open after 35 minutes and was stopped. Not RSA-100 / RSA-2048.",
+        "Two similar-bit primes, not twins. p±1, Fermat, and ECM miss at "
+        "the **locked** B. CFRAC with the same B and B2 large-prime pairing "
+        "is the end-job (Q ~ √N, not √p rho). Not RSA-100 / RSA-2048.",
         "",
         "See `docs/CLASSICAL_RECORDS.md`.",
         "",

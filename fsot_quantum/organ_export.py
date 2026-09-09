@@ -95,7 +95,7 @@ def build_organ() -> dict[str, Any]:
             {
                 "hire": "Shor factor",
                 "question": "Factor N=pq (RSA-shaped, similar-bit primes)",
-                "score": "119-bit 8/8 (60-bit rho); 64-bit 0/8 ECM",
+                "score": "119-bit 8/8 (60-bit rho); 64-bit 5/8 CFRAC",
                 "command": "python -m fsot_quantum heights17",
             },
             {
@@ -138,14 +138,14 @@ def build_organ() -> dict[str, Any]:
             "audit": "20/20 vs YR4/PDG @0.5%",
             "physics_qi3": "41/41 + 212/212 Lean",
             "gset_family": "11/11 under 1%; G17 13 edges; G22 89; G23 50",
-            "factor": "RSA-shaped 119-bit 8/8; 64-bit 0/8 ECM",
+            "factor": "RSA-shaped 119-bit 8/8; 64-bit 5/8 CFRAC",
             "known_qc": "44/44",
             "stamp": "FSOT_QUANTUM_MULTIPROVER_OK",
             "vcb": "inclusive 0.002%; exclusive B→D 0.15%",
             "h0": "Planck 0.024%; SH0ES 1.00% Lean BH→WH",
             "open": [
                 "G17 13 edges / G22 89 (champions unmatched)",
-                "64-bit ECM 0/8; rho ~2^32 wall",
+                "64-bit 5/8 CFRAC; 3 exhausted at locked B",
                 "RSA-2048 not run",
                 "vendor BR_H_gg field still stale",
             ],
