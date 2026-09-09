@@ -249,12 +249,12 @@
     {
       "id": "Q-JOB-009",
       "name": "g17_under_one_pct",
-      "statement": "100·(3047−3034)<3047 — G17 aspiration <1%, champion unmatched",
+      "statement": "100·(3047−3037)<3047 — G17 aspiration <1%, champion unmatched",
       "lean": "Jobs.g17_under_one_pct",
       "coq": "g17_under_one_pct",
       "isabelle": "g17_under_one_pct",
       "fstar": "g17_under_one_pct",
-      "python": "100*(3047-3034)<3047"
+      "python": "100*(3047-3037)<3047"
     },
     {
       "id": "Q-JOB-010",

@@ -753,6 +753,16 @@ def _fast_maxcut(n: int, edges: list[tuple[int, int, int]]) -> tuple[int, list[i
                 if tc > best_c:
                     best, best_c = trial, tc
 
+    # Seed-locked BLS. 1-flip descent + adaptive perturbation.
+    # Keep-if-better — cannot regress living G14–G17. Sparse n≤800
+    # only (G22-scale is a different basin / time).
+    if sparse:
+        from fsot_quantum.gset_bls import fold_bls
+
+        bc, bs = fold_bls(n, adj, best, best_c)
+        if bc > best_c:
+            best, best_c = bs, bc
+
     return best_c, best
 
 

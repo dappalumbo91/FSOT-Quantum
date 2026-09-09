@@ -28,7 +28,7 @@ def main() -> int:
             "physics_qi": "16/16 + 326/326 Lean",
             "physics_qi2": "22/22 + 126/126 Lean",
             "physics_qi3": "41/41 + 212/212 Lean",
-            "gset_family": "11/11 under 1%; G17 0.427%",
+            "gset_family": "11/11 under 1%; G17 0.328%",
             "hire_expand": "29/29 factor/dlog/Simon/SAT/HHL/search",
             "hire_climb": "32/32 through 2196323 / Simon-16 / 1e7",
             "probability_branch": "19/19 |S| folds, no Born",
@@ -39,7 +39,7 @@ def main() -> int:
             "hire_climb5": "22/22 through 1445900429 / SAT-24 / TSP-9",
             "hire_climb6": "22/22 through 10045050481 / SAT-28 / TSP-10",
             "hire_climb7": "22/22 through 1000444049203 / SAT-32 / TSP-11",
-            "heights": "far 8/8 Pollard; G17 0.427% (13 edges)",
+            "heights": "far 8/8 Pollard; G17 0.328% (10 edges)",
             "heights3": "log-N 8/8 (p-1 stage-2 + p+1 + kN Fermat)",
             "heights4_11": "ECM 8/8 each through 80-bit",
             "heights12": "81-bit RSA-shaped 12/12",
@@ -59,7 +59,7 @@ def main() -> int:
             "H0": "Planck 0.024%; SH0ES 1.00% Lean BH→WH",
             "alpha_s": "0.68% inside vendor 0.9% band",
             "open": [
-                "Gset champions unmatched (G17 13 edges, G22 89; family 11/11 under 1%)",
+                "Gset champions unmatched (G17 10 edges, G22 89; family 11/11 under 1%)",
                 "vendor BR_H_gg field still stale; fold matches YR4",
                 "catalog 9 stored-gate rows are stale/wrong-object/in-band — ACCURACY_REFINE.md",
                 "RSA-2048 not run (smoothness / sqrt(p) wall)",
@@ -72,7 +72,7 @@ def main() -> int:
         ],
         "jobs_current": {
             "factor_Shor": "RSA-shaped 81/95/103/111/119-bit. 64-bit 8/8. RSA-2048 not run",
-            "MaxCut": "11/11 under 1%; G17 0.427% (13); G22 0.666% (89); G23 0.375% (50)",
+            "MaxCut": "11/11 under 1%; G17 0.328% (10); G14 0.196% (6); G22 0.666% (89); G23 0.375% (50)",
             "chemistry": "68/68 @0.5% (pin formulas, not Hilbert FCI)",
         },
         "refuse": [

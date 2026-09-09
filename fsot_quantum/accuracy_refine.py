@@ -37,7 +37,7 @@ from fsot_quantum.h0_tension import (
     _tool,
 )
 
-G17_NOW = 3034
+G17_NOW = 3037
 
 # Literature / living objects for the nine stored-gate misses.
 # No new coefficient. Right object or the observable's own band.
@@ -218,7 +218,7 @@ def main() -> int:
             "published": G17_PUB,
             "short": G17_PUB - G17_NOW,
             "rel_pct": g17_rel,
-            "note": "13 edges. Family 11/11 under 1%. Not crawled.",
+            "note": "10 edges. Family 11/11 under 1%. BLS. Not crawled.",
         },
         {
             "id": "Gset_champions",
