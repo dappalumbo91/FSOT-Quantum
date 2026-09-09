@@ -12,7 +12,7 @@ This is the comparison we are built for. Today’s QPUs do **not** answer the qu
 
 | Hired question | QPU today | This fold on a PC | Who answers the question? |
 |----------------|-----------|-------------------|---------------------------|
-| Factor | Compiled Shor on \(N=15\) (2001-class demos) | RSA-**shaped** through **119-bit**; **64-bit 5/8** CFRAC | This fold vs QPU; 3 of 8 64-bit still miss at locked B |
+| Factor | Compiled Shor on \(N=15\) (2001-class demos) | RSA-**shaped** through **119-bit**; **64-bit 8/8** | This fold vs QPU; RSA-100 / RSA-2048 still not run |
 | Grover | toy oracles, few qubits | exact marked search through **10⁷** | This fold |
 | MaxCut / QAOA | ~10–20 noisy qubits, ratio often 0.7–0.9 | Gset **n=800–2000**, **11/11 under 1%** of published champion | This fold on size; champions still unmatched |
 | HHL | tiny circuits | integer \(Ax=b\) through **8×8** | This fold on the linear system |

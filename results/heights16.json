@@ -1,10 +1,10 @@
 {
-  "timestamp": "2026-09-09T17:08:26.658981+00:00",
+  "timestamp": "2026-09-09T21:25:35.392983+00:00",
   "suite": "heights16",
   "pin": "D1D38A",
   "pin_file_edited": false,
-  "overall_ok": false,
-  "n_ok": 5,
+  "overall_ok": true,
+  "n_ok": 8,
   "n": 8,
   "g17": {
     "cut": 3034,
@@ -14,7 +14,7 @@
   "rsa2048_B": 49152,
   "S_QM": 0.9555063001027194,
   "S_QC": -0.14767310363368633,
-  "wall_seconds": 633.2102117999966,
+  "wall_seconds": 7381.681925099998,
   "rows": [
     {
       "p": 9223372036854775837,
@@ -81,9 +81,12 @@
       "pplus1": "pplus1_exhausted",
       "fermat_k": "fermat_multiplier_exhausted",
       "ecm": "ecm_exhausted",
-      "end": "cfrac_exhausted",
-      "factors": null,
-      "ok": false
+      "end": "pollard_rho_seed",
+      "factors": [
+        10000000000000000051,
+        15000000000000000077
+      ],
+      "ok": true
     },
     {
       "p": 11000000000000000053,
@@ -96,9 +99,12 @@
       "pplus1": "pplus1_exhausted",
       "fermat_k": "fermat_multiplier_exhausted",
       "ecm": "ecm_exhausted",
-      "end": "cfrac_exhausted",
-      "factors": null,
-      "ok": false
+      "end": "pollard_rho_seed",
+      "factors": [
+        11000000000000000053,
+        14000000000000000059
+      ],
+      "ok": true
     },
     {
       "p": 11000000000000000053,
@@ -111,9 +117,12 @@
       "pplus1": "pplus1_exhausted",
       "fermat_k": "fermat_multiplier_exhausted",
       "ecm": "ecm_exhausted",
-      "end": "cfrac_exhausted",
-      "factors": null,
-      "ok": false
+      "end": "pollard_rho_seed",
+      "factors": [
+        11000000000000000053,
+        16000000000000000073
+      ],
+      "ok": true
     },
     {
       "p": 12000000000000000203,

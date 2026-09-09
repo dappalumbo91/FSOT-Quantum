@@ -438,24 +438,48 @@ def fold_pollard_rho(N: int) -> dict[str, Any]:
     x0 = 2 + (int(float(SEEDS.phi) * 1e6) % max(2, N - 2))
     cap = int(math.isqrt(N)) * max(2, int(math.floor(float(SEEDS.pi))))
     cap = max(cap, fold_probe_budget(max(N.bit_length(), 4), fold_depth_ladder()["deep"]))
+    # Batch GCD — same 24 as B-unit. Floyd gcd-every-step is why 64-bit
+    # rho sat 35 min without a hit. Brent + batch is the same seeds.
+    batch = max(2, int(math.floor(float(SEEDS.e) * float(SEEDS.pi)))) * max(
+        2, int(math.floor(float(SEEDS.pi)))
+    )
 
     for c in cs:
-        x = x0
         y = x0
-        d = 1
+        r = 1
+        q = 1
+        g = 1
         steps = 0
-        while d == 1 and steps < cap:
-            x = (x * x + c) % N
-            y = (y * y + c) % N
-            y = (y * y + c) % N
-            d = math.gcd(abs(x - y), N)
-            steps += 1
-        if 1 < d < N:
+        while g == 1 and steps < cap:
+            x = y
+            take = min(r, cap - steps)
+            for _ in range(take):
+                y = (y * y + c) % N
+            steps += take
+            k = 0
+            while k < r and g == 1 and steps < cap:
+                ys = y
+                m = min(batch, r - k, cap - steps)
+                for _ in range(m):
+                    y = (y * y + c) % N
+                    q = (q * abs(x - y)) % N
+                steps += m
+                g = math.gcd(q, N)
+                k += m
+            r *= 2
+            if g == N:
+                y = ys
+                g = 1
+                while g == 1 and steps < cap:
+                    y = (y * y + c) % N
+                    g = math.gcd(abs(x - y), N)
+                    steps += 1
+        if 1 < g < N:
             return {
                 "job": "factor_Shor_end",
                 "N": N,
                 "ok": True,
-                "factors": sorted([d, N // d]),
+                "factors": sorted([g, N // g]),
                 "method": "pollard_rho_seed",
                 "c": c,
                 "steps": steps,

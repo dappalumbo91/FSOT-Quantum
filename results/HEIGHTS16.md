@@ -1,8 +1,8 @@
 # Heights 16 — RSA-shaped 64-bit × 64-bit (~127-bit N)
 
-**5/8** · classical-record direction on a consumer PC
+**8/8** · classical-record direction on a consumer PC
 
-Two similar-bit primes, not twins. p±1, Fermat, and ECM miss at the **locked** B. CFRAC with the same B and B2 large-prime pairing is the end-job (Q ~ √N, not √p rho). Not RSA-100 / RSA-2048.
+Two similar-bit primes, not twins. p±1, Fermat, and ECM miss at the **locked** B. End-job is CFRAC (same B, B2 large-prime pairing) or Brent ρ with batched GCD (same three seeds). Not RSA-100 / RSA-2048.
 
 See `docs/CLASSICAL_RECORDS.md`.
 
@@ -13,9 +13,9 @@ G17 remains `3034` vs 3047 (**13 edges**).
 | 64 | 64 | 127 | `pminus1_exhausted` | `pplus1_exhausted` | `fermat_multiplier_exhausted` | `ecm_exhausted` | `cfrac_smooth` | True |
 | 64 | 64 | 127 | `pminus1_exhausted` | `pplus1_exhausted` | `fermat_multiplier_exhausted` | `ecm_exhausted` | `cfrac_smooth` | True |
 | 64 | 64 | 127 | `pminus1_exhausted` | `pplus1_exhausted` | `fermat_multiplier_exhausted` | `ecm_exhausted` | `cfrac_smooth` | True |
-| 64 | 64 | 127 | `pminus1_exhausted` | `pplus1_exhausted` | `fermat_multiplier_exhausted` | `ecm_exhausted` | `cfrac_exhausted` | False |
-| 64 | 64 | 127 | `pminus1_exhausted` | `pplus1_exhausted` | `fermat_multiplier_exhausted` | `ecm_exhausted` | `cfrac_exhausted` | False |
-| 64 | 64 | 128 | `pminus1_exhausted` | `pplus1_exhausted` | `fermat_multiplier_exhausted` | `ecm_exhausted` | `cfrac_exhausted` | False |
+| 64 | 64 | 127 | `pminus1_exhausted` | `pplus1_exhausted` | `fermat_multiplier_exhausted` | `ecm_exhausted` | `pollard_rho_seed` | True |
+| 64 | 64 | 127 | `pminus1_exhausted` | `pplus1_exhausted` | `fermat_multiplier_exhausted` | `ecm_exhausted` | `pollard_rho_seed` | True |
+| 64 | 64 | 128 | `pminus1_exhausted` | `pplus1_exhausted` | `fermat_multiplier_exhausted` | `ecm_exhausted` | `pollard_rho_seed` | True |
 | 64 | 64 | 128 | `pminus1_exhausted` | `pplus1_exhausted` | `fermat_multiplier_exhausted` | `ecm_exhausted` | `cfrac_smooth` | True |
 | 64 | 64 | 128 | `pminus1_exhausted` | `pplus1_exhausted` | `fermat_multiplier_exhausted` | `ecm_exhausted` | `cfrac_smooth` | True |
 

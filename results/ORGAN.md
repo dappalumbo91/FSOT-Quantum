@@ -14,7 +14,7 @@ Not a second mind. Zig remains mind authority. This JSON is the law readout: \(S
 
 | Hire | Score | Command |
 |------|-------|---------|
-| Shor factor | 119-bit 8/8 (60-bit rho); 64-bit 5/8 CFRAC | `python -m fsot_quantum heights17` |
+| Shor factor | 119-bit 8/8 (60-bit rho); 64-bit 8/8 CFRAC+rho | `python -m fsot_quantum heights17` |
 | QAOA MaxCut | 11/11 under 1%; G17 13 short; G22 89; G23 50 | `python -m fsot_quantum family` |
 | Grover search | exact through 1e7 | `python -m fsot_quantum known` |
 | chemistry / FCI observables | 68/68 @ 0.5%; H2 De 0.25%; Kolos 0.75% written; LiH not invented | `python -m fsot_quantum vqe` |

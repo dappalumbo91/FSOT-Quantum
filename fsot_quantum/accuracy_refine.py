@@ -328,8 +328,7 @@ def main() -> int:
         "lane: **8/8** through 38/41/46/48/52/56/64/**80-bit**. RSA-shaped "
         "**81-bit 12/12**, **95-bit 8/8**, **103-bit 8/8**, **111-bit 8/8**, "
         "and **119-bit 8/8** (60-bit ρ). "
-        "64-bit balanced is **5/8** CFRAC at the locked B "
-        "(3 exhausted). "
+        "64-bit balanced is **8/8** (CFRAC 5 + Brent ρ 3). "
         "A 90-bit unbalanced pair exhausts the same B; ρ closed it. Not a 2048-bit factor.",
         "",
         "```powershell",

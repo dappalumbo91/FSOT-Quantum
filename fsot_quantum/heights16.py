@@ -3,8 +3,8 @@ Classical-record direction: RSA-shaped 64-bit × 64-bit (~127-bit N).
 
 heights15 was 56-bit × 56-bit (111-bit). Same job cryptographers mean:
 two similar-bit primes, not twins, p±1 unsmooth at our B. ECM misses
-at the locked B. CFRAC (same B, large-prime pairs at B2) is the
-end-job. ρ on 64-bit p is ~2^32 — not run. Not RSA-100 / RSA-2048.
+at the locked B. End-job is CFRAC (same B, B2 large-prime pairs) or
+Brent ρ with batched GCD (same three seeds). Not RSA-100 / RSA-2048.
 
 python -m fsot_quantum.heights16
 """
@@ -30,6 +30,7 @@ from fsot_quantum.fold_jobs import (
     fold_fermat_multipliers,
     fold_logN,
     fold_pminus1,
+    fold_pollard_rho,
     fold_pplus1,
 )
 from fsot_quantum.heights import G17_PUB
@@ -57,8 +58,11 @@ def _row(p: int, q: int) -> dict[str, Any]:
     d = fold_logN(N)
     if not d.get("ok"):
         # B-locked CFRAC: same B as ECM, Q ~ √N, large-prime pairs at B2.
-        # Not a raised smoothness bound. Not √p rho. Not RSA-2048.
         d = fold_cfrac(N)
+    if not d.get("ok"):
+        # Brent rho, same three seeds. 64-bit p is ~2^32 steps; batched
+        # GCD is why this is a laptop job now, not a 35-min hang.
+        d = fold_pollard_rho(N)
     return {
         "p": p,
         "q": q,
@@ -111,8 +115,8 @@ def main() -> int:
         f"**{n_ok}/{n}** · classical-record direction on a consumer PC",
         "",
         "Two similar-bit primes, not twins. p±1, Fermat, and ECM miss at "
-        "the **locked** B. CFRAC with the same B and B2 large-prime pairing "
-        "is the end-job (Q ~ √N, not √p rho). Not RSA-100 / RSA-2048.",
+        "the **locked** B. End-job is CFRAC (same B, B2 large-prime pairing) "
+        "or Brent ρ with batched GCD (same three seeds). Not RSA-100 / RSA-2048.",
         "",
         "See `docs/CLASSICAL_RECORDS.md`.",
         "",
