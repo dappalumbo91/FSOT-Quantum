@@ -19,9 +19,9 @@ Lean `dark_energy_dual_readout_lib.py`: CMB lane and BAO lane, Catalan/π bleed.
 
 Inclusive: QM `0.042201` vs 0.0422. Exclusive B→Dℓν (Belle II 2025): HEP `0.039143` vs **0.0392** (**0.146%**). Combined exclusive 0.0398 still blends D and D* — that was the 1.1σ leftover. See `docs/V_CB_PUZZLE.md`.
 
-## 4. Gset G17 — champion matched
+## 4. Gset planar G14–G17 — champions matched
 
-Cut **3047 vs 3047**. Same lane matched G14 **3064** and G15 **3050**. G16 is 2 short (3050 vs 3052). φ-start BLS panel (paper-scale n²⌊eπ⌋⌊π³⌋, no strong T-jump) then default BLS with strong T-jump n/⌊eπ⌋. Family **11/11 under 1%**. G22 is 89 edges / 0.666% unmatched.
+Planar G14–G17 champions matched (3064 / 3050 / 3052 / 3047). φ-start + BFS BLS panel at paper-scale n²⌊eπ⌋⌊π³⌋. Family **11/11 under 1%**. G22 is 89 edges / 0.666% unmatched.
 
 ## Lean anomalies (same pin, already solved there)
 

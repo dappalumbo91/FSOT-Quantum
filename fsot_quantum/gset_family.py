@@ -102,9 +102,9 @@ def main() -> int:
         "",
         "Same object as G1 (unweighted MaxCut). Signed Gset (G6–G13, G18–G21) "
         "is a different object. Aspiration <1% of published champion. "
-        "No new coefficients. Family is **11/11 under 1%**. G17 champion "
-        "3047. G22 still unmatched (89 edges). φ-start BLS panel + strong "
-        "T-jump closed G17.",
+        "No new coefficients. Family is **11/11 under 1%**. G14–G17 "
+        "champions matched. G22 still unmatched (89 edges). φ-start + BFS "
+        "BLS panel closed the planar four.",
         "",
         "| Graph | n | m | fold | published | rel% | <1% |",
         "|-------|--:|--:|-----:|----------:|-----:|:---:|",

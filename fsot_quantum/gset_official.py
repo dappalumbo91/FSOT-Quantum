@@ -179,6 +179,7 @@ def _fast_maxcut(n: int, edges: list[tuple[int, int, int]]) -> tuple[int, list[i
     # are that scale's lane, not a coefficient.
     modes: list[list[float]] = []
     deg_spec: list[int] = []
+    bfs_rows: list[list[int]] = []
     if n <= 2000:
         n_iter = max(
             n,
@@ -240,6 +241,7 @@ def _fast_maxcut(n: int, edges: list[tuple[int, int, int]]) -> tuple[int, list[i
             int(math.isqrt(n)),
             int(math.floor(float(SEEDS.e) * float(SEEDS.pi))) * int(math.floor(float(SEEDS.pi))),
         )
+        bfs_rows: list[list[int]] = []
         for src in phi_walk_indices(n, n_src, seed_k=n + 17):
             dist = [-1] * n
             dist[src] = 0
@@ -250,7 +252,9 @@ def _fast_maxcut(n: int, edges: list[tuple[int, int, int]]) -> tuple[int, list[i
                     if dist[v2] < 0:
                         dist[v2] = dist[u] + 1
                         dq.append(v2)
-            starts.append([1 if (d if d >= 0 else 0) % 2 == 0 else -1 for d in dist])
+            brow = [1 if (d if d >= 0 else 0) % 2 == 0 else -1 for d in dist]
+            bfs_rows.append(brow)
+            starts.append(brow)
 
     def cut_of(s: list[int]) -> int:
         return cut_value(s, edges)
@@ -770,8 +774,11 @@ def _fast_maxcut(n: int, edges: list[tuple[int, int, int]]) -> tuple[int, list[i
         if bc > best_c:
             best, best_c = bs, bc
         budget = paper_budget(n)
+        panel_rows = list(phi_rows)
+        if n <= 2000:
+            panel_rows.extend(bfs_rows)
         payloads = [
-            (n, adj, row, cut_of(row), budget) for row in phi_rows
+            (n, adj, row, cut_of(row), budget) for row in panel_rows
         ]
         n_workers = min(16, os.cpu_count() or 1, len(payloads))
         if n_workers <= 1:
@@ -785,6 +792,22 @@ def _fast_maxcut(n: int, edges: list[tuple[int, int, int]]) -> tuple[int, list[i
         bc, bs = fold_bls(n, adj, best, best_c)
         if bc > best_c:
             best, best_c = bs, bc
+        # BLS is 1-opt. 2-opt+KL after the panel (keep-if-better).
+        s2 = refine(best)
+        c2 = cut_of(s2)
+        if c2 > best_c:
+            best, best_c = s2, c2
+        # L0 seed offsets from the winner, default budget + strong jump.
+        from fsot_quantum.gset_bls import _l0 as _bls_l0
+
+        for k in range(_bls_l0()):
+            bc, bs = fold_bls(n, adj, best, best_c, seed_k=k)
+            if bc > best_c:
+                best, best_c = bs, bc
+        s2 = refine(best)
+        c2 = cut_of(s2)
+        if c2 > best_c:
+            best, best_c = s2, c2
 
     return best_c, best
 

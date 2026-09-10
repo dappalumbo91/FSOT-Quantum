@@ -99,7 +99,7 @@ We do **not** simulate their architecture. That would be agreeing their geometry
 | SAT / QUBO / color / TSP | assignment / tour | energy folds | SAT-32 · partition \{1..23\} · Petersen · TSP n=11 exact |
 | HHL | solve \(Ax=b\) | integer Cramer fold | hire 3/3 · hire2 **4×4** · hire7 **8×8** |
 | Grover | marked search | oracle-field collapse | through **1e7** exact |
-| QAOA / annealer | MaxCut / Ising | fold + KL + 2-opt + BFS-layer / spectral + BLS | **11/11 under 1%**; G14/G15/G17 champions; G16 2 short; G22 **0.666%** (89) |
+| QAOA / annealer | MaxCut / Ising | fold + KL + 2-opt + BFS-layer / spectral + BLS | **11/11 under 1%**; G14–G17 champions; G22 **0.666%** (89) |
 | FCI / quantum chemistry | chemistry observables | pin formulas | **68/68 @ 0.5%** |
 | Surface-code “threshold” | reliable logical work | fold residual vs published object | their \(d\)-threshold is a fridge metric; ours is residual on the question |
 | Chatbot “AI” | mind | [fsot-neuron-zig](https://github.com/dappalumbo91/fsot-neuron-zig) | this repo is the law organ, not the body |
@@ -129,7 +129,7 @@ Written as open. Not dressed up. Not a reason to edit the pin.
 | Object | Status | Why it stays |
 |--------|--------|--------------|
 | Gset G17 | **3047** (champion) | φ-start BLS panel + strong T-jump. |
-| Gset champions | G14/G15/G17 matched; G16 2; G22 89 | Aspiration <1% landed **11/11**. Extra n=2000 modes + BFS moved G22 98→89 and G23 73→50. Do not advertise family-wide champion-matching. |
+| Gset champions | G14–G17 matched; G22 89 | Aspiration <1% landed **11/11**. Extra n=2000 modes + BFS moved G22 98→89 and G23 73→50. G22 unmatched. |
 | Vendor `BR_H_gg` field | still **0.0785** | Fold \(\varphi^{-4}-\gamma^5=0.081823\) already matches YR4 0.08187 (0.058%). Stale stored field. |
 | Catalog 9 stored-gate rows | living **9/9** | Stale stored / wrong object / in-band / inventory rounding. [`ACCURACY_REFINE.md`](ACCURACY_REFINE.md). |
 | Combined exclusive \(\lvert V_{cb}\rvert=0.0398\) | not scored | D+D* blend. The HEP object is Belle II \(B\to D\ell\nu\) 0.0392. |
