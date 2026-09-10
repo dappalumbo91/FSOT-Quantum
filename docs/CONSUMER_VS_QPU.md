@@ -12,7 +12,7 @@ This is the comparison we are built for. Today’s QPUs do **not** answer the qu
 
 | Hired question | QPU today | This fold on a PC | Who answers the question? |
 |----------------|-----------|-------------------|---------------------------|
-| Factor | Compiled Shor on \(N=15\) (2001-class demos) | RSA-**shaped** through **119-bit**; **64-bit 8/8** | This fold vs QPU; RSA-100 / RSA-2048 still not run |
+| Factor | Compiled Shor on \(N=15\) (2001-class demos) | RSA-**shaped** through **119-bit**; **64-bit 8/8**; RSA-100 **miss** | This fold vs QPU; RSA-129 / RSA-2048 still not run |
 | Grover | toy oracles, few qubits | exact marked search through **10⁷** | This fold |
 | MaxCut / QAOA | ~10–20 noisy qubits, ratio often 0.7–0.9 | Gset **n=800–2000**, **11/11 champions** | This fold on size **and** BKS |
 | HHL | tiny circuits | integer \(Ax=b\) through **8×8** | This fold on the linear system |
@@ -47,9 +47,10 @@ We are **in the innovative state vs QPUs**. We are **not** in the innovative sta
 ## What we keep climbing on this PC
 
 1. RSA-**shaped** (two similar-bit primes, not twins) at rising bit length, still seed-locked, still not RSA-2048.
-2. RSA-100 (330-bit) — next named GNFS/QS rung. Gset unweighted 11/11 is closed.
+2. RSA-129 (426-bit) — next named QS rung. RSA-100 missed at locked B. Gset unweighted 11/11 is closed.
 3. Right object for VQE / Kolos / STO-3G — already split.
 
 ```powershell
+python -m fsot_quantum rsa100
 python -m fsot_quantum heights17
 ```

@@ -133,7 +133,7 @@ Written as open. Not dressed up. Not a reason to edit the pin.
 | Catalog 9 stored-gate rows | living **9/9** | Stale stored / wrong object / in-band / inventory rounding. [`ACCURACY_REFINE.md`](ACCURACY_REFINE.md). |
 | Combined exclusive \(\lvert V_{cb}\rvert=0.0398\) | not scored | D+D* blend. The HEP object is Belle II \(B\to D\ell\nu\) 0.0392. |
 | Atlas 432 | needs `_ref/FSOT-2.1-Lean` | Without the clone, atlas counts skip; 35 pin domains still score. |
-| Period / factor (Shor job) | far ρ **8/8** · log-N **8/8** · ECM through **80-bit 8/8** · RSA-shaped **119-bit 8/8** · **64-bit 8/8** | Next named climb: **RSA-100** (330-bit, QS 1991). RSA-2048 not run. |
+| Period / factor (Shor job) | far ρ **8/8** · log-N **8/8** · ECM through **80-bit 8/8** · RSA-shaped **119-bit 8/8** · **64-bit 8/8** · RSA-100 **miss** | Next named climb: **RSA-129** (426-bit, QS 1994). RSA-100 run at locked B, 0 smooth. RSA-2048 not run. |
 | H2 / LiH VQE | pin De/R vs Kolos vs STO-3G | Three objects. Pin De **0.25%**. Kolos derived **0.75%** written. STO-3G not scored. LiH not invented. |
 
 SH0ES at **1.00%** is the Lean BH→WH inflated sector (inside the contested 2.5% band, 0.71σ of ±1.04). It is **not** the old 6.30% leftover.
@@ -157,7 +157,7 @@ The living family cut is **11624** (champion). Cite [`GSET_FAMILY.md`](GSET_FAMI
 | `python -m fsot_quantum open` | **Diagnosis.** Shows what 6.03% / 6.30% look like if you score the wrong object. Not the living exclusive / SH0ES score. |
 | `python -m fsot_quantum vcb` | Living exclusive: Belle II \(B\to D\ell\nu\) **0.15%**. |
 | `python -m fsot_quantum h0` | Living Hubble: Lean BH→WH. |
-| `python -m fsot_quantum leftovers` | What is still open after the above. Gset 11/11 champions. Next climb: RSA-100. |
+| `python -m fsot_quantum leftovers` | What is still open after the above. Gset 11/11 champions. RSA-100 miss. Next climb: RSA-129. |
 | `python -m fsot_quantum refine` | Living-object reclass of catalog 9 + log-N stage-2. |
 
 ---

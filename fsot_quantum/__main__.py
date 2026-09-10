@@ -48,6 +48,7 @@ Field entry: python -m fsot_quantum [cmd]
   heights15  RSA-shaped 56-bit × 56-bit (~111-bit N)
   heights16  RSA-shaped 64-bit × 64-bit (~127-bit N)
   heights17  RSA-shaped 60-bit × 60-bit (~119-bit N)
+  rsa100     RSA-100 (330-bit public challenge, SIQS at locked B)
   known      known-answer QC jobs vs published objects
   vqe        H2/LiH objects + amplitude estimation (not blended)
   refine     accuracy: classify residuals, living catalog, log-N stage-2
@@ -226,6 +227,9 @@ def main() -> int:
         return m()
     if c in ("heights17", "height17"):
         from fsot_quantum.heights17 import main as m
+        return m()
+    if c in ("rsa100", "rsa-100"):
+        from fsot_quantum.rsa100 import main as m
         return m()
     if c in ("refine", "accuracy_refine"):
         from fsot_quantum.accuracy_refine import main as m

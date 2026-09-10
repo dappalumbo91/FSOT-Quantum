@@ -1,6 +1,6 @@
 # The leftovers — what is still open, and what was a wrong object
 
-**overall_ok:** `True` · pin D1D38A **not edited** · Gset unweighted **11/11 champions** · next climb RSA-100
+**overall_ok:** `True` · pin D1D38A **not edited** · Gset unweighted **11/11 champions** · RSA-100 **miss** · next climb RSA-129
 
 ## 1. Dark energy — CMB vs BAO (this was the hidden split)
 
@@ -21,7 +21,7 @@ Inclusive: QM `0.042201` vs 0.0422. Exclusive B→Dℓν (Belle II 2025): HEP `0
 
 ## 4. Gset unweighted family — 11/11 champions
 
-G1–G5, G14–G17, G22–G23 all match published BKS. Signed Gset (G6–G13, G18–G21) is a different object. Next climb is not MaxCut — it is the GNFS ladder, starting at RSA-100 (330-bit).
+G1–G5, G14–G17, G22–G23 all match published BKS. Signed Gset (G6–G13, G18–G21) is a different object. Next climb is not MaxCut — it is the GNFS ladder. RSA-100 (330-bit) **miss** at locked B (SIQS 205992 poly, 0 smooth). Next named rung: RSA-129 (426-bit).
 
 ## Lean anomalies (same pin, already solved there)
 

@@ -8,7 +8,7 @@ A cryogenic QPU is sold as a machine that answers a list of questions. This fold
 
 | They hire a QPU for | The question | This fold | Living score | Vs them, today |
 |---------------------|--------------|-----------|--------------|----------------|
-| Shor | Factor \(N = pq\) | modular + p−1/p+1/kN + ECM + ρ + CFRAC | RSA-shaped **81 / 95 / 103 / 111 / 119-bit**; **64-bit 8/8** | Vs QPU: ahead. Vs GNFS: RSA-100 is next. [`CLASSICAL_RECORDS.md`](CLASSICAL_RECORDS.md). |
+| Shor | Factor \(N = pq\) | modular + p−1/p+1/kN + ECM + ρ + CFRAC + SIQS | RSA-shaped **81 / 95 / 103 / 111 / 119-bit**; **64-bit 8/8**; RSA-100 **miss** | Vs QPU: ahead. Vs GNFS: RSA-100 run, smoothness wall. Next RSA-129. [`CLASSICAL_RECORDS.md`](CLASSICAL_RECORDS.md). |
 | Knapsack / counting / hidden period | 0/1 knapsack, how-many-marked, period of \(x \bmod r\) | energy fold / field count / collision gcd | in `known` **44/44** | Same QUBO / counting / HSP questions, published objects. |
 | Period finding | order of \(a \bmod N\) | modular fold + CF | hire climbs; period skip above ~24 bits, then log-N/ECM | Their QFT is \(2^n\) amps. Ours is modular algebra. |
 | Discrete log | \(g^x \equiv h \pmod p\) | successive modular fold | hire **10/10**; hire2 **6/6** through \(p=40009\); hire3 through \(p=100003\) | Same question, not a QFT. |
@@ -27,12 +27,12 @@ A cryogenic QPU is sold as a machine that answers a list of questions. This fold
 
 - **Physics and chemistry jobs:** closed on this pin at the 0.5% gate (right object, own band). That is the QC-for-science pitch, already answered without a QPU.
 - **Algorithm jobs they demo in press releases:** we hit the same *questions* at growing size (factor, dlog, Grover, Simon, SAT, HHL, MaxCut). Unweighted Gset **11/11 champions**. We are **not** at RSA-2048.
-- **What “ahead / behind” means here:** ahead on “usable number without a fridge” for the physics/chemistry list and for algorithm instances we actually run. Behind on the GNFS ladder (RSA-100 is next; RSA-2048 is the shared poster). Those are the rungs we keep climbing on **this** path.
+- **What “ahead / behind” means here:** ahead on “usable number without a fridge” for the physics/chemistry list and for algorithm instances we actually run. Behind on the GNFS ladder (RSA-100 missed at locked B; RSA-129 is next; RSA-2048 is the shared poster). Those are the rungs we keep climbing on **this** path.
 
 ## What we are climbing right now
 
-1. **Shor’s end-job** — RSA-shaped similar-bit primes through **119-bit** (60-bit ρ **8/8**) and **64-bit 8/8** (CFRAC + Brent ρ). Next named challenge: RSA-100 (330-bit). RSA-2048 still not run.
-2. **QAOA’s end-job** — Gset MaxCut vs published champions. Unweighted family **11/11 champions**. Signed Gset is a different object. Next climb is Shor’s end-job: RSA-100.
+1. **Shor’s end-job** — RSA-shaped similar-bit primes through **119-bit** (60-bit ρ **8/8**) and **64-bit 8/8** (CFRAC + Brent ρ + SIQS). RSA-100 (330-bit) **miss** at locked B. Next named challenge: RSA-129 (426-bit). RSA-2048 still not run.
+2. **QAOA’s end-job** — Gset MaxCut vs published champions. Unweighted family **11/11 champions**. Signed Gset is a different object. Next climb is Shor’s end-job: RSA-129.
 3. **Known-answer bank** — textbook / demo objects they already know: `python -m fsot_quantum known` (**44/44**).
 
 ```powershell
@@ -40,5 +40,6 @@ python -m fsot_quantum known
 python -m fsot_quantum hire7
 python -m fsot_quantum family
 python -m fsot_quantum heights17
+python -m fsot_quantum rsa100
 python -m fsot_quantum vqe
 ```

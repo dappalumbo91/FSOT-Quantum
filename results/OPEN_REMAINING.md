@@ -1,6 +1,6 @@
 # The leftovers — what is still open, and what was a wrong object
 
-**overall_ok:** `True` · pin D1D38A **not edited** · G17 10 edges · G22 89 edges (champions unmatched)
+**overall_ok:** `True` · pin D1D38A **not edited** · Gset unweighted **11/11 champions** · RSA-100 **miss** · next climb RSA-129
 
 ## 1. Dark energy — CMB vs BAO (this was the hidden split)
 
@@ -19,9 +19,9 @@ Lean `dark_energy_dual_readout_lib.py`: CMB lane and BAO lane, Catalan/π bleed.
 
 Inclusive: QM `0.042201` vs 0.0422. Exclusive B→Dℓν (Belle II 2025): HEP `0.039143` vs **0.0392** (**0.146%**). Combined exclusive 0.0398 still blends D and D* — that was the 1.1σ leftover. See `docs/V_CB_PUZZLE.md`.
 
-## 4. Gset G17 — aspiration met, champion unmatched
+## 4. Gset unweighted family — 11/11 champions
 
-Cut 3037 vs champion 3047 (**0.328%**, 10 edges). Family **11/11 under 1%**. Planar G14 is 6 edges / 0.196%. G15 is 13 edges / 0.426%. G16 is 6 edges / 0.197%. G22 is 89 edges / 0.666%. G23 is 50 edges / 0.375%. Seed-locked BLS moved the planar four. Champions still unmatched — written, not hidden.
+G1–G5, G14–G17, G22–G23 all match published BKS. Signed Gset (G6–G13, G18–G21) is a different object. Next climb is not MaxCut — it is the GNFS ladder. RSA-100 (330-bit) **miss** at locked B (SIQS 205992 poly, 0 smooth). Next named rung: RSA-129 (426-bit).
 
 ## Lean anomalies (same pin, already solved there)
 

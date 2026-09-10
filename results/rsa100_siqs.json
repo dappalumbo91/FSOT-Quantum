@@ -1,0 +1,17 @@
+{
+  "job": "factor_Shor_end",
+  "ok": false,
+  "factors": null,
+  "method": "siqs_exhausted",
+  "B": 7920,
+  "B2": 190080,
+  "n_fb": 8580,
+  "n_rels": 0,
+  "need": 8583,
+  "n_poly": 205992,
+  "n_scan": 32771,
+  "n_a": 9,
+  "target_a": 290316824123854981061150720602642795329702003,
+  "n_odd_full": 0,
+  "wall": 1596.7168145000032
+}

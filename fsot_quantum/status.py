@@ -59,7 +59,7 @@ def main() -> int:
             "H0": "Planck 0.024%; SH0ES 1.00% Lean BH→WH",
             "alpha_s": "0.68% inside vendor 0.9% band",
             "open": [
-                "Gset unweighted 11/11 champions. Next climb RSA-100.",
+                "Gset unweighted 11/11 champions. RSA-100 miss. Next climb RSA-129.",
                 "vendor BR_H_gg field still stale; fold matches YR4",
                 "catalog 9 stored-gate rows are stale/wrong-object/in-band — ACCURACY_REFINE.md",
                 "RSA-2048 not run (smoothness / sqrt(p) wall)",
@@ -71,7 +71,7 @@ def main() -> int:
             "cryogenic QPU / Hilbert 2^n / QAOA box / FCI sales pitch",
         ],
         "jobs_current": {
-            "factor_Shor": "RSA-shaped 81/95/103/111/119-bit. 64-bit 8/8. RSA-2048 not run",
+            "factor_Shor": "RSA-shaped 81/95/103/111/119-bit. 64-bit 8/8. RSA-100 miss. RSA-2048 not run",
             "MaxCut": "11/11 champions (G1–G5, G14–G17, G22–G23)",
             "chemistry": "68/68 @0.5% (pin formulas, not Hilbert FCI)",
         },

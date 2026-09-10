@@ -1,0 +1,85 @@
+{
+  "timestamp": "2026-09-10T02:16:20+00:00",
+  "suite": "rsa100",
+  "pin": "D1D38A",
+  "pin_file_edited": false,
+  "B_raised": false,
+  "factors_looked_up": false,
+  "overall_ok": false,
+  "N": "1522605027922533360535618378132637429718068114961380688657908494580122963258952897654000350692006139",
+  "bitlen": 330,
+  "B": 7920,
+  "B2": 190080,
+  "cfrac_cap": 4561920,
+  "rho_skipped": "cap is floor(pi)*isqrt(N) ~ 2^165; not the RSA-100 lane",
+  "g17": {
+    "cut": 3047,
+    "published": 3047,
+    "short": 0
+  },
+  "S_QM": 0.9555063001027194,
+  "S_QC": -0.14767310363368633,
+  "wall_seconds": 2170.56,
+  "hit": null,
+  "siqs_lane_ok_on": "60-bit smoke and 64-bit RSA-shaped pair split; RSA-100 smoothness wall",
+  "lanes": [
+    {
+      "lane": "pminus1",
+      "ok": false,
+      "method": "pminus1_exhausted",
+      "wall": 0.13895059999777004,
+      "B": 7920,
+      "B2": 190080,
+      "steps": 17222
+    },
+    {
+      "lane": "pplus1",
+      "ok": false,
+      "method": "pplus1_exhausted",
+      "wall": 0.2173190000030445,
+      "B": 7920,
+      "B2": 190080,
+      "steps": 17174
+    },
+    {
+      "lane": "fermat",
+      "ok": false,
+      "method": "fermat_multiplier_exhausted",
+      "wall": 5.462934900002438
+    },
+    {
+      "lane": "ecm",
+      "ok": false,
+      "method": "ecm_exhausted",
+      "wall": 81.89611060000607,
+      "B": 7920,
+      "B2": 190080,
+      "steps": 188914
+    },
+    {
+      "lane": "cfrac",
+      "ok": false,
+      "method": "cfrac_exhausted",
+      "wall": 486.1332797000068,
+      "B": 7920,
+      "B2": 190080,
+      "n_rels": 0,
+      "n_fb": 496,
+      "steps": 4561920
+    },
+    {
+      "lane": "siqs",
+      "ok": false,
+      "method": "siqs_exhausted",
+      "wall": 1596.7168145000032,
+      "B": 7920,
+      "B2": 190080,
+      "n_rels": 0,
+      "need": 8583,
+      "n_fb": 8580,
+      "n_poly": 205992,
+      "n_scan": 32771,
+      "n_odd_full": 0
+    }
+  ]
+}
