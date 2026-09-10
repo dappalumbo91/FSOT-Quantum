@@ -89,10 +89,10 @@ let b_lock_2048 () = ()
 val g17_under_one_pct: unit -> Lemma (100 * (3047 - 3047) < 3047)
 let g17_under_one_pct () = ()
 
-val g22_under_one_pct: unit -> Lemma (100 * (13359 - 13270) < 13359)
+val g22_under_one_pct: unit -> Lemma (100 * (13359 - 13359) < 13359)
 let g22_under_one_pct () = ()
 
-val g23_under_one_pct: unit -> Lemma (100 * (13344 - 13294) < 13344)
+val g23_under_one_pct: unit -> Lemma (100 * (13344 - 13344) < 13344)
 let g23_under_one_pct () = ()
 
 val b_lock_119: unit -> Lemma (119 * 24 == 2856)
@@ -105,8 +105,8 @@ val living_jobs_surface: unit -> Lemma (
   2048 * 24 == 49152 /\
   119 * 24 == 2856 /\
   100 * (3047 - 3047) < 3047 /\
-  100 * (13359 - 13270) < 13359 /\
-  100 * (13344 - 13294) < 13344
+  100 * (13359 - 13359) < 13359 /\
+  100 * (13344 - 13344) < 13344
 )
 let living_jobs_surface () = ()
 

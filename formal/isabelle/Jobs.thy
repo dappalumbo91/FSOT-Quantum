@@ -78,10 +78,10 @@ lemma b_lock_2048: "(2048::nat) * 24 = 49152"
 lemma g17_under_one_pct: "100 * ((3047::nat) - 3047) < 3047"
   by simp
 
-lemma g22_under_one_pct: "100 * ((13359::nat) - 13270) < 13359"
+lemma g22_under_one_pct: "100 * ((13359::nat) - 13359) < 13359"
   by simp
 
-lemma g23_under_one_pct: "100 * ((13344::nat) - 13294) < 13344"
+lemma g23_under_one_pct: "100 * ((13344::nat) - 13344) < 13344"
   by simp
 
 lemma b_lock_119: "(119::nat) * 24 = 2856"
@@ -93,9 +93,9 @@ lemma living_jobs_surface:
    \<and> (8::nat) * 3 = 24
    \<and> (2048::nat) * 24 = 49152
    \<and> (119::nat) * 24 = 2856
-   \<and> 100 * ((3047::nat) - 3037) < 3047
-   \<and> 100 * ((13359::nat) - 13270) < 13359
-   \<and> 100 * ((13344::nat) - 13294) < 13344"
+   \<and> 100 * ((3047::nat) - 3047) < 3047
+   \<and> 100 * ((13359::nat) - 13359) < 13359
+   \<and> 100 * ((13344::nat) - 13344) < 13344"
   by simp
 
 end

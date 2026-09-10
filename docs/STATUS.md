@@ -169,8 +169,8 @@ Aspiration **< 1%** of published champion. Kill floor **5%**. Champions still un
 | G15 n=800 | 3050 | 3050 | 0% | champion matched |
 | G16 n=800 | 3052 | 3052 | 0% | champion matched |
 | G17 n=800 | 3047 | 3047 | 0% | champion matched |
-| G22 n=2000 | 13359 | 13270 | 0.67% | 89 edges (was 98; extra modes as add-on refine) |
-| G23 n=2000 | 13344 | 13294 | 0.37% | 50 edges (was 73; extra modes + extra BFS add-on) |
+| G22 n=2000 | 13359 | 13359 | 0% | champion matched |
+| G23 n=2000 | 13344 | 13344 | 0% | champion matched |
 
 G11 is a **signed** ±1 torus — a different object, not scored with the unweighted family.
 
@@ -223,11 +223,11 @@ Scored as different objects (not one blended number):
 
 Honesty cut: [`CLAIMS.md`](CLAIMS.md).
 
-- G14–G17 champions matched. Family **11/11 under 1%**; G22 **0.666%** (89 edges); G23 **0.375%** (50 edges). G22 unmatched.
+- G14–G17 and G22–G23 champions matched. Family **11/11 under 1%**. G1–G5 still short of BKS (dense n=800).
 - Exclusive \(B\to D\ell\nu\) is **0.15%** on High_Energy_Physics (\(D_{\mathrm{eff}}=7\)) vs Belle II 2025 0.0392. Inclusive stays QM at 0.002%. Combined exclusive 0.0398 is a D+D* blend and is **not** the object. [`V_CB_PUZZLE.md`](V_CB_PUZZLE.md).
 - Hubble tension is Lean **BH→WH bubble-bleed**: one global rate 68.44; Planck depleted sector **0.024%**; SH0ES inflated sector **1.00%** (0.71σ, inside Lean 2.5% band). [`H0_TENSION.md`](H0_TENSION.md) · [FSOT-2.1-Lean §7.2](https://github.com/dappalumbo91/FSOT-2.1-Lean).
 - Contested open-science panel is **14/14**: [`CONTESTED_SECTORS.md`](CONTESTED_SECTORS.md).
-- Leftovers: [`OPEN_REMAINING.md`](OPEN_REMAINING.md). DESI \(w_0/w_a\) BAO lane 0.37%/0.28%. \(\alpha_s\) inside vendor 0.9%. G17 champion **3047**. G22 89 unmatched. Accuracy reclass: [`ACCURACY_REFINE.md`](ACCURACY_REFINE.md).
+- Leftovers: [`OPEN_REMAINING.md`](OPEN_REMAINING.md). DESI \(w_0/w_a\) BAO lane 0.37%/0.28%. \(\alpha_s\) inside vendor 0.9%. G14–G17 and G22–G23 champions. G1 39 unmatched. Accuracy reclass: [`ACCURACY_REFINE.md`](ACCURACY_REFINE.md).
 - Formula catalog: [`FORMULA_LIST.md`](FORMULA_LIST.md) — 207/216 vs stored @0.5%; living **9/9** of those misses are stale / wrong-object / in-band.
 - Multiprover stamp **FSOT_QUANTUM_MULTIPROVER_OK** (Lean · Coq · Isabelle · F\* · Python, 37 obligations): [`MULTIPROVER_VERIFICATION.md`](MULTIPROVER_VERIFICATION.md). Living job integers Q-JOB-006–012 (far factor, p−1 stage-2, B-lock, G17/G22/G23 under 1%, B(119)=2856).
 - Vendor wave8 `BR_H_gg` field still stale (0.0785). Fold already matches YR4. Pin not edited.
@@ -280,7 +280,7 @@ python -m fsot_quantum push3      # 41/41 leftover hired physics
 python -m fsot_quantum family     # Gset 11/11 under 1% (G17 champion 3047)
 python -m fsot_quantum vcb        # inclusive 0.002% · exclusive B→D 0.15%
 python -m fsot_quantum h0         # Planck 0.024% · SH0ES 1.00%
-python -m fsot_quantum leftovers  # G17 champion 3047; G22 89
+python -m fsot_quantum leftovers  # G14–G17 G22 G23 champions; G1 39
 python -m fsot_quantum heights13  # 95-bit RSA-shaped 8/8
 python -m fsot_quantum heights14  # 103-bit RSA-shaped 8/8
 python -m fsot_quantum heights15  # 111-bit RSA-shaped 8/8

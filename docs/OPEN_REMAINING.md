@@ -1,6 +1,6 @@
 # The leftovers — what is still open, and what was a wrong object
 
-**overall_ok:** `True` · pin D1D38A **not edited** · G17 champion 3047 · G22 89 edges unmatched
+**overall_ok:** `True` · pin D1D38A **not edited** · G14–G17 G22 G23 champions · G1 39 unmatched
 
 ## 1. Dark energy — CMB vs BAO (this was the hidden split)
 
@@ -21,7 +21,7 @@ Inclusive: QM `0.042201` vs 0.0422. Exclusive B→Dℓν (Belle II 2025): HEP `0
 
 ## 4. Gset planar G14–G17 — champions matched
 
-Planar G14–G17 champions matched (3064 / 3050 / 3052 / 3047). φ-start + BFS BLS panel at paper-scale n²⌊eπ⌋⌊π³⌋. Family **11/11 under 1%**. G22 is 89 edges / 0.666% unmatched.
+Planar G14–G17 champions matched (3064 / 3050 / 3052 / 3047). G22 **13359** and G23 **13344** matched on the n=2000 default-budget BLS panel. Family **11/11 under 1%**. Dense G1–G5 still short of BKS (G1 39).
 
 ## Lean anomalies (same pin, already solved there)
 

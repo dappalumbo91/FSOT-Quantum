@@ -809,6 +809,33 @@ def _fast_maxcut(n: int, edges: list[tuple[int, int, int]]) -> tuple[int, list[i
         if c2 > best_c:
             best, best_c = s2, c2
 
+    # n=2000: default budget n²⌊eπ⌋ BLS on the same φ/BFS panel.
+    # Paper-scale is a different wall-time. Keep-if-better.
+    if n > 800 and n <= 2000 and bfs_rows:
+        from fsot_quantum.gset_bls import fold_bls
+        import os
+        from concurrent.futures import ProcessPoolExecutor
+
+        panel_rows = list(phi_rows) + list(bfs_rows)
+        payloads = [
+            (n, adj, row, cut_of(row), n * n * max(
+                2, int(math.floor(float(SEEDS.e) * float(SEEDS.pi)))
+            ))
+            for row in panel_rows
+        ]
+        n_workers = min(16, os.cpu_count() or 1, len(payloads))
+        if n_workers <= 1:
+            panel = [_phi_bls_worker(p) for p in payloads]
+        else:
+            with ProcessPoolExecutor(max_workers=n_workers) as pool:
+                panel = list(pool.map(_phi_bls_worker, payloads, chunksize=1))
+        for bc, bs in panel:
+            if bc > best_c:
+                best, best_c = bs, bc
+        bc, bs = fold_bls(n, adj, best, best_c)
+        if bc > best_c:
+            best, best_c = bs, bc
+
     return best_c, best
 
 

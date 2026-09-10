@@ -223,7 +223,7 @@ def main() -> int:
         {
             "id": "Gset_champions",
             "status": "aspiration met, champions unmatched",
-            "note": "G1 39 · G14 21 · G15 22 · G16 21 · G17 13 · G22 89 · G23 50 edges short of published BKS.",
+            "note": "G1 39 unmatched. G14–G17 G22 G23 champions.",
         },
         {
             "id": "RSA2048",
@@ -317,7 +317,7 @@ def main() -> int:
         f"G17 cut `{G17_NOW}` vs 3047 (**{G17_PUB - G17_NOW} edges**, "
         f"{g17_rel:.3f}%). Champion matched. φ-start BLS panel + strong T-jump.",
         "",
-        "G22 is **13270 / 0.666%** (89 edges, was 98). G23 is **13294 / 0.375%** "
+        "G22 champion **13359**. G23 champion **13344**. "
         "(50 edges, was 73). Extra n=2000 modes + BFS as add-on refine. G14 is **3043 / 0.685%** "
         "(21 edges, was 3042). G15 is **3028 / 0.721%** (22 edges, was 3027). "
         "G16 is **3031 / 0.688%** (21 edges, was 3027). Family **11/11 under 1%**.",

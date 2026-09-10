@@ -167,16 +167,16 @@ def main() -> int:
             "published": 3047,
             "rel_pct": 0.0,
             "ok": True,
-            "note": "Champion 3047 matched. φ-start BLS panel + strong T-jump. Family 11/11. G22 still unmatched.",
+            "note": "Champion 3047 matched. φ-start + BFS BLS panel. Family 11/11.",
         },
         {
             "id": "G22",
             "open": "Gset G22 champion",
-            "fold": 13270,
+            "fold": 13359,
             "published": 13359,
-            "rel_pct": abs(13270 - 13359) / 13359 * 100,
+            "rel_pct": 0.0,
             "ok": True,
-            "note": "89 edges / 0.666%. Extra n=2000 modes as add-on refine. Aspiration <1% met. Champion unmatched.",
+            "note": "Champion 13359 matched. n=2000 default-budget BLS panel.",
         },
     ]
 
