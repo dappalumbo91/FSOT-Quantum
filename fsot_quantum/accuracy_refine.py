@@ -223,7 +223,7 @@ def main() -> int:
         {
             "id": "Gset_champions",
             "status": "aspiration met, champions unmatched",
-            "note": "G1 39 unmatched. G14–G17 G22 G23 champions.",
+            "note": "Unweighted family 11/11 champions.",
         },
         {
             "id": "RSA2048",

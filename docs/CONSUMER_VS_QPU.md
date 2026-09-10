@@ -14,7 +14,7 @@ This is the comparison we are built for. Today’s QPUs do **not** answer the qu
 |----------------|-----------|-------------------|---------------------------|
 | Factor | Compiled Shor on \(N=15\) (2001-class demos) | RSA-**shaped** through **119-bit**; **64-bit 8/8** | This fold vs QPU; RSA-100 / RSA-2048 still not run |
 | Grover | toy oracles, few qubits | exact marked search through **10⁷** | This fold |
-| MaxCut / QAOA | ~10–20 noisy qubits, ratio often 0.7–0.9 | Gset **n=800–2000**, **11/11 under 1%** of published champion | This fold on size; champions still unmatched |
+| MaxCut / QAOA | ~10–20 noisy qubits, ratio often 0.7–0.9 | Gset **n=800–2000**, **11/11 champions** | This fold on size **and** BKS |
 | HHL | tiny circuits | integer \(Ax=b\) through **8×8** | This fold on the linear system |
 | VQE chemistry | H2/LiH STO-3G Hamiltonian, often misses 1.6 mHa | pin chemistry **68/68 @ 0.5%**; H2 De **0.25%**; Kolos derived 0.75% written | Different objects — see [`VQE_OBJECT.md`](VQE_OBJECT.md) |
 | CKM / \(H_0\) / \(V_{cb}\) | not a QPU output | inclusive \(V_{cb}\) **0.002%**; Planck \(H_0\) **0.024%** | This fold; QPUs are not in that business |
@@ -30,7 +30,7 @@ This is the comparison a cryptographer or SAT solver would make. Honesty:
 | 80-bit factor | seed-locked ECM, seconds | Pollard ρ / ECM / QS in milliseconds | **No.** 80-bit is easy on a laptop either way. |
 | 90-bit ECM miss | elliptic group not B-smooth at our B | ρ factors a 33-bit \(p\) in \(\sim\sqrt{p}\) steps — **0.1 s here** | The miss was **our B**, not the PC. |
 | SAT-32, TSP n=11, HHL 8×8 | exact folds | trivial | **No.** |
-| Gset n=800 under 1% of BKS | KL + spectral + BFS | published heuristics (BLS, Gurobi, …) often closer to champion | **Respectable heuristic, not a record.** QAOA still cannot run this size. |
+| Gset n=800–2000 BKS | seed-locked BLS on this pin | published BLS/CirCut/Gurobi champions | **Matched the published BKS** on the unweighted 11. Not a new MIP solver. QAOA still cannot run this size. |
 | RSA-2048 | not run (smoothness / \(\sqrt{p}\) wall) | GNFS, not a laptop afternoon | The real crypto object. Neither we nor a QPU have it. |
 
 The **innovation vs classical is the law, not the FLOPS**: zero free parameters, pin D1D38A, folds instead of \(2^n\), the same \(K\) on every job. We refuse to raise B when ECM misses. That is theory discipline, not a speed claim.
@@ -47,7 +47,7 @@ We are **in the innovative state vs QPUs**. We are **not** in the innovative sta
 ## What we keep climbing on this PC
 
 1. RSA-**shaped** (two similar-bit primes, not twins) at rising bit length, still seed-locked, still not RSA-2048.
-2. Gset champions (G17 13 edges, G22 89) — QAOA’s job, laptop-sized graphs.
+2. RSA-100 (330-bit) — next named GNFS/QS rung. Gset unweighted 11/11 is closed.
 3. Right object for VQE / Kolos / STO-3G — already split.
 
 ```powershell

@@ -17,7 +17,7 @@ The competitor climb on this pin is closed for hired physics and QI. After the w
 | Exclusive \(\lvert V_{cb}\rvert\) 6.03% / 1.1σ | Inclusive fold scored on the D+D* blend 0.0398 | Belle II \(B\to D\ell\nu\) **0.15%** |
 | \(H_0\) SH0ES 6.30% | Global rate 68.44 scored as a local tool | Lean BH→WH: Planck **0.024%**, SH0ES **1.00%** |
 | \(\alpha_s(M_Z)\) 0.68% | 0.5% gate tighter than vendor 0.9% / PDG 1σ | Inside vendor **0.9%** band |
-| Gset family 7/7 | Family grew to G14–G17 | **11/11 under 1%**; G17 champion **3047** |
+| Gset family 7/7 | Family grew to G14–G17 then G1–G5 G22 G23 | **11/11 champions** |
 
 Pin file not edited. No new coefficient.
 
@@ -43,7 +43,7 @@ Living ledgers. Re-run the command. Miss one and the pin is wrong — except whe
 | DESI \(w_0/w_a\) BAO | **0.37% / 0.28%** | `python -m fsot_quantum leftovers` | `OPEN_REMAINING.md` |
 | \(\alpha_s(M_Z)\) | **0.68%** vs vendor 0.1179 (band **0.9%**) | `python -m fsot_quantum leftovers` | `OPEN_REMAINING.md` |
 | Contested Lean panel | **14/14** | `python -m fsot_quantum contested` | `CONTESTED_SECTORS.md` |
-| Gset family | **11/11 under 1%** | `python -m fsot_quantum family` | `GSET_FAMILY.md` |
+| Gset family | **11/11 champions** | `python -m fsot_quantum family` | `GSET_FAMILY.md` |
 | Hired QC expand | **29/29** | `python -m fsot_quantum hire` | `HIRE_EXPAND.md` |
 | Hired QC climb | **32/32** | `python -m fsot_quantum hire2` | `HIRE_CLIMB.md` |
 | Probability as branching | **19/19** | `python -m fsot_quantum branch` | `PROBABILITY_BRANCH.md` |
@@ -99,12 +99,12 @@ We do **not** simulate their architecture. That would be agreeing their geometry
 | SAT / QUBO / color / TSP | assignment / tour | energy folds | SAT-32 · partition \{1..23\} · Petersen · TSP n=11 exact |
 | HHL | solve \(Ax=b\) | integer Cramer fold | hire 3/3 · hire2 **4×4** · hire7 **8×8** |
 | Grover | marked search | oracle-field collapse | through **1e7** exact |
-| QAOA / annealer | MaxCut / Ising | fold + KL + 2-opt + BFS-layer / spectral + BLS | **11/11 under 1%**; G14–G17 G22 G23 champions; G1 39 unmatched |
+| QAOA / annealer | MaxCut / Ising | fold + KL + 2-opt + BFS-layer / spectral + BLS | **11/11 champions** (G1–G5, G14–G17, G22–G23) |
 | FCI / quantum chemistry | chemistry observables | pin formulas | **68/68 @ 0.5%** |
 | Surface-code “threshold” | reliable logical work | fold residual vs published object | their \(d\)-threshold is a fridge metric; ours is residual on the question |
 | Chatbot “AI” | mind | [fsot-neuron-zig](https://github.com/dappalumbo91/fsot-neuron-zig) | this repo is the law organ, not the body |
 
-Current score is not a refusal. Factoring is far ρ **8/8**, log-N **8/8**, ECM through **80-bit**, RSA-shaped through **119-bit 8/8** (60-bit ρ), and **64-bit 8/8** (CFRAC + Brent ρ) today. RSA-2048 not run. G14–G17 G22 G23 MaxCut champions. G1 39 unmatched. [`HIRED_JOBS.md`](HIRED_JOBS.md).
+Current score is not a refusal. Factoring is far ρ **8/8**, log-N **8/8**, ECM through **80-bit**, RSA-shaped through **119-bit 8/8** (60-bit ρ), and **64-bit 8/8** (CFRAC + Brent ρ) today. RSA-2048 not run. Unweighted Gset **11/11 champions**. [`HIRED_JOBS.md`](HIRED_JOBS.md).
 
 ---
 
@@ -128,13 +128,12 @@ Written as open. Not dressed up. Not a reason to edit the pin.
 
 | Object | Status | Why it stays |
 |--------|--------|--------------|
-| Gset G17 | **3047** (champion) | φ-start BLS panel + strong T-jump. |
-| Gset champions | G14–G17 G22 G23 matched; G1–G5 unmatched | Aspiration <1% landed **11/11**. Dense G1 is 39 short. |
+| Gset unweighted family | **11/11 champions** | G1–G5, G14–G17, G22–G23. Signed Gset is a different object. |
 | Vendor `BR_H_gg` field | still **0.0785** | Fold \(\varphi^{-4}-\gamma^5=0.081823\) already matches YR4 0.08187 (0.058%). Stale stored field. |
 | Catalog 9 stored-gate rows | living **9/9** | Stale stored / wrong object / in-band / inventory rounding. [`ACCURACY_REFINE.md`](ACCURACY_REFINE.md). |
 | Combined exclusive \(\lvert V_{cb}\rvert=0.0398\) | not scored | D+D* blend. The HEP object is Belle II \(B\to D\ell\nu\) 0.0392. |
 | Atlas 432 | needs `_ref/FSOT-2.1-Lean` | Without the clone, atlas counts skip; 35 pin domains still score. |
-| Period / factor (Shor job) | far ρ **8/8** · log-N **8/8** · ECM through **80-bit 8/8** · RSA-shaped **119-bit 8/8** · **64-bit 8/8** | RSA-2048 not run. Next named challenge RSA-100 (330-bit). |
+| Period / factor (Shor job) | far ρ **8/8** · log-N **8/8** · ECM through **80-bit 8/8** · RSA-shaped **119-bit 8/8** · **64-bit 8/8** | Next named climb: **RSA-100** (330-bit, QS 1991). RSA-2048 not run. |
 | H2 / LiH VQE | pin De/R vs Kolos vs STO-3G | Three objects. Pin De **0.25%**. Kolos derived **0.75%** written. STO-3G not scored. LiH not invented. |
 
 SH0ES at **1.00%** is the Lean BH→WH inflated sector (inside the contested 2.5% band, 0.71σ of ±1.04). It is **not** the old 6.30% leftover.
@@ -147,7 +146,7 @@ SH0ES at **1.00%** is the Lean BH→WH inflated sector (inside the contested 2.5
 
 Older climb panels (`ask`, `accuracy`, `observe`, `forward`, `hard`, `fold_v6`, `margin`) still report G1 cut **11397 / 1.95%**. That is the 5% kill-band path. It still passes.
 
-The living family cut is **11585 / 0.336%** (KL + 2-opt + BFS-layer / spectral). Cite [`GSET_FAMILY.md`](GSET_FAMILY.md) for MaxCut. `harder` still reports 11563 / 0.53% on its older path. Do not cite 11397 as the wrap.
+The living family cut is **11624** (champion). Cite [`GSET_FAMILY.md`](GSET_FAMILY.md) for MaxCut. `harder` still reports 11563 / 0.53% on its older path. Do not cite 11397 as the wrap.
 
 ---
 
@@ -158,7 +157,7 @@ The living family cut is **11585 / 0.336%** (KL + 2-opt + BFS-layer / spectral).
 | `python -m fsot_quantum open` | **Diagnosis.** Shows what 6.03% / 6.30% look like if you score the wrong object. Not the living exclusive / SH0ES score. |
 | `python -m fsot_quantum vcb` | Living exclusive: Belle II \(B\to D\ell\nu\) **0.15%**. |
 | `python -m fsot_quantum h0` | Living Hubble: Lean BH→WH. |
-| `python -m fsot_quantum leftovers` | What is still open after the above. G14–G17 G22 G23 champions. G1 39 unmatched. |
+| `python -m fsot_quantum leftovers` | What is still open after the above. Gset 11/11 champions. Next climb: RSA-100. |
 | `python -m fsot_quantum refine` | Living-object reclass of catalog 9 + log-N stage-2. |
 
 ---

@@ -809,9 +809,10 @@ def _fast_maxcut(n: int, edges: list[tuple[int, int, int]]) -> tuple[int, list[i
         if c2 > best_c:
             best, best_c = s2, c2
 
-    # n=2000: default budget n²⌊eπ⌋ BLS on the same φ/BFS panel.
-    # Paper-scale is a different wall-time. Keep-if-better.
-    if n > 800 and n <= 2000 and bfs_rows:
+    # Dense n=800 (G1–G5) and n=2000: default budget n²⌊eπ⌋ BLS on
+    # the same φ/BFS panel. Sparse planar already ran paper-scale.
+    # Keep-if-better.
+    if (not sparse) and n <= 2000 and (phi_rows or bfs_rows):
         from fsot_quantum.gset_bls import fold_bls
         import os
         from concurrent.futures import ProcessPoolExecutor

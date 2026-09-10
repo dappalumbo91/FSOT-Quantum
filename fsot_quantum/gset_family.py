@@ -102,8 +102,8 @@ def main() -> int:
         "",
         "Same object as G1 (unweighted MaxCut). Signed Gset (G6–G13, G18–G21) "
         "is a different object. Aspiration <1% of published champion. "
-        "No new coefficients. Family is **11/11 under 1%**. G14–G17 "
-        "G22 G23 champions matched. Dense G1–G5 still short of BKS.",
+        "No new coefficients. Family is **11/11 under 1%** and "
+        "**11/11 champion-matched** (G1–G5, G14–G17, G22–G23).",
         "",
         "| Graph | n | m | fold | published | rel% | <1% |",
         "|-------|--:|--:|-----:|----------:|-----:|:---:|",

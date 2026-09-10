@@ -59,7 +59,7 @@ def main() -> int:
             "H0": "Planck 0.024%; SH0ES 1.00% Lean BH→WH",
             "alpha_s": "0.68% inside vendor 0.9% band",
             "open": [
-                "G14–G17 G22 G23 champions. G1 39 unmatched. Family 11/11 under 1%.",
+                "Gset unweighted 11/11 champions. Next climb RSA-100.",
                 "vendor BR_H_gg field still stale; fold matches YR4",
                 "catalog 9 stored-gate rows are stale/wrong-object/in-band — ACCURACY_REFINE.md",
                 "RSA-2048 not run (smoothness / sqrt(p) wall)",
@@ -72,7 +72,7 @@ def main() -> int:
         ],
         "jobs_current": {
             "factor_Shor": "RSA-shaped 81/95/103/111/119-bit. 64-bit 8/8. RSA-2048 not run",
-            "MaxCut": "11/11 under 1%; G14–G17 G22 G23 champions; G1 39 unmatched",
+            "MaxCut": "11/11 champions (G1–G5, G14–G17, G22–G23)",
             "chemistry": "68/68 @0.5% (pin formulas, not Hilbert FCI)",
         },
         "refuse": [
