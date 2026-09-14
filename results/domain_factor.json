@@ -1,0 +1,18 @@
+{
+  "timestamp": "2026-09-14T21:34:14.859516+00:00",
+  "suite": "domain_factor",
+  "pin": "D1D38A",
+  "pin_file_edited": false,
+  "B_raised": false,
+  "factors_looked_up": false,
+  "smoke_ok": true,
+  "rsa100_ok": false,
+  "rsa100_method": "domain_factor_exhausted",
+  "rsa100_B": 7920,
+  "rsa100_B2": 190080,
+  "rsa100_n_fermat_k": 185,
+  "rsa100_n_curves": 27,
+  "rsa100_factors_bits": [],
+  "wall_seconds": 714.5970980999991,
+  "note": "35 pin D_eff as Fermat k and ECM a, same B. RSA challenge moduli are not pin observables; S(domain) does not encode p, q."
+}

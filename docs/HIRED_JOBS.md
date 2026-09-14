@@ -41,5 +41,6 @@ python -m fsot_quantum hire7
 python -m fsot_quantum family
 python -m fsot_quantum heights17
 python -m fsot_quantum rsa100
+python -m fsot_quantum domain_factor
 python -m fsot_quantum vqe
 ```

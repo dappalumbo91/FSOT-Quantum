@@ -49,6 +49,8 @@ Field entry: python -m fsot_quantum [cmd]
   heights16  RSA-shaped 64-bit × 64-bit (~127-bit N)
   heights17  RSA-shaped 60-bit × 60-bit (~119-bit N)
   rsa100     RSA-100 (330-bit public challenge, SIQS at locked B)
+  rsa129     RSA-129 (426-bit public challenge, SIQS at locked B)
+  domain_factor  35-pin D_eff Fermat/ECM on the RSA-100 miss (same B)
   known      known-answer QC jobs vs published objects
   vqe        H2/LiH objects + amplitude estimation (not blended)
   refine     accuracy: classify residuals, living catalog, log-N stage-2
@@ -230,6 +232,12 @@ def main() -> int:
         return m()
     if c in ("rsa100", "rsa-100"):
         from fsot_quantum.rsa100 import main as m
+        return m()
+    if c in ("rsa129", "rsa-129"):
+        from fsot_quantum.rsa129 import main as m
+        return m()
+    if c in ("domain_factor", "domain-factor", "fold_domain"):
+        from fsot_quantum.fold_domain_factor import main as m
         return m()
     if c in ("refine", "accuracy_refine"):
         from fsot_quantum.accuracy_refine import main as m
