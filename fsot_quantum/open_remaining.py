@@ -4,7 +4,7 @@ The four leftovers — what they actually are.
 1. Dual dark energy (CMB vs BAO) — Lean already split this; we had not.
 2. alpha_s(M_Z) — 0.5% gate tighter than vendor 0.9% / PDG 1σ.
 3. Exclusive |V_cb| — combined 0.0398 is itself a blend of D and D*.
-4. Gset unweighted family 11/11 champions. RSA-100 miss at locked B.
+4. Gset unweighted family 11/11 champions. RSA-100 / RSA-129 miss at locked B.
 
 No new coefficient. Pin D1D38A not edited.
 
@@ -229,7 +229,7 @@ def main() -> int:
     md = [
         "# The leftovers — what is still open, and what was a wrong object",
         "",
-        f"**overall_ok:** `{ok}` · pin D1D38A **not edited** · Gset unweighted **11/11 champions** · RSA-100 **miss** · next climb RSA-129",
+        f"**overall_ok:** `{ok}` · pin D1D38A **not edited** · Gset unweighted **11/11 champions** · RSA-100 / RSA-129 **miss** · next climb RSA-155",
         "",
         "## 1. Dark energy — CMB vs BAO (this was the hidden split)",
         "",
@@ -265,7 +265,8 @@ def main() -> int:
         "Signed Gset (G6–G13, G18–G21) is a different object. "
         "Next climb is not MaxCut — it is the GNFS ladder. "
         "RSA-100 (330-bit) **miss** at locked B (SIQS 205992 poly, 0 smooth). "
-        "Next named rung: RSA-129 (426-bit).",
+        "RSA-129 (426-bit) **miss** (SIQS 261768 poly, 0 smooth). "
+        "Next named rung: RSA-155 (512-bit).",
         "",
         "## Lean anomalies (same pin, already solved there)",
         "",

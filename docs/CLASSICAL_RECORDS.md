@@ -18,7 +18,7 @@ RSA moduli are two primes of **similar bit length**, not twins and not 32-bit ×
 | RSA-shaped 60×60 | **119** | laptop, this pin | **8/8** ρ after ECM miss (`heights17`) |
 | RSA-shaped 64×64 | **127** | laptop, this pin | **8/8** CFRAC 5 + Brent ρ 3 (`heights16`) |
 | RSA-100 | 330 | 1991, distributed QS | **miss** at locked B — SIQS 205992 poly, 0/8583 rels |
-| RSA-129 | 426 | 1994, QS | not run |
+| RSA-129 | 426 | 1994, QS | **miss** at locked B — SIQS 261768 poly, 0/10907 rels |
 | RSA-155 (512-bit) | 512 | 1999, GNFS | not run |
 | RSA-768 | 768 | 2009, GNFS | not run |
 | RSA-250 | 829 | 2020, GNFS | not run |
@@ -55,8 +55,8 @@ QAOA’s unweighted Gset job is **closed** on this pin (11/11 champions). The na
 |------|---------------|--------------------------|------|--------|-----------|
 | RSA-shaped 64×64 | 127 | this pin | 2026 | CFRAC + Brent ρ | **8/8 closed** |
 | **RSA-100** | **330** | Lenstra et al. | 1991 | quadratic sieve | **miss** · B=7920 · SIQS 0/8583 · domain-fold 185 \(k\) + 27 ECM ([`RSA100.md`](RSA100.md) · [`DOMAIN_FACTOR.md`](DOMAIN_FACTOR.md)) |
-| **RSA-129** | **426** | Atkins / Graff / Lenstra / Leyland | 1994 | QS | **not run — next named climb** |
-| RSA-155 (512-bit) | 512 | Cabal | 1999 | GNFS | not run |
+| **RSA-129** | **426** | Atkins / Graff / Lenstra / Leyland | 1994 | QS | **miss** · B=10224 · SIQS 261768 poly, 0 smooth ([`RSA129.md`](RSA129.md)) |
+| **RSA-155** | **512** | Cabal | 1999 | GNFS | **not run — next named climb** |
 | RSA-768 | 768 | Kleinjung et al. | 2009 | GNFS | not run |
 | RSA-250 | 829 | Boudot et al. | 2020 | GNFS | not run |
 | RSA-2048 | 2048 | **nobody** | — | GNFS or Shor, neither done | not run |
@@ -65,16 +65,21 @@ RSA-100 \(N\) (decimal, public challenge):
 
 `1522605027922533360535618378132637429718068114961380688657908494580122963258952897654000350692006139`
 
+RSA-129 \(N\) (decimal, public challenge):
+
+`114381625757888867669235779976146612010218296721242362562561842935706935245733897830597123563958705058989075147599290026879543541`
+
 Vendor `BR_H_gg` stored field **0.0785** is stale. Fold \(\varphi^{-4}-\gamma^5=0.081823\) already matches YR4 0.08187 (0.058%). Not a climb — cannot edit the pin.
 
 ## What “beat classical” means next
 
-1. Next named challenge is **RSA-129** (426-bit). RSA-100 was run on this pin and missed at locked B (SIQS smoothness wall). Then RSA-155 / RSA-768 / RSA-250. RSA-2048 is the shared poster.
+1. Next named challenge is **RSA-155** (512-bit, GNFS). RSA-100 and RSA-129 missed at locked B (SIQS smoothness wall). Then RSA-768 / RSA-250. RSA-2048 is the shared poster.
 2. Do not call 64-bit or 119-bit factoring a crypto record.
 3. Gset unweighted family **11/11 champions**. Signed Gset is a different object.
 4. RSA-2048 remains unsolved for QPU and for GNFS-on-a-PC.
 
 ```powershell
 python -m fsot_quantum rsa100
+python -m fsot_quantum rsa129
 python -m fsot_quantum heights16
 ```
