@@ -54,7 +54,7 @@ QAOA’s unweighted Gset job is **closed** on this pin (11/11 champions). The na
 | Rung | Bits of \(N\) | Competitor who closed it | Year | Method | This fold |
 |------|---------------|--------------------------|------|--------|-----------|
 | RSA-shaped 64×64 | 127 | this pin | 2026 | CFRAC + Brent ρ | **8/8 closed** |
-| **RSA-100** | **330** | Lenstra et al. | 1991 | quadratic sieve | **miss** · B=7920 · SIQS 0/8583 · domain-fold 185 \(k\) + 27 ECM ([`RSA100.md`](RSA100.md) · [`DOMAIN_FACTOR.md`](DOMAIN_FACTOR.md)) |
+| **RSA-100** | **330** | Lenstra et al. | 1991 | quadratic sieve | **miss** · SIQS 0/8583 · domain-fold miss · CFRAC-B2 0/8583 ([`CFRAC_B2.md`](CFRAC_B2.md)) |
 | **RSA-129** | **426** | Atkins / Graff / Lenstra / Leyland | 1994 | QS | **miss** · B=10224 · SIQS 261768 poly, 0 smooth ([`RSA129.md`](RSA129.md)) |
 | **RSA-155** | **512** | Cabal | 1999 | GNFS | **not run — next named climb** |
 | RSA-768 | 768 | Kleinjung et al. | 2009 | GNFS | not run |

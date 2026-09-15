@@ -51,6 +51,7 @@ Field entry: python -m fsot_quantum [cmd]
   rsa100     RSA-100 (330-bit public challenge, SIQS at locked B)
   rsa129     RSA-129 (426-bit public challenge, SIQS at locked B)
   domain_factor  35-pin D_eff Fermat/ECM on the RSA-100 miss (same B)
+  cfrac_b2   CFRAC at smoothness B2 — √N-sized Q, SIQS bound
   known      known-answer QC jobs vs published objects
   vqe        H2/LiH objects + amplitude estimation (not blended)
   refine     accuracy: classify residuals, living catalog, log-N stage-2
@@ -238,6 +239,9 @@ def main() -> int:
         return m()
     if c in ("domain_factor", "domain-factor", "fold_domain"):
         from fsot_quantum.fold_domain_factor import main as m
+        return m()
+    if c in ("cfrac_b2", "cfrac-b2"):
+        from fsot_quantum.fold_cfrac_b2 import main as m
         return m()
     if c in ("refine", "accuracy_refine"):
         from fsot_quantum.accuracy_refine import main as m
