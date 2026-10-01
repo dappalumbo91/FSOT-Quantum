@@ -40,7 +40,7 @@ Fold v4: multi-process scheduler, teleportation sequences, Gset-style MaxCut led
 ## Reproduce
 
 ```powershell
-cd "C:\Users\damia\Desktop\fsot quantum"
+cd "FSOT-Quantum"
 $env:PYTHONPATH = (Get-Location).Path
 python -m fsot_quantum.fold_v4
 python scripts\run_multiprover_verification.py

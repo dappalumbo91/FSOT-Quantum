@@ -64,7 +64,7 @@ QC domain is pin-unobserved and S<0 (damping). Reading used here: compute substr
 ## Reproduce
 
 ```powershell
-cd "C:\Users\damia\Desktop\fsot quantum"
+cd "FSOT-Quantum"
 $env:PYTHONPATH = (Get-Location).Path
 python -m fsot_quantum.margin_vs_qpu
 ```

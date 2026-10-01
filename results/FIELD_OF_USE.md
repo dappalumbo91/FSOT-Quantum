@@ -31,7 +31,7 @@ Apply FSOT mathematics (Θ collapse, consensus, D_eff / S, pin formulas) to QM/Q
 ## Reproduce
 
 ```powershell
-cd "C:\Users\damia\Desktop\fsot quantum"
+cd "FSOT-Quantum"
 $env:PYTHONPATH = (Get-Location).Path
 python -m fsot_quantum.field_of_use
 ```

@@ -29,7 +29,7 @@ Checked lemmas (`Q-FOLD-001`, `Q-FOLD-002`):
 Reproduce:
 
 ```powershell
-cd "C:\Users\damia\Desktop\fsot quantum"
+cd "FSOT-Quantum"
 $env:PYTHONPATH = (Get-Location).Path
 python scripts\run_multiprover_verification.py
 ```

@@ -12,7 +12,7 @@ Concepts (traceable): `docs/CONCEPTS.md` (C1–C6).
 ## Reproduce
 
 ```powershell
-cd "C:\Users\damia\Desktop\fsot quantum"
+cd "FSOT-Quantum"
 $env:PYTHONPATH = (Get-Location).Path
 python -m fsot_quantum.keep_going
 ```

@@ -26,7 +26,7 @@ Same QC/QM jobs, FSOT math on ordinary hardware — not a dilution fridge. Accur
 ## Reproduce
 
 ```powershell
-cd "C:\Users\damia\Desktop\fsot quantum"
+cd "FSOT-Quantum"
 $env:PYTHONPATH = (Get-Location).Path
 python -m fsot_quantum.qc_accuracy
 ```

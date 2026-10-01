@@ -32,7 +32,7 @@ Hit leftover rungs honestly: official Gset if present, multi-GPU inventory+shard
 ## Reproduce
 
 ```powershell
-cd "C:\Users\damia\Desktop\fsot quantum"
+cd "FSOT-Quantum"
 $env:PYTHONPATH = (Get-Location).Path
 python -m fsot_quantum.fold_v5
 ```

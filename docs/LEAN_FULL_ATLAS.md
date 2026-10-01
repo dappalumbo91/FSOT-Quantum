@@ -103,7 +103,7 @@ This is the mother fabric (FSOT-2.1-Lean) pulled into the QC fold as named domai
 ## Reproduce
 
 ```powershell
-cd "C:\Users\damia\Desktop\fsot quantum"
+cd "FSOT-Quantum"
 $env:PYTHONPATH = (Get-Location).Path
 python -m fsot_quantum.lean_full_atlas
 ```

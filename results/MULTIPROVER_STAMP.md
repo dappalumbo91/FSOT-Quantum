@@ -24,7 +24,7 @@ Living Shor/QAOA integers (Q-JOB-006–012) sit next to the tiny-N demos: far RS
 ## Reproduce
 
 ```powershell
-cd "C:\Users\damia\Desktop\fsot quantum"
+cd "FSOT-Quantum"
 $env:PYTHONPATH = (Get-Location).Path
 python scripts\run_multiprover_verification.py
 ```

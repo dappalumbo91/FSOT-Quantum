@@ -113,7 +113,7 @@ What stayed open (not a retune): Gset champions unmatched (G17 **13** edges, G22
 ## How to run
 
 ```powershell
-cd "C:\Users\damia\Desktop\fsot quantum"
+cd "FSOT-Quantum"
 $env:PYTHONPATH = (Get-Location).Path
 python -m fsot_lib.smoke_owned
 python -m fsot_quantum.verify
