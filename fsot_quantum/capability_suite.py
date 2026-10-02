@@ -259,7 +259,7 @@ Regenerate: `python -m fsot_quantum.capability_suite`
 ## How to run
 
 ```powershell
-cd "C:\\Users\\damia\\Desktop\\fsot quantum"
+cd "."
 $env:PYTHONPATH = (Get-Location).Path
 python -m fsot_lib.smoke_owned
 python -m fsot_quantum.verify

@@ -46,3 +46,6 @@ formal/coq/*.vos
 formal/coq/.*.aux
 formal/lean/.lake/
 formal/lean/lake-manifest.json
+
+# Local external data (see FSOT_* env vars); never committed
+data_external/

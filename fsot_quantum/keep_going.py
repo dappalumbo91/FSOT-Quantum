@@ -83,7 +83,7 @@ def main() -> int:
         "## Reproduce",
         "",
         "```powershell",
-        'cd "C:\\Users\\damia\\Desktop\\fsot quantum"',
+        'cd "."',
         "$env:PYTHONPATH = (Get-Location).Path",
         "python -m fsot_quantum.keep_going",
         "```",
