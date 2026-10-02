@@ -20,6 +20,22 @@ Answers the jobs people hire quantum computers and precision-physics codes for, 
 
 ---
 
+## Pin, seed constants and trit layout (2026-10-01)
+
+- This repo is pinned to **D1D38A** (`vendor/fsot_compute.py`). Its seed twins (`fsot_lib/seeds.py`,
+  `zig/src/quantum.zig`, the CUDA `COLLAPSE_THRESHOLD` defines, `phase2_native_gpu/python/fsot_gpu_engine.py`) carry
+  the D1D38A values C_EFF 0.9577022026205613, K 0.42022166416069665, Θ 0.9174663774653723, and
+  `python -m fsot_quantum.verify` checks Θ and the two domain scalars against the vendored D1D38A engine.
+  The live hub authority **AEB2AD** gives C_EFF 0.9577480213378242, K 0.4201087636498879, Θ 0.9175102712064876
+  (FSOT-2.1-Cpp `docs/TRIT_SPEC.md` T-3; the D1D38A values are what `0.01` in place of π⁻⁴ gives). FSOT-GPU
+  moved to AEB2AD on 2026-10-01 (`tools/gen_seeds_from_authority.py`). Moving this repo means re-pinning
+  `vendor/fsot_compute.py`; that is left to the owner, so the constants here stay consistent with the D1D38A pin.
+- On Linux/macOS checkouts the `authority_pin` check reports `46F53B`: git stores `vendor/fsot_compute.py` with LF
+  endings, and D1D38A is the SHA-256 of the CRLF form. The file content is otherwise identical.
+- `fsot_lib/trinary.py` `pack_u64` is the canonical wire layout (code = t+1, TRIT_SPEC 2a). The Zig T1 layout in
+  FSOT-Genetics / fsot-neuron-zig is different; convert with `t1_word_to_canonical` / `canonical_word_to_t1`
+  (`tests/test_trit_layout.py`).
+
 ## What this is
 
 \[
