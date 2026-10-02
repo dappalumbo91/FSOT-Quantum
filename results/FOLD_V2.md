@@ -37,7 +37,7 @@ Next natural steps on fold path: chemistry residual folds, GPU fold job queue, s
 ## Reproduce
 
 ```powershell
-cd "C:\Users\damia\Desktop\fsot quantum"
+cd "FSOT-Quantum"
 $env:PYTHONPATH = (Get-Location).Path
 python -m fsot_quantum.fold_v2
 ```

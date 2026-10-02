@@ -22,7 +22,7 @@ The water is the continuum. The three strings are T1 (look), T2 (body), T3 (stru
 ## Reproduce
 
 ```powershell
-cd "C:\Users\damia\Desktop\fsot quantum"
+cd "FSOT-Quantum"
 $env:PYTHONPATH = (Get-Location).Path
 python -m fsot_quantum.medium_next
 ```

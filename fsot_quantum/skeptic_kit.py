@@ -176,7 +176,7 @@ def run_skeptic() -> dict[str, Any]:
         "## Reproduce",
         "",
         "```powershell",
-        'cd "C:\\Users\\damia\\Desktop\\fsot quantum"',
+        'cd "."',
         "$env:PYTHONPATH = (Get-Location).Path",
         "python -m fsot_quantum.skeptic_kit",
         "```",

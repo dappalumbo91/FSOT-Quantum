@@ -31,7 +31,7 @@ _No category below 100%._
 ## Reproduce
 
 ```powershell
-cd "C:\Users\damia\Desktop\fsot quantum"
+cd "FSOT-Quantum"
 $env:PYTHONPATH = (Get-Location).Path
 python -m fsot_quantum.question_battery
 ```

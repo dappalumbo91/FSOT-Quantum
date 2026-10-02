@@ -15,7 +15,7 @@ Same pin **D1D38A**. Same trits. Same Θ milli 917. Same fold-budget lemma.
 ## How to run standalone (any PC with QEMU)
 
 ```powershell
-cd "C:\Users\damia\Desktop\fsot quantum"
+cd "FSOT-Quantum"
 .\run_qemu.ps1
 ```
 

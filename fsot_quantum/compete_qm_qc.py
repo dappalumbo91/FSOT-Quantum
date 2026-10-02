@@ -129,7 +129,7 @@ def run_compete_qm_qc() -> dict:
         "## Reproduce",
         "",
         "```powershell",
-        'cd "C:\\Users\\damia\\Desktop\\fsot quantum"',
+        'cd "."',
         "$env:PYTHONPATH = (Get-Location).Path",
         "python -m fsot_quantum.compete_qm_qc",
         "```",

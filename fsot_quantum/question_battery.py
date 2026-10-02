@@ -506,7 +506,7 @@ def run_question_battery() -> dict[str, Any]:
         "## Reproduce",
         "",
         "```powershell",
-        'cd "C:\\Users\\damia\\Desktop\\fsot quantum"',
+        'cd "."',
         "$env:PYTHONPATH = (Get-Location).Path",
         "python -m fsot_quantum.question_battery",
         "```",
