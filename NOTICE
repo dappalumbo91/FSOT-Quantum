@@ -1,0 +1,14 @@
+FSOT-Quantum
+Copyright 2026 Damian Arthur Palumbo
+
+This product is FSOT alternative quantum computing on GPU (trinary spins, zero
+free parameters), with runtime from FSOT-GPU fsot_lib.
+
+Note: this repository's README and seeds currently cite the instrument pin
+D1D38A; theory authority is AEB2AD (see FSOT-2.1-Cpp for the re-pin of
+C_EFF and S(HEP)).
+
+This repository is part of the FSOT (Fluid Spacetime Omni-Theory) family.
+Theory authority is vendor/fsot_compute.py in
+https://github.com/dappalumbo91/FSOT-2.1-Lean (pin AEB2AD), also by
+Damian Arthur Palumbo and licensed under the Apache License 2.0.
