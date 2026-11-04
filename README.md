@@ -1,5 +1,7 @@
 # FSOT-Quantum
 
+[![License: Apache-2.0](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](LICENSE)
+
 **Fluid Spacetime Omni-Theory — Quantum_Mechanics / Quantum_Computing domain fold**
 
 Answers the jobs people hire quantum computers and precision-physics codes for, on ordinary GPU/CPU hardware. Zero free parameters. Scale by **folds**, not Hilbert \(2^n\).
